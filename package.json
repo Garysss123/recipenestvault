@@ -1,0 +1,20 @@
+{
+  "name": "recipenestvault",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static-first multilingual recipe discovery site for Cloudflare Pages",
+  "type": "module",
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "build": "node scripts/build.mjs",
+    "audit": "node scripts/audit.mjs",
+    "test": "npm run build && npm run audit",
+    "deploy": "npm run test && wrangler pages deploy dist --project-name recipenestvault --branch main"
+  },
+  "devDependencies": {
+    "wrangler": "4.127.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
