@@ -19,10 +19,21 @@ async function inspect({ name, path, viewport, expectedStatus = 200, fullPage = 
   const page = await context.newPage();
   const consoleErrors = [];
   const requestFailures = [];
+  const httpFailures = [];
   page.on("console", (message) => { if (message.type() === "error") consoleErrors.push(message.text()); });
   page.on("requestfailed", (request) => requestFailures.push(`${request.method()} ${request.url()} — ${request.failure()?.errorText || "failed"}`));
+  page.on("response", (resourceResponse) => {
+    if (resourceResponse.status() >= 400) {
+      httpFailures.push({
+        status: resourceResponse.status(),
+        url: resourceResponse.url(),
+        resourceType: resourceResponse.request().resourceType()
+      });
+    }
+  });
   const response = await page.goto(`${baseUrl}${path}`, { waitUntil: "networkidle", timeout: 30000 });
   const status = response?.status() ?? 0;
+  const navigationUrl = response?.url() || `${baseUrl}${path}`;
   if (status !== expectedStatus) failures.push(`${name}: status ${status}, expected ${expectedStatus}`);
   await page.evaluate(() => document.fonts?.ready);
   for (const image of await page.locator('img[loading="lazy"]').all()) {
@@ -36,9 +47,15 @@ async function inspect({ name, path, viewport, expectedStatus = 200, fullPage = 
   const axe = await new AxeBuilder({ page }).analyze();
   const serious = axe.violations.filter((violation) => ["serious", "critical"].includes(violation.impact));
   if (serious.length) failures.push(`${name}: ${serious.map((violation) => `${violation.id} (${violation.nodes.length})`).join(", ")}`);
-  const actionableConsoleErrors = expectedStatus === 404 ? consoleErrors.filter((message) => !message.includes("404 (Not Found)")) : consoleErrors;
+  const actionableHttpFailures = httpFailures.filter((failure) => !(
+    failure.resourceType === "document"
+    && failure.status === expectedStatus
+    && failure.url === navigationUrl
+  ));
+  const actionableConsoleErrors = expectedStatus === 404 ? consoleErrors.filter((message) => !/\b404\b/.test(message)) : consoleErrors;
   if (actionableConsoleErrors.length) failures.push(`${name}: console errors: ${actionableConsoleErrors.join(" | ")}`);
   if (requestFailures.length) failures.push(`${name}: failed requests: ${requestFailures.join(" | ")}`);
+  if (actionableHttpFailures.length) failures.push(`${name}: HTTP errors: ${actionableHttpFailures.map((failure) => `${failure.status} ${failure.url}`).join(" | ")}`);
   await page.screenshot({ path: join(outputDir, `${name}.png`), fullPage });
   for (const extra of extraScreenshots) {
     const header = page.locator(".site-header");
@@ -47,7 +64,7 @@ async function inspect({ name, path, viewport, expectedStatus = 200, fullPage = 
     await page.locator(extra.selector).screenshot({ path: join(outputDir, `${extra.name}.png`) });
     await header.evaluate((element, value) => { element.style.position = value; }, previousPosition);
   }
-  results.push({ name, path, viewport, status, overflow, seriousA11yViolations: serious.length, consoleErrors: actionableConsoleErrors, requestFailures });
+  results.push({ name, path, viewport, status, overflow, seriousA11yViolations: serious.length, consoleErrors: actionableConsoleErrors, requestFailures, httpFailures: actionableHttpFailures });
   await context.close();
 }
 
