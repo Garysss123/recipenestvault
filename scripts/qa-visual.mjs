@@ -96,7 +96,13 @@ await inspect({
   name: "en-search-desktop", path: "/en/search/?q=pizza", viewport: { width: 1280, height: 900 },
   interact: async (page) => { await page.locator(".result-card").first().waitFor({ state: "visible" }); }
 });
-await inspect({ name: "zh-cuisine-mobile", path: "/zh-hant/cuisines/taiwanese/", viewport: { width: 390, height: 844 } });
+await inspect({
+  name: "zh-cuisine-mobile", path: "/zh-hant/cuisines/taiwanese/", viewport: { width: 390, height: 844 },
+  interact: async (page) => {
+    const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+    if (response?.status() !== 200) throw new Error(`Deep-route refresh returned ${response?.status() ?? "no response"}`);
+  }
+});
 await inspect({ name: "not-found-mobile", path: "/definitely-not-a-page", viewport: { width: 390, height: 844 }, expectedStatus: 404, fullPage: false });
 
 await browser.close();
