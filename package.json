@@ -6,12 +6,19 @@
   "type": "module",
   "scripts": {
     "clean": "node scripts/clean.mjs",
+    "images": "node scripts/images.mjs",
+    "icons": "node scripts/icons.mjs",
     "build": "node scripts/build.mjs",
     "audit": "node scripts/audit.mjs",
+    "qa:visual": "node scripts/qa-visual.mjs",
     "test": "npm run build && npm run audit",
     "deploy": "npm run test && wrangler pages deploy dist --project-name recipenestvault --branch main"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "playwright": "^1.62.1",
+    "png-to-ico": "^3.0.2",
+    "sharp": "^0.35.4",
     "wrangler": "4.127.0"
   },
   "engines": {
