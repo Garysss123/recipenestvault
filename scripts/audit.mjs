@@ -78,6 +78,10 @@ const redirects = await readFile(join(dist, "_redirects"), "utf8");
 if (!redirects.includes("/ /en/ 301")) failures.push("root redirect must be permanent");
 if (!redirects.includes("/index.html /en/ 301")) failures.push("index redirect missing");
 
+const headers = await readFile(join(dist, "_headers"), "utf8");
+if (!headers.includes("script-src 'self' https://static.cloudflareinsights.com")) failures.push("CSP must allow the Cloudflare Web Analytics script");
+if (!headers.includes("connect-src 'self' https://cloudflareinsights.com")) failures.push("CSP must allow the Cloudflare Web Analytics beacon");
+
 async function walk(dir) {
   const output = [];
   for (const entry of await readdir(dir, { withFileTypes: true })) {
