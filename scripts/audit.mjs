@@ -206,6 +206,7 @@ for (const photo of recipeProcessPhotos) {
 
 const illustrationIds = new Set();
 const illustrationStepKeys = new Set();
+const illustrationPromptSets = new Set();
 for (const illustration of recipeStepIllustrations) {
   const stepKey = `${illustration.recipeId}:${illustration.step}`;
   const recipe = recipes.find((entry) => entry.id === illustration.recipeId);
@@ -218,7 +219,9 @@ for (const illustration of recipeStepIllustrations) {
   if (!Number.isInteger(illustration.step) || illustration.step < 1 || (recipe && illustration.step > recipe.instructions.length)) failures.push(`${illustration.id}: invalid illustrated step ${illustration.step}`);
   if (illustration.kind !== "ai-generated-step-illustration" || !illustration.aiGenerated || !illustration.nonPhotographic || !illustration.visualMatchApproved || !illustration.excludeFromStructuredData) failures.push(`${illustration.id}: illustration bypassed the AI-disclosure or visual-match gate`);
   if (!illustration.generator || !illustration.generatedAt || !illustration.promptSet || !illustration.sourceAsset || !illustration.sourceAssetSha256) failures.push(`${illustration.id}: incomplete illustration provenance`);
+  illustrationPromptSets.add(illustration.promptSet);
   validateLocalizedText(illustration.alt, `${illustration.id}.alt`);
+  if (Object.values(illustration.alt || {}).some((value) => /\bAI\b|OpenAI/i.test(value))) failures.push(`${illustration.id}: generator wording belongs in Sources, not image alt text`);
   const source = join(root, "assets", "recipes", "illustrations-generated", illustration.sourceAsset || "missing");
   if (!(await exists(source))) {
     failures.push(`${illustration.id}: generated illustration source is missing`);
@@ -228,11 +231,21 @@ for (const illustration of recipeStepIllustrations) {
   }
   for (const width of [480, 800, 1200]) if (!(await exists(join(dist, "images", "recipes", "illustrations", `${illustration.id}-${width}.webp`)))) failures.push(`${illustration.id}: missing ${width}px illustration crop`);
 }
-for (const recipeId of new Set(recipeStepIllustrations.filter((illustration) => illustration.setComplete).map((illustration) => illustration.recipeId))) {
+const completedIllustrationRecipeIds = new Set(recipeStepIllustrations.filter((illustration) => illustration.setComplete).map((illustration) => illustration.recipeId));
+for (const recipeId of completedIllustrationRecipeIds) {
   const recipe = recipes.find((entry) => entry.id === recipeId);
   const illustratedSteps = recipeStepIllustrations.filter((illustration) => illustration.recipeId === recipeId).map((illustration) => illustration.step).sort((a, b) => a - b);
   if (!recipe || illustratedSteps.length !== recipe.instructions.length || illustratedSteps.some((step, index) => step !== index + 1)) failures.push(`${recipeId}: complete illustration set must cover every recipe step exactly once`);
 }
+for (const recipe of recipes) if (!completedIllustrationRecipeIds.has(recipe.id)) failures.push(`${recipe.id}: published Chinese recipe is missing a complete step-illustration set`);
+for (const promptSet of illustrationPromptSets) if (!(await exists(join(root, "docs", "illustration-prompts", `${promptSet}.md`)))) failures.push(`${promptSet}: illustration prompt record is missing`);
+for (const locale of localeOrder) {
+  if (/\bAI\b|OpenAI/i.test(`${recipeUi[locale].illustrationDisclosure} ${recipeUi[locale].illustrationShortLabel}`)) failures.push(`${locale}: generator wording belongs in Sources, not the method notice or per-image label`);
+  if (!recipeUi[locale].illustrationSourceCredit.includes("OpenAI image_gen")) failures.push(`${locale}: generator provenance is missing from Sources copy`);
+}
+if (recipeUi["zh-hant"].illustrationDisclosure !== "以下料理步驟圖片為插畫靜態示意圖，並非實拍。實際操作請以文字中的份量、火力、時間與熟度判斷為準。") failures.push("zh-hant: cooking-step illustration notice changed from the approved wording");
+if (recipeUi["zh-hant"].illustrationShortLabel !== "料理步驟示意圖，非實拍") failures.push("zh-hant: cooking-step illustration label changed from the approved wording");
+if (recipeUi["zh-hant"].illustrationSourceCredit !== "步驟示意圖：Recipe Nest Vault 使用 OpenAI image_gen 製作的原創示意圖。") failures.push("zh-hant: illustration source credit changed from the approved wording");
 
 const redirects = await readFile(join(dist, "_redirects"), "utf8");
 if (!redirects.includes("/ /en/ 301")) failures.push("root redirect must be permanent");

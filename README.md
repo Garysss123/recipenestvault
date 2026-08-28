@@ -77,7 +77,9 @@ These are permanent release gates. Recipe count, publishing speed and visual com
 ### Static cooking-step illustrations
 
 - Original non-photorealistic static illustrations may explain preparation, order and cooking actions inside a recipe method. They never replace the required real finished-dish photograph.
-- Every illustrated recipe must show a visible five-language disclosure before the method and label each image as a cooking-step illustration rather than a photograph. Keep the OpenAI `image_gen` generator credit once in the recipe's sources section instead of repeating it under every image.
+- Every illustrated recipe must show a visible five-language disclosure before the method and label each image as a static cooking-step illustration rather than a photograph. Keep the OpenAI `image_gen` generator credit once in the recipe's sources section instead of repeating it in the method or under every image.
+- The approved Traditional Chinese method notice is exactly `以下料理步驟圖片為插畫靜態示意圖，並非實拍。實際操作請以文字中的份量、火力、時間與熟度判斷為準。`; the per-image label is exactly `料理步驟示意圖，非實拍`.
+- In Traditional Chinese, generator provenance appears once under Sources as `步驟示意圖：Recipe Nest Vault 使用 OpenAI image_gen 製作的原創示意圖。` Equivalent placement and meaning are required in the other four languages.
 - Written quantities, heat, timing, food-safety temperatures and doneness cues remain the cooking standard. An illustration is never evidence of exact portion, colour, texture or completion.
 - Each illustration must be reviewed against its exact step for ingredients, cuts, cookware, action and stage. Correct or reject material visual mismatches before publication.
 - Use an original Recipe Nest Vault editorial illustration language. Do not reproduce recognizable characters, layouts or the distinctive visual identity of an existing animation franchise.

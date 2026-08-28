@@ -14,6 +14,26 @@ const browser = await chromium.launch({ channel: "msedge", headless: true });
 const failures = [];
 const results = [];
 
+async function assertIllustratedRecipe(page, expectedSteps, { traditionalChinese = false } = {}) {
+  const figures = page.locator('.recipe-step-illustration[data-ai-illustration="true"]');
+  if (await figures.count() !== expectedSteps) throw new Error(`Expected ${expectedSteps} cooking-step illustrations`);
+  if (!(await page.locator(".recipe-illustration-notice").isVisible())) throw new Error("Illustration notice is not visible");
+  if (await page.locator(".recipe-step-illustration figcaption small").count() !== 0) throw new Error("Generator credit is repeated under step illustrations");
+  const labels = await page.locator(".recipe-step-illustration figcaption strong").allInnerTexts();
+  if (labels.length !== expectedSteps || labels.some((label) => /\bAI\b|OpenAI/i.test(label))) throw new Error("Step illustration labels foreground the generator");
+  const sourceCredits = page.locator(".recipe-sources .illustration-source-line");
+  if (await sourceCredits.count() !== 1 || !(await sourceCredits.isVisible())) throw new Error("Illustration generator credit must appear once in sources");
+  const brokenImages = await figures.locator("img").evaluateAll((images) => images.filter((image) => !image.complete || image.naturalWidth === 0).length);
+  if (brokenImages) throw new Error(`${brokenImages} cooking-step illustrations failed to load`);
+  const recipeJsonLd = await page.locator('script[type="application/ld+json"]').allTextContents();
+  if (recipeJsonLd.some((value) => value.includes("/images/recipes/illustrations/"))) throw new Error("Illustrations leaked into Recipe structured data");
+  if (traditionalChinese) {
+    if (await page.locator(".recipe-illustration-notice p").innerText() !== "以下料理步驟圖片為插畫靜態示意圖，並非實拍。實際操作請以文字中的份量、火力、時間與熟度判斷為準。") throw new Error("Traditional Chinese illustration notice does not match approved wording");
+    if (labels.some((label) => label !== "料理步驟示意圖，非實拍")) throw new Error("Traditional Chinese step label does not match approved wording");
+    if (await sourceCredits.innerText() !== "步驟示意圖：Recipe Nest Vault 使用 OpenAI image_gen 製作的原創示意圖。") throw new Error("Traditional Chinese source credit does not match approved wording");
+  }
+}
+
 async function inspect({ name, path, viewport, expectedStatus = 200, fullPage = true, interact, extraScreenshots = [], suppressLanguagePrompt = true, loadLazyImages = true }) {
   const context = await browser.newContext({ viewport, deviceScaleFactor: 1, colorScheme: "light", reducedMotion: "reduce" });
   if (suppressLanguagePrompt) await context.addInitScript(() => localStorage.setItem("rnv-language-preference-v1", "qa"));
@@ -148,12 +168,21 @@ await inspect({
     const firstCard = page.locator(".collection-recipe-card").first();
     await firstCard.waitFor({ state: "visible" });
     if (await page.locator(".collection-recipe-card").count() < 1) throw new Error("Chinese collection has no approved recipe cards");
+    const intro = await page.locator(".cuisine-hero p").last().innerText();
+    if (!intro.includes("讓你少繞路，真正做得出來") || intro.includes("每道公開食譜都會交叉核對")) throw new Error("Chinese collection intro is not the approved reader-facing SEO copy");
     const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
     if (response?.status() !== 200) throw new Error(`Chinese collection refresh returned ${response?.status() ?? "no response"}`);
   }
 });
 await inspect({ name: "en-chinese-collection-desktop", path: "/en/cuisines/chinese/", viewport: { width: 1440, height: 1000 } });
-await inspect({ name: "en-peking-duck-recipe-desktop", path: "/en/recipes/peking-duck/", viewport: { width: 1440, height: 1000 }, fullPage: false });
+await inspect({
+  name: "en-peking-duck-recipe-desktop", path: "/en/recipes/peking-duck/", viewport: { width: 1440, height: 1000 }, fullPage: false,
+  interact: async (page) => assertIllustratedRecipe(page, 8),
+  extraScreenshots: [
+    { name: "en-peking-duck-method-desktop", selector: ".method-section" },
+    { name: "en-peking-duck-step-08-desktop", selector: '.recipe-step-illustration[data-step-illustration="peking-duck-step-08-illustration"]' }
+  ]
+});
 await inspect({
   name: "en-mapo-recipe-desktop", path: "/en/recipes/mapo-tofu/", viewport: { width: 1440, height: 1000 },
   interact: async (page) => {
@@ -161,11 +190,7 @@ await inspect({
     if (await page.locator(".method-section li").count() < 8) throw new Error("Detailed recipe method did not render");
     if (await page.locator(".recipe-step-copy h3").count() < 8) throw new Error("Recipe step headings did not render");
     if (await page.locator(".recipe-step-photo").count() !== 0) throw new Error("Removed step photograph is still rendering");
-    if (await page.locator('.recipe-step-illustration[data-ai-illustration="true"]').count() !== 8) throw new Error("Complete labelled Mapo tofu illustration set did not render");
-    if (!(await page.locator(".recipe-illustration-notice").isVisible())) throw new Error("Illustration disclosure is not visible");
-    if (await page.locator(".recipe-step-illustration figcaption small").count() !== 0) throw new Error("Generator credit still appears under step illustrations");
-    if ((await page.locator(".recipe-step-illustration figcaption strong").first().innerText()).includes("AI")) throw new Error("Step illustration label still foregrounds AI");
-    if (!(await page.locator(".recipe-sources .illustration-source-line").isVisible())) throw new Error("Illustration generator credit is missing from sources");
+    await assertIllustratedRecipe(page, 8);
     const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
     if (response?.status() !== 200) throw new Error(`Recipe deep-route refresh returned ${response?.status() ?? "no response"}`);
   },
@@ -180,8 +205,7 @@ await inspect({
   name: "zh-mapo-recipe-mobile", path: "/zh-hant/recipes/mapo-tofu/", viewport: { width: 390, height: 844 }, fullPage: false,
   interact: async (page) => {
     if (await page.locator(".recipe-step-photo").count() !== 0) throw new Error("Removed mobile step photograph is still rendering");
-    if (await page.locator('.recipe-step-illustration[data-ai-illustration="true"]').count() !== 8) throw new Error("Mobile Mapo tofu illustration set did not render");
-    if ((await page.locator(".recipe-step-illustration figcaption strong").first().innerText()).includes("AI")) throw new Error("Mobile step illustration label still foregrounds AI");
+    await assertIllustratedRecipe(page, 8, { traditionalChinese: true });
   },
   extraScreenshots: [
     { name: "zh-mapo-method-mobile", selector: ".method-section" },
@@ -190,18 +214,19 @@ await inspect({
 });
 await inspect({
   name: "zh-wonton-recipe-mobile", path: "/zh-hant/recipes/wonton-soup/", viewport: { width: 390, height: 844 }, fullPage: true,
+  interact: async (page) => assertIllustratedRecipe(page, 8, { traditionalChinese: true }),
   extraScreenshots: [
     { name: "zh-wonton-ingredients-mobile", selector: ".ingredients-section" },
     { name: "zh-wonton-method-mobile", selector: ".method-section" }
   ]
 });
-await inspect({ name: "en-sweet-sour-recipe-desktop", path: "/en/recipes/sweet-sour-pork/", viewport: { width: 1440, height: 1000 }, fullPage: false });
-await inspect({ name: "en-kung-pao-recipe-desktop", path: "/en/recipes/kung-pao-chicken/", viewport: { width: 1440, height: 1000 }, fullPage: false });
-await inspect({ name: "zh-dan-dan-recipe-mobile", path: "/zh-hant/recipes/dan-dan-noodles/", viewport: { width: 390, height: 844 }, fullPage: false });
-await inspect({ name: "zh-jiaozi-recipe-mobile", path: "/zh-hant/recipes/jiaozi/", viewport: { width: 390, height: 844 }, fullPage: false });
-await inspect({ name: "en-char-siu-recipe-desktop", path: "/en/recipes/char-siu/", viewport: { width: 1440, height: 1000 }, fullPage: false });
-await inspect({ name: "en-scallion-pancakes-recipe-desktop", path: "/en/recipes/scallion-pancakes/", viewport: { width: 1440, height: 1000 }, fullPage: false });
-await inspect({ name: "ja-clay-pot-recipe-mobile", path: "/ja/recipes/clay-pot-rice/", viewport: { width: 390, height: 844 }, fullPage: false });
+await inspect({ name: "en-sweet-sour-recipe-desktop", path: "/en/recipes/sweet-sour-pork/", viewport: { width: 1440, height: 1000 }, fullPage: false, interact: async (page) => assertIllustratedRecipe(page, 8) });
+await inspect({ name: "en-kung-pao-recipe-desktop", path: "/en/recipes/kung-pao-chicken/", viewport: { width: 1440, height: 1000 }, fullPage: false, interact: async (page) => assertIllustratedRecipe(page, 9) });
+await inspect({ name: "zh-dan-dan-recipe-mobile", path: "/zh-hant/recipes/dan-dan-noodles/", viewport: { width: 390, height: 844 }, fullPage: false, interact: async (page) => assertIllustratedRecipe(page, 8, { traditionalChinese: true }) });
+await inspect({ name: "zh-jiaozi-recipe-mobile", path: "/zh-hant/recipes/jiaozi/", viewport: { width: 390, height: 844 }, fullPage: false, interact: async (page) => assertIllustratedRecipe(page, 8, { traditionalChinese: true }) });
+await inspect({ name: "en-char-siu-recipe-desktop", path: "/en/recipes/char-siu/", viewport: { width: 1440, height: 1000 }, fullPage: false, interact: async (page) => assertIllustratedRecipe(page, 8) });
+await inspect({ name: "en-scallion-pancakes-recipe-desktop", path: "/en/recipes/scallion-pancakes/", viewport: { width: 1440, height: 1000 }, fullPage: false, interact: async (page) => assertIllustratedRecipe(page, 8) });
+await inspect({ name: "ja-clay-pot-recipe-mobile", path: "/ja/recipes/clay-pot-rice/", viewport: { width: 390, height: 844 }, fullPage: false, interact: async (page) => assertIllustratedRecipe(page, 8) });
 await inspect({
   name: "en-about-desktop", path: "/en/about/", viewport: { width: 1440, height: 1000 },
   interact: async (page) => {
