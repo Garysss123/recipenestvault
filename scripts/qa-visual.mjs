@@ -36,6 +36,12 @@ async function inspect({ name, path, viewport, expectedStatus = 200, fullPage = 
   const status = response?.status() ?? 0;
   const navigationUrl = response?.url() || `${baseUrl}${path}`;
   if (status !== expectedStatus) failures.push(`${name}: status ${status}, expected ${expectedStatus}`);
+  const coreAssets = await page.evaluate(() => ({
+    stylesheet: document.querySelector('link[rel="stylesheet"]')?.getAttribute("href") || "",
+    siteScript: document.querySelector('script[src^="/assets/site.js"]')?.getAttribute("src") || ""
+  }));
+  if (!/\/assets\/site\.css\?v=[a-f0-9]{12}$/.test(coreAssets.stylesheet)) failures.push(`${name}: stylesheet is not content-versioned`);
+  if (!/\/assets\/site\.js\?v=[a-f0-9]{12}$/.test(coreAssets.siteScript)) failures.push(`${name}: site script is not content-versioned`);
   await page.evaluate(() => document.fonts?.ready);
   const loadDeferredImages = async () => {
     if (!loadLazyImages) return;
@@ -155,6 +161,11 @@ await inspect({
     if (await page.locator(".method-section li").count() < 8) throw new Error("Detailed recipe method did not render");
     if (await page.locator(".recipe-step-copy h3").count() < 8) throw new Error("Recipe step headings did not render");
     if (await page.locator(".recipe-step-photo").count() !== 1) throw new Error("Approved optional step photography did not render exactly once");
+    const stepPhotoStyle = await page.locator(".recipe-step-photo").evaluate((element) => ({
+      borderWidth: getComputedStyle(element).borderTopWidth,
+      captionPadding: getComputedStyle(element.querySelector("figcaption")).paddingTop
+    }));
+    if (stepPhotoStyle.borderWidth !== "1px" || stepPhotoStyle.captionPadding === "0px") throw new Error("Step photograph component styles were not applied");
     const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
     if (response?.status() !== 200) throw new Error(`Recipe deep-route refresh returned ${response?.status() ?? "no response"}`);
   },

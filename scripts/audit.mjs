@@ -10,6 +10,9 @@ import { recipes } from "../src/recipes.mjs";
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const dist = join(root, "dist");
 const failures = [];
+const assetHasher = createHash("sha256");
+for (const asset of ["site.css", "site.js", "search.js"]) assetHasher.update(await readFile(join(root, "public", "assets", asset)));
+const expectedAssetVersion = assetHasher.digest("hex").slice(0, 12);
 
 function validateLocalizedText(value, label) {
   if (!value || typeof value !== "object") {
@@ -43,6 +46,8 @@ async function validateHtml(file, expectedCanonical, suffix, activeSlug) {
   if (!html.includes(`hreflang="x-default" href="${origin}/en/${suffix}"`)) failures.push(`${label}: missing x-default`);
   if (!html.includes(`href="/${activeSlug}/about/"`)) failures.push(`${label}: missing localized About footer link`);
   if (!html.includes(`href="/${activeSlug}/privacy/"`)) failures.push(`${label}: missing localized Privacy footer link`);
+  if (!html.includes(`href="/assets/site.css?v=${expectedAssetVersion}"`)) failures.push(`${label}: missing content-versioned stylesheet`);
+  if (!html.includes(`src="/assets/site.js?v=${expectedAssetVersion}"`)) failures.push(`${label}: missing content-versioned site script`);
   for (const required of ["og:title", "og:description", "og:url", "og:image", "twitter:card", "twitter:title", "twitter:description", "twitter:image"]) if (!html.includes(required)) failures.push(`${label}: missing ${required}`);
   const jsonLd = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
   try { JSON.parse(jsonLd); } catch { failures.push(`${label}: invalid JSON-LD`); }
@@ -66,6 +71,7 @@ for (const slug of localeOrder) {
   await validateHtml(join(dist, slug, "search", "index.html"), `${origin}/${slug}/search/`, "search/", slug);
   const searchHtml = await readFile(join(dist, slug, "search", "index.html"), "utf8");
   if (!searchHtml.includes('name="robots" content="noindex,follow"')) failures.push(`${slug} search must be noindex`);
+  if (!searchHtml.includes(`src="/assets/search.js?v=${expectedAssetVersion}"`)) failures.push(`${slug} search missing content-versioned search script`);
   for (const type of ["about", "privacy"]) {
     const infoFile = join(dist, slug, type, "index.html");
     await validateHtml(infoFile, `${origin}/${slug}/${type}/`, `${type}/`, slug);
@@ -98,6 +104,7 @@ for (const required of requiredFiles) if (!(await exists(join(dist, required))))
 
 const notFound = await readFile(join(dist, "404.html"), "utf8");
 if (!notFound.includes('name="robots" content="noindex,follow"')) failures.push("404 must be noindex");
+if (!notFound.includes(`href="/assets/site.css?v=${expectedAssetVersion}"`) || !notFound.includes(`src="/assets/site.js?v=${expectedAssetVersion}"`)) failures.push("404 missing content-versioned assets");
 for (const slug of localeOrder) if (!notFound.includes(`data-not-found-locale="${slug}"`)) failures.push(`404 missing ${slug}`);
 
 const sitemap = await readFile(join(dist, "sitemap.xml"), "utf8");

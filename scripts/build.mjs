@@ -1,4 +1,5 @@
-import { cp, mkdir, rm, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { cuisines, featured, fill, localeOrder, locales, origin, regionOrder } from "../src/data.mjs";
@@ -9,6 +10,9 @@ import { recipes } from "../src/recipes.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const dist = join(root, "dist");
+const assetHasher = createHash("sha256");
+for (const asset of ["site.css", "site.js", "search.js"]) assetHasher.update(await readFile(join(root, "public", "assets", asset)));
+const assetVersion = assetHasher.digest("hex").slice(0, 12);
 const buildDate = "2026-08-28";
 const adsenseClient = /^ca-pub-\d+$/.test(process.env.ADSENSE_CLIENT ?? "") ? process.env.ADSENSE_CLIENT : "";
 const adsenseSlot = /^\d+$/.test(process.env.ADSENSE_SLOT_CONTENT ?? "") ? process.env.ADSENSE_SLOT_CONTENT : "";
@@ -118,14 +122,14 @@ function documentHead(slug, { title, description, suffix = "", robots = "index,f
   ${alternateLinks(suffix)}
   <meta property="og:type" content="${ogType}"><meta property="og:site_name" content="Recipe Nest Vault"><meta property="og:locale" content="${locale.ogLocale}"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${esc(socialImage)}"><meta property="og:image:width" content="${ogType === "article" ? "1440" : "1200"}"><meta property="og:image:height" content="${ogType === "article" ? "1080" : "630"}"><meta property="og:image:alt" content="${esc(title)}">
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(description)}"><meta name="twitter:image" content="${esc(socialImage)}">
-  <meta name="theme-color" content="#b4235a"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/icon-192.png"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/assets/site.css">
+  <meta name="theme-color" content="#b4235a"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/icon-192.png"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/assets/site.css?v=${assetVersion}">
   ${adsEnabled ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}" crossorigin="anonymous"></script>` : ""}<script type="application/ld+json">${json(schema)}</script>` };
 }
 
 function page(slug, headOptions, content, suffix = "") {
   const locale = locales[slug];
   const head = documentHead(slug, { ...headOptions, suffix });
-  return `<!doctype html><html lang="${locale.lang}"><head>${head.html}</head><body class="${head.bodyClass}"><a class="skip-link" href="#main">${esc(locale.ui.skip)}</a>${header(slug, suffix)}<main id="main">${content}</main>${footer(slug)}${languagePrompt(slug, suffix)}<script src="/assets/site.js" defer></script></body></html>`;
+  return `<!doctype html><html lang="${locale.lang}"><head>${head.html}</head><body class="${head.bodyClass}"><a class="skip-link" href="#main">${esc(locale.ui.skip)}</a>${header(slug, suffix)}<main id="main">${content}</main>${footer(slug)}${languagePrompt(slug, suffix)}<script src="/assets/site.js?v=${assetVersion}" defer></script></body></html>`;
 }
 
 function picture(image, alt, priority = false) {
@@ -218,7 +222,7 @@ function renderSearch(slug) {
   const locale = locales[slug]; const suffix = "search/"; const title = `${locale.ui.searchTitle} — Recipe Nest Vault`;
   const content = `<section class="page-hero search-hero"><p class="eyebrow">${esc(locale.ui.search)}</p><h1>${esc(locale.ui.searchTitle)}</h1><p>${esc(locale.ui.searchIntro)}</p><form class="search-box" action="/${slug}/search/" method="get" role="search" data-search-form><label class="sr-only" for="search-${slug}">${esc(locale.ui.placeholder)}</label><span aria-hidden="true">⌕</span><input id="search-${slug}" name="q" type="search" autocomplete="off" placeholder="${esc(locale.ui.placeholder)}"><button type="submit">${esc(locale.ui.searchButton)}</button></form></section><section class="search-results" aria-live="polite" data-search-results data-locale="${slug}" data-count-template="${esc(locale.ui.resultCount)}" data-empty-title="${esc(locale.ui.emptyTitle)}" data-empty-body="${esc(locale.ui.emptyBody)}" data-start="${esc(locale.ui.startTyping)}" data-cuisine-label="${esc(locale.ui.cuisineLabel)}" data-recipe-label="${esc(recipeUi[slug].recipeEyebrow)}" data-preview-label="${esc(locale.ui.collectionPreview)}"><p>${esc(locale.ui.startTyping)}</p></section>`;
   const schema = { "@context": "https://schema.org", "@type": "SearchResultsPage", name: locale.ui.searchTitle, url: `${origin}/${slug}/${suffix}`, inLanguage: locale.lang, isPartOf: { "@id": `${origin}/#website` } };
-  return page(slug, { title, description: locale.ui.searchIntro, robots: "noindex,follow", schema, bodyClass: "search-page" }, content, suffix).replace("<script src=\"/assets/site.js\" defer></script>", "<script src=\"/assets/site.js\" defer></script><script src=\"/assets/search.js\" defer></script>");
+  return page(slug, { title, description: locale.ui.searchIntro, robots: "noindex,follow", schema, bodyClass: "search-page" }, content, suffix).replace(`<script src="/assets/site.js?v=${assetVersion}" defer></script>`, `<script src="/assets/site.js?v=${assetVersion}" defer></script><script src="/assets/search.js?v=${assetVersion}" defer></script>`);
 }
 
 function renderInfoPage(slug, type) {
@@ -236,7 +240,7 @@ function renderInfoPage(slug, type) {
 
 function render404() {
   const sections = localeOrder.map((slug, index) => { const locale = locales[slug]; return `<section class="not-found-copy" lang="${locale.lang}" data-not-found-locale="${slug}"${index ? " hidden" : ""}><p class="eyebrow">404</p><h1>${esc(locale.ui.notFoundTitle)}</h1><p>${esc(locale.ui.notFoundBody)}</p><a class="primary-button" href="/${slug}/">${esc(locale.ui.backHome)}</a></section>`; }).join("");
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page not found — Recipe Nest Vault</title><meta name="robots" content="noindex,follow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css"></head><body class="not-found-page"><main id="main"><a class="brand" href="/en/" aria-label="Recipe Nest Vault"><img src="/logo.svg" width="42" height="42" alt=""><span>Recipe Nest Vault</span></a>${sections}<nav class="not-found-languages" aria-label="Choose language">${localeOrder.map((slug) => `<a href="/${slug}/" lang="${locales[slug].lang}">${esc(locales[slug].label)}</a>`).join("")}</nav></main><script src="/assets/site.js" defer></script></body></html>`;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page not found — Recipe Nest Vault</title><meta name="robots" content="noindex,follow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css?v=${assetVersion}"></head><body class="not-found-page"><main id="main"><a class="brand" href="/en/" aria-label="Recipe Nest Vault"><img src="/logo.svg" width="42" height="42" alt=""><span>Recipe Nest Vault</span></a>${sections}<nav class="not-found-languages" aria-label="Choose language">${localeOrder.map((slug) => `<a href="/${slug}/" lang="${locales[slug].lang}">${esc(locales[slug].label)}</a>`).join("")}</nav></main><script src="/assets/site.js?v=${assetVersion}" defer></script></body></html>`;
 }
 
 await rm(dist, { recursive: true, force: true }); await mkdir(dist, { recursive: true }); await cp(join(root, "public"), dist, { recursive: true });
