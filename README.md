@@ -63,6 +63,15 @@ These are permanent release gates. Recipe count, publishing speed and visual com
 - If a material mismatch cannot be explained, replace the photograph, correct and recheck the recipe, or omit the recipe.
 - Never reuse one generic dish photograph as the claimed result of several different recipes.
 
+### Ingredient-preparation and process photography
+
+- A photographed recipe sequence must document one traceable cooking session for the same published recipe revision. Do not assemble a false sequence from unrelated kitchens, batches, recipes or stock photographs.
+- The preparation photograph must show the listed ingredients after the cuts, measuring and advance preparation required by the method. Material omissions or unlisted ingredients fail review.
+- Every published cooking step must have its own matching frame from that sequence. A finished-dish photograph cannot be reused as a preparation or process frame.
+- A frame extracted from a video is an adaptation: the source video, author, commercial-use license, original file, exact timestamp and extraction/cropping changes must all be recorded.
+- A licensed video or photo series still fails if its ingredients, quantities, cuts, cookware-dependent method or intermediate result materially differs from the published recipe.
+- Do not render empty image boxes, generic placeholders or AI-generated process imagery. Until a complete sequence passes review, keep the recipe text-only and do not describe it as a photographed step-by-step guide.
+
 ### Accepted and prohibited licenses
 
 Accepted licenses include Public Domain, CC0, CC BY, CC BY-SA, and other clear terms that explicitly permit commercial reuse and web publication.

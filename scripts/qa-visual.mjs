@@ -66,10 +66,14 @@ async function inspect({ name, path, viewport, expectedStatus = 200, fullPage = 
   await page.screenshot({ path: join(outputDir, `${name}.png`), fullPage });
   for (const extra of extraScreenshots) {
     const header = page.locator(".site-header");
+    const skipLink = page.locator(".skip-link");
     const previousPosition = await header.evaluate((element) => element.style.position);
+    const previousSkipDisplay = await skipLink.evaluate((element) => element.style.display);
     await header.evaluate((element) => { element.style.position = "absolute"; });
+    await skipLink.evaluate((element) => { element.style.display = "none"; });
     await page.locator(extra.selector).screenshot({ path: join(outputDir, `${extra.name}.png`) });
     await header.evaluate((element, value) => { element.style.position = value; }, previousPosition);
+    await skipLink.evaluate((element, value) => { element.style.display = value; }, previousSkipDisplay);
   }
   results.push({ name, path, viewport, status, overflow, seriousA11yViolations: serious.length, consoleErrors: actionableConsoleErrors, requestFailures, httpFailures: actionableHttpFailures });
   await context.close();
@@ -148,7 +152,8 @@ await inspect({
   name: "en-mapo-recipe-desktop", path: "/en/recipes/mapo-tofu/", viewport: { width: 1440, height: 1000 },
   interact: async (page) => {
     if (await page.locator(".ingredients-section li").count() < 5) throw new Error("Recipe ingredients did not render");
-    if (await page.locator(".method-section li").count() < 4) throw new Error("Recipe method did not render");
+    if (await page.locator(".method-section li").count() < 8) throw new Error("Detailed recipe method did not render");
+    if (await page.locator(".recipe-step-copy h3").count() < 8) throw new Error("Recipe step headings did not render");
     const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
     if (response?.status() !== 200) throw new Error(`Recipe deep-route refresh returned ${response?.status() ?? "no response"}`);
   },
@@ -158,7 +163,13 @@ await inspect({
     { name: "en-mapo-sources-desktop", selector: ".recipe-sources" }
   ]
 });
-await inspect({ name: "zh-wonton-recipe-mobile", path: "/zh-hant/recipes/wonton-soup/", viewport: { width: 390, height: 844 }, fullPage: true });
+await inspect({
+  name: "zh-wonton-recipe-mobile", path: "/zh-hant/recipes/wonton-soup/", viewport: { width: 390, height: 844 }, fullPage: true,
+  extraScreenshots: [
+    { name: "zh-wonton-ingredients-mobile", selector: ".ingredients-section" },
+    { name: "zh-wonton-method-mobile", selector: ".method-section" }
+  ]
+});
 await inspect({ name: "en-sweet-sour-recipe-desktop", path: "/en/recipes/sweet-sour-pork/", viewport: { width: 1440, height: 1000 }, fullPage: false });
 await inspect({ name: "en-kung-pao-recipe-desktop", path: "/en/recipes/kung-pao-chicken/", viewport: { width: 1440, height: 1000 }, fullPage: false });
 await inspect({ name: "zh-dan-dan-recipe-mobile", path: "/zh-hant/recipes/dan-dan-noodles/", viewport: { width: 390, height: 844 }, fullPage: false });

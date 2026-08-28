@@ -1,11 +1,14 @@
 import { recipeDraftA } from "./recipe-draft-a.mjs";
 import { recipeDraftB } from "./recipe-draft-b.mjs";
+import { expandedInstructionsA } from "./recipe-expanded-a.mjs";
+import { expandedInstructionsB } from "./recipe-expanded-b.mjs";
 import { recipePhotoCandidates } from "./recipe-photos.mjs";
 
 const ml = (en, zhHant, ja, ko, th) => ({ en, "zh-hant": zhHant, ja, ko, th });
 const approvedPhotos = new Map(recipePhotoCandidates
   .filter((photo) => photo.commercialUseVerified && photo.realPhoto && photo.visualMatchApproved)
   .map((photo) => [photo.id, photo]));
+const expandedInstructions = { ...expandedInstructionsA, ...expandedInstructionsB };
 
 function cloneRecipe(recipe) {
   return {
@@ -20,6 +23,11 @@ function refineForPublication(source) {
   const recipe = cloneRecipe(source);
 
   if (recipe.id === "mapo-tofu") {
+    const slurry = recipe.ingredients.find((row) => row.item.en.startsWith("cornstarch slurry"));
+    if (slurry) {
+      slurry.amount = "8 g + 20 ml";
+      slurry.item = ml("cornstarch slurry", "玉米澱粉芡汁", "コーンスターチの水溶き", "옥수수전분물", "น้ำแป้งข้าวโพด");
+    }
     recipe.sources = recipe.sources.map((source) => source.url === "https://www.chinasichuanfood.com/mapo-tofu/"
       ? { ...source, url: "https://www.chinasichuanfood.com/mapo-tofu-recipe/" }
       : source);
@@ -117,6 +125,11 @@ function refineForPublication(source) {
 
   if (recipe.id === "tomato-egg-stir-fry") {
     recipe.ingredients = recipe.ingredients.filter((row) => !row.item.en.startsWith("scallions"));
+    const eggs = recipe.ingredients.find((row) => row.item.en.startsWith("eggs"));
+    if (eggs) {
+      eggs.amount = ml("4 large / about 200 g", "4 顆 / 約 200 g", "4個 / 約 200 g", "4개 / 약 200 g", "4 ฟอง / ประมาณ 200 g");
+      eggs.item = ml("eggs, beaten", "雞蛋，打散", "卵（溶く）", "달걀, 풀기", "ไข่ไก่ ตีให้เข้ากัน");
+    }
     recipe.ingredients.push({
       amount: "45 ml",
       item: ml("water for simmering the tomatoes", "燜煮番茄用水", "トマトを煮る水", "토마토를 익힐 물", "น้ำสำหรับเคี่ยวมะเขือเทศ")
@@ -147,16 +160,20 @@ function refineForPublication(source) {
 
   if (recipe.id === "sweet-sour-pork") {
     recipe.name = { ...recipe.name, en: "Sweet & sour pork" };
+    recipe.cookMinutes = 30;
+    recipe.totalMinutes = 75;
   }
 
   if (recipe.id === "char-siu") {
     recipe.ingredients = recipe.ingredients.filter((row) => !row.item.en.startsWith("scallion for serving"));
+    const beanCurd = recipe.ingredients.find((row) => row.item.en.startsWith("red fermented bean curd"));
+    if (beanCurd) beanCurd.amount = ml("20 g / 1 cube", "20 g / 1 塊", "20 g / 1個", "20 g / 1개", "20 g / 1 ก้อน");
     recipe.ingredients.push({
       amount: "350 ml",
       item: ml("hot water for the roasting tray", "烤盤用熱水", "天板に入れる湯", "오븐 팬에 넣을 뜨거운 물", "น้ำร้อนสำหรับถาดอบ")
     });
     recipe.ingredients.push({
-      amount: "1 small sprig",
+      amount: ml("1 small sprig", "1 小枝", "小1枝", "작은 가지 1개", "1 กิ่งเล็ก"),
       item: ml("curly parsley, for serving", "捲葉巴西里，供擺盤", "カーリーパセリ（盛り付け用）", "컬리 파슬리, 곁들임", "พาร์สลีย์ใบหยิก สำหรับเสิร์ฟ")
     });
     recipe.cookMinutes = 50;
@@ -207,6 +224,8 @@ function refineForPublication(source) {
   }
 
   if (recipe.id === "clay-pot-rice") {
+    const sausage = recipe.ingredients.find((row) => row.item.en.startsWith("sweet Chinese sausage"));
+    if (sausage) sausage.amount = ml("100 g / 2 links", "100 g / 2 條", "100 g / 2本", "100 g / 2개", "100 g / 2 ชิ้น");
     recipe.prepMinutes = 60;
     recipe.cookMinutes = 30;
     recipe.totalMinutes = 90;
@@ -228,7 +247,7 @@ function refineForPublication(source) {
     recipe.totalMinutes = 120;
     const panFryOil = recipe.ingredients.find((row) => row.item.en.startsWith("neutral oil for pan-fry"));
     if (panFryOil) {
-      panFryOil.amount = "15 ml per 12 dumplings";
+      panFryOil.amount = ml("15 ml per 12", "每 12 顆 15 ml", "12個につき 15 ml", "12개당 15 ml", "15 ml ต่อ 12 ชิ้น");
       panFryOil.item = ml(
         "neutral cooking oil for the optional pan-fry method",
         "選用煎餃作法的中性食用油",
@@ -238,7 +257,7 @@ function refineForPublication(source) {
       );
     }
     recipe.ingredients.push({
-      amount: "60 ml per 12 dumplings",
+      amount: ml("60 ml per 12", "每 12 顆 60 ml", "12個につき 60 ml", "12개당 60 ml", "60 ml ต่อ 12 ชิ้น"),
       item: ml(
         "water for the optional pan-fry method",
         "選用煎餃作法用水",
@@ -286,6 +305,8 @@ function refineForPublication(source) {
   }
 
   if (recipe.id === "scallion-pancakes") {
+    recipe.cookMinutes = 25;
+    recipe.totalMinutes = 70;
     recipe.instructions[4] = ml(
       "Heat a skillet over medium heat with 3.75 ml oil per pancake. Cook each pancake for 2–3 minutes per side, pressing and rotating occasionally, until blistered, crisp, deeply golden, and fully set at the centre.",
       "平底鍋以中火燒熱，每張餅使用 3.75 毫升油；每面煎 2–3 分鐘，期間偶爾輕壓並轉動，至表面起泡酥脆、呈深金黃色且中心完全熟透。",
@@ -306,7 +327,10 @@ function refineForPublication(source) {
   if (recipe.id === "wonton-soup") {
     recipe.ingredients = recipe.ingredients.filter((row) => !row.item.en.startsWith("baby bok choy"));
     const wrappers = recipe.ingredients.find((row) => row.item.en.startsWith("square wonton wrappers"));
-    if (wrappers) wrappers.amount = "48 sheets (about 384 g)";
+    if (wrappers) {
+      wrappers.amount = ml("48 sheets", "48 張", "48枚", "48장", "48 แผ่น");
+      wrappers.item = ml("square wonton wrappers, about 384 g total", "方形餛飩皮，總重約 384 公克", "正方形のワンタンの皮（合計約384g）", "사각 완탕피, 총 약 384g", "แผ่นเกี๊ยวสี่เหลี่ยม น้ำหนักรวมประมาณ 384 กรัม");
+    }
     recipe.ingredients.push({
       amount: "2 L",
       item: ml("water for boiling the wontons", "煮餛飩用水", "ワンタンをゆでる水", "완탕 삶을 물", "น้ำสำหรับต้มเกี๊ยว")
@@ -405,6 +429,13 @@ function refineForPublication(source) {
 
 export const recipes = [...recipeDraftA, ...recipeDraftB]
   .filter((recipe) => approvedPhotos.has(recipe.id))
-  .map((recipe) => ({ ...refineForPublication(recipe), photo: approvedPhotos.get(recipe.id) }));
+  .map((recipe) => {
+    const refined = refineForPublication(recipe);
+    return {
+      ...refined,
+      instructions: expandedInstructions[recipe.id] ?? refined.instructions,
+      photo: approvedPhotos.get(recipe.id)
+    };
+  });
 
 export const allRecipeDrafts = [...recipeDraftA, ...recipeDraftB];

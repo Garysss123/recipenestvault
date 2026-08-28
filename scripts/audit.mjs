@@ -115,15 +115,32 @@ for (const recipe of recipes) {
   if (!(await exists(join(root, "assets", "recipes", "approved", recipe.photo.sourceAsset || "missing")))) failures.push(`${recipe.id}: approved source photograph is missing`);
   if (recipe.sources.length < 2 || new Set(recipe.sources.map((source) => source.url)).size < 2 || recipe.sources.some((source) => !source.title || !/^https:\/\//.test(source.url))) failures.push(`${recipe.id}: needs at least two distinct titled HTTPS recipe sources`);
   if (recipe.totalMinutes !== recipe.prepMinutes + recipe.cookMinutes || recipe.servings < 1) failures.push(`${recipe.id}: invalid timing or yield`);
-  if (recipe.ingredients.length < 5 || recipe.instructions.length < 4) failures.push(`${recipe.id}: incomplete cooking method`);
+  if (recipe.ingredients.length < 5 || recipe.instructions.length < 8 || recipe.instructions.length > 12) failures.push(`${recipe.id}: cooking method must contain 8–12 detailed steps`);
   const ingredientKeys = recipe.ingredients.map((row) => row.item?.en?.trim().toLowerCase()).filter(Boolean);
   if (new Set(ingredientKeys).size !== ingredientKeys.length) failures.push(`${recipe.id}: duplicate ingredient rows`);
   for (const field of ["region", "name", "description", "storage", "cultureNote", "imageAlt"]) validateLocalizedText(recipe[field], `${recipe.id}.${field}`);
   recipe.ingredients.forEach((row, index) => {
-    if (!row.amount || !/\d/.test(row.amount)) failures.push(`${recipe.id}.ingredients[${index}]: missing exact amount`);
+    if (row.amount && typeof row.amount === "object") {
+      validateLocalizedText(row.amount, `${recipe.id}.ingredients[${index}].amount`);
+      for (const locale of localeOrder) if (!/\d/.test(row.amount?.[locale] || "")) failures.push(`${recipe.id}.ingredients[${index}].amount.${locale}: missing exact amount`);
+    } else if (!row.amount || !/\d/.test(row.amount)) {
+      failures.push(`${recipe.id}.ingredients[${index}]: missing exact amount`);
+    } else if (/[A-Za-z]{2,}/.test(row.amount.replace(/\b(?:ml|kg)\b/gi, ""))) {
+      failures.push(`${recipe.id}.ingredients[${index}]: shared amount contains untranslated words`);
+    }
     validateLocalizedText(row.item, `${recipe.id}.ingredients[${index}].item`);
   });
-  for (const field of ["instructions", "tips", "commonMistakes", "substitutions"]) {
+  recipe.instructions.forEach((step, index) => {
+    if (step?.title && step?.body) {
+      validateLocalizedText(step.title, `${recipe.id}.instructions[${index}].title`);
+      validateLocalizedText(step.body, `${recipe.id}.instructions[${index}].body`);
+      for (const locale of localeOrder) if (/^\s*\d+[.)]\s/.test(step.body?.[locale] || "")) failures.push(`${recipe.id}.instructions[${index}].body.${locale}: duplicates the rendered list number`);
+      return;
+    }
+    validateLocalizedText(step, `${recipe.id}.instructions[${index}]`);
+    for (const locale of localeOrder) if (/^\s*\d+[.)]\s/.test(step?.[locale] || "")) failures.push(`${recipe.id}.instructions[${index}].${locale}: duplicates the rendered list number`);
+  });
+  for (const field of ["tips", "commonMistakes", "substitutions"]) {
     recipe[field].forEach((row, index) => {
       validateLocalizedText(row, `${recipe.id}.${field}[${index}]`);
       for (const locale of localeOrder) if (/^\s*\d+[.)]\s/.test(row?.[locale] || "")) failures.push(`${recipe.id}.${field}[${index}].${locale}: duplicates the rendered list number`);
