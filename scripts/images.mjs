@@ -3,15 +3,19 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 import { recipePhotoCandidates } from "../src/recipe-photos.mjs";
+import { recipeProcessPhotos } from "../src/recipe-process-photos.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const sourceDirectory = join(root, "assets", "brand", "real");
 const output = join(root, "public", "images");
 await mkdir(output, { recursive: true });
 const recipeSourceDirectory = join(root, "assets", "recipes", "approved");
+const processSourceDirectory = join(root, "assets", "recipes", "process-approved");
 const recipeOutput = join(output, "recipes");
+const processOutput = join(recipeOutput, "process");
 await rm(recipeOutput, { recursive: true, force: true });
 await mkdir(recipeOutput, { recursive: true });
+await mkdir(processOutput, { recursive: true });
 
 const photographs = [
   { name: "sushi", file: "sushi.jpg", position: "attention" },
@@ -43,6 +47,18 @@ for (const photograph of approvedRecipePhotos) {
   }
 }
 
+const approvedProcessPhotos = recipeProcessPhotos.filter((photo) => photo.visualMatchApproved && photo.commercialUseVerified && photo.adaptationAllowed && photo.realPhoto);
+for (const photograph of approvedProcessPhotos) {
+  const source = join(processSourceDirectory, photograph.sourceAsset);
+  for (const width of [480, 800]) {
+    await sharp(source)
+      .rotate()
+      .resize({ width, withoutEnlargement: true })
+      .webp({ quality: 84, effort: 5 })
+      .toFile(join(processOutput, `${photograph.id}-${width}.webp`));
+  }
+}
+
 const socialCard = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffaf7"/><stop offset="1" stop-color="#f8e9ee"/></linearGradient>
@@ -69,4 +85,4 @@ const socialCard = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1
 
 await sharp(socialCard).jpeg({ quality: 88, chromaSubsampling: "4:4:4" }).toFile(join(root, "public", "og.jpg"));
 
-console.log(`Prepared ${photographs.length * 3} homepage crops, ${approvedRecipePhotos.length * 3} approved recipe crops, and one food-free social card.`);
+console.log(`Prepared ${photographs.length * 3} homepage crops, ${approvedRecipePhotos.length * 3} approved recipe crops, ${approvedProcessPhotos.length * 2} approved process images, and one food-free social card.`);

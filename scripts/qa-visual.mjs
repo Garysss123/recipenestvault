@@ -154,13 +154,24 @@ await inspect({
     if (await page.locator(".ingredients-section li").count() < 5) throw new Error("Recipe ingredients did not render");
     if (await page.locator(".method-section li").count() < 8) throw new Error("Detailed recipe method did not render");
     if (await page.locator(".recipe-step-copy h3").count() < 8) throw new Error("Recipe step headings did not render");
+    if (await page.locator(".recipe-step-photo").count() !== 1) throw new Error("Approved optional step photography did not render exactly once");
     const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
     if (response?.status() !== 200) throw new Error(`Recipe deep-route refresh returned ${response?.status() ?? "no response"}`);
   },
   extraScreenshots: [
     { name: "en-mapo-ingredients-desktop", selector: ".ingredients-section" },
     { name: "en-mapo-method-desktop", selector: ".method-section" },
+    { name: "en-mapo-step-photo-desktop", selector: ".recipe-step-photo" },
     { name: "en-mapo-sources-desktop", selector: ".recipe-sources" }
+  ]
+});
+await inspect({
+  name: "zh-mapo-step-photo-mobile", path: "/zh-hant/recipes/mapo-tofu/", viewport: { width: 390, height: 844 }, fullPage: false,
+  interact: async (page) => {
+    if (await page.locator(".recipe-step-photo").count() !== 1) throw new Error("Mobile optional step photography did not render exactly once");
+  },
+  extraScreenshots: [
+    { name: "zh-mapo-step-photo-detail-mobile", selector: ".recipe-step-photo" }
   ]
 });
 await inspect({

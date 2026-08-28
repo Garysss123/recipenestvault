@@ -1,8 +1,10 @@
+import { createHash } from "node:crypto";
 import { readdir, readFile, stat } from "node:fs/promises";
 import { dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import { cuisines, localeOrder, locales, origin } from "../src/data.mjs";
 import { infoPages } from "../src/info-pages.mjs";
+import { recipeProcessPhotos } from "../src/recipe-process-photos.mjs";
 import { recipes } from "../src/recipes.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
@@ -81,6 +83,13 @@ for (const slug of localeOrder) {
     const recipeHtml = await readFile(recipeFile, "utf8");
     if (!recipeHtml.includes('"@type":"Recipe"')) failures.push(`${slug} ${recipe.id}: missing Recipe schema`);
     if (!recipeHtml.includes(recipe.photo.sourcePage) || !recipeHtml.includes(recipe.photo.licenseUrl)) failures.push(`${slug} ${recipe.id}: missing visible photo provenance`);
+    for (const processPhoto of recipeProcessPhotos.filter((photo) => photo.recipeId === recipe.id)) {
+      if (!recipeHtml.includes(`data-step-photo="${processPhoto.id}"`)) failures.push(`${slug} ${recipe.id}: missing approved step photograph ${processPhoto.id}`);
+      for (const required of [processPhoto.sourcePage, processPhoto.originalFile, processPhoto.originalPublication, processPhoto.licenseUrl]) {
+        if (!recipeHtml.includes(required)) failures.push(`${slug} ${recipe.id}: incomplete visible provenance for ${processPhoto.id}`);
+      }
+      if (!recipeHtml.includes(`/images/recipes/process/${processPhoto.id}-800.webp`)) failures.push(`${slug} ${recipe.id}: step image missing from markup or JSON-LD`);
+    }
   }
 }
 
@@ -149,6 +158,34 @@ for (const recipe of recipes) {
   for (const width of [640, 960, 1440]) if (!(await exists(join(dist, "images", "recipes", `${recipe.id}-${width}.webp`)))) failures.push(`${recipe.id}: missing ${width}px approved photo crop`);
 }
 
+const processPhotoIds = new Set();
+const processStepKeys = new Set();
+for (const photo of recipeProcessPhotos) {
+  const stepKey = `${photo.recipeId}:${photo.step}`;
+  const recipe = recipes.find((entry) => entry.id === photo.recipeId);
+  if (processPhotoIds.has(photo.id)) failures.push(`${photo.id}: duplicate process photo id`);
+  processPhotoIds.add(photo.id);
+  if (processStepKeys.has(stepKey)) failures.push(`${stepKey}: more than one process photo assigned to a step`);
+  processStepKeys.add(stepKey);
+  if (!recipe) failures.push(`${photo.id}: process photograph references an unpublished recipe`);
+  if (!Number.isInteger(photo.step) || photo.step < 1 || (recipe && photo.step > recipe.instructions.length)) failures.push(`${photo.id}: invalid recipe step ${photo.step}`);
+  if (!photo.commercialUseVerified || !photo.adaptationAllowed || !photo.realPhoto || !photo.visualMatchApproved) failures.push(`${photo.id}: process photograph bypassed an approval gate`);
+  if (!photo.title || !photo.author || !photo.sourcePage || !photo.originalFile || !photo.originalPublication || !photo.license || !photo.licenseUrl || !photo.frameTimestamp || !photo.sourceAsset || !photo.sourceAssetSha256) failures.push(`${photo.id}: incomplete video-frame provenance`);
+  if (photo.relation !== "separately-sourced-technique-reference") failures.push(`${photo.id}: separately sourced image must be explicitly labelled as a technique reference`);
+  if (/\b(?:NC|ND)\b/i.test(photo.license || "")) failures.push(`${photo.id}: process photo license prohibits commercial reuse or adaptation`);
+  if (!/^https:\/\//.test(photo.sourcePage || "") || !/^https:\/\//.test(photo.originalFile || "") || !/^https:\/\//.test(photo.originalPublication || "") || !/^https:\/\//.test(photo.licenseUrl || "")) failures.push(`${photo.id}: provenance URLs must use HTTPS`);
+  if (!/^\d{2}:\d{2}:\d{2}\.\d{3}$/.test(photo.frameTimestamp || "")) failures.push(`${photo.id}: frame timestamp must be exact to milliseconds`);
+  for (const field of ["alt", "caption", "modifications"]) validateLocalizedText(photo[field], `${photo.id}.${field}`);
+  const source = join(root, "assets", "recipes", "process-approved", photo.sourceAsset || "missing");
+  if (!(await exists(source))) {
+    failures.push(`${photo.id}: approved process source frame is missing`);
+  } else {
+    const digest = createHash("sha256").update(await readFile(source)).digest("hex");
+    if (digest !== (photo.sourceAssetSha256 || "").toLowerCase()) failures.push(`${photo.id}: approved source frame hash changed`);
+  }
+  for (const width of [480, 800]) if (!(await exists(join(dist, "images", "recipes", "process", `${photo.id}-${width}.webp`)))) failures.push(`${photo.id}: missing ${width}px process image`);
+}
+
 const redirects = await readFile(join(dist, "_redirects"), "utf8");
 if (!redirects.includes("/ /en/ 301")) failures.push("root redirect must be permanent");
 if (!redirects.includes("/index.html /en/ 301")) failures.push("index redirect missing");
@@ -172,4 +209,4 @@ if (sizes[0].size > 25 * 1024 * 1024) failures.push(`largest output exceeds Page
 
 console.log(`Static audit: ${files.length} files, ${expectedUrlCount} indexable routes; largest ${sizes[0].size} bytes (${relative(root, sizes[0].file)}).`);
 if (failures.length) { console.error(`Audit failed (${failures.length}):\n- ${failures.slice(0, 60).join("\n- ")}`); process.exit(1); }
-console.log("Static audit passed: routes, links, responsive images, search, five-language recipe completeness, real-photo gates, provenance, sitemap, canonical, reciprocal hreflang, social metadata and JSON-LD are valid.");
+console.log("Static audit passed: routes, links, responsive images, search, five-language recipe completeness, finished/process real-photo gates, provenance, sitemap, canonical, reciprocal hreflang, social metadata and JSON-LD are valid.");
