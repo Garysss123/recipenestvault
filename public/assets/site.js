@@ -21,6 +21,36 @@
     if (event.key === "Escape") document.querySelectorAll("details.language-menu[open]").forEach((details) => details.removeAttribute("open"));
   });
 
+  const languagePrompt = document.querySelector("[data-language-prompt]");
+  if (languagePrompt) {
+    const preferenceKey = "rnv-language-preference-v1";
+    const activeLocale = languagePrompt.dataset.activeLocale || "en";
+    const readPreference = () => {
+      try { return localStorage.getItem(preferenceKey); } catch { return null; }
+    };
+    const savePreference = (value) => {
+      try { localStorage.setItem(preferenceKey, value); } catch { /* Private browsing can disable storage. */ }
+    };
+    const closePrompt = () => {
+      savePreference(activeLocale);
+      if (typeof languagePrompt.close === "function") languagePrompt.close();
+      else languagePrompt.removeAttribute("open");
+    };
+
+    languagePrompt.querySelectorAll("[data-language-choice]").forEach((link) => {
+      link.addEventListener("click", () => savePreference(link.dataset.languageChoice || activeLocale));
+    });
+    languagePrompt.querySelectorAll("[data-language-dismiss]").forEach((button) => button.addEventListener("click", closePrompt));
+    languagePrompt.addEventListener("cancel", () => savePreference(activeLocale));
+    languagePrompt.addEventListener("close", () => document.documentElement.removeAttribute("data-language-dialog-open"));
+
+    if (!readPreference()) {
+      document.documentElement.setAttribute("data-language-dialog-open", "");
+      if (typeof languagePrompt.showModal === "function") languagePrompt.showModal();
+      else languagePrompt.setAttribute("open", "");
+    }
+  }
+
   document.querySelectorAll(".adsbygoogle").forEach(() => {
     try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch { /* Google script may still be loading. */ }
   });

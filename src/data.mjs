@@ -13,17 +13,18 @@ export const locales = {
       exploreTitle: "Find your next table", exploreIntro: "Start with a cuisine, then follow the flavors that feel like home—or somewhere entirely new.",
       regionIntro: "Explore curated cuisine guides. Recipe collections will grow carefully, without filler.", viewCuisine: "Explore {cuisine}",
       featuredTitle: "A first taste of what’s coming", featuredIntro: "Four familiar dishes, chosen to show how the future collection will travel across regions.", collectionPreview: "Collection preview",
-      philosophyEyebrow: "Our standard", philosophyTitle: "Useful first. Sourced with care.", philosophyBody: "Clear ingredients. Realistic timing. Practical swaps. Every future recipe will be built to work in a real kitchen.",
+      philosophyEyebrow: "Our standard", philosophyTitle: "Useful first. Sourced with care.", philosophyBody: "Clear ingredients. Realistic timing. Practical swaps. Every published recipe is designed to work in a real kitchen.",
       principle1Title: "No long preamble", principle1Body: "The ingredients, timing, and method come first.", principle2Title: "Built from evidence", principle2Body: "Facts are checked across reliable sources, then rewritten and standardized.", principle3Title: "Credits stay visible", principle3Body: "Every reusable image and meaningful source keeps its author and license.",
-      creditsTitle: "Sources & photo credits", creditsIntro: "Homepage photography is a site-owned original created with OpenAI image generation, then resized and center-cropped for responsive display.", source: "Source file", license: "License", by: "by", generatedCredit: "Social preview created for Recipe Nest Vault with OpenAI image generation; © 2026 Recipe Nest Vault.",
+      creditsTitle: "Sources & photo credits", creditsIntro: "Homepage food images are licensed real photographs. Every credit links to the original page, original file, and commercial-use license.", source: "Original page", originalFile: "Original file", license: "License", by: "by", modified: "Cropped, resized, and compressed by Recipe Nest Vault.", generatedCredit: "Social preview is a site-owned brand graphic with no generated food imagery; © 2026 Recipe Nest Vault.",
       footerTagline: "Recipes for real kitchens.", about: "About", privacy: "Privacy", accessibility: "Accessibility", contact: "Contact", copyright: "© 2026 Recipe Nest Vault",
-      searchTitle: "Search the vault", searchIntro: "Search the first cuisine index and collection previews. Full recipe search will expand with the library.", resultsFor: "Results for", resultCount: "{count} results", emptyTitle: "No results found", emptyBody: "Try another ingredient, cuisine, or a shorter search.", clearSearch: "Clear search", startTyping: "Type a recipe, ingredient, or cuisine to begin.",
+      searchTitle: "Search the vault", searchIntro: "Search published recipes, ingredients, cuisine guides, and collection previews.", resultsFor: "Results for", resultCount: "{count} results", emptyTitle: "No results found", emptyBody: "Try another ingredient, cuisine, or a shorter search.", clearSearch: "Clear search", startTyping: "Type a recipe, ingredient, or cuisine to begin.",
       cuisineLabel: "Cuisine guide", cuisinePageBody: "The {cuisine} collection is being prepared with practical detail and carefully documented sources. We will publish fewer, stronger recipes instead of placeholder content.", comingTitle: "A considered collection is on the way", comingBody: "Future recipes will include timing, servings, substitutions, common mistakes, storage guidance, cultural notes, and visible credits.", exploreMore: "Explore more cuisines", backHome: "Back to home",
-      notFoundTitle: "Page not found", notFoundBody: "This page may have moved—or the link may be out of date.", chooseLanguage: "Choose your language", advertisement: "Advertisement", siteOwned: "Site-owned original"
+      notFoundTitle: "Page not found", notFoundBody: "This page may have moved—or the link may be out of date.", chooseLanguage: "Choose your language", advertisement: "Advertisement", siteOwned: "Site-owned original",
+      languagePromptEyebrow: "Language settings", languagePromptTitle: "Choose your language", languagePromptBody: "We’ll open Recipe Nest Vault in your preferred language. You can change it anytime.", currentLanguage: "Current language: {language}", currentBadge: "Current", continueCurrent: "Continue in {language}", close: "Close", notNow: "Not now", languagePreferenceNote: "Your language preference will be saved in this browser."
     },
     regionNames: { asia: "Asian cuisines", europe: "European cuisines", americas: "Cuisines of the Americas", world: "More world cuisines" },
-    imageAlts: { sushi: "Assorted sushi arranged on a plate", paella: "Seafood paella in a wide pan", pizza: "Margherita pizza photographed from above", burger: "Bacon cheeseburger with lettuce and tomato" },
-    featuredNames: { sushi: "Sushi assortment", paella: "Seafood paella", pizza: "Margherita pizza", burger: "Bacon cheeseburger" }
+    imageAlts: { sushi: "Assorted sushi arranged on a plate", paella: "Valencian paella with chicken, rabbit, flat beans, and snails in a wide pan", pizza: "Margherita pizza photographed from above", burger: "Bacon cheeseburger with lettuce and tomato" },
+    featuredNames: { sushi: "Sushi assortment", paella: "Valencian paella", pizza: "Margherita pizza", burger: "Bacon cheeseburger" }
   },
   "zh-hant": {
     lang: "zh-Hant", hreflang: "zh-Hant", ogLocale: "zh_TW", label: "繁體中文",
@@ -35,17 +36,18 @@ export const locales = {
       exploreTitle: "找到下一桌好料理", exploreIntro: "從熟悉的料理出發，也可以沿著風味去到從未探索過的地方。",
       regionIntro: "先探索精選料理指南；食譜會謹慎擴充，不用低品質內容湊數。", viewCuisine: "探索{cuisine}",
       featuredTitle: "搶先看看即將登場的內容", featuredIntro: "四道熟悉料理，預告未來食譜資料庫將涵蓋的不同地域與風味。", collectionPreview: "內容預覽",
-      philosophyEyebrow: "我們的標準", philosophyTitle: "先把實用做好，來源仔細查核。", philosophyBody: "食材清楚、時間務實、替代方案實用。未來每道食譜都為真實廚房而寫。",
+      philosophyEyebrow: "我們的標準", philosophyTitle: "先把實用做好，來源仔細查核。", philosophyBody: "食材清楚、時間務實、替代方案實用。每道公開食譜都為真實廚房而寫。",
       principle1Title: "不寫冗長前言", principle1Body: "食材、時間與做法永遠優先。", principle2Title: "以可靠資料為基礎", principle2Body: "交叉查核可靠來源，再重新整理成標準化內容。", principle3Title: "來源清楚可見", principle3Body: "可重複使用的圖片與重要資料都保留作者與授權。",
-      creditsTitle: "來源與圖片授權", creditsIntro: "首頁照片由 OpenAI 圖像生成工具為本站原創製作，再依響應式顯示進行縮放與置中裁切。", source: "素材檔案", license: "授權", by: "作者", generatedCredit: "社群預覽圖由 OpenAI 圖像生成工具為 Recipe Nest Vault 製作；© 2026 Recipe Nest Vault。",
+      creditsTitle: "來源與圖片授權", creditsIntro: "首頁料理圖片皆為授權清楚的真實照片；每筆資訊都連結原始頁面、原始檔與可商用授權。", source: "原始頁面", originalFile: "原始檔案", license: "授權", by: "作者", modified: "由 Recipe Nest Vault 裁切、縮放並壓縮。", generatedCredit: "社群預覽圖為本站自有品牌圖像，不含生成式料理圖片；© 2026 Recipe Nest Vault。",
       footerTagline: "為真實廚房而寫的食譜。", about: "關於我們", privacy: "隱私權", accessibility: "無障礙", contact: "聯絡我們", copyright: "© 2026 Recipe Nest Vault",
-      searchTitle: "搜尋食譜資料庫", searchIntro: "目前可搜尋料理分類與第一批內容預覽；完整食譜搜尋將隨資料庫持續擴充。", resultsFor: "搜尋結果", resultCount: "共 {count} 項", emptyTitle: "找不到符合結果", emptyBody: "試試其他食材、料理類型，或縮短搜尋詞。", clearSearch: "清除搜尋", startTyping: "輸入食譜、食材或料理類型開始搜尋。",
+      searchTitle: "搜尋食譜資料庫", searchIntro: "搜尋已公開食譜、食材、料理指南與內容預覽。", resultsFor: "搜尋結果", resultCount: "共 {count} 項", emptyTitle: "找不到符合結果", emptyBody: "試試其他食材、料理類型，或縮短搜尋詞。", clearSearch: "清除搜尋", startTyping: "輸入食譜、食材或料理類型開始搜尋。",
       cuisineLabel: "料理指南", cuisinePageBody: "{cuisine}內容正在依照實用細節與清楚來源逐步準備。我們寧可少而精，也不會發布只有占位用途的低品質食譜。", comingTitle: "精心整理的內容即將登場", comingBody: "未來食譜將包含時間、份量、替代食材、常見錯誤、保存方式、文化背景與清楚授權。", exploreMore: "探索更多料理", backHome: "回到首頁",
-      notFoundTitle: "找不到此頁面", notFoundBody: "頁面可能已移動，或這個網址已失效。", chooseLanguage: "選擇語言", advertisement: "廣告", siteOwned: "本站原創素材"
+      notFoundTitle: "找不到此頁面", notFoundBody: "頁面可能已移動，或這個網址已失效。", chooseLanguage: "選擇語言", advertisement: "廣告", siteOwned: "本站原創素材",
+      languagePromptEyebrow: "語言設定", languagePromptTitle: "選擇你的語言", languagePromptBody: "我們會使用你偏好的語言開啟 Recipe Nest Vault；之後隨時都能更改。", currentLanguage: "目前語言：{language}", currentBadge: "目前", continueCurrent: "繼續使用{language}", close: "關閉", notNow: "稍後再說", languagePreferenceNote: "你的語言偏好會儲存在此瀏覽器中。"
     },
     regionNames: { asia: "亞洲料理", europe: "歐洲料理", americas: "美洲料理", world: "更多世界料理" },
-    imageAlts: { sushi: "盤中整齊排列的綜合壽司", paella: "寬口鍋中的西班牙海鮮飯", pizza: "由上方拍攝的瑪格麗特披薩", burger: "搭配生菜與番茄的培根起司漢堡" },
-    featuredNames: { sushi: "綜合壽司", paella: "西班牙海鮮飯", pizza: "瑪格麗特披薩", burger: "培根起司漢堡" }
+    imageAlts: { sushi: "盤中整齊排列的綜合壽司", paella: "寬口鍋中加入雞肉、兔肉、扁豆與蝸牛的瓦倫西亞燉飯", pizza: "由上方拍攝的瑪格麗特披薩", burger: "搭配生菜與番茄的培根起司漢堡" },
+    featuredNames: { sushi: "綜合壽司", paella: "瓦倫西亞燉飯", pizza: "瑪格麗特披薩", burger: "培根起司漢堡" }
   },
   ja: {
     lang: "ja", hreflang: "ja", ogLocale: "ja_JP", label: "日本語",
@@ -59,15 +61,16 @@ export const locales = {
       featuredTitle: "これから加わる料理をひと足先に", featuredIntro: "世界各地へ広がるこれからのコレクションを、4つの料理で紹介します。", collectionPreview: "コレクション予告",
       philosophyEyebrow: "私たちの基準", philosophyTitle: "役立つことを第一に。出典は丁寧に。", philosophyBody: "材料を明確に、調理時間を現実的に。代替食材も実用的に。日々の台所で役立つレシピを目指します。",
       principle1Title: "長い前置きなし", principle1Body: "材料、時間、作り方を最初に伝えます。", principle2Title: "根拠を大切に", principle2Body: "信頼できる複数の情報を確認し、整理してまとめます。", principle3Title: "クレジットを明記", principle3Body: "画像や重要な情報には、作者とライセンスを表示します。",
-      creditsTitle: "出典・写真クレジット", creditsIntro: "トップページの写真は OpenAI の画像生成機能で制作したサイト独自素材を、レスポンシブ表示のため縮小・中央トリミングしたものです。", source: "素材ファイル", license: "ライセンス", by: "作者", generatedCredit: "ソーシャルプレビューは OpenAI の画像生成機能で Recipe Nest Vault 向けに制作しました。© 2026 Recipe Nest Vault。",
+      creditsTitle: "出典・写真クレジット", creditsIntro: "トップページの料理画像は、利用条件を確認した実写写真です。各クレジットから元ページ、元ファイル、商用利用可能なライセンスを確認できます。", source: "元ページ", originalFile: "元ファイル", license: "ライセンス", by: "作者", modified: "Recipe Nest Vault がトリミング、縮小、圧縮しました。", generatedCredit: "ソーシャルプレビューはサイト独自のブランド画像で、生成された料理画像は含みません。© 2026 Recipe Nest Vault。",
       footerTagline: "毎日の台所で役立つレシピ。", about: "このサイトについて", privacy: "プライバシー", accessibility: "アクセシビリティ", contact: "お問い合わせ", copyright: "© 2026 Recipe Nest Vault",
-      searchTitle: "レシピを検索", searchIntro: "現在は料理ガイドとコレクション予告を検索できます。レシピの追加とともに検索範囲も広がります。", resultsFor: "検索結果", resultCount: "{count}件", emptyTitle: "該当する結果がありません", emptyBody: "別の食材や料理名を試すか、検索語を短くしてみてください。", clearSearch: "検索条件をクリア", startTyping: "レシピ、食材、料理名を入力してください。",
+      searchTitle: "レシピを検索", searchIntro: "公開中のレシピ、材料、料理ガイド、コレクション予告を検索できます。", resultsFor: "検索結果", resultCount: "{count}件", emptyTitle: "該当する結果がありません", emptyBody: "別の食材や料理名を試すか、検索語を短くしてみてください。", clearSearch: "検索条件をクリア", startTyping: "レシピ、食材、料理名を入力してください。",
       cuisineLabel: "料理ガイド", cuisinePageBody: "{cuisine}のコレクションは、実用的な情報と明確な出典を大切にしながら準備中です。数を埋めるだけの内容は公開しません。", comingTitle: "丁寧に選んだコレクションを準備中", comingBody: "今後のレシピには、時間、分量、代替食材、よくある失敗、保存方法、文化背景、クレジットを掲載します。", exploreMore: "ほかの料理を見る", backHome: "ホームへ戻る",
-      notFoundTitle: "ページが見つかりません", notFoundBody: "ページが移動したか、URLが正しくない可能性があります。", chooseLanguage: "言語を選択", advertisement: "広告", siteOwned: "サイト独自のオリジナル素材"
+      notFoundTitle: "ページが見つかりません", notFoundBody: "ページが移動したか、URLが正しくない可能性があります。", chooseLanguage: "言語を選択", advertisement: "広告", siteOwned: "サイト独自のオリジナル素材",
+      languagePromptEyebrow: "言語設定", languagePromptTitle: "使用する言語を選択", languagePromptBody: "選んだ言語で Recipe Nest Vault を表示します。言語はいつでも変更できます。", currentLanguage: "現在の言語：{language}", currentBadge: "現在", continueCurrent: "{language}で続ける", close: "閉じる", notNow: "後で", languagePreferenceNote: "言語設定はこのブラウザーに保存されます。"
     },
     regionNames: { asia: "アジア料理", europe: "ヨーロッパ料理", americas: "南北アメリカの料理", world: "その他の世界料理" },
-    imageAlts: { sushi: "皿に盛り付けられた寿司の盛り合わせ", paella: "大きな鍋に入ったシーフードパエリア", pizza: "真上から撮影したマルゲリータピザ", burger: "レタスとトマトを挟んだベーコンチーズバーガー" },
-    featuredNames: { sushi: "寿司の盛り合わせ", paella: "シーフードパエリア", pizza: "マルゲリータピザ", burger: "ベーコンチーズバーガー" }
+    imageAlts: { sushi: "皿に盛り付けられた寿司の盛り合わせ", paella: "鶏肉、うさぎ肉、平さやいんげん、かたつむりを炊き込んだバレンシア風パエリア", pizza: "真上から撮影したマルゲリータピザ", burger: "レタスとトマトを挟んだベーコンチーズバーガー" },
+    featuredNames: { sushi: "寿司の盛り合わせ", paella: "バレンシア風パエリア", pizza: "マルゲリータピザ", burger: "ベーコンチーズバーガー" }
   },
   ko: {
     lang: "ko", hreflang: "ko", ogLocale: "ko_KR", label: "한국어",
@@ -81,15 +84,16 @@ export const locales = {
       featuredTitle: "곧 만나게 될 요리를 미리 살펴보세요", featuredIntro: "앞으로 여러 지역으로 확장될 컬렉션을 네 가지 익숙한 요리로 소개합니다.", collectionPreview: "컬렉션 미리 보기",
       philosophyEyebrow: "우리의 기준", philosophyTitle: "쓸모를 먼저 생각하고, 출처는 꼼꼼하게 확인합니다.", philosophyBody: "재료는 명확하게, 시간은 현실적으로, 대체 재료는 실용적으로. 실제 주방에서 쓰기 좋은 레시피를 만듭니다.",
       principle1Title: "긴 서문 없이", principle1Body: "재료, 시간, 조리법을 가장 먼저 보여 줍니다.", principle2Title: "근거를 바탕으로", principle2Body: "신뢰할 수 있는 자료를 교차 확인한 뒤 새롭게 정리합니다.", principle3Title: "크레딧을 투명하게", principle3Body: "이미지와 중요한 정보에 저작자와 라이선스를 표시합니다.",
-      creditsTitle: "출처 및 사진 크레딧", creditsIntro: "홈페이지 사진은 OpenAI 이미지 생성 기능으로 제작한 사이트 소유 원본을 반응형 표시에 맞게 크기를 조정하고 중앙을 기준으로 자른 것입니다.", source: "이미지 파일", license: "라이선스", by: "제작", generatedCredit: "소셜 미리보기 이미지는 OpenAI 이미지 생성 기능으로 Recipe Nest Vault를 위해 제작했습니다. © 2026 Recipe Nest Vault.",
+      creditsTitle: "출처 및 사진 크레딧", creditsIntro: "홈페이지 음식 이미지는 이용 조건을 확인한 실제 사진입니다. 각 크레딧에서 원본 페이지, 원본 파일, 상업적 이용이 가능한 라이선스를 확인할 수 있습니다.", source: "원본 페이지", originalFile: "원본 파일", license: "라이선스", by: "촬영", modified: "Recipe Nest Vault에서 자르고 크기를 조정한 뒤 압축했습니다.", generatedCredit: "소셜 미리보기는 사이트 소유 브랜드 이미지이며 생성형 음식 이미지를 포함하지 않습니다. © 2026 Recipe Nest Vault.",
       footerTagline: "실제 주방을 위한 레시피.", about: "소개", privacy: "개인정보 보호", accessibility: "접근성", contact: "문의", copyright: "© 2026 Recipe Nest Vault",
-      searchTitle: "레시피 보관소 검색", searchIntro: "현재는 요리 가이드와 컬렉션 미리 보기를 검색할 수 있습니다. 전체 레시피 검색은 콘텐츠와 함께 확장됩니다.", resultsFor: "검색 결과", resultCount: "{count}개 결과", emptyTitle: "검색 결과가 없습니다", emptyBody: "다른 재료나 요리를 검색하거나 검색어를 짧게 입력해 보세요.", clearSearch: "검색어 지우기", startTyping: "레시피, 재료 또는 요리를 입력해 보세요.",
+      searchTitle: "레시피 보관소 검색", searchIntro: "공개된 레시피, 재료, 요리 가이드와 컬렉션 미리 보기를 검색할 수 있습니다.", resultsFor: "검색 결과", resultCount: "{count}개 결과", emptyTitle: "검색 결과가 없습니다", emptyBody: "다른 재료나 요리를 검색하거나 검색어를 짧게 입력해 보세요.", clearSearch: "검색어 지우기", startTyping: "레시피, 재료 또는 요리를 입력해 보세요.",
       cuisineLabel: "요리 가이드", cuisinePageBody: "{cuisine} 컬렉션은 실용적인 정보와 명확한 출처를 기준으로 준비하고 있습니다. 자리만 채우는 콘텐츠 대신 적더라도 완성도 높은 레시피를 공개하겠습니다.", comingTitle: "신중하게 고른 컬렉션을 준비 중입니다", comingBody: "앞으로 시간, 인분, 대체 재료, 흔한 실수, 보관법, 문화적 배경, 크레딧을 모두 담을 예정입니다.", exploreMore: "다른 요리 둘러보기", backHome: "홈으로 돌아가기",
-      notFoundTitle: "페이지를 찾을 수 없습니다", notFoundBody: "페이지가 이동했거나 링크가 오래되었을 수 있습니다.", chooseLanguage: "언어 선택", advertisement: "광고", siteOwned: "사이트 소유 원본"
+      notFoundTitle: "페이지를 찾을 수 없습니다", notFoundBody: "페이지가 이동했거나 링크가 오래되었을 수 있습니다.", chooseLanguage: "언어 선택", advertisement: "광고", siteOwned: "사이트 소유 원본",
+      languagePromptEyebrow: "언어 설정", languagePromptTitle: "사용할 언어를 선택하세요", languagePromptBody: "선택한 언어로 Recipe Nest Vault를 엽니다. 언어는 언제든지 바꿀 수 있습니다.", currentLanguage: "현재 언어: {language}", currentBadge: "현재", continueCurrent: "{language}로 계속하기", close: "닫기", notNow: "나중에", languagePreferenceNote: "언어 설정은 이 브라우저에 저장됩니다."
     },
     regionNames: { asia: "아시아 요리", europe: "유럽 요리", americas: "아메리카 요리", world: "더 많은 세계 요리" },
-    imageAlts: { sushi: "접시에 가지런히 담긴 모둠 초밥", paella: "넓은 팬에 담긴 해산물 파에야", pizza: "위에서 촬영한 마르게리타 피자", burger: "양상추와 토마토를 넣은 베이컨 치즈버거" },
-    featuredNames: { sushi: "모둠 초밥", paella: "해산물 파에야", pizza: "마르게리타 피자", burger: "베이컨 치즈버거" }
+    imageAlts: { sushi: "접시에 가지런히 담긴 모둠 초밥", paella: "닭고기, 토끼고기, 납작콩, 달팽이를 넣은 발렌시아식 파에야", pizza: "위에서 촬영한 마르게리타 피자", burger: "양상추와 토마토를 넣은 베이컨 치즈버거" },
+    featuredNames: { sushi: "모둠 초밥", paella: "발렌시아식 파에야", pizza: "마르게리타 피자", burger: "베이컨 치즈버거" }
   },
   th: {
     lang: "th", hreflang: "th", ogLocale: "th_TH", label: "ไทย",
@@ -103,15 +107,16 @@ export const locales = {
       featuredTitle: "ลิ้มลองสิ่งที่กำลังจะมาถึง", featuredIntro: "สี่เมนูคุ้นเคยที่แสดงให้เห็นว่าคอลเลกชันในอนาคตจะเดินทางข้ามภูมิภาคอย่างไร", collectionPreview: "ตัวอย่างคอลเลกชัน",
       philosophyEyebrow: "มาตรฐานของเรา", philosophyTitle: "ใช้งานได้จริงเป็นอันดับแรก พร้อมตรวจสอบแหล่งที่มาอย่างใส่ใจ", philosophyBody: "บอกวัตถุดิบและเวลาอย่างชัดเจน พร้อมตัวเลือกทดแทนที่ใช้ได้จริง ทุกสูตรจะออกแบบมาให้ทำตามได้ในครัวจริง",
       principle1Title: "ไม่มีบทนำยืดยาว", principle1Body: "วัตถุดิบ เวลา และวิธีทำต้องมาก่อน", principle2Title: "สร้างจากข้อมูลที่ตรวจสอบได้", principle2Body: "ตรวจสอบหลายแหล่งที่เชื่อถือได้ แล้วเรียบเรียงใหม่อย่างเป็นระบบ", principle3Title: "แสดงเครดิตอย่างชัดเจน", principle3Body: "ภาพและข้อมูลสำคัญทุกชิ้นระบุผู้สร้างและสัญญาอนุญาต",
-      creditsTitle: "แหล่งข้อมูลและเครดิตภาพ", creditsIntro: "ภาพหน้าแรกเป็นผลงานต้นฉบับของเว็บไซต์ที่สร้างด้วยเครื่องมือสร้างภาพของ OpenAI แล้วจึงย่อและครอปจากกึ่งกลางเพื่อแสดงผลแบบตอบสนอง", source: "ไฟล์ภาพ", license: "สัญญาอนุญาต", by: "สร้างโดย", generatedCredit: "ภาพตัวอย่างโซเชียลสร้างขึ้นเพื่อ Recipe Nest Vault ด้วยเครื่องมือสร้างภาพของ OpenAI © 2026 Recipe Nest Vault",
+      creditsTitle: "แหล่งข้อมูลและเครดิตภาพ", creditsIntro: "ภาพอาหารหน้าแรกเป็นภาพถ่ายจริงที่ตรวจสอบสิทธิ์การใช้งานแล้ว แต่ละเครดิตเชื่อมไปยังหน้าต้นฉบับ ไฟล์ต้นฉบับ และสัญญาอนุญาตที่ใช้เชิงพาณิชย์ได้", source: "หน้าต้นฉบับ", originalFile: "ไฟล์ต้นฉบับ", license: "สัญญาอนุญาต", by: "ถ่ายโดย", modified: "Recipe Nest Vault ครอป ปรับขนาด และบีบอัดภาพ", generatedCredit: "ภาพตัวอย่างโซเชียลเป็นกราฟิกแบรนด์ของเว็บไซต์และไม่มีภาพอาหารที่สร้างขึ้นด้วย AI © 2026 Recipe Nest Vault",
       footerTagline: "สูตรอาหารสำหรับครัวจริง", about: "เกี่ยวกับเรา", privacy: "ความเป็นส่วนตัว", accessibility: "การเข้าถึง", contact: "ติดต่อเรา", copyright: "© 2026 Recipe Nest Vault",
-      searchTitle: "ค้นหาในคลังสูตรอาหาร", searchIntro: "ขณะนี้ค้นหาได้จากคู่มืออาหารและตัวอย่างคอลเลกชัน การค้นหาสูตรเต็มจะขยายไปพร้อมกับเนื้อหา", resultsFor: "ผลการค้นหา", resultCount: "{count} รายการ", emptyTitle: "ไม่พบผลลัพธ์", emptyBody: "ลองใช้วัตถุดิบหรือประเภทอาหารอื่น หรือใช้คำค้นที่สั้นลง", clearSearch: "ล้างการค้นหา", startTyping: "พิมพ์สูตรอาหาร วัตถุดิบ หรือประเภทอาหารเพื่อเริ่มค้นหา",
+      searchTitle: "ค้นหาในคลังสูตรอาหาร", searchIntro: "ค้นหาสูตรที่เผยแพร่แล้ว วัตถุดิบ คู่มืออาหาร และตัวอย่างคอลเลกชัน", resultsFor: "ผลการค้นหา", resultCount: "{count} รายการ", emptyTitle: "ไม่พบผลลัพธ์", emptyBody: "ลองใช้วัตถุดิบหรือประเภทอาหารอื่น หรือใช้คำค้นที่สั้นลง", clearSearch: "ล้างการค้นหา", startTyping: "พิมพ์สูตรอาหาร วัตถุดิบ หรือประเภทอาหารเพื่อเริ่มค้นหา",
       cuisineLabel: "คู่มืออาหาร", cuisinePageBody: "เรากำลังเตรียมคอลเลกชัน{cuisine}โดยให้ความสำคัญกับข้อมูลที่ใช้ได้จริงและแหล่งที่มาที่ชัดเจน เราจะเผยแพร่สูตรที่มีคุณภาพแทนเนื้อหาสำหรับเติมจำนวน", comingTitle: "คอลเลกชันที่คัดสรรอย่างใส่ใจกำลังมา", comingBody: "สูตรในอนาคตจะมีเวลา จำนวนเสิร์ฟ วัตถุดิบทดแทน ข้อผิดพลาดที่พบบ่อย วิธีเก็บรักษา บริบททางวัฒนธรรม และเครดิต", exploreMore: "สำรวจอาหารเพิ่มเติม", backHome: "กลับหน้าแรก",
-      notFoundTitle: "ไม่พบหน้านี้", notFoundBody: "หน้านี้อาจถูกย้าย หรือ URL นี้อาจไม่ถูกต้อง", chooseLanguage: "เลือกภาษา", advertisement: "โฆษณา", siteOwned: "ผลงานต้นฉบับของเว็บไซต์"
+      notFoundTitle: "ไม่พบหน้านี้", notFoundBody: "หน้านี้อาจถูกย้าย หรือ URL นี้อาจไม่ถูกต้อง", chooseLanguage: "เลือกภาษา", advertisement: "โฆษณา", siteOwned: "ผลงานต้นฉบับของเว็บไซต์",
+      languagePromptEyebrow: "การตั้งค่าภาษา", languagePromptTitle: "เลือกภาษาที่ต้องการใช้", languagePromptBody: "เราจะแสดง Recipe Nest Vault ในภาษาที่คุณเลือก คุณสามารถเปลี่ยนภาษาได้ทุกเมื่อ", currentLanguage: "ภาษาปัจจุบัน: {language}", currentBadge: "ปัจจุบัน", continueCurrent: "ใช้{language}ต่อ", close: "ปิด", notNow: "ไว้ภายหลัง", languagePreferenceNote: "ระบบจะบันทึกการตั้งค่าภาษาไว้ในเบราว์เซอร์นี้"
     },
     regionNames: { asia: "อาหารเอเชีย", europe: "อาหารยุโรป", americas: "อาหารจากทวีปอเมริกา", world: "อาหารจากทั่วโลกเพิ่มเติม" },
-    imageAlts: { sushi: "ซูชิหลากชนิดจัดวางบนจาน", paella: "ปาเอยาซีฟู้ดในกระทะกว้าง", pizza: "พิซซ่ามาร์เกริตาถ่ายจากด้านบน", burger: "เบคอนชีสเบอร์เกอร์กับผักกาดหอมและมะเขือเทศ" },
-    featuredNames: { sushi: "ซูชิรวม", paella: "ปาเอยาซีฟู้ด", pizza: "พิซซ่ามาร์เกริตา", burger: "เบคอนชีสเบอร์เกอร์" }
+    imageAlts: { sushi: "ซูชิหลากชนิดจัดวางบนจาน", paella: "ปาเอยาแบบบาเลนเซียใส่ไก่ กระต่าย ถั่วฝักแบน และหอยทากในกระทะกว้าง", pizza: "พิซซ่ามาร์เกริตาถ่ายจากด้านบน", burger: "เบคอนชีสเบอร์เกอร์กับผักกาดหอมและมะเขือเทศ" },
+    featuredNames: { sushi: "ซูชิรวม", paella: "ปาเอยาแบบบาเลนเซีย", pizza: "พิซซ่ามาร์เกริตา", burger: "เบคอนชีสเบอร์เกอร์" }
   }
 };
 
@@ -140,10 +145,22 @@ export const cuisines = [
 ];
 
 export const featured = [
-  { id: "sushi", cuisine: "japanese", image: "sushi" },
-  { id: "paella", cuisine: "spanish", image: "paella" },
-  { id: "pizza", cuisine: "italian", image: "pizza" },
-  { id: "burger", cuisine: "american", image: "burger" }
+  {
+    id: "sushi", cuisine: "japanese", image: "sushi",
+    photo: { title: "Sushi dish", author: "Orin Zebest", sourcePage: "https://commons.wikimedia.org/w/index.php?title=File:Sushi_dish.jpg&oldid=1151795051", originalFile: "https://upload.wikimedia.org/wikipedia/commons/3/38/Sushi_dish.jpg", license: "CC BY 2.0", licenseUrl: "https://creativecommons.org/licenses/by/2.0/" }
+  },
+  {
+    id: "paella", cuisine: "spanish", image: "paella",
+    photo: { title: "Paella valenciana 02", author: "Dorieo (Jerónimo Roure Pérez)", sourcePage: "https://commons.wikimedia.org/w/index.php?title=File:Paella_valenciana_02.jpg&oldid=923453749", originalFile: "https://upload.wikimedia.org/wikipedia/commons/2/25/Paella_valenciana_02.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" }
+  },
+  {
+    id: "pizza", cuisine: "italian", image: "pizza",
+    photo: { title: "Margarita Pizza", author: "Douglas Perkins", sourcePage: "https://commons.wikimedia.org/w/index.php?title=File:Margarita_Pizza.jpg&oldid=1114640745", originalFile: "https://upload.wikimedia.org/wikipedia/commons/1/13/Margarita_Pizza.jpg", license: "CC0 1.0", licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/" }
+  },
+  {
+    id: "burger", cuisine: "american", image: "burger",
+    photo: { title: "NYC-Diner-Bacon-Cheeseburger", author: "Evan-Amos", sourcePage: "https://commons.wikimedia.org/w/index.php?title=File:NYC-Diner-Bacon-Cheeseburger.jpg&oldid=1178422843", originalFile: "https://upload.wikimedia.org/wikipedia/commons/8/8f/NYC-Diner-Bacon-Cheeseburger.jpg", license: "Public domain", licenseUrl: "https://commons.wikimedia.org/wiki/Template:PD-self" }
+  }
 ];
 
 export const regionOrder = ["asia", "europe", "americas", "world"];

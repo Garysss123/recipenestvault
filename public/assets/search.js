@@ -13,7 +13,7 @@
     link.className = "result-card";
     link.href = record.url;
     const type = document.createElement("span");
-    type.textContent = record.type === "cuisine" ? container.dataset.cuisineLabel : container.dataset.previewLabel;
+    type.textContent = record.type === "cuisine" ? container.dataset.cuisineLabel : record.type === "recipe" ? container.dataset.recipeLabel : container.dataset.previewLabel;
     const title = document.createElement("strong");
     title.textContent = record.title;
     const subtitle = document.createElement("small");

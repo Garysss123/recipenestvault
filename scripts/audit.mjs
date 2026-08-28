@@ -3,10 +3,21 @@ import { dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import { cuisines, localeOrder, locales, origin } from "../src/data.mjs";
 import { infoPages } from "../src/info-pages.mjs";
+import { recipes } from "../src/recipes.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const dist = join(root, "dist");
 const failures = [];
+
+function validateLocalizedText(value, label) {
+  if (!value || typeof value !== "object") {
+    failures.push(`${label}: missing five-language content`);
+    return;
+  }
+  for (const locale of localeOrder) {
+    if (typeof value[locale] !== "string" || !value[locale].trim()) failures.push(`${label}: missing ${locale}`);
+  }
+}
 
 async function exists(path) { try { await stat(path); return true; } catch { return false; } }
 function routeToFile(url) {
@@ -62,6 +73,15 @@ for (const slug of localeOrder) {
     if (type === "privacy" && !infoHtml.includes("privacy-references")) failures.push(`${slug} privacy: missing policy references`);
   }
   for (const cuisine of cuisines) await validateHtml(join(dist, slug, "cuisines", cuisine.id, "index.html"), `${origin}/${slug}/cuisines/${cuisine.id}/`, `cuisines/${cuisine.id}/`, slug);
+  const chineseCollection = await readFile(join(dist, slug, "cuisines", "chinese", "index.html"), "utf8");
+  if (!chineseCollection.includes("recipe-collection")) failures.push(`${slug} Chinese collection missing approved recipe grid`);
+  for (const recipe of recipes) {
+    const recipeFile = join(dist, slug, "recipes", recipe.id, "index.html");
+    await validateHtml(recipeFile, `${origin}/${slug}/recipes/${recipe.id}/`, `recipes/${recipe.id}/`, slug);
+    const recipeHtml = await readFile(recipeFile, "utf8");
+    if (!recipeHtml.includes('"@type":"Recipe"')) failures.push(`${slug} ${recipe.id}: missing Recipe schema`);
+    if (!recipeHtml.includes(recipe.photo.sourcePage) || !recipeHtml.includes(recipe.photo.licenseUrl)) failures.push(`${slug} ${recipe.id}: missing visible photo provenance`);
+  }
 }
 
 const requiredFiles = ["404.html", "robots.txt", "sitemap.xml", "search-index.json", "favicon.ico", "favicon.svg", "logo.svg", "icon-192.png", "icon-512.png", "og.jpg", "site.webmanifest", "assets/site.css", "assets/site.js", "assets/search.js", "_redirects", "_headers"];
@@ -73,7 +93,7 @@ for (const slug of localeOrder) if (!notFound.includes(`data-not-found-locale="$
 
 const sitemap = await readFile(join(dist, "sitemap.xml"), "utf8");
 const sitemapLocations = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-const expectedUrlCount = localeOrder.length * (3 + cuisines.length);
+const expectedUrlCount = localeOrder.length * (3 + cuisines.length + recipes.length);
 if (sitemapLocations.length !== expectedUrlCount) failures.push(`sitemap has ${sitemapLocations.length}, expected ${expectedUrlCount}`);
 if (sitemapLocations.some((url) => url.includes("/search/"))) failures.push("sitemap must exclude search pages");
 for (const slug of localeOrder) {
@@ -85,8 +105,32 @@ for (const url of sitemapLocations) {
 }
 
 const searchIndex = JSON.parse(await readFile(join(dist, "search-index.json"), "utf8"));
-if (searchIndex.length !== localeOrder.length * (cuisines.length + 4)) failures.push("search index count mismatch");
+if (searchIndex.length !== localeOrder.length * (cuisines.length + recipes.length + 4)) failures.push("search index count mismatch");
 for (const record of searchIndex) if (!localeOrder.includes(record.locale) || !record.title || !record.url || !record.text) failures.push("invalid search record");
+
+for (const recipe of recipes) {
+  if (!recipe.photo?.commercialUseVerified || !recipe.photo?.realPhoto || !recipe.photo?.visualMatchApproved) failures.push(`${recipe.id}: recipe bypassed the real-photo approval gate`);
+  if (!recipe.photo?.title || !recipe.photo?.author || !recipe.photo?.sourcePage || !recipe.photo?.originalFile || !recipe.photo?.license || !recipe.photo?.licenseUrl || !recipe.photo?.sourceAsset) failures.push(`${recipe.id}: incomplete photo provenance`);
+  if (/\b(?:NC|ND)\b/i.test(recipe.photo?.license || "")) failures.push(`${recipe.id}: photo license prohibits required commercial reuse or adaptation`);
+  if (!(await exists(join(root, "assets", "recipes", "approved", recipe.photo.sourceAsset || "missing")))) failures.push(`${recipe.id}: approved source photograph is missing`);
+  if (recipe.sources.length < 2 || new Set(recipe.sources.map((source) => source.url)).size < 2 || recipe.sources.some((source) => !source.title || !/^https:\/\//.test(source.url))) failures.push(`${recipe.id}: needs at least two distinct titled HTTPS recipe sources`);
+  if (recipe.totalMinutes !== recipe.prepMinutes + recipe.cookMinutes || recipe.servings < 1) failures.push(`${recipe.id}: invalid timing or yield`);
+  if (recipe.ingredients.length < 5 || recipe.instructions.length < 4) failures.push(`${recipe.id}: incomplete cooking method`);
+  const ingredientKeys = recipe.ingredients.map((row) => row.item?.en?.trim().toLowerCase()).filter(Boolean);
+  if (new Set(ingredientKeys).size !== ingredientKeys.length) failures.push(`${recipe.id}: duplicate ingredient rows`);
+  for (const field of ["region", "name", "description", "storage", "cultureNote", "imageAlt"]) validateLocalizedText(recipe[field], `${recipe.id}.${field}`);
+  recipe.ingredients.forEach((row, index) => {
+    if (!row.amount || !/\d/.test(row.amount)) failures.push(`${recipe.id}.ingredients[${index}]: missing exact amount`);
+    validateLocalizedText(row.item, `${recipe.id}.ingredients[${index}].item`);
+  });
+  for (const field of ["instructions", "tips", "commonMistakes", "substitutions"]) {
+    recipe[field].forEach((row, index) => {
+      validateLocalizedText(row, `${recipe.id}.${field}[${index}]`);
+      for (const locale of localeOrder) if (/^\s*\d+[.)]\s/.test(row?.[locale] || "")) failures.push(`${recipe.id}.${field}[${index}].${locale}: duplicates the rendered list number`);
+    });
+  }
+  for (const width of [640, 960, 1440]) if (!(await exists(join(dist, "images", "recipes", `${recipe.id}-${width}.webp`)))) failures.push(`${recipe.id}: missing ${width}px approved photo crop`);
+}
 
 const redirects = await readFile(join(dist, "_redirects"), "utf8");
 if (!redirects.includes("/ /en/ 301")) failures.push("root redirect must be permanent");
@@ -111,4 +155,4 @@ if (sizes[0].size > 25 * 1024 * 1024) failures.push(`largest output exceeds Page
 
 console.log(`Static audit: ${files.length} files, ${expectedUrlCount} indexable routes; largest ${sizes[0].size} bytes (${relative(root, sizes[0].file)}).`);
 if (failures.length) { console.error(`Audit failed (${failures.length}):\n- ${failures.slice(0, 60).join("\n- ")}`); process.exit(1); }
-console.log("Static audit passed: routes, links, images, search index, 404, sitemap, canonical, reciprocal hreflang, social metadata and JSON-LD are valid.");
+console.log("Static audit passed: routes, links, responsive images, search, five-language recipe completeness, real-photo gates, provenance, sitemap, canonical, reciprocal hreflang, social metadata and JSON-LD are valid.");

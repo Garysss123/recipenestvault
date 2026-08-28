@@ -14,8 +14,9 @@ const browser = await chromium.launch({ channel: "msedge", headless: true });
 const failures = [];
 const results = [];
 
-async function inspect({ name, path, viewport, expectedStatus = 200, fullPage = true, interact, extraScreenshots = [] }) {
+async function inspect({ name, path, viewport, expectedStatus = 200, fullPage = true, interact, extraScreenshots = [], suppressLanguagePrompt = true, loadLazyImages = true }) {
   const context = await browser.newContext({ viewport, deviceScaleFactor: 1, colorScheme: "light", reducedMotion: "reduce" });
+  if (suppressLanguagePrompt) await context.addInitScript(() => localStorage.setItem("rnv-language-preference-v1", "qa"));
   const page = await context.newPage();
   const consoleErrors = [];
   const requestFailures = [];
@@ -36,12 +37,18 @@ async function inspect({ name, path, viewport, expectedStatus = 200, fullPage = 
   const navigationUrl = response?.url() || `${baseUrl}${path}`;
   if (status !== expectedStatus) failures.push(`${name}: status ${status}, expected ${expectedStatus}`);
   await page.evaluate(() => document.fonts?.ready);
-  for (const image of await page.locator('img[loading="lazy"]').all()) {
-    await image.scrollIntoViewIfNeeded();
-    await image.evaluate((element) => element.complete ? undefined : new Promise((resolve) => { element.addEventListener("load", resolve, { once: true }); element.addEventListener("error", resolve, { once: true }); }));
-  }
+  const loadDeferredImages = async () => {
+    if (!loadLazyImages) return;
+    for (const image of await page.locator('img[loading="lazy"]').all()) {
+      await image.scrollIntoViewIfNeeded();
+      await image.evaluate((element) => element.complete ? undefined : new Promise((resolve) => { element.addEventListener("load", resolve, { once: true }); element.addEventListener("error", resolve, { once: true }); }));
+    }
+  };
+  await loadDeferredImages();
   await page.evaluate(() => window.scrollTo(0, 0));
   if (interact) await interact(page);
+  await loadDeferredImages();
+  await page.evaluate(() => window.scrollTo(0, 0));
   const overflow = await page.evaluate(() => ({ scrollWidth: document.documentElement.scrollWidth, clientWidth: document.documentElement.clientWidth }));
   if (overflow.scrollWidth > overflow.clientWidth + 1) failures.push(`${name}: horizontal overflow ${overflow.scrollWidth}px > ${overflow.clientWidth}px`);
   const axe = await new AxeBuilder({ page }).analyze();
@@ -84,6 +91,24 @@ await inspect({
   ]
 });
 await inspect({ name: "en-hero-desktop", path: "/en/", viewport: { width: 1440, height: 1000 }, fullPage: false });
+await inspect({
+  name: "en-language-prompt-desktop", path: "/en/cuisines/chinese/", viewport: { width: 1440, height: 1000 }, fullPage: false, suppressLanguagePrompt: false, loadLazyImages: false,
+  interact: async (page) => {
+    const dialog = page.locator("[data-language-prompt]");
+    if (!(await dialog.isVisible())) throw new Error("First-visit language prompt did not open");
+    if (await dialog.locator('[data-language-choice="zh-hant"]').getAttribute("href") !== "/zh-hant/cuisines/chinese/") throw new Error("Language prompt did not preserve the current route");
+  }
+});
+await inspect({
+  name: "language-choice-route-mobile", path: "/en/recipes/mapo-tofu/", viewport: { width: 390, height: 844 }, fullPage: false, suppressLanguagePrompt: false, loadLazyImages: false,
+  interact: async (page) => {
+    await page.locator('[data-language-choice="zh-hant"]').click();
+    await page.waitForLoadState("networkidle");
+    if (new URL(page.url()).pathname !== "/zh-hant/recipes/mapo-tofu/") throw new Error("Language choice did not preserve the recipe route");
+    await page.reload({ waitUntil: "networkidle" });
+    if (await page.locator("[data-language-prompt]").isVisible()) throw new Error("Language prompt repeated after preference was saved");
+  }
+});
 await inspect({ name: "zh-home-mobile", path: "/zh-hant/", viewport: { width: 390, height: 844 }, extraScreenshots: [ { name: "zh-hero-mobile", selector: ".hero" }, { name: "zh-cuisines-mobile", selector: '.cuisine-region[aria-labelledby="region-asia"]' }, { name: "zh-featured-mobile", selector: "#featured" }, { name: "zh-philosophy-mobile", selector: "#philosophy" } ] });
 await inspect({
   name: "th-hero-mobile", path: "/th/", viewport: { width: 390, height: 844 }, fullPage: false,
@@ -93,8 +118,12 @@ await inspect({
   }
 });
 await inspect({
-  name: "en-search-desktop", path: "/en/search/?q=pizza", viewport: { width: 1280, height: 900 },
-  interact: async (page) => { await page.locator(".result-card").first().waitFor({ state: "visible" }); }
+  name: "en-search-desktop", path: "/en/search/?q=tofu", viewport: { width: 1280, height: 900 },
+  interact: async (page) => {
+    const recipeResult = page.locator('.result-card[href="/en/recipes/mapo-tofu/"]');
+    await recipeResult.waitFor({ state: "visible" });
+    if (!/Recipe/i.test(await recipeResult.innerText())) throw new Error("Recipe search result is missing its content-type label");
+  }
 });
 await inspect({
   name: "zh-cuisine-mobile", path: "/zh-hant/cuisines/taiwanese/", viewport: { width: 390, height: 844 },
@@ -103,6 +132,40 @@ await inspect({
     if (response?.status() !== 200) throw new Error(`Deep-route refresh returned ${response?.status() ?? "no response"}`);
   }
 });
+await inspect({
+  name: "zh-chinese-collection-mobile", path: "/zh-hant/cuisines/chinese/", viewport: { width: 390, height: 844 },
+  interact: async (page) => {
+    const firstCard = page.locator(".collection-recipe-card").first();
+    await firstCard.waitFor({ state: "visible" });
+    if (await page.locator(".collection-recipe-card").count() < 1) throw new Error("Chinese collection has no approved recipe cards");
+    const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+    if (response?.status() !== 200) throw new Error(`Chinese collection refresh returned ${response?.status() ?? "no response"}`);
+  }
+});
+await inspect({ name: "en-chinese-collection-desktop", path: "/en/cuisines/chinese/", viewport: { width: 1440, height: 1000 } });
+await inspect({ name: "en-peking-duck-recipe-desktop", path: "/en/recipes/peking-duck/", viewport: { width: 1440, height: 1000 }, fullPage: false });
+await inspect({
+  name: "en-mapo-recipe-desktop", path: "/en/recipes/mapo-tofu/", viewport: { width: 1440, height: 1000 },
+  interact: async (page) => {
+    if (await page.locator(".ingredients-section li").count() < 5) throw new Error("Recipe ingredients did not render");
+    if (await page.locator(".method-section li").count() < 4) throw new Error("Recipe method did not render");
+    const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+    if (response?.status() !== 200) throw new Error(`Recipe deep-route refresh returned ${response?.status() ?? "no response"}`);
+  },
+  extraScreenshots: [
+    { name: "en-mapo-ingredients-desktop", selector: ".ingredients-section" },
+    { name: "en-mapo-method-desktop", selector: ".method-section" },
+    { name: "en-mapo-sources-desktop", selector: ".recipe-sources" }
+  ]
+});
+await inspect({ name: "zh-wonton-recipe-mobile", path: "/zh-hant/recipes/wonton-soup/", viewport: { width: 390, height: 844 }, fullPage: true });
+await inspect({ name: "en-sweet-sour-recipe-desktop", path: "/en/recipes/sweet-sour-pork/", viewport: { width: 1440, height: 1000 }, fullPage: false });
+await inspect({ name: "en-kung-pao-recipe-desktop", path: "/en/recipes/kung-pao-chicken/", viewport: { width: 1440, height: 1000 }, fullPage: false });
+await inspect({ name: "zh-dan-dan-recipe-mobile", path: "/zh-hant/recipes/dan-dan-noodles/", viewport: { width: 390, height: 844 }, fullPage: false });
+await inspect({ name: "zh-jiaozi-recipe-mobile", path: "/zh-hant/recipes/jiaozi/", viewport: { width: 390, height: 844 }, fullPage: false });
+await inspect({ name: "en-char-siu-recipe-desktop", path: "/en/recipes/char-siu/", viewport: { width: 1440, height: 1000 }, fullPage: false });
+await inspect({ name: "en-scallion-pancakes-recipe-desktop", path: "/en/recipes/scallion-pancakes/", viewport: { width: 1440, height: 1000 }, fullPage: false });
+await inspect({ name: "ja-clay-pot-recipe-mobile", path: "/ja/recipes/clay-pot-rice/", viewport: { width: 390, height: 844 }, fullPage: false });
 await inspect({
   name: "en-about-desktop", path: "/en/about/", viewport: { width: 1440, height: 1000 },
   interact: async (page) => {

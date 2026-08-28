@@ -10,4 +10,5 @@ dist/
 .DS_Store
 Thumbs.db
 qa-artifacts/
-
+assets/recipes/alternatives/
+assets/recipes/real/
