@@ -2,6 +2,7 @@ import { cp, mkdir, rm, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { cuisines, featured, fill, localeOrder, locales, origin, regionOrder } from "../src/data.mjs";
+import { infoPages } from "../src/info-pages.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const dist = join(root, "dist");
@@ -48,7 +49,7 @@ function header(slug, suffix = "") {
 
 function footer(slug) {
   const locale = locales[slug];
-  return `<footer class="site-footer"><div class="footer-main"><div><a class="brand footer-brand" href="/${slug}/"><img src="/logo.svg" width="42" height="42" alt=""><span>Recipe Nest Vault</span></a><p>${esc(locale.ui.footerTagline)}</p></div><nav aria-label="${esc(locale.ui.menu)}"><a href="/${slug}/#cuisines">${esc(locale.ui.explore)}</a><a href="/${slug}/#philosophy">${esc(locale.ui.about)}</a><a href="/${slug}/#credits">${esc(locale.ui.creditsTitle)}</a><a href="/${slug}/search/">${esc(locale.ui.search)}</a></nav></div><div class="footer-base"><p>${esc(locale.ui.copyright)}</p><p>recipenestvault.com</p></div></footer>`;
+  return `<footer class="site-footer"><div class="footer-main"><div><a class="brand footer-brand" href="/${slug}/"><img src="/logo.svg" width="42" height="42" alt=""><span>Recipe Nest Vault</span></a><p>${esc(locale.ui.footerTagline)}</p></div><nav aria-label="${esc(locale.ui.menu)}"><a href="/${slug}/#cuisines">${esc(locale.ui.explore)}</a><a href="/${slug}/about/">${esc(locale.ui.about)}</a><a href="/${slug}/privacy/">${esc(locale.ui.privacy)}</a><a href="/${slug}/#credits">${esc(locale.ui.creditsTitle)}</a><a href="/${slug}/search/">${esc(locale.ui.search)}</a></nav></div><div class="footer-base"><p>${esc(locale.ui.copyright)}</p><p>recipenestvault.com</p></div></footer>`;
 }
 
 function adSlot(slug, placement) {
@@ -117,6 +118,19 @@ function renderSearch(slug) {
   return page(slug, { title, description: locale.ui.searchIntro, robots: "noindex,follow", schema, bodyClass: "search-page" }, content, suffix).replace("<script src=\"/assets/site.js\" defer></script>", "<script src=\"/assets/site.js\" defer></script><script src=\"/assets/search.js\" defer></script>");
 }
 
+function renderInfoPage(slug, type) {
+  const locale = locales[slug];
+  const info = infoPages[slug][type];
+  const suffix = `${type}/`;
+  const pageLabel = type === "about" ? locale.ui.about : locale.ui.privacy;
+  const index = info.sections.map((section, indexValue) => `<li><a href="#${section.id}"><span>${String(indexValue + 1).padStart(2, "0")}</span>${esc(section.title)}</a></li>`).join("");
+  const sections = info.sections.map((section, indexValue) => `<section class="info-section" id="${section.id}" aria-labelledby="${section.id}-title"><p class="section-number">${String(indexValue + 1).padStart(2, "0")}</p><div><h2 id="${section.id}-title">${esc(section.title)}</h2>${section.paragraphs.map((paragraph) => `<p>${esc(paragraph)}</p>`).join("")}${section.bullets ? `<ul>${section.bullets.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>` : ""}</div></section>`).join("");
+  const references = info.references ? `<section class="privacy-references" aria-labelledby="privacy-references-title"><p class="eyebrow">${esc(info.eyebrow)}</p><h2 id="privacy-references-title">${esc(info.referencesTitle)}</h2><ul>${info.references.map((reference) => `<li><a href="${esc(reference.href)}">${esc(reference.label)}<span aria-hidden="true">↗</span></a></li>`).join("")}</ul></section>` : "";
+  const content = `<section class="page-hero info-hero" data-info-page="${type}"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/${slug}/">${esc(locale.ui.home)}</a><span>/</span><span aria-current="page">${esc(pageLabel)}</span></nav><p class="eyebrow">${esc(info.eyebrow)}</p><h1>${esc(info.title)}</h1><p class="info-intro">${esc(info.intro)}</p>${info.updated ? `<p class="policy-date">${esc(info.updated)}</p>` : ""}</section>${adSlot(slug, `${type}-leaderboard`)}<div class="info-layout"><nav class="info-index" aria-label="${esc(info.onThisPage)}"><p>${esc(info.onThisPage)}</p><ol>${index}</ol></nav><div class="info-sections">${sections}</div></div>${references}<section class="info-closing" aria-labelledby="info-closing-${type}"><p class="section-number">${String(info.sections.length + 1).padStart(2, "0")}</p><div><h2 id="info-closing-${type}">${esc(info.closingTitle)}</h2><p>${esc(info.closingBody)}</p></div></section>`;
+  const schema = { "@context": "https://schema.org", "@graph": [ { "@type": type === "about" ? "AboutPage" : "WebPage", name: info.title, description: info.metaDescription, url: `${origin}/${slug}/${suffix}`, inLanguage: locale.lang, dateModified: buildDate, isPartOf: { "@id": `${origin}/#website` } }, { "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: locale.ui.home, item: `${origin}/${slug}/` }, { "@type": "ListItem", position: 2, name: pageLabel, item: `${origin}/${slug}/${suffix}` } ] } ] };
+  return page(slug, { title: info.metaTitle, description: info.metaDescription, schema, bodyClass: `info-page ${type}-page` }, content, suffix);
+}
+
 function render404() {
   const sections = localeOrder.map((slug, index) => { const locale = locales[slug]; return `<section class="not-found-copy" lang="${locale.lang}" data-not-found-locale="${slug}"${index ? " hidden" : ""}><p class="eyebrow">404</p><h1>${esc(locale.ui.notFoundTitle)}</h1><p>${esc(locale.ui.notFoundBody)}</p><a class="primary-button" href="/${slug}/">${esc(locale.ui.backHome)}</a></section>`; }).join("");
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page not found — Recipe Nest Vault</title><meta name="robots" content="noindex,follow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css"></head><body class="not-found-page"><main id="main"><a class="brand" href="/en/" aria-label="Recipe Nest Vault"><img src="/logo.svg" width="42" height="42" alt=""><span>Recipe Nest Vault</span></a>${sections}<nav class="not-found-languages" aria-label="Choose language">${localeOrder.map((slug) => `<a href="/${slug}/" lang="${locales[slug].lang}">${esc(locales[slug].label)}</a>`).join("")}</nav></main><script src="/assets/site.js" defer></script></body></html>`;
@@ -127,6 +141,9 @@ const sitemapUrls = []; const searchIndex = [];
 for (const slug of localeOrder) {
   const homeDir = join(dist, slug); await mkdir(homeDir, { recursive: true }); await writeFile(join(homeDir, "index.html"), renderHome(slug), "utf8"); sitemapUrls.push(`${origin}/${slug}/`);
   const searchDir = join(homeDir, "search"); await mkdir(searchDir, { recursive: true }); await writeFile(join(searchDir, "index.html"), renderSearch(slug), "utf8");
+  for (const type of ["about", "privacy"]) {
+    const infoDir = join(homeDir, type); await mkdir(infoDir, { recursive: true }); await writeFile(join(infoDir, "index.html"), renderInfoPage(slug, type), "utf8"); sitemapUrls.push(`${origin}/${slug}/${type}/`);
+  }
   for (const cuisine of cuisines) {
     const cuisineDir = join(homeDir, "cuisines", cuisine.id); await mkdir(cuisineDir, { recursive: true }); await writeFile(join(cuisineDir, "index.html"), renderCuisine(slug, cuisine), "utf8"); sitemapUrls.push(`${origin}/${slug}/cuisines/${cuisine.id}/`);
     searchIndex.push({ locale: slug, type: "cuisine", title: cuisine.names[slug], subtitle: locales[slug].regionNames[cuisine.region], url: `/${slug}/cuisines/${cuisine.id}/`, text: [cuisine.names[slug], locales[slug].regionNames[cuisine.region], ...cuisine.keywords].join(" ") });

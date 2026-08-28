@@ -2,6 +2,7 @@ import { readdir, readFile, stat } from "node:fs/promises";
 import { dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import { cuisines, localeOrder, locales, origin } from "../src/data.mjs";
+import { infoPages } from "../src/info-pages.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const dist = join(root, "dist");
@@ -15,7 +16,7 @@ function routeToFile(url) {
   return join(dist, ...normalized.split("/").filter(Boolean));
 }
 
-async function validateHtml(file, expectedCanonical, suffix) {
+async function validateHtml(file, expectedCanonical, suffix, activeSlug) {
   const html = await readFile(file, "utf8");
   const label = relative(dist, file);
   if (!/<html lang="[^"]+">/.test(html)) failures.push(`${label}: missing lang`);
@@ -27,6 +28,8 @@ async function validateHtml(file, expectedCanonical, suffix) {
     if (!html.includes(expected)) failures.push(`${label}: missing reciprocal hreflang ${locales[slug].hreflang}`);
   }
   if (!html.includes(`hreflang="x-default" href="${origin}/en/${suffix}"`)) failures.push(`${label}: missing x-default`);
+  if (!html.includes(`href="/${activeSlug}/about/"`)) failures.push(`${label}: missing localized About footer link`);
+  if (!html.includes(`href="/${activeSlug}/privacy/"`)) failures.push(`${label}: missing localized Privacy footer link`);
   for (const required of ["og:title", "og:description", "og:url", "og:image", "twitter:card", "twitter:title", "twitter:description", "twitter:image"]) if (!html.includes(required)) failures.push(`${label}: missing ${required}`);
   const jsonLd = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
   try { JSON.parse(jsonLd); } catch { failures.push(`${label}: invalid JSON-LD`); }
@@ -46,11 +49,19 @@ async function validateHtml(file, expectedCanonical, suffix) {
 }
 
 for (const slug of localeOrder) {
-  await validateHtml(join(dist, slug, "index.html"), `${origin}/${slug}/`, "");
-  await validateHtml(join(dist, slug, "search", "index.html"), `${origin}/${slug}/search/`, "search/");
+  await validateHtml(join(dist, slug, "index.html"), `${origin}/${slug}/`, "", slug);
+  await validateHtml(join(dist, slug, "search", "index.html"), `${origin}/${slug}/search/`, "search/", slug);
   const searchHtml = await readFile(join(dist, slug, "search", "index.html"), "utf8");
   if (!searchHtml.includes('name="robots" content="noindex,follow"')) failures.push(`${slug} search must be noindex`);
-  for (const cuisine of cuisines) await validateHtml(join(dist, slug, "cuisines", cuisine.id, "index.html"), `${origin}/${slug}/cuisines/${cuisine.id}/`, `cuisines/${cuisine.id}/`);
+  for (const type of ["about", "privacy"]) {
+    const infoFile = join(dist, slug, type, "index.html");
+    await validateHtml(infoFile, `${origin}/${slug}/${type}/`, `${type}/`, slug);
+    const infoHtml = await readFile(infoFile, "utf8");
+    if (!infoHtml.includes(`data-info-page="${type}"`)) failures.push(`${slug} ${type}: missing page marker`);
+    if (!infoPages[slug]?.[type]?.sections?.length) failures.push(`${slug} ${type}: missing localized structured content`);
+    if (type === "privacy" && !infoHtml.includes("privacy-references")) failures.push(`${slug} privacy: missing policy references`);
+  }
+  for (const cuisine of cuisines) await validateHtml(join(dist, slug, "cuisines", cuisine.id, "index.html"), `${origin}/${slug}/cuisines/${cuisine.id}/`, `cuisines/${cuisine.id}/`, slug);
 }
 
 const requiredFiles = ["404.html", "robots.txt", "sitemap.xml", "search-index.json", "favicon.ico", "favicon.svg", "logo.svg", "icon-192.png", "icon-512.png", "og.jpg", "site.webmanifest", "assets/site.css", "assets/site.js", "assets/search.js", "_redirects", "_headers"];
@@ -62,9 +73,12 @@ for (const slug of localeOrder) if (!notFound.includes(`data-not-found-locale="$
 
 const sitemap = await readFile(join(dist, "sitemap.xml"), "utf8");
 const sitemapLocations = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-const expectedUrlCount = localeOrder.length * (1 + cuisines.length);
+const expectedUrlCount = localeOrder.length * (3 + cuisines.length);
 if (sitemapLocations.length !== expectedUrlCount) failures.push(`sitemap has ${sitemapLocations.length}, expected ${expectedUrlCount}`);
 if (sitemapLocations.some((url) => url.includes("/search/"))) failures.push("sitemap must exclude search pages");
+for (const slug of localeOrder) {
+  for (const type of ["about", "privacy"]) if (!sitemapLocations.includes(`${origin}/${slug}/${type}/`)) failures.push(`sitemap missing ${slug} ${type}`);
+}
 for (const url of sitemapLocations) {
   const target = routeToFile(url.replace(origin, ""));
   if (!target || !(await exists(target))) failures.push(`sitemap URL missing output ${url}`);

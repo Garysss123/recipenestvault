@@ -103,6 +103,29 @@ await inspect({
     if (response?.status() !== 200) throw new Error(`Deep-route refresh returned ${response?.status() ?? "no response"}`);
   }
 });
+await inspect({
+  name: "en-about-desktop", path: "/en/about/", viewport: { width: 1440, height: 1000 },
+  interact: async (page) => {
+    const firstSectionLink = page.locator(".info-index a").first();
+    const target = await firstSectionLink.getAttribute("href");
+    await firstSectionLink.click();
+    if (!target || await page.evaluate((expected) => window.location.hash !== expected, target)) throw new Error("About page index link did not navigate to its section");
+    await page.evaluate(() => window.scrollTo(0, 0));
+  },
+  extraScreenshots: [
+    { name: "en-about-content-desktop", selector: ".info-layout" },
+    { name: "en-about-closing-desktop", selector: ".info-closing" }
+  ]
+});
+await inspect({
+  name: "zh-privacy-mobile", path: "/zh-hant/privacy/", viewport: { width: 390, height: 844 }, fullPage: false,
+  extraScreenshots: [
+    { name: "zh-privacy-content-mobile", selector: ".info-layout" },
+    { name: "zh-privacy-references-mobile", selector: ".privacy-references" }
+  ]
+});
+await inspect({ name: "ja-about-mobile", path: "/ja/about/", viewport: { width: 390, height: 844 }, fullPage: false });
+await inspect({ name: "ko-privacy-desktop", path: "/ko/privacy/", viewport: { width: 1280, height: 900 }, fullPage: false });
 await inspect({ name: "not-found-mobile", path: "/definitely-not-a-page", viewport: { width: 390, height: 844 }, expectedStatus: 404, fullPage: false });
 
 await browser.close();
