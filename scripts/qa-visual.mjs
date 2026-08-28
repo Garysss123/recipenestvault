@@ -162,7 +162,10 @@ await inspect({
     if (await page.locator(".recipe-step-copy h3").count() < 8) throw new Error("Recipe step headings did not render");
     if (await page.locator(".recipe-step-photo").count() !== 0) throw new Error("Removed step photograph is still rendering");
     if (await page.locator('.recipe-step-illustration[data-ai-illustration="true"]').count() !== 8) throw new Error("Complete labelled Mapo tofu illustration set did not render");
-    if (!(await page.locator(".recipe-illustration-notice").isVisible())) throw new Error("AI illustration disclosure is not visible");
+    if (!(await page.locator(".recipe-illustration-notice").isVisible())) throw new Error("Illustration disclosure is not visible");
+    if (await page.locator(".recipe-step-illustration figcaption small").count() !== 0) throw new Error("Generator credit still appears under step illustrations");
+    if ((await page.locator(".recipe-step-illustration figcaption strong").first().innerText()).includes("AI")) throw new Error("Step illustration label still foregrounds AI");
+    if (!(await page.locator(".recipe-sources .illustration-source-line").isVisible())) throw new Error("Illustration generator credit is missing from sources");
     const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
     if (response?.status() !== 200) throw new Error(`Recipe deep-route refresh returned ${response?.status() ?? "no response"}`);
   },
@@ -178,6 +181,7 @@ await inspect({
   interact: async (page) => {
     if (await page.locator(".recipe-step-photo").count() !== 0) throw new Error("Removed mobile step photograph is still rendering");
     if (await page.locator('.recipe-step-illustration[data-ai-illustration="true"]').count() !== 8) throw new Error("Mobile Mapo tofu illustration set did not render");
+    if ((await page.locator(".recipe-step-illustration figcaption strong").first().innerText()).includes("AI")) throw new Error("Mobile step illustration label still foregrounds AI");
   },
   extraScreenshots: [
     { name: "zh-mapo-method-mobile", selector: ".method-section" },

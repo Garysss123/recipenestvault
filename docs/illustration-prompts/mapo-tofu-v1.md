@@ -14,11 +14,12 @@ Use case: scientific-educational. Asset type: Recipe Nest Vault website cooking-
 4. Bloom seasonings: fold a modest 30 g-looking amount of doubanjiang, small irregular 4–6 mm fermented black-bean pieces and one light peppercorn portion through the browned pork until the oil turns red; do not scorch.
 5. Build sauce: pour pale stock into the seasoned pork while a spatula scrapes the wok base; keep soy sauce, Shaoxing wine and sugar nearby; the sauce remains thin and reddish-brown.
 6. Simmer tofu: arrange intact 2 cm tofu cubes in one layer in the loose red sauce with browned pork and small black-bean pieces; show only a gentle uncovered simmer and no utensil touching the tofu.
-7. Thicken in two additions: pour a narrow controlled ribbon of slurry into one edge while about half remains in the clear bowl; the slurry disappears into the red sauce and creates only a lightly clinging gloss.
+7. Thicken in two additions: stir the slurry again with a clearly visible small stainless-steel spoon, then pour a narrow controlled ribbon into one edge while about half remains in the clear bowl; the slurry disappears into the red sauce and creates only a lightly clinging gloss. Use one black wok with exactly one long handle and one short loop helper handle.
 8. Finish and rest: with the heat visibly off, gently fold sliced scallions and a restrained fine dusting of ground Sichuan peppercorn into intact tofu and settled red sauce; keep the food in the wok rather than presenting a plated hero image.
 
 ## Targeted corrections retained in the selected assets
 
 - Step 4: reduced oversized doubanjiang mounds and changed olive-like beans into small fermented black-bean pieces.
 - Step 7: replaced a thick opaque slurry stream and white pool with a narrow stream that immediately integrates into the sauce.
+- Step 7: removed a duplicated long wok handle and restored the missing spoon in the slurry bowl.
 - Step 8: removed a central coarse spice heap, distributed fine peppercorn lightly, and restored a richer chile-red sauce.

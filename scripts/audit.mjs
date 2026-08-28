@@ -102,7 +102,9 @@ for (const slug of localeOrder) {
     for (const illustration of recipeStepIllustrations.filter((entry) => entry.recipeId === recipe.id)) {
       if (!recipeHtml.includes(`data-step-illustration="${illustration.id}"`) || !recipeHtml.includes('data-ai-illustration="true"')) failures.push(`${slug} ${recipe.id}: missing labelled step illustration ${illustration.id}`);
       if (!recipeHtml.includes(`/images/recipes/illustrations/${illustration.id}-800.webp`)) failures.push(`${slug} ${recipe.id}: missing responsive illustration markup ${illustration.id}`);
-      if (!recipeHtml.includes(recipeUi[slug].illustrationDisclosure) || !recipeHtml.includes(recipeUi[slug].illustrationShortLabel)) failures.push(`${slug} ${recipe.id}: missing visible AI-illustration disclosure`);
+      if (!recipeHtml.includes(recipeUi[slug].illustrationDisclosure) || !recipeHtml.includes(recipeUi[slug].illustrationShortLabel)) failures.push(`${slug} ${recipe.id}: missing visible illustration disclosure`);
+      const sourceCreditCount = recipeHtml.split(recipeUi[slug].illustrationSourceCredit).length - 1;
+      if (sourceCreditCount !== 1 || !recipeHtml.includes(`<p class="illustration-source-line">${recipeUi[slug].illustrationSourceCredit}</p>`)) failures.push(`${slug} ${recipe.id}: illustration generator credit must appear once in sources`);
       if (recipeJsonLd.includes(`/images/recipes/illustrations/${illustration.id}`)) failures.push(`${slug} ${recipe.id}: illustration must not enter Recipe structured data`);
     }
   }

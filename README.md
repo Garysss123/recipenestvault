@@ -77,7 +77,7 @@ These are permanent release gates. Recipe count, publishing speed and visual com
 ### Static cooking-step illustrations
 
 - Original non-photorealistic static illustrations may explain preparation, order and cooking actions inside a recipe method. They never replace the required real finished-dish photograph.
-- Every illustrated recipe must show a visible five-language disclosure before the method and label each image as an AI-generated illustration rather than a photograph.
+- Every illustrated recipe must show a visible five-language disclosure before the method and label each image as a cooking-step illustration rather than a photograph. Keep the OpenAI `image_gen` generator credit once in the recipe's sources section instead of repeating it under every image.
 - Written quantities, heat, timing, food-safety temperatures and doneness cues remain the cooking standard. An illustration is never evidence of exact portion, colour, texture or completion.
 - Each illustration must be reviewed against its exact step for ingredients, cuts, cookware, action and stage. Correct or reject material visual mismatches before publication.
 - Use an original Recipe Nest Vault editorial illustration language. Do not reproduce recognizable characters, layouts or the distinctive visual identity of an existing animation franchise.

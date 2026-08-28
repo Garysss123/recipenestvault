@@ -109,13 +109,13 @@ export const recipeStepIllustrations = [
     recipeId: "mapo-tofu",
     step: 7,
     sourceAsset: "mapo-tofu/step-07-thicken-sauce.png",
-    sourceAssetSha256: "404d88df52ebe2e123904e1c95555fb6d48f8124609377b1cbac69edf851e7a7",
+    sourceAssetSha256: "ffa32d1d9c56eacfc503715f2ddccea1b78d36ea0acef8def092f585822d6015",
     alt: ml(
-      "Illustration of a thin controlled stream of cornstarch slurry entering the red sauce while half remains in the bowl and the tofu stays intact.",
-      "芡汁以細流加入紅醬，碗中仍保留一半且豆腐保持完整的示意圖。",
-      "水溶きコーンスターチを細く注ぎ、器に半量を残したまま豆腐を崩さずとろみを付けるイラスト。",
-      "전분물을 가는 줄기로 붓고 그릇에는 절반을 남긴 채 두부를 부수지 않고 농도를 내는 삽화.",
-      "ภาพวาดการเทน้ำแป้งเป็นสายเล็กลงในซอสแดง โดยเหลือครึ่งหนึ่งในชามและเต้าหู้ยังคงรูป"
+      "Illustration of a spoon-stirred slurry pouring in a thin stream while half remains in the bowl and the tofu stays intact.",
+      "以湯匙重新攪勻的芡汁細流加入紅醬，碗中仍保留一半且豆腐保持完整的示意圖。",
+      "スプーンで混ぜ直した水溶きコーンスターチを細く注ぎ、器に半量を残したまま豆腐を崩さずとろみを付けるイラスト。",
+      "숟가락으로 다시 저은 전분물을 가는 줄기로 붓고 그릇에는 절반을 남긴 채 두부를 부수지 않고 농도를 내는 삽화.",
+      "ภาพวาดการใช้ช้อนคนแป้งอีกครั้งแล้วเทเป็นสายเล็กลงในซอสแดง โดยเหลือครึ่งหนึ่งในชามและเต้าหู้ยังคงรูป"
     )
   },
   {
