@@ -65,12 +65,14 @@ These are permanent release gates. Recipe count, publishing speed and visual com
 
 ### Ingredient-preparation and process photography
 
-- A photographed recipe sequence must document one traceable cooking session for the same published recipe revision. Do not assemble a false sequence from unrelated kitchens, batches, recipes or stock photographs.
-- The preparation photograph must show the listed ingredients after the cuts, measuring and advance preparation required by the method. Material omissions or unlisted ingredients fail review.
-- Every published cooking step must have its own matching frame from that sequence. A finished-dish photograph cannot be reused as a preparation or process frame.
+- Process photography is optional and may be added incrementally. Publish a preparation or individual step photograph whenever that specific image passes the real-photo, commercial-license, provenance and visual-match review; other steps remain detailed text.
+- Do not imply that separately sourced photographs document one continuous cooking session. Only present images as a coherent sequence when they come from one traceable session for the same published recipe revision.
+- If a preparation photograph is published, it must show the listed ingredients after the cuts, measuring and advance preparation required by the method. Material omissions or unlisted ingredients fail review.
+- If a cooking-step photograph is published, it must depict that exact step's ingredients, cut, cookware-dependent method and intermediate result. A finished-dish photograph cannot be reused as a preparation or process frame.
 - A frame extracted from a video is an adaptation: the source video, author, commercial-use license, original file, exact timestamp and extraction/cropping changes must all be recorded.
 - A licensed video or photo series still fails if its ingredients, quantities, cuts, cookware-dependent method or intermediate result materially differs from the published recipe.
-- Do not render empty image boxes, generic placeholders or AI-generated process imagery. Until a complete sequence passes review, keep the recipe text-only and do not describe it as a photographed step-by-step guide.
+- Do not render empty image boxes, generic placeholders or AI-generated process imagery. A step without an approved photograph simply keeps its complete written instructions.
+- Describe a recipe as a fully photographed step-by-step guide only when its preparation photograph and every published cooking step have approved matching images.
 
 ### Accepted and prohibited licenses
 
