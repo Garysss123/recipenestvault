@@ -71,8 +71,19 @@ These are permanent release gates. Recipe count, publishing speed and visual com
 - If a cooking-step photograph is published, it must depict that exact step's ingredients, cut, cookware-dependent method and intermediate result. A finished-dish photograph cannot be reused as a preparation or process frame.
 - A frame extracted from a video is an adaptation: the source video, author, commercial-use license, original file, exact timestamp and extraction/cropping changes must all be recorded.
 - A licensed video or photo series still fails if its ingredients, quantities, cuts, cookware-dependent method or intermediate result materially differs from the published recipe.
-- Do not render empty image boxes, generic placeholders or AI-generated process imagery. A step without an approved photograph simply keeps its complete written instructions.
+- Do not render empty image boxes, generic placeholders or photorealistic AI imagery that could be mistaken for evidence of an actual cooking session. A step without an approved photograph or approved illustration simply keeps its complete written instructions.
 - Describe a recipe as a fully photographed step-by-step guide only when its preparation photograph and every published cooking step have approved matching images.
+
+### Static cooking-step illustrations
+
+- Original non-photorealistic static illustrations may explain preparation, order and cooking actions inside a recipe method. They never replace the required real finished-dish photograph.
+- Every illustrated recipe must show a visible five-language disclosure before the method and label each image as an AI-generated illustration rather than a photograph.
+- Written quantities, heat, timing, food-safety temperatures and doneness cues remain the cooking standard. An illustration is never evidence of exact portion, colour, texture or completion.
+- Each illustration must be reviewed against its exact step for ingredients, cuts, cookware, action and stage. Correct or reject material visual mismatches before publication.
+- Use an original Recipe Nest Vault editorial illustration language. Do not reproduce recognizable characters, layouts or the distinctive visual identity of an existing animation franchise.
+- Keep generated source files, generator name, prompt-set identifier, generation date and SHA-256 provenance. Publish responsive compressed derivatives while preserving the reviewed source.
+- AI illustrations must remain outside `Recipe.image` and `HowToStep.image` structured data so search engines cannot present them as photographic recipe evidence.
+- Do not describe an illustrated method as photographed, tested or documented from one real cooking session.
 
 ### Accepted and prohibited licenses
 
@@ -100,7 +111,7 @@ Any adapted CC BY-SA output must retain a compatible ShareAlike license and attr
 ### Homepage and editorial imagery
 
 - Homepage, cuisine, featured-card and social-preview food imagery follows the same real-photo and licensing standard.
-- Generated or drawn assets are allowed only for non-food brand decoration that cannot be mistaken for a recipe result, with provenance clearly stated.
+- Outside the explicitly labelled recipe-method illustration system above, generated or drawn food imagery is not allowed on the homepage, cuisine cards, finished-dish hero, featured cards or social preview.
 - Food photographs must not be edited so heavily that ingredient colour, doneness or portion size becomes misleading.
 
 ### Five-language consistency
@@ -108,6 +119,7 @@ Any adapted CC BY-SA output must retain a compatible ShareAlike license and attr
 - English, Traditional Chinese, Japanese, Korean and Thai pages share the same quantities, times, temperatures, yields and food-safety facts.
 - Translation may improve natural phrasing but must not change recipe facts.
 - Images, sources, licenses, canonical URLs, `hreflang` and Recipe JSON-LD must remain consistent across all five versions.
+- AI-illustration disclosures and alt text must be complete and semantically consistent across all five versions.
 
 ### Mandatory pre-publication audit
 
@@ -121,6 +133,7 @@ Every recipe must pass all of the following before production:
 6. Responsive images, dimensions, alt text and visible license attribution are correct.
 7. Real desktop and mobile renders have no clipping, overflow, broken images or unreadable content.
 8. The Cloudflare Pages production-domain direct URL and hard refresh both return HTTP 200.
+9. Any AI step illustration is visibly disclosed, visually matched, hash-verified and excluded from Recipe structured-data images.
 
 If any evidence is incomplete, the recipe must not enter production.
 

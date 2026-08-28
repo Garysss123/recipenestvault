@@ -161,12 +161,15 @@ await inspect({
     if (await page.locator(".method-section li").count() < 8) throw new Error("Detailed recipe method did not render");
     if (await page.locator(".recipe-step-copy h3").count() < 8) throw new Error("Recipe step headings did not render");
     if (await page.locator(".recipe-step-photo").count() !== 0) throw new Error("Removed step photograph is still rendering");
+    if (await page.locator('.recipe-step-illustration[data-ai-illustration="true"]').count() !== 8) throw new Error("Complete labelled Mapo tofu illustration set did not render");
+    if (!(await page.locator(".recipe-illustration-notice").isVisible())) throw new Error("AI illustration disclosure is not visible");
     const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
     if (response?.status() !== 200) throw new Error(`Recipe deep-route refresh returned ${response?.status() ?? "no response"}`);
   },
   extraScreenshots: [
     { name: "en-mapo-ingredients-desktop", selector: ".ingredients-section" },
     { name: "en-mapo-method-desktop", selector: ".method-section" },
+    { name: "en-mapo-illustration-step-01-desktop", selector: '.recipe-step-illustration[data-step-illustration="mapo-tofu-step-01-illustration"]' },
     { name: "en-mapo-sources-desktop", selector: ".recipe-sources" }
   ]
 });
@@ -174,9 +177,11 @@ await inspect({
   name: "zh-mapo-recipe-mobile", path: "/zh-hant/recipes/mapo-tofu/", viewport: { width: 390, height: 844 }, fullPage: false,
   interact: async (page) => {
     if (await page.locator(".recipe-step-photo").count() !== 0) throw new Error("Removed mobile step photograph is still rendering");
+    if (await page.locator('.recipe-step-illustration[data-ai-illustration="true"]').count() !== 8) throw new Error("Mobile Mapo tofu illustration set did not render");
   },
   extraScreenshots: [
-    { name: "zh-mapo-method-mobile", selector: ".method-section" }
+    { name: "zh-mapo-method-mobile", selector: ".method-section" },
+    { name: "zh-mapo-illustration-step-01-mobile", selector: '.recipe-step-illustration[data-step-illustration="mapo-tofu-step-01-illustration"]' }
   ]
 });
 await inspect({

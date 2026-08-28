@@ -233,6 +233,15 @@ body:not(:lang(en)) .region-heading h2 { letter-spacing: -.02em; }
 .recipe-step-photo-links { overflow-wrap: anywhere; }
 .recipe-step-photo-links a { color: var(--color-primary-hover); font-weight: 800; text-decoration-thickness: 1px; text-underline-offset: .16em; }
 .recipe-step-photo figcaption small { color: var(--color-text-secondary); font-size: .66rem; line-height: 1.55; }
+.recipe-illustration-notice { margin: -.25rem 0 1.4rem; padding: 1rem 1.1rem; background: var(--color-primary-wash); border: 1px solid #e9c8d4; border-left: 3px solid var(--color-primary); border-radius: var(--radius-sm); }
+.recipe-illustration-notice strong { display: block; margin-bottom: .3rem; color: var(--color-primary-hover); font-size: .78rem; }
+.recipe-illustration-notice p { margin: 0; color: var(--color-text-secondary); font-size: .76rem; line-height: 1.6; }
+.recipe-step-illustration { margin: 1.1rem 0 .25rem; overflow: hidden; background: var(--color-surface); border: 1px solid #e7c2cf; border-radius: var(--radius-md); box-shadow: 0 12px 32px rgba(86, 49, 62, .08); }
+.recipe-step-illustration picture, .recipe-step-illustration img { display: block; width: 100%; }
+.recipe-step-illustration img { height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: #fffaf4; }
+.recipe-step-illustration figcaption { display: flex; align-items: baseline; justify-content: space-between; gap: .35rem 1rem; padding: .75rem 1rem .85rem; background: #fffdfb; }
+.recipe-step-illustration figcaption strong { color: var(--color-primary-hover); font-size: .7rem; }
+.recipe-step-illustration figcaption small { color: var(--color-text-secondary); font-size: .64rem; line-height: 1.5; text-align: right; }
 .recipe-sidebar { align-self: start; padding: clamp(1.5rem, 3.5vw, 2.5rem); background: var(--color-dark); color: var(--color-dark-text); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); }
 .recipe-sidebar > .eyebrow { color: #f69bbe; }
 .recipe-sidebar > h2 { margin-bottom: 1.5rem; font-size: clamp(2rem, 3vw, 3rem); }
@@ -406,6 +415,10 @@ body:not(:lang(en)) .info-index > p { letter-spacing: .03em; text-transform: non
   .recipe-step-photo { margin-top: 1rem; border-radius: 1rem; }
   .recipe-step-photo figcaption { padding: .9rem; }
   .recipe-step-photo-heading { align-items: flex-start; flex-direction: column; gap: .2rem; }
+  .recipe-illustration-notice { margin-bottom: 1.2rem; padding: .9rem; }
+  .recipe-step-illustration { margin-top: 1rem; border-radius: 1rem; }
+  .recipe-step-illustration figcaption { align-items: flex-start; flex-direction: column; padding: .75rem .85rem; }
+  .recipe-step-illustration figcaption small { text-align: left; }
   .recipe-sources { grid-template-columns: 1fr; padding: 1.5rem; }
   .related-recipes { padding-bottom: 4rem; }
   .philosophy-section { grid-template-columns: 1fr; padding: 5rem 0; }

@@ -5,6 +5,8 @@ import { fileURLToPath } from "node:url";
 import { cuisines, localeOrder, locales, origin } from "../src/data.mjs";
 import { infoPages } from "../src/info-pages.mjs";
 import { recipeProcessPhotos } from "../src/recipe-process-photos.mjs";
+import { recipeStepIllustrations } from "../src/recipe-step-illustrations.mjs";
+import { recipeUi } from "../src/recipe-ui.mjs";
 import { recipes } from "../src/recipes.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
@@ -95,6 +97,13 @@ for (const slug of localeOrder) {
         if (!recipeHtml.includes(required)) failures.push(`${slug} ${recipe.id}: incomplete visible provenance for ${processPhoto.id}`);
       }
       if (!recipeHtml.includes(`/images/recipes/process/${processPhoto.id}-800.webp`)) failures.push(`${slug} ${recipe.id}: step image missing from markup or JSON-LD`);
+    }
+    const recipeJsonLd = recipeHtml.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1] || "";
+    for (const illustration of recipeStepIllustrations.filter((entry) => entry.recipeId === recipe.id)) {
+      if (!recipeHtml.includes(`data-step-illustration="${illustration.id}"`) || !recipeHtml.includes('data-ai-illustration="true"')) failures.push(`${slug} ${recipe.id}: missing labelled step illustration ${illustration.id}`);
+      if (!recipeHtml.includes(`/images/recipes/illustrations/${illustration.id}-800.webp`)) failures.push(`${slug} ${recipe.id}: missing responsive illustration markup ${illustration.id}`);
+      if (!recipeHtml.includes(recipeUi[slug].illustrationDisclosure) || !recipeHtml.includes(recipeUi[slug].illustrationShortLabel)) failures.push(`${slug} ${recipe.id}: missing visible AI-illustration disclosure`);
+      if (recipeJsonLd.includes(`/images/recipes/illustrations/${illustration.id}`)) failures.push(`${slug} ${recipe.id}: illustration must not enter Recipe structured data`);
     }
   }
 }
@@ -193,6 +202,36 @@ for (const photo of recipeProcessPhotos) {
   for (const width of [480, 800]) if (!(await exists(join(dist, "images", "recipes", "process", `${photo.id}-${width}.webp`)))) failures.push(`${photo.id}: missing ${width}px process image`);
 }
 
+const illustrationIds = new Set();
+const illustrationStepKeys = new Set();
+for (const illustration of recipeStepIllustrations) {
+  const stepKey = `${illustration.recipeId}:${illustration.step}`;
+  const recipe = recipes.find((entry) => entry.id === illustration.recipeId);
+  if (illustrationIds.has(illustration.id)) failures.push(`${illustration.id}: duplicate step illustration id`);
+  illustrationIds.add(illustration.id);
+  if (illustrationStepKeys.has(stepKey)) failures.push(`${stepKey}: more than one illustration assigned to a step`);
+  illustrationStepKeys.add(stepKey);
+  if (processStepKeys.has(stepKey)) failures.push(`${stepKey}: real process photography and AI illustration cannot occupy the same step`);
+  if (!recipe) failures.push(`${illustration.id}: illustration references an unpublished recipe`);
+  if (!Number.isInteger(illustration.step) || illustration.step < 1 || (recipe && illustration.step > recipe.instructions.length)) failures.push(`${illustration.id}: invalid illustrated step ${illustration.step}`);
+  if (illustration.kind !== "ai-generated-step-illustration" || !illustration.aiGenerated || !illustration.nonPhotographic || !illustration.visualMatchApproved || !illustration.excludeFromStructuredData) failures.push(`${illustration.id}: illustration bypassed the AI-disclosure or visual-match gate`);
+  if (!illustration.generator || !illustration.generatedAt || !illustration.promptSet || !illustration.sourceAsset || !illustration.sourceAssetSha256) failures.push(`${illustration.id}: incomplete illustration provenance`);
+  validateLocalizedText(illustration.alt, `${illustration.id}.alt`);
+  const source = join(root, "assets", "recipes", "illustrations-generated", illustration.sourceAsset || "missing");
+  if (!(await exists(source))) {
+    failures.push(`${illustration.id}: generated illustration source is missing`);
+  } else {
+    const digest = createHash("sha256").update(await readFile(source)).digest("hex");
+    if (digest !== (illustration.sourceAssetSha256 || "").toLowerCase()) failures.push(`${illustration.id}: generated illustration source hash changed`);
+  }
+  for (const width of [480, 800, 1200]) if (!(await exists(join(dist, "images", "recipes", "illustrations", `${illustration.id}-${width}.webp`)))) failures.push(`${illustration.id}: missing ${width}px illustration crop`);
+}
+for (const recipeId of new Set(recipeStepIllustrations.filter((illustration) => illustration.setComplete).map((illustration) => illustration.recipeId))) {
+  const recipe = recipes.find((entry) => entry.id === recipeId);
+  const illustratedSteps = recipeStepIllustrations.filter((illustration) => illustration.recipeId === recipeId).map((illustration) => illustration.step).sort((a, b) => a - b);
+  if (!recipe || illustratedSteps.length !== recipe.instructions.length || illustratedSteps.some((step, index) => step !== index + 1)) failures.push(`${recipeId}: complete illustration set must cover every recipe step exactly once`);
+}
+
 const redirects = await readFile(join(dist, "_redirects"), "utf8");
 if (!redirects.includes("/ /en/ 301")) failures.push("root redirect must be permanent");
 if (!redirects.includes("/index.html /en/ 301")) failures.push("index redirect missing");
@@ -216,4 +255,4 @@ if (sizes[0].size > 25 * 1024 * 1024) failures.push(`largest output exceeds Page
 
 console.log(`Static audit: ${files.length} files, ${expectedUrlCount} indexable routes; largest ${sizes[0].size} bytes (${relative(root, sizes[0].file)}).`);
 if (failures.length) { console.error(`Audit failed (${failures.length}):\n- ${failures.slice(0, 60).join("\n- ")}`); process.exit(1); }
-console.log("Static audit passed: routes, links, responsive images, search, five-language recipe completeness, finished/process real-photo gates, provenance, sitemap, canonical, reciprocal hreflang, social metadata and JSON-LD are valid.");
+console.log("Static audit passed: routes, links, responsive images, search, five-language recipe completeness, finished/process real-photo gates, labelled AI-illustration gates, provenance, sitemap, canonical, reciprocal hreflang, social metadata and JSON-LD are valid.");

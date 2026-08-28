@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 import { recipePhotoCandidates } from "../src/recipe-photos.mjs";
 import { recipeProcessPhotos } from "../src/recipe-process-photos.mjs";
+import { recipeStepIllustrations } from "../src/recipe-step-illustrations.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const sourceDirectory = join(root, "assets", "brand", "real");
@@ -11,11 +12,14 @@ const output = join(root, "public", "images");
 await mkdir(output, { recursive: true });
 const recipeSourceDirectory = join(root, "assets", "recipes", "approved");
 const processSourceDirectory = join(root, "assets", "recipes", "process-approved");
+const illustrationSourceDirectory = join(root, "assets", "recipes", "illustrations-generated");
 const recipeOutput = join(output, "recipes");
 const processOutput = join(recipeOutput, "process");
+const illustrationOutput = join(recipeOutput, "illustrations");
 await rm(recipeOutput, { recursive: true, force: true });
 await mkdir(recipeOutput, { recursive: true });
 await mkdir(processOutput, { recursive: true });
+await mkdir(illustrationOutput, { recursive: true });
 
 const photographs = [
   { name: "sushi", file: "sushi.jpg", position: "attention" },
@@ -59,6 +63,18 @@ for (const photograph of approvedProcessPhotos) {
   }
 }
 
+const approvedStepIllustrations = recipeStepIllustrations.filter((illustration) => illustration.aiGenerated && illustration.nonPhotographic && illustration.visualMatchApproved && illustration.excludeFromStructuredData);
+for (const illustration of approvedStepIllustrations) {
+  const source = join(illustrationSourceDirectory, illustration.sourceAsset);
+  for (const width of [480, 800, 1200]) {
+    await sharp(source)
+      .rotate()
+      .resize({ width, height: Math.round(width * 9 / 16), fit: "cover", position: "centre" })
+      .webp({ quality: 84, effort: 5 })
+      .toFile(join(illustrationOutput, `${illustration.id}-${width}.webp`));
+  }
+}
+
 const socialCard = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffaf7"/><stop offset="1" stop-color="#f8e9ee"/></linearGradient>
@@ -85,4 +101,4 @@ const socialCard = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1
 
 await sharp(socialCard).jpeg({ quality: 88, chromaSubsampling: "4:4:4" }).toFile(join(root, "public", "og.jpg"));
 
-console.log(`Prepared ${photographs.length * 3} homepage crops, ${approvedRecipePhotos.length * 3} approved recipe crops, ${approvedProcessPhotos.length * 2} approved process images, and one food-free social card.`);
+console.log(`Prepared ${photographs.length * 3} homepage crops, ${approvedRecipePhotos.length * 3} approved recipe crops, ${approvedProcessPhotos.length * 2} approved process images, ${approvedStepIllustrations.length * 3} labelled step-illustration crops, and one food-free social card.`);
