@@ -1,6 +1,8 @@
+import { japanesePhotoCandidates } from "./japanese-photos.mjs";
+
 // Candidate real-food photographs. Nothing in this file is published until
 // visualMatchApproved is set after a recipe-to-photo review.
-export const recipePhotoCandidates = [
+const chineseRecipePhotoCandidates = [
   {
     id: "mapo-tofu", commonsTitle: "File:Authentic Mapo Tofu.jpg", title: "Authentic Mapo Tofu", author: "Sichuanfoodlover",
     sourcePage: "https://commons.wikimedia.org/w/index.php?title=File:Authentic_Mapo_Tofu.jpg&oldid=1069689011", originalFile: "https://upload.wikimedia.org/wikipedia/commons/7/73/Authentic_Mapo_Tofu.jpg",
@@ -101,4 +103,9 @@ export const recipePhotoCandidates = [
     sourcePage: "https://commons.wikimedia.org/w/index.php?title=File%3A%E6%8F%9A%E5%B7%9E%E7%82%92%E9%A3%AF%20-%20%E8%86%B3%E5%BF%83%E5%B0%8F%E9%A4%A8.jpg&oldid=920621804", originalFile: "https://upload.wikimedia.org/wikipedia/commons/4/4e/%E6%8F%9A%E5%B7%9E%E7%82%92%E9%A3%AF_-_%E8%86%B3%E5%BF%83%E5%B0%8F%E9%A4%A8.jpg",
     license: "CC0 1.0", licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/", relation: "dish-reference", commercialUseVerified: true, realPhoto: true, visualMatchApproved: false
   }
+];
+
+export const recipePhotoCandidates = [
+  ...chineseRecipePhotoCandidates,
+  ...japanesePhotoCandidates
 ];

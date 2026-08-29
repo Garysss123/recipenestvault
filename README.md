@@ -9,6 +9,7 @@ Static-first, five-language recipe discovery site for `recipenestvault.com`.
 - No server, database, authentication or paid API dependency
 - Cloudflare Pages deployment via Wrangler
 - Locale routes: `/en/`, `/zh-hant/`, `/ja/`, `/ko/`, `/th/`
+- Recipe collections are grouped at build time by `recipe.cuisine`; collection pages, breadcrumbs, related recipes, search labels and schema must never hard-code one cuisine.
 - Twenty-one cuisine landing pages per language and a pre-generated browser search index
 - Optional AdSense component that stays completely inactive until valid build-time IDs are supplied
 
@@ -18,12 +19,15 @@ Static-first, five-language recipe discovery site for `recipenestvault.com`.
 npm install
 npm run images
 npm run icons
+npm run audit:japanese-drafts
 npm test
 npm run qa:visual
 npm run deploy
 ```
 
 The deployment command always audits and rebuilds `dist/` before uploading only that generated artifact to the `recipenestvault` Cloudflare Pages project.
+
+For licensed-photo research, `node scripts/search-commons-candidates.mjs <dish terms>` returns Wikimedia Commons candidates with author, original-file, dimensions and commercial-license metadata. Candidates are not approved until their downloaded pixels are inspected against the exact recipe. `node scripts/recipe-photo-contact-sheet.mjs japanese` creates an out-of-artifact finished-photo sheet for that review.
 
 ## Visual release gate
 
@@ -46,6 +50,13 @@ All indexable content templates include a shared ad component. No Google script 
 ## Content trust and real-photography policy
 
 These are permanent release gates. Recipe count, publishing speed and visual completeness never take priority over reproducibility, factual certainty or licensing evidence.
+
+### Japanese collection release gate
+
+- The first Japanese collection contains 21 complete recipes, exceeding the 20-recipe minimum without publishing filler.
+- Its source data is split into `src/japanese-recipes-a.mjs`, `src/japanese-recipes-b.mjs`, and `src/japanese-recipes-c.mjs`; the matching licensed-photo manifests and research records use the same A/B/C grouping.
+- Every Japanese recipe must pass `npm run audit:japanese-drafts`: five localized versions, 8–12 detailed steps, at least two direct HTTPS recipe sources, an accepted commercial real-photo license, a reviewed source image of at least 1200 × 800, and a pinned SHA-256 hash.
+- Every published Japanese step set follows the existing non-photographic illustration disclosure, provenance, structured-data exclusion and per-step visual-match rules. A finished-dish photograph always remains the recipe hero and `Recipe.image`.
 
 ### Recipe eligibility
 

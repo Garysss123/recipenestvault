@@ -43,11 +43,24 @@ const approvedRecipePhotos = recipePhotoCandidates.filter((photo) => photo.visua
 for (const photograph of approvedRecipePhotos) {
   const source = join(recipeSourceDirectory, photograph.sourceAsset);
   for (const width of [640, 960, 1440]) {
-    await sharp(source)
-      .rotate()
-      .resize({ width, height: Math.round(width * .75), fit: "cover", position: photograph.cropPosition || "attention" })
-      .webp({ quality: 83, effort: 5 })
-      .toFile(join(recipeOutput, `${photograph.id}-${width}.webp`));
+    const height = Math.round(width * .75);
+    const zoom = Math.max(1, Number(photograph.cropZoom) || 1);
+    let pipeline = sharp(source).rotate();
+    if (zoom > 1) {
+      const zoomedWidth = Math.round(width * zoom);
+      const zoomedHeight = Math.round(height * zoom);
+      const horizontal = photograph.cropPosition === "east" || photograph.cropPosition === "right"
+        ? zoomedWidth - width
+        : photograph.cropPosition === "west" || photograph.cropPosition === "left"
+          ? 0
+          : Math.round((zoomedWidth - width) / 2);
+      pipeline = pipeline
+        .resize({ width: zoomedWidth, height: zoomedHeight, fit: "cover", position: photograph.cropPosition || "attention" })
+        .extract({ left: horizontal, top: Math.round((zoomedHeight - height) / 2), width, height });
+    } else {
+      pipeline = pipeline.resize({ width, height, fit: "cover", position: photograph.cropPosition || "attention" });
+    }
+    await pipeline.webp({ quality: 83, effort: 5 }).toFile(join(recipeOutput, `${photograph.id}-${width}.webp`));
   }
 }
 

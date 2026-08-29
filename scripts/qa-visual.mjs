@@ -156,6 +156,14 @@ await inspect({
   }
 });
 await inspect({
+  name: "en-search-japanese-desktop", path: "/en/search/?q=omurice", viewport: { width: 1280, height: 900 },
+  interact: async (page) => {
+    const recipeResult = page.locator('.result-card[href="/en/recipes/omurice/"]');
+    await recipeResult.waitFor({ state: "visible" });
+    if (!/Japanese recipe/i.test(await recipeResult.innerText())) throw new Error("Japanese recipe search result is missing its content-type label");
+  }
+});
+await inspect({
   name: "zh-cuisine-mobile", path: "/zh-hant/cuisines/taiwanese/", viewport: { width: 390, height: 844 },
   interact: async (page) => {
     const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
@@ -175,6 +183,59 @@ await inspect({
   }
 });
 await inspect({ name: "en-chinese-collection-desktop", path: "/en/cuisines/chinese/", viewport: { width: 1440, height: 1000 } });
+await inspect({
+  name: "zh-japanese-collection-mobile", path: "/zh-hant/cuisines/japanese/", viewport: { width: 390, height: 844 },
+  interact: async (page) => {
+    const cards = page.locator(".collection-recipe-card");
+    await cards.first().waitFor({ state: "visible" });
+    if (await cards.count() < 20) throw new Error("Japanese collection has fewer than 20 approved recipe cards");
+    if (!(await page.locator('.collection-recipe-card a[href="/zh-hant/recipes/shoyu-ramen/"]').isVisible())) throw new Error("Japanese collection is missing the final recipe card");
+    const intro = await page.locator(".cuisine-hero p").last().innerText();
+    if (!intro.includes("讓第一次做也能抓到重點")) throw new Error("Japanese collection intro is not the approved reader-facing SEO copy");
+    const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+    if (response?.status() !== 200) throw new Error(`Japanese collection refresh returned ${response?.status() ?? "no response"}`);
+  },
+  extraScreenshots: [
+    { name: "zh-japanese-collection-hero-mobile", selector: ".cuisine-hero" },
+    { name: "zh-japanese-first-card-mobile", selector: ".collection-recipe-card:first-child" }
+  ]
+});
+await inspect({
+  name: "en-japanese-collection-desktop", path: "/en/cuisines/japanese/", viewport: { width: 1440, height: 1000 },
+  interact: async (page) => {
+    if (await page.locator(".collection-recipe-card").count() < 20) throw new Error("Desktop Japanese collection has fewer than 20 recipes");
+    if (await page.locator('.collection-recipe-card a[href*="mapo-tofu"]').count()) throw new Error("Chinese recipe leaked into Japanese collection");
+  },
+  extraScreenshots: [{ name: "en-japanese-collection-hero-desktop", selector: ".cuisine-hero" }]
+});
+await inspect({
+  name: "en-omurice-recipe-desktop", path: "/en/recipes/omurice/", viewport: { width: 1440, height: 1000 }, fullPage: false,
+  interact: async (page) => {
+    await assertIllustratedRecipe(page, 8);
+    if (await page.locator('.breadcrumbs a[href="/en/cuisines/japanese/"]').count() !== 1) throw new Error("Omurice breadcrumb does not return to Japanese cuisine");
+    const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+    if (response?.status() !== 200) throw new Error(`Omurice deep-route refresh returned ${response?.status() ?? "no response"}`);
+  },
+  extraScreenshots: [
+    { name: "en-omurice-hero-desktop", selector: ".recipe-detail-hero" },
+    { name: "en-omurice-ingredients-desktop", selector: ".ingredients-section" },
+    { name: "en-omurice-method-desktop", selector: ".method-section" },
+    { name: "en-omurice-sources-desktop", selector: ".recipe-sources" }
+  ]
+});
+await inspect({
+  name: "zh-chicken-teriyaki-mobile", path: "/zh-hant/recipes/chicken-teriyaki/", viewport: { width: 390, height: 844 }, fullPage: false,
+  interact: async (page) => assertIllustratedRecipe(page, 8, { traditionalChinese: true }),
+  extraScreenshots: [
+    { name: "zh-chicken-teriyaki-hero-mobile", selector: ".recipe-detail-hero" },
+    { name: "zh-chicken-teriyaki-method-mobile", selector: ".method-section" }
+  ]
+});
+await inspect({
+  name: "ja-shoyu-ramen-mobile", path: "/ja/recipes/shoyu-ramen/", viewport: { width: 390, height: 844 }, fullPage: false,
+  interact: async (page) => assertIllustratedRecipe(page, 8),
+  extraScreenshots: [{ name: "ja-shoyu-ramen-method-mobile", selector: ".method-section" }]
+});
 await inspect({
   name: "en-peking-duck-recipe-desktop", path: "/en/recipes/peking-duck/", viewport: { width: 1440, height: 1000 }, fullPage: false,
   interact: async (page) => assertIllustratedRecipe(page, 8),

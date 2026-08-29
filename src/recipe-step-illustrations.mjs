@@ -1,4 +1,9 @@
 import { recipes } from "./recipes.mjs";
+import { japaneseIllustrationSetsA } from "./japanese-illustration-sets-a.mjs";
+import { japaneseIllustrationSetsB } from "./japanese-illustration-sets-b.mjs";
+import { japaneseIllustrationSetsC } from "./japanese-illustration-sets-c.mjs";
+import { japaneseIllustrationSetsRamen } from "./japanese-illustration-sets-ramen.mjs";
+import { japaneseIllustrationSetsNikujaga } from "./japanese-illustration-sets-nikujaga.mjs";
 
 const ml = (en, zhHant, ja, ko, th) => ({ en, "zh-hant": zhHant, ja, ko, th });
 
@@ -331,7 +336,14 @@ function buildSet({ recipeId, hashes }) {
   });
 }
 
+function normalizeSet(set) {
+  return {
+    recipeId: set.recipeId,
+    hashes: set.hashes ?? set.steps?.map((entry) => entry.sourceAssetSha256) ?? []
+  };
+}
+
 export const recipeStepIllustrations = [
   ...mapoTofuIllustrations,
-  ...generatedSets.flatMap(buildSet)
+  ...[...generatedSets, ...japaneseIllustrationSetsA, ...japaneseIllustrationSetsB, ...japaneseIllustrationSetsC, ...japaneseIllustrationSetsRamen, ...japaneseIllustrationSetsNikujaga].map(normalizeSet).flatMap(buildSet)
 ];

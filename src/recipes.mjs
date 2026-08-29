@@ -2,6 +2,7 @@ import { recipeDraftA } from "./recipe-draft-a.mjs";
 import { recipeDraftB } from "./recipe-draft-b.mjs";
 import { expandedInstructionsA } from "./recipe-expanded-a.mjs";
 import { expandedInstructionsB } from "./recipe-expanded-b.mjs";
+import { japaneseRecipeDrafts } from "./japanese-recipes.mjs";
 import { recipePhotoCandidates } from "./recipe-photos.mjs";
 
 const ml = (en, zhHant, ja, ko, th) => ({ en, "zh-hant": zhHant, ja, ko, th });
@@ -427,7 +428,8 @@ function refineForPublication(source) {
   return recipe;
 }
 
-export const recipes = [...recipeDraftA, ...recipeDraftB]
+const chineseRecipeDrafts = [...recipeDraftA, ...recipeDraftB];
+const publishedChineseRecipes = chineseRecipeDrafts
   .filter((recipe) => approvedPhotos.has(recipe.id))
   .map((recipe) => {
     const refined = refineForPublication(recipe);
@@ -438,4 +440,9 @@ export const recipes = [...recipeDraftA, ...recipeDraftB]
     };
   });
 
-export const allRecipeDrafts = [...recipeDraftA, ...recipeDraftB];
+const publishedJapaneseRecipes = japaneseRecipeDrafts
+  .filter((recipe) => approvedPhotos.has(recipe.id))
+  .map((recipe) => ({ ...recipe, photo: approvedPhotos.get(recipe.id) }));
+
+export const recipes = [...publishedChineseRecipes, ...publishedJapaneseRecipes];
+export const allRecipeDrafts = [...chineseRecipeDrafts, ...japaneseRecipeDrafts];

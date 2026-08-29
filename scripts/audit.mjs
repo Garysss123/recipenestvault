@@ -3,6 +3,7 @@ import { readdir, readFile, stat } from "node:fs/promises";
 import { dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import { cuisines, localeOrder, locales, origin } from "../src/data.mjs";
+import { cuisineCollections } from "../src/cuisine-collections.mjs";
 import { infoPages } from "../src/info-pages.mjs";
 import { recipeProcessPhotos } from "../src/recipe-process-photos.mjs";
 import { recipeStepIllustrations } from "../src/recipe-step-illustrations.mjs";
@@ -24,6 +25,18 @@ function validateLocalizedText(value, label) {
   for (const locale of localeOrder) {
     if (typeof value[locale] !== "string" || !value[locale].trim()) failures.push(`${label}: missing ${locale}`);
   }
+}
+
+function temperatureFacts(value) {
+  return (String(value).match(/\d+(?:[.,]\d+)?\s*(?:°C|℃)/g) || [])
+    .map((fact) => fact.replace(/\s/g, "").replace("℃", "°C").replace(",", "."))
+    .sort()
+    .join("|");
+}
+
+function validateLocalizedTemperatures(value, label) {
+  const expected = temperatureFacts(value?.en);
+  for (const locale of localeOrder) if (temperatureFacts(value?.[locale]) !== expected) failures.push(`${label}.${locale}: temperature facts differ from English`);
 }
 
 async function exists(path) { try { await stat(path); return true; } catch { return false; } }
@@ -83,13 +96,21 @@ for (const slug of localeOrder) {
     if (type === "privacy" && !infoHtml.includes("privacy-references")) failures.push(`${slug} privacy: missing policy references`);
   }
   for (const cuisine of cuisines) await validateHtml(join(dist, slug, "cuisines", cuisine.id, "index.html"), `${origin}/${slug}/cuisines/${cuisine.id}/`, `cuisines/${cuisine.id}/`, slug);
-  const chineseCollection = await readFile(join(dist, slug, "cuisines", "chinese", "index.html"), "utf8");
-  if (!chineseCollection.includes("recipe-collection")) failures.push(`${slug} Chinese collection missing approved recipe grid`);
+  for (const cuisine of cuisines) {
+    const cuisineRecipes = recipes.filter((recipe) => recipe.cuisine === cuisine.id);
+    if (!cuisineRecipes.length) continue;
+    const collectionHtml = await readFile(join(dist, slug, "cuisines", cuisine.id, "index.html"), "utf8");
+    if (!collectionHtml.includes("recipe-collection")) failures.push(`${slug} ${cuisine.id} collection missing approved recipe grid`);
+    if (!cuisineCollections[cuisine.id]?.[slug]) failures.push(`${slug} ${cuisine.id} collection missing localized editorial copy`);
+    for (const recipe of cuisineRecipes) if (!collectionHtml.includes(`/${slug}/recipes/${recipe.id}/`)) failures.push(`${slug} ${cuisine.id} collection missing ${recipe.id}`);
+  }
   for (const recipe of recipes) {
     const recipeFile = join(dist, slug, "recipes", recipe.id, "index.html");
     await validateHtml(recipeFile, `${origin}/${slug}/recipes/${recipe.id}/`, `recipes/${recipe.id}/`, slug);
     const recipeHtml = await readFile(recipeFile, "utf8");
     if (!recipeHtml.includes('"@type":"Recipe"')) failures.push(`${slug} ${recipe.id}: missing Recipe schema`);
+    if (!recipeHtml.includes(`/${slug}/cuisines/${recipe.cuisine}/`)) failures.push(`${slug} ${recipe.id}: missing cuisine-specific collection route`);
+    if (!recipeHtml.includes(cuisineCollections[recipe.cuisine]?.[slug]?.recipeEyebrow || "missing collection eyebrow")) failures.push(`${slug} ${recipe.id}: missing cuisine-specific recipe label`);
     if (!recipeHtml.includes(recipe.photo.sourcePage) || !recipeHtml.includes(recipe.photo.licenseUrl)) failures.push(`${slug} ${recipe.id}: missing visible photo provenance`);
     for (const processPhoto of recipeProcessPhotos.filter((photo) => photo.recipeId === recipe.id)) {
       if (!recipeHtml.includes(`data-step-photo="${processPhoto.id}"`)) failures.push(`${slug} ${recipe.id}: missing approved step photograph ${processPhoto.id}`);
@@ -134,12 +155,22 @@ for (const url of sitemapLocations) {
 const searchIndex = JSON.parse(await readFile(join(dist, "search-index.json"), "utf8"));
 if (searchIndex.length !== localeOrder.length * (cuisines.length + recipes.length + 4)) failures.push("search index count mismatch");
 for (const record of searchIndex) if (!localeOrder.includes(record.locale) || !record.title || !record.url || !record.text) failures.push("invalid search record");
+for (const record of searchIndex.filter((entry) => entry.type === "recipe")) if (!record.label) failures.push(`${record.locale} ${record.url}: recipe search result is missing a cuisine-specific label`);
 
 for (const recipe of recipes) {
   if (!recipe.photo?.commercialUseVerified || !recipe.photo?.realPhoto || !recipe.photo?.visualMatchApproved) failures.push(`${recipe.id}: recipe bypassed the real-photo approval gate`);
   if (!recipe.photo?.title || !recipe.photo?.author || !recipe.photo?.sourcePage || !recipe.photo?.originalFile || !recipe.photo?.license || !recipe.photo?.licenseUrl || !recipe.photo?.sourceAsset) failures.push(`${recipe.id}: incomplete photo provenance`);
+  if (recipe.photo?.relation !== "dish-reference") failures.push(`${recipe.id}: finished photograph must be labelled as a dish reference`);
+  if (![recipe.photo?.sourcePage, recipe.photo?.originalFile, recipe.photo?.licenseUrl].every((url) => /^https:\/\//.test(url || ""))) failures.push(`${recipe.id}: finished-photo provenance URLs must use HTTPS`);
+  if (!/^(?:CC0|Public Domain|CC BY(?:-SA)?)(?:\s|$)/i.test(recipe.photo?.license || "")) failures.push(`${recipe.id}: finished-photo license is outside the accepted commercial set`);
   if (/\b(?:NC|ND)\b/i.test(recipe.photo?.license || "")) failures.push(`${recipe.id}: photo license prohibits required commercial reuse or adaptation`);
+  if (recipe.photo.cropZoom !== undefined && (!Number.isFinite(recipe.photo.cropZoom) || recipe.photo.cropZoom < 1 || recipe.photo.cropZoom > 2)) failures.push(`${recipe.id}: invalid finished-photo crop zoom`);
+  if (recipe.cuisine === "japanese" && !/^[a-f0-9]{64}$/i.test(recipe.photo?.sourceAssetSha256 || "")) failures.push(`${recipe.id}: Japanese finished photograph is missing a pinned SHA-256 hash`);
   if (!(await exists(join(root, "assets", "recipes", "approved", recipe.photo.sourceAsset || "missing")))) failures.push(`${recipe.id}: approved source photograph is missing`);
+  if (recipe.photo.sourceAssetSha256 && await exists(join(root, "assets", "recipes", "approved", recipe.photo.sourceAsset))) {
+    const digest = createHash("sha256").update(await readFile(join(root, "assets", "recipes", "approved", recipe.photo.sourceAsset))).digest("hex");
+    if (digest !== recipe.photo.sourceAssetSha256.toLowerCase()) failures.push(`${recipe.id}: approved source photograph hash changed`);
+  }
   if (recipe.sources.length < 2 || new Set(recipe.sources.map((source) => source.url)).size < 2 || recipe.sources.some((source) => !source.title || !/^https:\/\//.test(source.url))) failures.push(`${recipe.id}: needs at least two distinct titled HTTPS recipe sources`);
   if (recipe.totalMinutes !== recipe.prepMinutes + recipe.cookMinutes || recipe.servings < 1) failures.push(`${recipe.id}: invalid timing or yield`);
   if (recipe.ingredients.length < 5 || recipe.instructions.length < 8 || recipe.instructions.length > 12) failures.push(`${recipe.id}: cooking method must contain 8–12 detailed steps`);
@@ -161,10 +192,12 @@ for (const recipe of recipes) {
     if (step?.title && step?.body) {
       validateLocalizedText(step.title, `${recipe.id}.instructions[${index}].title`);
       validateLocalizedText(step.body, `${recipe.id}.instructions[${index}].body`);
+      validateLocalizedTemperatures(step.body, `${recipe.id}.instructions[${index}].body`);
       for (const locale of localeOrder) if (/^\s*\d+[.)]\s/.test(step.body?.[locale] || "")) failures.push(`${recipe.id}.instructions[${index}].body.${locale}: duplicates the rendered list number`);
       return;
     }
     validateLocalizedText(step, `${recipe.id}.instructions[${index}]`);
+    validateLocalizedTemperatures(step, `${recipe.id}.instructions[${index}]`);
     for (const locale of localeOrder) if (/^\s*\d+[.)]\s/.test(step?.[locale] || "")) failures.push(`${recipe.id}.instructions[${index}].${locale}: duplicates the rendered list number`);
   });
   for (const field of ["tips", "commonMistakes", "substitutions"]) {
@@ -173,6 +206,7 @@ for (const recipe of recipes) {
       for (const locale of localeOrder) if (/^\s*\d+[.)]\s/.test(row?.[locale] || "")) failures.push(`${recipe.id}.${field}[${index}].${locale}: duplicates the rendered list number`);
     });
   }
+  validateLocalizedTemperatures(recipe.storage, `${recipe.id}.storage`);
   for (const width of [640, 960, 1440]) if (!(await exists(join(dist, "images", "recipes", `${recipe.id}-${width}.webp`)))) failures.push(`${recipe.id}: missing ${width}px approved photo crop`);
 }
 
@@ -237,7 +271,9 @@ for (const recipeId of completedIllustrationRecipeIds) {
   const illustratedSteps = recipeStepIllustrations.filter((illustration) => illustration.recipeId === recipeId).map((illustration) => illustration.step).sort((a, b) => a - b);
   if (!recipe || illustratedSteps.length !== recipe.instructions.length || illustratedSteps.some((step, index) => step !== index + 1)) failures.push(`${recipeId}: complete illustration set must cover every recipe step exactly once`);
 }
-for (const recipe of recipes) if (!completedIllustrationRecipeIds.has(recipe.id)) failures.push(`${recipe.id}: published Chinese recipe is missing a complete step-illustration set`);
+for (const recipe of recipes) if (!completedIllustrationRecipeIds.has(recipe.id)) failures.push(`${recipe.id}: published recipe is missing a complete step-illustration set`);
+const japaneseRecipeCount = recipes.filter((recipe) => recipe.cuisine === "japanese").length;
+if (japaneseRecipeCount > 0 && japaneseRecipeCount < 20) failures.push(`Japanese collection has ${japaneseRecipeCount} recipes; at least 20 are required`);
 for (const promptSet of illustrationPromptSets) if (!(await exists(join(root, "docs", "illustration-prompts", `${promptSet}.md`)))) failures.push(`${promptSet}: illustration prompt record is missing`);
 for (const locale of localeOrder) {
   if (/\bAI\b|OpenAI/i.test(`${recipeUi[locale].illustrationDisclosure} ${recipeUi[locale].illustrationShortLabel}`)) failures.push(`${locale}: generator wording belongs in Sources, not the method notice or per-image label`);
