@@ -11,8 +11,9 @@
     "build": "node scripts/build.mjs",
     "audit": "node scripts/audit.mjs",
     "audit:japanese-drafts": "node scripts/audit-japanese-drafts.mjs",
+    "audit:korean-drafts": "node scripts/audit-korean-drafts.mjs",
     "qa:visual": "node scripts/qa-visual.mjs",
-    "test": "npm run audit:japanese-drafts && npm run build && npm run audit",
+    "test": "npm run audit:japanese-drafts && npm run audit:korean-drafts && npm run build && npm run audit",
     "deploy": "npm run test && wrangler pages deploy dist --project-name recipenestvault --branch main"
   },
   "devDependencies": {

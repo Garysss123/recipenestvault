@@ -34,6 +34,20 @@ async function assertIllustratedRecipe(page, expectedSteps, { traditionalChinese
   }
 }
 
+async function assertTextOnlyRecipe(page, expectedSteps) {
+  const renderedSteps = page.locator(".method-section ol > li");
+  if (await renderedSteps.count() !== expectedSteps) throw new Error(`Expected ${expectedSteps} cooking steps`);
+  if (await page.locator(".recipe-step-illustration, .recipe-step-photo").count() !== 0) throw new Error("Unapproved process visual is rendering");
+  if (await page.locator(".recipe-illustration-notice, .illustration-source-line").count() !== 0) throw new Error("Illustration disclosure is rendering without illustrations");
+  if (await page.locator(".recipe-detail-photo img").evaluate((image) => !image.complete || image.naturalWidth === 0)) throw new Error("Finished-dish photograph failed to load");
+  const schemas = await page.locator('script[type="application/ld+json"]').allTextContents();
+  const recipe = schemas.flatMap((value) => {
+    const parsed = JSON.parse(value);
+    return parsed["@graph"] ?? [parsed];
+  }).find((entry) => entry["@type"] === "Recipe");
+  if (!recipe || recipe.recipeInstructions?.length !== expectedSteps) throw new Error("Recipe structured-data step count differs from the visible method");
+}
+
 async function inspect({ name, path, viewport, expectedStatus = 200, fullPage = true, interact, extraScreenshots = [], suppressLanguagePrompt = true, loadLazyImages = true }) {
   const context = await browser.newContext({ viewport, deviceScaleFactor: 1, colorScheme: "light", reducedMotion: "reduce" });
   if (suppressLanguagePrompt) await context.addInitScript(() => localStorage.setItem("rnv-language-preference-v1", "qa"));
@@ -164,6 +178,14 @@ await inspect({
   }
 });
 await inspect({
+  name: "en-search-korean-desktop", path: "/en/search/?q=bibimbap", viewport: { width: 1280, height: 900 },
+  interact: async (page) => {
+    const recipeResult = page.locator('.result-card[href="/en/recipes/bibimbap/"]');
+    await recipeResult.waitFor({ state: "visible" });
+    if (!/Korean recipe/i.test(await recipeResult.innerText())) throw new Error("Korean recipe search result is missing its cuisine label");
+  }
+});
+await inspect({
   name: "zh-cuisine-mobile", path: "/zh-hant/cuisines/taiwanese/", viewport: { width: 390, height: 844 },
   interact: async (page) => {
     const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
@@ -209,6 +231,32 @@ await inspect({
   extraScreenshots: [{ name: "en-japanese-collection-hero-desktop", selector: ".cuisine-hero" }]
 });
 await inspect({
+  name: "zh-korean-collection-mobile", path: "/zh-hant/cuisines/korean/", viewport: { width: 390, height: 844 },
+  interact: async (page) => {
+    const cards = page.locator(".collection-recipe-card");
+    await cards.first().waitFor({ state: "visible" });
+    if (await cards.count() !== 21) throw new Error(`Korean collection expected 21 recipes, found ${await cards.count()}`);
+    if (await page.locator('.collection-recipe-card a[href="/zh-hant/recipes/bossam/"]').count() !== 1) throw new Error("Korean collection is missing bossam");
+    if (await page.locator('.collection-recipe-card a[href*="omurice"], .collection-recipe-card a[href*="mapo-tofu"]').count()) throw new Error("Another cuisine leaked into Korean collection");
+    const intro = await page.locator(".cuisine-hero p").last().innerText();
+    if (!intro.includes("讓關鍵步驟不必靠猜")) throw new Error("Korean collection intro is not the approved reader-facing copy");
+    const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+    if (response?.status() !== 200) throw new Error(`Korean collection refresh returned ${response?.status() ?? "no response"}`);
+  },
+  extraScreenshots: [
+    { name: "zh-korean-collection-hero-mobile", selector: ".cuisine-hero" },
+    { name: "zh-korean-first-card-mobile", selector: ".collection-recipe-card:first-child" }
+  ]
+});
+await inspect({
+  name: "en-korean-collection-desktop", path: "/en/cuisines/korean/", viewport: { width: 1440, height: 1000 },
+  interact: async (page) => {
+    if (await page.locator(".collection-recipe-card").count() !== 21) throw new Error("Desktop Korean collection does not contain exactly 21 recipes");
+    if (await page.locator('.collection-recipe-card a[href*="omurice"], .collection-recipe-card a[href*="mapo-tofu"]').count()) throw new Error("Another cuisine leaked into desktop Korean collection");
+  },
+  extraScreenshots: [{ name: "en-korean-collection-hero-desktop", selector: ".cuisine-hero" }]
+});
+await inspect({
   name: "en-omurice-recipe-desktop", path: "/en/recipes/omurice/", viewport: { width: 1440, height: 1000 }, fullPage: false,
   interact: async (page) => {
     await assertIllustratedRecipe(page, 8);
@@ -225,11 +273,47 @@ await inspect({
 });
 await inspect({
   name: "zh-chicken-teriyaki-mobile", path: "/zh-hant/recipes/chicken-teriyaki/", viewport: { width: 390, height: 844 }, fullPage: false,
-  interact: async (page) => assertIllustratedRecipe(page, 8, { traditionalChinese: true }),
+  interact: async (page) => assertIllustratedRecipe(page, 7, { traditionalChinese: true }),
   extraScreenshots: [
     { name: "zh-chicken-teriyaki-hero-mobile", selector: ".recipe-detail-hero" },
     { name: "zh-chicken-teriyaki-method-mobile", selector: ".method-section" }
   ]
+});
+await inspect({
+  name: "zh-onigiri-natural-steps-mobile", path: "/zh-hant/recipes/onigiri/", viewport: { width: 390, height: 844 }, fullPage: false,
+  interact: async (page) => assertIllustratedRecipe(page, 5, { traditionalChinese: true }),
+  extraScreenshots: [{ name: "zh-onigiri-method-mobile", selector: ".method-section" }]
+});
+await inspect({
+  name: "en-bibimbap-recipe-desktop", path: "/en/recipes/bibimbap/", viewport: { width: 1440, height: 1000 }, fullPage: false,
+  interact: async (page) => {
+    await assertTextOnlyRecipe(page, 11);
+    if (await page.locator('.breadcrumbs a[href="/en/cuisines/korean/"]').count() !== 1) throw new Error("Bibimbap breadcrumb does not return to Korean cuisine");
+    const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+    if (response?.status() !== 200) throw new Error(`Bibimbap deep-route refresh returned ${response?.status() ?? "no response"}`);
+  },
+  extraScreenshots: [
+    { name: "en-bibimbap-hero-desktop", selector: ".recipe-detail-hero" },
+    { name: "en-bibimbap-ingredients-desktop", selector: ".ingredients-section" },
+    { name: "en-bibimbap-method-desktop", selector: ".method-section" },
+    { name: "en-bibimbap-sources-desktop", selector: ".recipe-sources" }
+  ]
+});
+await inspect({
+  name: "ko-mandu-complex-method-mobile", path: "/ko/recipes/mandu/", viewport: { width: 390, height: 844 }, fullPage: false,
+  interact: async (page) => {
+    await assertTextOnlyRecipe(page, 14);
+    if (await page.locator('.breadcrumbs a[href="/ko/cuisines/korean/"]').count() !== 1) throw new Error("Mandu breadcrumb does not return to Korean cuisine");
+  },
+  extraScreenshots: [
+    { name: "ko-mandu-hero-mobile", selector: ".recipe-detail-hero" },
+    { name: "ko-mandu-method-mobile", selector: ".method-section" }
+  ]
+});
+await inspect({
+  name: "zh-gyeran-jjim-short-method-mobile", path: "/zh-hant/recipes/gyeran-jjim/", viewport: { width: 390, height: 844 }, fullPage: false,
+  interact: async (page) => assertTextOnlyRecipe(page, 5),
+  extraScreenshots: [{ name: "zh-gyeran-jjim-method-mobile", selector: ".method-section" }]
 });
 await inspect({
   name: "ja-shoyu-ramen-mobile", path: "/ja/recipes/shoyu-ramen/", viewport: { width: 390, height: 844 }, fullPage: false,

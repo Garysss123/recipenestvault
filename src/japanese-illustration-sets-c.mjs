@@ -13,6 +13,7 @@ const step = (number, sourceAssetSha256) => ({
 export const japaneseIllustrationSetsC = [
   {
     recipeId: "miso-soup",
+    stepMap: [{ source: 2, target: 1 }, { source: 4, target: 2 }, { source: 5, target: 3 }, { source: 6, target: 4 }, { source: 7, target: 5 }, { source: 8, target: 6 }],
     promptSet: "miso-soup-v1",
     generator: "OpenAI image_gen",
     generatedAt: "2026-08-29",
@@ -35,6 +36,7 @@ export const japaneseIllustrationSetsC = [
   },
   {
     recipeId: "onigiri",
+    stepMap: [{ source: 2, target: 1 }, { source: 4, target: 2 }, { source: 5, target: 3 }, { source: 7, target: 4 }, { source: 8, target: 5 }],
     promptSet: "onigiri-v1",
     generator: "OpenAI image_gen",
     generatedAt: "2026-08-29",
@@ -101,6 +103,7 @@ export const japaneseIllustrationSetsC = [
   },
   {
     recipeId: "zaru-soba",
+    stepMap: [{ source: 2, target: 1 }, { source: 3, target: 2 }, { source: 4, target: 3 }, { source: 6, target: 4 }, { source: 7, target: 5 }, { source: 8, target: 6 }],
     promptSet: "zaru-soba-v1",
     generator: "OpenAI image_gen",
     generatedAt: "2026-08-29",

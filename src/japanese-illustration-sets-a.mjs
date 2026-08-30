@@ -13,6 +13,7 @@ const step = (number, sourceAssetSha256) => ({
 export const japaneseIllustrationSetsA = [
   {
     recipeId: "chicken-teriyaki",
+    stepMap: [{ source: 1, target: 1 }, { source: 3, target: 2 }, { source: 4, target: 3 }, { source: 5, target: 4 }, { source: 6, target: 5 }, { source: 7, target: 6 }, { source: 8, target: 7 }],
     promptSet: "chicken-teriyaki-v1",
     generator: "OpenAI image_gen",
     generatedAt: "2026-08-29",
@@ -35,6 +36,7 @@ export const japaneseIllustrationSetsA = [
   },
   {
     recipeId: "gyudon",
+    stepMap: [{ source: 2, target: 1 }, { source: 3, target: 2 }, { source: 4, target: 3 }, { source: 5, target: 4 }, { source: 6, target: 5 }, { source: 8, target: 6 }],
     promptSet: "gyudon-v1",
     generator: "OpenAI image_gen",
     generatedAt: "2026-08-29",

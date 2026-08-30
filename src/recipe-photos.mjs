@@ -1,4 +1,5 @@
 import { japanesePhotoCandidates } from "./japanese-photos.mjs";
+import { koreanPhotoCandidates } from "./korean-photos.mjs";
 
 // Candidate real-food photographs. Nothing in this file is published until
 // visualMatchApproved is set after a recipe-to-photo review.
@@ -107,5 +108,6 @@ const chineseRecipePhotoCandidates = [
 
 export const recipePhotoCandidates = [
   ...chineseRecipePhotoCandidates,
-  ...japanesePhotoCandidates
+  ...japanesePhotoCandidates,
+  ...koreanPhotoCandidates
 ];

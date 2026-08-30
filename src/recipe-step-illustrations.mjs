@@ -317,18 +317,24 @@ function stepAlt(recipe, step) {
   );
 }
 
-function buildSet({ recipeId, hashes }) {
+function buildSet({ recipeId, hashes, stepMap }) {
   const recipe = recipeById.get(recipeId);
-  if (!recipe || hashes.length !== recipe.instructions.length) throw new Error(`${recipeId}: illustration manifest does not match recipe steps`);
-  return hashes.map((sourceAssetSha256, index) => {
-    const step = index + 1;
+  if (!recipe || !hashes.length) throw new Error(`${recipeId}: illustration manifest is empty or references a missing recipe`);
+  const mapping = stepMap ?? hashes.map((_, index) => ({ source: index + 1, target: index + 1 }));
+  if (!mapping.length || mapping.some(({ source, target }) => !Number.isInteger(source) || source < 1 || source > hashes.length || !Number.isInteger(target) || target < 1 || target > recipe.instructions.length)) throw new Error(`${recipeId}: illustration step map is invalid`);
+  const complete = mapping.length === recipe.instructions.length && mapping.every(({ target }, index) => target === index + 1);
+  return mapping.map(({ source, target }) => {
+    const sourceAssetSha256 = hashes[source - 1];
+    const step = target;
     const paddedStep = String(step).padStart(2, "0");
+    const sourcePaddedStep = String(source).padStart(2, "0");
     return {
       ...common,
+      setComplete: complete,
       id: `${recipeId}-step-${paddedStep}-illustration`,
       recipeId,
       step,
-      sourceAsset: `${recipeId}/step-${paddedStep}.png`,
+      sourceAsset: `${recipeId}/step-${sourcePaddedStep}.png`,
       sourceAssetSha256,
       promptSet: `${recipeId}-v1`,
       alt: stepAlt(recipe, step)
@@ -339,7 +345,8 @@ function buildSet({ recipeId, hashes }) {
 function normalizeSet(set) {
   return {
     recipeId: set.recipeId,
-    hashes: set.hashes ?? set.steps?.map((entry) => entry.sourceAssetSha256) ?? []
+    hashes: set.hashes ?? set.steps?.map((entry) => entry.sourceAssetSha256) ?? [],
+    stepMap: set.stepMap
   };
 }
 

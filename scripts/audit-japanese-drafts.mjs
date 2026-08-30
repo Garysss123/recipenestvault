@@ -36,7 +36,7 @@ for (const recipe of recipes) {
   if (recipe.prepMinutes + recipe.cookMinutes !== recipe.totalMinutes) failures.push(`${recipe.id}: prep + cook must equal total`);
   if (!Number.isInteger(recipe.servings) || recipe.servings < 1) failures.push(`${recipe.id}: invalid servings`);
   if (recipe.ingredients.length < 5) failures.push(`${recipe.id}: fewer than five ingredients`);
-  if (recipe.instructions.length < 8 || recipe.instructions.length > 12) failures.push(`${recipe.id}: method must contain 8–12 steps`);
+  if (recipe.instructions.length < 4) failures.push(`${recipe.id}: method needs at least four independently actionable steps; no fixed upper limit is imposed`);
   if (recipe.sources.length < 2 || new Set(recipe.sources.map((source) => source.url)).size < 2) failures.push(`${recipe.id}: fewer than two distinct sources`);
   if ((recipe.tips?.length || 0) < 2 || (recipe.commonMistakes?.length || 0) < 2 || (recipe.substitutions?.length || 0) < 2) failures.push(`${recipe.id}: practical notes are incomplete`);
   for (const field of ["region", "name", "description", "storage", "cultureNote", "imageAlt"]) validateLocalized(recipe[field], `${recipe.id}.${field}`);

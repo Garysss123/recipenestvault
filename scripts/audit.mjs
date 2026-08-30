@@ -165,7 +165,7 @@ for (const recipe of recipes) {
   if (!/^(?:CC0|Public Domain|CC BY(?:-SA)?)(?:\s|$)/i.test(recipe.photo?.license || "")) failures.push(`${recipe.id}: finished-photo license is outside the accepted commercial set`);
   if (/\b(?:NC|ND)\b/i.test(recipe.photo?.license || "")) failures.push(`${recipe.id}: photo license prohibits required commercial reuse or adaptation`);
   if (recipe.photo.cropZoom !== undefined && (!Number.isFinite(recipe.photo.cropZoom) || recipe.photo.cropZoom < 1 || recipe.photo.cropZoom > 2)) failures.push(`${recipe.id}: invalid finished-photo crop zoom`);
-  if (recipe.cuisine === "japanese" && !/^[a-f0-9]{64}$/i.test(recipe.photo?.sourceAssetSha256 || "")) failures.push(`${recipe.id}: Japanese finished photograph is missing a pinned SHA-256 hash`);
+  if (["japanese", "korean"].includes(recipe.cuisine) && !/^[a-f0-9]{64}$/i.test(recipe.photo?.sourceAssetSha256 || "")) failures.push(`${recipe.id}: ${recipe.cuisine} finished photograph is missing a pinned SHA-256 hash`);
   if (!(await exists(join(root, "assets", "recipes", "approved", recipe.photo.sourceAsset || "missing")))) failures.push(`${recipe.id}: approved source photograph is missing`);
   if (recipe.photo.sourceAssetSha256 && await exists(join(root, "assets", "recipes", "approved", recipe.photo.sourceAsset))) {
     const digest = createHash("sha256").update(await readFile(join(root, "assets", "recipes", "approved", recipe.photo.sourceAsset))).digest("hex");
@@ -173,7 +173,7 @@ for (const recipe of recipes) {
   }
   if (recipe.sources.length < 2 || new Set(recipe.sources.map((source) => source.url)).size < 2 || recipe.sources.some((source) => !source.title || !/^https:\/\//.test(source.url))) failures.push(`${recipe.id}: needs at least two distinct titled HTTPS recipe sources`);
   if (recipe.totalMinutes !== recipe.prepMinutes + recipe.cookMinutes || recipe.servings < 1) failures.push(`${recipe.id}: invalid timing or yield`);
-  if (recipe.ingredients.length < 5 || recipe.instructions.length < 8 || recipe.instructions.length > 12) failures.push(`${recipe.id}: cooking method must contain 8–12 detailed steps`);
+  if (recipe.ingredients.length < 5 || recipe.instructions.length < 4) failures.push(`${recipe.id}: cooking method needs at least four detailed, independently actionable steps; no fixed upper limit is imposed`);
   const ingredientKeys = recipe.ingredients.map((row) => row.item?.en?.trim().toLowerCase()).filter(Boolean);
   if (new Set(ingredientKeys).size !== ingredientKeys.length) failures.push(`${recipe.id}: duplicate ingredient rows`);
   for (const field of ["region", "name", "description", "storage", "cultureNote", "imageAlt"]) validateLocalizedText(recipe[field], `${recipe.id}.${field}`);
@@ -271,9 +271,17 @@ for (const recipeId of completedIllustrationRecipeIds) {
   const illustratedSteps = recipeStepIllustrations.filter((illustration) => illustration.recipeId === recipeId).map((illustration) => illustration.step).sort((a, b) => a - b);
   if (!recipe || illustratedSteps.length !== recipe.instructions.length || illustratedSteps.some((step, index) => step !== index + 1)) failures.push(`${recipeId}: complete illustration set must cover every recipe step exactly once`);
 }
-for (const recipe of recipes) if (!completedIllustrationRecipeIds.has(recipe.id)) failures.push(`${recipe.id}: published recipe is missing a complete step-illustration set`);
+for (const recipe of recipes) {
+  const illustratedSteps = recipeStepIllustrations.filter((illustration) => illustration.recipeId === recipe.id).map((illustration) => illustration.step);
+  if (new Set(illustratedSteps).size !== illustratedSteps.length) failures.push(`${recipe.id}: a cooking step has more than one illustration`);
+}
 const japaneseRecipeCount = recipes.filter((recipe) => recipe.cuisine === "japanese").length;
 if (japaneseRecipeCount > 0 && japaneseRecipeCount < 20) failures.push(`Japanese collection has ${japaneseRecipeCount} recipes; at least 20 are required`);
+const koreanRecipeCount = recipes.filter((recipe) => recipe.cuisine === "korean").length;
+if (koreanRecipeCount > 0 && koreanRecipeCount < 20) failures.push(`Korean collection has ${koreanRecipeCount} recipes; at least 20 are required`);
+const onigiri = recipes.find((recipe) => recipe.id === "onigiri");
+if (onigiri && onigiri.instructions.length !== 5) failures.push(`onigiri natural-step regression: expected 5 independently actionable steps, found ${onigiri.instructions.length}`);
+if (!recipes.some((recipe) => recipe.instructions.length > 12)) failures.push("natural-step regression: no complex published method exceeds twelve steps");
 for (const promptSet of illustrationPromptSets) if (!(await exists(join(root, "docs", "illustration-prompts", `${promptSet}.md`)))) failures.push(`${promptSet}: illustration prompt record is missing`);
 for (const locale of localeOrder) {
   if (/\bAI\b|OpenAI/i.test(`${recipeUi[locale].illustrationDisclosure} ${recipeUi[locale].illustrationShortLabel}`)) failures.push(`${locale}: generator wording belongs in Sources, not the method notice or per-image label`);

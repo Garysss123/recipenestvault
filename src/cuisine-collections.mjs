@@ -46,4 +46,42 @@ const japanese = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese };
+const korean = {
+  en: {
+    eyebrow: "Curated Korean cooking",
+    title: "Korean recipes for bold, comforting home cooking",
+    intro: "Choose from sizzling barbecue, bubbling jjigae, chewy noodles and rice cakes, crisp pancakes, rice dishes, dumplings, and cooling naengmyeon. Every recipe gives exact quantities, pan size, heat, timing, texture, and safe doneness checks, so you can move from familiar Korean flavours to a repeatable result without guessing at the crucial moment.",
+    recipeEyebrow: "Korean recipe",
+    backToCollection: "Back to Korean recipes"
+  },
+  "zh-hant": {
+    eyebrow: "精選韓國料理",
+    title: "從暖心鍋物到街頭小吃的韓國料理食譜",
+    intro: "從滋滋作響的烤肉、滾燙鍋物、彈牙麵食與年糕，到酥脆煎餅、拌飯、饅頭與冰涼冷麵，先挑選今天真正想吃的一道。每頁清楚列出份量、鍋具、火力、時間、口感與安全熟度，讓關鍵步驟不必靠猜，第一次做也能掌握韓式風味的層次。",
+    recipeEyebrow: "韓國料理食譜",
+    backToCollection: "返回韓國料理食譜"
+  },
+  ja: {
+    eyebrow: "厳選した韓国料理",
+    title: "鍋料理から屋台の味まで作れる韓国料理レシピ",
+    intro: "焼肉、熱いチゲ、弾力のある麺と餅、カリッとしたチヂミ、ご飯物、マンドゥ、冷たい冷麺まで、食べたい一品を選べます。各ページで分量、鍋の大きさ、火加減、時間、食感、安全な火の通りを確認できるため、大切な場面を勘に頼らず家庭で再現できます。",
+    recipeEyebrow: "韓国料理レシピ",
+    backToCollection: "韓国料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "엄선한 한식",
+    title: "따뜻한 찌개부터 길거리 음식까지 만드는 한식 레시피",
+    intro: "지글지글 구이, 보글보글 찌개, 쫄깃한 면과 떡, 바삭한 전, 밥 요리, 만두, 시원한 냉면까지 오늘 먹고 싶은 메뉴를 골라 보세요. 각 레시피에 정확한 분량, 팬 크기, 불 세기, 시간, 식감, 안전한 익힘 기준을 담아 중요한 순간을 감으로 넘기지 않고 집에서도 다시 만들 수 있습니다.",
+    recipeEyebrow: "한식 레시피",
+    backToCollection: "한식 레시피로 돌아가기"
+  },
+  th: {
+    eyebrow: "อาหารเกาหลีที่คัดสรร",
+    title: "สูตรอาหารเกาหลีตั้งแต่แกงอุ่นใจถึงของกินข้างทาง",
+    intro: "เลือกได้ตั้งแต่เนื้อย่างฉ่า แกงเดือด เส้นและต็อกเหนียวนุ่ม แพนเค้กกรอบ เมนูข้าว เกี๊ยว ไปจนถึงบะหมี่เย็น แต่ละสูตรระบุปริมาณ ขนาดกระทะ ระดับไฟ เวลา เนื้อสัมผัส และจุดสุกปลอดภัยอย่างชัดเจน จึงทำรสเกาหลีซ้ำได้โดยไม่ต้องเดาในช่วงสำคัญ",
+    recipeEyebrow: "สูตรอาหารเกาหลี",
+    backToCollection: "กลับไปสูตรอาหารเกาหลี"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean };

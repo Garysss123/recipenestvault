@@ -55,8 +55,15 @@ These are permanent release gates. Recipe count, publishing speed and visual com
 
 - The first Japanese collection contains 21 complete recipes, exceeding the 20-recipe minimum without publishing filler.
 - Its source data is split into `src/japanese-recipes-a.mjs`, `src/japanese-recipes-b.mjs`, and `src/japanese-recipes-c.mjs`; the matching licensed-photo manifests and research records use the same A/B/C grouping.
-- Every Japanese recipe must pass `npm run audit:japanese-drafts`: five localized versions, 8–12 detailed steps, at least two direct HTTPS recipe sources, an accepted commercial real-photo license, a reviewed source image of at least 1200 × 800, and a pinned SHA-256 hash.
+- Every Japanese recipe must pass `npm run audit:japanese-drafts`: five localized versions, at least four detailed independently actionable steps with no fixed upper limit, at least two direct HTTPS recipe sources, an accepted commercial real-photo license, a reviewed source image of at least 1200 × 800, and a pinned SHA-256 hash. Step count follows the actual method instead of a template.
 - Every published Japanese step set follows the existing non-photographic illustration disclosure, provenance, structured-data exclusion and per-step visual-match rules. A finished-dish photograph always remains the recipe hero and `Recipe.image`.
+
+### Korean collection release gate
+
+- The first Korean collection contains 21 complete recipes across barbecue, stews, rice, noodles, street food, pancakes, dumplings and shared dishes.
+- Every Korean draft must pass `npm run audit:korean-drafts`: five localized versions, at least two direct HTTPS recipe sources, a visually matched commercial-use real photograph of at least 1200 × 800, and a pinned SHA-256 hash.
+- Method length follows the cooking process, never a card template. The first collection intentionally includes genuinely short 5-step recipes and complex 13–14-step recipes; the audit imposes no maximum step count.
+- Korean step illustrations are optional. A recipe with no approved process visual publishes detailed text without an empty image slot or an implied photographic claim.
 
 ### Recipe eligibility
 
@@ -65,6 +72,7 @@ These are permanent release gates. Recipe count, publishing speed and visual com
 - Never describe a recipe as site-tested unless Recipe Nest Vault actually prepared and tested it.
 - Cross-check every recipe against at least two reliable sources, then write an original, standardized version. Do not copy or translate one author's recipe text.
 - Give exact quantities and useful time, temperature, heat-level and doneness cues. Vague instructions do not pass review.
+- Split steps at meaningful changes in tool, heat, food-safety state or irreversible technique. Merge trivial continuation actions. Require at least four actionable steps, but never impose a fixed target or upper limit.
 
 ### Photograph and recipe consistency
 
