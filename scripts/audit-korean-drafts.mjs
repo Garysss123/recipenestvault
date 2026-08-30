@@ -5,12 +5,14 @@ import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 import { koreanPhotoCandidates } from "../src/korean-photos.mjs";
 import { koreanRecipeDrafts } from "../src/korean-recipes.mjs";
+import { recipeStepIllustrations } from "../src/recipe-step-illustrations.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const localeOrder = ["en", "zh-hant", "ja", "ko", "th"];
 const recipes = koreanRecipeDrafts;
 const photos = koreanPhotoCandidates;
 const photosById = new Map(photos.map((photo) => [photo.id, photo]));
+const illustrations = recipeStepIllustrations.filter((illustration) => recipes.some((recipe) => recipe.id === illustration.recipeId));
 const failures = [];
 
 async function exists(path) { try { await stat(path); return true; } catch { return false; } }
@@ -82,8 +84,37 @@ for (const recipe of recipes) {
 
 for (const photo of photos) if (!recipes.some((recipe) => recipe.id === photo.id)) failures.push(`${photo.id}: orphan Korean photo manifest`);
 
+const expectedIllustrationCount = recipes.reduce((sum, recipe) => sum + recipe.instructions.length, 0);
+if (illustrations.length !== expectedIllustrationCount) failures.push(`Korean illustration count mismatch: expected ${expectedIllustrationCount}, found ${illustrations.length}`);
+const illustrationIds = new Set();
+const illustrationAssets = new Set();
+for (const recipe of recipes) {
+  const set = illustrations.filter((illustration) => illustration.recipeId === recipe.id).sort((a, b) => a.step - b.step);
+  if (set.length !== recipe.instructions.length || set.some((illustration, index) => illustration.step !== index + 1)) {
+    failures.push(`${recipe.id}: cooking-step illustrations must cover all ${recipe.instructions.length} natural steps exactly once`);
+  }
+  for (const illustration of set) {
+    if (illustrationIds.has(illustration.id)) failures.push(`${illustration.id}: duplicate illustration id`);
+    illustrationIds.add(illustration.id);
+    if (illustrationAssets.has(illustration.sourceAsset)) failures.push(`${illustration.sourceAsset}: illustration source reused by more than one Korean step`);
+    illustrationAssets.add(illustration.sourceAsset);
+    if (!illustration.setComplete || !illustration.aiGenerated || !illustration.nonPhotographic || !illustration.visualMatchApproved || !illustration.excludeFromStructuredData) failures.push(`${illustration.id}: illustration review or disclosure gate failed`);
+    if (illustration.generator !== "OpenAI image_gen" || illustration.generatedAt !== "2026-08-30" || illustration.promptSet !== "korean-cooking-steps-v1") failures.push(`${illustration.id}: Korean illustration provenance changed`);
+    if (!/^[a-f0-9]{64}$/i.test(illustration.sourceAssetSha256 || "")) failures.push(`${illustration.id}: missing illustration SHA-256`);
+    const asset = join(root, "assets", "recipes", "illustrations-generated", illustration.sourceAsset || "missing");
+    if (!(await exists(asset))) {
+      failures.push(`${illustration.id}: illustration source is missing`);
+      continue;
+    }
+    const buffer = await readFile(asset);
+    if (createHash("sha256").update(buffer).digest("hex") !== illustration.sourceAssetSha256?.toLowerCase()) failures.push(`${illustration.id}: illustration SHA-256 mismatch`);
+    const metadata = await sharp(buffer).metadata();
+    if (metadata.width !== 1672 || metadata.height !== 941) failures.push(`${illustration.id}: expected reviewed 1672 x 941 source, found ${metadata.width} x ${metadata.height}`);
+  }
+}
+
 if (failures.length) {
   console.error(`Korean draft audit failed (${failures.length}):\n- ${failures.join("\n- ")}`);
   process.exit(1);
 }
-console.log(`Korean draft audit passed: ${recipes.length} recipes, natural ${Math.min(...stepCounts)}–${Math.max(...stepCounts)} step methods, ${photos.length} licensed real photographs, five locales and pinned hashes.`);
+console.log(`Korean draft audit passed: ${recipes.length} recipes, natural ${Math.min(...stepCounts)}–${Math.max(...stepCounts)} step methods, ${photos.length} licensed real photographs, ${illustrations.length} reviewed step illustrations, five locales and pinned hashes.`);

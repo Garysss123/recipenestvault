@@ -63,7 +63,7 @@ These are permanent release gates. Recipe count, publishing speed and visual com
 - The first Korean collection contains 21 complete recipes across barbecue, stews, rice, noodles, street food, pancakes, dumplings and shared dishes.
 - Every Korean draft must pass `npm run audit:korean-drafts`: five localized versions, at least two direct HTTPS recipe sources, a visually matched commercial-use real photograph of at least 1200 × 800, and a pinned SHA-256 hash.
 - Method length follows the cooking process, never a card template. The first collection intentionally includes genuinely short 5-step recipes and complex 13–14-step recipes; the audit imposes no maximum step count.
-- Korean step illustrations are optional. A recipe with no approved process visual publishes detailed text without an empty image slot or an implied photographic claim.
+- Every Korean first-edition recipe has one reviewed non-photographic illustration for each natural cooking step: 186 illustrations across 21 recipes, covering methods from 5 to 14 steps without forcing a template length. Each set follows the same disclosure, provenance, hash, structured-data exclusion and visual-match rules as the Chinese and Japanese collections.
 
 ### Recipe eligibility
 

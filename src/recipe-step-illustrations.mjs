@@ -4,6 +4,7 @@ import { japaneseIllustrationSetsB } from "./japanese-illustration-sets-b.mjs";
 import { japaneseIllustrationSetsC } from "./japanese-illustration-sets-c.mjs";
 import { japaneseIllustrationSetsRamen } from "./japanese-illustration-sets-ramen.mjs";
 import { japaneseIllustrationSetsNikujaga } from "./japanese-illustration-sets-nikujaga.mjs";
+import { koreanIllustrationSets } from "./korean-illustration-sets.mjs";
 
 const ml = (en, zhHant, ja, ko, th) => ({ en, "zh-hant": zhHant, ja, ko, th });
 
@@ -317,7 +318,18 @@ function stepAlt(recipe, step) {
   );
 }
 
-function buildSet({ recipeId, hashes, stepMap }) {
+function buildSet({
+  recipeId,
+  hashes,
+  stepMap,
+  generatedAt = common.generatedAt,
+  promptSet = `${recipeId}-v1`,
+  generator = common.generator,
+  aiGenerated = common.aiGenerated,
+  nonPhotographic = common.nonPhotographic,
+  visualMatchApproved = common.visualMatchApproved,
+  excludeFromStructuredData = common.excludeFromStructuredData
+}) {
   const recipe = recipeById.get(recipeId);
   if (!recipe || !hashes.length) throw new Error(`${recipeId}: illustration manifest is empty or references a missing recipe`);
   const mapping = stepMap ?? hashes.map((_, index) => ({ source: index + 1, target: index + 1 }));
@@ -330,13 +342,19 @@ function buildSet({ recipeId, hashes, stepMap }) {
     const sourcePaddedStep = String(source).padStart(2, "0");
     return {
       ...common,
+      generatedAt,
+      generator,
+      aiGenerated,
+      nonPhotographic,
+      visualMatchApproved,
+      excludeFromStructuredData,
       setComplete: complete,
       id: `${recipeId}-step-${paddedStep}-illustration`,
       recipeId,
       step,
       sourceAsset: `${recipeId}/step-${sourcePaddedStep}.png`,
       sourceAssetSha256,
-      promptSet: `${recipeId}-v1`,
+      promptSet,
       alt: stepAlt(recipe, step)
     };
   });
@@ -346,11 +364,18 @@ function normalizeSet(set) {
   return {
     recipeId: set.recipeId,
     hashes: set.hashes ?? set.steps?.map((entry) => entry.sourceAssetSha256) ?? [],
-    stepMap: set.stepMap
+    stepMap: set.stepMap,
+    generatedAt: set.generatedAt,
+    promptSet: set.promptSet,
+    generator: set.generator,
+    aiGenerated: set.aiGenerated,
+    nonPhotographic: set.nonPhotographic,
+    visualMatchApproved: set.visualMatchApproved,
+    excludeFromStructuredData: set.excludeFromStructuredData
   };
 }
 
 export const recipeStepIllustrations = [
   ...mapoTofuIllustrations,
-  ...[...generatedSets, ...japaneseIllustrationSetsA, ...japaneseIllustrationSetsB, ...japaneseIllustrationSetsC, ...japaneseIllustrationSetsRamen, ...japaneseIllustrationSetsNikujaga].map(normalizeSet).flatMap(buildSet)
+  ...[...generatedSets, ...japaneseIllustrationSetsA, ...japaneseIllustrationSetsB, ...japaneseIllustrationSetsC, ...japaneseIllustrationSetsRamen, ...japaneseIllustrationSetsNikujaga, ...koreanIllustrationSets].map(normalizeSet).flatMap(buildSet)
 ];

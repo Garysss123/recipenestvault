@@ -287,7 +287,7 @@ await inspect({
 await inspect({
   name: "en-bibimbap-recipe-desktop", path: "/en/recipes/bibimbap/", viewport: { width: 1440, height: 1000 }, fullPage: false,
   interact: async (page) => {
-    await assertTextOnlyRecipe(page, 11);
+    await assertIllustratedRecipe(page, 11);
     if (await page.locator('.breadcrumbs a[href="/en/cuisines/korean/"]').count() !== 1) throw new Error("Bibimbap breadcrumb does not return to Korean cuisine");
     const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
     if (response?.status() !== 200) throw new Error(`Bibimbap deep-route refresh returned ${response?.status() ?? "no response"}`);
@@ -302,7 +302,7 @@ await inspect({
 await inspect({
   name: "ko-mandu-complex-method-mobile", path: "/ko/recipes/mandu/", viewport: { width: 390, height: 844 }, fullPage: false,
   interact: async (page) => {
-    await assertTextOnlyRecipe(page, 14);
+    await assertIllustratedRecipe(page, 14);
     if (await page.locator('.breadcrumbs a[href="/ko/cuisines/korean/"]').count() !== 1) throw new Error("Mandu breadcrumb does not return to Korean cuisine");
   },
   extraScreenshots: [
@@ -312,7 +312,7 @@ await inspect({
 });
 await inspect({
   name: "zh-gyeran-jjim-short-method-mobile", path: "/zh-hant/recipes/gyeran-jjim/", viewport: { width: 390, height: 844 }, fullPage: false,
-  interact: async (page) => assertTextOnlyRecipe(page, 5),
+  interact: async (page) => assertIllustratedRecipe(page, 5, { traditionalChinese: true }),
   extraScreenshots: [{ name: "zh-gyeran-jjim-method-mobile", selector: ".method-section" }]
 });
 await inspect({
