@@ -5,6 +5,7 @@ import { japaneseIllustrationSetsC } from "./japanese-illustration-sets-c.mjs";
 import { japaneseIllustrationSetsRamen } from "./japanese-illustration-sets-ramen.mjs";
 import { japaneseIllustrationSetsNikujaga } from "./japanese-illustration-sets-nikujaga.mjs";
 import { koreanIllustrationSets } from "./korean-illustration-sets.mjs";
+import { thaiIllustrationSets } from "./thai-illustration-sets.mjs";
 
 const ml = (en, zhHant, ja, ko, th) => ({ en, "zh-hant": zhHant, ja, ko, th });
 
@@ -377,5 +378,5 @@ function normalizeSet(set) {
 
 export const recipeStepIllustrations = [
   ...mapoTofuIllustrations,
-  ...[...generatedSets, ...japaneseIllustrationSetsA, ...japaneseIllustrationSetsB, ...japaneseIllustrationSetsC, ...japaneseIllustrationSetsRamen, ...japaneseIllustrationSetsNikujaga, ...koreanIllustrationSets].map(normalizeSet).flatMap(buildSet)
+  ...[...generatedSets, ...japaneseIllustrationSetsA, ...japaneseIllustrationSetsB, ...japaneseIllustrationSetsC, ...japaneseIllustrationSetsRamen, ...japaneseIllustrationSetsNikujaga, ...koreanIllustrationSets, ...thaiIllustrationSets].map(normalizeSet).flatMap(buildSet)
 ];

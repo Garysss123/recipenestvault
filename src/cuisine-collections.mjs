@@ -84,4 +84,42 @@ const korean = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese, korean };
+const thai = {
+  en: {
+    eyebrow: "Curated Thai cooking",
+    title: "Thai recipes built around balance, heat, and texture",
+    intro: "Move from bright salads and fast wok dishes to coconut curries, smoky skewers, northern noodles, slow broths, and mango sticky rice. Each recipe measures the salty, sour, sweet, and spicy elements, then marks the exact texture, heat, timing, and safe doneness that make the dish work—so you can cook Thai food with confidence instead of correcting it by guesswork at the table.",
+    recipeEyebrow: "Thai recipe",
+    backToCollection: "Back to Thai recipes"
+  },
+  "zh-hant": {
+    eyebrow: "精選泰國料理",
+    title: "掌握酸、甜、鹹、辣與口感平衡的泰國料理食譜",
+    intro: "從清爽沙拉、快速鍋炒，到椰香咖哩、煙燻烤串、泰北麵食、慢熬濃湯與芒果糯米，依照今天想吃的風味挑選。每道食譜把酸、甜、鹹、辣拆成可量化份量，再標出真正決定成敗的火力、時間、口感與安全熟度，讓你不必等上桌後才憑感覺補救。",
+    recipeEyebrow: "泰國料理食譜",
+    backToCollection: "返回泰國料理食譜"
+  },
+  ja: {
+    eyebrow: "厳選したタイ料理",
+    title: "酸味、甘味、塩味、辛味と食感を整えるタイ料理レシピ",
+    intro: "爽やかなサラダと手早い炒め物から、ココナッツカレー、香ばしい串焼き、北部の麺、長時間煮込むスープ、マンゴーもち米まで選べます。各レシピで酸味、甘味、塩味、辛味を計量し、火加減、時間、食感、安全な火の通りを明確にするため、食卓で勘に頼って直す必要がありません。",
+    recipeEyebrow: "タイ料理レシピ",
+    backToCollection: "タイ料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "엄선한 태국 요리",
+    title: "신맛, 단맛, 짠맛, 매운맛과 식감을 맞추는 태국 요리 레시피",
+    intro: "산뜻한 샐러드와 빠른 웍 볶음부터 코코넛 커리, 불향 꼬치, 북부 면 요리, 오래 끓인 국물, 망고 찹쌀밥까지 골라 보세요. 각 레시피가 신맛, 단맛, 짠맛, 매운맛을 계량하고 성공을 결정하는 불 세기, 시간, 식감, 안전 익힘 기준을 표시해 식탁에서 감으로 고치지 않아도 됩니다.",
+    recipeEyebrow: "태국 요리 레시피",
+    backToCollection: "태국 요리 레시피로 돌아가기"
+  },
+  th: {
+    eyebrow: "อาหารไทยที่คัดสรร",
+    title: "สูตรอาหารไทยที่วางสมดุลเปรี้ยว หวาน เค็ม เผ็ด และเนื้อสัมผัส",
+    intro: "เลือกจากยำสดและผัดกระทะเร็ว ไปจนถึงแกงกะทิ ไม้ย่างหอมควัน เส้นภาคเหนือ น้ำซุปเคี่ยวนาน และข้าวเหนียวมะม่วง แต่ละสูตรตวงเปรี้ยว หวาน เค็ม เผ็ดอย่างชัดเจน พร้อมระบุไฟ เวลา เนื้อสัมผัส และจุดสุกปลอดภัยที่ตัดสินผลลัพธ์ จึงไม่ต้องรอแก้รสด้วยการเดาที่โต๊ะ",
+    recipeEyebrow: "สูตรอาหารไทย",
+    backToCollection: "กลับไปสูตรอาหารไทย"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean, thai };

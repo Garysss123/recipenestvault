@@ -186,6 +186,14 @@ await inspect({
   }
 });
 await inspect({
+  name: "en-search-thai-desktop", path: "/en/search/?q=pad%20thai", viewport: { width: 1280, height: 900 },
+  interact: async (page) => {
+    const recipeResult = page.locator('.result-card[href="/en/recipes/pad-thai/"]');
+    await recipeResult.waitFor({ state: "visible" });
+    if (!/Thai recipe/i.test(await recipeResult.innerText())) throw new Error("Thai recipe search result is missing its cuisine label");
+  }
+});
+await inspect({
   name: "zh-cuisine-mobile", path: "/zh-hant/cuisines/taiwanese/", viewport: { width: 390, height: 844 },
   interact: async (page) => {
     const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
@@ -257,6 +265,32 @@ await inspect({
   extraScreenshots: [{ name: "en-korean-collection-hero-desktop", selector: ".cuisine-hero" }]
 });
 await inspect({
+  name: "zh-thai-collection-mobile", path: "/zh-hant/cuisines/thai/", viewport: { width: 390, height: 844 },
+  interact: async (page) => {
+    const cards = page.locator(".collection-recipe-card");
+    await cards.first().waitFor({ state: "visible" });
+    if (await cards.count() !== 21) throw new Error(`Thai collection expected 21 recipes, found ${await cards.count()}`);
+    if (await page.locator('.collection-recipe-card a[href="/zh-hant/recipes/boat-noodles/"]').count() !== 1) throw new Error("Thai collection is missing boat noodles");
+    if (await page.locator('.collection-recipe-card a[href*="bibimbap"], .collection-recipe-card a[href*="omurice"], .collection-recipe-card a[href*="mapo-tofu"]').count()) throw new Error("Another cuisine leaked into Thai collection");
+    const intro = await page.locator(".cuisine-hero p").last().innerText();
+    if (!intro.includes("讓你不必等上桌後才憑感覺補救")) throw new Error("Thai collection intro is not the approved reader-facing copy");
+    const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+    if (response?.status() !== 200) throw new Error(`Thai collection refresh returned ${response?.status() ?? "no response"}`);
+  },
+  extraScreenshots: [
+    { name: "zh-thai-collection-hero-mobile", selector: ".cuisine-hero" },
+    { name: "zh-thai-first-card-mobile", selector: ".collection-recipe-card:first-child" }
+  ]
+});
+await inspect({
+  name: "en-thai-collection-desktop", path: "/en/cuisines/thai/", viewport: { width: 1440, height: 1000 },
+  interact: async (page) => {
+    if (await page.locator(".collection-recipe-card").count() !== 21) throw new Error("Desktop Thai collection does not contain exactly 21 recipes");
+    if (await page.locator('.collection-recipe-card a[href*="bibimbap"], .collection-recipe-card a[href*="omurice"], .collection-recipe-card a[href*="mapo-tofu"]').count()) throw new Error("Another cuisine leaked into desktop Thai collection");
+  },
+  extraScreenshots: [{ name: "en-thai-collection-hero-desktop", selector: ".cuisine-hero" }]
+});
+await inspect({
   name: "en-omurice-recipe-desktop", path: "/en/recipes/omurice/", viewport: { width: 1440, height: 1000 }, fullPage: false,
   interact: async (page) => {
     await assertIllustratedRecipe(page, 8);
@@ -314,6 +348,46 @@ await inspect({
   name: "zh-gyeran-jjim-short-method-mobile", path: "/zh-hant/recipes/gyeran-jjim/", viewport: { width: 390, height: 844 }, fullPage: false,
   interact: async (page) => assertIllustratedRecipe(page, 5, { traditionalChinese: true }),
   extraScreenshots: [{ name: "zh-gyeran-jjim-method-mobile", selector: ".method-section" }]
+});
+await inspect({
+  name: "en-pad-thai-recipe-desktop", path: "/en/recipes/pad-thai/", viewport: { width: 1440, height: 1000 }, fullPage: false,
+  interact: async (page) => {
+    await assertIllustratedRecipe(page, 9);
+    if (await page.locator('.breadcrumbs a[href="/en/cuisines/thai/"]').count() !== 1) throw new Error("Pad Thai breadcrumb does not return to Thai cuisine");
+    const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+    if (response?.status() !== 200) throw new Error(`Pad Thai deep-route refresh returned ${response?.status() ?? "no response"}`);
+  },
+  extraScreenshots: [
+    { name: "en-pad-thai-hero-desktop", selector: ".recipe-detail-hero" },
+    { name: "en-pad-thai-ingredients-desktop", selector: ".ingredients-section" },
+    { name: "en-pad-thai-method-desktop", selector: ".method-section" },
+    { name: "en-pad-thai-sources-desktop", selector: ".recipe-sources" }
+  ]
+});
+await inspect({
+  name: "th-khao-man-gai-complex-method-mobile", path: "/th/recipes/khao-man-gai/", viewport: { width: 390, height: 844 }, fullPage: false,
+  interact: async (page) => {
+    await assertIllustratedRecipe(page, 13);
+    if (await page.locator('.breadcrumbs a[href="/th/cuisines/thai/"]').count() !== 1) throw new Error("Khao Man Gai breadcrumb does not return to Thai cuisine");
+  },
+  extraScreenshots: [
+    { name: "th-khao-man-gai-hero-mobile", selector: ".recipe-detail-hero" },
+    { name: "th-khao-man-gai-method-mobile", selector: ".method-section" }
+  ]
+});
+await inspect({
+  name: "zh-som-tam-short-method-mobile", path: "/zh-hant/recipes/som-tam/", viewport: { width: 390, height: 844 }, fullPage: false,
+  interact: async (page) => assertIllustratedRecipe(page, 5, { traditionalChinese: true }),
+  extraScreenshots: [{ name: "zh-som-tam-method-mobile", selector: ".method-section" }]
+});
+await inspect({
+  name: "zh-boat-noodles-long-method-mobile", path: "/zh-hant/recipes/boat-noodles/", viewport: { width: 390, height: 844 }, fullPage: false,
+  interact: async (page) => assertIllustratedRecipe(page, 14, { traditionalChinese: true }),
+  extraScreenshots: [
+    { name: "zh-boat-noodles-hero-mobile", selector: ".recipe-detail-hero" },
+    { name: "zh-boat-noodles-blood-tempering-mobile", selector: '[data-step-illustration="boat-noodles-step-10-illustration"]' },
+    { name: "zh-boat-noodles-broth-finish-mobile", selector: '[data-step-illustration="boat-noodles-step-13-illustration"]' }
+  ]
 });
 await inspect({
   name: "ja-shoyu-ramen-mobile", path: "/ja/recipes/shoyu-ramen/", viewport: { width: 390, height: 844 }, fullPage: false,

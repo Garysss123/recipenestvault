@@ -20,6 +20,7 @@ npm install
 npm run images
 npm run icons
 npm run audit:japanese-drafts
+npm run audit:thai-drafts
 npm test
 npm run qa:visual
 npm run deploy
@@ -64,6 +65,14 @@ These are permanent release gates. Recipe count, publishing speed and visual com
 - Every Korean draft must pass `npm run audit:korean-drafts`: five localized versions, at least two direct HTTPS recipe sources, a visually matched commercial-use real photograph of at least 1200 × 800, and a pinned SHA-256 hash.
 - Method length follows the cooking process, never a card template. The first collection intentionally includes genuinely short 5-step recipes and complex 13–14-step recipes; the audit imposes no maximum step count.
 - Every Korean first-edition recipe has one reviewed non-photographic illustration for each natural cooking step: 186 illustrations across 21 recipes, covering methods from 5 to 14 steps without forcing a template length. Each set follows the same disclosure, provenance, hash, structured-data exclusion and visual-match rules as the Chinese and Japanese collections.
+
+### Thai collection release gate
+
+- The first Thai collection contains 21 complete recipes across noodles, curries, rice, salads, soups, grilled dishes, fried snacks and dessert.
+- Source data is split across `src/thai-recipes-a.mjs` through `src/thai-recipes-e.mjs`; finished-photograph provenance is pinned in `src/thai-photos.mjs`, and illustration provenance is generated in `src/thai-illustration-sets.mjs` from the reviewed PNG sources.
+- Every Thai draft must pass `npm run audit:thai-drafts`: five localized versions, at least two direct HTTPS recipe sources, a visually matched commercial-use real photograph of at least 1200 × 800, complete attribution, and pinned photograph and illustration SHA-256 hashes.
+- Method length follows actual cooking complexity. The first edition ranges from a concise 5-step Som Tam through 13-step Khao Man Gai and Khao Soi to 14-step beef boat noodles; the audit enforces variation rather than a fixed length.
+- All 176 natural cooking steps have one reviewed non-photographic illustration. The reproducible prompt record is `docs/illustration-prompts/thai-cooking-steps-v1.md`; every illustration is visibly disclosed, excluded from recipe structured-data images, and checked against its exact intermediate state before publication.
 
 ### Recipe eligibility
 
