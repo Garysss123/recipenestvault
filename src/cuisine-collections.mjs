@@ -122,4 +122,42 @@ const thai = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese, korean, thai };
+const taiwanese = {
+  en: {
+    eyebrow: "Curated Taiwanese cooking",
+    title: "Taiwanese recipes from breakfast counters to family tables",
+    intro: "Cook through red-braised noodles and rice bowls, breakfast egg crepes, night-market snacks, warming soups, sticky rice, tea eggs, pineapple cakes, taro balls, and shaved ice. Every recipe measures the soy, rice wine, starch, heat, and texture that make the dish recognisably Taiwanese, with safe temperatures and visual doneness cues where timing alone is not enough.",
+    recipeEyebrow: "Taiwanese recipe",
+    backToCollection: "Back to Taiwanese recipes"
+  },
+  "zh-hant": {
+    eyebrow: "精選台灣料理",
+    title: "從早餐店、夜市到家常餐桌的台灣料理食譜",
+    intro: "從紅燒牛肉麵、滷肉飯、早餐蛋餅，到夜市炸物、暖湯、油飯、茶葉蛋、鳳梨酥、芋圓與剉冰，依照今天想吃的台灣味挑選。每道食譜把醬油、米酒、澱粉、火力與口感拆成可量化步驟，並在時間不足以判斷時補上安全中心溫度與外觀終點。",
+    recipeEyebrow: "台灣料理食譜",
+    backToCollection: "返回台灣料理食譜"
+  },
+  ja: {
+    eyebrow: "厳選した台湾料理",
+    title: "朝食店、夜市、家庭の食卓から選ぶ台湾料理レシピ",
+    intro: "紅焼牛肉麺、魯肉飯、蛋餅、夜市の揚げ物、温かいスープ、油飯、茶葉卵、鳳梨酥、芋圓、かき氷まで作れます。しょうゆ、米酒、でんぷん、火加減、食感を計量し、時間だけで足りない場面には安全な中心温度と見た目の基準を示します。",
+    recipeEyebrow: "台湾料理レシピ",
+    backToCollection: "台湾料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "엄선한 대만 요리",
+    title: "아침 식당과 야시장부터 집밥까지 만드는 대만 요리 레시피",
+    intro: "홍샤오 우육면, 루러우판, 단빙, 야시장 튀김, 따뜻한 국물, 유판, 차예단, 펑리수, 타로볼, 빙수까지 골라 만들 수 있습니다. 간장, 미주, 전분, 불 세기와 식감을 정확히 계량하고 시간만으로 부족한 단계에는 안전 중심 온도와 시각적 완성 기준을 제공합니다.",
+    recipeEyebrow: "대만 요리 레시피",
+    backToCollection: "대만 요리 레시피로 돌아가기"
+  },
+  th: {
+    eyebrow: "อาหารไต้หวันที่คัดสรร",
+    title: "สูตรอาหารไต้หวันตั้งแต่ร้านอาหารเช้า ตลาดกลางคืน ถึงโต๊ะครอบครัว",
+    intro: "ทำได้ตั้งแต่ก๋วยเตี๋ยวเนื้อตุ๋น ข้าวหมูพะโล้ เครปไข่ ของทอดตลาดกลางคืน ซุปอุ่น ข้าวเหนียวน้ำมัน ไข่ชา ขนมสับปะรด ลูกเผือก และน้ำแข็งไส ทุกสูตรตวงซีอิ๊ว เหล้าข้าว แป้ง ไฟ และเนื้อสัมผัสอย่างชัดเจน พร้อมอุณหภูมิใจกลางและจุดสังเกตเมื่อเวลาอย่างเดียวไม่พอ",
+    recipeEyebrow: "สูตรอาหารไต้หวัน",
+    backToCollection: "กลับไปสูตรอาหารไต้หวัน"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese };

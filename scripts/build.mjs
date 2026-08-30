@@ -15,7 +15,7 @@ const dist = join(root, "dist");
 const assetHasher = createHash("sha256");
 for (const asset of ["site.css", "site.js", "search.js"]) assetHasher.update(await readFile(join(root, "public", "assets", asset)));
 const assetVersion = assetHasher.digest("hex").slice(0, 12);
-const buildDate = "2026-08-29";
+const buildDate = "2026-08-31";
 const adsenseClient = /^ca-pub-\d+$/.test(process.env.ADSENSE_CLIENT ?? "") ? process.env.ADSENSE_CLIENT : "";
 const adsenseSlot = /^\d+$/.test(process.env.ADSENSE_SLOT_CONTENT ?? "") ? process.env.ADSENSE_SLOT_CONTENT : "";
 const adsEnabled = Boolean(adsenseClient && adsenseSlot);
@@ -201,7 +201,7 @@ function renderCuisine(slug, cuisine) {
     : `<section class="coming-section"><div><p class="section-number">01</p><h2>${esc(locale.ui.comingTitle)}</h2><p>${esc(locale.ui.comingBody)}</p></div><div class="coming-visual" aria-hidden="true"><span></span><i></i><b></b></div></section>`;
   const more = `<section class="more-cuisines"><h2>${esc(locale.ui.exploreMore)}</h2><div class="cuisine-grid">${siblings.map((item, index) => `<a class="cuisine-card" href="/${slug}/cuisines/${item.id}/"><span class="cuisine-index">0${index + 1}</span><strong>${esc(item.names[slug])}</strong><span>${esc(fill(locale.ui.viewCuisine, { cuisine: item.names[slug] }))}<b aria-hidden="true">↗</b></span></a>`).join("")}</div></section>`;
   const schema = { "@context": "https://schema.org", "@graph": [ { "@type": "CollectionPage", name: hasRecipes ? collection.title : name, description, url: `${origin}/${slug}/${suffix}`, inLanguage: locale.lang, isPartOf: { "@id": `${origin}/#website` }, ...(hasRecipes ? { mainEntity: { "@type": "ItemList", numberOfItems: cuisineRecipes.length, itemListElement: cuisineRecipes.map((recipe, index) => ({ "@type": "ListItem", position: index + 1, name: localized(recipe.name, slug), url: `${origin}/${slug}/recipes/${recipe.id}/` })) } } : {}) }, { "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: locale.ui.home, item: `${origin}/${slug}/` }, { "@type": "ListItem", position: 2, name } ] } ] };
-  return page(slug, { title, description, schema, bodyClass: `cuisine-page${hasRecipes ? " recipe-collection-page" : ""}` }, `${hero}${adSlot(slug, "cuisine-leaderboard")}${primary}${more}`, suffix);
+  return page(slug, { title, description, schema, bodyClass: `cuisine-page cuisine-${cuisine.id}${hasRecipes ? " recipe-collection-page" : ""}` }, `${hero}${adSlot(slug, "cuisine-leaderboard")}${primary}${more}`, suffix);
 }
 
 function renderRecipe(slug, recipe) {
@@ -238,7 +238,7 @@ function renderRecipe(slug, recipe) {
     .replace(`<span aria-hidden="true">←</span>${esc(ui.backToCollection)}</a>`, `<span aria-hidden="true">←</span>${esc(collection?.backToCollection ?? ui.backToCollection)}</a>`);
   const schema = { "@context": "https://schema.org", "@graph": [ { "@type": "Recipe", "@id": `${origin}/${slug}/${suffix}#recipe`, name, description, url: `${origin}/${slug}/${suffix}`, mainEntityOfPage: `${origin}/${slug}/${suffix}`, inLanguage: locale.lang, image: { "@type": "ImageObject", url: `${origin}/images/recipes/${recipe.id}-1440.webp`, width: 1440, height: 1080, creator: { "@type": "Person", name: recipe.photo.author }, license: recipe.photo.licenseUrl, acquireLicensePage: recipe.photo.sourcePage, creditText: `${recipe.photo.title} — ${recipe.photo.author}` }, author: { "@type": "Organization", name: "Recipe Nest Vault", url: origin }, datePublished: buildDate, dateModified: buildDate, prepTime: duration(recipe.prepMinutes), cookTime: duration(recipe.cookMinutes), totalTime: duration(recipe.totalMinutes), recipeYield: `${recipe.servings}`, recipeCuisine: cuisine.names[slug], recipeIngredient: recipe.ingredients.map((row) => `${localized(row.amount, slug)} ${localized(row.item, slug)}`), recipeInstructions: recipe.instructions.map((step, index) => { const instruction = instructionContent(step, slug); const processPhoto = processPhotoByStep.get(`${recipe.id}:${index + 1}`); return { "@type": "HowToStep", position: index + 1, ...(instruction.title ? { name: instruction.title } : {}), text: instruction.body, ...(processPhoto ? { image: `${origin}/images/recipes/process/${processPhoto.id}-800.webp` } : {}) }; }) }, { "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: locale.ui.home, item: `${origin}/${slug}/` }, { "@type": "ListItem", position: 2, name: cuisine.names[slug], item: `${origin}/${slug}/cuisines/chinese/` }, { "@type": "ListItem", position: 3, name, item: `${origin}/${slug}/${suffix}` } ] } ] };
   schema["@graph"][1].itemListElement[1].item = `${origin}/${slug}/cuisines/${recipe.cuisine}/`;
-  return page(slug, { title, description, schema, bodyClass: "recipe-page", socialImage: `${origin}/images/recipes/${recipe.id}-1440.webp`, ogType: "article" }, cuisineAwareContent, suffix);
+  return page(slug, { title, description, schema, bodyClass: `recipe-page cuisine-${recipe.cuisine}`, socialImage: `${origin}/images/recipes/${recipe.id}-1440.webp`, ogType: "article" }, cuisineAwareContent, suffix);
 }
 
 function renderSearch(slug) {

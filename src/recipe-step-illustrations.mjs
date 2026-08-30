@@ -6,6 +6,7 @@ import { japaneseIllustrationSetsRamen } from "./japanese-illustration-sets-rame
 import { japaneseIllustrationSetsNikujaga } from "./japanese-illustration-sets-nikujaga.mjs";
 import { koreanIllustrationSets } from "./korean-illustration-sets.mjs";
 import { thaiIllustrationSets } from "./thai-illustration-sets.mjs";
+import { taiwaneseIllustrationSets } from "./taiwanese-illustration-sets.mjs";
 
 const ml = (en, zhHant, ja, ko, th) => ({ en, "zh-hant": zhHant, ja, ko, th });
 
@@ -328,6 +329,7 @@ function buildSet({
   generator = common.generator,
   aiGenerated = common.aiGenerated,
   nonPhotographic = common.nonPhotographic,
+  noPeopleOrHands,
   visualMatchApproved = common.visualMatchApproved,
   excludeFromStructuredData = common.excludeFromStructuredData
 }) {
@@ -347,6 +349,7 @@ function buildSet({
       generator,
       aiGenerated,
       nonPhotographic,
+      ...(noPeopleOrHands !== undefined ? { noPeopleOrHands } : {}),
       visualMatchApproved,
       excludeFromStructuredData,
       setComplete: complete,
@@ -371,6 +374,7 @@ function normalizeSet(set) {
     generator: set.generator,
     aiGenerated: set.aiGenerated,
     nonPhotographic: set.nonPhotographic,
+    noPeopleOrHands: set.noPeopleOrHands,
     visualMatchApproved: set.visualMatchApproved,
     excludeFromStructuredData: set.excludeFromStructuredData
   };
@@ -378,5 +382,5 @@ function normalizeSet(set) {
 
 export const recipeStepIllustrations = [
   ...mapoTofuIllustrations,
-  ...[...generatedSets, ...japaneseIllustrationSetsA, ...japaneseIllustrationSetsB, ...japaneseIllustrationSetsC, ...japaneseIllustrationSetsRamen, ...japaneseIllustrationSetsNikujaga, ...koreanIllustrationSets, ...thaiIllustrationSets].map(normalizeSet).flatMap(buildSet)
+  ...[...generatedSets, ...japaneseIllustrationSetsA, ...japaneseIllustrationSetsB, ...japaneseIllustrationSetsC, ...japaneseIllustrationSetsRamen, ...japaneseIllustrationSetsNikujaga, ...koreanIllustrationSets, ...thaiIllustrationSets, ...taiwaneseIllustrationSets].map(normalizeSet).flatMap(buildSet)
 ];

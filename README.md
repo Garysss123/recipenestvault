@@ -21,6 +21,7 @@ npm run images
 npm run icons
 npm run audit:japanese-drafts
 npm run audit:thai-drafts
+npm run audit:taiwanese-drafts
 npm test
 npm run qa:visual
 npm run deploy
@@ -73,6 +74,14 @@ These are permanent release gates. Recipe count, publishing speed and visual com
 - Every Thai draft must pass `npm run audit:thai-drafts`: five localized versions, at least two direct HTTPS recipe sources, a visually matched commercial-use real photograph of at least 1200 × 800, complete attribution, and pinned photograph and illustration SHA-256 hashes.
 - Method length follows actual cooking complexity. The first edition ranges from a concise 5-step Som Tam through 13-step Khao Man Gai and Khao Soi to 14-step beef boat noodles; the audit enforces variation rather than a fixed length.
 - All 176 natural cooking steps have one reviewed non-photographic illustration. The reproducible prompt record is `docs/illustration-prompts/thai-cooking-steps-v1.md`; every illustration is visibly disclosed, excluded from recipe structured-data images, and checked against its exact intermediate state before publication.
+
+### Taiwanese collection release gate
+
+- The first Taiwanese collection contains 21 complete recipes spanning noodles, rice bowls, breakfast, night-market snacks, soups, sausage, sticky rice, pastry, chewy desserts, and shaved ice.
+- Source data is split across `src/taiwanese-recipes-a.mjs` through `src/taiwanese-recipes-e.mjs`; approved real-photograph provenance is pinned in `src/taiwanese-photos.mjs`, and step-illustration provenance is generated in `src/taiwanese-illustration-sets.mjs`.
+- Every Taiwanese draft must pass `npm run audit:taiwanese-drafts`: five localized versions, two direct HTTPS recipe sources, a visually matched commercial-use real photograph of at least 1200 × 800, complete attribution, approved source-sheet provenance, and pinned photograph and illustration SHA-256 hashes.
+- All 143 natural cooking steps have one reviewed non-photographic illustration in the existing Recipe Nest Vault editorial style. Methods range from 6 to 10 steps instead of using a fixed card count. The Taiwanese set additionally requires `noPeopleOrHands: true`; hands, fingers, arms, sleeves, people, and body parts are prohibited.
+- The reproducible prompt and correction record is `docs/illustration-prompts/taiwanese-cooking-steps-v2.md`. Published step images deliberately keep the same border-free, warm-paper editorial illustration language as the completed Chinese, Japanese, Korean, and Thai pages. Taiwan-specific colour belongs to the page UI, not the cooking illustrations.
 
 ### Recipe eligibility
 

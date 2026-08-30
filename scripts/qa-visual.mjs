@@ -194,12 +194,48 @@ await inspect({
   }
 });
 await inspect({
-  name: "zh-cuisine-mobile", path: "/zh-hant/cuisines/taiwanese/", viewport: { width: 390, height: 844 },
+  name: "en-search-taiwanese-desktop", path: "/en/search/?q=beef%20noodle", viewport: { width: 1280, height: 900 },
   interact: async (page) => {
-    const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
-    if (response?.status() !== 200) throw new Error(`Deep-route refresh returned ${response?.status() ?? "no response"}`);
+    const recipeResult = page.locator('.result-card[href="/en/recipes/taiwanese-beef-noodle-soup/"]');
+    await recipeResult.waitFor({ state: "visible" });
+    if (!/Taiwanese recipe/i.test(await recipeResult.innerText())) throw new Error("Taiwanese search result is missing its cuisine label");
   }
 });
+await inspect({
+  name: "zh-taiwanese-collection-mobile", path: "/zh-hant/cuisines/taiwanese/", viewport: { width: 390, height: 844 },
+  interact: async (page) => {
+    const cards = page.locator(".collection-recipe-card");
+    await cards.first().waitFor({ state: "visible" });
+    if (await cards.count() !== 21) throw new Error(`Taiwanese collection expected 21 recipes, found ${await cards.count()}`);
+    if (await page.locator('.collection-recipe-card a[href="/zh-hant/recipes/peanut-shaved-ice/"]').count() !== 1) throw new Error("Taiwanese collection is missing peanut shaved ice");
+    const primary = await page.locator("body").evaluate((element) => getComputedStyle(element).getPropertyValue("--color-primary").trim());
+    if (primary.toLowerCase() !== "#b33a3a") throw new Error(`Taiwanese palette was not applied: ${primary}`);
+    const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+    if (response?.status() !== 200) throw new Error(`Deep-route refresh returned ${response?.status() ?? "no response"}`);
+  },
+  extraScreenshots: [
+    { name: "zh-taiwanese-collection-hero-mobile", selector: ".cuisine-hero" },
+    { name: "zh-taiwanese-first-card-mobile", selector: ".collection-recipe-card:first-child" }
+  ]
+});
+await inspect({
+  name: "en-taiwanese-collection-desktop", path: "/en/cuisines/taiwanese/", viewport: { width: 1440, height: 1000 },
+  interact: async (page) => {
+    if (await page.locator(".collection-recipe-card").count() !== 21) throw new Error("Desktop Taiwanese collection does not contain exactly 21 recipes");
+  },
+  extraScreenshots: [{ name: "en-taiwanese-collection-hero-desktop", selector: ".cuisine-hero" }]
+});
+await inspect({
+  name: "zh-taiwanese-beef-noodle-mobile", path: "/zh-hant/recipes/taiwanese-beef-noodle-soup/", viewport: { width: 390, height: 844 },
+  interact: async (page) => assertIllustratedRecipe(page, 8, { traditionalChinese: true }),
+  extraScreenshots: [
+    { name: "zh-taiwanese-beef-hero-mobile", selector: ".recipe-detail-hero" },
+    { name: "zh-taiwanese-beef-first-step-mobile", selector: ".method-section li:first-child" }
+  ]
+});
+await inspect({ name: "ja-taiwanese-dan-bing-desktop", path: "/ja/recipes/dan-bing/", viewport: { width: 1366, height: 900 }, interact: async (page) => assertIllustratedRecipe(page, 6) });
+await inspect({ name: "ko-taiwanese-three-cup-mobile", path: "/ko/recipes/three-cup-chicken/", viewport: { width: 390, height: 844 }, interact: async (page) => assertIllustratedRecipe(page, 6) });
+await inspect({ name: "th-taiwanese-pineapple-mobile", path: "/th/recipes/pineapple-cakes/", viewport: { width: 390, height: 844 }, interact: async (page) => assertIllustratedRecipe(page, 8) });
 await inspect({
   name: "zh-chinese-collection-mobile", path: "/zh-hant/cuisines/chinese/", viewport: { width: 390, height: 844 },
   interact: async (page) => {
