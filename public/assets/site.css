@@ -48,6 +48,23 @@ body:lang(th) { --font-sans: "Noto Sans Thai", Tahoma, system-ui, sans-serif; --
   --shadow-soft: 0 24px 70px rgba(75, 54, 37, .12);
   --shadow-card: 0 14px 36px rgba(75, 54, 37, .09);
 }
+.cuisine-indian {
+  --color-primary: #ad521c;
+  --color-primary-hover: #843f18;
+  --color-primary-soft: #f8e3cc;
+  --color-primary-wash: #fff8ed;
+  --color-background: #f6f0e5;
+  --color-surface: #fffdf6;
+  --color-surface-alt: #eadfce;
+  --color-text: #2e241d;
+  --color-text-secondary: #705b4a;
+  --color-border: #ddcdb8;
+  --color-focus: #176b62;
+  --color-dark: #243c35;
+  --color-dark-text: #fff8e8;
+  --shadow-soft: 0 24px 70px rgba(70, 49, 31, .12);
+  --shadow-card: 0 14px 36px rgba(70, 49, 31, .09);
+}
 img { display: block; max-width: 100%; }
 a { color: inherit; text-underline-offset: .2em; }
 button, input { font: inherit; }
@@ -203,6 +220,7 @@ body:not(:lang(en)) .region-heading h2 { letter-spacing: -.02em; }
 .collection-recipe-copy > strong span { color: var(--color-primary); font-size: 1rem; }
 .collection-recipe-card:hover { border-color: #d7a1b3; }
 .cuisine-taiwanese .collection-recipe-card:hover { border-color: #c99a72; }
+.cuisine-indian .collection-recipe-card:hover { border-color: #cc9367; }
 .collection-recipe-card:hover img { transform: scale(1.025); }
 
 .recipe-detail { padding-top: 1.25rem; }
@@ -273,6 +291,11 @@ body:not(:lang(en)) .region-heading h2 { letter-spacing: -.02em; }
 .cuisine-taiwanese .recipe-illustration-notice { border-color: #dfc4aa; border-left-color: var(--color-primary); }
 .cuisine-taiwanese .recipe-sidebar > .eyebrow { color: #e6a65d; }
 .cuisine-taiwanese .recipe-sources { border-color: #e2ccb4; }
+.cuisine-indian .recipe-step-photo,
+.cuisine-indian .recipe-step-illustration { border-color: #dfc39e; box-shadow: 0 12px 32px rgba(70, 49, 31, .09); }
+.cuisine-indian .recipe-illustration-notice { border-color: #e2c9a9; border-left-color: var(--color-primary); }
+.cuisine-indian .recipe-sidebar > .eyebrow { color: #f1b66d; }
+.cuisine-indian .recipe-sources { border-color: #e3ccb0; }
 .recipe-sources h2 { margin: .5rem 0 1rem; font-size: clamp(2.2rem, 4vw, 3.8rem); }
 .recipe-sources h3 { margin-bottom: .9rem; font-size: .8rem; }
 .recipe-sources p, .recipe-sources li { color: var(--color-text-secondary); font-size: .82rem; }

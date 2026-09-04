@@ -15,7 +15,7 @@ const dist = join(root, "dist");
 const assetHasher = createHash("sha256");
 for (const asset of ["site.css", "site.js", "search.js"]) assetHasher.update(await readFile(join(root, "public", "assets", asset)));
 const assetVersion = assetHasher.digest("hex").slice(0, 12);
-const buildDate = "2026-08-31";
+const buildDate = "2026-09-04";
 const adsenseClient = /^ca-pub-\d+$/.test(process.env.ADSENSE_CLIENT ?? "") ? process.env.ADSENSE_CLIENT : "";
 const adsenseSlot = /^\d+$/.test(process.env.ADSENSE_SLOT_CONTENT ?? "") ? process.env.ADSENSE_SLOT_CONTENT : "";
 const adsEnabled = Boolean(adsenseClient && adsenseSlot);

@@ -160,4 +160,42 @@ const taiwanese = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese };
+const indian = {
+  en: {
+    eyebrow: "Curated Indian cooking",
+    title: "Indian recipes from everyday dal to festive biryani",
+    intro: "Cook across India's home kitchens, tiffin counters, street snacks, grills, breads, curries, and sweets: dal tadka, chana and rajma masala, dosa and idli, biryani, tandoori chicken, Goan fish curry, samosa, naan, gulab jamun, and more. Every recipe separates whole spices, ground spices, heat stages, texture cues, and safe doneness so layered flavour comes from technique rather than guesswork.",
+    recipeEyebrow: "Indian recipe",
+    backToCollection: "Back to Indian recipes"
+  },
+  "zh-hant": {
+    eyebrow: "精選印度料理",
+    title: "從日常豆湯、街頭小吃到節慶香飯的印度料理食譜",
+    intro: "從 dal tadka、鷹嘴豆與紅腰豆 masala、dosa、idli，到香料飯、坦都里烤雞、果阿魚咖哩、samosa、naan 與 gulab jamun，循著印度各地的家常餐桌、早餐攤、街頭小吃與節慶料理下廚。每道食譜都把整粒香料、粉狀香料、火力階段、口感終點與安全熟度分開說明，讓層次來自技法而不是猜測。",
+    recipeEyebrow: "印度料理食譜",
+    backToCollection: "返回印度料理食譜"
+  },
+  ja: {
+    eyebrow: "厳選したインド料理",
+    title: "日々のダルから祝祭のビリヤニまで作るインド料理レシピ",
+    intro: "ダル・タドカ、チャナとラジマのマサラ、ドーサ、イドゥリ、ビリヤニ、タンドリーチキン、ゴア風魚カレー、サモサ、ナン、グラブジャムンまで、家庭料理、ティフィン、屋台、炭火料理、パン、カレー、菓子を横断します。ホールスパイスと粉末スパイス、火加減、食感、安全な火通りを分けて示し、勘に頼らず香りを重ねます。",
+    recipeEyebrow: "インド料理レシピ",
+    backToCollection: "インド料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "엄선한 인도 요리",
+    title: "일상의 달부터 축제 비리야니까지 만드는 인도 요리 레시피",
+    intro: "달 타드카, 차나와 라즈마 마살라, 도사와 이들리, 비리야니, 탄두리 치킨, 고아식 생선 커리, 사모사, 난, 굴랍 자문까지 가정식과 티핀, 길거리 간식, 구이, 빵, 커리, 디저트를 두루 만듭니다. 통향신료와 가루 향신료, 불 단계, 식감, 안전한 익힘을 나눠 설명해 추측 없이 향을 쌓습니다.",
+    recipeEyebrow: "인도 요리 레시피",
+    backToCollection: "인도 요리 레시피로 돌아가기"
+  },
+  th: {
+    eyebrow: "อาหารอินเดียที่คัดสรร",
+    title: "สูตรอาหารอินเดียตั้งแต่ดาลประจำวันถึงบริยานีงานฉลอง",
+    intro: "ทำตั้งแต่ดาลตัดกา จานามาซาลา ราชมามาซาลา โดซา อิดลี บริยานี ไก่ทันดูรี แกงปลาโกอา ซาโมซา นาน ไปจนถึงกุหลาบจามุน ครอบคลุมครัวบ้าน อาหารทิฟฟิน ของว่างริมทาง เตาย่าง ขนมปัง แกง และขนมหวาน ทุกสูตรแยกเครื่องเทศเม็ด เครื่องเทศผง ช่วงไฟ จุดเนื้อสัมผัส และความสุกปลอดภัย จึงสร้างกลิ่นรสเป็นชั้นได้โดยไม่ต้องเดา",
+    recipeEyebrow: "สูตรอาหารอินเดีย",
+    backToCollection: "กลับไปสูตรอาหารอินเดีย"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian };

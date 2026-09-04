@@ -237,6 +237,50 @@ await inspect({ name: "ja-taiwanese-dan-bing-desktop", path: "/ja/recipes/dan-bi
 await inspect({ name: "ko-taiwanese-three-cup-mobile", path: "/ko/recipes/three-cup-chicken/", viewport: { width: 390, height: 844 }, interact: async (page) => assertIllustratedRecipe(page, 6) });
 await inspect({ name: "th-taiwanese-pineapple-mobile", path: "/th/recipes/pineapple-cakes/", viewport: { width: 390, height: 844 }, interact: async (page) => assertIllustratedRecipe(page, 8) });
 await inspect({
+  name: "en-search-indian-desktop", path: "/en/search/?q=butter%20chicken", viewport: { width: 1280, height: 900 },
+  interact: async (page) => {
+    const recipeResult = page.locator('.result-card[href="/en/recipes/butter-chicken/"]');
+    await recipeResult.waitFor({ state: "visible" });
+    if (!/Indian recipe/i.test(await recipeResult.innerText())) throw new Error("Indian search result is missing its cuisine label");
+  }
+});
+await inspect({
+  name: "zh-indian-collection-mobile", path: "/zh-hant/cuisines/indian/", viewport: { width: 390, height: 844 },
+  interact: async (page) => {
+    const cards = page.locator(".collection-recipe-card");
+    await cards.first().waitFor({ state: "visible" });
+    if (await cards.count() !== 21) throw new Error(`Indian collection expected 21 recipes, found ${await cards.count()}`);
+    if (await page.locator('.collection-recipe-card a[href="/zh-hant/recipes/rice-kheer/"]').count() !== 1) throw new Error("Indian collection is missing rice kheer");
+    const primary = await page.locator("body").evaluate((element) => getComputedStyle(element).getPropertyValue("--color-primary").trim());
+    if (primary.toLowerCase() !== "#ad521c") throw new Error(`Indian palette was not applied: ${primary}`);
+    const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+    if (response?.status() !== 200) throw new Error(`Indian deep-route refresh returned ${response?.status() ?? "no response"}`);
+  },
+  extraScreenshots: [
+    { name: "zh-indian-collection-hero-mobile", selector: ".cuisine-hero" },
+    { name: "zh-indian-first-card-mobile", selector: ".collection-recipe-card:first-child" }
+  ]
+});
+await inspect({
+  name: "en-indian-collection-desktop", path: "/en/cuisines/indian/", viewport: { width: 1440, height: 1000 },
+  interact: async (page) => {
+    if (await page.locator(".collection-recipe-card").count() !== 21) throw new Error("Desktop Indian collection does not contain exactly 21 recipes");
+    if (await page.locator('.collection-recipe-card a[href*="bibimbap"], .collection-recipe-card a[href*="mapo-tofu"]').count()) throw new Error("Another cuisine leaked into Indian collection");
+  },
+  extraScreenshots: [{ name: "en-indian-collection-hero-desktop", selector: ".cuisine-hero" }]
+});
+await inspect({
+  name: "zh-indian-butter-chicken-mobile", path: "/zh-hant/recipes/butter-chicken/", viewport: { width: 390, height: 844 },
+  interact: async (page) => assertIllustratedRecipe(page, 8, { traditionalChinese: true }),
+  extraScreenshots: [
+    { name: "zh-indian-butter-chicken-hero-mobile", selector: ".recipe-detail-hero" },
+    { name: "zh-indian-butter-chicken-first-step-mobile", selector: ".method-section li:first-child" }
+  ]
+});
+await inspect({ name: "ja-indian-masala-dosa-desktop", path: "/ja/recipes/masala-dosa/", viewport: { width: 1366, height: 900 }, interact: async (page) => assertIllustratedRecipe(page, 9) });
+await inspect({ name: "ko-indian-tandoori-mobile", path: "/ko/recipes/tandoori-chicken/", viewport: { width: 390, height: 844 }, interact: async (page) => assertIllustratedRecipe(page, 7) });
+await inspect({ name: "th-indian-rice-kheer-mobile", path: "/th/recipes/rice-kheer/", viewport: { width: 390, height: 844 }, interact: async (page) => assertIllustratedRecipe(page, 6) });
+await inspect({
   name: "zh-chinese-collection-mobile", path: "/zh-hant/cuisines/chinese/", viewport: { width: 390, height: 844 },
   interact: async (page) => {
     const firstCard = page.locator(".collection-recipe-card").first();

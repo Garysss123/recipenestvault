@@ -22,6 +22,7 @@ npm run icons
 npm run audit:japanese-drafts
 npm run audit:thai-drafts
 npm run audit:taiwanese-drafts
+npm run audit:indian-drafts
 npm test
 npm run qa:visual
 npm run deploy
@@ -82,6 +83,14 @@ These are permanent release gates. Recipe count, publishing speed and visual com
 - Every Taiwanese draft must pass `npm run audit:taiwanese-drafts`: five localized versions, two direct HTTPS recipe sources, a visually matched commercial-use real photograph of at least 1200 × 800, complete attribution, approved source-sheet provenance, and pinned photograph and illustration SHA-256 hashes.
 - All 143 natural cooking steps have one reviewed non-photographic illustration in the existing Recipe Nest Vault editorial style. Methods range from 6 to 10 steps instead of using a fixed card count. The Taiwanese set additionally requires `noPeopleOrHands: true`; hands, fingers, arms, sleeves, people, and body parts are prohibited.
 - The reproducible prompt and correction record is `docs/illustration-prompts/taiwanese-cooking-steps-v2.md`. Published step images deliberately keep the same border-free, warm-paper editorial illustration language as the completed Chinese, Japanese, Korean, and Thai pages. Taiwan-specific colour belongs to the page UI, not the cooking illustrations.
+
+### Indian collection release gate
+
+- The first Indian collection contains 21 complete recipes spanning everyday dal and sabzi, paneer and meat curries, fermented breakfasts, rice, breads, grills, street snacks, fried savouries, and sweets.
+- Source data is split across `src/indian-recipes-a.mjs` through `src/indian-recipes-e.mjs`; approved real-photograph provenance is pinned in `src/indian-photos.mjs`, and step-illustration provenance is generated in `src/indian-illustration-sets.mjs`.
+- Every Indian draft must pass `npm run audit:indian-drafts`: five localized versions, two direct HTTPS recipe sources, a visually reviewed commercial-use real photograph of at least 1200 × 800, complete attribution, source-sheet provenance, and pinned photograph and illustration SHA-256 hashes.
+- All 153 natural cooking steps have one separate reviewed non-photographic illustration. Methods range from 6 to 9 steps instead of using a fixed card count, and every set requires `noPeopleOrHands: true`.
+- The reproducible prompt and correction record is `docs/illustration-prompts/indian-cooking-steps-v1.md`. The step art keeps the same border-free warm-paper editorial style used by the existing collections; India-specific saffron, earthen brown, and deep green accents belong only to the page UI.
 
 ### Recipe eligibility
 
