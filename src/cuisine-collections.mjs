@@ -198,4 +198,42 @@ const indian = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian };
+const vietnamese = {
+  en: {
+    eyebrow: "Curated Vietnamese cooking",
+    title: "Vietnamese recipes from fragrant phở to crisp bánh xèo",
+    intro: "Explore clear noodle broths, smoky grilled pork, fresh rice-paper rolls, crisp crêpes, Hội An noodles, caramelized fish, sweet-sour soup, and cooling desserts. Build each dish with measured sauces, carefully prepared herbs, and practical guidance for simmering, grilling, steaming, and frying. Choose a quick noodle bowl or take time over a rich weekend broth.",
+    recipeEyebrow: "Vietnamese recipe",
+    backToCollection: "Back to Vietnamese recipes"
+  },
+  "zh-hant": {
+    eyebrow: "精選越南料理",
+    title: "從清香河粉、酥脆煎餅到家常餐桌的越南料理食譜",
+    intro: "從牛肉河粉、香茅烤肉、鮮蝦生春捲、酥脆煎餅與會安高樓麵，到焦糖滷魚、酸甜魚湯、三色冰與焦糖布丁，挑一份今天想吃的越南味。每道都清楚說明醬汁比例、香草處理、熬湯火力與煎烤蒸炸的熟度線索；平日做一碗清爽拌麵，週末也能慢慢熬一鍋好湯。",
+    recipeEyebrow: "越南料理食譜",
+    backToCollection: "返回越南料理食譜"
+  },
+  ja: {
+    eyebrow: "厳選したベトナム料理",
+    title: "香り高いフォーからパリッとしたバインセオまで作るベトナム料理",
+    intro: "澄んだ麺スープ、香ばしい焼き豚、生春巻き、薄焼き、ホイアンの麺、魚のカラメル煮、甘酸っぱいスープ、冷たいデザートを楽しめます。たれの分量、ハーブの準備、煮込みや焼き物、蒸し物、揚げ物の仕上がりを具体的に案内。平日のさっぱりした麺から週末にじっくり作るだしまで選べます。",
+    recipeEyebrow: "ベトナム料理レシピ",
+    backToCollection: "ベトナム料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "엄선한 베트남 요리",
+    title: "향긋한 퍼부터 바삭한 반쎄오까지 만드는 베트남 요리",
+    intro: "맑은 쌀국수, 향긋한 돼지구이, 생춘권, 바삭한 크레페, 호이안 국수, 캐러멜 생선조림, 새콤달콤한 국물과 시원한 디저트를 골라 보세요. 소스 비율과 허브 손질부터 끓이기, 굽기, 찌기, 튀기기의 익힘 기준까지 구체적으로 안내합니다. 평일에는 산뜻한 국수 한 그릇, 주말에는 오래 우린 육수를 준비할 수 있습니다.",
+    recipeEyebrow: "베트남 요리 레시피",
+    backToCollection: "베트남 요리 레시피로 돌아가기"
+  },
+  th: {
+    eyebrow: "อาหารเวียดนามที่คัดสรร",
+    title: "สูตรเวียดนามตั้งแต่เฝอหอมกรุ่นถึงบั๋นแส่วกรอบ",
+    intro: "เลือกทำก๋วยเตี๋ยวน้ำใส หมูย่างหอมตะไคร้ เปาะเปี๊ยะสด แป้งทอดกรอบ เส้นฮอยอัน ปลาตุ๋นคาราเมล ซุปเปรี้ยวหวาน และขนมเย็น แต่ละสูตรบอกสัดส่วนซอส การเตรียมสมุนไพร และจุดสุกของการเคี่ยว ย่าง นึ่ง และทอดอย่างชัดเจน วันทำงานทำเส้นสดชื่นหนึ่งชาม ส่วนวันหยุดค่อยใช้เวลากับน้ำซุปเข้มข้น",
+    recipeEyebrow: "สูตรอาหารเวียดนาม",
+    backToCollection: "กลับไปสูตรอาหารเวียดนาม"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese };

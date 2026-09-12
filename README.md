@@ -23,18 +23,22 @@ npm run audit:japanese-drafts
 npm run audit:thai-drafts
 npm run audit:taiwanese-drafts
 npm run audit:indian-drafts
+npm run audit:vietnamese-drafts
 npm test
+npm run preview
 npm run qa:visual
 npm run deploy
 ```
 
 The deployment command always audits and rebuilds `dist/` before uploading only that generated artifact to the `recipenestvault` Cloudflare Pages project.
 
+For local browser QA, run `npm run preview` in a separate terminal after building. It serves only `dist/` at `http://127.0.0.1:8788`, including the generated redirects, headers and real 404 page. This static preview avoids depending on the local Workers proxy for a site without Functions; the production QA still runs against Cloudflare Pages itself.
+
 For licensed-photo research, `node scripts/search-commons-candidates.mjs <dish terms>` returns Wikimedia Commons candidates with author, original-file, dimensions and commercial-license metadata. Candidates are not approved until their downloaded pixels are inspected against the exact recipe. `node scripts/recipe-photo-contact-sheet.mjs japanese` creates an out-of-artifact finished-photo sheet for that review.
 
 ## Visual release gate
 
-Every layout or content iteration must be rendered in a real browser at desktop and mobile widths. The Playwright/Edge suite covers the homepage, cuisine collection, recipe details, language prompt, search, information pages, direct-route refresh, 404 response, overflow, serious accessibility issues, console errors and failed requests. Review the screenshots in `qa-artifacts/` visually after the automated assertions pass.
+Every layout or content iteration must be rendered in a real browser at desktop and mobile widths. The Playwright/Edge suite covers the homepage, cuisine collection, recipe details, language prompt, search, information pages, direct-route refresh, 404 response, overflow, serious accessibility issues, console errors and failed requests. Review the screenshots in `qa-artifacts/visual/<host>-<timestamp>/` visually after the automated assertions pass. Each run retains its own evidence without deleting photo research or earlier local/production screenshots.
 
 For the final gate, run the same suite against production rather than only local output:
 
@@ -91,6 +95,15 @@ These are permanent release gates. Recipe count, publishing speed and visual com
 - Every Indian draft must pass `npm run audit:indian-drafts`: five localized versions, two direct HTTPS recipe sources, a visually reviewed commercial-use real photograph of at least 1200 × 800, complete attribution, source-sheet provenance, and pinned photograph and illustration SHA-256 hashes.
 - All 153 natural cooking steps have one separate reviewed non-photographic illustration. Methods range from 6 to 9 steps instead of using a fixed card count, and every set requires `noPeopleOrHands: true`.
 - The reproducible prompt and correction record is `docs/illustration-prompts/indian-cooking-steps-v1.md`. The step art keeps the same border-free warm-paper editorial style used by the existing collections; India-specific saffron, earthen brown, and deep green accents belong only to the page UI.
+
+### Vietnamese collection release gate
+
+- The first Vietnamese collection contains 21 complete recipes across noodle broths, grilled-meat bowls, fresh and fried rolls, rice crêpes, baguettes, braised fish and meat, sweet-sour soup, and desserts.
+- Source data is split across `src/vietnamese-recipes-a.mjs`, `src/vietnamese-recipes-b.mjs`, and `src/vietnamese-recipes-c1.mjs` through `src/vietnamese-recipes-c4.mjs`. The finished-photo manifest is `src/vietnamese-photos.mjs`; step provenance is generated in `src/vietnamese-illustration-sets.mjs`.
+- Every draft must pass `npm run audit:vietnamese-drafts`: complete five-language content, matching cooking facts, two direct HTTPS recipe sources, visually matched commercial-use real photographs of at least 1200 × 800, attribution, approved illustration provenance, and SHA-256 verification.
+- Each natural cooking step has one separate reviewed illustration. Methods currently range from 6 to 11 steps and total 172 steps; the audit derives the exact illustration count from the current recipe content rather than limiting the method length. At least four actionable steps are required; there is no hard maximum.
+- The reproducible prompt record is `docs/illustration-prompts/vietnamese-cooking-steps-v1.md`. Every illustration set requires `noPeopleOrHands: true` and keeps the existing border-free warm-paper editorial style. Lotus green, soft lotus rose, and sandy rice-paper colours belong to the Vietnamese page UI.
+- The browser suite checks the 21-card collection, Vietnamese search labels, language-preserving navigation, direct-route refresh, representative five-language methods, desktop/mobile layouts and image disclosures. Run the suite locally and on production, and inspect the saved screenshots before handoff.
 
 ### Recipe eligibility
 

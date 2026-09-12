@@ -7,7 +7,9 @@
   const locale = container.dataset.locale;
   let records = [];
 
-  const normalize = (value) => String(value).normalize("NFKC").toLocaleLowerCase(locale);
+  const normalize = (value) => String(value).normalize("NFKC").normalize("NFD")
+    .replace(/([A-Za-z])[\u0300-\u036f]+/g, "$1").replace(/[đĐ]/g, "d")
+    .normalize("NFC").toLocaleLowerCase(locale);
   const createResult = (record) => {
     const link = document.createElement("a");
     link.className = "result-card";

@@ -120,6 +120,13 @@ for (const slug of localeOrder) {
       if (!recipeHtml.includes(`/images/recipes/process/${processPhoto.id}-800.webp`)) failures.push(`${slug} ${recipe.id}: step image missing from markup or JSON-LD`);
     }
     const recipeJsonLd = recipeHtml.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1] || "";
+    const visibleMethod = [...recipeHtml.matchAll(/<div class="recipe-step-copy">(?:<h3>[\s\S]*?<\/h3>)?<p>([\s\S]*?)<\/p>/g)].map((match) => match[1].replace(/&(amp|quot|lt|gt);/g, (_, entity) => ({ amp: "&", quot: '"', lt: "<", gt: ">" })[entity]));
+    const methodSchema = recipeJsonLd ? JSON.parse(recipeJsonLd)["@graph"]?.find((entry) => entry["@type"] === "Recipe")?.recipeInstructions : [];
+    for (const [index, step] of recipe.instructions.entries()) {
+      if (!step?.body) continue;
+      const expectedBody = step.body[slug] ?? step.body.en;
+      if (visibleMethod[index] !== expectedBody || methodSchema?.[index]?.text !== expectedBody) failures.push(`${slug} ${recipe.id} step ${index + 1}: rendered method/JSON-LD differs from the source text`);
+    }
     for (const illustration of recipeStepIllustrations.filter((entry) => entry.recipeId === recipe.id)) {
       if (!recipeHtml.includes(`data-step-illustration="${illustration.id}"`) || !recipeHtml.includes('data-ai-illustration="true"')) failures.push(`${slug} ${recipe.id}: missing labelled step illustration ${illustration.id}`);
       if (!recipeHtml.includes(`/images/recipes/illustrations/${illustration.id}-800.webp`)) failures.push(`${slug} ${recipe.id}: missing responsive illustration markup ${illustration.id}`);

@@ -1,14 +1,16 @@
 import AxeBuilder from "@axe-core/playwright";
 import { chromium } from "playwright";
-import { mkdir, rm, writeFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { recipes as recipeRecords } from "../src/recipes.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
-const outputDir = join(root, "qa-artifacts");
 const baseUrl = (process.env.QA_BASE_URL || "http://127.0.0.1:8788").replace(/\/$/, "");
-await rm(outputDir, { recursive: true, force: true });
+const runName = `${new URL(baseUrl).hostname}-${new Date().toISOString().replace(/[:.]/g, "-")}`;
+const outputDir = join(root, "qa-artifacts", "visual", runName);
 await mkdir(outputDir, { recursive: true });
+console.log(`Visual QA evidence: ${outputDir}`);
 
 const browser = await chromium.launch({ channel: "msedge", headless: true });
 const failures = [];
@@ -89,6 +91,14 @@ async function inspect({ name, path, viewport, expectedStatus = 200, fullPage = 
   if (interact) await interact(page);
   await loadDeferredImages();
   await page.evaluate(() => window.scrollTo(0, 0));
+  const [pageLocale, pageKind, recipeId] = new URL(page.url()).pathname.split("/").filter(Boolean);
+  if (pageKind === "recipes") {
+    const recipe = recipeRecords.find((entry) => entry.id === recipeId);
+    const bodies = await page.locator(".method-section .recipe-step-copy > p").allTextContents();
+    for (const [index, step] of (recipe?.instructions || []).entries()) {
+      if (step?.body && bodies[index] !== (step.body[pageLocale] ?? step.body.en)) throw new Error(`${recipeId} step ${index + 1}: visible method differs from the original recipe facts`);
+    }
+  }
   const overflow = await page.evaluate(() => ({ scrollWidth: document.documentElement.scrollWidth, clientWidth: document.documentElement.clientWidth }));
   if (overflow.scrollWidth > overflow.clientWidth + 1) failures.push(`${name}: horizontal overflow ${overflow.scrollWidth}px > ${overflow.clientWidth}px`);
   const axe = await new AxeBuilder({ page }).analyze();
@@ -107,13 +117,16 @@ async function inspect({ name, path, viewport, expectedStatus = 200, fullPage = 
   for (const extra of extraScreenshots) {
     const header = page.locator(".site-header");
     const skipLink = page.locator(".skip-link");
-    const previousPosition = await header.evaluate((element) => element.style.position);
+    const previousVisibility = await header.evaluate((element) => element.style.visibility);
     const previousSkipDisplay = await skipLink.evaluate((element) => element.style.display);
-    await header.evaluate((element) => { element.style.position = "absolute"; });
+    await header.evaluate((element) => { element.style.visibility = "hidden"; });
     await skipLink.evaluate((element) => { element.style.display = "none"; });
-    await page.locator(extra.selector).screenshot({ path: join(outputDir, `${extra.name}.png`) });
-    await header.evaluate((element, value) => { element.style.position = value; }, previousPosition);
-    await skipLink.evaluate((element, value) => { element.style.display = value; }, previousSkipDisplay);
+    try {
+      await page.locator(extra.selector).screenshot({ path: join(outputDir, `${extra.name}.png`) });
+    } finally {
+      await header.evaluate((element, value) => { element.style.visibility = value; }, previousVisibility);
+      await skipLink.evaluate((element, value) => { element.style.display = value; }, previousSkipDisplay);
+    }
   }
   results.push({ name, path, viewport, status, overflow, seriousA11yViolations: serious.length, consoleErrors: actionableConsoleErrors, requestFailures, httpFailures: actionableHttpFailures });
   await context.close();
@@ -280,6 +293,106 @@ await inspect({
 await inspect({ name: "ja-indian-masala-dosa-desktop", path: "/ja/recipes/masala-dosa/", viewport: { width: 1366, height: 900 }, interact: async (page) => assertIllustratedRecipe(page, 9) });
 await inspect({ name: "ko-indian-tandoori-mobile", path: "/ko/recipes/tandoori-chicken/", viewport: { width: 390, height: 844 }, interact: async (page) => assertIllustratedRecipe(page, 7) });
 await inspect({ name: "th-indian-rice-kheer-mobile", path: "/th/recipes/rice-kheer/", viewport: { width: 390, height: 844 }, interact: async (page) => assertIllustratedRecipe(page, 6) });
+
+const vietnameseRecipeIds = [
+  "pho-bo", "pho-ga", "bun-bo-hue", "bun-rieu", "bun-cha", "bun-thit-nuong", "goi-cuon",
+  "cha-gio", "banh-xeo", "banh-cuon", "banh-mi-thit", "com-tam-suon-nuong", "cao-lau", "mi-quang",
+  "ca-kho-to", "thit-kho-trung", "canh-chua-ca", "che-ba-mau", "banh-flan", "bo-kho", "bun-bo-nam-bo"
+];
+async function assertVietnameseCollection(page, locale) {
+  const links = await page.locator(".collection-recipe-card > a").evaluateAll((items) => items.map((item) => item.getAttribute("href")).sort());
+  const expected = vietnameseRecipeIds.map((id) => `/${locale}/recipes/${id}/`).sort();
+  if (JSON.stringify(links) !== JSON.stringify(expected)) throw new Error(`Vietnamese ${locale} collection does not contain the expected 21 unique recipe routes`);
+  if (await page.locator(".collection-recipe-card").count() !== 21) throw new Error("Vietnamese collection must show 21 cards");
+  const broken = await page.locator(".collection-recipe-card img").evaluateAll((images) => images.filter((image) => !image.complete || !image.naturalWidth).length);
+  if (broken) throw new Error(`${broken} Vietnamese card photographs failed to load`);
+  if (!(await page.locator("body").evaluate((element) => element.classList.contains("cuisine-vietnamese")))) throw new Error("Vietnamese collection is missing its regional theme");
+  const primary = await page.locator("body").evaluate((element) => getComputedStyle(element).getPropertyValue("--color-primary").trim());
+  if (primary.toLowerCase() !== "#27634e") throw new Error(`Vietnamese lotus-green palette was not applied: ${primary}`);
+}
+async function assertVietnameseRecipe(page, expectedSteps, locale, id) {
+  await assertIllustratedRecipe(page, expectedSteps, { traditionalChinese: locale === "zh-hant" });
+  const steps = page.locator(".method-section ol > li");
+  if (await steps.count() !== expectedSteps) throw new Error(`Vietnamese ${id} method count differs from its ${expectedSteps} illustrations`);
+  for (const entry of await steps.all()) if (await entry.locator(".recipe-step-illustration").count() !== 1) throw new Error(`Vietnamese ${id} needs exactly one illustration in each step`);
+  const images = await page.locator(".recipe-step-illustration img").evaluateAll((entries) => entries.map((entry) => entry.getAttribute("src")));
+  if (new Set(images).size !== expectedSteps) throw new Error(`Vietnamese ${id} reuses a step image`);
+  for (const target of ["en", "zh-hant", "ja", "ko", "th"]) {
+    if (await page.locator(`.language-popover a[href="/${target}/recipes/${id}/"]`).count() !== 1) throw new Error(`Vietnamese ${id} is missing its ${target} language route`);
+  }
+}
+await inspect({
+  name: "en-search-vietnamese-desktop", path: "/en/search/?q=banh%20mi", viewport: { width: 1280, height: 900 },
+  interact: async (page) => {
+    const result = page.locator('.result-card[href="/en/recipes/banh-mi-thit/"]');
+    await result.waitFor({ state: "visible" });
+    if (!/Vietnamese recipe/i.test(await result.innerText())) throw new Error("Vietnamese search result lacks its cuisine label");
+    await page.locator('[data-search-form] input[name="q"]').fill("Bánh mì");
+    await page.locator('[data-search-form] input[name="q"]').press("Enter");
+    await page.waitForFunction(() => new URL(location.href).searchParams.get("q") === "Bánh mì");
+    if (!(await result.isVisible())) throw new Error("Accented Vietnamese search lost the matching recipe");
+  }
+});
+for (const [locale, label, viewport] of [
+  ["en", "desktop", { width: 1440, height: 1000 }],
+  ["zh-hant", "mobile", { width: 390, height: 844 }],
+  ["ja", "desktop", { width: 1366, height: 900 }],
+  ["ko", "mobile", { width: 390, height: 844 }],
+  ["th", "mobile", { width: 390, height: 844 }]
+]) {
+  await inspect({
+    name: `${locale}-vietnamese-collection-${label}`, path: `/${locale}/cuisines/vietnamese/`, viewport,
+    interact: async (page) => {
+      await assertVietnameseCollection(page, locale);
+      if (label === "mobile") {
+        await page.locator("[data-menu-button]").click();
+        if (!(await page.locator("[data-nav]").isVisible()) || await page.locator("[data-menu-button]").getAttribute("aria-expanded") !== "true") throw new Error("Vietnamese mobile navigation did not open");
+        await page.locator("[data-menu-button]").click();
+        if (await page.locator("[data-menu-button]").getAttribute("aria-expanded") !== "false") throw new Error("Vietnamese mobile navigation did not close");
+      }
+      const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+      if (response?.status() !== 200) throw new Error(`Vietnamese ${locale} direct refresh failed`);
+    },
+    extraScreenshots: locale === "en" || locale === "zh-hant" ? [
+      { name: `${locale}-vietnamese-collection-hero-${label}`, selector: ".cuisine-hero" },
+      { name: `${locale}-vietnamese-first-card-${label}`, selector: ".collection-recipe-card:first-child" }
+    ] : []
+  });
+}
+for (const [locale, id, count, label] of [
+  ["zh-hant", "pho-bo", 10, "mobile"],
+  ["en", "bun-bo-hue", 11, "desktop"],
+  ["ja", "banh-mi-thit", 6, "desktop"],
+  ["ko", "banh-cuon", 7, "mobile"],
+  ["th", "mi-quang", 10, "mobile"],
+  ["zh-hant", "canh-chua-ca", 6, "desktop"],
+  ["zh-hant", "banh-flan", 8, "mobile"],
+  ["en", "bo-kho", 9, "desktop"]
+]) {
+  await inspect({
+    name: `${locale}-vietnamese-${id}-${label}`, path: `/${locale}/recipes/${id}/`,
+    viewport: label === "mobile" ? { width: 390, height: 844 } : { width: 1366, height: 900 },
+    interact: async (page) => assertVietnameseRecipe(page, count, locale, id),
+    extraScreenshots: [
+      { name: `${locale}-vietnamese-${id}-hero-${label}`, selector: ".recipe-detail-hero" },
+      { name: `${locale}-vietnamese-${id}-first-step-${label}`, selector: ".method-section li:first-child" },
+      ...(id === "banh-flan" ? [5, 7] : id === "canh-chua-ca" ? [4] : []).map((step) => ({
+        name: `${locale}-vietnamese-${id}-step-${step}-${label}`, selector: `.method-section ol > li:nth-child(${step})`
+      }))
+    ]
+  });
+}
+await inspect({
+  name: "vietnamese-language-choice-mobile", path: "/en/recipes/banh-xeo/", viewport: { width: 390, height: 844 },
+  fullPage: false, suppressLanguagePrompt: false, loadLazyImages: false,
+  interact: async (page) => {
+    await page.locator('[data-language-choice="zh-hant"]').click();
+    await page.waitForLoadState("networkidle");
+    if (new URL(page.url()).pathname !== "/zh-hant/recipes/banh-xeo/") throw new Error("Vietnamese language selection lost the recipe route");
+    const response = await page.reload({ waitUntil: "networkidle" });
+    if (response?.status() !== 200 || await page.locator("[data-language-prompt]").isVisible()) throw new Error("Vietnamese language preference or deep refresh failed");
+  }
+});
 await inspect({
   name: "zh-chinese-collection-mobile", path: "/zh-hant/cuisines/chinese/", viewport: { width: 390, height: 844 },
   interact: async (page) => {

@@ -1,0 +1,363 @@
+{
+  "generator": "OpenAI image_gen",
+  "mode": "built-in",
+  "generatedAt": "2026-09-12",
+  "styleReference": "assets/recipes/illustrations-generated/bibimbap/step-01.png",
+  "entries": [
+    {
+      "recipeId": "ca-kho-to",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/vietnamese/ca-kho-to.png",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY. Match its exact border-free warm ivory textured paper, fine precise ink outlines, restrained gouache shading, natural ingredient colours and three-quarter overhead viewpoint. Every cell must show a self-contained cooking state centred with generous empty paper around the subject, keeping every ingredient and pot entirely inside its cell. No decorative borders, regional symbols, flags or national palettes. ABSOLUTELY NO HANDS, FINGERS, ARMS, PEOPLE, SLEEVES, FACES OR BODY PARTS. Use unattended objects; show the result of cutting rather than a hand cutting. No text, letters, numbers, labels, arrows, logos, watermarks or photorealism. Exactly 3 equally sized columns and 3 equally sized rows, aligned grid, landscape 16:9 total sheet so each cell is also a landscape image. Thin blank paper gutters only. Fill the first N cells in reading order; all unused cells are entirely blank ivory paper. One action/state per cell. Finished dish appears only in the final used cell.\nDish: Cá kho tộ — caramel-braised fish. N=7.\nCell 1: Raw skin-on catfish steaks in a shallow bowl with a light fish-sauce marinade and black pepper, shallots and garlic beside it.\nCell 2: A wide heavy saucepan with a shallow pool of deep amber caramel, no fish yet.\nCell 3: Amber sauce with sliced shallots and minced garlic softening in the saucepan.\nCell 4: Skin-on fish steaks arranged in a single layer in a shallow brown braising liquid with red chile slices.\nCell 5: Covered saucepan with lid slightly ajar, intact fish steaks gently braising in brown sauce, faint steam.\nCell 6: Fully cooked intact dark glazed catfish steaks in reduced glossy sauce, a clean probe resting into the thickest steak, no readable display.\nCell 7: Finished glossy caramel-braised fish in a small brown clay serving pot with scallions, red chile and black pepper; rice in a separate bowl.",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          555,
+          1116,
+          1672
+        ],
+        "y": [
+          0,
+          306,
+          618,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "thit-kho-trung",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/vietnamese/thit-kho-trung-v2.png",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY. Match its exact border-free warm ivory textured paper, fine precise ink outlines, restrained gouache shading, natural ingredient colours and three-quarter overhead viewpoint. Every cell must show a self-contained cooking state centred with generous empty paper around the subject, keeping every ingredient and pot entirely inside its cell. No decorative borders, regional symbols, flags or national palettes. ABSOLUTELY NO HANDS, FINGERS, ARMS, PEOPLE, SLEEVES, FACES OR BODY PARTS. Use unattended objects; show the result of cutting rather than a hand cutting. No text, letters, numbers, labels, arrows, logos, watermarks or photorealism. Exactly 3 equally sized columns and 3 equally sized rows, aligned grid, landscape 16:9 total sheet so each cell is also a landscape image. Thin blank paper gutters only. Fill the first N cells in reading order; all unused cells are entirely blank ivory paper. One action/state per cell. Finished dish appears only in the final used cell.\nDish: Thịt kho trứng — pork and eggs in coconut water. N=8.\nCell 1: Large raw skin-on pork-belly cubes with minced shallots and garlic in a marinade bowl.\nCell 2: Six smooth peeled hard-boiled eggs in a bowl next to a pot of hot water.\nCell 3: A shallow amber caramel pool in a heavy saucepan, with a small water jug placed nearby.\nCell 4: Pork-belly cubes lightly browned and coated in amber caramel, still firm and not yet braised.\nCell 5: Pork cubes in abundant pale brown coconut-water broth, pot lid ajar and small simmer bubbles.\nCell 6: Whole boiled eggs turning golden among tender pork belly cubes in a light brown simmering broth.\nCell 7: Tender pork and bronze eggs with a ladle holding loose amber broth, not a thick dry glaze.\nCell 8: Finished Vietnamese pork belly and whole bronze eggs in a bowl of light caramel broth, white rice alongside.",
+      "correction": "Edit this exact 3x3 cooking illustration sheet. Change ONLY the central cell (row 2 column 2, step 5): remove the single whole egg visible behind the pork beneath the lid; replace that egg with more broth and one angular pork-belly cube consistent with the other cubes. At this step there are NO EGGS in the pot yet; eggs appear only in cell 6 and later. Keep every other cell, grid alignment, pot, paper background, ink and gouache style, colours and image dimensions unchanged. Absolutely no hands, people, body parts or text. Retain the original as an unchanged source and return the corrected image.",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          313,
+          623,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "canh-chua-ca",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/vietnamese/canh-chua-ca.png",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY. Match its exact border-free warm ivory textured paper, fine precise ink outlines, restrained gouache shading, natural ingredient colours and three-quarter overhead viewpoint. Every cell must show a self-contained cooking state centred with generous empty paper around the subject, keeping every ingredient and pot entirely inside its cell. No decorative borders, regional symbols, flags or national palettes. ABSOLUTELY NO HANDS, FINGERS, ARMS, PEOPLE, SLEEVES, FACES OR BODY PARTS. Use unattended objects; show the result of cutting rather than a hand cutting. No text, letters, numbers, labels, arrows, logos, watermarks or photorealism. Exactly 3 equally sized columns and 3 equally sized rows, aligned grid, landscape 16:9 total sheet so each cell is also a landscape image. Thin blank paper gutters only. Fill the first N cells in reading order; all unused cells are entirely blank ivory paper. One action/state per cell. Finished dish appears only in the final used cell.\nDish: Canh chua cá — sweet-sour fish soup. N=6.\nCell 1: Tamarind pulp soaking beside a sieve over a bowl of strained amber tamarind water.\nCell 2: Raw fish steaks and separate bowls of pineapple chunks, tomato wedges, okra halves, blanched thick pale porous edible taro stems, bean sprouts and chopped herbs.\nCell 3: Small pan of finely chopped pale golden garlic in oil, heatproof bowl ready beside it.\nCell 4: Fish steaks gently poaching with pineapple in a clear amber sour broth.\nCell 5: Colourful fish soup with intact fish, tomato wedges, pineapple, green okra, thick pale porous edible taro stems and bean sprouts.\nCell 6: Finished bowl of clear sweet-sour Vietnamese fish soup with pineapple, tomato, okra, bean sprouts, fresh herbs and golden garlic.",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          556,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          437,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "che-ba-mau",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/vietnamese/che-ba-mau.png",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 9,
+      "reviewed": true,
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY. Match its exact border-free warm ivory textured paper, fine precise ink outlines, restrained gouache shading, natural ingredient colours and three-quarter overhead viewpoint. Every cell must show a self-contained cooking state centred with generous empty paper around the subject, keeping every ingredient and pot entirely inside its cell. No decorative borders, regional symbols, flags or national palettes. ABSOLUTELY NO HANDS, FINGERS, ARMS, PEOPLE, SLEEVES, FACES OR BODY PARTS. Use unattended objects; show the result of cutting rather than a hand cutting. No text, letters, numbers, labels, arrows, logos, watermarks or photorealism. Exactly 3 equally sized columns and 3 equally sized rows, aligned grid, landscape 16:9 total sheet so each cell is also a landscape image. Thin blank paper gutters only. Fill the first N cells in reading order; all unused cells are entirely blank ivory paper. One action/state per cell. Finished dish appears only in the final used cell.\nDish: Chè ba màu — three-colour iced dessert. N=9.\nCell 1: A saucepan of cloudy agar powder and water, empty shallow rectangular dish beside it.\nCell 2: A saucepan of transparent green pandan agar liquid gently boiling, no solid jelly yet.\nCell 3: Green pandan jelly setting in a shallow rectangular tray, smooth flat surface.\nCell 4: Whole red adzuki beans simmering in a small saucepan with a little clear syrup.\nCell 5: Whole pale black-eyed peas gently simmering in syrup in a separate small saucepan.\nCell 6: White coconut sauce coating a spoon in a small saucepan, no beans mixed in.\nCell 7: Three separate containers of red beans, pale black-eyed peas and white coconut sauce cooling together.\nCell 8: Thin green pandan jelly strips on a plain cutting board, no knife or hands.\nCell 9: Tall clear glasses layered with red whole beans at bottom, pale whole black-eyed peas above, green pandan jelly, crushed ice and white coconut sauce.",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          556,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          311,
+          606,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "banh-flan",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/vietnamese/banh-flan-v2.png",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY. Match its exact border-free warm ivory textured paper, fine precise ink outlines, restrained gouache shading, natural ingredient colours and three-quarter overhead viewpoint. Every cell must show a self-contained cooking state centred with generous empty paper around the subject, keeping every ingredient and pot entirely inside its cell. No decorative borders, regional symbols, flags or national palettes. ABSOLUTELY NO HANDS, FINGERS, ARMS, PEOPLE, SLEEVES, FACES OR BODY PARTS. Use unattended objects; show the result of cutting rather than a hand cutting. No text, letters, numbers, labels, arrows, logos, watermarks or photorealism. Exactly 3 equally sized columns and 3 equally sized rows, aligned grid, landscape 16:9 total sheet so each cell is also a landscape image. Thin blank paper gutters only. Fill the first N cells in reading order; all unused cells are entirely blank ivory paper. One action/state per cell. Finished dish appears only in the final used cell.\nDish: Bánh flan — Vietnamese caramel custard. N=8.\nCell 1: Six empty small ramekins spaced inside a deep roasting tray, kettle alongside, empty oven behind.\nCell 2: Six ramekins each containing a thin amber caramel layer at the bottom.\nCell 3: Warm pale milk and condensed milk in a saucepan, light steam, vanilla in small vessel beside it.\nCell 4: Bowl of smooth pale yellow egg custard beside warm milk jug, resting whisk without hands.\nCell 5: Pale yellow custard being divided into caramel-lined ramekins, fine sieve and jug nearby, foil covers resting beside tray.\nCell 6: Foil-covered ramekins baking in a shallow hot-water bath inside an oven, one cover slightly lifted showing set smooth custard.\nCell 7: Six smooth set caramel custards cooling in ramekins on a wire rack.\nCell 8: Finished golden caramel custard pieces in a clear dessert cup with dark coffee sauce and crushed ice, matching Vietnamese street dessert serving.",
+      "correction": "Correct only two cells in this exact 3x3 cooking illustration sheet. Cell 5 at row2 column2: remove all pouring streams and the floating tilted milk jug; show the six ramekins sitting still, filled with smooth pale-yellow custard, with the fine sieve and jug resting on the tabletop alongside. No physically impossible liquid passing through another cup. Cell7 at row3 column1: change ONLY all six custard tops from orange/brown to uniform smooth PALE CREAM YELLOW, matching the custard in cell6. They remain in moulds cooling on the rack; the caramel is hidden at the bottom and cannot appear on top until unmoulding in cell8. Keep all other cells, objects, dimensions, 3x3 grid, warm textured paper, ink and gouache style unchanged. No hands, people, body parts, text or new ingredients.",
+      "visualReview": "Recovered the completed 2026-09-12 correction after the interrupted session and compared every cell with the recipe again. Accepted; no people or hands.",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          556,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          315,
+          626,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "cha-gio",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/vietnamese/cha-gio.png",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY. Match its exact border-free warm ivory textured paper, fine precise ink outlines, restrained gouache shading, natural ingredient colours and three-quarter overhead viewpoint. Every cell must show a self-contained cooking state centred with generous empty paper around the subject, keeping every ingredient and pot entirely inside its cell. No decorative borders, regional symbols, flags or national palettes. ABSOLUTELY NO HANDS, FINGERS, ARMS, PEOPLE, SLEEVES, FACES OR BODY PARTS. Use unattended objects; show the result of cutting rather than a hand cutting. No text, letters, numbers, labels, arrows, logos, watermarks or photorealism. Exactly 3 equally sized columns and 3 equally sized rows, aligned grid, landscape 16:9 total sheet so each cell is also a landscape image. Thin blank paper gutters only. Fill the first N cells in reading order; all unused cells are entirely blank ivory paper. One action/state per cell. Finished dish appears only in the final used cell.\nDish: Chả Giò — Crispy Spring Rolls. N=8.\nCell 1: Separate bowls of soaked short glass noodles, finely chopped black wood ears, and squeezed shredded jicama beside dry shredded carrot; no hands.\nCell 2: Bowl of mixed raw pork shrimp vegetable filling with a small fully cooked test patty in a separate skillet; no hands.\nCell 3: One softened rice paper on a board with a narrow filling log and folded sides, beside completed pale uncooked rice-paper rolls separated on a tray; no hands.\nCell 4: Small bowl of clear amber lime fish sauce flecked with chopped garlic and red chile, beside washed dry lettuce mint and cilantro; no rolls in this frame.\nCell 5: Pale lightly golden rice-paper rolls frying separately in a deep heavy pot with gently bubbling oil and a clip-on thermometer; no hands.\nCell 6: Pale-golden fully cooked rice-paper rolls separated on a raised wire rack over a tray, releasing a little steam; no dipping sauce yet.\nCell 7: Deep golden blistered rice-paper rolls in a small second frying batch, with a draining rack nearby; no hands or finished serving arrangement.\nCell 8: Finished plate of small golden blistered fried rice-paper spring rolls with lettuce mint cilantro and a small amber garlic-chile dipping sauce; no hands.",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          560,
+          1122,
+          1672
+        ],
+        "y": [
+          0,
+          311,
+          617,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "banh-xeo",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/vietnamese/banh-xeo.png",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY. Match its exact border-free warm ivory textured paper, fine precise ink outlines, restrained gouache shading, natural ingredient colours and three-quarter overhead viewpoint. Every cell must show a self-contained cooking state centred with generous empty paper around the subject, keeping every ingredient and pot entirely inside its cell. No decorative borders, regional symbols, flags or national palettes. ABSOLUTELY NO HANDS, FINGERS, ARMS, PEOPLE, SLEEVES, FACES OR BODY PARTS. Use unattended objects; show the result of cutting rather than a hand cutting. No text, letters, numbers, labels, arrows, logos, watermarks or photorealism. Exactly 3 equally sized columns and 3 equally sized rows, aligned grid, landscape 16:9 total sheet so each cell is also a landscape image. Thin blank paper gutters only. Fill the first N cells in reading order; all unused cells are entirely blank ivory paper. One action/state per cell. Finished dish appears only in the final used cell.\nDish: Bánh Xèo — Sizzling Pork and Shrimp Crêpes. N=8.\nCell 1: Bowl of thin yellow turmeric rice batter with fine green scallion rings and a resting whisk; no cooked crêpes.\nCell 2: Amber dipping sauce beside dry lettuce mint cilantro perilla and a separate colander of drained bean sprouts.\nCell 3: Thin cooked pork slices and softened onion ribbons in a wide nonstick skillet; no yellow batter yet.\nCell 4: Opaque pink cooked shrimp searing in a skillet, with separate portioned pork-onion mixture and bean sprouts on plates nearby.\nCell 5: A single thin round yellow crêpe with green scallion flecks spreading across the bottom of a wide skillet, edges beginning to set; no filling.\nCell 6: Open round yellow crêpe with shrimp pork onion and bean sprouts clustered on one half, its lid resting beside the skillet and light steam rising.\nCell 7: A golden yellow crêpe folded into a half moon in the skillet, lacy crisp edges and a little shrimp-sprout filling visible at the seam; spatulas resting, no hands.\nCell 8: Finished folded crisp yellow banh xeo with shrimp pork and bean sprouts visible, accompanied by lettuce mint cilantro perilla and amber dipping sauce.",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          310,
+          623,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "banh-cuon",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/vietnamese/banh-cuon.png",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY. Match its exact border-free warm ivory textured paper, fine precise ink outlines, restrained gouache shading, natural ingredient colours and three-quarter overhead viewpoint. Every cell must show a self-contained cooking state centred with generous empty paper around the subject, keeping every ingredient and pot entirely inside its cell. No decorative borders, regional symbols, flags or national palettes. ABSOLUTELY NO HANDS, FINGERS, ARMS, PEOPLE, SLEEVES, FACES OR BODY PARTS. Use unattended objects; show the result of cutting rather than a hand cutting. No text, letters, numbers, labels, arrows, logos, watermarks or photorealism. Exactly 3 equally sized columns and 3 equally sized rows, aligned grid, landscape 16:9 total sheet so each cell is also a landscape image. Thin blank paper gutters only. Fill the first N cells in reading order; all unused cells are entirely blank ivory paper. One action/state per cell. Finished dish appears only in the final used cell.\nDish: Bánh Cuốn — Pork and Mushroom Rice Rolls. N=7.\nCell 1: Thin white rice batter in a bowl beside chopped rehydrated black wood ears and finely diced dry jicama; no cooked sheets.\nCell 2: Cooked crumbly pork filling dotted with black mushroom bits and translucent onion and jicama in a skillet with no pooled liquid.\nCell 3: Dipping sauce, blanched sprouts, cucumber batons, green herbs, pale round pork-sausage slices and crispy shallots in separate small dishes.\nCell 4: A translucent white thin rice sheet in a small nonstick skillet; no browning, a lid beside it, tiny oil sheen only.\nCell 5: Thin translucent round rice sheet on a lightly oiled plate with one narrow line of cooked pork-and-black-mushroom filling near the lower third.\nCell 6: Several smooth white rice rolls on an oiled plate, with one partially folded sheet showing the pork-mushroom filling; no hands.\nCell 7: Finished silky white banh cuon topped with crispy shallots, pale sliced Vietnamese pork sausage, cucumber sprouts herbs and a separate fish-sauce dip.",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          313,
+          625,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "banh-mi-thit",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/vietnamese/banh-mi-thit.png",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY. Match its exact border-free warm ivory textured paper, fine precise ink outlines, restrained gouache shading, natural ingredient colours and three-quarter overhead viewpoint. Every cell must show a self-contained cooking state centred with generous empty paper around the subject, keeping every ingredient and pot entirely inside its cell. No decorative borders, regional symbols, flags or national palettes. ABSOLUTELY NO HANDS, FINGERS, ARMS, PEOPLE, SLEEVES, FACES OR BODY PARTS. Use unattended objects; show the result of cutting rather than a hand cutting. No text, letters, numbers, labels, arrows, logos, watermarks or photorealism. Exactly 3 equally sized columns and 3 equally sized rows, aligned grid, landscape 16:9 total sheet so each cell is also a landscape image. Thin blank paper gutters only. Fill the first N cells in reading order; all unused cells are entirely blank ivory paper. One action/state per cell. Finished dish appears only in the final used cell.\nDish: Bánh Mì Thịt — Vietnamese Cold-Cut Baguette. N=6.\nCell 1: Orange carrot and white daikon matchsticks softened in a bowl, beside a clean draining towel; no sandwich yet.\nCell 2: Clear jar of orange carrot and white daikon matchsticks submerged in transparent sweet vinegar brine.\nCell 3: Separate plates of thin pale pork-sausage and pink ham slices, cucumber strips, cilantro, chile and well-drained orange-white pickles.\nCell 4: Four warm crisp light baguettes on a board, one slit lengthwise with its back hinge intact and airy interior visible.\nCell 5: Open baguette spread with pale mayonnaise and brown liver pâté, layered with thin pork sausage ham and cucumber; no pickles or herbs yet.\nCell 6: Finished Vietnamese baguette sandwich with visible pâté pale pork sausage pink ham cucumber orange-white pickles cilantro and red chile; no hands.",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          559,
+          1113,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "com-tam-suon-nuong",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/vietnamese/com-tam-suon-nuong.png",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY. Match its exact border-free warm ivory textured paper, fine precise ink outlines, restrained gouache shading, natural ingredient colours and three-quarter overhead viewpoint. Every cell must show a self-contained cooking state centred with generous empty paper around the subject, keeping every ingredient and pot entirely inside its cell. No decorative borders, regional symbols, flags or national palettes. ABSOLUTELY NO HANDS, FINGERS, ARMS, PEOPLE, SLEEVES, FACES OR BODY PARTS. Use unattended objects; show the result of cutting rather than a hand cutting. No text, letters, numbers, labels, arrows, logos, watermarks or photorealism. Exactly 3 equally sized columns and 3 equally sized rows, aligned grid, landscape 16:9 total sheet so each cell is also a landscape image. Thin blank paper gutters only. Fill the first N cells in reading order; all unused cells are entirely blank ivory paper. One action/state per cell. Finished dish appears only in the final used cell.\nDish: Cơm Tấm Sườn Nướng — Broken Rice with Grilled Pork. N=8.\nCell 1: Four thin pork chops coated in finely minced lemongrass marinade in a covered glass container; fat edges lightly notched, no hands.\nCell 2: Cooked fluffy small broken-rice grains in a lidded saucepan with lid set aside and no toppings.\nCell 3: Four small bowls of amber lime fish sauce dotted with garlic and red chile; measured ingredients cleared away.\nCell 4: Small pan of vivid green scallion rings gently wilted in clear oil, no browned onion or meat.\nCell 5: Clean oiled grill with two heat zones beside a tray of drained marinated pork chops; separate vegetable plate with cucumber tomato and carrot-daikon pickles.\nCell 6: Thin caramel-brown lemongrass pork chops with grill marks on a grill, edges lightly charred but not black; no hands.\nCell 7: Cooked pork chops resting on a clean plate with glossy green scallion oil, no knife in motion and no raw meat.\nCell 8: Finished com tam plate: mound of small broken white rice with scallion oil, one grilled lemongrass pork chop, cucumber tomato carrot-daikon pickles and amber fish sauce. No egg or meatloaf.",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1114,
+          1672
+        ],
+        "y": [
+          0,
+          313,
+          626,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "cao-lau",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/vietnamese/cao-lau-v2.png",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY. Match its exact border-free warm ivory textured paper, fine precise ink outlines, restrained gouache shading, natural ingredient colours and three-quarter overhead viewpoint. Every cell must show a self-contained cooking state centred with generous empty paper around the subject, keeping every ingredient and pot entirely inside its cell. No decorative borders, regional symbols, flags or national palettes. ABSOLUTELY NO HANDS, FINGERS, ARMS, PEOPLE, SLEEVES, FACES OR BODY PARTS. Use unattended objects; show the result of cutting rather than a hand cutting. No text, letters, numbers, labels, arrows, logos, watermarks or photorealism. Exactly 3 equally sized columns and 3 equally sized rows, aligned grid, landscape 16:9 total sheet so each cell is also a landscape image. Thin blank paper gutters only. Fill the first N cells in reading order; all unused cells are entirely blank ivory paper. One action/state per cell. Finished dish appears only in the final used cell.\nDish: Cao Lầu — Hội An Pork Noodles. N=8.\nCell 1: Two thick pork-shoulder pieces coated with brown five-spice aromatic marinade in a glass dish, no hands.\nCell 2: Two browned pork-shoulder chunks searing in a heavy pot with a little oil, surfaces brown and interiors still whole; no sauce pool yet.\nCell 3: Large pork pieces gently braising in a shallow brown aromatic liquid in a covered pot with lid ajar, small simmer bubbles only.\nCell 4: Resting braised pork pieces on a board beside a small pan of strained dark brown sauce reduced to a shallow glossy pool.\nCell 5: Small golden blistered wonton squares draining on a rack beside a small pan of frying oil; crisp square shapes, no long spring rolls.\nCell 6: Thick brownish cao lau noodles and blanched sprouts draining in a colander, washed lettuce and fresh herbs nearby.\nCell 7: Thin even brown-edged braised pork slices partly fanned on a board, with other slices warming in glossy brown sauce; no hands.\nCell 8: Finished bowl of brownish chewy cao lau noodles topped with thin five-spice pork slices, lettuce sprouts herbs and golden crisp squares; only a shallow dark sauce at the bottom, lime and chile alongside.",
+      "correction": "Edit the supplied exact 3x3 cooking sheet. In cell 3 ONLY (top right), remove the visible whole star-anise pods and whole garlic cloves from the brown braising liquid; replace them with plain brown sauce containing only fine minced aromatics, as the recipe uses ground five-spice powder and minced garlic. Keep the two pork pieces, lid, saucepan and every other cell exactly unchanged. Retain warm ivory textured paper, crisp ink and gouache style, layout and dimensions. No hands, people, body parts, text or extra ingredients.",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          313,
+          612,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "mi-quang",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/vietnamese/mi-quang.png",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 10,
+      "reviewed": true,
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY. Match its exact border-free warm ivory textured paper, fine precise ink outlines, restrained gouache shading, natural ingredient colours and three-quarter overhead viewpoint. Every cell must show a self-contained cooking state centred with generous empty paper around the subject, keeping every ingredient and pot entirely inside its cell. No decorative borders, regional symbols, flags or national palettes. ABSOLUTELY NO HANDS, FINGERS, ARMS, PEOPLE, SLEEVES, FACES OR BODY PARTS. Use unattended objects; show the result of cutting rather than a hand cutting. No text, letters, numbers, labels, arrows, logos, watermarks or photorealism. Exactly 3 equally sized columns and 4 equally sized rows, aligned grid, landscape 4:3 total sheet so each cell is also a landscape image. Thin blank paper gutters only. Fill the first N cells in reading order; all unused cells are entirely blank ivory paper. One action/state per cell. Finished dish appears only in the final used cell.\nDish: Mì Quảng — Turmeric Noodles with Pork and Shrimp. N=10.\nCell 1: Pale blanched pork neck bones draining in a colander beside a clean large stockpot, with discarded cloudy water out of frame.\nCell 2: Separate bowls of yellow-marinated pork belly slices and peeled shrimp, with reserved shrimp heads and shells in a third bowl; no hands.\nCell 3: Large pot of gently simmering pork bones onion halves and orange shrimp heads in a light golden stock, fine bubbles and skimmed surface.\nCell 4: Thin turmeric-yellow pork belly slices with lightly browned edges sautéing with finely minced shallots and garlic in a skillet.\nCell 5: Pot of concentrated golden-orange strained broth with tender thin pork belly slices, no bones shells or shrimp heads remaining.\nCell 6: Opaque orange-pink shrimp cooked in a skillet with shallots garlic and turmeric; no pork or noodles in the pan.\nCell 7: Peeled white quail eggs in a bowl, one halved showing a firm yellow yolk, beside discarded speckled shells; no hands.\nCell 8: Broad cooked yellow turmeric rice noodles draining separately from blanched pale bean sprouts; no assembled toppings.\nCell 9: Separate topping dishes of shredded lettuce mixed herbs scallions coarse peanuts fried shallots lime chile and crisp black-sesame rice crackers.\nCell 10: Finished shallow bowl of broad yellow mi Quang noodles topped with sliced pork belly pink shrimp two quail eggs herbs scallions peanuts fried shallots and black-sesame rice cracker pieces, small amount of golden broth visible at bottom.",
+      "cropGrid": {
+        "width": 1448,
+        "height": 1086,
+        "x": [
+          0,
+          482,
+          966,
+          1448
+        ],
+        "y": [
+          0,
+          270,
+          542,
+          800,
+          1086
+        ]
+      }
+    },
+    {
+      "recipeId": "bo-kho",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/vietnamese/bo-kho-v2.png",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 9,
+      "reviewed": true,
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY. Match its exact border-free warm ivory textured paper, fine precise ink outlines, restrained gouache shading, natural ingredient colours and three-quarter overhead viewpoint. Every cell must show a self-contained cooking state centred with generous empty paper around the subject, keeping every ingredient and pot entirely inside its cell. No decorative borders, regional symbols, flags or national palettes. ABSOLUTELY NO HANDS, FINGERS, ARMS, PEOPLE, SLEEVES, FACES OR BODY PARTS. Use unattended objects; show the result of cutting rather than a hand cutting. No text, letters, numbers, labels, arrows, logos, watermarks or photorealism. Exactly 3 equally sized columns and 3 equally sized rows, aligned grid, landscape 16:9 total sheet so each cell is also a landscape image. Thin blank paper gutters only. Fill the first N cells in reading order; all unused cells are entirely blank ivory paper. One action/state per cell. Finished dish appears only in the final used cell.\nDish: Bò kho — lemongrass beef stew. N=9.\nCell 1: Bowl of raw large beef cubes lightly coated in ground spices and fish-sauce marinade; covered resting bowl nearby.\nCell 2: Separate bowls of bruised lemongrass stalks, chopped shallots and garlic, ginger slices, large carrot chunks and fresh basil leaves.\nCell 3: Large beef cubes browning in a heavy pot in one uncrowded layer; a bowl of previously browned beef beside the pot.\nCell 4: Aromatics and whole spices coated with red tomato paste in the heavy pot, browned beef still in its separate bowl.\nCell 5: Beef cubes and lemongrass stalks submerged in red-brown broth in a heavy pot, a skimmer resting beside it.\nCell 6: Covered heavy pot slightly ajar with beef and whole lemongrass slowly simmering in broth; small gentle steam, no carrots yet.\nCell 7: Tender carrot chunks newly simmering among dark beef cubes in a glossy red-brown broth.\nCell 8: Finished red-brown beef stew with intact carrot chunks, whole spices removed to a small discard bowl and a spoon of excess fat beside it.\nCell 9: Finished bowl of Vietnamese beef stew with large tender beef pieces, orange carrot chunks and fresh Thai basil in a red-brown broth; lime and plain baguette beside it.",
+      "correction": "Correct ONLY cell1 (top left) of this exact3x3 cooking illustration source sheet. Remove every white minced-garlic-looking fragment from the raw beef marinade. The beef is marinated only with liquid fish sauce and fine ground spice powder at this stage; show raw beef cubes with a thin reddish-brown ground-spice coating and absolutely no solid minced aromatics. Keep the bowl and lid. Preserve all other cells exactly including the garlic bowl in cell2 and fried aromatics in cell4 where garlic correctly belongs. Preserve3x3 layout, dimensions, warm textured paper, fine ink and gouache. No hands, people, body parts, text or extra ingredients.",
+      "visualReview": "Recovered the completed 2026-09-12 correction after the interrupted session and compared every cell with the recipe again. Accepted; no people or hands.",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          555,
+          1116,
+          1672
+        ],
+        "y": [
+          0,
+          307,
+          616,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "bun-bo-nam-bo",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/vietnamese/bun-bo-nam-bo.png",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY. Match its exact border-free warm ivory textured paper, fine precise ink outlines, restrained gouache shading, natural ingredient colours and three-quarter overhead viewpoint. Every cell must show a self-contained cooking state centred with generous empty paper around the subject, keeping every ingredient and pot entirely inside its cell. No decorative borders, regional symbols, flags or national palettes. ABSOLUTELY NO HANDS, FINGERS, ARMS, PEOPLE, SLEEVES, FACES OR BODY PARTS. Use unattended objects; show the result of cutting rather than a hand cutting. No text, letters, numbers, labels, arrows, logos, watermarks or photorealism. Exactly 3 equally sized columns and 3 equally sized rows, aligned grid, landscape 16:9 total sheet so each cell is also a landscape image. Thin blank paper gutters only. Fill the first N cells in reading order; all unused cells are entirely blank ivory paper. One action/state per cell. Finished dish appears only in the final used cell.\nDish: Bún bò Nam Bộ — beef noodle salad. N=7.\nCell 1: Thin raw beef slices in a bowl with finely minced lemongrass and garlic in a light brown marinade.\nCell 2: Fine carrot matchsticks soaking in a small bowl of clear sweet vinegar; drained carrots in a sieve nearby.\nCell 3: Small bowl of clear amber lime-fish-sauce dressing with minced garlic and red chile flecks beside a cut lime.\nCell 4: Cooked white rice vermicelli draining in a colander; blanched bean sprouts draining in a separate sieve, boiling pot nearby.\nCell 5: Four bowls layered with lettuce and herbs beneath white vermicelli, blanched bean sprouts, cucumber matchsticks and orange pickled carrot; no cooked beef yet.\nCell 6: Thin garlic-lemongrass beef slices searing in a broad pan in a single layer, edges browned and centre cooked; first batch on a clean plate.\nCell 7: Finished Vietnamese rice vermicelli salad topped generously with browned thin beef slices, white bean sprouts, orange pickled carrot, crushed peanuts and golden fried shallots; herbs and cucumber underneath.",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          312,
+          626,
+          941
+        ]
+      }
+    }
+  ]
+}

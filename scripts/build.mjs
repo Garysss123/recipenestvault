@@ -15,7 +15,7 @@ const dist = join(root, "dist");
 const assetHasher = createHash("sha256");
 for (const asset of ["site.css", "site.js", "search.js"]) assetHasher.update(await readFile(join(root, "public", "assets", asset)));
 const assetVersion = assetHasher.digest("hex").slice(0, 12);
-const buildDate = "2026-09-04";
+const buildDate = "2026-09-12";
 const adsenseClient = /^ca-pub-\d+$/.test(process.env.ADSENSE_CLIENT ?? "") ? process.env.ADSENSE_CLIENT : "";
 const adsenseSlot = /^\d+$/.test(process.env.ADSENSE_SLOT_CONTENT ?? "") ? process.env.ADSENSE_SLOT_CONTENT : "";
 const adsEnabled = Boolean(adsenseClient && adsenseSlot);
@@ -30,10 +30,10 @@ function esc(value) {
 function json(value) { return JSON.stringify(value).replaceAll("<", "\\u003c"); }
 function routePath(locale, suffix = "") { return `/${locale}/${suffix}`.replaceAll("//", "/"); }
 function localized(value, slug) { return value?.[slug] ?? value?.en ?? value ?? ""; }
-function cleanStep(value) { return String(value).replace(/^\d+\.\s*/, ""); }
+function cleanStep(value) { return String(value).replace(/^\d+\.(?!\d)\s*/, ""); }
 function instructionContent(step, slug) {
   if (step && typeof step === "object" && step.title && step.body) {
-    return { title: localized(step.title, slug), body: cleanStep(localized(step.body, slug)) };
+    return { title: localized(step.title, slug), body: String(localized(step.body, slug)) };
   }
   return { title: "", body: cleanStep(localized(step, slug)) };
 }
