@@ -88,6 +88,48 @@ const profiles = {
       ml('Use another rustic, open-crumb bread that can toast firmly if Catalan country bread is unavailable.', '買不到加泰隆尼亞鄉村麵包時，可用其他能烤得結實、孔洞較大的鄉村麵包。', 'カタルーニャの田舎パンがなければ、しっかり焼ける気泡のある素朴なパンで代用できます。', '카탈루냐 시골빵이 없으면 단단하게 구워지는 기공 있는 러스틱 빵으로 바꿀 수 있습니다.', 'ถ้าไม่มีขนมปังชนบทคาตาลัน ใช้ขนมปังชนบทเนื้อโปร่งที่ปิ้งให้แข็งได้'),
       ml('Any flavourful extra-virgin olive oil can replace a Spanish oil; avoid neutral refined oil in this uncooked finish.', '可用任何風味佳的特級初榨橄欖油替代西班牙產油；這道生食收尾不要用無味精製油。', 'スペイン産でなくても風味のよいエクストラバージン油を使えます。仕上げには無味の精製油を避けます。', '스페인산이 아니어도 풍미 좋은 엑스트라 버진 올리브유를 쓰고 무향 정제유는 피하세요.', 'ใช้น้ำมันมะกอกเอ็กซ์ตร้าเวอร์จินรสดีจากที่อื่นได้ แต่เลี่ยงน้ำมันกลั่นรสกลางสำหรับราดดิบ')
     ]
+  },
+  noodlePan: {
+    tips: [
+      ml('Use a wide shallow pan so the noodles cook in a thin layer and the stock reduces evenly.', '使用寬淺鍋，讓麵條平鋪成薄層，湯汁才能均勻收乾。', '麺を薄く広げられる広く浅い鍋を使い、だしを均一に煮詰めます。', '면이 얇게 퍼지는 넓고 얕은 팬을 써야 육수가 고르게 줄어듭니다.', 'ใช้กระทะกว้างตื้นให้เส้นเป็นชั้นบางและน้ำสต๊อกงวดสม่ำเสมอ'),
+      ml('Taste the stock before adding the noodles; once they absorb it, seasoning is difficult to correct evenly.', '下麵前先試高湯味道；麵條吸收後就很難再均勻修正調味。', '麺を入れる前にだしを味見します。吸収された後では均一な味の修正が難しくなります。', '면을 넣기 전에 육수 간을 보세요. 흡수된 뒤에는 고르게 간을 고치기 어렵습니다.', 'ชิมสต๊อกก่อนใส่เส้น เพราะเมื่อเส้นดูดแล้วจะแก้รสให้ทั่วได้ยาก')
+    ],
+    commonMistakes: [
+      ml('Repeated stirring releases starch and breaks seafood; level the noodles once and then leave the pan mostly undisturbed.', '反覆攪拌會釋放過多澱粉並弄碎海鮮；麵條鋪平一次後就盡量不要再翻動。', '何度も混ぜるとでんぷんが出て魚介も崩れるため、一度麺をならしたら基本的に触りません。', '계속 저으면 전분이 많이 나오고 해산물이 부서지므로 면을 한 번 고르게 편 뒤 거의 건드리지 마세요.', 'การคนซ้ำทำให้แป้งออกและอาหารทะเลแตก เกลี่ยเส้นครั้งเดียวแล้วแทบไม่ต้องคน'),
+      ml('Too much stock leaves fideuà soupy; add only enough for the noodles to become tender as the pan approaches dry.', '高湯太多會讓 fideuà 變成湯麵；只加入足以讓麵熟且最後接近收乾的份量。', 'だしが多すぎると汁麺になるため、麺が柔らかくなる頃に鍋がほぼ乾く量にします。', '육수가 너무 많으면 국물 면이 되므로 면이 익을 때 팬이 거의 마를 정도만 넣으세요.', 'สต๊อกมากไปทำให้ฟิเดอัวเป็นน้ำ ใส่เพียงพอให้เส้นนุ่มตอนกระทะเกือบแห้ง')
+    ],
+    substitutions: [
+      ml('If fideuà noodles are unavailable, use short thin fideos or break thin spaghetti into 3–4 cm lengths.', '買不到 fideuà 專用麵時，可用短細 fideos，或把細義大利麵折成 3–4 公分。', 'フィデウア用麺がなければ短い細麺を使うか、細いスパゲッティを3〜4cmに折ります。', '피데우아 면이 없으면 짧고 가는 피데오를 쓰거나 가는 스파게티를 3–4cm로 부러뜨리세요.', 'ถ้าไม่มีเส้นฟิเดอัว ใช้ฟิเดโอเส้นสั้นบาง หรือหักสปาเกตตีเส้นเล็กยาว 3–4 ซม.'),
+      ml('Use a clean unsalted fish stock if homemade stock is unavailable; avoid strongly flavoured shellfish concentrates that mask saffron and fish.', '沒有自製魚高湯時可用乾淨的無鹽魚高湯；避免味道過強的濃縮海鮮湯蓋過番紅花與魚味。', '自家製がなければ癖のない無塩の魚だしを使い、サフランや魚を消す強い甲殻類濃縮だしは避けます。', '집에서 만든 육수가 없으면 깔끔한 무염 생선 육수를 쓰고 사프란과 생선 맛을 덮는 강한 갑각류 농축액은 피하세요.', 'ถ้าไม่มีสต๊อกทำเอง ใช้สต๊อกปลาไม่เค็มรสสะอาด เลี่ยงหัวเชื้อทะเลรสแรงที่กลบหญ้าฝรั่นและปลา')
+    ]
+  },
+  slowStew: {
+    tips: [
+      ml('Keep the pot at a lazy simmer rather than a hard boil so beans, meat and vegetables stay intact while the broth develops.', '維持緩慢小滾而不是劇烈沸騰，讓豆類、肉與蔬菜保持完整，同時慢慢建立湯味。', '激しく沸騰させず穏やかな弱い煮立ちを保ち、豆、肉、野菜を崩さずにだしを作ります。', '세게 끓이지 말고 잔잔하게 끓여 콩, 고기, 채소 형태를 유지하며 국물 맛을 냅니다.', 'รักษาเดือดอ่อน ไม่เดือดพล่าน เพื่อให้ถั่ว เนื้อ และผักคงรูปพร้อมให้น้ำซุปพัฒนารส'),
+      ml('Add ingredients according to how long they need: long-cooking meats and legumes first, tender vegetables and sausages later.', '依所需熟成時間分批加入：長時間肉類與豆類先下，易熟蔬菜與香腸後下。', '火の通りに応じ、時間のかかる肉や豆を先に、柔らかい野菜やソーセージを後から加えます。', '익는 시간에 따라 오래 익힐 고기와 콩을 먼저, 부드러운 채소와 소시지는 나중에 넣으세요.', 'ใส่วัตถุดิบตามเวลาสุก เนื้อและถั่วที่ใช้เวลานานก่อน ผักนุ่มและไส้กรอกทีหลัง')
+    ],
+    commonMistakes: [
+      ml('Salting heavily before cured meats have seasoned the broth can make the finished stew too salty; adjust near the end.', '風乾肉尚未把鹹味釋入湯中前就重鹹調味，最後容易過鹹；接近完成時再校正。', '塩蔵肉の塩味がだしに出る前に強く塩をすると仕上がりが塩辛くなるため、終盤で調整します。', '절인 고기에서 짠맛이 국물에 나오기 전에 소금을 많이 넣으면 완성 스튜가 짜지므로 후반에 조절하세요.', 'ใส่เกลือหนักก่อนเนื้อบ่มปล่อยรสเค็มจะทำให้สตูว์เค็มเกิน ค่อยปรับช่วงท้าย'),
+      ml('Stirring delicate beans aggressively breaks their skins and muddies the broth; move the pot gently instead.', '大力攪拌柔嫩豆子會破皮並讓湯混濁；改成輕晃鍋子。', '柔らかい豆を強く混ぜると皮が破れ汁が濁るので、鍋をやさしく揺すります。', '부드러운 콩을 세게 저으면 껍질이 터지고 국물이 탁해지므로 냄비를 살짝 흔드세요.', 'คนถั่วนุ่มแรง ๆ ทำให้เปลือกแตกและน้ำขุ่น ให้โยกหม้อเบา ๆ แทน')
+    ],
+    substitutions: [
+      ml('For regional beans that are unavailable, choose a similarly large, thin-skinned dried white bean and soak it fully before cooking.', '買不到地區特有豆時，選尺寸相近、皮薄的大型乾白豆並充分浸泡。', '地域の豆がなければ、同程度に大粒で皮の薄い乾燥白いんげんを十分浸水して使います。', '지역 콩이 없으면 비슷하게 크고 껍질 얇은 말린 흰콩을 충분히 불려 쓰세요.', 'ถ้าไม่มีถั่วท้องถิ่น ใช้ถั่วขาวแห้งเม็ดใหญ่เปลือกบางใกล้เคียงและแช่ให้เต็มที่'),
+      ml('When replacing a cured meat or sausage, match both smoke level and saltiness, then season the broth only after tasting.', '替換風乾肉或香腸時，要同時匹配煙燻程度與鹹度，並在試湯後才加鹽。', '塩蔵肉やソーセージを替えるときは燻香と塩分の両方を近づけ、だしを味見してから塩を足します。', '절인 고기나 소시지를 바꿀 때는 훈연도와 염도를 함께 맞추고 국물을 맛본 뒤 간하세요.', 'เมื่อเปลี่ยนเนื้อบ่มหรือไส้กรอก ให้ใกล้เคียงทั้งกลิ่นรมควันและความเค็ม แล้วชิมน้ำก่อนปรุงเกลือ')
+    ]
+  },
+  boiledSeafood: {
+    tips: [
+      ml('Keep the cooking water at a steady simmer after the seafood goes in; a violent boil can damage delicate skin before the centre is tender.', '海鮮下鍋後維持穩定小滾；猛烈沸騰會在中心變嫩前先破壞外皮。', '魚介を入れた後は穏やかな煮立ちを保ち、激しい沸騰で中が柔らかくなる前に皮を傷めないようにします。', '해산물을 넣은 뒤 일정한 약한 끓음을 유지하세요. 세게 끓이면 속이 부드러워지기 전에 껍질이 손상됩니다.', 'หลังใส่อาหารทะเลให้เดือดอ่อนคงที่ การเดือดแรงอาจทำลายผิวก่อนตรงกลางนุ่ม'),
+      ml('Judge tenderness at the thickest part rather than by time alone; size and prior freezing change cooking time.', '以最厚部位的嫩度判斷，不只看時間；尺寸與是否曾冷凍都會改變烹調時間。', '時間だけでなく最も厚い部分の柔らかさで判断します。大きさや冷凍歴で加熱時間は変わります。', '시간만 보지 말고 가장 두꺼운 부분의 부드러움으로 판단하세요. 크기와 냉동 여부에 따라 시간이 달라집니다.', 'ตัดสินความนุ่มที่ส่วนหนาสุด ไม่ดูเวลาอย่างเดียว เพราะขนาดและการแช่แข็งเปลี่ยนเวลาสุก')
+    ],
+    commonMistakes: [
+      ml('Slicing before the seafood has drained briefly makes the plate watery and dilutes paprika and olive oil.', '海鮮尚未稍微瀝乾就切，盤中會積水並稀釋紅椒粉與橄欖油。', '水気を少し切る前に切ると皿が水っぽくなり、パプリカとオリーブ油が薄まります。', '잠깐 물기를 빼기 전에 자르면 접시에 물이 생겨 파프리카와 올리브유 맛이 묽어집니다.', 'หั่นก่อนสะเด็ดสักครู่ทำให้จานมีน้ำและเจือจางปาปริกากับน้ำมันมะกอก'),
+      ml('Do not keep tender seafood simmering while other components finish; remove it promptly and use the cooking liquid separately if needed.', '海鮮已嫩時不要為等其他配料而繼續煮；應立即取出，需要時另用煮汁處理其他材料。', '魚介が柔らかくなったら他の具を待って煮続けず、すぐ取り出し、必要なら煮汁を別に使います。', '해산물이 부드러워졌는데 다른 재료를 기다리며 계속 끓이지 말고 바로 꺼내고 필요하면 삶은 물을 따로 쓰세요.', 'เมื่ออาหารทะเลนุ่มแล้วอย่าต้มต่อเพื่อรออย่างอื่น ให้ยกออกทันทีและใช้น้ำต้มแยกตามจำเป็น')
+    ],
+    substitutions: [
+      ml('Previously frozen octopus is suitable and often more tender because freezing helps break down the muscle structure.', '曾冷凍的章魚很適合使用，而且冷凍有助破壞肌肉結構，常更容易煮嫩。', '冷凍履歴のあるタコも適し、凍結で筋肉組織が弱くなるため柔らかくなりやすいです。', '냉동했던 문어도 적합하며 냉동이 근육 조직을 약하게 해 더 부드럽게 익는 경우가 많습니다.', 'ปลาหมึกยักษ์ที่เคยแช่แข็งใช้ได้ดี และมักนุ่มขึ้นเพราะการแช่แข็งช่วยทำลายโครงสร้างกล้ามเนื้อ'),
+      ml('Use sweet paprika alone for a mild plate, or combine sweet and hot paprika while keeping the total amount unchanged.', '想要溫和可只用甜紅椒粉；也可甜辣混合，但總量維持不變。', '穏やかにするなら甘口パプリカだけ、辛味を足すなら甘口と辛口を合わせ、総量は変えません。', '순하게 하려면 스위트 파프리카만 쓰고, 매콤하게 하려면 스위트와 핫을 섞되 총량은 유지하세요.', 'ถ้าต้องการอ่อนใช้ปาปริกาหวานอย่างเดียว หรือผสมหวานกับเผ็ดโดยคงปริมาณรวมเดิม')
+    ]
   }
 };
 

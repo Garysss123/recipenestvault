@@ -51,6 +51,30 @@ export const spanishRecipeSources = {
     'https://www.saveur.com/article/recipes/spanish-style-toast-with-tomato/',
     'Spanish Sabores — Pan con Tomate',
     'https://spanishsabores.com/super-simple-pan-con-tomate-recipe//'
+  ),
+  'fideua': sources(
+    'Spain.info — Fideuá',
+    'https://www.spain.info/en/recipe/fideua/',
+    'Saveur — Valencian Pasta (Fideuà)',
+    'https://www.saveur.com/article/Recipes/Valencian-Pasta--/'
+  ),
+  'cocido-madrileno': sources(
+    'Spain.info — Madrid Cocido',
+    'https://www.spain.info/en/recipe/cocido-madrileno/',
+    'Cocinatis — Cocido madrileño tradicional',
+    'https://www.cocinatis.com/receta/cocido-madrileno.html'
+  ),
+  'fabada-asturiana': sources(
+    'Spain.info — Fabada',
+    'https://www.spain.info/en/recipe/fabada/',
+    'Saveur — Fabada Asturiana',
+    'https://www.saveur.com/story/recipes/fabada-asturiana-white-beans-with-ham-saffron-sausages/'
+  ),
+  'pulpo-a-la-gallega': sources(
+    'Spain.info — Octopus a feira',
+    'https://www.spain.info/en/recipe/pulpo-feira/',
+    'GialloZafferano — Galician-style Octopus',
+    'https://www.giallozafferano.com/recipes/galician-style-octopus-pulpo-a-la-gallega.html'
   )
 };
 
