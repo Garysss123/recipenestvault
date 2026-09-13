@@ -518,5 +518,176 @@ export const spanishIllustrationSets = [
       "df88a4350e8cf107df8e390738f65691bf48f06574076a7cb9ff70f66dc658f8",
       "a33a2f701730a4afcc3d498799850883492aecd834017a7667a41551eca27303"
     ]
+  },
+  {
+    "recipeId": "bacalao-al-pil-pil",
+    "promptSet": "spanish-cooking-steps-v1",
+    "generator": "OpenAI image_gen",
+    "generatedAt": "2026-09-13",
+    "aiGenerated": true,
+    "nonPhotographic": true,
+    "noPeopleOrHands": true,
+    "visualMatchApproved": true,
+    "excludeFromStructuredData": true,
+    "setComplete": true,
+    "dimensions": "1672x941",
+    "sourceSheetAsset": "assets/recipes/illustration-sheets-generated/spanish/bacalao-al-pil-pil.png",
+    "sourceSheetSha256": "af220c5499b97ee79c5ec30c5dd93598ffa823c87410420eda074e79ce0630fe",
+    "sourceDirectory": "assets/recipes/illustrations-generated/bacalao-al-pil-pil",
+    "grid": {
+      "columns": 3,
+      "rows": 2
+    },
+    "cropGrid": {
+      "width": 1672,
+      "height": 941,
+      "x": [
+        0,
+        557,
+        1115,
+        1672
+      ],
+      "y": [
+        0,
+        471,
+        941
+      ]
+    },
+    "hashes": [
+      "596893d5f7cdbb16a1ca0df66756b6675fefd6d1d6b643373f876d7c65d962e5",
+      "7142bf72311bcd33d9bd069324114d688701a8e36431cbfc8e90c39f246a6db0",
+      "5bcd7008109aafe1c9cc5fec7f392b8736c144c4d4e193ac0d1dc70c55038d9b",
+      "8c2dcb00413abd3634a56d4855c61e24c6ce4026de2f0cac05c1556d0988e66b",
+      "7d4aa3063dac4d0860679204d712194b64fdf6ded66b15c046b5ef66e4cf65a0",
+      "4a7bed68a3460e8b759829ccf32cad69e65672fbb4f13c7738397fdf594b7ac8"
+    ]
+  },
+  {
+    "recipeId": "pisto-manchego",
+    "promptSet": "spanish-cooking-steps-v1",
+    "generator": "OpenAI image_gen",
+    "generatedAt": "2026-09-13",
+    "aiGenerated": true,
+    "nonPhotographic": true,
+    "noPeopleOrHands": true,
+    "visualMatchApproved": true,
+    "excludeFromStructuredData": true,
+    "setComplete": true,
+    "dimensions": "1672x941",
+    "sourceSheetAsset": "assets/recipes/illustration-sheets-generated/spanish/pisto-manchego.png",
+    "sourceSheetSha256": "90cde9eef5c2bc39f6142d5d9f529121684b835a2a23f0e0dd68dc785b64d024",
+    "sourceDirectory": "assets/recipes/illustrations-generated/pisto-manchego",
+    "grid": {
+      "columns": 3,
+      "rows": 2
+    },
+    "cropGrid": {
+      "width": 1672,
+      "height": 941,
+      "x": [
+        0,
+        557,
+        1115,
+        1672
+      ],
+      "y": [
+        0,
+        471,
+        941
+      ]
+    },
+    "hashes": [
+      "bde2e8e87ac443dbb979c1c4b84ce0797fbaa5445bec6352f8bef095cad4095e",
+      "535d5a2c750145f905d2f9a82e31a90ebefa82be5ec7d443e751fc54ef206ef8",
+      "af0f85c10da889aea366680df384be19f700c92486f5674643e4e694c005065f",
+      "89a1e9e425f90605871e198070f53121c149ee68058156a9dc3cfd9b55b46449",
+      "366909757d4544f5cf02bd93b721c5bb03a5929eaf5c0b2ef6943a2898fd4548",
+      "7b2401073387cfdad16fe7f1881c78f82d9dfc15a24ec672cd8c37b9990e36a5"
+    ]
+  },
+  {
+    "recipeId": "marmitako",
+    "promptSet": "spanish-cooking-steps-v1",
+    "generator": "OpenAI image_gen",
+    "generatedAt": "2026-09-13",
+    "aiGenerated": true,
+    "nonPhotographic": true,
+    "noPeopleOrHands": true,
+    "visualMatchApproved": true,
+    "excludeFromStructuredData": true,
+    "setComplete": true,
+    "dimensions": "1672x941",
+    "sourceSheetAsset": "assets/recipes/illustration-sheets-generated/spanish/marmitako.png",
+    "sourceSheetSha256": "1998794d79599d234b64dbe90d898f6c48e48e1efe15be40e17f20b887603be1",
+    "sourceDirectory": "assets/recipes/illustrations-generated/marmitako",
+    "grid": {
+      "columns": 3,
+      "rows": 2
+    },
+    "cropGrid": {
+      "width": 1672,
+      "height": 941,
+      "x": [
+        0,
+        557,
+        1115,
+        1672
+      ],
+      "y": [
+        0,
+        471,
+        941
+      ]
+    },
+    "hashes": [
+      "c02d0afbd3cdaf43918729e5ed02cbd9456f213abd7af131f99dad53e0b04f14",
+      "7ff0e636baf3f1ba42d6e9799d6a4f5ce86156cf97294033bebccf70a9d994c9",
+      "66db8905c746af63a84ced2956b52db4e6fb179626280b6adbb99a5e5fdd85be",
+      "b3da60735fbb626b345095f0aadd599af6d68522a4951769e14200ca97d68fb6",
+      "5198c447b3d69c8d787ef8cd3ff62c14e11c754f8d68b0db0e4b1870916cc500",
+      "e77aae5344fd25a3b837ddb26410325ca850ff4b561ad49753fe2fc1f6c4df86"
+    ]
+  },
+  {
+    "recipeId": "calamares-a-la-romana",
+    "promptSet": "spanish-cooking-steps-v1",
+    "generator": "OpenAI image_gen",
+    "generatedAt": "2026-09-13",
+    "aiGenerated": true,
+    "nonPhotographic": true,
+    "noPeopleOrHands": true,
+    "visualMatchApproved": true,
+    "excludeFromStructuredData": true,
+    "setComplete": true,
+    "dimensions": "1672x941",
+    "sourceSheetAsset": "assets/recipes/illustration-sheets-generated/spanish/calamares-a-la-romana.png",
+    "sourceSheetSha256": "5ee0cea88050bed397e63af7d76c91aea82d2f028942820eab6ea2454628cf47",
+    "sourceDirectory": "assets/recipes/illustrations-generated/calamares-a-la-romana",
+    "grid": {
+      "columns": 3,
+      "rows": 2
+    },
+    "cropGrid": {
+      "width": 1672,
+      "height": 941,
+      "x": [
+        0,
+        557,
+        1115,
+        1672
+      ],
+      "y": [
+        0,
+        471,
+        941
+      ]
+    },
+    "hashes": [
+      "0b723b6659598608f6a1d757668f717d0d3729c39a0036442b96d72576e8063f",
+      "03481fffd7ee967e8fa44a9effdc6222f877756bf3e55b741416411d0eceaaad",
+      "ed3a0d166deede384a0e2cb1196909a39a1c38d21ac62e970720e613c40240a8",
+      "ab1dcd5c7babca1701e3d80b05e1784c6240a9b7ddf12c247d9a659983637f25",
+      "d169e6ba61ae84b83feb2300d4efcca1312cd08f3cb88b2d7b4bc20a691a1008"
+    ]
   }
 ];

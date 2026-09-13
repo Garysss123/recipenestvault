@@ -325,36 +325,104 @@
       "columns": 3,
       "rows": 2,
       "usedPanels": 6,
-      "reviewed": false,
-      "sceneHash": "27b0468b53b19e7bb1aa456c7cb4ca4dba8ec627bdff9b5e18de320ede71e61b",
-      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Bacalao al Pil-Pil.\nCell 1: Four desalted skin-on cod loins resting dry on a tray after cold-water soaking, flesh opaque ivory and surface free of water; no hands.\nCell 2: A wide casserole of clear golden olive oil with pale-golden garlic slices and red chilli just removed to a small dish, thermometer near 70°C.\nCell 3: Gently poached cod loins on a warm plate, intact skin and moist ivory flakes visible, with a small pool of translucent gelatin-rich fish juices.\nCell 4: A measuring jug of warm golden infused oil beside a clean casserole containing a small measured pool of translucent cod juices, ready to emulsify.\nCell 5: A wide casserole holding a thick glossy pale-golden pil-pil emulsion with fine creamy ripples and no visible oil separation.\nCell 6: Finished bacalao al pil-pil: four moist skin-on cod loins sitting in a glossy pale-golden emulsified sauce, topped sparsely with golden garlic and red chilli."
+      "reviewed": true,
+      "sceneHash": "581cb8f1a2d610115f60b5b4f8dbda685549c016a2cc9d7777a0926a3850fa94",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Bacalao al Pil-Pil.\nCell 1: Four desalted skin-on cod loins resting dry on a tray after cold-water soaking, flesh opaque ivory and surface free of water; no hands.\nCell 2: A wide casserole of clear golden olive oil with pale-golden garlic slices and red chilli resting in a small dish beside it, plus a plain kitchen thermometer with no readable scale or digits.\nCell 3: Gently poached cod loins on a warm plate, intact skin and moist ivory flakes visible, with a small pool of translucent gelatin-rich fish juices.\nCell 4: A measuring jug of warm golden infused oil beside a clean casserole containing a small measured pool of translucent cod juices, ready to emulsify.\nCell 5: A wide casserole holding a thick glossy pale-golden pil-pil emulsion with fine creamy ripples and no visible oil separation.\nCell 6: Finished bacalao al pil-pil: four moist skin-on cod loins sitting in a glossy pale-golden emulsified sauce, topped sparsely with golden garlic and red chilli.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/spanish/bacalao-al-pil-pil.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/spanish/bacalao-al-pil-pil.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          471,
+          941
+        ]
+      }
     },
     {
       "recipeId": "pisto-manchego",
       "columns": 3,
       "rows": 2,
       "usedPanels": 6,
-      "reviewed": false,
+      "reviewed": true,
       "sceneHash": "b70de9bcb9466d9fe7c434aa437c45bdfacc961795b9b0a331d83c1c5310769b",
-      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Pisto Manchego.\nCell 1: Separate neat piles of 1 cm onion and pepper dice and 1.5 cm courgette dice resting dry in a colander, with chopped peeled tomatoes in a bowl.\nCell 2: A wide sauté pan with softened onion, green pepper and red pepper dice showing light golden edges, with no tomato yet.\nCell 3: Courgette dice browning in the centre of the pan while softened onion and peppers sit around the edge, vegetables still distinct.\nCell 4: Thick glossy red pisto filling a wide pan, diced peppers and courgette still visible within the reduced tomato, with almost no loose liquid.\nCell 5: Finished pisto thick enough to sit in a soft mound on a spoon, glossy red-orange with distinct tender vegetable dice.\nCell 6: Four servings of warm pisto with distinct red, green and courgette pieces, each topped with a softly cooked egg with fully set white."
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Pisto Manchego.\nCell 1: Separate neat piles of 1 cm onion and pepper dice and 1.5 cm courgette dice resting dry in a colander, with chopped peeled tomatoes in a bowl.\nCell 2: A wide sauté pan with softened onion, green pepper and red pepper dice showing light golden edges, with no tomato yet.\nCell 3: Courgette dice browning in the centre of the pan while softened onion and peppers sit around the edge, vegetables still distinct.\nCell 4: Thick glossy red pisto filling a wide pan, diced peppers and courgette still visible within the reduced tomato, with almost no loose liquid.\nCell 5: Finished pisto thick enough to sit in a soft mound on a spoon, glossy red-orange with distinct tender vegetable dice.\nCell 6: Four servings of warm pisto with distinct red, green and courgette pieces, each topped with a softly cooked egg with fully set white.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/spanish/pisto-manchego.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/spanish/pisto-manchego.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          471,
+          941
+        ]
+      }
     },
     {
       "recipeId": "marmitako",
       "columns": 3,
       "rows": 2,
       "usedPanels": 6,
-      "reviewed": false,
-      "sceneHash": "a1e1ced5c078eef391c590364325841ccf2105fcf09e5f89f8a41ab598292441",
-      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Marmitako.\nCell 1: A wide heavy pot with very soft translucent onion and green pepper in olive oil, lightly coloured but not browned.\nCell 2: A reduced red-orange tomato, garlic and pepper sofrito in a heavy pot after white wine has simmered down, glossy but not watery.\nCell 3: Nearly tender irregular potato chunks simmering in a lightly thickened red-golden fish broth, with some broken potato edges dissolving into the liquid.\nCell 4: Marmitako broth turning a deeper red-orange as smooth roasted-red-pepper puree is stirred around nearly tender potato chunks.\nCell 5: Large 3 cm tuna cubes just cooked opaque on the outside among tender potatoes in red-golden marmitako broth, pieces still intact and juicy.\nCell 6: Finished Basque marmitako in a rustic bowl, tender potato chunks and juicy tuna cubes in lightly thickened red-golden broth with a small parsley finish."
+      "reviewed": true,
+      "sceneHash": "eae32492173684666273399c651265f13133c82945ef8b3f4d90dbb24a7541ae",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Marmitako.\nCell 1: A wide heavy pot with very soft translucent onion and green pepper in olive oil, lightly coloured but not browned.\nCell 2: A reduced red-orange tomato, garlic and pepper sofrito in a heavy pot after white wine has simmered down, glossy but not watery.\nCell 3: Nearly tender irregular potato chunks simmering in a lightly thickened red-golden fish broth, with some broken potato edges dissolving into the liquid.\nCell 4: A deeper red-orange marmitako broth after smooth roasted-red-pepper puree has been fully incorporated, surrounding nearly tender potato chunks with no visible unmixed puree.\nCell 5: Large 3 cm tuna cubes just cooked opaque on the outside among tender potatoes in red-golden marmitako broth, pieces still intact and juicy.\nCell 6: Finished Basque marmitako in a rustic bowl, tender potato chunks and juicy tuna cubes in lightly thickened red-golden broth with a small parsley finish.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/spanish/marmitako.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/spanish/marmitako.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          471,
+          941
+        ]
+      }
     },
     {
       "recipeId": "calamares-a-la-romana",
       "columns": 3,
       "rows": 2,
       "usedPanels": 5,
-      "reviewed": false,
-      "sceneHash": "5b6e57a850d8fac801d24c3cf48cfc72181a8beeb5f0f944e6628fc1ee8fa217",
-      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Calamares a la Romana.\nCell 1: Dry 1 cm squid rings and small tentacle clusters arranged separately on a chilled tray, surface matte with no visible moisture.\nCell 2: A cold pale batter in a metal bowl nested over ice, visibly light with a few small flour lumps, beside a separate dish of dry flour.\nCell 3: A deep heavy pan of clean frying oil with a thermometer reading 180°C and an empty draining rack positioned beside it.\nCell 4: A small batch of squid rings frying separately in hot oil, thin batter puffed and turning evenly golden with plenty of space between pieces.\nCell 5: Finished calamares a la romana on a simple platter, pale-deep golden crisp rings and tentacle pieces in one loose layer with lemon wedges beside them."
+      "reviewed": true,
+      "sceneHash": "6301e02b1206f7e0fdc3d8aa42a71394d852d0965977c8a814102dbf00195ec8",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Calamares a la Romana.\nCell 1: Dry 1 cm squid rings and small tentacle clusters arranged separately on a chilled tray, surface matte with no visible moisture.\nCell 2: A cold pale batter in a metal bowl nested over ice, visibly light with a few small flour lumps, beside a separate dish of dry flour.\nCell 3: A deep heavy pan of clean frying oil with a plain kitchen thermometer resting in it, no readable scale or digits, and an empty draining rack positioned beside it.\nCell 4: A small batch of squid rings frying separately in hot oil, thin batter puffed and turning evenly golden with plenty of space between pieces.\nCell 5: Finished calamares a la romana on a simple platter, pale-deep golden crisp rings and tentacle pieces in one loose layer with lemon wedges beside them.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/spanish/calamares-a-la-romana.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/spanish/calamares-a-la-romana.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          471,
+          941
+        ]
+      }
     },
     {
       "recipeId": "churros-con-chocolate",
