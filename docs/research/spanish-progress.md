@@ -18,10 +18,10 @@ Goal: publish 20 Spanish recipes at the same quality bar as the French/Italian c
 | A | `tortilla-espanola` | Tortilla Española | Spain | drafted + checked | 2/2 | pending | 6 |
 | A | `gazpacho-andaluz` | Gazpacho Andaluz | Andalusia | drafted + checked | 2/2 | pending | 4 |
 | A | `salmorejo-cordobes` | Salmorejo Cordobés | Córdoba, Andalusia | drafted + checked | 2/2 | pending | 5 |
-| B | `patatas-bravas` | Patatas Bravas | Madrid / Spain | pending | 0/2 | pending | pending |
-| B | `croquetas-de-jamon` | Croquetas de Jamón | Spain | pending | 0/2 | pending | pending |
-| B | `gambas-al-ajillo` | Gambas al Ajillo | Spain | pending | 0/2 | pending | pending |
-| B | `pan-con-tomate` | Pan con Tomate / Pa amb Tomàquet | Catalonia | pending | 0/2 | pending | pending |
+| B | `patatas-bravas` | Patatas Bravas | Madrid / Spain | drafted + checked | 2/2 | pending | 6 |
+| B | `croquetas-de-jamon` | Croquetas de Jamón | Spain | drafted + checked | 2/2 | pending | 8 |
+| B | `gambas-al-ajillo` | Gambas al Ajillo | Spain | drafted + checked | 2/2 | pending | 4 |
+| B | `pan-con-tomate` | Pan con Tomate / Pa amb Tomàquet | Catalonia | drafted + checked | 2/2 | pending | 4 |
 | C | `fideua` | Fideuà | Valencia | pending | 0/2 | pending | pending |
 | C | `cocido-madrileno` | Cocido Madrileño | Madrid | pending | 0/2 | pending | pending |
 | C | `fabada-asturiana` | Fabada Asturiana | Asturias | pending | 0/2 | pending | pending |
@@ -37,6 +37,6 @@ Goal: publish 20 Spanish recipes at the same quality bar as the French/Italian c
 
 ## Current phase
 
-Batch A recipe text is drafted and passed the compact five-locale/source/timing/structure check. Batch B source research is next. Nothing Spanish is globally published until all 20 recipes, photographs and illustration mappings pass their gates.
+Batches A and B are drafted and pass `node scripts/audit-spanish-drafts.mjs --content-only`. The current eight natural method lengths are 7, 6, 4, 5, 6, 8, 4, 4. Batch C source research is next. Nothing Spanish is globally published until all 20 recipes, photographs and illustration mappings pass their gates.
 
 Last known base commit before Spanish work: `f459a49 Enforce natural recipe method distributions`.

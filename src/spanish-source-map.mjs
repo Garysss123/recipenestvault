@@ -27,6 +27,30 @@ export const spanishRecipeSources = {
     'https://www.spain.info/en/recipe/salmorejo/',
     'Good Food — Salmorejo',
     'https://www.bbcgoodfood.com/recipes/salmorejo-0'
+  ),
+  'patatas-bravas': sources(
+    'Good Food — Patatas bravas',
+    'https://www.bbcgoodfood.com/recipes/patatas-bravas-0',
+    'Saveur — Patatas Bravas',
+    'https://www.saveur.com/article/recipes/patatas-bravas/'
+  ),
+  'croquetas-de-jamon': sources(
+    'Foods & Wines from Spain — Croquetas de Jamón',
+    'https://www.foodswinesfromspain.com/en/fws-academy/recipes/2024/may/croquetas-de-jamon',
+    'Spanish Sabores — Croquetas de Jamón Serrano',
+    'https://spanishsabores.com/croquetas-de-jamon-serrano-recipe-ham-croquettes/comment-page-1/'
+  ),
+  'gambas-al-ajillo': sources(
+    'Good Food — Gambas al ajillo',
+    'https://www.bbcgoodfood.com/recipes/gambas-al-ajillo',
+    'Saveur — Gambas Al Ajillo',
+    'https://www.saveur.com/article/Recipes/Chile-Garlic-Shrimp/'
+  ),
+  'pan-con-tomate': sources(
+    'Saveur — Pan con Tomate',
+    'https://www.saveur.com/article/recipes/spanish-style-toast-with-tomato/',
+    'Spanish Sabores — Pan con Tomate',
+    'https://spanishsabores.com/super-simple-pan-con-tomate-recipe//'
   )
 };
 

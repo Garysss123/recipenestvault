@@ -46,6 +46,48 @@ const profiles = {
       ml('Use a mild wine vinegar when Sherry vinegar is unavailable, adding it gradually because acidity differs by brand.', '買不到雪莉醋時可用溫和葡萄酒醋，因品牌酸度不同要分次加入。', 'シェリービネガーがなければ穏やかなワインビネガーを使い、酸度が違うため少しずつ加えます。', '셰리 식초가 없으면 순한 와인 식초를 조금씩 넣으세요. 제품마다 산도가 다릅니다.', 'ถ้าไม่มีเชอร์รี่วินีการ์ ใช้น้ำส้มสายชูไวน์รสอ่อนและค่อย ๆ เติมเพราะความเปรี้ยวต่างกัน'),
       ml('Day-old white bread can replace rustic country bread; trim very hard crust if it will not blend smooth.', '鄉村白麵包可改用隔夜白麵包；若外殼太硬、難打細可先切除。', '田舎パンの代わりに一日置いた白パンを使えます。硬い耳が滑らかにならない場合は取り除きます。', '시골빵 대신 하루 지난 흰빵을 쓸 수 있고 너무 단단한 껍질은 잘 갈리지 않으면 제거하세요.', 'ใช้ขนมปังขาวค้างคืนแทนขนมปังชนบทได้ ตัดเปลือกแข็งมากออกถ้าปั่นไม่เนียน')
     ]
+  },
+  fried: {
+    tips: [
+      ml('Fry in small batches and let the oil return to the stated temperature between batches.', '少量分批油炸，每批之間讓油溫回到食譜指定溫度。', '少量ずつ揚げ、次の回の前に油温を指定温度まで戻します。', '적은 양씩 튀기고 다음 배치 전에 기름 온도를 지정 온도로 회복시키세요.', 'ทอดทีละน้อยและรอให้น้ำมันกลับสู่อุณหภูมิที่กำหนดก่อนรอบถัดไป'),
+      ml('Drain fried food in one layer so escaping steam does not soften the crust.', '炸好後單層瀝油，避免堆疊造成蒸氣回軟外皮。', '揚げ物は重ねず一層で油を切り、蒸気で衣が柔らかくならないようにします。', '튀긴 음식은 겹치지 말고 한 겹으로 기름을 빼 수증기로 눅눅해지지 않게 하세요.', 'สะเด็ดของทอดเป็นชั้นเดียวเพื่อไม่ให้ไอน้ำทำให้ผิวนิ่ม')
+    ],
+    commonMistakes: [
+      ml('Oil that is too cool makes food greasy; oil that is too hot darkens the exterior before the centre is ready.', '油溫太低會吸油，太高則外層先焦而中心尚未完成。', '油温が低すぎると油っぽくなり、高すぎると中が整う前に外側だけ濃く色づきます。', '기름이 너무 차가우면 기름지고 너무 뜨거우면 속이 준비되기 전에 겉만 진하게 탑니다.', 'น้ำมันเย็นเกินไปทำให้อมน้ำมัน ร้อนเกินไปทำให้ผิวนอกเข้มก่อนตรงกลางพร้อม'),
+      ml('Do not crowd the fryer; the sudden temperature drop prevents crisp browning.', '不要把炸鍋塞滿；油溫突然下降會妨礙酥脆上色。', '一度に詰め込みすぎると油温が急に下がり、カリッと色づきません。', '튀김 냄비를 빽빽하게 채우면 온도가 급격히 떨어져 바삭하게 갈색 나지 않습니다.', 'อย่าใส่ของทอดแน่นหม้อ เพราะอุณหภูมิลดฮวบและผิวไม่กรอบ')
+    ],
+    substitutions: [
+      ml('Use another neutral high-heat frying oil if olive oil is impractical, keeping the same temperature targets.', '若不方便使用橄欖油，可換耐高溫中性油，但維持相同油溫目標。', 'オリーブ油が使いにくい場合は高温向けの中性油に替え、温度目標は同じにします。', '올리브유 사용이 어렵다면 고온용 중성유로 바꾸되 같은 온도 기준을 유지하세요.', 'ถ้าใช้น้ำมันมะกอกไม่สะดวก เปลี่ยนเป็นน้ำมันเป็นกลางทนความร้อนสูงโดยคงอุณหภูมิเดิม'),
+      ml('When replacing cured Spanish ham, choose another dry-cured ham and reduce added salt until the filling has been tasted.', '替換西班牙風乾火腿時選其他乾式熟成火腿，並在試過餡料前減少額外加鹽。', 'スペインの生ハムを替えるなら別の乾燥熟成ハムを使い、具を味見するまで追加の塩は控えます。', '스페인 건조 숙성 햄 대신 다른 건조 숙성 햄을 쓰고 속을 맛보기 전까지 추가 소금은 줄이세요.', 'ถ้าเปลี่ยนแฮมสเปน ให้ใช้แฮมบ่มแห้งชนิดอื่นและลดเกลือเพิ่มจนชิมไส้แล้ว')
+    ]
+  },
+  seafood: {
+    tips: [
+      ml('Dry seafood thoroughly before it reaches hot oil so it sears instead of steaming and splattering.', '海鮮下熱油前徹底擦乾，才能煎香而不是出水蒸煮並大量噴油。', '魚介は熱い油に入れる前にしっかり水気を拭き、蒸し煮や油はねを防いで焼き付けます。', '해산물은 뜨거운 기름에 넣기 전 충분히 말려 찌듯 익거나 기름이 튀지 않고 구워지게 하세요.', 'ซับอาหารทะเลให้แห้งก่อนลงน้ำมันร้อน เพื่อให้จี่แทนนึ่งและลดน้ำมันกระเด็น'),
+      ml('Stop cooking as soon as the seafood reaches its doneness cue; carryover heat continues after the pan leaves the burner.', '海鮮達到熟度線索就停火；鍋子離火後餘熱仍會繼續加熱。', '魚介は指定の火の通りに達したら止めます。火から外しても余熱で加熱が続きます。', '해산물이 익힘 기준에 도달하면 바로 불을 끄세요. 팬을 내려도 잔열로 계속 익습니다.', 'หยุดปรุงทันทีเมื่ออาหารทะเลถึงจุดสุก เพราะความร้อนคงค้างยังทำให้สุกต่อหลังยกจากไฟ')
+    ],
+    commonMistakes: [
+      ml('Burnt garlic turns the oil bitter; lower the heat as soon as the slices begin to colour.', '大蒜焦掉會讓油變苦；蒜片一開始上色就要立刻降火。', 'にんにくを焦がすと油が苦くなるため、色づき始めたらすぐ火を弱めます。', '마늘이 타면 기름이 써지므로 색이 나기 시작하면 바로 불을 낮추세요.', 'กระเทียมไหม้ทำให้น้ำมันขม จึงลดไฟทันทีเมื่อเริ่มมีสี'),
+      ml('Overcooked prawns curl tightly and become rubbery; cook only until opaque and just firm.', '蝦煮過頭會緊縮成圈並變韌；只煮到不透明且剛有彈性。', 'エビは加熱しすぎると強く丸まり硬くなるので、不透明で弾力が出たところで止めます。', '새우를 너무 익히면 세게 말리고 질겨지므로 불투명하고 막 탄력이 생길 때까지만 익히세요.', 'กุ้งสุกเกินจะงอแน่นและเหนียว ปรุงเพียงจนทึบและเด้งพอดี')
+    ],
+    substitutions: [
+      ml('Use similarly sized raw prawns or shrimp so the cooking time remains predictable.', '可換尺寸相近的生蝦，讓烹調時間維持可預測。', '同じくらいの大きさの生エビなら、加熱時間を合わせやすくなります。', '비슷한 크기의 생새우를 써야 조리 시간을 예측하기 쉽습니다.', 'ใช้กุ้งดิบขนาดใกล้เคียงเพื่อให้เวลาปรุงคาดเดาได้'),
+      ml('Use another mild dried chilli when cayenne is unavailable, adjusting the amount to its heat.', '買不到卡宴辣椒時可用其他溫和乾辣椒，依辣度調整份量。', 'カイエンがなければ別の穏やかな乾燥唐辛子を使い、辛さに応じて量を調整します。', '카이엔이 없으면 다른 순한 건고추를 쓰고 매운 정도에 맞춰 양을 조절하세요.', 'ถ้าไม่มีพริกคาเยน ใช้พริกแห้งรสอ่อนชนิดอื่นและปรับปริมาณตามความเผ็ด')
+    ]
+  },
+  bread: {
+    tips: [
+      ml('Use very ripe tomatoes and sturdy bread; with so few ingredients, quality and texture are the whole dish.', '使用完全成熟的番茄與結實麵包；材料很少，原料品質與口感就是整道料理。', '材料が少ない料理なので、完熟トマトとしっかりしたパンを使い、素材と食感を大切にします。', '재료가 적은 음식이므로 완숙 토마토와 탄탄한 빵을 써야 재료 품질과 식감이 살아납니다.', 'ใช้มะเขือเทศสุกจัดและขนมปังเนื้อแน่น เพราะมีวัตถุดิบน้อย คุณภาพและสัมผัสจึงเป็นหัวใจ'),
+      ml('Top the toast immediately before serving so tomato juice flavours the bread without making it soggy.', '上桌前才把番茄放上吐司，讓汁液入味但不把麵包泡軟。', '供する直前にトマトをのせ、汁をなじませつつパンがふやけないようにします。', '내기 직전에 토마토를 올려 즙 맛은 배게 하되 빵이 눅눅해지지 않게 하세요.', 'ใส่มะเขือเทศบนขนมปังก่อนเสิร์ฟทันที ให้น้ำซึมรสแต่ไม่ทำให้ขนมปังแฉะ')
+    ],
+    commonMistakes: [
+      ml('Pale, soft toast cannot support the tomato; toast until the cut surface is dry and distinctly golden.', '麵包若只烤到蒼白柔軟撐不住番茄；切面要烤乾並明顯金黃。', '白く柔らかいままではトマトを支えられないため、切り口が乾いてはっきり金色になるまで焼きます。', '빵이 창백하고 부드러우면 토마토를 받치지 못하므로 자른 면이 마르고 뚜렷한 금빛이 날 때까지 구우세요.', 'ขนมปังที่ยังซีดนุ่มรับมะเขือเทศไม่ไหว ต้องปิ้งจนหน้าตัดแห้งและทองชัด'),
+      ml('Too much raw garlic dominates the tomato; rub the toasted surface lightly and taste before adding more.', '生蒜太多會蓋過番茄；在烤面輕擦即可，試味後再決定是否增加。', '生にんにくを強くこすりすぎるとトマトを消すので、軽くこすって味を見てから足します。', '생마늘이 많으면 토마토 맛을 덮으므로 구운 면에 가볍게 문지르고 맛본 뒤 더하세요.', 'กระเทียมดิบมากเกินจะกลบมะเขือเทศ ให้ถูเบา ๆ แล้วชิมก่อนเพิ่ม')
+    ],
+    substitutions: [
+      ml('Use another rustic, open-crumb bread that can toast firmly if Catalan country bread is unavailable.', '買不到加泰隆尼亞鄉村麵包時，可用其他能烤得結實、孔洞較大的鄉村麵包。', 'カタルーニャの田舎パンがなければ、しっかり焼ける気泡のある素朴なパンで代用できます。', '카탈루냐 시골빵이 없으면 단단하게 구워지는 기공 있는 러스틱 빵으로 바꿀 수 있습니다.', 'ถ้าไม่มีขนมปังชนบทคาตาลัน ใช้ขนมปังชนบทเนื้อโปร่งที่ปิ้งให้แข็งได้'),
+      ml('Any flavourful extra-virgin olive oil can replace a Spanish oil; avoid neutral refined oil in this uncooked finish.', '可用任何風味佳的特級初榨橄欖油替代西班牙產油；這道生食收尾不要用無味精製油。', 'スペイン産でなくても風味のよいエクストラバージン油を使えます。仕上げには無味の精製油を避けます。', '스페인산이 아니어도 풍미 좋은 엑스트라 버진 올리브유를 쓰고 무향 정제유는 피하세요.', 'ใช้น้ำมันมะกอกเอ็กซ์ตร้าเวอร์จินรสดีจากที่อื่นได้ แต่เลี่ยงน้ำมันกลั่นรสกลางสำหรับราดดิบ')
+    ]
   }
 };
 
