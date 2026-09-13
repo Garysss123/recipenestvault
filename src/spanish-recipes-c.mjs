@@ -75,8 +75,8 @@ export const spanishRecipesC = [
     ],
     storage: cookedStorage,
     cultureNote: ml('The defining Madrid service is the three vuelcos: broth with noodles, then chickpeas and vegetables, then meats. Keeping the components separate turns one long-cooked pot into a sequence of courses rather than a single mixed bowl.', '馬德里 cocido 的代表性吃法是三個 vuelcos：細麵湯、鷹嘴豆與蔬菜、最後是肉類。分開上桌讓同一鍋長燉料理變成連續三道，而不是全部混在一碗。', 'マドリードの特徴は三つのブエルコで、麺入りだし、ひよこ豆と野菜、肉類の順に供します。一鍋を混ぜたまま出さず、長時間煮た料理を連続するコースにします。', '마드리드 코시도의 특징은 세 번의 부엘코로, 면 국물, 병아리콩과 채소, 고기 순서입니다. 한 냄비를 섞어 한 그릇에 내지 않고 연속 코스로 만듭니다.', 'เอกลักษณ์มาดริดคือสาม vuelcos: น้ำซุปกับเส้น ถั่วกับผัก แล้วเนื้อ การแยกเสิร์ฟทำให้หม้อเคี่ยวยาวหนึ่งหม้อกลายเป็นลำดับคอร์สแทนชามรวม'),
-    imageAlt: ml('Madrid cocido served as noodle soup, chickpeas with vegetables, and mixed meats', '馬德里 cocido 分成細麵湯、鷹嘴豆蔬菜與綜合肉類三道', '麺スープ、ひよこ豆と野菜、肉類の三皿で供するマドリードのコシード', '면 수프, 병아리콩 채소, 혼합 고기 세 코스로 낸 마드리드 코시도', 'โกซีโดมาดริดเสิร์ฟเป็นซุปเส้น ถั่วกับผัก และเนื้อรวมสามจาน'),
-    visualSpec: 'A traditional three-part Cocido Madrileño presentation: clear golden fine-noodle soup, a separate platter of chickpeas with carrots, potatoes and cabbage, and a third platter of tender beef, chicken, pork, chorizo, morcilla and marrow bones; no tomato-red broth.'
+    imageAlt: ml('Madrid cocido served in separate courses with broth, chickpeas, vegetables and mixed meats', '馬德里 cocido 分段上桌，包含清湯、鷹嘴豆、蔬菜與綜合肉類', 'だし、ひよこ豆、野菜、肉類を分けて供するマドリードのコシード', '육수, 병아리콩, 채소, 혼합 고기를 나눠 낸 마드리드 코시도', 'โกซีโดมาดริดเสิร์ฟแยกส่วนเป็นน้ำซุป ถั่วชิกพี ผัก และเนื้อรวม'),
+    visualSpec: 'A traditional separated-course Cocido Madrileño presentation: clear golden broth or noodle soup served apart from chickpeas, carrots, potatoes, cabbage and the tender mixed meats and sausages; the solids may share one platter or be divided across later vuelcos; no tomato-red broth.'
   }),
 
   r({
