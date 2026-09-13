@@ -186,6 +186,20 @@ const profiles = {
       ml('Cold sparkling water can replace part of the egg-based liquid for a lighter batter while keeping the stated total liquid amount.', '想要較輕麵糊，可用冰氣泡水替代部分蛋液液體，但總液體量維持食譜設定。', '軽い衣にしたい場合は卵液の一部を冷たい炭酸水に替え、総液量はレシピ通りに保ちます。', '더 가벼운 반죽은 달걀 기반 액체 일부를 차가운 탄산수로 바꾸되 총 액체량은 유지하세요.', 'ใช้น้ำโซดาเย็นแทนของเหลวไข่บางส่วนได้เพื่อแป้งเบา โดยคงปริมาณของเหลวรวมตามสูตร'),
       ml('Use a neutral high-heat oil if mild olive oil is unavailable; keep the same frying temperature.', '沒有淡味橄欖油時可用中性耐高溫油，維持相同炸油溫度。', '穏やかなオリーブ油がなければ高温向けの中性油を使い、揚げ温度は同じにします。', '순한 올리브유가 없으면 고온용 중성유를 쓰고 같은 튀김 온도를 유지하세요.', 'ถ้าไม่มีน้ำมันมะกอกรสอ่อน ใช้น้ำมันเป็นกลางทนร้อนสูงและรักษาอุณหภูมิทอดเดิม')
     ]
+  },
+  dessert: {
+    tips: [
+      ml('Weigh the key ingredients rather than relying on volume measures; custards and cakes are sensitive to ratio changes.', '主要材料請秤重，不只靠容量估算；卡士達與蛋糕對比例變化很敏感。', '主要材料は容量ではなく重量で量ります。カスタードやケーキは配合の変化に敏感です。', '핵심 재료는 부피보다 무게로 재세요. 커스터드와 케이크는 비율 변화에 민감합니다.', 'ชั่งวัตถุดิบหลักแทนการกะปริมาตร เพราะคัสตาร์ดและเค้กไวต่อการเปลี่ยนสัดส่วน'),
+      ml('Respect the stated cooling or resting time; many Spanish desserts finish setting after the heat is turned off.', '務必給足冷卻或靜置時間；許多西班牙甜點是在停止加熱後才完成定型。', '指定の冷却・休ませ時間を守ります。スペイン菓子の多くは加熱後に固まります。', '지정된 냉각·휴지 시간을 지키세요. 많은 스페인 디저트는 가열이 끝난 뒤 굳습니다.', 'ให้เวลาพักหรือแช่เย็นตามที่ระบุ เพราะขนมสเปนหลายชนิดเซ็ตตัวหลังหยุดให้ความร้อน')
+    ],
+    commonMistakes: [
+      ml('Do not overheat egg-based mixtures; excessive heat can scramble custard or dry an almond cake before the centre sets.', '蛋液類不要過熱；溫度過高會讓卡士達結塊，或讓杏仁蛋糕中心尚未定型就先變乾。', '卵を使う生地を加熱しすぎないでください。カスタードは分離し、アーモンドケーキは中心が固まる前に乾きます。', '달걀 혼합물을 과열하지 마세요. 커스터드는 응고되고 아몬드 케이크는 중심이 굳기 전에 마를 수 있습니다.', 'อย่าให้ส่วนผสมไข่ร้อนเกินไป คัสตาร์ดอาจจับตัวหรือเค้กอัลมอนด์แห้งก่อนกลางเซ็ต'),
+      ml('Do not judge doneness by colour alone; use the stated texture cue, temperature, skewer or set test for the specific dessert.', '不要只看顏色判斷熟度；依該甜點指定的質地、溫度、竹籤或凝固定型線索確認。', '色だけで判断せず、その菓子で指定した食感、温度、串、固まり具合を確認します。', '색만 보고 익힘을 판단하지 말고 해당 디저트의 식감, 온도, 꼬치 또는 굳힘 기준을 확인하세요.', 'อย่าดูสีอย่างเดียว ให้ใช้เนื้อสัมผัส อุณหภูมิ ไม้เสียบ หรือจุดเซ็ตตามที่สูตรระบุ')
+    ],
+    substitutions: [
+      ml('When replacing whole milk, use another full-fat dairy product with similar fat and protein so the texture stays predictable.', '替換全脂牛奶時，選脂肪與蛋白質接近的全脂乳製品，質地才較可預測。', '全乳を替える場合は脂肪分とたんぱく質が近い全脂乳製品を使うと食感を保ちやすくなります。', '전지 우유를 바꿀 때는 지방과 단백질이 비슷한 전지 유제품을 써야 식감을 예측하기 쉽습니다.', 'ถ้าเปลี่ยนนมสด ให้ใช้ผลิตภัณฑ์นมไขมันเต็มที่ที่มีไขมันและโปรตีนใกล้เคียงเพื่อให้เนื้อสัมผัสคงที่'),
+      ml('Use fresh citrus zest of the same type when possible; bottled juice changes acidity and cannot replace aromatic peel one-for-one.', '柑橘香氣盡量用同類新鮮果皮；瓶裝果汁的酸度不同，不能一比一取代芳香果皮。', '柑橘の香りは同じ種類の新鮮な皮を使い、酸度の違う市販果汁を香りの皮と同量置換しません。', '감귤 향은 가능하면 같은 종류의 신선한 제스트를 쓰고 산도가 다른 병주스로 향긋한 껍질을 1:1 대체하지 마세요.', 'กลิ่นส้มควรใช้ผิวสดชนิดเดียวกัน น้ำผลไม้ขวดมีความเป็นกรดต่างกันและแทนผิวหอมแบบหนึ่งต่อหนึ่งไม่ได้')
+    ]
   }
 };
 

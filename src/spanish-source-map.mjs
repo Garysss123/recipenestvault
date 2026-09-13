@@ -99,6 +99,30 @@ export const spanishRecipeSources = {
     'https://www.rtve.es/television/20230525/receta-calamares-romana-masterchef/2447046.shtml',
     'Directo al Paladar — Calamares a la romana de Joan Roca',
     'https://www.directoalpaladar.com/recetas-de-pescados-y-mariscos/esta-receta-calamares-a-romana-joan-roca-sus-claves-queden-perfectos-video-incluido/amp'
+  ),
+  'churros-con-chocolate': sources(
+    'Spain.info — Churros',
+    'https://www.spain.info/en/recipe/churros/',
+    'Spanish Sabores — Authentic Spanish Churros',
+    'https://spanishsabores.com/homemade-churros-recipe/'
+  ),
+  'crema-catalana': sources(
+    'Spain.info — Catalan custard',
+    'https://www.spain.info/en/recipe/crema-catalana/',
+    'Spanish Sabores — Authentic Crema Catalana',
+    'https://spanishsabores.com/homemade-spanish-crema-catalana-recipe/'
+  ),
+  'tarta-de-santiago': sources(
+    'Spain.info — Tarta de Santiago',
+    'https://www.spain.info/en/recipe/tarta-santiago/',
+    'Foods & Wines from Spain — Tarta de Santiago',
+    'https://www.foodswinesfromspain.com/en/fws-academy/recipes/2020/march/video-recipe--tarta-de-santiago--almond-cake-'
+  ),
+  'arroz-con-leche': sources(
+    'Spain.info — Arroz con leche',
+    'https://www.spain.info/es/receta/arroz-con-leche/',
+    'Saveur — Asturian Arroz Con Leche',
+    'https://www.saveur.com/recipes/arroz-con-leche-rice-pudding/'
   )
 };
 

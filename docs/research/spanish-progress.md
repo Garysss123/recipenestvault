@@ -30,13 +30,13 @@ Goal: publish 20 Spanish recipes at the same quality bar as the French/Italian c
 | D | `pisto-manchego` | Pisto Manchego | Castilla-La Mancha | drafted + checked | 2/2 | pending | 6 |
 | D | `marmitako` | Marmitako | Basque Country | drafted + checked | 2/2 | pending | 6 |
 | D | `calamares-a-la-romana` | Calamares a la Romana | Spain / Madrid | drafted + checked | 2/2 | pending | 5 |
-| E | `churros-con-chocolate` | Churros con Chocolate | Madrid / Spain | pending | 0/2 | pending | pending |
-| E | `crema-catalana` | Crema Catalana | Catalonia | pending | 0/2 | pending | pending |
-| E | `tarta-de-santiago` | Tarta de Santiago | Galicia | pending | 0/2 | pending | pending |
-| E | `arroz-con-leche` | Arroz con Leche | Asturias / Spain | pending | 0/2 | pending | pending |
+| E | `churros-con-chocolate` | Churros con Chocolate | Madrid / Spain | drafted + checked | 3/2 | pending | 5 |
+| E | `crema-catalana` | Crema Catalana | Catalonia | drafted + checked | 2/2 | pending | 5 |
+| E | `tarta-de-santiago` | Tarta de Santiago | Galicia | drafted + checked | 2/2 | pending | 5 |
+| E | `arroz-con-leche` | Arroz con Leche | Asturias / Spain | drafted + checked | 2/2 | pending | 6 |
 
 ## Current phase
 
-Batches A through D pass `node scripts/audit-spanish-drafts.mjs --content-only`; 16 recipes are drafted and checked. Batch E is next. Nothing Spanish is globally published until all 20 recipes, photographs and illustration mappings pass their gates.
+All 20 recipes pass `node scripts/audit-spanish-drafts.mjs --content-only --complete`. Natural step lengths are 7, 6, 4, 5, 6, 8, 4, 4, 7, 8, 6, 6, 6, 6, 6, 5, 5, 5, 5, 6; the anti-template distribution gate passes. Licensed finished-dish photo research is next. Nothing Spanish is globally published until photographs and illustration mappings pass their gates.
 
 Last known base commit before Spanish work: `f459a49 Enforce natural recipe method distributions`.
