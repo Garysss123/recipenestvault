@@ -341,5 +341,182 @@ export const spanishIllustrationSets = [
       "e7fcbe952e3c97f78932d15f7917e9c75852def089e5ef4d6fd08996eea0bcf1",
       "184ecb9136f0b776175a4f82c35c1dd1201ed152a4d36d5142e67b955da7cd21"
     ]
+  },
+  {
+    "recipeId": "fideua",
+    "promptSet": "spanish-cooking-steps-v1",
+    "generator": "OpenAI image_gen",
+    "generatedAt": "2026-09-13",
+    "aiGenerated": true,
+    "nonPhotographic": true,
+    "noPeopleOrHands": true,
+    "visualMatchApproved": true,
+    "excludeFromStructuredData": true,
+    "setComplete": true,
+    "dimensions": "1672x941",
+    "sourceSheetAsset": "assets/recipes/illustration-sheets-generated/spanish/fideua.png",
+    "sourceSheetSha256": "ae56e24751f4302e81f3e2b622dc992e487f22533aa8344988e45b4f11a8e86f",
+    "sourceDirectory": "assets/recipes/illustrations-generated/fideua",
+    "grid": {
+      "columns": 3,
+      "rows": 3
+    },
+    "cropGrid": {
+      "width": 1536,
+      "height": 1024,
+      "x": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "y": [
+        0,
+        341,
+        683,
+        1024
+      ]
+    },
+    "hashes": [
+      "0d38c953bc98c9a7c1cd86dc576024881e36c244776af377f28520cfbc6fcf42",
+      "163a29e52e455b2149f7bcbd8cc7bc758caa47ebf85c080e59ce6b2f3be7b0c5",
+      "cc2f526e8aded58990b15522b170a30b500e2e49021b6e91b83b721bc9e533a9",
+      "84facd007f26cfdd1b4e41ea97a90446e37f7ac29725f8f558d752ef72511e85",
+      "a34eed9fb2c742af3a4659a5d0848f22f422e499ab608c77e23c958d6e47cffa",
+      "1aa31c645e8625f6518cd5156e809bebf88cb6785766ffdacbc37dcaed3df940",
+      "13fae5490b3ab6eccfca328155351453f1d03be84497b0ee73dfcf348c960e9a"
+    ]
+  },
+  {
+    "recipeId": "cocido-madrileno",
+    "promptSet": "spanish-cooking-steps-v1",
+    "generator": "OpenAI image_gen",
+    "generatedAt": "2026-09-13",
+    "aiGenerated": true,
+    "nonPhotographic": true,
+    "noPeopleOrHands": true,
+    "visualMatchApproved": true,
+    "excludeFromStructuredData": true,
+    "setComplete": true,
+    "dimensions": "1672x941",
+    "sourceSheetAsset": "assets/recipes/illustration-sheets-generated/spanish/cocido-madrileno.png",
+    "sourceSheetSha256": "aefb619cedb5689136331255e1c7e6c16899e06573b774da73f418e96ca2bc3c",
+    "sourceDirectory": "assets/recipes/illustrations-generated/cocido-madrileno",
+    "grid": {
+      "columns": 3,
+      "rows": 3
+    },
+    "cropGrid": {
+      "width": 1536,
+      "height": 1024,
+      "x": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "y": [
+        0,
+        341,
+        683,
+        1024
+      ]
+    },
+    "hashes": [
+      "52b592f7288df47361e5df104444e2c9f540672a701ffc26029a4d30103f3912",
+      "77c96ca2e49fc803467482629da81568291de0496d65b51de38f3e1fb1a14abe",
+      "ad068e4438e7da171080226402b5d28f3d7c81fdff65ef68e765da0b1597a543",
+      "5759063a0b94fd0f384877adc7cf565b17b8feaaec09f402fba03f58dcf6414a",
+      "e300f633cb0806d328cadd0fb1d9c3db242a28b11cc022fef276c990c27e911c",
+      "03f252803fe6006d535a8573c749dfaa227ea1c46e9729bfce59f4c20a6e03bc",
+      "7c88b4e59f128a06ccf4cdfade1e6c661b6bfc4444b7f242db97ffc67bd312f9",
+      "a8d290276225e2f58c37942dfa6a9f35f5fd68f192ad24dbbe6c6c9cbc48dc14"
+    ]
+  },
+  {
+    "recipeId": "fabada-asturiana",
+    "promptSet": "spanish-cooking-steps-v1",
+    "generator": "OpenAI image_gen",
+    "generatedAt": "2026-09-13",
+    "aiGenerated": true,
+    "nonPhotographic": true,
+    "noPeopleOrHands": true,
+    "visualMatchApproved": true,
+    "excludeFromStructuredData": true,
+    "setComplete": true,
+    "dimensions": "1672x941",
+    "sourceSheetAsset": "assets/recipes/illustration-sheets-generated/spanish/fabada-asturiana.png",
+    "sourceSheetSha256": "a49d9ed509f20f067744559d357a8f0176fec642449ec29864402ac7db2bd1ab",
+    "sourceDirectory": "assets/recipes/illustrations-generated/fabada-asturiana",
+    "grid": {
+      "columns": 3,
+      "rows": 2
+    },
+    "cropGrid": {
+      "width": 1536,
+      "height": 1024,
+      "x": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "y": [
+        0,
+        512,
+        1024
+      ]
+    },
+    "hashes": [
+      "652090f50688d659402bf31e979ffc178f823fd894fce5be41737705add15dbe",
+      "c6106fe9d5327fcbbf435682ceca4636698630a5443f35f6cb6921c5a5bb97b4",
+      "08e3c97726e2d3f1ae5fb53bd512f925866e6656109cad07d3dd6e4f1da441dd",
+      "f87a0371ceb80a4d73daef6a159b9c080eb31323c55f5199f92fb01670c1a2c5",
+      "31c16a721bd7cff36f6cd98ea399ac0f599ea108702299099070556eb9c8b269",
+      "e2af23ea4eb4a6976f261297c4258f08d0e43069a9dead2e631c4dd59a61facd"
+    ]
+  },
+  {
+    "recipeId": "pulpo-a-la-gallega",
+    "promptSet": "spanish-cooking-steps-v1",
+    "generator": "OpenAI image_gen",
+    "generatedAt": "2026-09-13",
+    "aiGenerated": true,
+    "nonPhotographic": true,
+    "noPeopleOrHands": true,
+    "visualMatchApproved": true,
+    "excludeFromStructuredData": true,
+    "setComplete": true,
+    "dimensions": "1672x941",
+    "sourceSheetAsset": "assets/recipes/illustration-sheets-generated/spanish/pulpo-a-la-gallega.png",
+    "sourceSheetSha256": "f73ba4a21009c3844a67bb692e7b28840cfe77e254435c14b7ea1b039f8d5384",
+    "sourceDirectory": "assets/recipes/illustrations-generated/pulpo-a-la-gallega",
+    "grid": {
+      "columns": 3,
+      "rows": 2
+    },
+    "cropGrid": {
+      "width": 1536,
+      "height": 1024,
+      "x": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "y": [
+        0,
+        512,
+        1024
+      ]
+    },
+    "hashes": [
+      "df7545f666916dc4120b36b0d12394ddcf64f980384f344f175f971adf056690",
+      "ecebaa4f64f67246166e8a1ddf6cffd0fe50e859ddd9b460a8bf8cb6694d61ea",
+      "5c89ddcabe04d346f9ce65ad98119cd9c8e63c3578050b8c12dd9d2b3969d116",
+      "c56db131111709990f766d4995436c7d2228026b6c0f1fd79a968cbe64b3ec25",
+      "df88a4350e8cf107df8e390738f65691bf48f06574076a7cb9ff70f66dc658f8",
+      "a33a2f701730a4afcc3d498799850883492aecd834017a7667a41551eca27303"
+    ]
   }
 ];

@@ -219,36 +219,106 @@
       "columns": 3,
       "rows": 3,
       "usedPanels": 7,
-      "reviewed": false,
-      "sceneHash": "4213c3ba8cf94a9113f06eacc74f0cdf5848131e59dab66f2641c74f8b6f4fb9",
-      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Fideuà.\nCell 1: Dry prepared prawns, 3 cm monkfish pieces and 2 cm cuttlefish pieces arranged separately beside a small bowl of green-flecked garlic-parsley-lemon paste.\nCell 2: Prawns lightly seared pink on the outside in a wide paella pan, still plump and only partly cooked, being held on a nearby plate.\nCell 3: Wide pan with lightly browned monkfish chunks and cuttlefish pieces, surfaces opaque and lightly golden, with no noodles yet.\nCell 4: Reduced brick-red tomato sofrito in the centre of a wide pan with browned monkfish and cuttlefish around the edge.\nCell 5: Golden-red saffron fish stock boiling across the wide pan around browned seafood, with no noodles added yet.\nCell 6: Fideuà nearly finished in a wide pan: short noodles swollen and mostly dry with monkfish, cuttlefish and pink prawns distributed across the surface.\nCell 7: Finished Valencian fideuà resting uncovered, short noodles dry and lightly golden with pink prawns, monkfish and cuttlefish clearly visible."
+      "reviewed": true,
+      "sceneHash": "9c1b37cb17dec5dd9dc44fade7518437ec1407bc6ec26a9deb998426d5a69c97",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Fideuà.\nCell 1: Dry prepared prawns, 3 cm monkfish pieces and 2 cm cuttlefish pieces arranged separately beside a small bowl of green-flecked garlic-parsley-lemon paste.\nCell 2: Prawns lightly seared pink on the outside in a wide paella pan, still plump and only partly cooked, resting on a nearby plate.\nCell 3: Wide pan with lightly browned monkfish chunks and cuttlefish pieces, surfaces opaque and lightly golden, with no noodles yet.\nCell 4: Reduced brick-red tomato sofrito in the centre of a wide pan with browned monkfish and cuttlefish around the edge.\nCell 5: Golden-red saffron fish stock boiling across the wide pan around browned seafood, with no noodles added yet.\nCell 6: Fideuà nearly finished in a wide pan: short noodles swollen and mostly dry with monkfish, cuttlefish and pink prawns distributed across the surface.\nCell 7: Finished Valencian fideuà resting uncovered, short noodles dry and lightly golden with pink prawns, monkfish and cuttlefish clearly visible.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/spanish/fideua.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/spanish/fideua.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
     },
     {
       "recipeId": "cocido-madrileno",
       "columns": 3,
       "rows": 3,
       "usedPanels": 8,
-      "reviewed": false,
-      "sceneHash": "8cd6ed51f4c62ef7bb6a16b9cd221bbc4d01d19bbcbd3852072de09426a64698",
-      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 8 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Cocido Madrileño.\nCell 1: Dried chickpeas fully submerged in a large bowl of lukewarm water, visibly swollen after an overnight soak.\nCell 2: A very large stockpot with meats and bones under clear simmering broth while grey foam is being skimmed from the surface, no vegetables yet.\nCell 3: Chickpeas, carrots, a whole onion and turnip simmering gently with meats in a clear golden broth, only small bubbles visible.\nCell 4: A separate small saucepan gently simmering whole Spanish chorizo and morcilla in clear water, apart from the main cocido pot.\nCell 5: Finished main cocido pot with tender chickpeas, halved potatoes, carrots and very tender meats in a clear rich broth.\nCell 6: Tender green cabbage being sautéed with pale-golden sliced garlic in a small amount of olive oil, separate from the broth.\nCell 7: A clean saucepan of clear golden cocido broth with fine noodles just tender, while meats, chickpeas and vegetables rest separately in warm dishes.\nCell 8: Traditional cocido service shown as three separate warm dishes: clear noodle soup, chickpeas with vegetables, and sliced mixed meats with sausages and marrow bones."
+      "reviewed": true,
+      "sceneHash": "39af9797948fd41fd163676af8dbef5d23f5d624e51281b29d24c65e26e85a23",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 8 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Cocido Madrileño.\nCell 1: Dried chickpeas fully submerged in a large bowl of lukewarm water, visibly swollen after an overnight soak.\nCell 2: A very large stockpot with meats and bones under clear simmering broth, a small patch of grey foam gathered at the surface and a skimmer resting beside the pot; no vegetables yet and no hands.\nCell 3: Chickpeas, carrots, a whole onion and turnip simmering gently with meats in a clear golden broth, only small bubbles visible.\nCell 4: A separate small saucepan gently simmering whole Spanish chorizo and morcilla in clear water, apart from the main cocido pot.\nCell 5: Finished main cocido pot with tender chickpeas, halved potatoes, carrots and very tender meats in a clear rich broth.\nCell 6: Tender green cabbage being sautéed with pale-golden sliced garlic in a small amount of olive oil, separate from the broth.\nCell 7: A clean saucepan of clear golden cocido broth with fine noodles just tender, while meats, chickpeas and vegetables rest separately in warm dishes.\nCell 8: Traditional cocido service shown as three separate warm dishes: clear noodle soup, chickpeas with vegetables, and sliced mixed meats with sausages and marrow bones.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/spanish/cocido-madrileno.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/spanish/cocido-madrileno.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
     },
     {
       "recipeId": "fabada-asturiana",
       "columns": 3,
       "rows": 2,
       "usedPanels": 6,
-      "reviewed": false,
-      "sceneHash": "5409926aee44a69788a14df1a995187871eae104f82736ca333bdd99dca833c7",
-      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Fabada Asturiana.\nCell 1: Two separate bowls: swollen large white beans in cold water and cured pork shoulder with pancetta soaking in lukewarm water.\nCell 2: Large white beans and a whole onion in a wide heavy pot at a gentle simmer after surface foam has been skimmed away.\nCell 3: Fabada simmering gently with whole pieces of cured pork among intact large white beans, with a creamy-looking but not broken broth.\nCell 4: Whole chorizo and morcilla newly added to creamy intact white beans, the broth taking on a light saffron-golden and paprika tint.\nCell 5: Finished fabada broth creamy enough to cling lightly to intact tender white beans, with the whole onion being removed.\nCell 6: A bowl of rested Asturian fabada with intact creamy white beans and thick slices of chorizo, morcilla, cured pork shoulder and pancetta."
+      "reviewed": true,
+      "sceneHash": "afa7f31d07ddd6e6b26fb3f2809c56674ec601076f59ae76158b3c656b4e8f55",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Fabada Asturiana.\nCell 1: Two separate bowls: swollen large white beans in cold water and cured pork shoulder with pancetta soaking in lukewarm water.\nCell 2: Large white beans and a whole onion in a wide heavy pot at a gentle simmer after surface foam has been skimmed away.\nCell 3: Fabada simmering gently with whole pieces of cured pork among intact large white beans, with a creamy-looking but not broken broth.\nCell 4: Whole chorizo and morcilla newly added to creamy intact white beans, the broth taking on a light saffron-golden and paprika tint.\nCell 5: Finished fabada broth creamy enough to cling lightly to intact tender white beans, with the removed whole onion resting in a small bowl beside the pot.\nCell 6: A bowl of rested Asturian fabada with intact creamy white beans and thick slices of chorizo, morcilla, cured pork shoulder and pancetta.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/spanish/fabada-asturiana.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/spanish/fabada-asturiana.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      }
     },
     {
       "recipeId": "pulpo-a-la-gallega",
       "columns": 3,
       "rows": 2,
       "usedPanels": 6,
-      "reviewed": false,
-      "sceneHash": "1eef4f74a0a979ae00c7f54e6f1ce7460afa15c27da41143123b46442bf9d2d8",
-      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Pulpo a la Gallega (Pulpo á Feira).\nCell 1: A tall pot of clear boiling water with two onion halves floating near the surface, ready for the octopus.\nCell 2: A whole octopus being dipped into boiling water with its tentacles visibly curling, shown after the third brief dip before full immersion; no hands visible.\nCell 3: Tender whole boiled octopus draining on a rack, tentacles intact and curled with glossy purple skin, cooking pot beside it.\nCell 4: Warm 1.5 cm potato rounds just cooked in octopus broth, drained and arranged in an overlapping layer on a simple serving plate.\nCell 5: Warm octopus tentacles cut cleanly into thick 2 cm rounds with visible white centres and purple skin, ready for seasoning.\nCell 6: Finished pulpo a la gallega on a simple wooden-style plate: overlapping potato rounds topped with warm octopus coins, coarse salt, red paprika dust and a glossy olive-oil drizzle."
+      "reviewed": true,
+      "sceneHash": "f403c6af3c142589cfcc94222ea63f439c5b36582304adb92a3661191e033b9e",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Pulpo a la Gallega (Pulpo á Feira).\nCell 1: A tall pot of clear boiling water with two onion halves floating near the surface, ready for the octopus.\nCell 2: A whole octopus just fully submerged in the tall pot after three brief dips, with tentacles visibly curled beneath the clear boiling water; no hands or utensils.\nCell 3: Tender whole boiled octopus draining on a rack, tentacles intact and curled with glossy purple skin, cooking pot beside it.\nCell 4: Warm 1.5 cm potato rounds just cooked in octopus broth, drained and arranged in an overlapping layer on a simple serving plate.\nCell 5: Warm octopus tentacles cut cleanly into thick 2 cm rounds with visible white centres and purple skin, ready for seasoning.\nCell 6: Finished pulpo a la gallega on a simple wooden-style plate: overlapping potato rounds topped with warm octopus coins, coarse salt, red paprika dust and a glossy olive-oil coating.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/spanish/pulpo-a-la-gallega.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/spanish/pulpo-a-la-gallega.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      }
     },
     {
       "recipeId": "bacalao-al-pil-pil",
