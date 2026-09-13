@@ -665,6 +665,99 @@ await inspect({
   }
 });
 
+const britishRecipeIds = [
+  "fish-and-chips", "beef-wellington", "roast-beef-yorkshire-pudding", "shepherds-pie", "toad-in-the-hole",
+  "cornish-pasty", "full-english-breakfast", "chicken-tikka-masala", "cullen-skink", "welsh-rarebit",
+  "sticky-toffee-pudding", "traditional-trifle", "steak-and-kidney-pie"
+];
+async function assertBritishCollection(page, locale) {
+  const links = await page.locator(".collection-recipe-card > a").evaluateAll((items) => items.map((item) => item.getAttribute("href")).sort());
+  const expected = britishRecipeIds.map((id) => `/${locale}/recipes/${id}/`).sort();
+  if (JSON.stringify(links) !== JSON.stringify(expected)) throw new Error(`British ${locale} collection does not contain the expected 13 unique recipe routes`);
+  if (await page.locator(".collection-recipe-card").count() !== 13) throw new Error("British collection must show 13 cards");
+  const broken = await page.locator(".collection-recipe-card img").evaluateAll((images) => images.filter((image) => !image.complete || !image.naturalWidth).length);
+  if (broken) throw new Error(`${broken} British card photographs failed to load`);
+  if (!(await page.locator("body").evaluate((element) => element.classList.contains("cuisine-british")))) throw new Error("British collection is missing its cuisine theme class");
+}
+async function assertBritishRecipe(page, expectedSteps, locale, id) {
+  await assertIllustratedRecipe(page, expectedSteps, { traditionalChinese: locale === "zh-hant" });
+  const steps = page.locator(".method-section ol > li");
+  if (await steps.count() !== expectedSteps) throw new Error(`British ${id} method count differs from its ${expectedSteps} illustrations`);
+  for (const entry of await steps.all()) if (await entry.locator(".recipe-step-illustration").count() !== 1) throw new Error(`British ${id} needs exactly one illustration in each step`);
+  const images = await page.locator(".recipe-step-illustration img").evaluateAll((entries) => entries.map((entry) => entry.getAttribute("src")));
+  if (new Set(images).size !== expectedSteps) throw new Error(`British ${id} reuses a step image`);
+  if (await page.locator(`.breadcrumbs a[href="/${locale}/cuisines/british/"]`).count() !== 1) throw new Error(`British ${id} breadcrumb does not return to British cuisine`);
+  const expectedRelatedTitle = ({
+    en: "More British recipes",
+    "zh-hant": "更多英國料理",
+    ja: "ほかのイギリス料理",
+    ko: "다른 영국 요리",
+    th: "สูตรอาหารอังกฤษเพิ่มเติม"
+  })[locale];
+  if (await page.locator("#related-title").innerText() !== expectedRelatedTitle) throw new Error(`British ${id} related-recipes title is not cuisine-specific`);
+  const relatedLinks = await page.locator(".related-recipes .collection-recipe-card > a").evaluateAll((items) => items.map((item) => item.getAttribute("href")));
+  if (relatedLinks.length !== 3 || relatedLinks.some((href) => !href?.startsWith(`/${locale}/recipes/`))) throw new Error(`British ${id} related-recipes links are invalid`);
+  for (const target of ["en", "zh-hant", "ja", "ko", "th"]) {
+    if (await page.locator(`.language-popover a[href="/${target}/recipes/${id}/"]`).count() !== 1) throw new Error(`British ${id} is missing its ${target} language route`);
+  }
+}
+await inspect({
+  name: "en-search-british-desktop", path: "/en/search/?q=wellington", viewport: { width: 1280, height: 900 },
+  interact: async (page) => {
+    const result = page.locator('.result-card[href="/en/recipes/beef-wellington/"]');
+    await result.waitFor({ state: "visible" });
+    if (!/British recipe/i.test(await result.innerText())) throw new Error("British search result lacks its cuisine label");
+  }
+});
+for (const [locale, label, viewport] of [
+  ["en", "desktop", { width: 1440, height: 1000 }],
+  ["zh-hant", "mobile", { width: 390, height: 844 }],
+  ["ja", "desktop", { width: 1366, height: 900 }],
+  ["ko", "mobile", { width: 390, height: 844 }],
+  ["th", "mobile", { width: 390, height: 844 }]
+]) {
+  await inspect({
+    name: `${locale}-british-collection-${label}`, path: `/${locale}/cuisines/british/`, viewport,
+    interact: async (page) => {
+      await assertBritishCollection(page, locale);
+      const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+      if (response?.status() !== 200) throw new Error(`British ${locale} direct refresh failed`);
+    },
+    extraScreenshots: locale === "en" || locale === "zh-hant" ? [
+      { name: `${locale}-british-collection-hero-${label}`, selector: ".cuisine-hero" },
+      { name: `${locale}-british-first-card-${label}`, selector: ".collection-recipe-card:first-child" }
+    ] : []
+  });
+}
+for (const [locale, id, count, label] of [
+  ["zh-hant", "fish-and-chips", 7, "mobile"],
+  ["en", "steak-and-kidney-pie", 12, "desktop"],
+  ["ja", "full-english-breakfast", 9, "desktop"],
+  ["ko", "cullen-skink", 6, "mobile"],
+  ["th", "traditional-trifle", 10, "mobile"]
+]) {
+  await inspect({
+    name: `${locale}-british-${id}-${label}`, path: `/${locale}/recipes/${id}/`,
+    viewport: label === "mobile" ? { width: 390, height: 844 } : { width: 1366, height: 900 },
+    interact: async (page) => assertBritishRecipe(page, count, locale, id),
+    extraScreenshots: [
+      { name: `${locale}-british-${id}-hero-${label}`, selector: ".recipe-detail-hero" },
+      { name: `${locale}-british-${id}-first-step-${label}`, selector: ".method-section li:first-child" }
+    ]
+  });
+}
+await inspect({
+  name: "british-language-choice-mobile", path: "/en/recipes/beef-wellington/", viewport: { width: 390, height: 844 },
+  fullPage: false, suppressLanguagePrompt: false, loadLazyImages: false,
+  interact: async (page) => {
+    await page.locator('[data-language-choice="zh-hant"]').click();
+    await page.waitForLoadState("networkidle");
+    if (new URL(page.url()).pathname !== "/zh-hant/recipes/beef-wellington/") throw new Error("British language selection lost the recipe route");
+    const response = await page.reload({ waitUntil: "networkidle" });
+    if (response?.status() !== 200 || await page.locator("[data-language-prompt]").isVisible()) throw new Error("British language preference or deep refresh failed");
+  }
+});
+
 await inspect({
   name: "zh-chinese-collection-mobile", path: "/zh-hant/cuisines/chinese/", viewport: { width: 390, height: 844 },
   interact: async (page) => {

@@ -350,4 +350,42 @@ const spanish = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish };
+const british = {
+  en: {
+    eyebrow: "Curated British cooking",
+    title: "British recipes from roasts and pies to pub classics and puddings",
+    intro: "Cook fish and chips, Beef Wellington, roast beef with Yorkshire pudding, shepherd’s pie, toad in the hole, Cornish pasties and a full English breakfast, alongside British South Asian chicken tikka masala, Scottish Cullen skink, Welsh rarebit, sticky toffee pudding, trifle and steak and kidney pie. Each recipe gives precise quantities, heat, timing, texture and doneness cues while keeping the natural number of cooking stages each dish actually needs.",
+    recipeEyebrow: "British recipe",
+    backToCollection: "Back to British recipes"
+  },
+  "zh-hant": {
+    eyebrow: "精選英國料理",
+    title: "從烤肉、鹹派、酒館經典到傳統甜點的英國食譜",
+    intro: "從炸魚薯條、威靈頓牛排、約克夏布丁烤牛肉、牧羊人派、香腸約克夏布丁、康瓦爾餡餅與英式早餐，到英國南亞脈絡的雞肉 tikka masala、蘇格蘭 Cullen skink、威爾斯 rarebit，再到太妃糖布丁、trifle 與牛排腰子派。每道食譜都清楚標示份量、火力、時間、口感與熟度，並依真正料理流程保留自然步驟數。",
+    recipeEyebrow: "英國料理食譜",
+    backToCollection: "返回英國料理食譜"
+  },
+  ja: {
+    eyebrow: "厳選したイギリス料理",
+    title: "ローストやパイ、パブの定番から伝統菓子まで作れるイギリス料理レシピ",
+    intro: "フィッシュ＆チップス、ビーフ・ウェリントン、ヨークシャー・プディングを添えたローストビーフ、シェパーズパイ、トード・イン・ザ・ホール、コーニッシュ・パスティ、フル・イングリッシュ・ブレックファストに加え、英国南アジア系のチキン・ティッカ・マサラ、スコットランドのカレン・スキンク、ウェールズのレアビット、スティッキー・トフィー・プディング、トライフル、ステーキ＆キドニーパイまで作れます。分量、火加減、時間、食感、火の通りを具体的に示し、それぞれの料理に必要な自然な工程数を保っています。",
+    recipeEyebrow: "イギリス料理レシピ",
+    backToCollection: "イギリス料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "엄선한 영국 요리",
+    title: "로스트와 파이, 펍 클래식부터 전통 디저트까지 만드는 영국 요리 레시피",
+    intro: "피시 앤 칩스, 비프 웰링턴, 요크셔 푸딩을 곁들인 로스트비프, 셰퍼드 파이, 토드 인 더 홀, 코니시 패스티, 풀 잉글리시 브렉퍼스트와 함께 영국 남아시아계 치킨 티카 마살라, 스코틀랜드 컬런 스킹크, 웨일스 레어빗, 스티키 토피 푸딩, 트라이플, 스테이크 앤 키드니 파이까지 만듭니다. 정확한 분량, 불 세기, 시간, 식감과 익힘 기준을 제시하고 각 요리에 실제로 필요한 자연스러운 조리 단계를 그대로 유지합니다.",
+    recipeEyebrow: "영국 요리 레시피",
+    backToCollection: "영국 요리 레시피로 돌아가기"
+  },
+  th: {
+    eyebrow: "อาหารอังกฤษที่คัดสรร",
+    title: "สูตรอาหารอังกฤษตั้งแต่เนื้ออบ พาย และเมนูผับ ไปจนถึงของหวานดั้งเดิม",
+    intro: "ทำได้ตั้งแต่ฟิชแอนด์ชิปส์ บีฟเวลลิงตัน เนื้ออบกับยอร์กเชียร์พุดดิง เชพเพิร์ดพาย โทดอินเดอะโฮล คอร์นิชพาสตี และอาหารเช้าอังกฤษเต็มชุด ไปจนถึงชิกเกนทิกกามาซาลาในวัฒนธรรมบริติชเอเชียใต้ ซุป Cullen skink ของสกอตแลนด์ Welsh rarebit สติกกีทอฟฟีพุดดิง ไทรเฟิล และสเต๊กแอนด์คิดนีย์พาย ทุกสูตรระบุปริมาณ ระดับไฟ เวลา เนื้อสัมผัส และจุดสุกอย่างชัดเจน พร้อมคงจำนวนขั้นตอนตามธรรมชาติของอาหารแต่ละจาน",
+    recipeEyebrow: "สูตรอาหารอังกฤษ",
+    backToCollection: "กลับไปสูตรอาหารอังกฤษ"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british };

@@ -16,6 +16,7 @@
     "manifest:french-illustrations": "node scripts/generate-french-illustration-sets.mjs",
     "manifest:italian-illustrations": "node scripts/generate-italian-illustration-sets.mjs",
     "manifest:spanish-illustrations": "node scripts/generate-spanish-illustration-sets.mjs",
+    "manifest:british-illustrations": "node scripts/generate-british-illustration-sets.mjs",
     "build": "node scripts/build.mjs",
     "preview": "node scripts/serve-preview.mjs",
     "audit": "node scripts/audit.mjs",
@@ -28,8 +29,9 @@
     "audit:french-drafts": "node scripts/audit-french-drafts.mjs",
     "audit:italian-drafts": "node scripts/audit-italian-drafts.mjs",
     "audit:spanish-drafts": "node scripts/audit-spanish-drafts.mjs --complete",
+    "audit:british-drafts": "node scripts/audit-british-drafts.mjs --complete",
     "qa:visual": "node scripts/qa-visual.mjs",
-    "test": "npm run audit:japanese-drafts && npm run audit:korean-drafts && npm run audit:thai-drafts && npm run audit:taiwanese-drafts && npm run audit:indian-drafts && npm run audit:vietnamese-drafts && npm run audit:french-drafts && npm run audit:italian-drafts && npm run audit:spanish-drafts && npm run build && npm run audit",
+    "test": "npm run audit:japanese-drafts && npm run audit:korean-drafts && npm run audit:thai-drafts && npm run audit:taiwanese-drafts && npm run audit:indian-drafts && npm run audit:vietnamese-drafts && npm run audit:french-drafts && npm run audit:italian-drafts && npm run audit:spanish-drafts && npm run audit:british-drafts && npm run build && npm run audit",
     "deploy": "npm run test && wrangler pages deploy dist --project-name recipenestvault --branch main"
   },
   "devDependencies": {
