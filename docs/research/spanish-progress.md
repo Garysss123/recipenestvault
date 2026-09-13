@@ -37,6 +37,8 @@ Goal: publish 20 Spanish recipes at the same quality bar as the French/Italian c
 
 ## Current phase
 
-All 20 recipes pass `node scripts/audit-spanish-drafts.mjs --content-only --complete`. Natural step lengths are 7, 6, 4, 5, 6, 8, 4, 4, 7, 8, 6, 6, 6, 6, 6, 5, 5, 5, 5, 6; the anti-template distribution gate passes. All 20 finished-dish photographs passed licensed-photo audit: unique commercial-use real photos, pinned provenance and SHA-256, minimum 1200x800, and manual visual review. Step illustrations are next. Nothing Spanish is globally published until illustration mappings pass their gates.
+All 20 recipes pass `node scripts/audit-spanish-drafts.mjs --content-only --complete`. Natural step lengths are 7, 6, 4, 5, 6, 8, 4, 4, 7, 8, 6, 6, 6, 6, 6, 5, 5, 5, 5, 6; the anti-template distribution gate passes. All 20 finished-dish photographs passed licensed-photo audit: unique commercial-use real photos, pinned provenance and SHA-256, minimum 1200x800, and manual visual review.
+
+Spanish illustration pipeline is now active. Batch A (`paella-valenciana`, `tortilla-espanola`, `gazpacho-andaluz`, `salmorejo-cordobes`) has 4/4 visually reviewed source sheets and 22/22 cropped step images recorded in `src/spanish-illustration-sets.mjs`. The Gazpacho emulsification scene was changed from a pouring action to a static completed-emulsion state so it obeys the no-pouring/no-floating illustration rule; content audit re-passed. Overall progress is 4/20 reviewed source sheets and 22/115 generated step images. Nothing Spanish is globally published until all illustration mappings pass their gates.
 
 Last known base commit before Spanish work: `f459a49 Enforce natural recipe method distributions`.
