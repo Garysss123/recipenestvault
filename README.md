@@ -113,6 +113,8 @@ These are permanent release gates. Recipe count, publishing speed and visual com
 - Cross-check every recipe against at least two reliable sources, then write an original, standardized version. Do not copy or translate one author's recipe text.
 - Give exact quantities and useful time, temperature, heat-level and doneness cues. Vague instructions do not pass review.
 - Split steps at meaningful changes in tool, heat, food-safety state or irreversible technique. Merge trivial continuation actions. Require at least four actionable steps, but never impose a fixed target or upper limit.
+- The full-site audit also rejects obvious batch-template convergence for established collections: with 12 or more published recipes, methods must span at least three distinct step counts and no single exact step count may cover more than two thirds of the collection. These are anti-template guardrails, not targets; never split or merge a method merely to satisfy the histogram.
+- Exact legacy method-length distributions that predate this gate may be signature-grandfathered in `scripts/audit.mjs`. Any change to their recipe count or step-count distribution invalidates that exemption. The deferred Italian method-granularity upgrade is tracked in `TODO.md`.
 
 ### Photograph and recipe consistency
 
@@ -195,6 +197,7 @@ Every recipe must pass all of the following before production:
 7. Real desktop and mobile renders have no clipping, overflow, broken images or unreadable content.
 8. The Cloudflare Pages production-domain direct URL and hard refresh both return HTTP 200.
 9. Any AI step illustration is visibly disclosed, visually matched, hash-verified and excluded from Recipe structured-data images.
+10. Collection-level method lengths pass the anti-template distribution gate, unless the exact unchanged legacy distribution is explicitly grandfathered.
 
 If any evidence is incomplete, the recipe must not enter production.
 

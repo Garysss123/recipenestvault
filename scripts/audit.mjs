@@ -17,6 +17,45 @@ const assetHasher = createHash("sha256");
 for (const asset of ["site.css", "site.js", "search.js"]) assetHasher.update(await readFile(join(root, "public", "assets", asset)));
 const expectedAssetVersion = assetHasher.digest("hex").slice(0, 12);
 
+// These exact published distributions predate the collection-level natural-method
+// gate. The exemption is intentionally signature-bound: adding a recipe or changing
+// any step count invalidates it and subjects the collection to the current rule.
+// Italian is scheduled for a deliberate post-site-completion method-granularity
+// upgrade in TODO.md; do not "fix" any legacy set by mechanically padding steps.
+const legacyMethodDistributionSignatures = new Map([
+  ["chinese", "13|8:10,9:3"],
+  ["japanese", "21|5:1,6:3,7:1,8:16"],
+  ["italian", "21|5:17,6:3,7:1"]
+]);
+
+function methodDistributionSignature(collectionRecipes) {
+  const histogram = new Map();
+  for (const recipe of collectionRecipes) histogram.set(recipe.instructions.length, (histogram.get(recipe.instructions.length) || 0) + 1);
+  const distribution = [...histogram.entries()].sort((a, b) => a[0] - b[0]);
+  return {
+    histogram,
+    distribution,
+    signature: `${collectionRecipes.length}|${distribution.map(([steps, count]) => `${steps}:${count}`).join(",")}`
+  };
+}
+
+function validateNaturalMethodDistribution(cuisineId, collectionRecipes) {
+  // Small collections do not provide enough evidence for a useful distribution
+  // test; the per-recipe minimum and editorial method rules still apply.
+  if (collectionRecipes.length < 12) return;
+  const { histogram, distribution, signature } = methodDistributionSignature(collectionRecipes);
+  if (legacyMethodDistributionSignatures.get(cuisineId) === signature) return;
+
+  const [dominantSteps, dominantCount] = distribution.reduce((best, entry) => entry[1] > best[1] ? entry : best, [0, 0]);
+  const dominantShare = dominantCount / collectionRecipes.length;
+  if (histogram.size < 3) {
+    failures.push(`${cuisineId}: method lengths use only ${histogram.size} distinct step count(s) across ${collectionRecipes.length} recipes; review methods for natural cooking-stage boundaries instead of a fixed template`);
+  }
+  if (dominantShare > 2 / 3) {
+    failures.push(`${cuisineId}: ${dominantCount}/${collectionRecipes.length} recipes use exactly ${dominantSteps} steps (${Math.round(dominantShare * 100)}%); method lengths are overly concentrated and must be reviewed for template-driven merging/splitting`);
+  }
+}
+
 function validateLocalizedText(value, label) {
   if (!value || typeof value !== "object") {
     failures.push(`${label}: missing five-language content`);
@@ -163,6 +202,11 @@ const searchIndex = JSON.parse(await readFile(join(dist, "search-index.json"), "
 if (searchIndex.length !== localeOrder.length * (cuisines.length + recipes.length + 4)) failures.push("search index count mismatch");
 for (const record of searchIndex) if (!localeOrder.includes(record.locale) || !record.title || !record.url || !record.text) failures.push("invalid search record");
 for (const record of searchIndex.filter((entry) => entry.type === "recipe")) if (!record.label) failures.push(`${record.locale} ${record.url}: recipe search result is missing a cuisine-specific label`);
+
+for (const cuisine of cuisines) {
+  const collectionRecipes = recipes.filter((recipe) => recipe.cuisine === cuisine.id);
+  if (collectionRecipes.length) validateNaturalMethodDistribution(cuisine.id, collectionRecipes);
+}
 
 for (const recipe of recipes) {
   if (!recipe.photo?.commercialUseVerified || !recipe.photo?.realPhoto || !recipe.photo?.visualMatchApproved) failures.push(`${recipe.id}: recipe bypassed the real-photo approval gate`);
