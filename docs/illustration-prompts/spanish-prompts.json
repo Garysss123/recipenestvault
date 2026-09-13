@@ -429,36 +429,104 @@
       "columns": 3,
       "rows": 2,
       "usedPanels": 5,
-      "reviewed": false,
+      "reviewed": true,
       "sceneHash": "898d7a66221dcf2283b53f0046c07f783434c36f98fd0dbdb2080f8dbf74bb89",
-      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Churros con Chocolate.\nCell 1: A small saucepan of very dark glossy Spanish hot chocolate coating the back of a spoon in a thick smooth layer; no whipped cream.\nCell 2: A saucepan holding one cohesive smooth thick churro dough mass pulling cleanly from the sides, with no dry flour visible.\nCell 3: Warm churro dough packed densely into a metal churrera with a 12–14 mm star nozzle, a short ridged test strip beside it; no hands.\nCell 4: Four or five ridged churro sticks frying separately in clean hot oil, straight star-shaped grooves turning evenly deep golden.\nCell 5: Fresh Spanish churros in a loose stack, evenly golden with distinct ridges and a light sugar coating, beside a small cup of very thick dark hot chocolate."
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Churros con Chocolate.\nCell 1: A small saucepan of very dark glossy Spanish hot chocolate coating the back of a spoon in a thick smooth layer; no whipped cream.\nCell 2: A saucepan holding one cohesive smooth thick churro dough mass pulling cleanly from the sides, with no dry flour visible.\nCell 3: Warm churro dough packed densely into a metal churrera with a 12–14 mm star nozzle, a short ridged test strip beside it; no hands.\nCell 4: Four or five ridged churro sticks frying separately in clean hot oil, straight star-shaped grooves turning evenly deep golden.\nCell 5: Fresh Spanish churros in a loose stack, evenly golden with distinct ridges and a light sugar coating, beside a small cup of very thick dark hot chocolate.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/spanish/churros-con-chocolate.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/spanish/churros-con-chocolate.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          471,
+          941
+        ]
+      }
     },
     {
       "recipeId": "crema-catalana",
       "columns": 3,
       "rows": 2,
       "usedPanels": 5,
-      "reviewed": false,
-      "sceneHash": "41c3f0a29d507500942c055fbdfac25825c274ed47019d4cc0e9422594fc57c8",
-      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Crema Catalana.\nCell 1: A heavy saucepan of steaming milk with a cinnamon stick and visible strips of lemon and orange peel, covered nearby for infusion.\nCell 2: A bowl of pale thick yolk-sugar mixture with cornstarch whisked completely smooth, no bubbles or dry powder clumps.\nCell 3: A saucepan of smooth pale-yellow custard thick enough to coat a wooden spoon, a clean finger-line holding on the spoon and thermometer near 83°C.\nCell 4: Six shallow terracotta dishes filled with smooth pale custard, each surface flat and covered directly with food-safe wrap before chilling.\nCell 5: Finished crema catalana in a shallow terracotta dish with a very thin even amber glassy caramel crust and pale custard visible at the edge; no fruit garnish."
+      "reviewed": true,
+      "sceneHash": "f629389f3e85085c9926183f86acceaeb0843e82a85299f2839d47301a979bdd",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Crema Catalana.\nCell 1: A heavy saucepan of steaming milk with a cinnamon stick and visible strips of lemon and orange peel, covered nearby for infusion.\nCell 2: A bowl of pale thick yolk-sugar mixture with cornstarch whisked completely smooth, no bubbles or dry powder clumps.\nCell 3: A saucepan of smooth pale-yellow custard thick enough to coat a wooden spoon, with a narrow clean channel visible through the coating and a plain kitchen thermometer with no readable scale or digits.\nCell 4: Six shallow terracotta dishes filled with smooth pale custard, each surface flat and covered directly with food-safe wrap before chilling.\nCell 5: Finished crema catalana in a shallow terracotta dish with a very thin even amber glassy caramel crust and pale custard visible at the edge; no fruit garnish.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/spanish/crema-catalana.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/spanish/crema-catalana.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          471,
+          941
+        ]
+      }
     },
     {
       "recipeId": "tarta-de-santiago",
       "columns": 3,
       "rows": 2,
       "usedPanels": 5,
-      "reviewed": false,
-      "sceneHash": "b715894147686aec77ffa5f57d9b96605211f71487994704c97b677db8ac89da",
-      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Tarta de Santiago.\nCell 1: A buttered 24 cm springform pan lined on the base with parchment, beside a bowl of evenly mixed ground almonds and cinnamon.\nCell 2: A bowl of pale egg-and-sugar foam falling in a short ribbon from the whisk, with fine lemon zest dispersed through it.\nCell 3: A thick uniform almond cake batter in a bowl, pale tan and slightly aerated, with no dry almond pockets.\nCell 4: A round Tarta de Santiago just baked evenly golden in its pan, centre level and set with no icing sugar yet.\nCell 5: Finished round Tarta de Santiago covered in white icing sugar with a crisp dark Cross of Saint James silhouette centred on the top."
+      "reviewed": true,
+      "sceneHash": "defb6f3623e05b15c1ca3d2278d32b9100b1a82c4964c183c96758c10a7f3487",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Tarta de Santiago.\nCell 1: A buttered 24 cm springform pan lined on the base with parchment, beside a bowl of evenly mixed ground almonds and cinnamon.\nCell 2: A bowl of pale slightly thick egg-and-sugar foam with fine lemon zest dispersed through it, a whisk resting in the bowl and a soft ribbon-like trail remaining on the surface.\nCell 3: A thick uniform almond cake batter in a bowl, pale tan and slightly aerated, with no dry almond pockets.\nCell 4: A round Tarta de Santiago just baked evenly golden in its pan, centre level and set with no icing sugar yet.\nCell 5: Finished round Tarta de Santiago covered in white icing sugar with a crisp dark Cross of Saint James silhouette centred on the top.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/spanish/tarta-de-santiago.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/spanish/tarta-de-santiago.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          471,
+          941
+        ]
+      }
     },
     {
       "recipeId": "arroz-con-leche",
       "columns": 3,
       "rows": 2,
       "usedPanels": 6,
-      "reviewed": false,
-      "sceneHash": "aeed1f387e0c68bd1b03d17ca2524fb5ea15728497ebc1e3a015d259d32b540e",
-      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Arroz con Leche.\nCell 1: Short-grain rice in a wide saucepan with nearly all the initial water absorbed, grains swollen but still firm and separate.\nCell 2: A second pot of steaming milk infused with a cinnamon stick and three lemon-peel strips, thermometer near 88°C and sugar fully dissolved.\nCell 3: A wide pot of creamy arroz con leche after a long simmer, fully tender rice suspended in thick flowing milk with no dry clumps.\nCell 4: Very thick glossy rice pudding falling slowly from a spoon in a broad ribbon, a spatula path across the pot closing only gradually.\nCell 5: Six shallow dishes of creamy pale arroz con leche cooling evenly, rice grains visible in a thick smooth pudding with flat surfaces.\nCell 6: Finished Spanish arroz con leche in a shallow terracotta dish, creamy short-grain rice visible beneath an even light-brown dusting of ground cinnamon; no caramel crust."
+      "reviewed": true,
+      "sceneHash": "7554d3ec5c645f988f344341fa3d29152c69395063d9456f11961bcf9889f598",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Arroz con Leche.\nCell 1: Short-grain rice in a wide saucepan with nearly all the initial water absorbed, grains swollen but still firm and separate.\nCell 2: A second pot of steaming milk infused with a cinnamon stick and three lemon-peel strips, with a plain kitchen thermometer resting in it and no readable scale or digits.\nCell 3: A wide pot of creamy arroz con leche after a long simmer, fully tender rice suspended in thick flowing milk with no dry clumps.\nCell 4: Very thick glossy rice pudding in a wide pot with a deep spatula path still visible across the surface and a spoon resting beside the pot, showing the pudding can hold a soft mound.\nCell 5: Six shallow dishes of creamy pale arroz con leche cooling evenly, rice grains visible in a thick smooth pudding with flat surfaces.\nCell 6: Finished Spanish arroz con leche in a shallow terracotta dish, creamy short-grain rice visible beneath an even light-brown dusting of ground cinnamon; no caramel crust.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/spanish/arroz-con-leche.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/spanish/arroz-con-leche.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      }
     }
   ]
 }

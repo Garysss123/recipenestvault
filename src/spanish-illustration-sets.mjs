@@ -689,5 +689,174 @@ export const spanishIllustrationSets = [
       "ab1dcd5c7babca1701e3d80b05e1784c6240a9b7ddf12c247d9a659983637f25",
       "d169e6ba61ae84b83feb2300d4efcca1312cd08f3cb88b2d7b4bc20a691a1008"
     ]
+  },
+  {
+    "recipeId": "churros-con-chocolate",
+    "promptSet": "spanish-cooking-steps-v1",
+    "generator": "OpenAI image_gen",
+    "generatedAt": "2026-09-13",
+    "aiGenerated": true,
+    "nonPhotographic": true,
+    "noPeopleOrHands": true,
+    "visualMatchApproved": true,
+    "excludeFromStructuredData": true,
+    "setComplete": true,
+    "dimensions": "1672x941",
+    "sourceSheetAsset": "assets/recipes/illustration-sheets-generated/spanish/churros-con-chocolate.png",
+    "sourceSheetSha256": "77990a934a959a93276900cb4e67ef7583cf6693e4b0635faa177d79327039d4",
+    "sourceDirectory": "assets/recipes/illustrations-generated/churros-con-chocolate",
+    "grid": {
+      "columns": 3,
+      "rows": 2
+    },
+    "cropGrid": {
+      "width": 1672,
+      "height": 941,
+      "x": [
+        0,
+        557,
+        1115,
+        1672
+      ],
+      "y": [
+        0,
+        471,
+        941
+      ]
+    },
+    "hashes": [
+      "4775abc0642d3f930bdc3f14dd119fd688535259f395e4a0a221d66c6f7923de",
+      "fee8e93960e2e9e940f9b53e66e47b40d1407d3f0d72bf1b41424305477c4f3d",
+      "e492fa86d47714fc8f07d307513ce6bdcce3b8a495e2f09ade3ee0f2479151d2",
+      "a240825c36dcf8603fd38f9693fa5c0d9612d5a6c5b428fa0f1cbd0f6cfc8c5d",
+      "7087d1f4bb4669a5a6ef0567cdeaf206133e32daa8a39e2044f13e375af0ad55"
+    ]
+  },
+  {
+    "recipeId": "crema-catalana",
+    "promptSet": "spanish-cooking-steps-v1",
+    "generator": "OpenAI image_gen",
+    "generatedAt": "2026-09-13",
+    "aiGenerated": true,
+    "nonPhotographic": true,
+    "noPeopleOrHands": true,
+    "visualMatchApproved": true,
+    "excludeFromStructuredData": true,
+    "setComplete": true,
+    "dimensions": "1672x941",
+    "sourceSheetAsset": "assets/recipes/illustration-sheets-generated/spanish/crema-catalana.png",
+    "sourceSheetSha256": "3cbcc438b97d5e7fbcb474f20cb16a9ace4d8a83f969cb54bb0ab6e6cc842915",
+    "sourceDirectory": "assets/recipes/illustrations-generated/crema-catalana",
+    "grid": {
+      "columns": 3,
+      "rows": 2
+    },
+    "cropGrid": {
+      "width": 1672,
+      "height": 941,
+      "x": [
+        0,
+        557,
+        1115,
+        1672
+      ],
+      "y": [
+        0,
+        471,
+        941
+      ]
+    },
+    "hashes": [
+      "7949bae992dafdaaa371848059dac8580bfd52089ac289fc35134bbf4d38481e",
+      "3b2cf988ec1617fbae9e3cb577308e659ace7fc1bbbdd4ef7136b23840f39216",
+      "9667a3338fe643631bb377c6538123d4b7ee27b5e826a0ae4d770c5b2ebb3eee",
+      "5e1b203d104eec6e1ccc9973117f48e289a542bbf90e043b59805b161841143f",
+      "1445989ff4b09c1b2e3e06d7b6c1bd4e488500abc3b7848b44401a60bd5358d0"
+    ]
+  },
+  {
+    "recipeId": "tarta-de-santiago",
+    "promptSet": "spanish-cooking-steps-v1",
+    "generator": "OpenAI image_gen",
+    "generatedAt": "2026-09-13",
+    "aiGenerated": true,
+    "nonPhotographic": true,
+    "noPeopleOrHands": true,
+    "visualMatchApproved": true,
+    "excludeFromStructuredData": true,
+    "setComplete": true,
+    "dimensions": "1672x941",
+    "sourceSheetAsset": "assets/recipes/illustration-sheets-generated/spanish/tarta-de-santiago.png",
+    "sourceSheetSha256": "189c3bb83f562282e4855e01197e2d65cc3fa9d57b5a6674e7f3eeafe3b6be71",
+    "sourceDirectory": "assets/recipes/illustrations-generated/tarta-de-santiago",
+    "grid": {
+      "columns": 3,
+      "rows": 2
+    },
+    "cropGrid": {
+      "width": 1672,
+      "height": 941,
+      "x": [
+        0,
+        557,
+        1115,
+        1672
+      ],
+      "y": [
+        0,
+        471,
+        941
+      ]
+    },
+    "hashes": [
+      "54f1f09003d081cef021055d9a5039d9584a2ec2a661d46d45d1aac68eb25d4f",
+      "1ac29bda26375de317840dfcad790d08799c311fdfcbf12a43c7f3d88075b2ae",
+      "28149c5f2b991761df0f8a07a57ed77ca5cfd7ceb759ece1cf5aee54c69955a4",
+      "cc33b26718434f425f4f6d5a5104efa5f4292eccfb9d98faef4f0cc3482479e8",
+      "d424122278bc09df4ef5c703067a6c8ced3e36429d9dec97e68ba20cff070a1d"
+    ]
+  },
+  {
+    "recipeId": "arroz-con-leche",
+    "promptSet": "spanish-cooking-steps-v1",
+    "generator": "OpenAI image_gen",
+    "generatedAt": "2026-09-13",
+    "aiGenerated": true,
+    "nonPhotographic": true,
+    "noPeopleOrHands": true,
+    "visualMatchApproved": true,
+    "excludeFromStructuredData": true,
+    "setComplete": true,
+    "dimensions": "1672x941",
+    "sourceSheetAsset": "assets/recipes/illustration-sheets-generated/spanish/arroz-con-leche.png",
+    "sourceSheetSha256": "9fd92f39a7602d3bb5486ceb3f6dfbbb73ba6c8294963353aed306e865561df7",
+    "sourceDirectory": "assets/recipes/illustrations-generated/arroz-con-leche",
+    "grid": {
+      "columns": 3,
+      "rows": 2
+    },
+    "cropGrid": {
+      "width": 1536,
+      "height": 1024,
+      "x": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "y": [
+        0,
+        512,
+        1024
+      ]
+    },
+    "hashes": [
+      "5e115603a4dcbf62aceba9b4695a28262e928b2cf54e5cf2262204d06bda6d48",
+      "e662066216d32fc306fea5e587cdad311af742802dc51e7d574c36c4bcbb404c",
+      "2041165b37aa0529b6c364513e85f352a39238c5b09451202b62b75c3a98d4a1",
+      "46fc505e9a62b07f5b6206aced00377812e9a7a756efe0990a83053ebec2c3f2",
+      "864214bff091188f51b889e417a87c27d682bfb739e6a9965152c97aeb9a1156",
+      "7cf724fefbc597c0cc8a4fe6f0f5bf47d039bf83131654354c7b00de2fe0c722"
+    ]
   }
 ];
