@@ -75,6 +75,30 @@ export const spanishRecipeSources = {
     'https://www.spain.info/en/recipe/pulpo-feira/',
     'GialloZafferano — Galician-style Octopus',
     'https://www.giallozafferano.com/recipes/galician-style-octopus-pulpo-a-la-gallega.html'
+  ),
+  'bacalao-al-pil-pil': sources(
+    'Spain.info — Bacalao al pil-pil',
+    'https://www.spain.info/es/receta/bacalao-al-pil-pil/',
+    'Foods & Wines from Spain — Pil-Pil Salt Cod',
+    'https://www.foodswinesfromspain.com/content/icex-foodswines/en/fws-academy/recipes/2017/october/new-wave-pilpil-salt-cod.html'
+  ),
+  'pisto-manchego': sources(
+    'Spain.info — Pisto Manchego with Eggs',
+    'https://www.spain.info/en/recipe/pisto-manchego-with-eggs/',
+    'Spanish Sabores — Traditional Spanish Pisto',
+    'https://spanishsabores.com/traditional-spanish-pisto-recipe/'
+  ),
+  'marmitako': sources(
+    'Spain.info — Marmitako',
+    'https://www.spain.info/en/recipe/marmitako/',
+    'Spanish Sabores — Marmitako',
+    'https://spanishsabores.com/marmitako-recipe-basque-tuna-stew/'
+  ),
+  'calamares-a-la-romana': sources(
+    'RTVE MasterChef — Calamares a la romana',
+    'https://www.rtve.es/television/20230525/receta-calamares-romana-masterchef/2447046.shtml',
+    'Directo al Paladar — Calamares a la romana de Joan Roca',
+    'https://www.directoalpaladar.com/recetas-de-pescados-y-mariscos/esta-receta-calamares-a-romana-joan-roca-sus-claves-queden-perfectos-video-incluido/amp'
   )
 };
 

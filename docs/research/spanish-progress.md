@@ -26,10 +26,10 @@ Goal: publish 20 Spanish recipes at the same quality bar as the French/Italian c
 | C | `cocido-madrileno` | Cocido Madrileño | Madrid | drafted + checked | 2/2 | pending | 8 |
 | C | `fabada-asturiana` | Fabada Asturiana | Asturias | drafted + checked | 2/2 | pending | 6 |
 | C | `pulpo-a-la-gallega` | Pulpo a la Gallega / Pulpo a Feira | Galicia | drafted + checked | 2/2 | pending | 6 |
-| D | `bacalao-al-pil-pil` | Bacalao al Pil-Pil | Basque Country | pending | 0/2 | pending | pending |
-| D | `pisto-manchego` | Pisto Manchego | Castilla-La Mancha | pending | 0/2 | pending | pending |
-| D | `marmitako` | Marmitako | Basque Country | pending | 0/2 | pending | pending |
-| D | `calamares-a-la-romana` | Calamares a la Romana | Spain / Madrid | pending | 0/2 | pending | pending |
+| D | `bacalao-al-pil-pil` | Bacalao al Pil-Pil | Basque Country | drafted + checked | 2/2 | pending | 6 |
+| D | `pisto-manchego` | Pisto Manchego | Castilla-La Mancha | drafted + checked | 2/2 | pending | 6 |
+| D | `marmitako` | Marmitako | Basque Country | drafted + checked | 2/2 | pending | 6 |
+| D | `calamares-a-la-romana` | Calamares a la Romana | Spain / Madrid | drafted + checked | 2/2 | pending | 5 |
 | E | `churros-con-chocolate` | Churros con Chocolate | Madrid / Spain | pending | 0/2 | pending | pending |
 | E | `crema-catalana` | Crema Catalana | Catalonia | pending | 0/2 | pending | pending |
 | E | `tarta-de-santiago` | Tarta de Santiago | Galicia | pending | 0/2 | pending | pending |
@@ -37,6 +37,6 @@ Goal: publish 20 Spanish recipes at the same quality bar as the French/Italian c
 
 ## Current phase
 
-Batches A, B and C pass `node scripts/audit-spanish-drafts.mjs --content-only`; the 12-recipe anti-template distribution gate is active and passing. Batch D source research is next. Nothing Spanish is globally published until all 20 recipes, photographs and illustration mappings pass their gates.
+Batches A through D pass `node scripts/audit-spanish-drafts.mjs --content-only`; 16 recipes are drafted and checked. Batch E is next. Nothing Spanish is globally published until all 20 recipes, photographs and illustration mappings pass their gates.
 
 Last known base commit before Spanish work: `f459a49 Enforce natural recipe method distributions`.

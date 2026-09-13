@@ -130,6 +130,62 @@ const profiles = {
       ml('Previously frozen octopus is suitable and often more tender because freezing helps break down the muscle structure.', '曾冷凍的章魚很適合使用，而且冷凍有助破壞肌肉結構，常更容易煮嫩。', '冷凍履歴のあるタコも適し、凍結で筋肉組織が弱くなるため柔らかくなりやすいです。', '냉동했던 문어도 적합하며 냉동이 근육 조직을 약하게 해 더 부드럽게 익는 경우가 많습니다.', 'ปลาหมึกยักษ์ที่เคยแช่แข็งใช้ได้ดี และมักนุ่มขึ้นเพราะการแช่แข็งช่วยทำลายโครงสร้างกล้ามเนื้อ'),
       ml('Use sweet paprika alone for a mild plate, or combine sweet and hot paprika while keeping the total amount unchanged.', '想要溫和可只用甜紅椒粉；也可甜辣混合，但總量維持不變。', '穏やかにするなら甘口パプリカだけ、辛味を足すなら甘口と辛口を合わせ、総量は変えません。', '순하게 하려면 스위트 파프리카만 쓰고, 매콤하게 하려면 스위트와 핫을 섞되 총량은 유지하세요.', 'ถ้าต้องการอ่อนใช้ปาปริกาหวานอย่างเดียว หรือผสมหวานกับเผ็ดโดยคงปริมาณรวมเดิม')
     ]
+  },
+  fishStew: {
+    tips: [
+      ml('Cook the potatoes until almost tender before adding fresh fish; the fish needs only a few minutes and should not simmer for the full stew time.', '馬鈴薯先煮到接近熟透再加鮮魚；魚只需要幾分鐘，不應跟整鍋一起長時間燉。', 'じゃがいもがほぼ柔らかくなってから生魚を加えます。魚は数分で火が通るため、煮込み時間全体を一緒に煮ません。', '감자를 거의 익힌 뒤 생선을 넣으세요. 생선은 몇 분이면 익으므로 스튜 전체 시간 동안 끓이면 안 됩니다.', 'ต้มมันฝรั่งเกือบนุ่มก่อนใส่ปลาสด เพราะปลาใช้เวลาเพียงไม่กี่นาทีและไม่ควรเคี่ยวตลอดเวลาสตูว์'),
+      ml('Break a few potato edges into the broth to thicken naturally while leaving most pieces intact.', '可壓碎少量馬鈴薯邊角讓湯自然變濃，但大部分薯塊要保持完整。', 'じゃがいもの一部を汁の中で崩して自然にとろみを付け、ほとんどの形は残します。', '감자 일부 가장자리만 국물에 으깨 자연스럽게 걸쭉하게 하고 대부분은 형태를 유지하세요.', 'บี้ขอบมันฝรั่งบางส่วนลงในน้ำให้ข้นตามธรรมชาติ แต่คงชิ้นส่วนใหญ่ไว้')
+    ],
+    commonMistakes: [
+      ml('Boiling tuna or bonito hard makes it dry and chalky; add it at the end and cook at a gentle simmer.', '鮪魚或鰹魚大滾久煮會乾柴；最後才加入，以溫和小滾煮熟。', 'マグロやカツオを強く煮立てると乾いて粉っぽくなるため、最後に加えて弱く火を通します。', '참치나 가다랑어를 세게 끓이면 퍽퍽해지므로 마지막에 넣어 약하게 익히세요.', 'ต้มทูน่าหรือโบนิโตแรง ๆ ทำให้แห้งร่วน ให้ใส่ช่วงท้ายและเคี่ยวอ่อน'),
+      ml('Adding all liquid at once without judging the potatoes can leave a thin soup; keep extra stock hot and add only as needed.', '不看馬鈴薯狀態就一次倒入全部液體容易變成稀湯；額外高湯保溫，按需要補。', 'じゃがいもの状態を見ずに液体を全部入れると薄い汁になるため、追加のだしは温めて必要量だけ足します。', '감자 상태를 보지 않고 액체를 한꺼번에 넣으면 묽어지므로 여분 육수는 따뜻하게 두고 필요한 만큼만 넣으세요.', 'เทน้ำทั้งหมดโดยไม่ดูมันฝรั่งอาจทำให้ซุปบาง เก็บสต๊อกเพิ่มให้อุ่นและเติมเท่าที่จำเป็น')
+    ],
+    substitutions: [
+      ml('Use another firm, meaty fresh tuna species if bonito del norte is unavailable; cut pieces to the same size and shorten cooking if they are leaner.', '買不到 bonito del norte 時可用其他肉質結實的新鮮鮪魚；切同樣大小，若較瘦則縮短烹調。', 'ボニート・デル・ノルテがなければ身の締まった別の生マグロを使い、同じ大きさに切って脂が少なければ加熱を短くします。', '보니토 델 노르테가 없으면 단단한 다른 생참치를 같은 크기로 썰어 쓰고 더 마른 생선이면 시간을 줄이세요.', 'ถ้าไม่มี bonito del norte ใช้ทูน่าสดเนื้อแน่นชนิดอื่น หั่นขนาดเท่ากันและลดเวลาถ้าเนื้อไม่มัน'),
+      ml('Jarred roasted red pepper can replace freshly roasted pepper; drain it well and choose one without sweet syrup.', '瓶裝烤紅椒可代替現烤紅椒；充分瀝乾並選不含甜糖漿的產品。', '市販のロースト赤ピーマンでも代用でき、よく水を切り甘いシロップ入りは避けます。', '병에 든 구운 홍고추로 바꿀 수 있으며 물기를 잘 빼고 단 시럽 제품은 피하세요.', 'ใช้พริกแดงย่างขวดแทนของย่างสดได้ สะเด็ดดีและเลือกแบบไม่มีน้ำเชื่อมหวาน')
+    ]
+  },
+  pilPil: {
+    tips: [
+      ml('Keep the oil warm rather than hot when forming pil-pil; the cod gelatin emulsifies most reliably below frying temperature.', '製作 pil-pil 時油要溫而不是燙；鱈魚明膠在低於油炸溫度時最容易乳化。', 'ピルピルを作るとき油は熱くしすぎず温かい程度にし、揚げ物温度より低い方がタラのゼラチンが乳化しやすくなります。', '필필을 만들 때 기름은 뜨겁지 않고 따뜻하게 유지하세요. 대구 젤라틴은 튀김 온도보다 낮을 때 가장 잘 유화됩니다.', 'ตอนทำ pil-pil ให้น้ำมันอุ่นไม่ร้อน เจลาตินจากปลาคอดอิมัลซิไฟได้ดีที่สุดต่ำกว่าอุณหภูมิทอด'),
+      ml('Move the pan gently and add oil in small amounts so the fish juices and olive oil combine into a glossy sauce instead of separating.', '輕柔晃鍋並少量分次加油，讓魚汁與橄欖油形成亮澤乳化醬而不是分離。', '鍋をやさしく動かし油を少量ずつ加え、魚の汁とオリーブ油を分離させず艶のあるソースにします。', '팬을 부드럽게 흔들고 기름을 조금씩 넣어 생선즙과 올리브유가 분리되지 않고 윤기 나는 소스가 되게 하세요.', 'โยกกระทะเบา ๆ และเติมน้ำมันทีละน้อยให้ของเหลวปลาและน้ำมันรวมเป็นซอสเงาแทนการแยกชั้น')
+    ],
+    commonMistakes: [
+      ml('Oil that is too hot cooks the gelatin into tight white clumps and prevents a smooth emulsion.', '油太熱會讓明膠凝成緊實白塊，難以形成滑順乳化。', '油が熱すぎるとゼラチンが白い塊に固まり、なめらかな乳化ができません。', '기름이 너무 뜨거우면 젤라틴이 하얀 덩어리로 굳어 매끈한 유화가 되지 않습니다.', 'น้ำมันร้อนเกินทำให้เจลาตินจับเป็นก้อนขาวและอิมัลชันไม่เนียน'),
+      ml('Do not keep cooking salt cod after it flakes easily; residual heat continues to firm it while the sauce is finished.', '鹽鱈魚一旦可輕易剝片就不要續煮；完成醬汁期間餘熱仍會讓魚肉變緊。', '塩ダラが簡単にほぐれるようになったら加熱を続けず、ソースを仕上げる間の余熱も考えます。', '염대구가 쉽게 결대로 갈라지면 더 익히지 마세요. 소스를 마무리하는 동안 잔열로 더 단단해집니다.', 'เมื่อปลาคอดเค็มแยกเป็นชิ้นง่ายแล้วอย่าปรุงต่อ ความร้อนคงค้างยังทำให้เนื้อแน่นขึ้นระหว่างทำซอส')
+    ],
+    substitutions: [
+      ml('If only already-desalted salt cod is available, skip the soaking stage but still dry the surface thoroughly before cooking.', '若只能買到已脫鹽鹽鱈，可省略浸泡，但烹調前仍要徹底擦乾表面。', '塩抜き済みの塩ダラなら浸水を省けますが、調理前に表面の水気はしっかり拭きます。', '이미 염분 제거된 염대구라면 불리기를 생략해도 되지만 조리 전 표면 물기는 완전히 닦으세요.', 'ถ้ามีปลาคอดเค็มที่ถอนเกลือแล้ว ข้ามการแช่ได้แต่ยังต้องซับผิวให้แห้งก่อนปรุง'),
+      ml('Use a mild dried chilli if guindilla is unavailable; it should perfume the oil without dominating the cod.', '買不到 guindilla 時可用溫和乾辣椒，重點是讓油帶香氣而不是蓋過鱈魚。', 'ギンディージャがなければ穏やかな乾燥唐辛子を使い、タラを圧倒せず油に香りを付けます。', '긴디야가 없으면 순한 건고추를 써 대구 맛을 덮지 않고 기름에 향만 내세요.', 'ถ้าไม่มี guindilla ใช้พริกแห้งรสอ่อน ให้หอมน้ำมันโดยไม่กลบรสปลาคอด')
+    ]
+  },
+  vegetableStew: {
+    tips: [
+      ml('Cook watery vegetables in stages so each can brown and soften before tomato moisture enters the pan.', '含水多的蔬菜分階段炒，讓每種先上色變軟，再加入番茄水分。', '水分の多い野菜は順番に炒め、トマトの水分を入れる前にそれぞれ色と柔らかさを出します。', '수분 많은 채소는 순서대로 볶아 토마토 수분이 들어오기 전에 각각 갈색과 부드러움을 만드세요.', 'ผัดผักที่มีน้ำมากเป็นขั้น ๆ ให้แต่ละชนิดขึ้นสีและนุ่มก่อนใส่ความชื้นจากมะเขือเทศ'),
+      ml('Keep the final simmer uncovered so excess vegetable water evaporates and the pisto becomes spoonable rather than soupy.', '最後不加蓋小火煮，讓多餘蔬菜水分蒸發，pisto 濃到可用湯匙舀而不是湯狀。', '仕上げは蓋をせず煮て余分な野菜の水分を飛ばし、汁物ではなくスプーンですくえる濃さにします。', '마지막은 뚜껑 없이 끓여 채소의 여분 수분을 날리고 국물처럼 되지 않게 숟가락으로 뜰 농도로 만드세요.', 'เคี่ยวช่วงท้ายแบบเปิดฝาให้น้ำผักส่วนเกินระเหย จน pisto ตักได้ไม่เป็นซุป')
+    ],
+    commonMistakes: [
+      ml('Putting all vegetables in at once steams the onions and peppers instead of developing their sweetness.', '所有蔬菜一次下鍋會把洋蔥與甜椒蒸熟，而不是炒出甜味。', '野菜を全部一度に入れると玉ねぎとピーマンが蒸され、甘さを引き出す焼きができません。', '채소를 한꺼번에 넣으면 양파와 피망이 볶이지 않고 쪄져 단맛이 충분히 나오지 않습니다.', 'ใส่ผักทั้งหมดพร้อมกันทำให้หอมกับพริกนึ่งแทนการผัดจนหวาน'),
+      ml('Do not correct tomato acidity with sugar before the sauce has reduced; concentration often softens the perceived sharpness.', '番茄醬汁尚未收濃前不要急著用糖修酸；濃縮後酸感常會自然變柔。', 'トマトが煮詰まる前に砂糖で酸味を直さず、濃縮すると鋭さが和らぐことが多いです。', '토마토가 졸기 전에 설탕으로 산미를 고치지 마세요. 농축되면 날카로운 신맛이 줄어드는 경우가 많습니다.', 'อย่าแก้ความเปรี้ยวด้วยน้ำตาลก่อนซอสงวด เพราะเมื่อเข้มข้นความเปรี้ยวคมมักลดลงเอง')
+    ],
+    substitutions: [
+      ml('Use another firm summer squash if courgette is unavailable; keep the pieces the same size so they soften at a similar rate.', '買不到櫛瓜時可用其他結實夏南瓜，切同樣大小以維持相近熟成速度。', 'ズッキーニがなければ別の締まった夏かぼちゃを同じ大きさに切り、火の通りを合わせます。', '주키니가 없으면 다른 단단한 여름호박을 같은 크기로 썰어 익는 속도를 맞추세요.', 'ถ้าไม่มีซูกินี ใช้ฟักฤดูร้อนเนื้อแน่นชนิดอื่น หั่นขนาดเท่ากันให้สุกใกล้เคียง'),
+      ml('Egg is a traditional accompaniment but can be omitted; the vegetable pisto itself remains complete.', '雞蛋是傳統搭配但可省略；蔬菜 pisto 本身仍是一道完整料理。', '卵は伝統的な添え物ですが省け、野菜のピストだけでも料理として成立します。', '달걀은 전통 곁들임이지만 생략해도 채소 피스토 자체로 완성됩니다.', 'ไข่เป็นเครื่องเคียงดั้งเดิมแต่ตัดได้ ตัว pisto ผักเองก็เป็นจานสมบูรณ์')
+    ]
+  },
+  batteredSeafood: {
+    tips: [
+      ml('Keep both squid and batter cold until the oil is ready; cold batter sets quickly into a lighter crust.', '魷魚與麵糊都保持冰冷直到油溫到位；冷麵糊遇熱能更快定型成輕脆外殼。', '油が適温になるまでイカと衣を冷たく保ち、冷たい衣を素早く固めて軽い食感にします。', '기름이 준비될 때까지 오징어와 반죽을 차갑게 유지하면 차가운 반죽이 빨리 굳어 가벼운 튀김옷이 됩니다.', 'เก็บทั้งปลาหมึกและแป้งให้เย็นจนกว่าน้ำมันพร้อม แป้งเย็นจะเซ็ตเร็วเป็นเปลือกเบา'),
+      ml('Fry only a few rings at a time so the oil stays hot and the coating seals before squid releases moisture.', '每次只炸少量魷魚圈，讓油溫維持高溫，外殼先封住再避免魷魚出水。', '一度に少量ずつ揚げ、油温を保ってイカが水分を出す前に衣を固めます。', '한 번에 적은 양만 튀겨 기름 온도를 유지하고 오징어 수분이 나오기 전에 튀김옷을 굳히세요.', 'ทอดวงปลาหมึกทีละน้อยให้น้ำมันยังร้อนและผิวเซ็ตก่อนปลาหมึกปล่อยน้ำ')
+    ],
+    commonMistakes: [
+      ml('Wet squid makes batter slide off and causes violent splattering; dry the rings very thoroughly before coating.', '魷魚圈潮濕會讓麵糊滑落並劇烈噴油；裹糊前要徹底擦乾。', 'イカが濡れていると衣が滑り落ち油も激しくはねるため、衣を付ける前に十分乾かします。', '오징어가 젖어 있으면 반죽이 벗겨지고 기름이 심하게 튀므로 입히기 전에 완전히 말리세요.', 'ปลาหมึกเปียกทำให้แป้งไหลและน้ำมันกระเด็นแรง ต้องซับวงให้แห้งมากก่อนชุบ'),
+      ml('Long frying makes squid rubbery even if the crust looks good; remove each batch as soon as the coating is evenly golden.', '即使外殼漂亮，炸太久也會讓魷魚變橡皮；外衣均勻金黃就立刻撈起。', '衣がきれいでも長く揚げるとイカが硬くなるため、均一な金色になったらすぐ上げます。', '튀김옷이 좋아 보여도 오래 튀기면 오징어가 질겨지므로 고르게 금빛이 되면 바로 건지세요.', 'ทอดนานทำให้ปลาหมึกเหนียวแม้ผิวสวย ให้ยกทันทีเมื่อแป้งทองสม่ำเสมอ')
+    ],
+    substitutions: [
+      ml('Cold sparkling water can replace part of the egg-based liquid for a lighter batter while keeping the stated total liquid amount.', '想要較輕麵糊，可用冰氣泡水替代部分蛋液液體，但總液體量維持食譜設定。', '軽い衣にしたい場合は卵液の一部を冷たい炭酸水に替え、総液量はレシピ通りに保ちます。', '더 가벼운 반죽은 달걀 기반 액체 일부를 차가운 탄산수로 바꾸되 총 액체량은 유지하세요.', 'ใช้น้ำโซดาเย็นแทนของเหลวไข่บางส่วนได้เพื่อแป้งเบา โดยคงปริมาณของเหลวรวมตามสูตร'),
+      ml('Use a neutral high-heat oil if mild olive oil is unavailable; keep the same frying temperature.', '沒有淡味橄欖油時可用中性耐高溫油，維持相同炸油溫度。', '穏やかなオリーブ油がなければ高温向けの中性油を使い、揚げ温度は同じにします。', '순한 올리브유가 없으면 고온용 중성유를 쓰고 같은 튀김 온도를 유지하세요.', 'ถ้าไม่มีน้ำมันมะกอกรสอ่อน ใช้น้ำมันเป็นกลางทนร้อนสูงและรักษาอุณหภูมิทอดเดิม')
+    ]
   }
 };
 
