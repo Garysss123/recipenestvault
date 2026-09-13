@@ -1,0 +1,555 @@
+{
+  "generator": "OpenAI image_gen",
+  "mode": "built-in",
+  "generatedAt": "2026-09-13",
+  "styleReference": "assets/recipes/illustrations-generated/bibimbap/step-01.png",
+  "entries": [
+    {
+      "recipeId": "pizza-margherita",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "77579e19211c99990cf003c5e644255874dc213705a2d438f8a6ba4de87fb0ea",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Pizza Margherita.\nCell 1: A smooth pale pizza dough ball beside a bowl with no dry flour, on a lightly floured board; no hands.\nCell 2: Two smooth risen dough balls in separate covered proofing containers, visibly expanded; no toppings yet.\nCell 3: A fully heated oven with pizza stone on a rack; separate bowls of crushed red tomato and well-drained torn mozzarella nearby.\nCell 4: One raw round pizza base about 30 cm wide with a raised bare rim, thin tomato layer, torn mozzarella and basil spaced sparsely.\nCell 5: Finished Margherita pizza with a blistered puffy rim, bright red tomato, melted white mozzarella, basil leaves and olive-oil sheen; no extra toppings.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/pizza-margherita.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_4Sq5qHWj4Fz-uNmXZQzsPLa0b7RevWrG.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "spaghetti-carbonara",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "13de97fe7b876577c4688924c9bfc27c2fa5277517d2aa2504f003a3e1fa0a5b",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Spaghetti Carbonara.\nCell 1: A bowl of thick pale yellow egg-and-Pecorino paste with black pepper flecks; separate grated cheese beside it.\nCell 2: Crisp-edged guanciale batons in a skillet with a shallow pool of clear rendered fat; no sauce or pasta yet.\nCell 3: Spaghetti boiling in a large pot of salted water, with a measured jug ready to hold reserved starchy water.\nCell 4: Glossy spaghetti coated in a smooth pale-gold egg-cheese emulsion with crisp guanciale pieces, no scrambled egg curds.\nCell 5: Finished carbonara in a warm white bowl, glossy spaghetti with crisp guanciale, Pecorino and black pepper; no cream, parsley or raw egg yolk on top.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/spaghetti-carbonara.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_Ox9J2BjrYb-ApXucxAw7PNDX7EfTPhNO.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "cacio-e-pepe",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "a5a4be03556180ca05f48e6fdb07cf790fec85d957019e6504748c8885bae18e",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Cacio e Pepe.\nCell 1: Coarsely cracked black pepper in a dry skillet, lightly toasted and fragrant; no cheese or pasta yet.\nCell 2: Firm partially cooked long pasta in boiling water with a measuring jug of cloudy reserved pasta water nearby.\nCell 3: Long pasta finishing in a skillet with toasted black pepper and a small amount of cloudy starchy water, no cheese yet.\nCell 4: Glossy long pasta coated in a smooth pale Pecorino emulsion with black pepper flecks, with no cheese clumps.\nCell 5: Finished cacio e pepe: glossy long pasta in a pale cheese sauce with abundant black pepper and a light Pecorino dusting; no cream or herbs.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/cacio-e-pepe.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_JE1-Z4VDix6sazdcuOpwgIrz66wvosGS.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "bucatini-amatriciana",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "b26b8c07600d773601b0cb4686172b2697634545328ac1f360306fa6645467ef",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Bucatini all’Amatriciana.\nCell 1: Crisp-edged guanciale strips in a wide skillet with rendered fat, with half the pieces moved to a small plate.\nCell 2: Bright red tomato sauce simmering around some guanciale pieces in a wide skillet, with no cheese or pasta yet.\nCell 3: Bucatini boiling in salted water, the hollow long strands visible, with reserved cloudy pasta water in a jug.\nCell 4: Bucatini tubes coated evenly in thick bright-red tomato sauce with guanciale, no watery pool at the bottom.\nCell 5: Finished bucatini all’Amatriciana with glossy red tomato sauce, crisp guanciale and grated Pecorino; no parsley or cream.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/bucatini-amatriciana.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_R9wQkia7-Jgqp8Ahs9tz9oJaWR82pDln.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "pasta-alla-norma",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "1cc4da64373ec53ec3b72af3188a902b88f2c8b34893360513ca26e2e04d6ab4",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Pasta alla Norma.\nCell 1: Golden-brown eggplant cubes with soft centres in a wide skillet, with the cooked first batch in a separate bowl.\nCell 2: Bright red tomato sauce simmering with thin garlic slices and torn basil, with browned eggplant waiting separately.\nCell 3: Short pasta boiling in salted water, with a measuring jug of reserved cloudy pasta water nearby.\nCell 4: Rigatoni coated in red tomato sauce with intact golden eggplant cubes folded through.\nCell 5: Finished Pasta alla Norma with red-sauced short pasta, golden eggplant cubes, white grated ricotta salata and basil leaves.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/pasta-alla-norma.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_ehOOHvAggqsUvaDOLTN29MwQa4SwuhMy.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "trofie-al-pesto",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "e311fa2ffb37bee311643b89aac0939502b559b3f16d09adb7c96b21136c4576",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Trofie al Pesto Genovese.\nCell 1: Bright green basil pesto in a chilled processor bowl with a creamy but slightly textured consistency; no pasta yet.\nCell 2: Small potato cubes gently boiling in salted water, with green beans and dry trofie waiting separately.\nCell 3: Cooked twisted trofie, tender potato cubes and bright green beans draining together in a colander.\nCell 4: Trofie, potato cubes and green beans gently coated in vivid green pesto in a large bowl, no heat under the bowl.\nCell 5: Finished trofie al pesto with vivid green sauce, small potato cubes and green beans, lightly dusted with hard cheese.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/trofie-al-pesto.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_ehIMiPH5W_FlsQOIHK29Av08YE3-v2Et.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "tagliatelle-ragu-bolognese",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "dce6e9c31a0188b9a95ceef5adc9c7a9cc9d531027e4d4d29678b66d1ec21a88",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Tagliatelle al Ragù Bolognese.\nCell 1: Very soft finely diced onion, carrot and celery in a heavy pot, translucent with no deep browning.\nCell 2: Crumbled beef and pork with browned spots in the soffritto, with no liquid pooling in the pot.\nCell 3: Browned minced meat and soffritto coated in a shallow glossy wine reduction.\nCell 4: Thick brick-red Bolognese ragù in a heavy pot, finely textured meat suspended in a cohesive sauce with no watery layer.\nCell 5: Wide ribbons of egg tagliatelle being coated with thick Bolognese ragù in the pot.\nCell 6: Finished tagliatelle al ragù Bolognese with broad egg-pasta ribbons evenly coated in thick meat sauce and a light Parmigiano dusting.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/tagliatelle-ragu-bolognese.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_iaCgomRjLjZ2r2v_Zn_dzX4xzGl9mFiC.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "lasagne-bolognese",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "24253d4d10e74a4e3f0a10a443278a28ce2a5ad9ce30b5ae5ca3922edfb0d122",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Lasagne alla Bolognese.\nCell 1: Smooth pale béchamel in a saucepan coating a spoon, with no browned roux or lumps.\nCell 2: A buttered rectangular baking dish with only a thin first layer of Bolognese ragù on the bottom.\nCell 3: Unbaked lasagne in a rectangular dish with neat alternating layers and a pale béchamel-Parmesan top.\nCell 4: Freshly baked lasagne with bubbling edges, deeply golden béchamel and browned cheese spots in the rectangular dish.\nCell 5: A clean square slice of lasagne showing distinct pasta, ragù and béchamel layers, with a browned top and moist interior.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/lasagne-bolognese.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_mCyGRaVTzPIX7Y-Qc0EATaij_5kIbmZA.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "risotto-alla-milanese",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "a3fedd4a7f2b7a2c6cb4e9472e8acbcaae86be5dc2fe75e20a25e1e41380a07a",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Risotto alla Milanese.\nCell 1: A cup of deep golden saffron-infused hot stock beside a saucepan of clear hot stock.\nCell 2: Glossy rice grains and softened pale onion in a wide saucepan, rice edges slightly translucent with no stock yet.\nCell 3: Toasted rice coated in a shallow white-wine reduction, with almost no free liquid left.\nCell 4: Golden saffron risotto in a wide saucepan, rice grains distinct in a glossy flowing sauce with no dry patches.\nCell 5: Finished saffron risotto spreading softly on a shallow white plate, vivid golden and glossy with distinct rice grains; no parsley garnish.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/risotto-alla-milanese.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_4ILfmz4qFIkcM96QR8riil0pnCB6trRj.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "ossobuco-alla-milanese",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "a447ee257ca6144ca0ecaa828c0b71ef714650afd3536f5949f743894a0917f3",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Ossobuco alla Milanese.\nCell 1: Four raw cross-cut veal shanks lightly dusted with flour, central marrow bones visible, with no wet batter.\nCell 2: Deeply browned veal shanks in a Dutch oven, with already browned pieces resting on a tray.\nCell 3: Soft diced vegetables in a red-brown wine, tomato and stock braising liquid, with browned shanks waiting outside the pot.\nCell 4: Tender intact veal shanks braising in a glossy red-brown sauce, marrow bones still centred and meat holding together.\nCell 5: Finished ossobuco: one tender cross-cut veal shank in glossy braising sauce with central marrow bone and a fresh green-yellow gremolata scatter.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/ossobuco-alla-milanese.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_HpKLNrnp-5q8V7j3CadI2IMFTF061JZ2.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "saltimbocca-alla-romana",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "0f32c43a50768a95546b88d8bbdb01717b06b69e76d964fa51ab1f69a3b4f1f3",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Saltimbocca alla Romana.\nCell 1: Eight thin raw veal cutlets topped neatly with one prosciutto slice and one sage leaf each, toothpicks visible, underside lightly floured.\nCell 2: Thin veal cutlets searing plain-side down in a skillet, prosciutto and sage still attached on top.\nCell 3: Lightly browned veal cutlets on a warm plate, prosciutto warmed but not crisp and sage leaves still green.\nCell 4: A shallow glossy white-wine reduction in the skillet with browned fond dissolved, no meat in the pan.\nCell 5: Finished saltimbocca cutlets with prosciutto and sage attached, lightly glossy white-wine butter sauce spooned around them.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/saltimbocca-alla-romana.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_oF14S3s7V6-LJVrPxRucwO2bBUOBnydm.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "melanzane-parmigiana",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "5b7b1a4c325b0ccfb5108816517777875cada2ef90b92da0658c64799e408194",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Parmigiana di Melanzane.\nCell 1: Raw eggplant slices with beads of moisture after salting, beside a stack already blotted dry; no cooking yet.\nCell 2: Flexible eggplant slices with deep golden sear marks draining on a rack, not breaded.\nCell 3: Thick bright red tomato sauce with small garlic and basil pieces, no watery layer.\nCell 4: Unbaked rectangular eggplant parmigiana with visible overlapping eggplant layers and a tomato-cheese top.\nCell 5: A neat rested square of eggplant parmigiana with visible eggplant, tomato and melted cheese layers, browned top and fresh basil.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/melanzane-parmigiana.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_JpW0hDlVls4L2Q4lq1ullpraZVxPpR92.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "ribollita",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "62eabd8f882bd02e46d4e3fad6021e887e0e3bce0a497468f03ebca6dc258547",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Tuscan Ribollita.\nCell 1: Soft diced onion, carrot and celery in olive oil in a heavy pot, with freshly added minced garlic and no browning.\nCell 2: Tomato-bean broth in the pot with some whole white beans and some mashed beans thickening the liquid.\nCell 3: Dark green cavolo nero and pale savoy cabbage fully softened in a thick bean-and-tomato soup.\nCell 4: Torn rustic bread chunks soaking inside the thick vegetable-bean soup, already softening but still partly visible.\nCell 5: Finished ribollita in a rustic bowl, very thick with visible white beans, dark greens and softened bread, finished with olive-oil sheen.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/ribollita.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_u8sLL5kbKsgz-3n1m1PuO-SaTBbgNcOi.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "arancini-siciliani",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "fa02a9397c0f3161ca0ca0fda1ddc43e84dc3986e457072ee95597d4d156a7bb",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Arancini Siciliani.\nCell 1: Cooked rice spread in a thin layer on a tray to cool, with no steam and no filling mixed into it.\nCell 2: A bowl of thick beef ragù with peas beside exactly sixteen separate mozzarella cubes.\nCell 3: Sixteen compact pale rice balls on a tray, with a cutaway example showing ragù, peas and one mozzarella cube sealed inside.\nCell 4: Breaded arancini arranged on a tray with an even dry breadcrumb coating, ready for frying.\nCell 5: Finished deep-golden arancini on a rack, one cut open showing white rice, beef ragù, peas and melted mozzarella centre.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/arancini-siciliani.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_-dYKqLg-BOuLXFaFtivagMZyFOQ_wnqf.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "focaccia-genovese",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "51174931236c9d1bd394ccacd2dbf404a1f829975a913e20afeb85950a43938e",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Focaccia Genovese.\nCell 1: Soft glossy focaccia dough in a bowl, smooth and stretchy with no dry flour remaining.\nCell 2: Risen focaccia dough doubled in a covered bowl with many small fermentation bubbles.\nCell 3: Soft focaccia dough stretched evenly across an olive-oiled rectangular tray, airy and relaxed.\nCell 4: Unbaked focaccia on a tray with deep evenly spaced dimples holding tiny pools of oil-water brine and flaky salt.\nCell 5: Finished rectangular focaccia with deep dimples, glossy olive-oil surface and an evenly deep-golden crust, cut to show airy crumb.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/focaccia-genovese.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_c8MoGsGEt3wl8yx2tX7oWxJeevxfmLFr.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "spaghetti-alle-vongole",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "adbd349ec4534c560a19ddc2c2a621789e2a63cc60bdc0120d3c454c2a7813e7",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Spaghetti alle Vongole.\nCell 1: Clean closed live clams in a colander, with cracked or non-closing shells separated for disposal.\nCell 2: Spaghetti boiling in salted water with a jug of cloudy reserved pasta water.\nCell 3: Open steamed clams in a bowl beside a pan holding pale cloudy clam-and-wine liquor with sliced garlic.\nCell 4: Spaghetti glossy with emulsified pale clam liquor and garlic in the pan, with clams waiting outside.\nCell 5: Finished spaghetti alle vongole with open clam shells, glossy pale briny sauce, sliced garlic and chopped parsley; no tomato or cheese.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/spaghetti-alle-vongole.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_IQKx3vHlERbFPfWdvBtjKe6ArDO-KJov.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "pollo-alla-cacciatora",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "982e9c4407a6fea3c21006ba46ca13a4c359f9c75dec4ebc1a472a046cb525c0",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Pollo alla Cacciatora.\nCell 1: Chicken thighs with deeply golden skin browning in a wide heavy pan, with already browned pieces on a plate.\nCell 2: Soft onion and carrot in the chicken pan with minced garlic and rosemary, browned fond still visible.\nCell 3: Red tomato-wine braising sauce with softened onion and carrot in the pan, no chicken returned yet.\nCell 4: Chicken thighs skin-side up gently braising in red tomato sauce, golden skin still partly above the liquid.\nCell 5: Finished chicken cacciatora with intact golden-skinned thighs in thick red tomato sauce with black olives, onion and carrot.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/pollo-alla-cacciatora.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_Vr5F0t2Cn2DPyeIUU6cvUEBmmEQ51cwZ.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "tiramisu",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "59a328023732c0884e8c08b6ddaaeb5a7c0b614fc27c8b9a6c5cd1871304dd16",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Tiramisù.\nCell 1: A shallow dish of completely cooled dark espresso beside dry savoiardi ladyfingers; no cream yet.\nCell 2: A heatproof bowl of thick pale yolk-sugar cream above a gently steaming water bath, with a clean thermometer probe and no scrambled egg.\nCell 3: A large bowl of airy smooth ivory mascarpone cream with soft swirls, plus a separate empty whipped-cream bowl; no cocoa yet.\nCell 4: A rectangular dish lined with twelve evenly espresso-moistened ladyfingers, darkened on the surface but not collapsed.\nCell 5: A rectangular tiramisu dish with two distinct coffee-soaked ladyfinger layers and two pale mascarpone-cream layers, smooth cream top and no cocoa yet.\nCell 6: Finished tiramisu square with clear coffee-biscuit and pale cream layers under an even dark cocoa top, no berries or whipped garnish.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/tiramisu.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_MfG90yv7_bhwrN8jjQrfF8oSohYAdMDe.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "panna-cotta",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "44bfbe97de3e4b6dc6cc8f3386d7629f47102ab1c1a5a7b346a5aabb8ab58396",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Vanilla Panna Cotta.\nCell 1: A small bowl of cold milk with evenly hydrated swollen gelatin granules on the surface.\nCell 2: Warm ivory cream in a saucepan with vanilla seeds visible and split vanilla pod resting in the liquid, no boiling bubbles.\nCell 3: Smooth warm vanilla cream with gelatin fully dissolved, fine vanilla specks visible and no foam.\nCell 4: Six small moulds filled evenly with pale vanilla cream, covered and chilled until gently set.\nCell 5: Finished unmoulded vanilla panna cotta as a smooth pale dome on a plain cold plate with fine vanilla specks and no sauce.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/panna-cotta.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_-P9awWrpVWXPDGJp66u0BJ5yDXqjDZ89.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "cannoli-siciliani",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "sceneHash": "2df99d776b3e99c4a2ece67040d2f64aab0a6290588d41083880327283ded1c5",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Cannoli Siciliani.\nCell 1: Very thick drained ricotta in a lined sieve, with whey collected below and a spoon groove holding clearly.\nCell 2: A firm smooth cannoli dough ball wrapped to rest, beside a small bowl containing the reserved half beaten egg.\nCell 3: Thin raw pastry ovals wrapped neatly around metal cannoli tubes, seams sealed flat with no filling present.\nCell 4: Deep-golden blistered cannoli shells cooling on a rack after metal tubes have been removed, shells hollow and crisp.\nCell 5: Smooth thick sweet ricotta filling with fine dark chocolate and orange-peel pieces in a chilled bowl.\nCell 6: Crisp cannoli shells being shown fully filled from both ends with thick white ricotta-chocolate filling, no soggy shells.\nCell 7: Finished Sicilian cannoli: blistered deep-golden pastry tubes filled with white ricotta and dark chocolate flecks, ends lightly coated in chopped pistachio.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/cannoli-siciliani.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_qnA_tY5JOPPsmuNpGUhC6J2KuuWaO3Yw.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "cantucci",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "369d18bc67f8cecd4d613edbfc5a6ea0708aad3ecaae4809efe79b8cc3cf65b2",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Tuscan Cantucci.\nCell 1: Whole lightly toasted almonds cooling on a tray, pale golden and not deeply browned.\nCell 2: Firm sticky biscuit dough densely studded with whole toasted almonds in a mixing bowl.\nCell 3: Two neat raw almond-studded dough logs on a parchment-lined tray, well spaced and slightly flattened.\nCell 4: First-baked almond logs, pale golden and firm enough to slice, resting on the tray.\nCell 5: Diagonal 1.5 cm cantucci slices showing whole almond cross-sections, arranged cut-side up on the tray.\nCell 6: Finished dry crisp cantucci on a cooling rack, golden cut faces with whole almond pieces visible and no chocolate coating.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/italian/cantucci.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3/call_JvHd2X2P6XMjnrMJuPOwggRfdGgTCsAc.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          470,
+          941
+        ]
+      }
+    }
+  ]
+}

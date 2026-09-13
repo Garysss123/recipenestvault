@@ -5,6 +5,7 @@ import { taiwanesePhotoCandidates } from "./taiwanese-photos.mjs";
 import { indianPhotoCandidates } from "./indian-photos.mjs";
 import { vietnamesePhotoCandidates } from "./vietnamese-photos.mjs";
 import { frenchPhotoCandidates } from "./french-photos.mjs";
+import { italianPhotoCandidates } from "./italian-photos.mjs";
 
 // Candidate real-food photographs. Nothing in this file is published until
 // visualMatchApproved is set after a recipe-to-photo review.
@@ -119,5 +120,6 @@ export const recipePhotoCandidates = [
   ...taiwanesePhotoCandidates,
   ...indianPhotoCandidates,
   ...vietnamesePhotoCandidates,
-  ...frenchPhotoCandidates
+  ...frenchPhotoCandidates,
+  ...italianPhotoCandidates
 ];

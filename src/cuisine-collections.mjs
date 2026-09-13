@@ -274,4 +274,42 @@ const french = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french };
+const italian = {
+  en: {
+    eyebrow: "Curated Italian cooking",
+    title: "Italian recipes from regional pasta classics to celebrated desserts",
+    intro: "Cook through Roman pasta, Neapolitan pizza, Ligurian pesto, Milanese risotto and ossobuco, Sicilian aubergine and arancini, Tuscan ribollita, seafood pasta, focaccia, and classic desserts such as tiramisù, panna cotta, cannoli, and cantucci. Each recipe gives precise quantities, heat, timing, texture, and doneness cues so regional Italian techniques are practical in a home kitchen.",
+    recipeEyebrow: "Italian recipe",
+    backToCollection: "Back to Italian recipes"
+  },
+  "zh-hant": {
+    eyebrow: "精選義大利料理",
+    title: "從地方經典義大利麵、披薩到傳統甜點的完整義大利食譜",
+    intro: "從羅馬義大利麵、拿坡里披薩、利古里亞青醬，到米蘭燉飯與燉小牛膝、西西里茄子料理與炸飯糰、托斯卡尼蔬菜麵包湯、海鮮義大利麵與佛卡夏，再到提拉米蘇、奶酪、卡諾里與杏仁脆餅。每道食譜都清楚標出份量、火力、時間、口感與熟度線索，讓不同地區的義大利技法在家也能穩定重現。",
+    recipeEyebrow: "義大利料理食譜",
+    backToCollection: "返回義大利料理食譜"
+  },
+  ja: {
+    eyebrow: "厳選したイタリア料理",
+    title: "地方の定番パスタから伝統菓子まで作れるイタリア料理レシピ",
+    intro: "ローマのパスタ、ナポリのピッツァ、リグーリアのペスト、ミラノ風リゾットとオッソブーコ、シチリアのナス料理とアランチーニ、トスカーナのリボッリータ、魚介パスタ、フォカッチャ、さらにティラミス、パンナコッタ、カンノーロ、カントゥッチまで作れます。分量、火加減、時間、食感、火の通りを具体的に示し、各地方の技法を家庭でも再現しやすくしています。",
+    recipeEyebrow: "イタリア料理レシピ",
+    backToCollection: "イタリア料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "엄선한 이탈리아 요리",
+    title: "지역 파스타 클래식부터 전통 디저트까지 만드는 이탈리아 요리 레시피",
+    intro: "로마식 파스타, 나폴리 피자, 리구리아 페스토, 밀라노식 리소토와 오소부코, 시칠리아 가지 요리와 아란치니, 토스카나 리볼리타, 해산물 파스타, 포카치아부터 티라미수, 판나코타, 카놀리, 칸투치까지 만듭니다. 정확한 분량, 불 세기, 시간, 식감과 익힘 기준을 제시해 각 지역의 이탈리아 조리법을 집에서도 안정적으로 재현할 수 있습니다.",
+    recipeEyebrow: "이탈리아 요리 레시피",
+    backToCollection: "이탈리아 요리 레시피로 돌아가기"
+  },
+  th: {
+    eyebrow: "อาหารอิตาเลียนที่คัดสรร",
+    title: "สูตรอาหารอิตาเลียนตั้งแต่พาสต้าประจำภูมิภาคถึงขนมหวานคลาสสิก",
+    intro: "ทำได้ตั้งแต่พาสตาแบบโรม พิซซ่านาโปลี เพสโตลิกูเรีย ริซอตโตและออสโซบูโกแบบมิลาน มะเขือม่วงและอารันชีนีแบบซิซิลี ริโบลลิตาแบบทัสคานี พาสตาทะเล โฟคัชชา ไปจนถึงทีรามิสุ พันนาคอตตา คันโนลี และคันตุชชี ทุกสูตรระบุปริมาณ ระดับไฟ เวลา เนื้อสัมผัส และจุดสุกอย่างชัดเจน เพื่อให้เทคนิคของแต่ละภูมิภาคทำซ้ำได้ในครัวบ้าน",
+    recipeEyebrow: "สูตรอาหารอิตาเลียน",
+    backToCollection: "กลับไปสูตรอาหารอิตาเลียน"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian };

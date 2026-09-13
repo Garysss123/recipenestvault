@@ -477,6 +477,100 @@ await inspect({
   }
 });
 
+const italianRecipeIds = [
+  "pizza-margherita", "spaghetti-carbonara", "cacio-e-pepe", "bucatini-amatriciana", "pasta-alla-norma",
+  "trofie-al-pesto", "tagliatelle-ragu-bolognese", "lasagne-bolognese", "risotto-alla-milanese", "ossobuco-alla-milanese",
+  "saltimbocca-alla-romana", "melanzane-parmigiana", "ribollita", "arancini-siciliani", "focaccia-genovese",
+  "spaghetti-alle-vongole", "pollo-alla-cacciatora", "tiramisu", "panna-cotta", "cannoli-siciliani", "cantucci"
+];
+async function assertItalianCollection(page, locale) {
+  const links = await page.locator(".collection-recipe-card > a").evaluateAll((items) => items.map((item) => item.getAttribute("href")).sort());
+  const expected = italianRecipeIds.map((id) => `/${locale}/recipes/${id}/`).sort();
+  if (JSON.stringify(links) !== JSON.stringify(expected)) throw new Error(`Italian ${locale} collection does not contain the expected 21 unique recipe routes`);
+  if (await page.locator(".collection-recipe-card").count() !== 21) throw new Error("Italian collection must show 21 cards");
+  const broken = await page.locator(".collection-recipe-card img").evaluateAll((images) => images.filter((image) => !image.complete || !image.naturalWidth).length);
+  if (broken) throw new Error(`${broken} Italian card photographs failed to load`);
+  if (!(await page.locator("body").evaluate((element) => element.classList.contains("cuisine-italian")))) throw new Error("Italian collection is missing its cuisine theme class");
+}
+async function assertItalianRecipe(page, expectedSteps, locale, id) {
+  await assertIllustratedRecipe(page, expectedSteps, { traditionalChinese: locale === "zh-hant" });
+  const steps = page.locator(".method-section ol > li");
+  if (await steps.count() !== expectedSteps) throw new Error(`Italian ${id} method count differs from its ${expectedSteps} illustrations`);
+  for (const entry of await steps.all()) if (await entry.locator(".recipe-step-illustration").count() !== 1) throw new Error(`Italian ${id} needs exactly one illustration in each step`);
+  const images = await page.locator(".recipe-step-illustration img").evaluateAll((entries) => entries.map((entry) => entry.getAttribute("src")));
+  if (new Set(images).size !== expectedSteps) throw new Error(`Italian ${id} reuses a step image`);
+  if (await page.locator(`.breadcrumbs a[href="/${locale}/cuisines/italian/"]`).count() !== 1) throw new Error(`Italian ${id} breadcrumb does not return to Italian cuisine`);
+  const expectedRelatedTitle = ({
+    en: "More Italian recipes",
+    "zh-hant": "更多義大利料理",
+    ja: "ほかのイタリア料理",
+    ko: "다른 이탈리아 요리",
+    th: "สูตรอาหารอิตาเลียนเพิ่มเติม"
+  })[locale];
+  if (await page.locator("#related-title").innerText() !== expectedRelatedTitle) throw new Error(`Italian ${id} related-recipes title is not cuisine-specific`);
+  const relatedLinks = await page.locator(".related-recipes .collection-recipe-card > a").evaluateAll((items) => items.map((item) => item.getAttribute("href")));
+  if (relatedLinks.length !== 3 || relatedLinks.some((href) => !href?.startsWith(`/${locale}/recipes/`))) throw new Error(`Italian ${id} related-recipes links are invalid`);
+  for (const target of ["en", "zh-hant", "ja", "ko", "th"]) {
+    if (await page.locator(`.language-popover a[href="/${target}/recipes/${id}/"]`).count() !== 1) throw new Error(`Italian ${id} is missing its ${target} language route`);
+  }
+}
+await inspect({
+  name: "en-search-italian-desktop", path: "/en/search/?q=tiramisu", viewport: { width: 1280, height: 900 },
+  interact: async (page) => {
+    const result = page.locator('.result-card[href="/en/recipes/tiramisu/"]');
+    await result.waitFor({ state: "visible" });
+    if (!/Italian recipe/i.test(await result.innerText())) throw new Error("Italian search result lacks its cuisine label");
+  }
+});
+for (const [locale, label, viewport] of [
+  ["en", "desktop", { width: 1440, height: 1000 }],
+  ["zh-hant", "mobile", { width: 390, height: 844 }],
+  ["ja", "desktop", { width: 1366, height: 900 }],
+  ["ko", "mobile", { width: 390, height: 844 }],
+  ["th", "mobile", { width: 390, height: 844 }]
+]) {
+  await inspect({
+    name: `${locale}-italian-collection-${label}`, path: `/${locale}/cuisines/italian/`, viewport,
+    interact: async (page) => {
+      await assertItalianCollection(page, locale);
+      const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+      if (response?.status() !== 200) throw new Error(`Italian ${locale} direct refresh failed`);
+    },
+    extraScreenshots: locale === "en" || locale === "zh-hant" ? [
+      { name: `${locale}-italian-collection-hero-${label}`, selector: ".cuisine-hero" },
+      { name: `${locale}-italian-first-card-${label}`, selector: ".collection-recipe-card:first-child" }
+    ] : []
+  });
+}
+for (const [locale, id, count, label] of [
+  ["zh-hant", "pizza-margherita", 5, "mobile"],
+  ["en", "tagliatelle-ragu-bolognese", 6, "desktop"],
+  ["ja", "ossobuco-alla-milanese", 5, "desktop"],
+  ["ko", "tiramisu", 6, "mobile"],
+  ["th", "cannoli-siciliani", 7, "mobile"]
+]) {
+  await inspect({
+    name: `${locale}-italian-${id}-${label}`, path: `/${locale}/recipes/${id}/`,
+    viewport: label === "mobile" ? { width: 390, height: 844 } : { width: 1366, height: 900 },
+    interact: async (page) => assertItalianRecipe(page, count, locale, id),
+    extraScreenshots: [
+      { name: `${locale}-italian-${id}-hero-${label}`, selector: ".recipe-detail-hero" },
+      { name: `${locale}-italian-${id}-first-step-${label}`, selector: ".method-section li:first-child" }
+    ]
+  });
+}
+await inspect({
+  name: "italian-language-choice-mobile", path: "/en/recipes/spaghetti-carbonara/", viewport: { width: 390, height: 844 },
+  fullPage: false, suppressLanguagePrompt: false, loadLazyImages: false,
+  interact: async (page) => {
+    await page.locator('[data-language-choice="zh-hant"]').click();
+    await page.waitForLoadState("networkidle");
+    if (new URL(page.url()).pathname !== "/zh-hant/recipes/spaghetti-carbonara/") throw new Error("Italian language selection lost the recipe route");
+    const response = await page.reload({ waitUntil: "networkidle" });
+    if (response?.status() !== 200 || await page.locator("[data-language-prompt]").isVisible()) throw new Error("Italian language preference or deep refresh failed");
+  }
+});
+
 await inspect({
   name: "zh-chinese-collection-mobile", path: "/zh-hant/cuisines/chinese/", viewport: { width: 390, height: 844 },
   interact: async (page) => {
