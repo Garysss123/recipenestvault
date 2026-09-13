@@ -114,36 +114,105 @@
       "columns": 3,
       "rows": 2,
       "usedPanels": 6,
-      "reviewed": false,
+      "reviewed": true,
       "sceneHash": "299f6519dd0395c497b0a6ac166d9cf20fb2c1917dfd147c770526ae4c6bd766",
-      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Patatas Bravas.\nCell 1: A small saucepan with softened translucent onion and garlic in olive oil, with no tomato added yet.\nCell 2: A small bowl of smooth thick brick-red brava sauce with a glossy paprika-red surface, no potato present.\nCell 3: Dry 3 cm potato chunks spread in a single layer on clean kitchen towels, visibly free of surface water.\nCell 4: Pale tender potato chunks draining in one layer after the low-temperature first fry, with almost no browning.\nCell 5: Cooled first-fried potato chunks on a rack in one layer, dry-looking and pale, ready for a hotter second fry.\nCell 6: Finished patatas bravas: irregular deep-golden crisp potato chunks with a generous spooning of smooth brick-red brava sauce and a light parsley garnish."
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Patatas Bravas.\nCell 1: A small saucepan with softened translucent onion and garlic in olive oil, with no tomato added yet.\nCell 2: A small bowl of smooth thick brick-red brava sauce with a glossy paprika-red surface, no potato present.\nCell 3: Dry 3 cm potato chunks spread in a single layer on clean kitchen towels, visibly free of surface water.\nCell 4: Pale tender potato chunks draining in one layer after the low-temperature first fry, with almost no browning.\nCell 5: Cooled first-fried potato chunks on a rack in one layer, dry-looking and pale, ready for a hotter second fry.\nCell 6: Finished patatas bravas: irregular deep-golden crisp potato chunks with a generous spooning of smooth brick-red brava sauce and a light parsley garnish.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/spanish/patatas-bravas.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/spanish/patatas-bravas.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          471,
+          941
+        ]
+      }
     },
     {
       "recipeId": "croquetas-de-jamon",
       "columns": 3,
       "rows": 3,
       "usedPanels": 8,
-      "reviewed": false,
-      "sceneHash": "3bcd0ad3030eb305611c137d3004cd784d7f0d97bc59b6a0edad06df0bb50896",
-      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 8 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Croquetas de Jamón.\nCell 1: A small saucepan of steaming whole milk with a thermometer reading about 72°C, no boiling bubbles.\nCell 2: A heavy saucepan with pale softened onion and finely diced Serrano ham in melted butter and olive oil.\nCell 3: A pale smooth roux paste binding onion and ham in the saucepan, with no loose flour visible.\nCell 4: Very thick creamy ham béchamel in a saucepan, a spatula stroke leaving a clean path across the bottom.\nCell 5: A shallow tray of very thick pale ham béchamel chilled into a firm even slab, its surface covered directly with parchment.\nCell 6: Eighteen cold smooth oval croquette portions about 6 cm long arranged separately on a lined tray, not breaded yet.\nCell 7: Cold oval croquettes evenly coated in fine dry breadcrumbs on a tray, all surfaces fully covered and ready to fry.\nCell 8: Freshly fried Spanish ham croquettes, evenly deep golden and crisp, one cut open to show a thick creamy ham béchamel centre."
+      "reviewed": true,
+      "sceneHash": "75366a1eafc51ffc540491f9e6a059466f3a4b74b8fdd10b4d91abb7c894fdd7",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 8 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Croquetas de Jamón.\nCell 1: A small saucepan of steaming whole milk with a plain kitchen thermometer resting in it, no readable scale or digits and no boiling bubbles.\nCell 2: A heavy saucepan with pale softened onion and finely diced Serrano ham in melted butter and olive oil.\nCell 3: A pale smooth roux paste binding onion and ham in the saucepan, with no loose flour visible.\nCell 4: Very thick creamy ham béchamel in a saucepan, a spatula stroke leaving a clean path across the bottom.\nCell 5: A shallow tray of very thick pale ham béchamel chilled into a firm even slab, its surface covered directly with parchment.\nCell 6: Eighteen cold smooth oval croquette portions about 6 cm long arranged separately on a lined tray, not breaded yet.\nCell 7: Cold oval croquettes evenly coated in fine dry breadcrumbs on a tray, all surfaces fully covered and ready to fry.\nCell 8: Freshly fried Spanish ham croquettes, evenly deep golden and crisp, one cut open to show a thick creamy ham béchamel centre.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/spanish/croquetas-de-jamon.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/spanish/croquetas-de-jamon.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
     },
     {
       "recipeId": "gambas-al-ajillo",
       "columns": 3,
       "rows": 2,
       "usedPanels": 4,
-      "reviewed": false,
+      "reviewed": true,
       "sceneHash": "8bfd8ef71c660cd41168a7f119c844cbc844cfdf5c9d8c8aac8038b5b80de8e8",
-      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 4 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Gambas al Ajillo.\nCell 1: Large peeled raw prawns, completely dry and lightly seasoned, arranged in one layer on a plate; no oil yet.\nCell 2: A shallow cazuela with olive oil, pale-golden sliced garlic and two dried chillies gently sizzling, with no prawns yet.\nCell 3: Prawns just turned pink and opaque in sizzling garlic-chilli olive oil, lying in one layer with loose C-shaped curls rather than tight rings.\nCell 4: Finished gambas al ajillo in a small earthenware cazuela, pink prawns in glossy golden garlic-chilli olive oil with green parsley flecks and sliced bread beside it."
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 4 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Gambas al Ajillo.\nCell 1: Large peeled raw prawns, completely dry and lightly seasoned, arranged in one layer on a plate; no oil yet.\nCell 2: A shallow cazuela with olive oil, pale-golden sliced garlic and two dried chillies gently sizzling, with no prawns yet.\nCell 3: Prawns just turned pink and opaque in sizzling garlic-chilli olive oil, lying in one layer with loose C-shaped curls rather than tight rings.\nCell 4: Finished gambas al ajillo in a small earthenware cazuela, pink prawns in glossy golden garlic-chilli olive oil with green parsley flecks and sliced bread beside it.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/spanish/gambas-al-ajillo.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/spanish/gambas-al-ajillo.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          471,
+          941
+        ]
+      }
     },
     {
       "recipeId": "pan-con-tomate",
       "columns": 3,
       "rows": 2,
       "usedPanels": 4,
-      "reviewed": false,
+      "reviewed": true,
       "sceneHash": "7db919dc06a78ac136b9d5a01bd8f8c961b2bc8179808234d1a754d5e5caaddd",
-      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 4 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Pan con Tomate (Pa amb Tomàquet).\nCell 1: A bowl of loose juicy bright-red grated tomato pulp beside discarded intact tomato skins, no seasoning added.\nCell 2: Four thick rustic bread slices toasted crisp and distinctly golden at the cut surfaces, with an airy chewy crumb still visible.\nCell 3: Hot golden toast slices with a light sheen of olive oil and a halved garlic clove beside them, no tomato topping yet.\nCell 4: Finished pan con tomate: thick golden rustic toast covered edge-to-edge with juicy grated ripe tomato, olive-oil sheen and a few coarse salt crystals, no extra toppings."
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 4 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Pan con Tomate (Pa amb Tomàquet).\nCell 1: A bowl of loose juicy bright-red grated tomato pulp beside discarded intact tomato skins, no seasoning added.\nCell 2: Four thick rustic bread slices toasted crisp and distinctly golden at the cut surfaces, with an airy chewy crumb still visible.\nCell 3: Hot golden toast slices with a light sheen of olive oil and a halved garlic clove beside them, no tomato topping yet.\nCell 4: Finished pan con tomate: thick golden rustic toast covered edge-to-edge with juicy grated ripe tomato, olive-oil sheen and a few coarse salt crystals, no extra toppings.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/spanish/pan-con-tomate.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/spanish/pan-con-tomate.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          471,
+          941
+        ]
+      }
     },
     {
       "recipeId": "fideua",

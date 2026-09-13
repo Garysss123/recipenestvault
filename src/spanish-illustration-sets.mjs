@@ -170,5 +170,176 @@ export const spanishIllustrationSets = [
       "47a40864d90bd2c9b29290b9998a3cc01b7f2c109a8d11a41f6ef75e14681ee9",
       "7ffcfb214a4b5243bff407a5f92253f4a3e1a773a67e22cf31e17602e2bd7666"
     ]
+  },
+  {
+    "recipeId": "patatas-bravas",
+    "promptSet": "spanish-cooking-steps-v1",
+    "generator": "OpenAI image_gen",
+    "generatedAt": "2026-09-13",
+    "aiGenerated": true,
+    "nonPhotographic": true,
+    "noPeopleOrHands": true,
+    "visualMatchApproved": true,
+    "excludeFromStructuredData": true,
+    "setComplete": true,
+    "dimensions": "1672x941",
+    "sourceSheetAsset": "assets/recipes/illustration-sheets-generated/spanish/patatas-bravas.png",
+    "sourceSheetSha256": "1ee96671c4225025654617d927b75357bbfdcea4e3538ed5dd5dcaf59d1df162",
+    "sourceDirectory": "assets/recipes/illustrations-generated/patatas-bravas",
+    "grid": {
+      "columns": 3,
+      "rows": 2
+    },
+    "cropGrid": {
+      "width": 1672,
+      "height": 941,
+      "x": [
+        0,
+        557,
+        1115,
+        1672
+      ],
+      "y": [
+        0,
+        471,
+        941
+      ]
+    },
+    "hashes": [
+      "2fb3df3f42004def93854cc0e2732d8c522e74417bd8bc221a556afc38235213",
+      "54edb3fb6c617b5e1c92cb432bc14a06592a6e5bf9928b502177e5c5fc3e8024",
+      "5d94c316191d6e037e47a00dc91ab703a93bdbaa2453d96d73485f20ed9f47e7",
+      "2a9c5a5f55ac0afdc6d267c59b40f048e32569114dc62907304a11251348b090",
+      "6b0ec60567645fabb3724155c18da72d10026823e4d57b068ff1032341f00864",
+      "7d0535d5a4b8cb18f57d1ee2b5624348aed2457eff302b7a096ac87dbf0a96b8"
+    ]
+  },
+  {
+    "recipeId": "croquetas-de-jamon",
+    "promptSet": "spanish-cooking-steps-v1",
+    "generator": "OpenAI image_gen",
+    "generatedAt": "2026-09-13",
+    "aiGenerated": true,
+    "nonPhotographic": true,
+    "noPeopleOrHands": true,
+    "visualMatchApproved": true,
+    "excludeFromStructuredData": true,
+    "setComplete": true,
+    "dimensions": "1672x941",
+    "sourceSheetAsset": "assets/recipes/illustration-sheets-generated/spanish/croquetas-de-jamon.png",
+    "sourceSheetSha256": "05d6805e409e7042b9a8985c81d6087dd8dcbaabeea112e693a06f96342d18fb",
+    "sourceDirectory": "assets/recipes/illustrations-generated/croquetas-de-jamon",
+    "grid": {
+      "columns": 3,
+      "rows": 3
+    },
+    "cropGrid": {
+      "width": 1536,
+      "height": 1024,
+      "x": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "y": [
+        0,
+        341,
+        683,
+        1024
+      ]
+    },
+    "hashes": [
+      "0c93c91b71997f269cb6926e466b7a16dff65723674cccbe7c92d209fe02f47c",
+      "cc99a0173710e49dffa50d0a163fe41313c68acc3f11b35c9820918bebae1874",
+      "c80523a52667c2762634144e7c1408c7ea5c54f001ee32f9e56d163b70f6cb83",
+      "e1a4fbd75354ec7a2e90f1e864b8e5a2df06c2eaab28ccddac9716ce17815a6f",
+      "9ef6386f9e66692b32ab799739919ee110515f5208cf57c3480e494777cd4a68",
+      "4bb8898887f1d152c65390c2b79a6bddd21f56a3e51df659c702cb1049c2d3f9",
+      "886151e76a388a7149a50a4817fe6157214c924808f7244269455b54c361b0f3",
+      "d41866626abfe44ade29c37b0c971d32ad1fc2e109317892081e86136e503e36"
+    ]
+  },
+  {
+    "recipeId": "gambas-al-ajillo",
+    "promptSet": "spanish-cooking-steps-v1",
+    "generator": "OpenAI image_gen",
+    "generatedAt": "2026-09-13",
+    "aiGenerated": true,
+    "nonPhotographic": true,
+    "noPeopleOrHands": true,
+    "visualMatchApproved": true,
+    "excludeFromStructuredData": true,
+    "setComplete": true,
+    "dimensions": "1672x941",
+    "sourceSheetAsset": "assets/recipes/illustration-sheets-generated/spanish/gambas-al-ajillo.png",
+    "sourceSheetSha256": "39f9ab1bcbb55173c5390b669893b256ea8a9af22ed054bdc802de3a148d538d",
+    "sourceDirectory": "assets/recipes/illustrations-generated/gambas-al-ajillo",
+    "grid": {
+      "columns": 3,
+      "rows": 2
+    },
+    "cropGrid": {
+      "width": 1672,
+      "height": 941,
+      "x": [
+        0,
+        557,
+        1115,
+        1672
+      ],
+      "y": [
+        0,
+        471,
+        941
+      ]
+    },
+    "hashes": [
+      "ed1e97048967122d51b1be47da1a59bc959d9e272cd18fc7b52e6094934fb4f6",
+      "be4a1ceee10a98dc5dce1814f71631db16bf295ac80dfee369a8365c3a7d29c9",
+      "38c6cc3ae24b31df96c35f592db146fff6cccb91879a4e5f2d60258fb9898e7b",
+      "cd21be1ef2e44f4d0b290403502471e54c38c8e6b7a669d941d0ffd34ccf3868"
+    ]
+  },
+  {
+    "recipeId": "pan-con-tomate",
+    "promptSet": "spanish-cooking-steps-v1",
+    "generator": "OpenAI image_gen",
+    "generatedAt": "2026-09-13",
+    "aiGenerated": true,
+    "nonPhotographic": true,
+    "noPeopleOrHands": true,
+    "visualMatchApproved": true,
+    "excludeFromStructuredData": true,
+    "setComplete": true,
+    "dimensions": "1672x941",
+    "sourceSheetAsset": "assets/recipes/illustration-sheets-generated/spanish/pan-con-tomate.png",
+    "sourceSheetSha256": "163694fd2ac9e80cdd13056efdc171d7b78bc09a4d1fbbe386953b16b2cd52fc",
+    "sourceDirectory": "assets/recipes/illustrations-generated/pan-con-tomate",
+    "grid": {
+      "columns": 3,
+      "rows": 2
+    },
+    "cropGrid": {
+      "width": 1672,
+      "height": 941,
+      "x": [
+        0,
+        557,
+        1115,
+        1672
+      ],
+      "y": [
+        0,
+        471,
+        941
+      ]
+    },
+    "hashes": [
+      "df7dad17f3e462fdeb72454230e8505fc344d9d5bcc12d1fb0edd30446e24fef",
+      "c0ca7f3543a31dab8b5fc7a4ac95365c5d2d954af73d74e10724b5533305f537",
+      "e7fcbe952e3c97f78932d15f7917e9c75852def089e5ef4d6fd08996eea0bcf1",
+      "184ecb9136f0b776175a4f82c35c1dd1201ed152a4d36d5142e67b955da7cd21"
+    ]
   }
 ];
