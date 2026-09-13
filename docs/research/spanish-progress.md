@@ -1,0 +1,42 @@
+# Spanish collection checkpoint
+
+Goal: publish 20 Spanish recipes at the same quality bar as the French/Italian collections without growing a single Codex task until it becomes unrecoverable.
+
+## Working rules
+
+- Work in batches of 4 recipes.
+- Keep source evidence, photo provenance, prompts, manifests, hashes, and QA artifacts in the repository; chat reports stay to counts, failures, and paths.
+- Method steps follow real cooking stages. Never target a fixed step count or split/merge merely to shape the histogram.
+- Each recipe needs five locales (`en`, `zh-hant`, `ja`, `ko`, `th`), 2+ direct reliable HTTPS sources, exact measurable facts, a reviewed commercial-use real finished-dish photograph, and one reviewed hand-free non-photorealistic illustration per natural method step.
+- Integration, full static audit, local browser QA, Git push, Cloudflare deployment, and production QA happen after all 20 recipes and assets are complete.
+
+## Locked 20-recipe slate
+
+| Batch | ID | Dish | Region | Content | Sources | Photo | Steps |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| A | `paella-valenciana` | Paella Valenciana | Valencia | drafted + checked | 2/2 | pending | 7 |
+| A | `tortilla-espanola` | Tortilla Española | Spain | drafted + checked | 2/2 | pending | 6 |
+| A | `gazpacho-andaluz` | Gazpacho Andaluz | Andalusia | drafted + checked | 2/2 | pending | 4 |
+| A | `salmorejo-cordobes` | Salmorejo Cordobés | Córdoba, Andalusia | drafted + checked | 2/2 | pending | 5 |
+| B | `patatas-bravas` | Patatas Bravas | Madrid / Spain | pending | 0/2 | pending | pending |
+| B | `croquetas-de-jamon` | Croquetas de Jamón | Spain | pending | 0/2 | pending | pending |
+| B | `gambas-al-ajillo` | Gambas al Ajillo | Spain | pending | 0/2 | pending | pending |
+| B | `pan-con-tomate` | Pan con Tomate / Pa amb Tomàquet | Catalonia | pending | 0/2 | pending | pending |
+| C | `fideua` | Fideuà | Valencia | pending | 0/2 | pending | pending |
+| C | `cocido-madrileno` | Cocido Madrileño | Madrid | pending | 0/2 | pending | pending |
+| C | `fabada-asturiana` | Fabada Asturiana | Asturias | pending | 0/2 | pending | pending |
+| C | `pulpo-a-la-gallega` | Pulpo a la Gallega / Pulpo a Feira | Galicia | pending | 0/2 | pending | pending |
+| D | `bacalao-al-pil-pil` | Bacalao al Pil-Pil | Basque Country | pending | 0/2 | pending | pending |
+| D | `pisto-manchego` | Pisto Manchego | Castilla-La Mancha | pending | 0/2 | pending | pending |
+| D | `marmitako` | Marmitako | Basque Country | pending | 0/2 | pending | pending |
+| D | `calamares-a-la-romana` | Calamares a la Romana | Spain / Madrid | pending | 0/2 | pending | pending |
+| E | `churros-con-chocolate` | Churros con Chocolate | Madrid / Spain | pending | 0/2 | pending | pending |
+| E | `crema-catalana` | Crema Catalana | Catalonia | pending | 0/2 | pending | pending |
+| E | `tarta-de-santiago` | Tarta de Santiago | Galicia | pending | 0/2 | pending | pending |
+| E | `arroz-con-leche` | Arroz con Leche | Asturias / Spain | pending | 0/2 | pending | pending |
+
+## Current phase
+
+Batch A recipe text is drafted and passed the compact five-locale/source/timing/structure check. Batch B source research is next. Nothing Spanish is globally published until all 20 recipes, photographs and illustration mappings pass their gates.
+
+Last known base commit before Spanish work: `f459a49 Enforce natural recipe method distributions`.
