@@ -571,6 +571,100 @@ await inspect({
   }
 });
 
+const spanishRecipeIds = [
+  "paella-valenciana", "tortilla-espanola", "gazpacho-andaluz", "salmorejo-cordobes", "patatas-bravas",
+  "croquetas-de-jamon", "gambas-al-ajillo", "pan-con-tomate", "fideua", "cocido-madrileno",
+  "fabada-asturiana", "pulpo-a-la-gallega", "bacalao-al-pil-pil", "pisto-manchego", "marmitako",
+  "calamares-a-la-romana", "churros-con-chocolate", "crema-catalana", "tarta-de-santiago", "arroz-con-leche"
+];
+async function assertSpanishCollection(page, locale) {
+  const links = await page.locator(".collection-recipe-card > a").evaluateAll((items) => items.map((item) => item.getAttribute("href")).sort());
+  const expected = spanishRecipeIds.map((id) => `/${locale}/recipes/${id}/`).sort();
+  if (JSON.stringify(links) !== JSON.stringify(expected)) throw new Error(`Spanish ${locale} collection does not contain the expected 20 unique recipe routes`);
+  if (await page.locator(".collection-recipe-card").count() !== 20) throw new Error("Spanish collection must show 20 cards");
+  const broken = await page.locator(".collection-recipe-card img").evaluateAll((images) => images.filter((image) => !image.complete || !image.naturalWidth).length);
+  if (broken) throw new Error(`${broken} Spanish card photographs failed to load`);
+  if (!(await page.locator("body").evaluate((element) => element.classList.contains("cuisine-spanish")))) throw new Error("Spanish collection is missing its cuisine theme class");
+}
+async function assertSpanishRecipe(page, expectedSteps, locale, id) {
+  await assertIllustratedRecipe(page, expectedSteps, { traditionalChinese: locale === "zh-hant" });
+  const steps = page.locator(".method-section ol > li");
+  if (await steps.count() !== expectedSteps) throw new Error(`Spanish ${id} method count differs from its ${expectedSteps} illustrations`);
+  for (const entry of await steps.all()) if (await entry.locator(".recipe-step-illustration").count() !== 1) throw new Error(`Spanish ${id} needs exactly one illustration in each step`);
+  const images = await page.locator(".recipe-step-illustration img").evaluateAll((entries) => entries.map((entry) => entry.getAttribute("src")));
+  if (new Set(images).size !== expectedSteps) throw new Error(`Spanish ${id} reuses a step image`);
+  if (await page.locator(`.breadcrumbs a[href="/${locale}/cuisines/spanish/"]`).count() !== 1) throw new Error(`Spanish ${id} breadcrumb does not return to Spanish cuisine`);
+  const expectedRelatedTitle = ({
+    en: "More Spanish recipes",
+    "zh-hant": "更多西班牙料理",
+    ja: "ほかのスペイン料理",
+    ko: "다른 스페인 요리",
+    th: "สูตรอาหารสเปนเพิ่มเติม"
+  })[locale];
+  if (await page.locator("#related-title").innerText() !== expectedRelatedTitle) throw new Error(`Spanish ${id} related-recipes title is not cuisine-specific`);
+  const relatedLinks = await page.locator(".related-recipes .collection-recipe-card > a").evaluateAll((items) => items.map((item) => item.getAttribute("href")));
+  if (relatedLinks.length !== 3 || relatedLinks.some((href) => !href?.startsWith(`/${locale}/recipes/`))) throw new Error(`Spanish ${id} related-recipes links are invalid`);
+  for (const target of ["en", "zh-hant", "ja", "ko", "th"]) {
+    if (await page.locator(`.language-popover a[href="/${target}/recipes/${id}/"]`).count() !== 1) throw new Error(`Spanish ${id} is missing its ${target} language route`);
+  }
+}
+await inspect({
+  name: "en-search-spanish-desktop", path: "/en/search/?q=paella", viewport: { width: 1280, height: 900 },
+  interact: async (page) => {
+    const result = page.locator('.result-card[href="/en/recipes/paella-valenciana/"]');
+    await result.waitFor({ state: "visible" });
+    if (!/Spanish recipe/i.test(await result.innerText())) throw new Error("Spanish search result lacks its cuisine label");
+  }
+});
+for (const [locale, label, viewport] of [
+  ["en", "desktop", { width: 1440, height: 1000 }],
+  ["zh-hant", "mobile", { width: 390, height: 844 }],
+  ["ja", "desktop", { width: 1366, height: 900 }],
+  ["ko", "mobile", { width: 390, height: 844 }],
+  ["th", "mobile", { width: 390, height: 844 }]
+]) {
+  await inspect({
+    name: `${locale}-spanish-collection-${label}`, path: `/${locale}/cuisines/spanish/`, viewport,
+    interact: async (page) => {
+      await assertSpanishCollection(page, locale);
+      const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+      if (response?.status() !== 200) throw new Error(`Spanish ${locale} direct refresh failed`);
+    },
+    extraScreenshots: locale === "en" || locale === "zh-hant" ? [
+      { name: `${locale}-spanish-collection-hero-${label}`, selector: ".cuisine-hero" },
+      { name: `${locale}-spanish-first-card-${label}`, selector: ".collection-recipe-card:first-child" }
+    ] : []
+  });
+}
+for (const [locale, id, count, label] of [
+  ["zh-hant", "paella-valenciana", 7, "mobile"],
+  ["en", "cocido-madrileno", 8, "desktop"],
+  ["ja", "pulpo-a-la-gallega", 6, "desktop"],
+  ["ko", "crema-catalana", 5, "mobile"],
+  ["th", "arroz-con-leche", 6, "mobile"]
+]) {
+  await inspect({
+    name: `${locale}-spanish-${id}-${label}`, path: `/${locale}/recipes/${id}/`,
+    viewport: label === "mobile" ? { width: 390, height: 844 } : { width: 1366, height: 900 },
+    interact: async (page) => assertSpanishRecipe(page, count, locale, id),
+    extraScreenshots: [
+      { name: `${locale}-spanish-${id}-hero-${label}`, selector: ".recipe-detail-hero" },
+      { name: `${locale}-spanish-${id}-first-step-${label}`, selector: ".method-section li:first-child" }
+    ]
+  });
+}
+await inspect({
+  name: "spanish-language-choice-mobile", path: "/en/recipes/tortilla-espanola/", viewport: { width: 390, height: 844 },
+  fullPage: false, suppressLanguagePrompt: false, loadLazyImages: false,
+  interact: async (page) => {
+    await page.locator('[data-language-choice="zh-hant"]').click();
+    await page.waitForLoadState("networkidle");
+    if (new URL(page.url()).pathname !== "/zh-hant/recipes/tortilla-espanola/") throw new Error("Spanish language selection lost the recipe route");
+    const response = await page.reload({ waitUntil: "networkidle" });
+    if (response?.status() !== 200 || await page.locator("[data-language-prompt]").isVisible()) throw new Error("Spanish language preference or deep refresh failed");
+  }
+});
+
 await inspect({
   name: "zh-chinese-collection-mobile", path: "/zh-hant/cuisines/chinese/", viewport: { width: 390, height: 844 },
   interact: async (page) => {

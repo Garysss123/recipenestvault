@@ -312,4 +312,42 @@ const italian = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian };
+const spanish = {
+  en: {
+    eyebrow: "Curated Spanish cooking",
+    title: "Spanish recipes from regional rice and tapas to classic desserts",
+    intro: "Cook through Valencian paella and fideuà, tortilla española, Andalusian chilled soups, Madrid tapas and cocido, Asturian fabada, Galician octopus, Basque cod and tuna stews, Catalan pan con tomate and crema catalana, plus churros and almond cake. Each recipe gives precise quantities, heat, timing, texture and doneness cues so regional Spanish techniques are practical in a home kitchen.",
+    recipeEyebrow: "Spanish recipe",
+    backToCollection: "Back to Spanish recipes"
+  },
+  "zh-hant": {
+    eyebrow: "精選西班牙料理",
+    title: "從地方米料理、Tapas 到經典甜點的西班牙食譜",
+    intro: "從瓦倫西亞 paella 與 fideuà、西班牙馬鈴薯烘蛋、安達盧西亞冷湯、馬德里 tapas 與 cocido，到阿斯圖里亞斯 fabada、加利西亞章魚、巴斯克鱈魚與鮪魚燉菜、加泰隆尼亞番茄麵包與 crema catalana，再到吉拿棒與杏仁蛋糕。每道食譜都清楚標出份量、火力、時間、口感與熟度線索，讓不同地區的西班牙技法在家也能穩定重現。",
+    recipeEyebrow: "西班牙料理食譜",
+    backToCollection: "返回西班牙料理食譜"
+  },
+  ja: {
+    eyebrow: "厳選したスペイン料理",
+    title: "地方の米料理とタパスから伝統菓子まで作れるスペイン料理レシピ",
+    intro: "バレンシアのパエリアとフィデウア、トルティージャ、アンダルシアの冷製スープ、マドリードのタパスとコシード、アストゥリアスのファバーダ、ガリシアのタコ、バスクのタラとマグロ煮込み、カタルーニャのパン・コン・トマテとクレマ・カタラーナ、さらにチュロスやアーモンドケーキまで作れます。分量、火加減、時間、食感、火の通りを具体的に示し、地方ごとの技法を家庭でも再現しやすくしています。",
+    recipeEyebrow: "スペイン料理レシピ",
+    backToCollection: "スペイン料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "엄선한 스페인 요리",
+    title: "지역 쌀요리와 타파스부터 전통 디저트까지 만드는 스페인 요리 레시피",
+    intro: "발렌시아 파에야와 피데우아, 또르띠야 에스파뇰라, 안달루시아 냉수프, 마드리드 타파스와 코시도, 아스투리아스 파바다, 갈리시아 문어, 바스크식 대구와 참치 스튜, 카탈루냐 판 콘 토마테와 크레마 카탈라나부터 추로스와 아몬드 케이크까지 만듭니다. 정확한 분량, 불 세기, 시간, 식감과 익힘 기준을 제시해 지역별 스페인 조리법을 집에서도 안정적으로 재현할 수 있습니다.",
+    recipeEyebrow: "스페인 요리 레시피",
+    backToCollection: "스페인 요리 레시피로 돌아가기"
+  },
+  th: {
+    eyebrow: "อาหารสเปนที่คัดสรร",
+    title: "สูตรอาหารสเปนตั้งแต่ข้าวและทาปาสประจำภูมิภาคถึงขนมหวานคลาสสิก",
+    intro: "ทำได้ตั้งแต่ปาเอยาและฟิเดอัวแบบบาเลนเซีย ตอร์ติญาสเปน ซุปเย็นอันดาลูเซีย ทาปาสและโคซิโดแบบมาดริด ฟาบาดาอัสตูเรียส ปลาหมึกกาลิเซีย ปลาคอดและสตูว์ทูน่าแบบบาสก์ ขนมปังมะเขือเทศกับเครมากาตาลานาแบบกาตาลุญญา ไปจนถึงชูโรสและเค้กอัลมอนด์ ทุกสูตรระบุปริมาณ ระดับไฟ เวลา เนื้อสัมผัส และจุดสุกอย่างชัดเจน เพื่อให้เทคนิคสเปนแต่ละภูมิภาคทำซ้ำได้ในครัวบ้าน",
+    recipeEyebrow: "สูตรอาหารสเปน",
+    backToCollection: "กลับไปสูตรอาหารสเปน"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish };

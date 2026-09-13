@@ -10,6 +10,7 @@ import { indianRecipeDrafts } from "./indian-recipes.mjs";
 import { vietnameseRecipeDrafts } from "./vietnamese-recipes.mjs";
 import { frenchRecipeDrafts } from "./french-recipes.mjs";
 import { italianRecipeDrafts } from "./italian-recipes.mjs";
+import { spanishRecipeDrafts } from "./spanish-recipes.mjs";
 import { recipePhotoCandidates } from "./recipe-photos.mjs";
 
 const ml = (en, zhHant, ja, ko, th) => ({ en, "zh-hant": zhHant, ja, ko, th });
@@ -479,5 +480,9 @@ const publishedItalianRecipes = italianRecipeDrafts
   .filter((recipe) => approvedPhotos.has(recipe.id))
   .map((recipe) => ({ ...recipe, photo: approvedPhotos.get(recipe.id) }));
 
-export const recipes = [...publishedChineseRecipes, ...publishedJapaneseRecipes, ...publishedKoreanRecipes, ...publishedThaiRecipes, ...publishedTaiwaneseRecipes, ...publishedIndianRecipes, ...publishedVietnameseRecipes, ...publishedFrenchRecipes, ...publishedItalianRecipes];
-export const allRecipeDrafts = [...chineseRecipeDrafts, ...japaneseRecipeDrafts, ...koreanRecipeDrafts, ...thaiRecipeDrafts, ...taiwaneseRecipeDrafts, ...indianRecipeDrafts, ...vietnameseRecipeDrafts, ...frenchRecipeDrafts, ...italianRecipeDrafts];
+const publishedSpanishRecipes = spanishRecipeDrafts
+  .filter((recipe) => approvedPhotos.has(recipe.id))
+  .map((recipe) => ({ ...recipe, photo: approvedPhotos.get(recipe.id) }));
+
+export const recipes = [...publishedChineseRecipes, ...publishedJapaneseRecipes, ...publishedKoreanRecipes, ...publishedThaiRecipes, ...publishedTaiwaneseRecipes, ...publishedIndianRecipes, ...publishedVietnameseRecipes, ...publishedFrenchRecipes, ...publishedItalianRecipes, ...publishedSpanishRecipes];
+export const allRecipeDrafts = [...chineseRecipeDrafts, ...japaneseRecipeDrafts, ...koreanRecipeDrafts, ...thaiRecipeDrafts, ...taiwaneseRecipeDrafts, ...indianRecipeDrafts, ...vietnameseRecipeDrafts, ...frenchRecipeDrafts, ...italianRecipeDrafts, ...spanishRecipeDrafts];
