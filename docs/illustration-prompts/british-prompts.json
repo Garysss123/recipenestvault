@@ -1,0 +1,358 @@
+{
+  "generator": "OpenAI image_gen",
+  "mode": "built-in",
+  "generatedAt": "2026-09-14",
+  "styleReference": "assets/recipes/illustrations-generated/bibimbap/step-01.png",
+  "entries": [
+    {
+      "recipeId": "fish-and-chips",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "sceneHash": "7853c146f0191e6813a35565a93c1e945bc0ee935094c338bd174b1cbe05819e",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Fish and Chips.\nCell 1: A tray of thick 1.5 cm raw potato chips rinsed and completely dry beside a bowl of clear water; no hands.\nCell 2: Pale first-fried thick chips draining in a single layer on a wire rack, cooked but not browned.\nCell 3: A chilled mixing bowl of pale beer batter with a few tiny lumps and visible bubbles, resting over a larger bowl of ice; no whisk in motion.\nCell 4: Four dry white-fish portions lightly dusted with flour on a tray, no wet patches and no hands.\nCell 5: Two finished battered fish fillets resting on a wire rack, deeply golden with an airy rough crisp crust; no utensils or hands.\nCell 6: Deep-golden thick chips draining on a rack in one crisp layer, visibly darker than the first-fried stage.\nCell 7: A finished plate of one golden battered fish fillet beside thick crisp chips, with a small malt-vinegar bottle or ramekin alongside.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/british/fish-and-chips.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_MPYWKOAZRw4HEIkK8ybSLpLHj1SXY7WB.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "beef-wellington",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "sceneHash": "7a4582b1c99dc226cf3fd876b75129cbc7e4b1cbbeec12df965fa46c9c04f233",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 8 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Beef Wellington.\nCell 1: A centre-cut beef fillet evenly dark-browned on every surface, cooling on a wire rack with no raw exterior visible.\nCell 2: A tray of dark finely minced mushroom duxelles spread thin and visibly dry, with no liquid pooling around it.\nCell 3: The browned beef fillet resting cold with a thin even mustard coating on every visible surface.\nCell 4: A tight chilled cylinder of beef fully enclosed by a thin prosciutto layer and dark mushroom duxelles, resting on baking paper.\nCell 5: A neat chilled pastry-wrapped beef cylinder on a lined tray, seam hidden underneath and ends sealed cleanly.\nCell 6: An unbaked Wellington on a tray with glossy egg wash and shallow diagonal pastry scoring, fully intact.\nCell 7: A fully baked Beef Wellington with deeply golden puffed pastry and crisp scored lines, resting intact on its tray.\nCell 8: A sliced Beef Wellington showing a rosy beef centre, thin mushroom layer and crisp golden puff pastry in clean concentric layers.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/british/beef-wellington.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_AmYCDbG3PB33HDKn1TFqYdZdnYb2AjNm.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "roast-beef-yorkshire-pudding",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "sceneHash": "db44737cdef6534aa06571b5feb8311e7998616e9c29e9cdbdc658f9e84ac5d8",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 8 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Roast Beef with Yorkshire Pudding.\nCell 1: A jug of smooth pale Yorkshire-pudding batter resting beside a bowl, with no visible flour lumps.\nCell 2: A browned roasting joint on a rack after the hot initial roast, with rendered juices collecting in the tin below.\nCell 3: A finished roast beef joint on a board with a thermometer entry point, deeply browned outside and ready to rest.\nCell 4: The roast beef resting loosely tented on a board, with the browned exterior still exposed around the sides.\nCell 5: A roasting tin holding glossy brown pan gravy with the browned fond fully dissolved and no flour lumps.\nCell 6: A 12-well metal pudding tin in the oven with a small pool of shimmering hot beef dripping in each well.\nCell 7: Twelve tall deeply golden Yorkshire puddings risen high above the hot metal tin, crisp-edged and hollow-centred.\nCell 8: A British roast plate with rosy sliced roast beef, one tall crisp Yorkshire pudding and glossy brown gravy served alongside.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/british/roast-beef-yorkshire-pudding.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_q0Pau18CW9TRWkB-n0Ly9Ak2lkUjVO6V.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "shepherds-pie",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "9b0272fcc0ec9401b00b528ad55ed59c69f25c84be8198cf9b13dfb031d1e419",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Shepherd's Pie.\nCell 1: A colander of fully tender drained potato chunks steaming dry, with no standing water.\nCell 2: A wide casserole with well-browned crumbled lamb mince, dark caramelised edges and no grey pooled liquid.\nCell 3: A thick lamb-and-vegetable filling in a casserole, glossy and moist with no watery broth pooling at the edges.\nCell 4: A bowl of smooth fluffy mashed potato holding soft peaks, with no visible liquid or lumps.\nCell 5: An unbaked shepherd’s pie in a rectangular dish with lamb filling fully covered by mashed potato and pronounced fork ridges.\nCell 6: A baked shepherd’s pie with deeply golden crisp potato ridges and a little rich lamb gravy bubbling around the dish edges.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/british/shepherds-pie.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_AJ3KGRvROnkRLdTTiQ0ZwDZMDEA9PvZ9.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          471,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "toad-in-the-hole",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "2be18fbf7a263f2596e57ee15e41f3339dced5e25725ea1a3bee17c051c2cf03",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Toad in the Hole.\nCell 1: A jug of smooth pale Yorkshire-style batter resting on the counter, with no visible flour lumps and no hands.\nCell 2: A saucepan of very soft deeply golden sliced onions with browned edges and no pale raw pieces.\nCell 3: Eight lightly browned sausages spaced in a rectangular roasting tin with a shallow pool of shimmering hot fat.\nCell 4: A fully risen toad in the hole with sausages embedded in a single large, deeply golden, crisp-edged Yorkshire pudding.\nCell 5: A saucepan of glossy medium-brown onion gravy with soft caramelised onion strands suspended evenly.\nCell 6: A plated quarter of toad in the hole with crisp risen batter around browned sausages and a small pool of onion gravy alongside.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/british/toad-in-the-hole.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_oY3JZFNtSGXv-AARWOPPyd-GwG0NpThX.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          471,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "cornish-pasty",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "sceneHash": "3b35cdace56d402397d7128dfb83f1fb05d0ce9f1740396d463bceeda7513f69",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 8 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Cornish Pasty.\nCell 1: A firm pale pastry dough with visible tiny fat flecks gathered into one smooth cohesive ball; no hands.\nCell 2: Six equal chilled pastry portions on a tray, five covered and one ready to roll.\nCell 3: A bowl of raw filling with thin potato, swede and onion slices mixed evenly with small thin pieces of beef.\nCell 4: A single neat 24 cm pastry circle about 4 mm thick on a lightly floured surface, with five chilled dough portions nearby.\nCell 5: A pastry round with a compact mound of raw beef, potato, swede and onion, leaving a clean 3 cm border all around.\nCell 6: A sealed half-moon pasty with a thick continuous rope-like crimp running along the curved side edge.\nCell 7: Six raw glazed Cornish-style pasties on lined trays, each with a side crimp and one small top steam slit.\nCell 8: Fully baked Cornish-style pasties with deep golden sturdy pastry, pronounced side crimps and intact sealed seams.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/british/cornish-pasty.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_OR3raCmawaF5zqafZdEK8WtA5o5TF2xk.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "full-english-breakfast",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 9,
+      "reviewed": true,
+      "sceneHash": "97bc7006e2339c92e19c542ca48589fb6fa98b968e28bf5959944c439b02f99f",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 9 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Full English Breakfast.\nCell 1: Eight pork sausages roasting on a wire rack above a tray, evenly browning with rendered fat below.\nCell 2: A small saucepan of glossy baked beans at a gentle simmer with thick tomato sauce and intact beans.\nCell 3: Halved tomatoes with deeply seared cut faces and softened flesh, still holding their shape in a skillet.\nCell 4: Deeply browned halved mushrooms in a skillet with dry glossy surfaces and no watery pool.\nCell 5: Eight black-pudding rounds with dark crisp cut faces resting in a single uncovered layer.\nCell 6: Cooked back bacon rashers with browned fat edges and still-juicy lean meat, resting flat on a warm tray.\nCell 7: Four thick slices of fried bread, deep golden and crisp, draining upright on a rack.\nCell 8: Four sunny-side fried eggs with fully opaque set whites and soft glossy yolks in a clean pan.\nCell 9: A complete full English breakfast plate with sausage, back bacon, black pudding, fried egg, mushrooms, grilled tomato, baked beans and fried bread clearly separated.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/british/full-english-breakfast.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_vaEmZi6ilFAK0a-iie0GZUHr8p_2IOP8.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "chicken-tikka-masala",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 10,
+      "reviewed": true,
+      "sceneHash": "92f826518b344f42aad6246830b1be23d9649cbc86299a0348623837d13545ec",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 10 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Chicken Tikka Masala.\nCell 1: A bowl of 4 cm chicken-thigh pieces evenly coated in a thick orange-red yoghurt marinade, resting covered with no hands.\nCell 2: Marinated chicken pieces spaced apart in one layer on an oiled wire rack over a lined tray, ready for high heat.\nCell 3: Charred chicken tikka pieces on a rack, browned with dark spots and still visibly juicy, with tray juices collected below.\nCell 4: A wide saucepan of very soft pale-golden diced onion glistening in butter, with no raw white pieces.\nCell 5: A buttered onion base coated evenly in red-orange spices, glossy and fragrant with no scorched black powder.\nCell 6: A simmering red-orange tomato masala thick enough to coat a spoon, with no watery ring at the edge.\nCell 7: A saucepan of completely smooth red-orange masala sauce with a glossy uniform surface and no visible onion pieces.\nCell 8: A velvety orange masala sauce after cream is incorporated, glossy and completely emulsified with no white streaks.\nCell 9: Charred chicken tikka pieces sitting in smooth orange masala, with some dark roasted edges still visible above the sauce.\nCell 10: Finished chicken tikka masala in a serving bowl, orange sauce coating charred chicken with a restrained scatter of fresh coriander.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/british/chicken-tikka-masala.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call__TjRWJcrWMu5Ev9LVajr4uXgDr9fD8Go.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "cullen-skink",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "00b8a3c32f452d746940520eff3e913a89cc3197c873a1d733dd293d59618472",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Cullen Skink.\nCell 1: A smoked haddock fillet gently poaching in milk in a wide pan, with only small bubbles around the edge.\nCell 2: Large flakes of smoked haddock resting in a bowl beside a jug of strained warm poaching milk.\nCell 3: Very soft translucent diced onion in melted butter, pale with no dark caramelised edges.\nCell 4: Tender potato cubes and soft onion suspended in smoky milk at a gentle simmer, with no fish added yet.\nCell 5: A creamy pale soup with some potatoes mashed into the milk while many tender potato chunks remain clearly visible.\nCell 6: Finished Cullen skink with large smoked-haddock flakes and potato chunks in a creamy pale soup, lightly scattered with chives.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/british/cullen-skink.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_rRqriQdtZKBMWb92dbk0M2Erx6u6TocH.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          471,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "welsh-rarebit",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "35e7d28e9bd90f17a96c3646cff0395643393793f68dbca2d2ac6f211633a28d",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Welsh Rarebit.\nCell 1: Eight thick toast slices, lightly golden and dry on both sides, resting on a wire rack.\nCell 2: A small saucepan of smooth pale roux, glossy and light biscuit-coloured with no dark spots.\nCell 3: A smooth tan ale sauce coating a spoon, with a cohesive glossy surface before cheese is added.\nCell 4: A thick glossy Welsh rarebit cheese mixture in a saucepan, smooth and spreadable with no separated oil.\nCell 5: Finished Welsh rarebit with thick bubbling cheese topping, deep golden-brown blistered spots and crisp toast edges visible.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/british/welsh-rarebit.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_YUD0x9OpMT-ZZ6GMLASLH3C8U5yc05nx.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "sticky-toffee-pudding",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "sceneHash": "b3e537ad01f61bb3e4cde7953233fb68e13368ba538662ece901d41342cf3be7",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Sticky Toffee Pudding.\nCell 1: A bowl of softened chopped dates mashed into a thick dark paste with a few small pieces still visible.\nCell 2: A prepared 20 cm cake tin lined on the base and lightly greased at the sides, empty and ready for batter.\nCell 3: A pale creamy butter-sugar-egg mixture in a bowl, smooth and aerated with no separated liquid.\nCell 4: A thick smooth date-cake batter with tiny dark date flecks evenly distributed, ready to go into the tin.\nCell 5: A baked dark-golden date sponge in its tin, evenly risen with a softly set centre and no wet batter.\nCell 6: A saucepan of glossy dark amber toffee sauce, smooth and slightly thickened with no sugar grains visible.\nCell 7: A square of sticky toffee pudding with a moist dark crumb and glossy toffee sauce soaking the top, extra sauce alongside.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/british/sticky-toffee-pudding.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_sUaA-iD_2_9_6WzhsHwv4h6rYQHSBBvO.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "traditional-trifle",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 10,
+      "reviewed": true,
+      "sceneHash": "68a5da39457f2a3be07b3dd1f62aab57b9b9fe533b25b92bb34540604f96cfcd",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 10 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Traditional Trifle.\nCell 1: A clear glass trifle bowl with an even base layer of sponge pieces visibly moistened but still holding their shape.\nCell 2: Bright berries evenly covering the sponge layer in a clear trifle bowl, with fruit visible neatly around the sides.\nCell 3: A clear bowl with a fully set translucent berry-jelly layer holding fruit above the sponge, surface flat and firm.\nCell 4: A saucepan of hot vanilla milk steaming gently with no rolling boil or scorched skin.\nCell 5: A pale smooth egg-yolk, sugar and cornflour mixture in a bowl with no visible dry starch.\nCell 6: A thick glossy vanilla custard coating a whisk and holding soft trails in the saucepan, fully smooth with no curdled egg.\nCell 7: Cold thick custard in a shallow bowl with its surface smooth and skin-free after the covering is removed.\nCell 8: A distinct thick pale-yellow custard layer spread evenly over a firm berry-jelly layer in the glass bowl.\nCell 9: A generous soft-peaked whipped-cream layer in loose white swirls covering the custard evenly.\nCell 10: A finished glass-bowl trifle showing clean layers of sponge, berry jelly, pale custard and softly swirled cream, lightly topped with almonds.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/british/traditional-trifle.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_jspd_TdWIq_rRINfgsoHsOwI-gzxwHRZ.png",
+      "cropGrid": {
+        "width": 1448,
+        "height": 1086,
+        "x": [
+          0,
+          483,
+          965,
+          1448
+        ],
+        "y": [
+          0,
+          272,
+          543,
+          815,
+          1086
+        ]
+      }
+    },
+    {
+      "recipeId": "steak-and-kidney-pie",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 12,
+      "reviewed": true,
+      "sceneHash": "5fcb211dfb00be2e0778f7dfcd9cedf0d8d4df0ecd553750ea9dc6f24f23216d",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 12 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Steak and Kidney Pie.\nCell 1: Cleaned lamb-kidney pieces about 2 cm wide on a dry tray, with all hard white cores visibly removed.\nCell 2: Well-browned 3 cm beef cubes in a bowl with dark seared faces and no grey pooled cooking liquid.\nCell 3: Briefly seared kidney pieces with browned exteriors and still-moist centres, resting separately from the beef.\nCell 4: Softened diced onion and carrot in a dark fond-lined casserole, with browned deposits loosening from the base.\nCell 5: A dark ale-and-vegetable base in the casserole, reduced and glossy with the flour fully incorporated.\nCell 6: Beef cubes braising in a dark glossy gravy with softened onion and carrot, kidney still kept aside.\nCell 7: Finished steak-and-kidney filling with tender meat pieces coated in thick dark gravy and no watery liquid.\nCell 8: A shallow tray of completely cooled thick steak-and-kidney filling, gravy set enough not to run.\nCell 9: A 2.5 L pie dish filled with cold thick steak-and-kidney filling, clean dry rim and a small gap below the top.\nCell 10: An unbaked steak-and-kidney pie with a smooth cold puff-pastry lid sealed and neatly crimped around the clean rim.\nCell 11: A glossy egg-washed raw pie lid with three narrow steam slits in the centre and a clean crimped edge.\nCell 12: A fully baked steak-and-kidney pie with a dramatically puffed deep-golden pastry lid and a little dark gravy bubbling at the vents.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/british/steak-and-kidney-pie.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_F2AZ4TR_T6wxwg0zqBp1ps71RgbOZr5d.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    }
+  ]
+}
