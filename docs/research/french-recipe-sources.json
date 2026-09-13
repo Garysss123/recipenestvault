@@ -1,0 +1,149 @@
+[
+  {
+    "id": "french-onion-soup",
+    "urls": [
+      "https://www.pardonyourfrench.com/classic-french-onion-soup/",
+      "https://www.meilleurduchef.com/fr/recette/soupe-oignon.html"
+    ]
+  },
+  {
+    "id": "boeuf-bourguignon",
+    "urls": [
+      "https://www.pardonyourfrench.com/classic-french-beef-bourguignon/",
+      "https://www.meilleurduchef.com/fr/recette/boeuf-bourguignon.html"
+    ]
+  },
+  {
+    "id": "coq-au-vin",
+    "urls": [
+      "https://www.pardonyourfrench.com/classic-french-coq-au-vin-rouge/",
+      "https://www.recipetineats.com/coq-au-vin/"
+    ]
+  },
+  {
+    "id": "ratatouille",
+    "urls": [
+      "https://www.pardonyourfrench.com/classic-stovetop-ratatouille/",
+      "https://www.meilleurduchef.com/fr/recette/ratatouille-nicoise.html"
+    ]
+  },
+  {
+    "id": "blanquette-de-veau",
+    "urls": [
+      "https://www.pardonyourfrench.com/blanquette-de-veau/",
+      "https://www.meilleurduchef.com/fr/recette/blanquette-veau.html"
+    ]
+  },
+  {
+    "id": "quiche-lorraine",
+    "urls": [
+      "https://www.pardonyourfrench.com/quiche-lorraine/",
+      "https://www.recipetineats.com/quiche-lorraine/"
+    ]
+  },
+  {
+    "id": "croque-monsieur",
+    "urls": [
+      "https://www.pardonyourfrench.com/croque-monsieur-ham-and-cheese-sandwich/",
+      "https://www.recipetineats.com/croque-monsieur-french-ham-cheese-sandwich/"
+    ]
+  },
+  {
+    "id": "gratin-dauphinois",
+    "urls": [
+      "https://www.pardonyourfrench.com/classic-french-gratin-dauphinois/",
+      "https://www.meilleurduchef.com/fr/recette/gratin-dauphinois.html"
+    ]
+  },
+  {
+    "id": "sole-meuniere",
+    "urls": [
+      "https://www.pardonyourfrench.com/classic-french-sole-meuniere/",
+      "https://www.meilleurduchef.com/fr/recette/sole-meuniere.html"
+    ]
+  },
+  {
+    "id": "moules-marinieres",
+    "urls": [
+      "https://www.recipetineats.com/how-to-cook-mussels/",
+      "https://www.meilleurduchef.com/fr/recette/moules-marinieres.html"
+    ]
+  },
+  {
+    "id": "poulet-basquaise",
+    "urls": [
+      "https://cuisine.journaldesfemmes.fr/recette/355692-poulet-basquaise",
+      "https://www.meilleurduchef.com/fr/recette/poulet-basquaise.html"
+    ]
+  },
+  {
+    "id": "salade-nicoise",
+    "urls": [
+      "https://www.pardonyourfrench.com/authentic-nicoise-salad/",
+      "https://www.recipetineats.com/nicoise-salad-french-salad-with-tuna/"
+    ]
+  },
+  {
+    "id": "salade-lyonnaise",
+    "urls": [
+      "https://www.pardonyourfrench.com/frisee-salad-with-bacon-egg-and-croutons-salade-lyonnaise/",
+      "https://www.meilleurduchef.com/fr/recette/salade-lyonnaise.html"
+    ]
+  },
+  {
+    "id": "french-crepes",
+    "urls": [
+      "https://www.recipetineats.com/crepes/",
+      "https://www.meilleurduchef.com/fr/recette/crepe-sucre.html"
+    ]
+  },
+  {
+    "id": "creme-brulee",
+    "urls": [
+      "https://www.pardonyourfrench.com/classic-french-creme-brulee/",
+      "https://www.meilleurduchef.com/fr/recette/creme-brulee.html"
+    ]
+  },
+  {
+    "id": "tarte-tatin",
+    "urls": [
+      "https://www.pardonyourfrench.com/classic-tarte-tatin/",
+      "https://www.meilleurduchef.com/fr/recette/tarte-tatin.html"
+    ]
+  },
+  {
+    "id": "madeleines",
+    "urls": [
+      "https://www.pardonyourfrench.com/classic-french-madeleines/",
+      "https://www.recipetineats.com/madeleines/"
+    ]
+  },
+  {
+    "id": "clafoutis",
+    "urls": [
+      "https://www.pardonyourfrench.com/cherry-clafoutis/",
+      "https://www.meilleurduchef.com/fr/recette/clafoutis-cerise.html"
+    ]
+  },
+  {
+    "id": "chocolate-mousse",
+    "urls": [
+      "https://www.pardonyourfrench.com/classic-french-chocolate-mousse/",
+      "https://www.meilleurduchef.com/fr/recette/mousse-chocolat.html"
+    ]
+  },
+  {
+    "id": "gougeres",
+    "urls": [
+      "https://www.pardonyourfrench.com/french-cheese-puffs-gougeres/",
+      "https://www.meilleurduchef.com/fr/recette/gougeres.html"
+    ]
+  },
+  {
+    "id": "financiers",
+    "urls": [
+      "https://www.kingarthurbaking.com/recipes/almond-tea-cakes-recipe",
+      "https://www.meilleurduchef.com/fr/recette/financier.html"
+    ]
+  }
+]

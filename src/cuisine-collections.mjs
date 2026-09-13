@@ -236,4 +236,42 @@ const vietnamese = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese };
+const french = {
+  en: {
+    eyebrow: "Curated French cooking",
+    title: "French recipes from bistro classics to home-baked desserts",
+    intro: "Cook through onion soup, beef and chicken braises, gratins, quiche, croque monsieur, sole meunière, mussels, composed salads, crêpes, and classic pastries and desserts. Each recipe measures the butter, wine, stock, heat, resting time, and doneness cues that make French technique repeatable in a home kitchen.",
+    recipeEyebrow: "French recipe",
+    backToCollection: "Back to French recipes"
+  },
+  "zh-hant": {
+    eyebrow: "精選法國料理",
+    title: "從小酒館經典、慢燉主菜到法式甜點的完整食譜",
+    intro: "從焗烤洋蔥湯、紅酒燉牛肉與雞肉、焗烤馬鈴薯、洛林鹹派、火腿起司三明治，到香煎鰨魚、白酒淡菜、尼斯沙拉、可麗餅、烤布蕾、反烤蘋果塔與費南雪。每道都把奶油、葡萄酒、高湯、火力、休息時間與熟度線索寫清楚，讓法式技法在家也能穩定重現。",
+    recipeEyebrow: "法國料理食譜",
+    backToCollection: "返回法國料理食譜"
+  },
+  ja: {
+    eyebrow: "厳選したフランス料理",
+    title: "ビストロの定番から家庭で焼けるデザートまでのフランス料理",
+    intro: "オニオンスープ、牛肉や鶏肉の煮込み、グラタン、キッシュ、クロックムッシュ、舌平目、ムール貝、サラダ、クレープ、クレームブリュレや焼き菓子まで作ります。バター、ワイン、だし、火加減、休ませる時間、火の通りを具体的に示し、家庭でも再現しやすくしています。",
+    recipeEyebrow: "フランス料理レシピ",
+    backToCollection: "フランス料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "엄선한 프랑스 요리",
+    title: "비스트로 클래식부터 집에서 굽는 디저트까지 프랑스 요리 레시피",
+    intro: "양파 수프, 소고기와 닭고기 브레이즈, 그라탱, 키슈, 크로크무슈, 솔 뫼니에르, 홍합, 샐러드, 크레프와 크렘 브륄레, 타르트 타탱, 피낭시에까지 만듭니다. 버터, 와인, 육수, 불 세기, 휴지 시간과 익힘 신호를 구체적으로 적어 집에서도 프랑스 조리법을 반복하기 쉽게 했습니다.",
+    recipeEyebrow: "프랑스 요리 레시피",
+    backToCollection: "프랑스 요리 레시피로 돌아가기"
+  },
+  th: {
+    eyebrow: "อาหารฝรั่งเศสที่คัดสรร",
+    title: "สูตรอาหารฝรั่งเศสตั้งแต่เมนูบิสโทรคลาสสิกถึงขนมอบทำที่บ้าน",
+    intro: "ทำตั้งแต่ซุปหัวหอม เนื้อและไก่ตุ๋น กราแตง คีช คร็อกเมอซิเออร์ ปลาโซล มูสเซล สลัด เครป ไปจนถึงเครมบรูเล ทาร์ตตาแต็ง และฟินองเซีย ทุกสูตรระบุเนย ไวน์ น้ำสต๊อก ระดับไฟ เวลาพัก และจุดสุกอย่างชัดเจน เพื่อให้เทคนิคฝรั่งเศสทำซ้ำได้ในครัวบ้าน",
+    recipeEyebrow: "สูตรอาหารฝรั่งเศส",
+    backToCollection: "กลับไปสูตรอาหารฝรั่งเศส"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french };

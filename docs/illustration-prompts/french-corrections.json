@@ -1,0 +1,37 @@
+[
+  {
+    "recipeId": "coq-au-vin",
+    "version": "v2",
+    "referenceImage": "qa-artifacts/french-review/illustrations/coq-au-vin.jpg",
+    "referenceSource": "assets/recipes/illustration-sheets-generated/french/coq-au-vin.png",
+    "prompt": "Edit this exact 3-column by 3-row cooking illustration sheet. Correct only ingredient sequence and the bay-leaf count. Cell 5 (row 2 column 2): keep exactly ONE bay leaf in the chicken braise, removing the extra large bay leaf. Cell 6 (row 2 column 3): remove ALL mushroom caps, halves and slices from the sauce. Keep only intact chicken, thermometer probe, carrots, whole pearl onions and bacon in the sauce. Mushrooms are first cooked separately in cell 7 and added in cell 8. Cell 8 (row 3 column 2): remove all fresh green parsley garnish from the chicken and remove the thyme twig still sitting inside the pot. Preserve the discarded herb sprigs on the small plate beside the pot; keep the mushrooms in this cell. Fresh chopped parsley belongs only in final cell 9. Preserve every other cell, every other ingredient, cookware, composition, the 3x3 grid, paper texture, fine ink and restrained gouache style. Do not add hands, people, body parts, text, numbers, arrows or new ingredients. Maintain a large landscape image of at least 1536x1024."
+  },
+  {
+    "recipeId": "coq-au-vin",
+    "version": "v3",
+    "referenceImages": [
+      "D:\\vscode\\website\\recipenestvault\\qa-artifacts\\french-review\\illustrations\\coq-au-vin-v2.jpg",
+      "D:\\vscode\\website\\recipenestvault\\qa-artifacts\\french-review\\illustrations\\coq-v2-cell6-detail.jpg"
+    ],
+    "prompt": "Image 1 is the EDIT TARGET: return the entire same 3x3 cooking illustration sheet. Image 2 is only a zoom showing the object to correct in cell 6, not a second output. In cell 6 (row 2 column 3), replace the unmistakable brown mushroom with its short stem at the BACK LEFT of the pan, between the pale pearl onions behind the chicken, with an orange carrot piece. Remove any other mushroom fragments from that cell. This cell may contain chicken, bacon, carrots and pearl onions only; mushrooms enter later in cell 8 after being cooked in cell 7. Keep the thermometer and lid. Preserve all other eight cells EXACTLY, including the single bay leaf in cell 5 and mushrooms in cells 7, 8 and 9. Preserve the large landscape 3x3 grid, warm paper, fine ink and gouache style. No hands, people, text, numbers or arrows. Do not reintroduce anything removed in previous corrections.",
+    "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\exec-c270ccfc-9d6c-4595-bb7d-33831fb3693c.png"
+  },
+  {
+    "recipeId": "ratatouille",
+    "version": "v2",
+    "referenceImages": [
+      "D:\\vscode\\website\\recipenestvault\\qa-artifacts\\french-review\\illustrations\\ratatouille.jpg"
+    ],
+    "prompt": "Edit ONLY cell 3 (top-right) of this exact 3x3 cooking source sheet. The pan in that cell must contain ONLY green-skinned zucchini pieces and red and yellow pepper pieces. Remove every dark-purple-skinned eggplant cube from INSIDE that pan, replacing those cubes with green-skinned zucchini or pepper. KEEP all eggplant pieces in the separate bowl to the right of the pan; they are correctly waiting there. The eggplant is combined with the other vegetables only in cell 5. Preserve all other six used cells, two blank cells, grid dimensions, objects, warm ivory paper, ink lines and restrained gouache exactly. No people, hands, body parts, text, numbers, labels or arrows.",
+    "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\exec-ad841331-9e9d-4eda-84ea-c5f2ddbf48e8.png"
+  },
+  {
+    "recipeId": "gratin-dauphinois",
+    "version": "v2",
+    "referenceImages": [
+      "D:\\vscode\\website\\recipenestvault\\qa-artifacts\\french-review\\illustrations\\gratin-dauphinois.jpg"
+    ],
+    "prompt": "Edit ONLY cell 1 (top-left) of this exact 3x3 cooking source sheet. Remove the TWO CROSS-CUT GARLIC BULB HALVES currently sitting inside the buttered oval dish. The baking dish must be EMPTY except for its thin butter coating. On the tabletop immediately beside that dish, show ONE SMALL INDIVIDUAL PEELED GARLIC CLOVE split LENGTHWISE into TWO slender halves, not an entire garlic bulb or a cluster of cloves. Keep the separate small bowl of minced garlic exactly as it is. Preserve all other six used cells, two blank cells, grid, cookware, potato slices, cream and baked crust, warm paper and illustration style. No hands, people, body parts, labels, text or arrows.",
+    "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\exec-5755d9b5-0966-47da-8e16-277cea627f67.png"
+  }
+]

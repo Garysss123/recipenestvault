@@ -1,0 +1,566 @@
+{
+  "generator": "OpenAI image_gen",
+  "mode": "built-in",
+  "generatedAt": "2026-09-12",
+  "styleReference": "assets/recipes/illustrations-generated/bibimbap/step-01.png",
+  "entries": [
+    {
+      "recipeId": "french-onion-soup",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: French Onion Soup.\nCell 1: A board with a large pile of evenly thin raw onion half-moons, separate small dishes of minced garlic and grated pale cheese; baguette slices kept separately. No people or hands.\nCell 2: A heavy pot containing softened pale translucent onion ribbons, lid resting partly over the pot; no brown onions, broth, bread or cheese in the pot yet.\nCell 3: Deep golden caramelized onion ribbons in the same heavy pot, a light brown fond visible on the base and a small water jug alongside. No black burnt patches and no broth yet.\nCell 4: Caramelized onions coated in a shallow glossy red-brown wine reduction in the pot; no dry flour remains, and a wooden spoon rests on the rim.\nCell 5: Amber-brown onion soup gently simmering in the pot, softened onion ribbons visible below the broth surface, thyme and bay removed to a small dish; no bread or cheese in the soup yet.\nCell 6: Eight golden toasted baguette rounds on a baking tray, with four empty ovenproof soup crocks beside it. No assembled soup and no floating utensils.\nCell 7: Finished French onion soup in a white ovenproof crock, toast hidden beneath a melted Gruyere cap with golden-brown spots and a little finely chopped parsley; no hands, text or other dishes.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/french-onion-soup.png",
+      "sceneHash": "f9b1f4721279ddaca00bdaa4c50f7f879621de831de669ecb9e11a2c401f9203",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "boeuf-bourguignon",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 10,
+      "reviewed": true,
+      "sceneHash": "fe503040ad2603c8ab9cdfd0611f66c28ef900b84b09913e79d21ad7b064426d",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 10 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Boeuf Bourguignon.\nCell 1: Large dry raw beef cubes on a tray beside separate prepared onion and carrot pieces; small dishes of salt and pepper, no marinade or cooking liquid.\nCell 2: Golden bacon strips in a small bowl beside the heavy pot with a shallow layer of rendered bacon fat; no beef in the pot yet.\nCell 3: Uncrowded beef cubes browning on several faces in the pot, with previously browned cubes in a bowl; no stew liquid or mushrooms.\nCell 4: Diced onion and carrot pieces coated in a reddish tomato-flour base in the pot; beef and bacon remain in their separate bowls.\nCell 5: Browned beef, bacon and carrots returned to a red-wine broth with thyme and one bay leaf in the pot; no potatoes or mushroom garnish yet.\nCell 6: Covered heavy casserole inside an oven with lid slightly ajar to reveal gently braising beef in dark red-brown broth; no hands, flames or readable oven display.\nCell 7: Two separate small pans: glossy cooked whole pearl onions in one and golden browned mushroom halves and quarters in the other, no stew or raw beef.\nCell 8: Whole peeled cooked small potatoes draining in a colander beside a clean saucepan, no mashed potatoes and no meat on the same board.\nCell 9: Tender beef cubes, carrots, browned mushrooms and whole pearl onions together in a glossy pourable red-brown sauce; spent thyme and bay set aside in a dish.\nCell 10: Finished boeuf bourguignon with beef cubes, carrot pieces, mushrooms and pearl onions in red-brown sauce, whole boiled potatoes beside it and chopped parsley; no bread, rice or additional meat.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/boeuf-bourguignon.png",
+      "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\exec-d4952cd7-a6e4-4883-ba34-68a6755b4726.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "coq-au-vin",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 9,
+      "reviewed": true,
+      "sceneHash": "9b38cdaac53809b4a22924b9f4563d6bbc1f3408fb610576791e1671617455ae",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 9 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Coq au Vin.\nCell 1: Raw skin-on chicken thighs and drumsticks arranged on a tray, separate diced onion and carrot on a different board; no water washing, hands or cooked garnish.\nCell 2: Golden bacon strips in a small bowl beside a broad heavy pot with rendered fat in its base; no chicken or sauce inside yet.\nCell 3: Chicken thighs and drumsticks with browned golden skin in an uncrowded pot, other seared pieces on a tray; browned exterior only, no wine sauce yet.\nCell 4: Diced onion, carrot rounds and whole pearl onions coated in a reddish flour-tomato base in the heavy pot; chicken remains outside on its tray.\nCell 5: Browned chicken pieces skin-side up in red-wine broth with carrots, whole pearl onions, bacon, thyme and bay; no mushrooms or potatoes yet.\nCell 6: Fully braised intact chicken pieces in red-brown sauce in the pot, lid beside it and a clean thermometer probe inserted into a thick thigh with no readable display.\nCell 7: Browned mushroom halves in a separate wide skillet, golden cut faces and no pooled water; no chicken or red-wine sauce in this pan.\nCell 8: Finished red-wine chicken braise with browned mushrooms, pearl onions, carrot rounds and bacon in glossy sauce; spent herb sprigs in a small dish beside the pot.\nCell 9: Finished coq au vin on a white plate: intact dark red-wine chicken pieces over pale mashed potatoes, bacon, pearl onions and browned mushrooms around them, with chopped parsley. No hands or unrelated accompaniments.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/coq-au-vin-v3.png",
+      "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\exec-c270ccfc-9d6c-4595-bb7d-33831fb3693c.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "ratatouille",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "sceneHash": "19bf8c83a67068ba231030face1bae1fd9acd77a3de9a6cfdf9a03a9d4c11b35",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Provençal Ratatouille.\nCell 1: Separate bowls of raw eggplant cubes, green-skinned zucchini pieces, red and yellow pepper pieces, diced onion and chopped tomato; whole thyme, rosemary and bay alongside.\nCell 2: Eggplant cubes with pale golden faces cooking alone in a deep skillet, a bowl beside the pan ready for the cooked pieces.\nCell 3: Green zucchini pieces and red-yellow peppers lightly browned in the skillet; the cooked eggplant waits in a separate bowl, no tomato sauce yet.\nCell 4: Soft chopped tomatoes and onion forming a red juicy base with whole thyme, rosemary and one bay leaf in the skillet; no eggplant or zucchini mixed back yet.\nCell 5: All vegetables combined in the deep skillet with a modest amount of tomato liquid, lid partly covering the pan, distinct eggplant, zucchini and pepper shapes.\nCell 6: Tender colourful vegetables in a shallow glossy tomato coating, with no watery pool, each vegetable retaining its own shape in the open skillet.\nCell 7: Finished chunky ratatouille in a dark serving skillet, glossy eggplant, zucchini, red-yellow peppers and tomato; cooked whole herb sprigs visible ready to be set aside while serving, no cheese or meat.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/ratatouille-v2.png",
+      "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\exec-ad841331-9e9d-4eda-84ea-c5f2ddbf48e8.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "gratin-dauphinois",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "sceneHash": "df5becf4519d2d2dcec0cd28c4d9a7df11d880a57d0a8cdc0cb7bbfa5db0deda",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Gratin Dauphinois.\nCell 1: An empty shallow white oval baking dish with a thin butter coating, halved garlic and a small dish of minced garlic beside it; no potatoes in the dish yet.\nCell 2: A neat mound of thin pale raw potato rounds on a board, a mandoline guard resting separately; no water bowl and no hands.\nCell 3: A wide saucepan of warm pale milk-and-cream mixture with fine garlic, pepper and nutmeg flecks, gentle steam and a resting spoon; no potato slices yet.\nCell 4: Thin potato rounds gently simmering in pale garlic cream, slices still intact and bendable rather than mashed, with no vigorous boiling.\nCell 5: An oval white baking dish filled with overlapping pale potato rounds and cream just below the top layer, resting on a rimmed baking tray; no cheese topping.\nCell 6: Freshly baked potato gratin in the white oval dish, deeply golden dairy crust with browned edges and soft visible potato rounds; a thin testing knife rests on the tray, no hands.\nCell 7: Finished golden gratin dauphinois in an oval white dish with one serving removed to reveal creamy overlapping potato layers and a few parsley flecks; no grated cheese, meat or extra side dish.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/gratin-dauphinois-v2.png",
+      "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\exec-5755d9b5-0966-47da-8e16-277cea627f67.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "blanquette-de-veau",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 10,
+      "reviewed": true,
+      "sceneHash": "59ca39daee73d3c29ac7cc6171cbbc823a2fc18f7c36e406f09b3e46fd12f29c",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 10 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Blanquette de Veau.\nCell 1: Raw pale veal cubes on a tray, carrot rounds and leek pieces separate, an onion half studded with two cloves, celery, garlic and herbs beside them.\nCell 2: Blanched pale veal cubes draining in a colander beside a clean empty stockpot, no brown searing and no cream sauce.\nCell 3: Pale veal cubes gently poaching in clear light broth with carrot rounds, leek, clove-studded onion, celery and whole herbs, lid ajar; no dairy or mushrooms added.\nCell 4: Pale cooked mushroom quarters in a small pan with a little clear buttery stock, no browned mushroom faces or veal in this pan.\nCell 5: Cooked veal cubes, carrot rounds and leek pieces in a covered serving dish beside a fine sieve and a jug of strained pale stock; discarded whole aromatics separate.\nCell 6: A pale white butter-flour roux in a clean saucepan with a resting whisk, no brown colour and no meat or cream added.\nCell 7: A saucepan of smooth pale stock-based white sauce lightly coating a resting spoon; no eggs, cream, meat or mushrooms in it yet.\nCell 8: Smooth pale cream-and-yolk liaison in a bowl beside the saucepan of white sauce; a whisk rests in the bowl and an unreadable thermometer rests in the sauce, no pouring streams or hands.\nCell 9: Pale tender veal chunks, carrot rounds, leek pieces and mushrooms warmed together in a smooth cream sauce; gentle steam without large boiling bubbles.\nCell 10: Finished blanquette de veau on rice on a plate, boneless veal cubes, mushrooms, carrot rounds and leek in smooth pale cream sauce with visible freshly ground black pepper; no browned beef, cheese or pastry.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/blanquette-de-veau.png",
+      "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\call_HUptKnOKiDfLnxnoZDwxx46T2EMo5c7-.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "poulet-basquaise",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "sceneHash": "6b49931a54c6a7ed3d0fac8d7a9726a11593b695cb5fc519e686f3500862333c",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Poulet Basquaise.\nCell 1: Four raw boneless skinless chicken breast portions on a tray, red-green pepper chunks, sliced onion and chopped tomatoes in separate bowls; no cooked sauce.\nCell 2: Chicken breast portions searing with pale golden surfaces in a wide pan, cooked exterior but no sliced-open meat; a clean plate alongside.\nCell 3: Softening red and green pepper pieces with onion and minced garlic in the pan; chicken waits on a separate plate, no tomato sauce yet.\nCell 4: A chunky red tomato and red-green pepper sauce simmering in the pan with thyme and one bay leaf; no chicken returned yet.\nCell 5: Chicken breast portions gently poaching among red tomato sauce and red-green peppers, with a clean probe in the thickest portion and no readable display.\nCell 6: Glossy chunky tomato-pepper sauce reducing in the open pan without chicken, cooked chicken on a warm plate and spent herbs set aside.\nCell 7: Finished Basque-style chicken breast portions in a bowl with chunky red and green peppers, softened onion and red tomato sauce; no pastry, rice, cream or sausage.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/poulet-basquaise.png",
+      "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\call_Ma9pnvk22MXEl0iaiOm-rISA41C-xGVb.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "quiche-lorraine",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 10,
+      "reviewed": true,
+      "sceneHash": "faa949da394b3e498239d5af661e6531087bfeb8c2d2e5d1f724638517238748",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 10 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Quiche Lorraine.\nCell 1: A mixing bowl of coarse flour-butter crumbs with small cold butter pieces still visible, a pastry cutter resting beside it; no hands or dough ball yet.\nCell 2: A wrapped flat disc of shortcrust pastry on a plate beside a small water jug; no rolled pastry or filling.\nCell 3: An unbaked pastry shell lining a round tart tin with a lightly pricked base and neat raised edge, rolling pin resting beside it; no filling.\nCell 4: A dry lightly golden blind-baked empty tart shell, used baking paper and ceramic pie weights resting in a separate bowl; no custard or bacon yet.\nCell 5: Short cooked bacon strips draining on kitchen paper beside a skillet, light golden edges and no raw pink centre.\nCell 6: A bowl of smooth pale-yellow egg-and-cream custard with fine grated cheese mixed in, a resting whisk, no foam or bacon in the bowl.\nCell 7: Round baked pastry shell filled with pale egg custard and scattered short bacon strips, below the pastry rim; no spinach, lattice pastry or cheese cap.\nCell 8: Baked quiche with set pale-golden custard, browned bacon strips and golden pastry edges in its round tin, an unreadable probe checking the centre; no other fillings.\nCell 9: Whole bacon quiche resting on a wire rack, outer tart ring set aside, custard settled and intact; no hands, sliced salad or extra garnish.\nCell 10: Finished quiche Lorraine on a plate with golden homemade pastry, pale custard and short bacon strips; one clean wedge cut to show the filling, no spinach or pastry lattice.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/quiche-lorraine.png",
+      "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\call_4mCBOGo_8UvhnkXqvwSr42stpasOXbur.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "croque-monsieur",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "sceneHash": "5405715ea6aa57f868a2d9dae00d23e5bc0b4a4d68e9a077a4a49f4d84955a13",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Croque Monsieur.\nCell 1: Pale butter-and-flour roux in a small saucepan with a resting whisk, no browned flour or cheese.\nCell 2: Thick smooth white béchamel with tiny seasoning flecks in the saucepan, a spoon resting with sauce on it; no ham or cheese in the pan.\nCell 3: Two white-bread ham-and-cheese sandwiches on a board, one still open to show folded cooked ham, grated cheese, a thin mustard layer and white sauce; no tomato, egg or lettuce.\nCell 4: Two closed ham sandwiches with golden toasted bread surfaces in a skillet; a spatula rests beside them, no sauce or cheese coating on top yet.\nCell 5: Toasted ham sandwiches in the skillet topped with a smooth white béchamel layer and a light covering of grated Gruyere, not yet melted.\nCell 6: Hot sandwiches in an ovenproof skillet with melted pale cheese and béchamel tops, a clean unreadable probe placed through one sandwich side, no egg.\nCell 7: Finished croque monsieur with folded pink ham between golden bread slices and a melted lightly browned Gruyere-béchamel top; no fried egg or other fillings.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/croque-monsieur.png",
+      "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\call_3l1OPU2d_jc0D7RyWPwEUz9QzJ-sTq1s.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "sole-meuniere",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "sceneHash": "76470666c0ce6eebdc48139e7ac805c15a50ab7bca3d872fd945e85e315868c2",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Sole Meunière.\nCell 1: Two prepared whole sole with tails intact on a clean tray, dry pale flesh and no sauce, green beans and lemon kept separately; no hands or washing stream.\nCell 2: Cooked whole green beans draining in a colander beside a saucepan, green and tender with no fish or sauce mixed in.\nCell 3: Two whole sole with a very thin even flour coating on a tray, a shallow flour dish beside them; no thick batter or breadcrumbs.\nCell 4: Two skillets each holding one whole lightly floured sole frying in a shallow butter-oil film, first side browning, no finished lemon sauce or garnish yet.\nCell 5: Two golden pan-fried whole sole on warm plates, a clean unreadable thermometer checking thick flesh beside the central bone; no lemon butter poured yet.\nCell 6: A small clean pan of light brown lemon butter with tiny toasted milk solids and chopped parsley, lemon juice vessel beside it; no cream, capers or fish inside the sauce pan.\nCell 7: Finished whole sole meuniere with golden flour-dusted skin, lemon butter and chopped parsley, a lemon slice and cooked green beans on a plate; no shrimp, capers or rice.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/sole-meuniere.png",
+      "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\call_8G8jT87Dpy5XHsmhrg2UAmpHryjbsAzq.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "moules-marinieres",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "6e6e593caa584765087cb5f6cc8e3d14d47d48cb8df249fb8717410fe46f726e",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Moules Marinières.\nCell 1: Clean closed raw mussels draining in a colander, a small separate discard bowl containing damaged empty shells and removed beards; no people, hands or water stream.\nCell 2: Soft pale chopped shallot and garlic in melted butter at the base of a large pot, no mussels or tomatoes yet.\nCell 3: Mussels steaming in a large covered pot with the lid slightly ajar, a few shells beginning to open in a shallow white-wine broth; no parsley added yet.\nCell 4: Open cooked mussel shells with orange flesh and chopped parsley in the pot, a small discard bowl of unopened shells beside it; no cream or tomato pieces.\nCell 5: Finished open mussels with orange flesh and parsley on a white serving dish, a little clear wine broth beneath; bread and lemon may sit separately at the side, no fries or cream sauce.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/moules-marinieres.png",
+      "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\call_Kvg4CsANbgzzSS5jaU6-ch7eMdxbpOg6.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "salade-nicoise",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "9e21034b07151163003c976005b70d1529378bdf6c69beb756859b38dc56e891",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Salade Niçoise.\nCell 1: Peeled hard-boiled eggs and egg quarters with fully set yellow yolks on a plate, a cold-water bowl beside it; no assembled salad.\nCell 2: Separate prepared lettuce leaves, tomato wedges, cucumber half-moons, green pepper strips and white onion rings; no tuna, anchovies, eggs or dressing on the vegetables yet.\nCell 3: Separate bowls of pale cooked canned tuna flakes, ready-to-eat anchovy fillets, quartered artichoke hearts and black olives; no raw red tuna steak.\nCell 4: A small bowl of lightly emulsified pale lemon-olive-oil dressing with mustard and garlic, whisk resting beside it; no salad already dressed.\nCell 5: Salad plates with lettuce, tomato, cucumber, green pepper, onion rings, artichoke quarters and black olives only; no tuna, anchovies or eggs added yet, no potatoes or green beans.\nCell 6: Finished Nicoise-style salad with pale cooked tuna flakes, anchovy fillets, hard-boiled egg quarters, white onion rings, artichoke hearts, black olives and vegetables over lettuce; no raw tuna steak, potatoes or green beans.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/salade-nicoise.png",
+      "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\call_7t_alqpXxoI4KGtSXgu8hoFiTV3Kk9RS.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "salade-lyonnaise",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "dc07586a1776e13dfc1d2be4f43bd3ce52c032ff38fe75056a6a1e9857de2c37",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Salade Lyonnaise.\nCell 1: Dry mixed green and red lettuce leaves in a bowl, raw bacon strips, bread cubes and chopped shallot kept separate; no dressed salad or eggs.\nCell 2: Golden crisp bread croutons in a single layer on a baking tray, no bacon, egg or dressing mixed in.\nCell 3: Golden cooked bacon strips in a warm bowl beside a skillet with a small measured amount of rendered fat; no salad leaves in the hot pan.\nCell 4: Warm mustard-shallot vinaigrette in a small pan off the heat, with a resting whisk; no lettuce or raw eggs in the dressing.\nCell 5: Two gently poaching eggs with set opaque whites in a wide shallow water pan, and two drained poached eggs on a separate plate; no shell fragments or hands.\nCell 6: Finished Lyonnaise-style mixed-leaf salad with golden croutons, bacon strips, one poached egg, a little warm mustard vinaigrette and chopped parsley; no chicken livers or cheese.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/salade-lyonnaise.png",
+      "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\call_uaS26B1vwzuWz4h2VYjEuerbj-yIoPiT.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "french-crepes",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "93b9b87b0391f7e25d3affce40a7e8d54b5baed578445db41c0584645d600494",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: French Crêpes.\nCell 1: A bowl of smooth thick pale egg-and-flour batter with a resting whisk, milk jug nearby; no cooked crêpes or lumps.\nCell 2: Covered bowl of thin smooth crêpe batter resting beside an empty melted-butter dish and milk jug, no cooked pancakes or toppings.\nCell 3: An empty warm nonstick crêpe pan with a thin butter sheen, a small butter dish and resting silicone brush beside it; no hands.\nCell 4: One thin pale crêpe spread across the pan, surface just set with edges beginning to release, no filling and no pouring stream.\nCell 5: A thin crêpe with light golden freckles cooking on its second side, a broad spatula resting at the pan edge; no hands or added filling.\nCell 6: A stack of thin plain golden crêpes on a serving plate with flexible edges, clean cloth folded beside the stack; no fruit, chocolate sauce or savoury filling.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/french-crepes.png",
+      "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\call_BNrCOTNJnXRwoGdHCLsN0Ztrs_b0ylNG.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "creme-brulee",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "39d56a35312876df3e985cfb6f1e89c2f34ab0dec4adb998ba447a350f8d62b0",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Crème Brûlée.\nCell 1: Small saucepan of pale cream and milk with one split vanilla bean, light steam rising; no eggs or sugar in the pan.\nCell 2: Glass bowl of five egg yolks mixed with pale sugar to a smooth yellow cream, whisk beside it; no dairy added yet.\nCell 3: Fine sieve over a pouring jug holding smooth pale custard, empty vanilla pod beside it; no ramekins filled yet.\nCell 4: Six filled ramekins sitting in a roasting pan with hot water halfway up the sides, pale custard surfaces just set; no browned sugar.\nCell 5: Six pale chilled custards in ramekins on a cooling tray, smooth uncaramelized tops and covers nearby.\nCell 6: Finished ramekin of crème brûlée with a thin glossy amber caramel crust, spoon beside it; no fruit, whipped cream or thick burnt layer.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/creme-brulee.png",
+      "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\call_Q4y6O0tI9BR_77jr_dMnk-PECehu8w5h.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "tarte-tatin",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "7e3ace5fd6f1a7e2f912ce21fd92336a7c7f3b94eea3e8200545203f8822d3cf",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Tarte Tatin.\nCell 1: Neat peeled apple halves with cores removed arranged in a bowl, no caramel or pastry yet.\nCell 2: Heavy round pan with smooth deep amber butter caramel across the base, no apples in it yet.\nCell 3: Apple halves tightly packed upright in amber caramel in the pan, edges beginning to soften; no pastry yet.\nCell 4: Round pastry sheet covering the apples inside the same pan, edges tucked down and one small vent in the center.\nCell 5: Baked tart still in its pan with a deep golden pastry lid and amber caramel bubbling lightly at the edges.\nCell 6: Finished tarte Tatin on a rimmed plate with glossy amber caramelized apple halves tightly covering the top and golden pastry underneath.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/tarte-tatin.png",
+      "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\call_21cKGh_9-3HRQhlTM8n-xukvIJwsnp4T.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "madeleines",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "566e93d7f194b6783c8c3eb6308119313f74da4fa493b840e60b37cb9f966974",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Madeleines.\nCell 1: Bowl of finely sifted flour and baking powder with a small sieve beside it; no eggs or butter mixed in.\nCell 2: Foamy pale egg-and-sugar mixture in a bowl with a whisk, no flour or butter yet.\nCell 3: Smooth glossy madeleine batter in a bowl, with lemon zest visible as tiny flecks and melted butter fully incorporated.\nCell 4: Covered bowl of chilled madeleine batter in a refrigerator setting, shell-shaped pan waiting empty beside it.\nCell 5: Madeleine shell pan filled with pale cold batter almost to each cavity rim, no baked cakes yet.\nCell 6: Freshly baked shell-shaped madeleines on a cooling rack, golden edges and distinct rounded humps, no icing or chocolate.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/madeleines.png",
+      "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\call_s_QQUxxJDDsRwKBjI3BqSPwxW1vz7UIK.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "clafoutis",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "49d0d609552899e39832ba4dc8c2127918187e8927b8b550378af70464d4c9c6",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Cherry Clafoutis.\nCell 1: Bowl of pitted whole cherries with a small dish of removed pits beside it, no batter.\nCell 2: Large bowl of thin pale custard batter with a whisk, smooth and lump-free; cherries still separate.\nCell 3: Empty round baking dish evenly buttered and dusted with a thin sparkling sugar coating.\nCell 4: Round dish filled with one layer of dark cherries surrounded by pale liquid batter, fruit still visible on top.\nCell 5: Baked clafoutis in the dish with puffed golden edge, cherries embedded across the lightly browned custard surface.\nCell 6: Finished cherry clafoutis cut into a wedge on a simple plate, custardy center studded with whole pitted cherries and a golden edge.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/clafoutis.png",
+      "sourceGeneratedPath": "C:\\Users\\abc12\\.codex\\generated_images\\01a093f0-e7e1-7c50-8ef8-fa2e6eda77d3\\call_PkI4WDB3hXwMuOVCD8btVmGliA6MJntw.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "chocolate-mousse",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "3822a860cce111765b167e13c4fa2c6ebaa8dabd974ea77be82a705d3d18569b",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: French Chocolate Mousse.\nCell 1: Bowl of glossy melted dark chocolate and butter over a saucepan of steaming water, smooth with no eggs added.\nCell 2: Glossy chocolate mixture thickened with four egg yolks in a bowl, no whipped whites yet.\nCell 3: Bowl of glossy white meringue at medium peaks with whisk marks, separate from the chocolate bowl.\nCell 4: Chocolate bowl with one third of white meringue partly folded in, visibly lighter but not fully uniform yet.\nCell 5: Finished airy chocolate mousse mixture in a large bowl, uniform dark brown with a soft billowy surface.\nCell 6: Six small glasses of set dark chocolate mousse with softly swirled tops, no cream, fruit or cocoa garnish.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/chocolate-mousse-v2.png",
+      "sourceGeneratedPath": "qa-artifacts/french-review/generated-staging/chocolate-mousse-v2.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "gougeres",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "f9613400248c1274b8ae510166514970f45e77d10a9fae2764b2e07642c27dc0",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Gougères.\nCell 1: Saucepan with water and butter just fully melted and boiling, no flour added.\nCell 2: Smooth choux panade forming one ball in a saucepan with a thin dry film on the base, wooden spoon beside it.\nCell 3: Glossy choux paste in a bowl lifting from a spatula in a thick V shape, empty eggshells nearby.\nCell 4: Choux paste speckled with finely grated Gruyère, pepper and nutmeg, with a small reserved bowl of cheese beside it.\nCell 5: Baking tray with 24 neat small choux mounds spaced apart, each lightly topped with grated Gruyère; unbaked.\nCell 6: Finished tray of deeply golden round gougères with crisp cheese-speckled tops and tiny drying holes at the side.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/gougeres-v2.png",
+      "sourceGeneratedPath": "qa-artifacts/french-review/generated-staging/gougeres-v2.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "financiers",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "4d9aa36ecf72b6461f4a9f8d34fce7bd643fe6193fbe41ee61b15985afb86af8",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. This is original non-photorealistic recipe illustration. Dish: Financiers.\nCell 1: Small saucepan of amber brown butter with toasted hazelnut-colored milk solids at the bottom, heatproof bowl beside it.\nCell 2: Bowl of pale sifted almond-flour dry mix with fine sieve beside it; no butter or egg whites yet.\nCell 3: Glossy beige financier batter in a bowl with tiny almond specks and brown butter fully incorporated.\nCell 4: Eight shallow rectangular financier moulds evenly filled with pale batter, arranged on a baking tray.\nCell 5: Tray of baked rectangular financiers in their moulds, deep golden edges and gently domed centers.\nCell 6: Finished small rectangular financiers cooling on a rack, evenly golden with darker crisp edges and no toppings.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/french/financiers.png",
+      "sourceGeneratedPath": "qa-artifacts/french-review/generated-staging/financiers.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      }
+    }
+  ]
+}
