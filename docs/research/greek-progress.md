@@ -27,8 +27,8 @@ Goal: publish an initial set of 13 Greek recipes at the same quality bar as the 
 | C | `beef-stifado` | Beef Stifado | pearl-onion beef stew | 8 |
 | D | `keftedes` | Keftedes | fried Greek meatballs | 7 |
 | D | `horiatiki` | Horiatiki | Greek village salad | 5 |
-| D | `galaktoboureko` | Galaktoboureko | semolina custard phyllo with syrup | 13 |
+| D | `galaktoboureko` | Galaktoboureko | semolina custard phyllo with syrup | 15 |
 
 ## Current phase
 
-The 13-dish slate and two-source evidence map are locked. Content drafting begins in four resumable batches before photo and illustration production.
+All 13 five-language recipe drafts are complete and pass `node scripts/audit-greek-drafts.mjs --content-only --complete`. Natural method lengths are 12, 11, 7, 9, 10, 8, 8, 9, 10, 8, 7, 5 and 15 steps (119 total), with one exact `imageScene` for every method step. The two-source minimum and measurable facts are verified. Next phase: licensed finished-dish photo review, then step-illustration production.
