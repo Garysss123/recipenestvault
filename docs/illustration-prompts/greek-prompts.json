@@ -1,0 +1,364 @@
+{
+  "generator": "OpenAI image_gen",
+  "mode": "built-in",
+  "generatedAt": "2026-09-14",
+  "styleReference": "assets/recipes/illustrations-generated/bibimbap/step-01.png",
+  "entries": [
+    {
+      "recipeId": "moussaka",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 12,
+      "reviewed": true,
+      "sceneHash": "523399a30dcd2ab20b58e35f3e099d9c37769abdf0f8da22335b957b237c91d5",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 12 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Moussaka.\nCell 1: Long even eggplant slabs resting in a colander with visible beads of moisture before blotting; no hands.\nCell 2: A lined tray of overlapping potato rounds, lightly golden at the edges and just tender.\nCell 3: Roasted eggplant slabs on a tray, supple with caramelized brown edges and no pooled oil.\nCell 4: Translucent diced onion and minced garlic softening in olive oil in a wide pan, still pale.\nCell 5: Crumbled ground meat in a wide pan with distinct browned bits and no visible pink meat.\nCell 6: A thick brick-red minced meat sauce in a pan, glossy with small meat crumbles and almost no free liquid.\nCell 7: A pale smooth butter-and-flour roux bubbling gently in a saucepan without browning.\nCell 8: Thick ivory béchamel falling from a whisk in ribbons, with grated cheese melting into the sauce.\nCell 9: A rectangular baking dish with a neat potato base fully covered by one even layer of roasted eggplant.\nCell 10: A baking dish showing a compact red-brown meat layer between two tidy layers of roasted eggplant.\nCell 11: Finished moussaka in a baking dish with an even deeply golden béchamel crust and clean browned edges.\nCell 12: A clean square slice of moussaka standing upright, showing distinct potato, eggplant, meat sauce and béchamel layers.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/greek/moussaka.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_f2E8L5MRUAHsJyMqeb1Yz4cYIa1DxKR5.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "pastitsio",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 11,
+      "reviewed": true,
+      "sceneHash": "48fd0d1fe05e79a0423545e3cb1e4583d148329c4f90172e490f75960da2b359",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 11 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Pastitsio.\nCell 1: Soft translucent onion and garlic in olive oil in a wide sauté pan, with no dark browning.\nCell 2: Well-browned ground beef with tomato paste in a wide pan, red wine nearly reduced away.\nCell 3: A dense cinnamon-scented red meat sauce with little free liquid, ready for layering.\nCell 4: Drained tubular pasta in a large bowl, glossy with a light coating of olive oil and still holding shape.\nCell 5: Tubular pasta aligned lengthwise in a rectangular baking dish, lightly bound with egg and crumbled feta.\nCell 6: A pale smooth roux in a saucepan, bubbling gently with no brown patches.\nCell 7: Thick glossy ivory béchamel in a saucepan with grated cheese melting smoothly into it.\nCell 8: A rectangular dish with an orderly pasta base covered edge-to-edge by a dense red-brown meat sauce.\nCell 9: A smooth thick béchamel cap covering the meat sauce, evenly dusted with grated cheese before baking.\nCell 10: Freshly baked pastitsio with a broad deeply golden béchamel top and browned edges in the baking dish.\nCell 11: A neat upright square slice of pastitsio showing aligned pasta tubes, a dark meat layer and thick golden béchamel.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/greek/pastitsio.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_y_BR1I0C_WxLkzRui6W3rJDHKvhu6vSu.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "pork-souvlaki",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "sceneHash": "49c2530d104258244f2b4bb9e4d280454d4d07b962bdc8355e03c3da30b86f14",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Pork Souvlaki.\nCell 1: Even raw pork cubes arranged on a board, all about the same size with a little marbling remaining.\nCell 2: Pork cubes coated lightly in an oregano-speckled lemon-olive oil marinade inside a shallow bowl.\nCell 3: Eight pork skewers on a tray with small visible spaces between the evenly sized marinated cubes.\nCell 4: Pork skewers on a very hot ridged grill pan with pronounced dark grill marks on the first side.\nCell 5: Fully cooked pork skewers browned on all sides with caramelized edges and a juicy interior.\nCell 6: Grilled pork skewers resting on a platter of thin red-onion slices, glistening with olive oil and juices.\nCell 7: A Greek-style platter with two charred pork souvlaki skewers, warm pita, tomato wedges, sliced red onion and lemon.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/greek/pork-souvlaki.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_uS0dJ527BCZWjnZ8TnRzGNVrWJ60Us1e.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "spanakopita",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 9,
+      "reviewed": true,
+      "sceneHash": "eef70cc4e83caab124a49041ef3144a1b377039ce690268ab7536bea7ef3200d",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 9 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Spanakopita.\nCell 1: Fresh spinach collapsing in a wide pan, still bright green with only a small amount of moisture.\nCell 2: Drained cooked spinach spread thinly on a tray, visibly dry with no puddled green liquid.\nCell 3: A dry chunky spinach-feta filling in a bowl with visible herbs and white feta crumbles.\nCell 4: A lightly oiled rectangular baking dish beside an unrolled stack of phyllo covered with a barely damp towel.\nCell 5: Six thin phyllo layers lining a rectangular dish with lightly oiled translucent folds and overhanging edges.\nCell 6: An even layer of green spinach-feta filling spread edge-to-edge over the bottom phyllo crust.\nCell 7: A fully enclosed rectangular spinach pie with neatly folded phyllo edges and a flat layered top.\nCell 8: A baked spanakopita with a blistered flaky deep-golden phyllo surface and clearly scored portions.\nCell 9: A cut square of spanakopita showing many crisp phyllo layers around a dense green spinach-feta filling.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/greek/spanakopita.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_lKmPgGpJZXvdLlfu-asB1PeCb5ozfN1C.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "dolmades",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 10,
+      "reviewed": true,
+      "sceneHash": "f8792c4f9d9c603389330eae2c8a35c4bd2269b8809d6b45049d24c7efcde0a2",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 10 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Dolmades.\nCell 1: Rinsed vine leaves sorted into a neat stack of whole leaves and a small separate pile of torn leaves.\nCell 2: Soft translucent onion, spring onion and garlic in olive oil, still pale and glossy.\nCell 3: Short-grain rice glistening among softened onions in a saucepan, grains distinct and still pale.\nCell 4: Partially cooked rice filling in a pan, moist but with no free liquid and grains still holding shape.\nCell 5: Cooled herb-flecked rice filling spread on a tray, bright with dill, mint and parsley.\nCell 6: A 22 cm pot neatly lined edge-to-edge with overlapping vine leaves.\nCell 7: A row of compact finger-sized vine-leaf rolls beside one open leaf showing a small mound of herb rice.\nCell 8: Snug concentric layers of dolmades packed seam-side down in a pot with no large gaps.\nCell 9: A heatproof plate inverted directly over tightly packed dolmades inside a gently simmering covered pot.\nCell 10: Finished glossy dolmades resting intact in the pot, rolls plump and neatly aligned after the plate is removed.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/greek/dolmades.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_stUcBLz93xOzp6hKKKFrAUEgnY-eWu40.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "avgolemono",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "sceneHash": "e3b2acfe93f9baaa6ec815a679fe2f93c4a5e76e1ac7faf29b0bb136e950491f",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 8 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Avgolemono Chicken Soup.\nCell 1: A large pot of pale chicken broth at a barely visible simmer with vegetables and bone-in chicken, surface skimmed clean.\nCell 2: Strained clear golden chicken broth in a clean pot beside a tray of cooked chicken thighs cooling.\nCell 3: Short-grain rice gently simmering in clear chicken broth, grains swollen but still separate.\nCell 4: A bowl of moist bite-size shredded chicken meat with skin and bones removed cleanly.\nCell 5: A smooth pale-yellow egg and lemon mixture in a large bowl, lightly foamy from whisking.\nCell 6: Egg-lemon mixture becoming creamy and warm as small ladles of hot broth are whisked in gradually.\nCell 7: Pale creamy avgolemono soup thickening gently in a pot, smooth with rice visible and no egg curds.\nCell 8: A serving bowl of pale silky avgolemono with visible rice, shredded chicken and a light dill garnish.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/greek/avgolemono.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_D3ohTt65s4Gx3_tTdydardaXywH3hKQp.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "fasolada",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "sceneHash": "5139e84852c1645329b69227e7cc711e6a59bc51667fcfe060535ff34c7eddf8",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 8 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Fasolada.\nCell 1: Plump soaked white beans in a bowl of clear water, visibly larger than their dry size.\nCell 2: Partly cooked white beans draining in a colander, swollen and intact with skins mostly unbroken.\nCell 3: Soft glossy diced onion, carrot and celery in olive oil, vegetables bright with no dark browning.\nCell 4: Tomato paste and paprika coating the softened vegetables in a thin deep-red layer.\nCell 5: White beans and vegetables suspended in a tomato-red broth at a gentle simmer with bay leaves visible.\nCell 6: A thickening red bean soup with tender whole white beans and vegetables, broth still visibly fluid.\nCell 7: Finished fasolada simmering gently, glossy from olive oil with creamy beans and chunks of carrot and celery.\nCell 8: A rustic bowl of Greek fasolada with whole creamy white beans, carrot and celery in a red olive-oil broth.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/greek/fasolada.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_YLRHTGzUT32vsPTX6Kz6rdMEG4MIiWVc.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "gigantes-plaki",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 9,
+      "reviewed": true,
+      "sceneHash": "79d740340cfeccd7bda703e28ee58a77bffedd51877962b8079891ae8b856302",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 9 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Gigantes Plaki.\nCell 1: Large dried white beans swollen after soaking in a bowl of clear water, skins intact.\nCell 2: Large white beans gently simmering in clear water, plump and nearly tender but still whole.\nCell 3: Drained plump beans spread in a shallow dish beside a measured jug of hot bean cooking liquid.\nCell 4: Soft glossy finely diced onion, carrot and celery in olive oil, still bright and not browned.\nCell 5: A thick glossy tomato-vegetable sauce in a wide pan, no watery liquid pooling around the vegetables.\nCell 6: Large white beans gently folded through a red herb-flecked tomato sauce, beans remaining whole.\nCell 7: A shallow rectangular baking dish filled in one even layer with beans and thick tomato sauce, olive oil glistening on top.\nCell 8: Baked gigantes with glossy whole beans, thick red sauce and lightly browned caramelized tomato edges on the surface.\nCell 9: A serving plate of glossy baked giant beans in thick tomato sauce with herbs and a few browned edges, alongside bread.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/greek/gigantes-plaki.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_g7xPT-3E0A9qzq-j2W_Xt80wXM_Viqr8.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "gemista",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 10,
+      "reviewed": true,
+      "sceneHash": "ef628883cdd1125f3ff37e2a379aef631374485c92cbe79113f6327d526ab8a1",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 10 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Gemista.\nCell 1: Whole tomatoes and bell peppers standing upright with neatly cut lids placed beside each matching vegetable.\nCell 2: Twelve hollow tomato and pepper shells standing in a deep roasting pan, tomato pulp collected separately in a bowl.\nCell 3: A bowl of coarse crushed fresh tomato pulp with visible small tomato pieces, not a smooth purée.\nCell 4: Translucent onion and spring onion softening in olive oil, with minced garlic just added.\nCell 5: Partially cooked tomato rice filling in a pan, grains swollen but still firm and no watery pool remaining.\nCell 6: Cooled tomato rice filling flecked heavily with bright chopped parsley, mint and dill.\nCell 7: Tomatoes and peppers filled three-quarters with herb rice, visible headspace beneath their replaced vegetable lids.\nCell 8: Stuffed tomatoes and peppers standing upright with seasoned potato wedges packed snugly in the spaces between.\nCell 9: A deep roasting pan of stuffed vegetables and potatoes surrounded by red tomato juices and tightly covered with foil.\nCell 10: Finished gemista in the roasting pan, vegetables slumped and browned at the edges, potatoes golden and pan juices reduced.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/greek/gemista.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_NY2aE5uWE9q7jd2EJNDjWeQIwkl7aPEG.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "beef-stifado",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "sceneHash": "049e363656b101f881faef74d7291ffeebfb0f1c26b70630327e7982360d1a79",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 8 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Beef Stifado.\nCell 1: Dry seasoned beef chunks on a tray, surfaces matte with no visible moisture before browning.\nCell 2: Deeply browned beef chunks resting on a tray beside a heavy pot with dark fond on the bottom.\nCell 3: Whole pearl onions in a heavy pot with scattered golden-brown patches, half set aside in a bowl.\nCell 4: Pearl onions in a darkening red-wine tomato base with the browned fond dissolved into the liquid.\nCell 5: Beef chunks and pearl onions barely simmering in a deep red-brown spiced tomato-wine braising liquid under a lid.\nCell 6: Tender beef in dark sauce with many whole pearl onions, some onions visibly firmer and intact from the later addition.\nCell 7: Glossy reduced stifado sauce clinging to fork-tender beef and whole onions with almost no thin liquid pool.\nCell 8: A rustic serving bowl of dark glossy beef stifado with tender beef cubes and many whole pearl onions.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/greek/beef-stifado.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_x_wkfrrKUReumiVAWeQANPjP2SlSDvUV.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "keftedes",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "sceneHash": "3e0a8f8a43c769abc4762afa68a7f9d12ac779701617e755e4bd7ec39a007a04",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Keftedes.\nCell 1: Milk-soaked bread squeezed nearly dry in a bowl, soft pieces separated with no pooled milk.\nCell 2: Drained finely grated onion mixed with bright chopped mint, parsley, oregano and minced garlic.\nCell 3: Loose herb-speckled meatball mixture in a bowl, evenly combined but still visibly textured rather than paste-like.\nCell 4: A covered bowl of chilled meatball mixture, firmer and ready for shaping.\nCell 5: Twenty-four evenly shaped meatballs on a tray with only a whisper-thin flour coating.\nCell 6: Several keftedes frying in shallow hot oil with deep golden crusts, pan not overcrowded.\nCell 7: Deep-golden Greek keftedes draining on a rack, one cut open to show a moist herb-flecked centre.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/greek/keftedes.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_v83haMzU-zX16BkJgvcdr66TO6sunguF.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "horiatiki",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 5,
+      "reviewed": true,
+      "sceneHash": "2c0fafe64527501bcc7eafa45d297203545241fc952ad0aa7685f993f02a5f19",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 5 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Horiatiki.\nCell 1: Large ripe tomato wedges in a serving bowl with their fresh juices pooling lightly at the bottom.\nCell 2: Tomato wedges mixed with thick cucumber half-moons, green pepper rings and thin red-onion arcs.\nCell 3: Seasoned chopped vegetables resting in their own fresh tomato juices, still crisp and chunky.\nCell 4: A solid slab of feta resting on the chunky salad with Kalamata olives around it and oregano scattered on top.\nCell 5: Finished horiatiki with a feta slab, chunky tomatoes and cucumber, green pepper, onion and olives glistening with olive oil.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/greek/horiatiki.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_2XcNvZWlOQXNS6WvllNuCvsu6TjTAV--.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "galaktoboureko",
+      "columns": 3,
+      "rows": 5,
+      "usedPanels": 15,
+      "reviewed": true,
+      "sceneHash": "e56762a1b92d1fd0a470ee32bb090177df0a6cdde9a056e1fbea66bcab6b9783",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 5 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 15 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Galaktoboureko.\nCell 1: A clear pale-gold citrus syrup simmering with one strip of lemon peel and a cinnamon stick.\nCell 2: A wide jug of clear cooled citrus syrup at room temperature with the spices removed.\nCell 3: Steaming milk and cream in a heavy saucepan with tiny edge bubbles but no boil.\nCell 4: Four eggs whisked with sugar into a smooth slightly pale mixture in a large bowl.\nCell 5: A thick smooth semolina milk mixture in a saucepan, whisk trails briefly visible on the surface.\nCell 6: Pale egg mixture becoming warm and creamy as three small additions of hot semolina custard are whisked in.\nCell 7: Finished thick ivory semolina custard spread in a shallow bowl, glossy and smooth with fine lemon zest.\nCell 8: A buttered rectangular metal pan beside a stack of thin phyllo sheets kept covered against drying.\nCell 9: Seven translucent buttered phyllo layers lining a rectangular pan with loose overhanging edges.\nCell 10: A smooth even layer of pale semolina custard filling the phyllo-lined pan to the corners.\nCell 11: A custard-filled pan with the lower phyllo edges folded inward and seven smooth buttered sheets forming the fully enclosed top crust.\nCell 12: Unbaked galaktoboureko with a glossy buttered phyllo top neatly scored into twelve portions.\nCell 13: Freshly baked galaktoboureko with a deeply golden blistered phyllo top and puffed scored sections.\nCell 14: Hot bronze phyllo pastry absorbing clear cool syrup poured gradually along the scored lines, surface still crisp.\nCell 15: A clean cut piece of galaktoboureko showing crisp layered phyllo above and below a thick smooth pale semolina custard centre.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/greek/galaktoboureko.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_D6WbV7S6c-saLSPj7Z6MEwRy4mG4Iae8.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          205,
+          410,
+          614,
+          819,
+          1024
+        ]
+      }
+    }
+  ]
+}
