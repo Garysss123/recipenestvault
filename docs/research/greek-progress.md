@@ -31,4 +31,8 @@ Goal: publish an initial set of 13 Greek recipes at the same quality bar as the 
 
 ## Current phase
 
-All 13 five-language recipe drafts are complete and pass `node scripts/audit-greek-drafts.mjs --content-only --complete`. Natural method lengths are 12, 11, 7, 9, 10, 8, 8, 9, 10, 8, 7, 5 and 15 steps (119 total), with one exact `imageScene` for every method step. The two-source minimum and measurable facts are verified. Next phase: licensed finished-dish photo review, then step-illustration production.
+All 13 five-language recipe drafts are complete and pass `node scripts/audit-greek-drafts.mjs --content-only --complete`. Natural method lengths are 12, 11, 7, 9, 10, 8, 8, 9, 10, 8, 7, 5 and 15 steps (119 total), with one exact `imageScene` for every method step. The two-source minimum and measurable facts are verified.
+
+Finished-dish photo research is complete: 13 unique commercial-use photographs were manually reviewed against each recipe `visualSpec`, then pinned with source page, original file URL, author, license evidence and SHA-256 in `docs/research/greek-photo-evidence.json`. `node scripts/audit-greek-photos.mjs` verifies identity, provenance, hashes, uniqueness and minimum 1200x800 source pixels. The final contact sheet under `qa-artifacts/greek-review/` was manually inspected; Stifado and souvlaki were upgraded to stronger visual matches before approval.
+
+The 119-step illustration prompt manifest is prepared in `docs/illustration-prompts/greek-prompts.json` using the existing warm-ivory fine-ink/gouache Recipe Nest Vault style. Next phase: generate and review 13 source sheets, crop them into 119 separate step images, then integrate the collection and run the full delivery gate.
