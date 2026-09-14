@@ -9,5 +9,5 @@
 - [x] Global recipe/photo/illustration/cuisine integration
 - [x] npm test
 - [x] Local desktop/mobile Chromium QA and screenshot review
-- [ ] Git push and Cloudflare deployment
-- [ ] Production Chromium QA and screenshot review
+- [x] Git push and Cloudflare deployment
+- [x] Production Chromium QA and screenshot review
