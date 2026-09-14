@@ -426,4 +426,42 @@ const german = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german };
+const greek = {
+  en: {
+    eyebrow: "Curated Greek cooking",
+    title: "Greek recipes from souvlaki and village salads to braises, baked classics and syrup pastries",
+    intro: "Cook moussaka, pastitsio, pork souvlaki, spanakopita, dolmades and avgolemono, then move through fasolada, gigantes plaki, gemista, beef stifado and keftedes before finishing with horiatiki and galaktoboureko. Each recipe gives precise quantities, heat, timing, texture and doneness cues while preserving the natural number of stages the dish actually needs.",
+    recipeEyebrow: "Greek recipe",
+    backToCollection: "Back to Greek recipes"
+  },
+  "zh-hant": {
+    eyebrow: "精選希臘料理",
+    title: "從烤肉、鄉村沙拉到焗烤、燉菜與糖漿甜點的希臘食譜",
+    intro: "從木莎卡、Pastitsio、豬肉 Souvlaki、菠菜派 Spanakopita、葡萄葉捲 Dolmades、蛋檸檬雞湯 Avgolemono，到 Fasolada 白豆湯、Gigantes Plaki 烤大白豆、Gemista 填餡蔬菜、Stifado 燉牛肉、Keftedes 肉丸，再以 Horiatiki 希臘鄉村沙拉與 Galaktoboureko 奶餡千層甜點收尾。每道都清楚標出份量、火力、時間、口感與熟度線索，並保留料理真正需要的自然步驟數。",
+    recipeEyebrow: "希臘料理食譜",
+    backToCollection: "返回希臘料理食譜"
+  },
+  ja: {
+    eyebrow: "厳選したギリシャ料理",
+    title: "スブラキやホリアティキから煮込み、オーブン料理、シロップ菓子まで作るギリシャ料理",
+    intro: "ムサカ、パスティチオ、豚肉のスブラキ、スパナコピタ、ドルマデス、アヴゴレモノをはじめ、ファソラーダ、ギガンテス・プラキ、ゲミスタ、牛肉のスティファド、ケフテデス、ホリアティキ、ガラクトブレコまで作ります。分量、火加減、時間、食感、火の通りを具体的に示し、それぞれの料理に本当に必要な自然な工程数を保っています。",
+    recipeEyebrow: "ギリシャ料理レシピ",
+    backToCollection: "ギリシャ料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "엄선한 그리스 요리",
+    title: "수블라키와 호리아티키부터 오븐 요리, 스튜, 시럽 디저트까지 만드는 그리스 요리",
+    intro: "무사카, 파스티치오, 돼지고기 수블라키, 스파나코피타, 돌마데스, 아브골레모노부터 파솔라다, 기간테스 플라키, 게미스타, 소고기 스티파도, 케프테데스, 호리아티키, 갈락토부레코까지 만듭니다. 정확한 분량, 불 세기, 시간, 식감과 익힘 기준을 제시하면서 각 음식에 실제로 필요한 자연스러운 조리 단계 수를 그대로 유지했습니다.",
+    recipeEyebrow: "그리스 요리 레시피",
+    backToCollection: "그리스 요리 레시피로 돌아가기"
+  },
+  th: {
+    eyebrow: "อาหารกรีกที่คัดสรร",
+    title: "สูตรอาหารกรีกตั้งแต่ซูฟลากีและสลัดหมู่บ้านถึงอาหารอบ สตูว์ และขนมราดน้ำเชื่อม",
+    intro: "ทำได้ตั้งแต่มูซากา พาสติตซิโอ ซูฟลากีหมู สปานาโคพิตา ดอลมาเดส และซุปอัฟโกเลโมโน ไปจนถึงฟาโซลาดา กิกันเตสพลากี เกมิสตา สติฟาโดเนื้อ เคฟเตเดส โฮเรียติกี และกาลักโตบูเรโก ทุกสูตรระบุปริมาณ ระดับไฟ เวลา เนื้อสัมผัส และจุดสุกอย่างชัดเจน พร้อมคงจำนวนขั้นตอนตามธรรมชาติที่อาหารแต่ละจานต้องใช้จริง",
+    recipeEyebrow: "สูตรอาหารกรีก",
+    backToCollection: "กลับไปสูตรอาหารกรีก"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german, greek };

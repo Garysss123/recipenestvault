@@ -851,6 +851,98 @@ await inspect({
   }
 });
 
+const greekRecipeIds = [
+  "moussaka", "pastitsio", "pork-souvlaki", "spanakopita", "dolmades", "avgolemono", "fasolada",
+  "gigantes-plaki", "gemista", "beef-stifado", "keftedes", "horiatiki", "galaktoboureko"
+];
+async function assertGreekCollection(page, locale) {
+  const links = await page.locator(".collection-recipe-card > a").evaluateAll((items) => items.map((item) => item.getAttribute("href")).sort());
+  const expected = greekRecipeIds.map((id) => `/${locale}/recipes/${id}/`).sort();
+  if (JSON.stringify(links) !== JSON.stringify(expected)) throw new Error(`Greek ${locale} collection does not contain the expected 13 unique recipe routes`);
+  if (await page.locator(".collection-recipe-card").count() !== 13) throw new Error("Greek collection must show 13 cards");
+  const broken = await page.locator(".collection-recipe-card img").evaluateAll((images) => images.filter((image) => !image.complete || !image.naturalWidth).length);
+  if (broken) throw new Error(`${broken} Greek card photographs failed to load`);
+  if (!(await page.locator("body").evaluate((element) => element.classList.contains("cuisine-greek")))) throw new Error("Greek collection is missing its cuisine theme class");
+}
+async function assertGreekRecipe(page, expectedSteps, locale, id) {
+  await assertIllustratedRecipe(page, expectedSteps, { traditionalChinese: locale === "zh-hant" });
+  const steps = page.locator(".method-section ol > li");
+  if (await steps.count() !== expectedSteps) throw new Error(`Greek ${id} method count differs from its ${expectedSteps} illustrations`);
+  for (const entry of await steps.all()) if (await entry.locator(".recipe-step-illustration").count() !== 1) throw new Error(`Greek ${id} needs exactly one illustration in each step`);
+  const images = await page.locator(".recipe-step-illustration img").evaluateAll((entries) => entries.map((entry) => entry.getAttribute("src")));
+  if (new Set(images).size !== expectedSteps) throw new Error(`Greek ${id} reuses a step image`);
+  if (await page.locator(`.breadcrumbs a[href="/${locale}/cuisines/greek/"]`).count() !== 1) throw new Error(`Greek ${id} breadcrumb does not return to Greek cuisine`);
+  const expectedRelatedTitle = ({
+    en: "More Greek recipes",
+    "zh-hant": "更多希臘料理",
+    ja: "ほかのギリシャ料理",
+    ko: "다른 그리스 요리",
+    th: "สูตรอาหารกรีกเพิ่มเติม"
+  })[locale];
+  if (await page.locator("#related-title").innerText() !== expectedRelatedTitle) throw new Error(`Greek ${id} related-recipes title is not cuisine-specific`);
+  const relatedLinks = await page.locator(".related-recipes .collection-recipe-card > a").evaluateAll((items) => items.map((item) => item.getAttribute("href")));
+  if (relatedLinks.length !== 3 || relatedLinks.some((href) => !href?.startsWith(`/${locale}/recipes/`))) throw new Error(`Greek ${id} related-recipes links are invalid`);
+  for (const target of ["en", "zh-hant", "ja", "ko", "th"]) {
+    if (await page.locator(`.language-popover a[href="/${target}/recipes/${id}/"]`).count() !== 1) throw new Error(`Greek ${id} is missing its ${target} language route`);
+  }
+}
+await inspect({
+  name: "en-search-greek-desktop", path: "/en/search/?q=moussaka", viewport: { width: 1280, height: 900 },
+  interact: async (page) => {
+    const result = page.locator('.result-card[href="/en/recipes/moussaka/"]');
+    await result.waitFor({ state: "visible" });
+    if (!/Greek recipe/i.test(await result.innerText())) throw new Error("Greek search result lacks its cuisine label");
+  }
+});
+for (const [locale, label, viewport] of [
+  ["en", "desktop", { width: 1440, height: 1000 }],
+  ["zh-hant", "mobile", { width: 390, height: 844 }],
+  ["ja", "desktop", { width: 1366, height: 900 }],
+  ["ko", "mobile", { width: 390, height: 844 }],
+  ["th", "mobile", { width: 390, height: 844 }]
+]) {
+  await inspect({
+    name: `${locale}-greek-collection-${label}`, path: `/${locale}/cuisines/greek/`, viewport,
+    interact: async (page) => {
+      await assertGreekCollection(page, locale);
+      const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+      if (response?.status() !== 200) throw new Error(`Greek ${locale} direct refresh failed`);
+    },
+    extraScreenshots: locale === "en" || locale === "zh-hant" ? [
+      { name: `${locale}-greek-collection-hero-${label}`, selector: ".cuisine-hero" },
+      { name: `${locale}-greek-first-card-${label}`, selector: ".collection-recipe-card:first-child" }
+    ] : []
+  });
+}
+for (const [locale, id, count, label] of [
+  ["zh-hant", "horiatiki", 5, "mobile"],
+  ["en", "pork-souvlaki", 7, "desktop"],
+  ["ja", "moussaka", 12, "desktop"],
+  ["ko", "galaktoboureko", 15, "mobile"],
+  ["th", "beef-stifado", 8, "mobile"]
+]) {
+  await inspect({
+    name: `${locale}-greek-${id}-${label}`, path: `/${locale}/recipes/${id}/`,
+    viewport: label === "mobile" ? { width: 390, height: 844 } : { width: 1366, height: 900 },
+    interact: async (page) => assertGreekRecipe(page, count, locale, id),
+    extraScreenshots: [
+      { name: `${locale}-greek-${id}-hero-${label}`, selector: ".recipe-detail-hero" },
+      { name: `${locale}-greek-${id}-first-step-${label}`, selector: ".method-section li:first-child" }
+    ]
+  });
+}
+await inspect({
+  name: "greek-language-choice-mobile", path: "/en/recipes/moussaka/", viewport: { width: 390, height: 844 },
+  fullPage: false, suppressLanguagePrompt: false, loadLazyImages: false,
+  interact: async (page) => {
+    await page.locator('[data-language-choice="zh-hant"]').click();
+    await page.waitForLoadState("networkidle");
+    if (new URL(page.url()).pathname !== "/zh-hant/recipes/moussaka/") throw new Error("Greek language selection lost the recipe route");
+    const response = await page.reload({ waitUntil: "networkidle" });
+    if (response?.status() !== 200 || await page.locator("[data-language-prompt]").isVisible()) throw new Error("Greek language preference or deep refresh failed");
+  }
+});
+
 await inspect({
   name: "zh-chinese-collection-mobile", path: "/zh-hant/cuisines/chinese/", viewport: { width: 390, height: 844 },
   interact: async (page) => {
