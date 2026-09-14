@@ -388,4 +388,42 @@ const british = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british };
+const german = {
+  en: {
+    eyebrow: "Curated German cooking",
+    title: "German recipes from braises and sausages to dumplings, noodles and classic cakes",
+    intro: "Cook Sauerbraten, Rinderrouladen, Bavarian Krustenbraten, Currywurst, Nürnberger Rostbratwürste with sauerkraut, Frikadellen and Königsberger Klopse, then move through Kartoffelpuffer, Käsespätzle, Maultaschen and Erbsensuppe before finishing with Schwarzwälder Kirschtorte and Bienenstich. Each recipe gives precise quantities, heat, timing, texture and doneness cues while preserving the natural number of stages the dish actually needs.",
+    recipeEyebrow: "German recipe",
+    backToCollection: "Back to German recipes"
+  },
+  "zh-hant": {
+    eyebrow: "精選德國料理",
+    title: "從燉肉、香腸、麵糰料理到經典蛋糕的德國食譜",
+    intro: "從酸味燉牛肉 Sauerbraten、牛肉捲 Rinderrouladen、巴伐利亞脆皮烤豬肉、咖哩香腸、紐倫堡烤香腸配酸菜、Frikadellen 與 Königsberger Klopse，到馬鈴薯煎餅、起司 Spätzle、Maultaschen、豌豆湯，再以黑森林蛋糕與蜂螫蛋糕收尾。每道食譜都清楚標示份量、火力、時間、口感與熟度，並保留料理真正需要的自然步驟數。",
+    recipeEyebrow: "德國料理食譜",
+    backToCollection: "返回德國料理食譜"
+  },
+  ja: {
+    eyebrow: "厳選したドイツ料理",
+    title: "煮込み、ソーセージ、粉ものから伝統ケーキまで作れるドイツ料理レシピ",
+    intro: "ザウアーブラーテン、リンダールラーデン、バイエルン風クルステンブラーテン、カリーヴルスト、ニュルンベルガー・ロストブラートヴルストとザワークラウト、フリカデレン、ケーニヒスベルガー・クロプセから、カルトッフェルプッファー、ケーゼシュペッツレ、マウルタッシェン、エルブゼンズッペ、シュヴァルツヴェルダー・キルシュトルテ、ビーネンシュティヒまで作れます。分量、火加減、時間、食感、火の通りを具体的に示し、料理ごとに本当に必要な自然な工程数を保っています。",
+    recipeEyebrow: "ドイツ料理レシピ",
+    backToCollection: "ドイツ料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "엄선한 독일 요리",
+    title: "브레이즈와 소시지부터 면·만두 요리와 전통 케이크까지 만드는 독일 레시피",
+    intro: "자우어브라텐, 린더룰라덴, 바이에른식 크루스텐브라텐, 커리부어스트, 사워크라우트를 곁들인 뉘른베르거 로스트브라트부어스트, 프리카델렌과 쾨니히스베르거 클롭세부터 카르토펠푸퍼, 케제슈페츨레, 마울타셴, 에르브젠주페, 슈바르츠벨더 키르슈토르테와 비넨슈티히까지 만듭니다. 정확한 분량, 불 세기, 시간, 식감과 익힘 기준을 제시하고 각 요리에 실제로 필요한 자연스러운 조리 단계를 유지합니다.",
+    recipeEyebrow: "독일 요리 레시피",
+    backToCollection: "독일 요리 레시피로 돌아가기"
+  },
+  th: {
+    eyebrow: "อาหารเยอรมันที่คัดสรร",
+    title: "สูตรอาหารเยอรมันตั้งแต่เนื้อตุ๋นและไส้กรอก ไปจนถึงแป้ง เส้น และเค้กคลาสสิก",
+    intro: "ทำได้ตั้งแต่ Sauerbraten, Rinderrouladen, หมูย่างหนังกรอบแบบบาวาเรีย, Currywurst, ไส้กรอก Nürnberger Rostbratwürste กับกะหล่ำปลีดอง, Frikadellen และ Königsberger Klopse ไปจนถึง Kartoffelpuffer, Käsespätzle, Maultaschen, Erbsensuppe, เค้กป่าดำ และ Bienenstich ทุกสูตรระบุปริมาณ ระดับไฟ เวลา เนื้อสัมผัส และจุดสุกอย่างชัดเจน พร้อมคงจำนวนขั้นตอนตามธรรมชาติที่อาหารแต่ละจานต้องใช้จริง",
+    recipeEyebrow: "สูตรอาหารเยอรมัน",
+    backToCollection: "กลับไปสูตรอาหารเยอรมัน"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german };
