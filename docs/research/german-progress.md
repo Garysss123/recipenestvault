@@ -35,4 +35,6 @@ All 13 recipes pass `node scripts/audit-german-drafts.mjs --content-only --compl
 
 Finished-dish photo research is complete: 13 unique Wikimedia Commons photographs were manually reviewed against each recipe `visualSpec`, then pinned with source page, original file URL, author, commercial-use license evidence and SHA-256 in `docs/research/german-photo-evidence.json`. `node scripts/audit-german-photos.mjs` verifies identity, provenance, hashes, uniqueness and minimum 1200x800 source pixels. The final 13-photo contact sheet was manually inspected under `qa-artifacts/german-review/` and remains uncommitted.
 
-Next phase: generate, record and manually review 109 hand-free non-photorealistic method illustrations, one per natural method step.
+All 13 illustration source sheets are generated and recorded with the built-in OpenAI image generator using the existing Recipe Nest Vault warm-ivory ink-and-gouache style reference. The complete source-sheet contact sheet was manually inspected under `qa-artifacts/german-review/`: all 109 natural method states are represented, there are no people/hands or text, and unused cells remain blank where applicable. `node scripts/generate-german-illustration-sets.mjs` produced 109 distinct 1672x941 step images with pinned SHA-256 hashes in `src/german-illustration-sets.mjs`.
+
+Next phase: integrate the German recipes, photos, collection copy and step-illustration records into the global site data, then run full audits, build, local Chromium QA, push/deploy and production QA.

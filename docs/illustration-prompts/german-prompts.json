@@ -1,0 +1,359 @@
+{
+  "generator": "OpenAI image_gen",
+  "mode": "built-in",
+  "generatedAt": "2026-09-14",
+  "styleReference": "assets/recipes/illustrations-generated/bibimbap/step-01.png",
+  "entries": [
+    {
+      "recipeId": "sauerbraten",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 9,
+      "reviewed": true,
+      "sceneHash": "0122e0bd75e58c5736234a86e523a96ae26c7c73bdccb355ae1a976f6136e9ff",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 9 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Sauerbraten.\nCell 1: A covered glass dish with a whole beef roast submerged in dark red wine-vinegar marinade with sliced vegetables and whole spices; no hands.\nCell 2: A dry marinated beef roast on a tray beside a bowl of strained dark marinade and a separate bowl of drained aromatic vegetables.\nCell 3: A deeply browned whole beef roast resting beside a heavy pot with a dark caramelized fond on the bottom.\nCell 4: Browned onions, carrots and celeriac in a Dutch oven with dark fond loosened from the base.\nCell 5: A covered Dutch oven holding a dark braising liquid around the beef roast, with softened vegetables and raisins visible.\nCell 6: A whole braised beef roast resting intact on a carving board under a loose foil tent.\nCell 7: A saucepan of smooth dark-brown sweet-sour gravy with a few plump raisins, visibly glossy and lightly thickened.\nCell 8: Neat slices of braised beef fanned on a warm platter, coated with glossy dark gravy and a few raisins.\nCell 9: A traditional German plate with sliced Sauerbraten, potato dumplings and glossy braised red cabbage, extra gravy in a small sauce boat.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/german/sauerbraten.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_rSmfvH_MQLExoKtW_6iNl1GMePY6BQtn.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "rinderrouladen",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "sceneHash": "31d8f6868694e64bc342acccfd37bf468b6df39021ffea531a29b5ef831863e0",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 8 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Rinderrouladen.\nCell 1: Eight thin rectangular beef slices laid flat and evenly pounded, ready for filling; no hands.\nCell 2: Thin beef slices spread with mustard and neatly topped with bacon batons, sliced onion and pickle batons.\nCell 3: Eight compact raw beef roulades secured with kitchen twine, seams tucked underneath on a tray.\nCell 4: Deeply browned beef roulades resting beside a casserole with a dark fond.\nCell 5: Caramelized diced root vegetables and tomato paste in the braising pan with red wine reduced to a dark glossy base.\nCell 6: Tender beef roulades gently braising in a dark brown sauce with bay leaves, partially submerged but still intact.\nCell 7: A saucepan of smooth dark glossy rouladen gravy coating the back of a spoon, beside untied cooked beef rolls.\nCell 8: A German dinner plate with one glossy beef roulade cut diagonally to show bacon, onion and pickle filling, beside potatoes and red cabbage.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/german/rinderrouladen.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_kbM43YqRNCMKrsqDW4IcQh4hF_65B8SD.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "bavarian-krustenbraten",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "sceneHash": "be3814598780c7bb61c5dd00f7fa06c8ca008d2ce3d7dae179aff81c8487e11f",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Bavarian Krustenbraten.\nCell 1: A skin-on pork shoulder with a neat 15 mm diamond-scored rind, visibly dry and evenly seasoned.\nCell 2: A seasoned skin-on pork shoulder sitting skin-side up on a bed of roughly chopped root vegetables in a roasting pan.\nCell 3: Pork shoulder roasting skin-side up with dark beer-stock liquid around the vegetables, rind remaining dry above the liquid.\nCell 4: A long-roasted pork shoulder with rendered fat and dry scored rind, dark aromatic pan juices below.\nCell 5: A finished pork roast with blistered deeply golden diamond-scored crackling, visibly crisp and dry.\nCell 6: Whole crisp pork roast resting on a board beside a saucepan receiving strained dark pan juices.\nCell 7: Thick slices of juicy pork each capped with crisp crackling, arranged beside glossy dark-beer gravy.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/german/bavarian-krustenbraten.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_oCqALGqlgaIPlq_wf0NNo_AzlSouwbIX.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "currywurst",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "a82179144e92392c4e95cfdb4b97b3ec72533e0c73af99ecd95150d36bca5ab1",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Currywurst.\nCell 1: Finely diced onions softened to pale gold in a small saucepan, no browning at the edges.\nCell 2: A thick brick-red tomato-curry paste frying with softened onions, glossy and aromatic.\nCell 3: A saucepan of thick smooth red-brown curry tomato sauce visibly coating a spoon.\nCell 4: A smooth glossy currywurst sauce with no visible onion pieces, held warm in a saucepan.\nCell 5: Eight evenly browned German sausages in a wide frying pan, skins taut and deeply golden.\nCell 6: Bite-size currywurst pieces covered in thick red curry sauce with a visible final dusting of yellow-brown curry powder.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/german/currywurst.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_LWz8PqQqxpn4L5nasSN3jhrNSEiSEeYx.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          471,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "nuernberger-rostbratwurst",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "62772d23953b3562eaa9a0f09de0cd588c845e5fbd4f953aa1cc348e482d1a28",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Nürnberger Rostbratwürste with Sauerkraut.\nCell 1: Softened pale onion and apple pieces glistening in butter in a wide saucepan.\nCell 2: Sauerkraut gently braising with apple, onion, bay and juniper in a small amount of aromatic liquid.\nCell 3: Finished sauerkraut looking moist and glossy but with no watery liquid pooling in the pan.\nCell 4: Small Nuremberg sausages browning in a skillet with evenly caramelized surfaces and no burnt spots.\nCell 5: A warm platter of browned small sausages resting uncovered beside a pan of finished sauerkraut.\nCell 6: A traditional plate of six small browned Nuremberg sausages beside pale-gold sauerkraut with a small spoonful of mustard.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/german/nuernberger-rostbratwurst.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_bzxYSSpgfqrbI76H6kc9g2Vz-AR9rFs3.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          471,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "frikadellen",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "sceneHash": "c402d09bbac39b7a8ea0ae25f4309c1bab6baf5a4a951b81669a68ef1c6cd1da",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Frikadellen.\nCell 1: A bowl of softened milk-soaked bread squeezed just enough to remain moist without pooled milk.\nCell 2: Soft translucent onions with a faint golden edge cooling in a small skillet.\nCell 3: A cohesive but lightly mixed meat mixture with visible parsley and onion, not compressed into a paste.\nCell 4: Eight evenly shaped raw oval meat patties about 20 mm thick on a tray, with lightly textured surfaces.\nCell 5: Eight chilled firm raw patties on a tray, ready to fry and holding clean edges.\nCell 6: Deep-golden Frikadellen frying in a skillet, with an even crust and no crowding.\nCell 7: Finished dark-golden Frikadellen on a simple plate with mustard and German potato salad beside them.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/german/frikadellen.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_goAPCLPELDd1eQtg1ufkLE42P_dMaZgZ.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "koenigsberger-klopse",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "sceneHash": "5b4ccfb176817397889063b82cf8873c9bd564b154afee7ab61d0f690ab8750f",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 8 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Königsberger Klopse.\nCell 1: A small bowl of milk-soaked bread, softened and lightly squeezed with no pooled milk.\nCell 2: Translucent finely diced onion cooling in a small skillet, pale with no dark browning.\nCell 3: Twelve evenly shaped pale raw meatballs on a tray, with fine parsley flecks visible.\nCell 4: Pale cooked meatballs gently poaching in clear stock with bay leaves, no vigorous bubbles.\nCell 5: A pale butter-and-flour roux in a clean saucepan, smooth and bubbling lightly without browning.\nCell 6: A pale smooth cream sauce thickening in a saucepan, glossy and lump-free.\nCell 7: Pale cream sauce dotted with capers, glossy and smooth with no separation.\nCell 8: Three pale meatballs on a plate in creamy caper sauce, served beside simple boiled potatoes.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/german/koenigsberger-klopse.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_CLhMQIM3Xis4YmL-dg3j0Ax_EfRv48iD.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "kartoffelpuffer",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "9fe495b2651c2897e864414de429893b1ddc2ac07fe9e80ee96ad18d16e9f6e1",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Kartoffelpuffer.\nCell 1: A bowl of freshly coarsely grated pale potato and onion, moist but not yet squeezed.\nCell 2: A towel-wrapped mound of squeezed grated potato beside a bowl with white potato starch settled under clear liquid.\nCell 3: A cohesive raw potato-pancake mixture with visible grated strands and no watery liquid at the bottom.\nCell 4: A wide heavy skillet holding a shallow 5 mm layer of shimmering hot oil.\nCell 5: Several thin potato pancakes frying in shallow oil with lacy crisp dark-golden edges.\nCell 6: Three crisp potato pancakes on a plate with a small separate bowl of pale applesauce.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/german/kartoffelpuffer.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_jiEzE8l4ke8mXlQ47GHpE7Wa7HM7iO-q.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          471,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "kaesespaetzle",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 9,
+      "reviewed": true,
+      "sceneHash": "7d19844fc8d6a4c29245376d8a2ed434854becc2e1d500ff7c532042ecfc8a7a",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 9 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Käsespätzle.\nCell 1: A skillet full of deeply golden-brown soft onions, glossy but not burnt.\nCell 2: A bowl of glossy elastic Spätzle dough with large air bubbles and a thick dropping consistency.\nCell 3: A covered bowl of rested Spätzle dough beside a large pot of gently boiling water.\nCell 4: A bowl of two grated Alpine cheeses beside an empty deep ceramic serving dish warming in the oven.\nCell 5: Fresh short Spätzle noodles floating at the surface of gently boiling water, separated and pale yellow.\nCell 6: A warm serving dish with a first layer of steaming Spätzle covered by grated melting cheese.\nCell 7: A deep dish filled with three steaming layers of Spätzle and melting cheese, visibly stringy between noodles.\nCell 8: Fully melted cheese stretching between distinct Spätzle noodles in a warm serving dish.\nCell 9: Finished Käsespätzle with distinct cheese-coated noodles, long melted-cheese strands, deep-brown onions and green chives.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/german/kaesespaetzle.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_RKrypMOMVOcEES7bf5vqmIoKo9tzwNHZ.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "maultaschen",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 11,
+      "reviewed": true,
+      "sceneHash": "3984f225850477c368b2c115fbcb254e7f353529e42a28fc67b729e3dbf0d0a4",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 11 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Swabian Maultaschen.\nCell 1: A smooth firm ball of fresh egg pasta dough on a lightly floured surface.\nCell 2: Wrapped egg pasta dough resting on the worktop, smooth and undisturbed.\nCell 3: Milk-softened bread squeezed dry and broken into small moist crumbs in a bowl.\nCell 4: A compact mound of wilted spinach squeezed very dry and finely chopped, with no liquid around it.\nCell 5: Soft lightly golden diced onion cooling in a skillet.\nCell 6: A chilled cohesive meat-and-spinach filling with fine green flecks, firm enough to portion.\nCell 7: Long smooth sheets of fresh egg pasta rolled to about 1 mm thick, with unused dough covered nearby.\nCell 8: A thin pasta sheet laid flat with neat equal mounds of green-flecked filling spaced in a straight row.\nCell 9: Neat rectangular raw Maultaschen parcels with firmly pressed seams and no trapped air pockets.\nCell 10: Several rectangular Maultaschen gently simmering intact in clear beef broth with only small bubbles.\nCell 11: Three cooked rectangular Maultaschen in a shallow bowl of clear hot beef broth, showing smooth intact pasta seams.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/german/maultaschen.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_iTUmdtk64-55fetows7XZE5p5Ln2bQ2E.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "erbsensuppe",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "sceneHash": "b10f8d7c10b360f8e904ab97dbdeadc2f5db2fca65de94c5a4f9c78e947c2799",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 8 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: German Erbsensuppe.\nCell 1: Diced smoked bacon rendering in a heavy soup pot, edges lightly browned and fat glistening around it.\nCell 2: Softened diced root vegetables and leek mixed with rendered bacon in a heavy pot.\nCell 3: A pot of green split peas gently simmering with bay leaves, beginning to soften but still visibly granular.\nCell 4: Thickening pea soup with distinct tender potato cubes still holding their shape.\nCell 5: A thick rustic pea soup showing both creamy broken-down peas and intact potato and vegetable pieces.\nCell 6: Slices of smoked sausage warmed through in thick green pea soup without vigorous bubbling.\nCell 7: Finished thick pea soup in the pot with bay leaves removed and seasoning ready for final adjustment.\nCell 8: A warm bowl of thick German pea soup with visible sausage, potato and vegetables, finished with fresh parsley.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/german/erbsensuppe.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_JdBweSb7QHz047xEI05_Aob4PrVZUTN6.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "black-forest-cake",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 12,
+      "reviewed": true,
+      "sceneHash": "cbdafc575e475e8bc1093ce70f9a89e8354ece9868ddcdb90c3d858b53347b8c",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 12 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Schwarzwälder Kirschtorte.\nCell 1: A tall evenly baked dark cocoa sponge in a 24 cm springform pan, flat-topped and springy.\nCell 2: A completely cooled cocoa sponge resting bare on a wire rack, ready to split.\nCell 3: A glossy thick sour-cherry filling cooling in a bowl, cherries suspended in deep red gel with no watery liquid.\nCell 4: Three even round cocoa sponge layers separated on a work surface, one especially flat for the top.\nCell 5: Three cocoa sponge layers with their cut surfaces evenly moistened and darkened slightly by Kirsch.\nCell 6: A bowl of smooth white whipped cream holding firm glossy peaks.\nCell 7: Bottom cocoa sponge layer with a white cream dam holding glossy cherry filling neatly in the centre.\nCell 8: Two assembled cocoa sponge layers with cherry filling neatly contained by whipped-cream rings.\nCell 9: A tall three-layer cake with a thin smooth white crumb coat covering the cocoa sponge and sides.\nCell 10: A smooth white cream-coated Black Forest cake with twelve evenly spaced cream rosettes around the top.\nCell 11: A finished Black Forest cake covered with dark chocolate curls and twelve cream rosettes each topped with one cherry.\nCell 12: A clean slice removed from the chilled cake, showing three dark sponge layers, white cream and distinct red cherry filling.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/german/black-forest-cake.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_NevnV0FKBJL5k3pdlBQWPgehheXGFqMW.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "bienenstich",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 12,
+      "reviewed": true,
+      "sceneHash": "de16b8807c7d891f9cce4c4440c2bf39a4b99163d47577e3a4a6b4d3cb7a36aa",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 12 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Bienenstich.\nCell 1: A rough cohesive enriched yeast dough in a mixer bowl before butter is incorporated.\nCell 2: A smooth glossy elastic enriched dough pulling cleanly from the mixer bowl.\nCell 3: A bowl of enriched dough risen to roughly double its original volume, domed and airy.\nCell 4: A glossy warm honey-butter almond mixture in a saucepan, almonds evenly coated but not browned.\nCell 5: Enriched dough spread evenly in a 26 cm pan with a continuous glossy almond topping covering the surface.\nCell 6: Puffy second-risen dough in the cake pan with the almond topping lifted slightly by the dough.\nCell 7: A baked round Bienenstich with a deep-golden glossy caramelized sliced-almond crust.\nCell 8: A thick pale vanilla custard bubbling gently in a saucepan, glossy and smooth.\nCell 9: A bowl of finished vanilla custard covered directly on the surface with film, chilling smooth and skin-free.\nCell 10: A fully cooled Bienenstich split into two horizontal layers, with the almond-crusted top pre-cut into twelve wedges.\nCell 11: A bowl of pale vanilla cream filling, lighter and fluffy after whipped cream is folded into custard.\nCell 12: Finished Bienenstich with a thick pale vanilla cream centre and twelve neat caramelized almond-topped wedges.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/german/bienenstich.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call__APd-0MjkQAIsevWyFuUtP40MfRmD3lC.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    }
+  ]
+}

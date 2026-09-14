@@ -1,0 +1,38 @@
+import { copyFile, mkdir, readFile, writeFile } from 'node:fs/promises';
+import { dirname, join, relative, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import sharp from 'sharp';
+
+const [recipeId, generatedPath] = process.argv.slice(2);
+if (!recipeId || !generatedPath) throw new Error('Usage: node scripts/record-german-illustration-sheet.mjs <recipe-id> <generated-image-path>');
+
+const root = dirname(dirname(fileURLToPath(import.meta.url)));
+const promptFile = join(root, 'docs', 'illustration-prompts', 'german-prompts.json');
+const record = JSON.parse(await readFile(promptFile, 'utf8'));
+const entry = record.entries.find(item => item.recipeId === recipeId);
+if (!entry) throw new Error(`${recipeId}: unknown German prompt entry`);
+
+const source = resolve(generatedPath);
+const metadata = await sharp(source).metadata();
+const width = metadata.width || 0;
+const height = metadata.height || 0;
+if (width < 1200 || height < 900) throw new Error(`${recipeId}: generated sheet too small (${width}x${height})`);
+
+const sheetDir = join(root, 'assets', 'recipes', 'illustration-sheets-generated', 'german');
+await mkdir(sheetDir, { recursive: true });
+const destination = join(sheetDir, `${recipeId}.png`);
+if (source !== destination) await copyFile(source, destination);
+
+const boundaries = (size, count) => Array.from({ length: count + 1 }, (_, index) => Math.round(index * size / count));
+entry.sourceSheet = relative(root, destination).replaceAll('\\', '/');
+entry.sourceGeneratedPath = source.replaceAll('\\', '/');
+entry.cropGrid = {
+  width,
+  height,
+  x: boundaries(width, entry.columns),
+  y: boundaries(height, entry.rows)
+};
+entry.reviewed = true;
+
+await writeFile(promptFile, JSON.stringify(record, null, 2) + '\n', 'utf8');
+console.log(`${recipeId}: recorded reviewed ${width}x${height} source sheet -> ${entry.sourceSheet}`);
