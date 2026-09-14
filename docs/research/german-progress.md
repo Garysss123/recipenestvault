@@ -15,22 +15,24 @@ Goal: publish an initial set of 13 German recipes at the same quality bar as the
 
 | Batch | ID | Dish | Region / tradition | Content | Sources | Photo | Method length |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| A | `sauerbraten` | Sauerbraten | Rhineland / western German tradition | drafted + checked | 2/2 | pending | 9 |
-| A | `rinderrouladen` | Rinderrouladen | Germany-wide home cooking | drafted + checked | 2/2 | pending | 8 |
-| A | `bavarian-krustenbraten` | Bayerischer Krustenbraten | Bavaria | drafted + checked | 2/2 | pending | 7 |
-| A | `currywurst` | Currywurst | Berlin / German street-food tradition | drafted + checked | 2/2 | pending | 6 |
-| B | `nuernberger-rostbratwurst` | Nürnberger Rostbratwürste mit Sauerkraut | Nuremberg / Franconia | drafted + checked | 2/2 | pending | 6 |
-| B | `frikadellen` | Frikadellen | Germany-wide home cooking | drafted + checked | 2/2 | pending | 7 |
-| B | `koenigsberger-klopse` | Königsberger Klopse | East Prussian tradition | drafted + checked | 2/2 | pending | 8 |
-| C | `kartoffelpuffer` | Kartoffelpuffer | Germany-wide / Rhineland names vary | drafted + checked | 2/2 | pending | 6 |
-| C | `kaesespaetzle` | Käsespätzle | Swabia / Allgäu | drafted + checked | 2/2 | pending | 9 |
-| C | `maultaschen` | Maultaschen | Swabia | drafted + checked | 2/2 | pending | 11 |
-| D | `erbsensuppe` | Erbsensuppe | German home and field-kitchen tradition | drafted + checked | 2/2 | pending | 8 |
-| D | `black-forest-cake` | Schwarzwälder Kirschtorte | Black Forest / Baden-Württemberg | drafted + checked | 2/2 | pending | 12 |
-| D | `bienenstich` | Bienenstich | German cake tradition | drafted + checked | 2/2 | pending | 12 |
+| A | `sauerbraten` | Sauerbraten | Rhineland / western German tradition | drafted + checked | 2/2 | reviewed | 9 |
+| A | `rinderrouladen` | Rinderrouladen | Germany-wide home cooking | drafted + checked | 2/2 | reviewed | 8 |
+| A | `bavarian-krustenbraten` | Bayerischer Krustenbraten | Bavaria | drafted + checked | 2/2 | reviewed | 7 |
+| A | `currywurst` | Currywurst | Berlin / German street-food tradition | drafted + checked | 2/2 | reviewed | 6 |
+| B | `nuernberger-rostbratwurst` | Nürnberger Rostbratwürste mit Sauerkraut | Nuremberg / Franconia | drafted + checked | 2/2 | reviewed | 6 |
+| B | `frikadellen` | Frikadellen | Germany-wide home cooking | drafted + checked | 2/2 | reviewed | 7 |
+| B | `koenigsberger-klopse` | Königsberger Klopse | East Prussian tradition | drafted + checked | 2/2 | reviewed | 8 |
+| C | `kartoffelpuffer` | Kartoffelpuffer | Germany-wide / Rhineland names vary | drafted + checked | 2/2 | reviewed | 6 |
+| C | `kaesespaetzle` | Käsespätzle | Swabia / Allgäu | drafted + checked | 2/2 | reviewed | 9 |
+| C | `maultaschen` | Maultaschen | Swabia | drafted + checked | 2/2 | reviewed | 11 |
+| D | `erbsensuppe` | Erbsensuppe | German home and field-kitchen tradition | drafted + checked | 2/2 | reviewed | 8 |
+| D | `black-forest-cake` | Schwarzwälder Kirschtorte | Black Forest / Baden-Württemberg | drafted + checked | 2/2 | reviewed | 12 |
+| D | `bienenstich` | Bienenstich | German cake tradition | drafted + checked | 2/2 | reviewed | 12 |
 
 ## Current phase
 
 All 13 recipes pass `node scripts/audit-german-drafts.mjs --content-only --complete`. Natural method lengths are 9, 8, 7, 6, 6, 7, 8, 6, 9, 11, 8, 12 and 12 steps (109 total). Five-language fields, two-source minimums, exact measurable facts and one precise `imageScene` per natural method step are verified.
 
-Next phase: research and manually review 13 unique commercial-use real finished-dish photographs, then pin source/license evidence and hashes before generating the 109 step illustrations.
+Finished-dish photo research is complete: 13 unique Wikimedia Commons photographs were manually reviewed against each recipe `visualSpec`, then pinned with source page, original file URL, author, commercial-use license evidence and SHA-256 in `docs/research/german-photo-evidence.json`. `node scripts/audit-german-photos.mjs` verifies identity, provenance, hashes, uniqueness and minimum 1200x800 source pixels. The final 13-photo contact sheet was manually inspected under `qa-artifacts/german-review/` and remains uncommitted.
+
+Next phase: generate, record and manually review 109 hand-free non-photorealistic method illustrations, one per natural method step.
