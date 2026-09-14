@@ -1,0 +1,368 @@
+{
+  "generator": "OpenAI image_gen",
+  "mode": "built-in",
+  "generatedAt": "2026-09-15",
+  "styleReference": "assets/recipes/illustrations-generated/bibimbap/step-01.png",
+  "entries": [
+    {
+      "recipeId": "tacos-al-pastor",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 9,
+      "reviewed": true,
+      "sceneHash": "16a62d86d8c3c6a1afc9fa4fdffd727248964046140a69126103bb43bb58e63e",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 9 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Tacos al Pastor.\nCell 1: Softened deep-red guajillo chiles draining in a small bowl.\nCell 2: A smooth brick-red achiote and guajillo adobo in a blender jar.\nCell 3: Thin pork steaks evenly coated in red adobo in a shallow dish.\nCell 4: Golden pineapple slices with dark char marks in a heavy skillet.\nCell 5: Adobo-coated pork slices browning with caramelised edges in a hot skillet.\nCell 6: Rested browned pork being chopped into small juicy taco pieces on a board.\nCell 7: Small caramelised pineapple pieces gathered beside the chopped pork.\nCell 8: A small stack of warm corn tortillas on a comal, lightly spotted and pliable.\nCell 9: Finished tacos arranged with chopped pork, pineapple, onion, cilantro and lime wedges.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/mexican/tacos-al-pastor.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_S3C2CUBlIGhiB_07ziCtmwAskEIN4kl_.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "cochinita-pibil",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 10,
+      "reviewed": true,
+      "sceneHash": "e227004e442476a5236ef84750301b938fb018290b8a2f7fea11adccee72f675",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 10 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Cochinita Pibil.\nCell 1: Smooth vivid red-orange achiote citrus marinade in a blender jar.\nCell 2: Large pork chunks coated evenly in bright achiote marinade in a bowl.\nCell 3: Thin red onion and habanero slices turning glossy pink in lime juice.\nCell 4: Glossy softened banana leaves laid flat and flexible beside a roasting dish.\nCell 5: Deep roasting dish lined crosswise with overlapping glossy banana leaves.\nCell 6: Achiote-coated pork enclosed inside folded banana leaves in a roasting dish.\nCell 7: Opened banana-leaf parcel revealing tender brick-red pork and orange-red juices.\nCell 8: Covered banana-leaf parcel resting in the roasting dish with juices settled.\nCell 9: Coarsely shredded red-orange pork being folded through glossy roasting juices.\nCell 10: Finished cochinita pibil on banana leaf topped with vivid pink pickled onions.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/mexican/cochinita-pibil.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_ymRC5pOOa3pkC-NbW9-1iZujVjLUQVst.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "mole-poblano",
+      "columns": 3,
+      "rows": 5,
+      "usedPanels": 15,
+      "reviewed": true,
+      "sceneHash": "1da57840b1c6d4c06c9423ef11edcb0607754b934d2c70054193a2ad7622d809",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 5 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 15 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Mole Poblano.\nCell 1: Poached chicken pieces lifted from pale golden stock into a shallow tray.\nCell 2: Three varieties of dried red-brown chiles lightly toasted on a dry comal.\nCell 3: Rehydrated dark red chiles softened in a bowl of hot water.\nCell 4: Pale-golden toasted sesame seeds spread across a dry skillet.\nCell 5: Lightly browned almonds, peanuts and pumpkin seeds glistening in a skillet.\nCell 6: Plump glossy raisins just swollen in the warm skillet.\nCell 7: Softened tomatoes, onion and garlic with scattered dark char spots on a comal.\nCell 8: Golden crisp tortilla pieces and bread slices resting together on a plate.\nCell 9: Cinnamon, cloves and black peppercorns lightly toasted in a small dry skillet.\nCell 10: Two bowls of smooth reddish-brown mole puree beside a blender after the second batch has been blended.\nCell 11: Thick mole puree frying in a wide pot, darkening and leaving a trail behind the spoon.\nCell 12: Mexican chocolate melting into a loosened glossy dark mole sauce while a whisk leaves smooth trails.\nCell 13: Finished mole simmering slowly with a deep brown glossy surface and gentle bubbles.\nCell 14: Poached chicken pieces submerged and coated in thick dark mole sauce.\nCell 15: Finished chicken mole poblano on a warm plate with a restrained sesame garnish.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/mexican/mole-poblano.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_F9bln84ndnZEr1HOn14RhDL73QIxJvHv.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          205,
+          410,
+          614,
+          819,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "pozole-rojo",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 11,
+      "reviewed": true,
+      "sceneHash": "29387bad9cd981eea5c4182cf55d0668ef8221d6c7bc9afbd44780f404941190",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 11 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Pozole Rojo.\nCell 1: Large pot with pork chunks, onion and garlic just beginning to simmer in clear water.\nCell 2: Clearer pork broth gently simmering after grey foam has been skimmed away.\nCell 3: Guajillo and ancho chiles lightly toasted on a dry comal, still red rather than black.\nCell 4: Softened guajillo and ancho chiles submerged in hot water in a bowl.\nCell 5: Smooth vivid red chile puree in a blender, thick but pourable.\nCell 6: Red chile sauce being pressed through a fine sieve into the pale pork broth.\nCell 7: Plump white hominy floating among pork pieces in the newly red broth.\nCell 8: Red pozole gently simmering with tender pork and swollen white hominy.\nCell 9: Finished pozole with a generous red broth surrounding pork and hominy.\nCell 10: Small bowls of shredded cabbage, radish slices, onion, oregano and lime arranged together.\nCell 11: Steaming bowl of red pozole topped with cabbage, radish, onion and oregano, lime alongside.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/mexican/pozole-rojo.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_--okSiHm2y8brFeU-KjNJbtpzh_STnjK.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "birria-de-res",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 12,
+      "reviewed": true,
+      "sceneHash": "881bf7c0354c049e8bd9674606f53cd487936286519c05897474cb8a5ca1e9c5",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 12 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Birria de Res.\nCell 1: Large beef chunks evenly seasoned with salt in a shallow roasting dish.\nCell 2: Guajillo and ancho chiles lightly toasted on a dry comal.\nCell 3: Softened dark-red chiles in a bowl after soaking.\nCell 4: Tomatoes, onion and garlic softened with scattered char marks.\nCell 5: Whole cumin, cloves and peppercorns freshly toasted in a small skillet.\nCell 6: Smooth brick-red birria adobo in a blender jar.\nCell 7: Beef chunks completely coated in red adobo in a covered roasting pot.\nCell 8: Marinated beef and red liquid just beginning to simmer in a heavy covered pot.\nCell 9: Covered braising pot with beef submerged in deep red chile broth.\nCell 10: Fork-tender beef in a concentrated glossy red consommé.\nCell 11: Rested beef pulled into coarse juicy chunks beside the braising pot.\nCell 12: Finished birria in a bowl with beef in red consommé, onion, cilantro and lime alongside.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/mexican/birria-de-res.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_sDMdaanFUZ7x-YdJ869Q1-uGwmLxTNAK.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "enchiladas-verdes",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 9,
+      "reviewed": true,
+      "sceneHash": "badeeebec80b36aa8d2aa6d8e14f7a3d05022a94494641367cafe7bc0c2ee3ae",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 9 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Enchiladas Verdes.\nCell 1: Tomatillos, serranos and garlic gently simmering until pale green.\nCell 2: Bright green tomatillo salsa in a blender jar.\nCell 3: Cooked salsa verde bubbling gently and coating the back of a spoon.\nCell 4: Moist shredded chicken lightly coated with green salsa in a bowl.\nCell 5: A corn tortilla being quickly softened in a shallow layer of oil.\nCell 6: Neatly rolled chicken-filled corn tortillas arranged seam-side down.\nCell 7: Vivid green salsa steaming gently in a small saucepan.\nCell 8: Rolled enchiladas completely bathed in glossy green tomatillo salsa.\nCell 9: Finished green enchiladas with white crema, crumbled queso fresco and thin onion slices.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/mexican/enchiladas-verdes.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_-9IB5dZG_XgicoR1lwcXZwBJBxDSJloD.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "carnitas",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 10,
+      "reviewed": true,
+      "sceneHash": "54d095677e47acc35730224e289d6d5f4b75729b6425aab4bb7f9c774469431c",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 10 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Carnitas.\nCell 1: Pale aromatic onion-garlic spice puree in a blender.\nCell 2: Clear melted lard shimmering across the base of a heavy pot.\nCell 3: Large pork chunks lightly browned on several sides in a heavy pot.\nCell 4: Pork chunks surrounded by pale citrus-aromatic braising liquid and bay leaves.\nCell 5: Pork gently simmering uncovered as the cooking liquid slowly reduces.\nCell 6: Tender pork with the watery braising liquid nearly gone and clear rendered fat visible.\nCell 7: Tender pork pieces frying in clear rendered fat with crisp bronze edges forming.\nCell 8: Crisp-edged carnitas draining briefly on a rack or slotted tray.\nCell 9: Carnitas broken into chunky bite-size pieces showing crisp edges and juicy interiors.\nCell 10: Warm corn tortillas beside a platter of chunky crisp-edged carnitas.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/mexican/carnitas.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_FsX3NB8MQ2h0p03RiVBy-UKt5SFIXghm.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "chiles-rellenos",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 12,
+      "reviewed": true,
+      "sceneHash": "c6956fb15d264a5db0e87b33e353b3f899a8fa421dfa19ed218b4667ca54e2ee",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 12 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Chiles Rellenos.\nCell 1: Whole poblano chiles with evenly blistered blackened skins on a tray.\nCell 2: Charred poblanos resting in a covered bowl with condensation.\nCell 3: Peeled green poblanos slit neatly down one side with seeds removed.\nCell 4: Smooth red tomato salsa simmering and thickening in a saucepan.\nCell 5: Peeled poblanos generously filled with shredded white melting cheese.\nCell 6: Cheese-filled poblanos with a very light even flour coating on a plate.\nCell 7: Glossy whipped egg whites holding firm peaks in a mixing bowl.\nCell 8: Yellow egg yolk ribbons being gently folded into airy white foam.\nCell 9: Deep frying oil at temperature in a wide pan with a thermometer at 175°C.\nCell 10: One battered poblano frying golden in bubbling oil, other pieces spaced apart.\nCell 11: Golden chiles rellenos draining on a wire rack, batter still airy.\nCell 12: Finished golden chile relleno resting over red tomato salsa with melted cheese inside.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/mexican/chiles-rellenos.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_D7BmJkvYgdS7OIVJ0ubUy2CbS5124ET2.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "pescado-a-la-veracruzana",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 9,
+      "reviewed": true,
+      "sceneHash": "af9cf8d18c5b877dfe23b9ca532d8adfd0ca49165532bcd1fe1814ccfa6dbcb7",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 9 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Pescado a la Veracruzana.\nCell 1: White fish fillets lightly seasoned with pepper and lime on a tray.\nCell 2: Translucent sliced onion softening in olive oil in a wide skillet.\nCell 3: Chopped tomatoes softening into the onions and garlic in a wide skillet.\nCell 4: Chunky red Veracruz tomato sauce studded with green olives and capers.\nCell 5: White fish fillets nestled in chunky red tomato-olive sauce.\nCell 6: Covered skillet gently poaching fish in Veracruz sauce with only small bubbles.\nCell 7: Fish resting motionless in the tomato sauce after the heat is turned off.\nCell 8: Fresh green parsley scattered over white fish and red olive-studded sauce.\nCell 9: Finished Veracruz-style fish plated with abundant chunky tomato, olive and caper sauce.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/mexican/pescado-a-la-veracruzana.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_NaI3a5lAcU_HAb69k5jTJxXcmjRhFoyW.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "sopa-de-tortilla",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "sceneHash": "287d6693229caa27cffbddae78a0e73cb48e4e5587a1946b652fdf80e018e9b5",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 8 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Sopa de Tortilla.\nCell 1: Guajillo chiles lightly toasted on a dry comal, still deep red.\nCell 2: Tomatoes, garlic and red chiles gently simmering together in a small pot.\nCell 3: Smooth red tomato-guajillo puree in a blender.\nCell 4: Red tomato-chile puree frying until darker and thick in a pot.\nCell 5: Brick-red tortilla soup broth simmering clear and aromatic in a pot.\nCell 6: Thin corn tortilla strips frying golden and crisp in hot oil.\nCell 7: Very thin dried-chile rings briefly sizzling in oil, still red-brown not black.\nCell 8: Finished tortilla soup with crisp strips, avocado, queso fresco, crema and a few fried chile rings.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/mexican/sopa-de-tortilla.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_bnjlEXI_kSrRi7FuLVM9DL3KaLCZuxYh.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "tamales-de-pollo-en-salsa-verde",
+      "columns": 3,
+      "rows": 5,
+      "usedPanels": 15,
+      "reviewed": true,
+      "sceneHash": "083d775060bf55123bebe2de1b420144b5b645b4fb985d4fbe71ce53b91856b6",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 5 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 15 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Tamales de Pollo en Salsa Verde.\nCell 1: Dried corn husks submerged under hot water and weighted down in a wide bowl.\nCell 2: Chicken thighs gently simmering with onion and garlic in clear broth.\nCell 3: Moist shredded chicken beside a bowl of strained golden chicken broth.\nCell 4: Tomatillos, serranos and garlic softly simmering until pale green.\nCell 5: Bright green tomatillo salsa blended smooth in a jar.\nCell 6: Green salsa simmering and slightly thickening in a small saucepan.\nCell 7: Shredded chicken coated generously in thick green salsa.\nCell 8: Pale fluffy whipped lard in a mixing bowl.\nCell 9: Corn masa forming as dry masa harina and warm broth are beaten into fluffy lard.\nCell 10: Finished fluffy masa holding a soft ridge on a spatula.\nCell 11: Soft masa spread in a neat thin rectangle on the broad end of a corn husk.\nCell 12: Green-salsa chicken filling placed as a narrow strip down the centre of masa.\nCell 13: A neatly folded corn-husk tamal with the narrow end tucked upward.\nCell 14: Tamales standing upright closely together in a husk-lined steamer.\nCell 15: Steamed tamales resting upright in the opened steamer, one husk peeling cleanly from set masa.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/mexican/tamales-de-pollo-en-salsa-verde.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_sQY3yeflQJ9FlNLhWYMxv_2wTIvCI0rN.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          205,
+          410,
+          614,
+          819,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "huevos-rancheros",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "sceneHash": "a8860175f6b61822c73d5646a446367c3385afc76651665930169e80a646e7e6",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Huevos Rancheros.\nCell 1: Tomatoes, serrano, onion and garlic with scattered char marks on a comal.\nCell 2: Rustic red ranchera salsa with fine visible tomato texture in a blender.\nCell 3: Rustic ranchera salsa gently bubbling in a small saucepan.\nCell 4: Corn tortillas lightly fried with faint golden spots and flexible centres.\nCell 5: Sunny-side fried eggs with fully set whites and soft glossy yolks in a skillet.\nCell 6: Two fried eggs on corn tortillas being covered with warm red ranchera salsa.\nCell 7: Finished huevos rancheros with salsa-covered eggs on tortillas and refried beans alongside.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/mexican/huevos-rancheros.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_EWLVaJZQg7K68uavh97RHz_gIcuH1sRM.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "chilaquiles-verdes",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "sceneHash": "5ef4d3955ee6a55a3a8e221aac92ff1ea6e989539d5799b1e727315cdbcaa65c",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 8 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Chilaquiles Verdes.\nCell 1: Corn tortillas cut into neat triangles and drying in a single layer.\nCell 2: Pale-golden corn tortilla triangles frying crisp in hot oil.\nCell 3: Tomatillos, serranos, onion and garlic roasted with browned blistered spots.\nCell 4: Bright roasted tomatillo salsa blended smooth in a jar.\nCell 5: Green tomatillo salsa gently bubbling and reducing in a wide skillet.\nCell 6: Crisp tortilla triangles being briefly folded through vivid green salsa, edges just softening.\nCell 7: Green chilaquiles topped with white crema, queso fresco, onion rings and cilantro.\nCell 8: Finished chilaquiles ready to eat, showing both sauced tender edges and some crisp centres.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/mexican/chilaquiles-verdes.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_bzJmDYvHANQaK4c9nsQ1PYcLO8UmgHaT.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    }
+  ]
+}

@@ -20,6 +20,7 @@
     "manifest:german-illustrations": "node scripts/generate-german-illustration-sets.mjs",
     "manifest:greek-illustrations": "node scripts/generate-greek-illustration-sets.mjs",
     "manifest:american-illustrations": "node scripts/generate-american-illustration-sets.mjs",
+    "manifest:mexican-illustrations": "node scripts/generate-mexican-illustration-sets.mjs",
     "build": "node scripts/build.mjs",
     "preview": "node scripts/serve-preview.mjs",
     "audit": "node scripts/audit.mjs",
@@ -36,8 +37,9 @@
     "audit:german-drafts": "node scripts/audit-german-drafts.mjs --complete",
     "audit:greek-drafts": "node scripts/audit-greek-drafts.mjs --complete",
     "audit:american-drafts": "node scripts/audit-american-drafts.mjs --complete",
+    "audit:mexican-drafts": "node scripts/audit-mexican-drafts.mjs --complete",
     "qa:visual": "node scripts/qa-visual.mjs",
-    "test": "npm run audit:japanese-drafts && npm run audit:korean-drafts && npm run audit:thai-drafts && npm run audit:taiwanese-drafts && npm run audit:indian-drafts && npm run audit:vietnamese-drafts && npm run audit:french-drafts && npm run audit:italian-drafts && npm run audit:spanish-drafts && npm run audit:british-drafts && npm run audit:german-drafts && npm run audit:greek-drafts && npm run audit:american-drafts && npm run build && npm run audit",
+    "test": "npm run audit:japanese-drafts && npm run audit:korean-drafts && npm run audit:thai-drafts && npm run audit:taiwanese-drafts && npm run audit:indian-drafts && npm run audit:vietnamese-drafts && npm run audit:french-drafts && npm run audit:italian-drafts && npm run audit:spanish-drafts && npm run audit:british-drafts && npm run audit:german-drafts && npm run audit:greek-drafts && npm run audit:american-drafts && npm run audit:mexican-drafts && npm run build && npm run audit",
     "deploy": "npm run test && wrangler pages deploy dist --project-name recipenestvault --branch main"
   },
   "devDependencies": {

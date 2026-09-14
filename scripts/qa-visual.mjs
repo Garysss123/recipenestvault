@@ -1036,6 +1036,99 @@ await inspect({
   }
 });
 
+const mexicanRecipeIds = [
+  "tacos-al-pastor", "cochinita-pibil", "mole-poblano", "pozole-rojo", "birria-de-res",
+  "enchiladas-verdes", "carnitas", "chiles-rellenos", "pescado-a-la-veracruzana", "sopa-de-tortilla",
+  "tamales-de-pollo-en-salsa-verde", "huevos-rancheros", "chilaquiles-verdes"
+];
+async function assertMexicanCollection(page, locale) {
+  const links = await page.locator(".collection-recipe-card > a").evaluateAll((items) => items.map((item) => item.getAttribute("href")).sort());
+  const expected = mexicanRecipeIds.map((id) => `/${locale}/recipes/${id}/`).sort();
+  if (JSON.stringify(links) !== JSON.stringify(expected)) throw new Error(`Mexican ${locale} collection does not contain the expected 13 unique recipe routes`);
+  if (await page.locator(".collection-recipe-card").count() !== 13) throw new Error("Mexican collection must show 13 cards");
+  const broken = await page.locator(".collection-recipe-card img").evaluateAll((images) => images.filter((image) => !image.complete || !image.naturalWidth).length);
+  if (broken) throw new Error(`${broken} Mexican card photographs failed to load`);
+  if (!(await page.locator("body").evaluate((element) => element.classList.contains("cuisine-mexican")))) throw new Error("Mexican collection is missing its cuisine theme class");
+}
+async function assertMexicanRecipe(page, expectedSteps, locale, id) {
+  await assertIllustratedRecipe(page, expectedSteps, { traditionalChinese: locale === "zh-hant" });
+  const steps = page.locator(".method-section ol > li");
+  if (await steps.count() !== expectedSteps) throw new Error(`Mexican ${id} method count differs from its ${expectedSteps} illustrations`);
+  for (const entry of await steps.all()) if (await entry.locator(".recipe-step-illustration").count() !== 1) throw new Error(`Mexican ${id} needs exactly one illustration in each step`);
+  const images = await page.locator(".recipe-step-illustration img").evaluateAll((entries) => entries.map((entry) => entry.getAttribute("src")));
+  if (new Set(images).size !== expectedSteps) throw new Error(`Mexican ${id} reuses a step image`);
+  if (await page.locator(`.breadcrumbs a[href="/${locale}/cuisines/mexican/"]`).count() !== 1) throw new Error(`Mexican ${id} breadcrumb does not return to Mexican cuisine`);
+  const expectedRelatedTitle = ({
+    en: "More Mexican recipes",
+    "zh-hant": "更多墨西哥料理",
+    ja: "ほかのメキシコ料理",
+    ko: "다른 멕시코 요리",
+    th: "สูตรอาหารเม็กซิกันเพิ่มเติม"
+  })[locale];
+  if (await page.locator("#related-title").innerText() !== expectedRelatedTitle) throw new Error(`Mexican ${id} related-recipes title is not cuisine-specific`);
+  const relatedLinks = await page.locator(".related-recipes .collection-recipe-card > a").evaluateAll((items) => items.map((item) => item.getAttribute("href")));
+  if (relatedLinks.length !== 3 || relatedLinks.some((href) => !href?.startsWith(`/${locale}/recipes/`))) throw new Error(`Mexican ${id} related-recipes links are invalid`);
+  for (const target of ["en", "zh-hant", "ja", "ko", "th"]) {
+    if (await page.locator(`.language-popover a[href="/${target}/recipes/${id}/"]`).count() !== 1) throw new Error(`Mexican ${id} is missing its ${target} language route`);
+  }
+}
+await inspect({
+  name: "en-search-mexican-desktop", path: "/en/search/?q=tacos%20al%20pastor", viewport: { width: 1280, height: 900 },
+  interact: async (page) => {
+    const result = page.locator('.result-card[href="/en/recipes/tacos-al-pastor/"]');
+    await result.waitFor({ state: "visible" });
+    if (!/Mexican recipe/i.test(await result.innerText())) throw new Error("Mexican search result lacks its cuisine label");
+  }
+});
+for (const [locale, label, viewport] of [
+  ["en", "desktop", { width: 1440, height: 1000 }],
+  ["zh-hant", "mobile", { width: 390, height: 844 }],
+  ["ja", "desktop", { width: 1366, height: 900 }],
+  ["ko", "mobile", { width: 390, height: 844 }],
+  ["th", "mobile", { width: 390, height: 844 }]
+]) {
+  await inspect({
+    name: `${locale}-mexican-collection-${label}`, path: `/${locale}/cuisines/mexican/`, viewport,
+    interact: async (page) => {
+      await assertMexicanCollection(page, locale);
+      const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+      if (response?.status() !== 200) throw new Error(`Mexican ${locale} direct refresh failed`);
+    },
+    extraScreenshots: locale === "en" || locale === "zh-hant" ? [
+      { name: `${locale}-mexican-collection-hero-${label}`, selector: ".cuisine-hero" },
+      { name: `${locale}-mexican-first-card-${label}`, selector: ".collection-recipe-card:first-child" }
+    ] : []
+  });
+}
+for (const [locale, id, count, label] of [
+  ["zh-hant", "tacos-al-pastor", 9, "mobile"],
+  ["en", "mole-poblano", 15, "desktop"],
+  ["ja", "tamales-de-pollo-en-salsa-verde", 15, "desktop"],
+  ["ko", "huevos-rancheros", 7, "mobile"],
+  ["th", "chilaquiles-verdes", 8, "mobile"]
+]) {
+  await inspect({
+    name: `${locale}-mexican-${id}-${label}`, path: `/${locale}/recipes/${id}/`,
+    viewport: label === "mobile" ? { width: 390, height: 844 } : { width: 1366, height: 900 },
+    interact: async (page) => assertMexicanRecipe(page, count, locale, id),
+    extraScreenshots: [
+      { name: `${locale}-mexican-${id}-hero-${label}`, selector: ".recipe-detail-hero" },
+      { name: `${locale}-mexican-${id}-first-step-${label}`, selector: ".method-section li:first-child" }
+    ]
+  });
+}
+await inspect({
+  name: "mexican-language-choice-mobile", path: "/en/recipes/chilaquiles-verdes/", viewport: { width: 390, height: 844 },
+  fullPage: false, suppressLanguagePrompt: false, loadLazyImages: false,
+  interact: async (page) => {
+    await page.locator('[data-language-choice="zh-hant"]').click();
+    await page.waitForLoadState("networkidle");
+    if (new URL(page.url()).pathname !== "/zh-hant/recipes/chilaquiles-verdes/") throw new Error("Mexican language selection lost the recipe route");
+    const response = await page.reload({ waitUntil: "networkidle" });
+    if (response?.status() !== 200 || await page.locator("[data-language-prompt]").isVisible()) throw new Error("Mexican language preference or deep refresh failed");
+  }
+});
+
 await inspect({
   name: "zh-chinese-collection-mobile", path: "/zh-hant/cuisines/chinese/", viewport: { width: 390, height: 844 },
   interact: async (page) => {

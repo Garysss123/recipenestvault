@@ -16,7 +16,7 @@ const illustrationSourceDirectory = join(root, "assets", "recipes", "illustratio
 const recipeOutput = join(output, "recipes");
 const processOutput = join(recipeOutput, "process");
 const illustrationOutput = join(recipeOutput, "illustrations");
-await rm(recipeOutput, { recursive: true, force: true });
+await rm(recipeOutput, { recursive: true, force: true, maxRetries: 8, retryDelay: 250 });
 await mkdir(recipeOutput, { recursive: true });
 await mkdir(processOutput, { recursive: true });
 await mkdir(illustrationOutput, { recursive: true });

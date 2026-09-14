@@ -502,4 +502,42 @@ const american = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german, greek, american };
+const mexican = {
+  en: {
+    eyebrow: "Curated Mexican cooking",
+    title: "Mexican recipes from tacos, braises and chile-rich soups to tamales, enchiladas and breakfasts",
+    intro: "Cook tacos al pastor, cochinita pibil, mole poblano, pozole rojo and birria, then move through enchiladas verdes, carnitas, chiles rellenos, pescado a la Veracruzana and tortilla soup before finishing with chicken tamales in green salsa, huevos rancheros and chilaquiles verdes. Each recipe keeps the natural number of stages the dish actually needs, with precise quantities, heat, timing, texture and doneness cues.",
+    recipeEyebrow: "Mexican recipe",
+    backToCollection: "Back to Mexican recipes"
+  },
+  "zh-hant": {
+    eyebrow: "精選墨西哥料理",
+    title: "從塔可、慢燉與辣椒湯品到玉米粽、恩琪拉達與早餐的墨西哥食譜",
+    intro: "從 Tacos al Pastor、Cochinita Pibil、Mole Poblano、Pozole Rojo、Birria，到 Enchiladas Verdes、Carnitas、Chiles Rellenos、Pescado a la Veracruzana 與 Tortilla Soup，最後以綠莎莎雞肉 Tamales、Huevos Rancheros 和 Chilaquiles Verdes 收尾。每道都保留料理真正需要的自然步驟數，並清楚標示份量、火力、時間、口感與熟度線索。",
+    recipeEyebrow: "墨西哥料理食譜",
+    backToCollection: "返回墨西哥料理食譜"
+  },
+  ja: {
+    eyebrow: "厳選したメキシコ料理",
+    title: "タコスや煮込み、チレのスープからタマレス、エンチラーダ、朝食まで作るメキシコ料理",
+    intro: "タコス・アル・パストール、コチニータ・ピビル、モレ・ポブラーノ、ポソレ・ロホ、ビリアから、エンチラーダス・ベルデス、カルニタス、チレ・レジェノス、ペスカード・ア・ラ・ベラクルサーナ、トルティーヤスープ、緑のサルサの鶏肉タマレス、ウエボス・ランチェロス、チラキレス・ベルデスまで作ります。分量、火加減、時間、食感、火の通りを具体的に示し、それぞれの料理に本当に必要な自然な工程数を保っています。",
+    recipeEyebrow: "メキシコ料理レシピ",
+    backToCollection: "メキシコ料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "엄선한 멕시코 요리",
+    title: "타코와 브레이즈, 고추 수프부터 타말, 엔칠라다와 아침 요리까지 만드는 멕시코 요리",
+    intro: "타코스 알 파스토르, 코치니타 피빌, 몰레 포블라노, 포솔레 로호, 비리아부터 엔칠라다스 베르데스, 카르니타스, 칠레스 레예노스, 페스카도 아 라 베라크루사나, 토르티야 수프, 살사 베르데 닭고기 타말, 우에보스 란체로스, 칠라킬레스 베르데스까지 만듭니다. 정확한 분량, 불 세기, 시간, 식감과 익힘 기준을 제시하면서 각 음식에 실제로 필요한 자연스러운 조리 단계 수를 유지했습니다.",
+    recipeEyebrow: "멕시코 요리 레시피",
+    backToCollection: "멕시코 요리 레시피로 돌아가기"
+  },
+  th: {
+    eyebrow: "อาหารเม็กซิกันที่คัดสรร",
+    title: "สูตรอาหารเม็กซิกันตั้งแต่ทาโก้ เมนูตุ๋น และซุปพริก ไปจนถึงทามาเลส เอนชิลาดา และอาหารเช้า",
+    intro: "ทำตั้งแต่ทาโก้อัลปาสเตอร์ โกชินิตาปิบิล โมเลโปบลาโน โปโซเลโรโฮ และบีร์เรีย ต่อด้วยเอนชิลาดัสเวร์เดส การ์นิตัส ชิเลสเรเยโนส เปสกาโดอาลาเบรากรูซานา และซุปตอร์ติญา แล้วปิดท้ายด้วยทามาเลสไก่ซัลซาเขียว อูเอโวสรันเชโรส และชิลากิเลสเวร์เดส ทุกสูตรคงจำนวนขั้นตอนตามธรรมชาติที่อาหารนั้นต้องใช้จริง พร้อมระบุปริมาณ ระดับไฟ เวลา เนื้อสัมผัส และจุดสุกอย่างชัดเจน",
+    recipeEyebrow: "สูตรอาหารเม็กซิกัน",
+    backToCollection: "กลับไปสูตรอาหารเม็กซิกัน"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german, greek, american, mexican };
