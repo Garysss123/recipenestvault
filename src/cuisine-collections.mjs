@@ -464,4 +464,42 @@ const greek = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german, greek };
+const american = {
+  en: {
+    eyebrow: "Curated American cooking",
+    title: "American recipes from griddled classics and Southern comfort food to Louisiana pots and iconic bakes",
+    intro: "Cook cheeseburgers, Buffalo wings, Southern fried chicken, Memphis dry-rub ribs, baked mac and cheese, New England clam chowder and Philly cheesesteaks, then move through chicken-and-sausage gumbo, jambalaya, biscuits and gravy, meatloaf and skillet cornbread before finishing with New York cheesecake, apple pie and chocolate chip cookies. Each recipe keeps the natural number of stages the dish actually needs, with precise quantities, heat, timing, texture and doneness cues.",
+    recipeEyebrow: "American recipe",
+    backToCollection: "Back to American recipes"
+  },
+  "zh-hant": {
+    eyebrow: "精選美國料理",
+    title: "從鐵板經典、南方舒適料理到路易斯安那燉鍋與代表性烘焙的美國食譜",
+    intro: "從經典起司漢堡、水牛城辣雞翅、南方炸雞、孟菲斯乾擦肋排、焗烤通心粉起司、新英格蘭蛤蜊濃湯與費城起司牛肉三明治，到雞肉香腸 Gumbo、Jambalaya、比司吉香腸白醬、肉餅與鑄鐵鍋玉米麵包，最後以紐約乳酪蛋糕、蘋果派和巧克力豆餅乾收尾。每道都保留料理真正需要的自然步驟數，並清楚標示份量、火力、時間、口感與熟度線索。",
+    recipeEyebrow: "美國料理食譜",
+    backToCollection: "返回美國料理食譜"
+  },
+  ja: {
+    eyebrow: "厳選したアメリカ料理",
+    title: "グリドル料理や南部の定番からルイジアナの鍋料理、代表的な焼き菓子まで作るアメリカ料理",
+    intro: "チーズバーガー、バッファローウィング、サザン・フライドチキン、メンフィス風ドライリブ、ベイクド・マカロニ＆チーズ、ニューイングランド・クラムチャウダー、フィリー・チーズステーキから、チキン＆ソーセージ・ガンボ、ジャンバラヤ、ビスケット＆グレービー、ミートローフ、スキレット・コーンブレッド、ニューヨーク・チーズケーキ、アップルパイ、チョコレートチップクッキーまで作ります。分量、火加減、時間、食感、火の通りを具体的に示し、それぞれの料理に本当に必要な自然な工程数を保っています。",
+    recipeEyebrow: "アメリカ料理レシピ",
+    backToCollection: "アメリカ料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "엄선한 미국 요리",
+    title: "철판 클래식과 남부 컴포트 푸드부터 루이지애나 냄비 요리와 대표 베이킹까지 만드는 미국 요리",
+    intro: "치즈버거, 버펄로 윙, 서던 프라이드치킨, 멤피스 드라이럽 립, 베이크드 맥앤치즈, 뉴잉글랜드 클램 차우더, 필리 치즈스테이크부터 치킨 소시지 검보, 잠발라야, 비스킷 앤 그레이비, 미트로프, 스킬렛 콘브레드, 뉴욕 치즈케이크, 애플파이, 초콜릿 칩 쿠키까지 만듭니다. 정확한 분량, 불 세기, 시간, 식감과 익힘 기준을 제시하면서 각 음식에 실제로 필요한 자연스러운 조리 단계 수를 유지했습니다.",
+    recipeEyebrow: "미국 요리 레시피",
+    backToCollection: "미국 요리 레시피로 돌아가기"
+  },
+  th: {
+    eyebrow: "อาหารอเมริกันที่คัดสรร",
+    title: "สูตรอาหารอเมริกันตั้งแต่เมนูกระทะย่างและอาหารสบายใจแบบใต้ ไปจนถึงหม้อสไตล์ลุยเซียนาและขนมอบคลาสสิก",
+    intro: "ทำตั้งแต่ชีสเบอร์เกอร์ บัฟฟาโลวิงส์ ไก่ทอดใต้ ซี่โครงดรายรับแบบเมมฟิส มักกะโรนีชีสอบ ซุปหอยนิวอิงแลนด์ และฟิลลีชีสสเต๊ก ต่อด้วยกัมโบไก่ไส้กรอก จัมบาลายา บิสกิตกับเกรวี มีตโลฟ คอร์นเบรดกระทะเหล็ก แล้วปิดท้ายด้วยนิวยอร์กชีสเค้ก พายแอปเปิล และคุกกี้ช็อกโกแลตชิป ทุกสูตรคงจำนวนขั้นตอนตามธรรมชาติที่อาหารนั้นต้องใช้จริง พร้อมระบุปริมาณ ระดับไฟ เวลา เนื้อสัมผัส และจุดสุกอย่างชัดเจน",
+    recipeEyebrow: "สูตรอาหารอเมริกัน",
+    backToCollection: "กลับไปสูตรอาหารอเมริกัน"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german, greek, american };

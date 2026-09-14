@@ -1,0 +1,148 @@
+import { ml, ingredient as i, step as s, makeAmericanRecipe as r, cookedStorage, roomTempBakedStorage } from './american-recipe-helpers.mjs';
+
+export const americanRecipesC = [
+  r({
+    id: 'jambalaya', profile: 'stew',
+    region: ml('Louisiana', '美國路易斯安那州', 'ルイジアナ州', '루이지애나주', 'รัฐลุยเซียนา'),
+    name: ml('Jambalaya', '什錦香料燉飯', 'ジャンバラヤ', '잠발라야', 'จัมบาลายา'),
+    prepMinutes: 30, cookMinutes: 55, totalMinutes: 85, servings: 8,
+    description: ml('A Louisiana one-pot rice dish layered with browned andouille, chicken, aromatic vegetables, tomato, spices and shrimp added only at the end so it stays tender.', '路易斯安那一鍋燉飯，以煎香 andouille、雞肉、香味蔬菜、番茄與香料堆疊味道，蝦最後才下鍋以保持柔嫩。', 'アンドゥイユ、鶏肉、香味野菜、トマト、スパイスを重ね、最後にえびを加えるルイジアナの炊き込み料理です。', '안두이, 닭고기, 향채, 토마토, 향신료를 한 냄비에 쌓아 맛을 내고 새우는 끝에 넣어 부드럽게 익히는 루이지애나식 쌀요리입니다.', 'ข้าวหม้อเดียวแบบลุยเซียนา มีอันดูอี ไก่ ผักหอม มะเขือเทศ เครื่องเทศ และใส่กุ้งช่วงท้ายเพื่อให้นุ่ม'),
+    ingredients: [
+      i('400 g', 'andouille sausage, sliced', 'andouille 香腸，切片', 'アンドゥイユ、輪切り', '안두이 소시지, 썰기', 'ไส้กรอกอันดูอี หั่น'),
+      i('700 g', 'boneless chicken thighs, bite-size pieces', '去骨雞腿肉，切塊', '鶏もも肉、ひと口大', '닭다리살, 한입 크기', 'สะโพกไก่ไร้กระดูก หั่นพอดีคำ'),
+      i('30 ml', 'neutral oil', '中性油', '中性油', '중성유', 'น้ำมันรสกลาง'),
+      i('220 g', 'yellow onion, diced', '黃洋蔥，切丁', '黄玉ねぎ、角切り', '노란 양파, 깍둑썰기', 'หอมใหญ่ หั่นเต๋า'),
+      i('170 g', 'green bell pepper, diced', '青甜椒，切丁', '青ピーマン、角切り', '청피망, 깍둑썰기', 'พริกหวานเขียว หั่นเต๋า'),
+      i('140 g', 'celery, diced', '西洋芹，切丁', 'セロリ、角切り', '셀러리, 깍둑썰기', 'ขึ้นฉ่าย หั่นเต๋า'),
+      i('18 g', 'garlic, minced', '大蒜，切末', 'にんにく、みじん切り', '마늘, 다지기', 'กระเทียม สับ'),
+      i('400 g', 'crushed tomatoes', '碎番茄', 'クラッシュトマト', '으깬 토마토', 'มะเขือเทศบด'),
+      i('500 g', 'long-grain white rice', '長米白米', '長粒米', '장립종 쌀', 'ข้าวขาวเมล็ดยาว'),
+      i('1.1 L', 'unsalted chicken stock', '無鹽雞高湯', '無塩チキンストック', '무염 닭육수', 'น้ำสต๊อกไก่ไม่เค็ม'),
+      i('2', 'bay leaves', '月桂葉', 'ローリエ', '월계수잎', 'ใบกระวาน'),
+      i('4 g', 'dried thyme', '乾燥百里香', '乾燥タイム', '건타임', 'ไทม์แห้ง'),
+      i('4 g', 'smoked paprika', '煙燻紅椒粉', 'スモークパプリカ', '훈제 파프리카', 'ปาปริการมควัน'),
+      i('2 g', 'cayenne pepper', '卡宴辣椒粉', 'カイエンペッパー', '카옌페퍼', 'พริกคาเยนน์'),
+      i('500 g', 'large raw shrimp, peeled and deveined', '大型生蝦，去殼去腸泥', '大えび、殻と背わたを除く', '큰 생새우, 손질', 'กุ้งสดตัวใหญ่ แกะเปลือกผ่าหลัง'),
+      i('25 g', 'scallions, sliced', '青蔥，切片', '青ねぎ、小口切り', '쪽파, 썰기', 'ต้นหอม ซอย'),
+      i('15 g', 'flat-leaf parsley, chopped', '平葉巴西里，切碎', 'イタリアンパセリ、刻む', '이탈리안 파슬리, 다지기', 'พาร์สลีย์ใบแบน สับ')
+    ],
+    instructions: [
+      s(ml('Brown the sausage', '煎香香腸', 'ソーセージを焼く', '소시지 굽기', 'ย่างไส้กรอก'), ml('Heat the oil in a wide heavy pot over medium-high heat and brown the andouille for 4–5 minutes. Lift it out, leaving the seasoned fat behind.', '寬厚鍋以中大火加熱油，andouille 煎 4–5 分鐘至焦香後取出，留下鍋中香味油脂。', '油を中強火で熱し、アンドゥイユを4〜5分焼いて取り出し、脂は鍋に残す。', '중강불에 기름을 두르고 안두이를 4–5분 갈색 내어 건지고 기름은 남깁니다.', 'อุ่นน้ำมันไฟกลางแรง ย่างอันดูอี 4–5 นาทีจนเกรียม ตักออกและเก็บไขมันไว้'), 'Browned andouille rounds with caramelized cut faces beside the seasoned pot.'),
+      s(ml('Brown the chicken', '煎香雞肉', '鶏肉を焼く', '닭고기 굽기', 'ย่างไก่'), ml('Add the chicken in one layer and cook for 5–7 minutes, turning as needed, until browned outside but not yet fully cooked; remove it with the sausage.', '雞肉單層下鍋煎 5–7 分鐘，視需要翻面，外層上色但中心尚未全熟時取出與香腸放一起。', '鶏肉を重ならないように入れ、5〜7分焼いて表面を色づけ、まだ中まで火を通さず取り出す。', '닭고기를 한 겹으로 넣어 5–7분 돌려가며 겉을 갈색 내고 속은 덜 익은 상태로 꺼냅니다.', 'ใส่ไก่ชั้นเดียว ย่าง 5–7 นาทีจนด้านนอกเกรียมแต่ข้างในยังไม่สุกหมด แล้วตักออก'), 'Chicken thigh pieces with browned edges and still-moist centres, removed from the pot.'),
+      s(ml('Soften the aromatic vegetables', '炒軟香味蔬菜', '香味野菜を炒める', '향채 볶기', 'ผัดผักหอม'), ml('Add onion, bell pepper and celery and cook over medium heat for 6–8 minutes until softened, scraping up the browned fond.', '加入洋蔥、青甜椒與西洋芹，中火炒 6–8 分鐘至柔軟，同時刮起鍋底焦香。', '玉ねぎ、ピーマン、セロリを6〜8分炒め、鍋底の焼き付きをこそげ取る。', '양파, 피망, 셀러리를 중불에서 6–8분 부드럽게 볶으며 바닥의 갈색 맛을 긁어냅니다.', 'ผัดหอม พริกหวาน และขึ้นฉ่ายไฟกลาง 6–8 นาทีจนนุ่ม พร้อมขูดคราบเกรียมก้นหม้อ'), 'Soft diced onion, green pepper and celery mixed with browned fond in the pot.'),
+      s(ml('Add garlic, tomato and spices', '加入大蒜番茄與香料', 'にんにく、トマト、香辛料を加える', '마늘 토마토 향신료 넣기', 'ใส่กระเทียม มะเขือเทศ และเครื่องเทศ'), ml('Stir in garlic, tomatoes, thyme, smoked paprika and cayenne and cook for 2 minutes until the tomato darkens slightly.', '拌入大蒜、番茄、百里香、煙燻紅椒與卡宴，炒 2 分鐘至番茄略微轉深。', 'にんにく、トマト、タイム、パプリカ、カイエンを加え2分炒める。', '마늘, 토마토, 타임, 훈제 파프리카, 카옌을 넣고 2분 볶아 토마토 색을 약간 진하게 합니다.', 'ใส่กระเทียม มะเขือเทศ ไทม์ ปาปริการมควัน และคาเยนน์ ผัด 2 นาทีจนมะเขือเทศเข้มขึ้นเล็กน้อย'), 'Aromatic vegetables coated in red tomato and spices, beginning to darken in the pot.'),
+      s(ml('Toast the rice', '拌炒米粒', '米を炒める', '쌀 볶기', 'คั่วข้าว'), ml('Add the rice and stir for 2 minutes so each grain is coated with the seasoned tomato mixture.', '加入白米翻炒 2 分鐘，讓每粒米都裹上調味番茄底。', '米を加え、2分混ぜて一粒ずつ味の付いたトマトをまとわせる。', '쌀을 넣고 2분 저어 각 알이 양념 토마토에 코팅되게 합니다.', 'ใส่ข้าวแล้วคน 2 นาทีให้ทุกเมล็ดเคลือบส่วนผสมมะเขือเทศ'), 'Long-grain rice evenly coated in the red seasoned base before liquid is added.'),
+      s(ml('Add stock, chicken and sausage', '加入高湯雞肉與香腸', 'ストック、鶏肉、ソーセージを加える', '육수 닭고기 소시지 넣기', 'เติมสต๊อก ไก่ และไส้กรอก'), ml('Pour in the stock, return the chicken and sausage, add the bay leaves and bring to a full simmer. Stir once to distribute the rice evenly.', '倒入高湯，放回雞肉與香腸並加入月桂葉，煮至完整小滾；攪拌一次讓米粒均勻分布。', 'ストック、鶏肉、ソーセージ、ローリエを加えて煮立て、米を均一に一度混ぜる。', '육수와 닭고기, 소시지, 월계수잎을 넣어 끓이고 쌀이 고르게 퍼지도록 한 번 저어줍니다.', 'เติมสต๊อก ใส่ไก่ ไส้กรอก และใบกระวาน ต้มให้เดือดอ่อน แล้วคนหนึ่งครั้งให้ข้าวกระจาย'), 'Chicken and sausage distributed evenly through the broth with long-grain rice just beginning to simmer.'),
+      s(ml('Cook the rice covered', '加蓋煮飯', '蓋をして米を炊く', '덮어 밥 익히기', 'ปิดฝาหุงข้าว'), ml('Cover, reduce to low heat and cook for 18–20 minutes without stirring until the rice is nearly tender and most liquid is absorbed.', '加蓋轉小火，不攪拌煮 18–20 分鐘，直到米粒接近熟透且大部分湯汁吸收。', '蓋をして弱火で18〜20分、混ぜずに米がほぼ柔らかく汁を吸うまで炊く。', '덮고 약불에서 젓지 않은 채 18–20분 익혀 쌀이 거의 부드럽고 국물을 대부분 흡수하게 합니다.', 'ปิดฝา ลดไฟอ่อน หุง 18–20 นาทีโดยไม่คนจนข้าวเกือบนุ่มและน้ำส่วนใหญ่ซึมหมด'), 'Covered pot of jambalaya with rice swollen and most cooking liquid absorbed.'),
+      s(ml('Steam the shrimp on top', '在飯上蒸熟蝦子', 'えびを上で蒸す', '새우 얹어 익히기', 'นึ่งกุ้งด้านบน'), ml('Scatter the shrimp over the rice, cover again and cook for 5–6 minutes until the shrimp are opaque and just firm.', '把蝦均勻鋪在飯上，再加蓋煮 5–6 分鐘，至蝦肉不透明且剛好有彈性。', 'えびをご飯の上に散らし、再び蓋をして5〜6分、白く火が通るまで加熱する。', '새우를 밥 위에 펼쳐 덮고 5–6분 익혀 불투명하고 막 탄력 있게 만듭니다.', 'วางกุ้งบนข้าว ปิดฝาอีกครั้ง 5–6 นาทีจนกุ้งทึบและเด้งพอดี'), 'Pink just-cooked shrimp arranged across the top of the finished rice.'),
+      s(ml('Rest the pot', '離火靜置', '蒸らす', '뜸 들이기', 'พักหม้อ'), ml('Turn off the heat and leave the pot covered for 10 minutes so the rice finishes steaming and the moisture evens out.', '關火後保持加蓋靜置 10 分鐘，讓米飯以蒸氣完成並均衡水分。', '火を止め、蓋をしたまま10分蒸らして水分を均一にする。', '불을 끄고 10분 덮어 뜸을 들여 수분을 고르게 합니다.', 'ปิดไฟและพักโดยปิดฝา 10 นาทีให้ข้าวสุกด้วยไอน้ำและความชื้นกระจายตัว'), 'Covered jambalaya pot resting off the heat before the final fluffing.'),
+      s(ml('Fluff and finish', '翻鬆並完成', 'ほぐして仕上げる', '풀어 마무리하기', 'คลุกเบาและแต่งหน้า'), ml('Remove the bay leaves, gently fold the shrimp through the rice and finish with scallions and parsley before serving.', '取出月桂葉，輕輕把蝦拌入飯中，撒青蔥與巴西里後上桌。', 'ローリエを除き、えびをご飯へやさしく混ぜ、青ねぎとパセリを散らす。', '월계수잎을 빼고 새우를 밥에 부드럽게 섞은 뒤 쪽파와 파슬리를 뿌립니다.', 'เอาใบกระวานออก ค่อย ๆ คลุกกุ้งกับข้าว แล้วโรยต้นหอมและพาร์สลีย์'), 'Finished jambalaya with separate seasoned rice grains, chicken, sausage and shrimp, topped with fresh herbs.'),
+    ],
+    storage: cookedStorage,
+    cultureNote: ml('Jambalaya developed in Louisiana as a communal rice dish with Creole and Cajun expressions; tomato is common in Creole versions while many Cajun versions are browner and omit it.', 'Jambalaya 在路易斯安那發展成共享式米飯料理，Creole 與 Cajun 各有流派；Creole 版本常用番茄，許多 Cajun 版本則偏褐色且不加番茄。', 'ジャンバラヤはルイジアナで発展した米料理で、クレオール系にはトマト入りが多く、ケイジャン系には茶色く仕上げるものが多くあります。', '잠발라야는 루이지애나의 공동체 쌀요리로 발전했으며 크리올식은 토마토를 쓰는 경우가 많고 케이준식은 갈색 계열로 만드는 경우가 많습니다.', 'จัมบาลายาพัฒนาในลุยเซียนา มีทั้งสายครีโอลที่มักใส่มะเขือเทศ และสายเคจันที่มักออกสีน้ำตาลและไม่ใส่มะเขือเทศ'),
+    imageAlt: ml('Louisiana jambalaya with chicken, andouille and shrimp', '有雞肉、andouille 與蝦的路易斯安那什錦燉飯', '鶏肉、アンドゥイユ、えびのルイジアナ・ジャンバラヤ', '닭고기, 안두이, 새우가 든 루이지애나 잠발라야', 'จัมบาลายาลุยเซียนากับไก่ อันดูอี และกุ้ง'),
+    visualSpec: 'A wide bowl of Louisiana jambalaya with separate red-brown long-grain rice, browned chicken, sliced andouille and pink shrimp, lightly finished with scallions and parsley.'
+  }),
+
+  r({
+    id: 'biscuits-and-gravy', profile: 'bake',
+    region: ml('American South', '美國南方', 'アメリカ南部', '미국 남부', 'ภาคใต้ของสหรัฐอเมริกา'),
+    name: ml('Biscuits and Sausage Gravy', '美式比司吉配香腸白醬', 'ビスケット＆ソーセージグレービー', '비스킷 앤 소시지 그레이비', 'บิสกิตกับเกรวีไส้กรอก'),
+    prepMinutes: 25, cookMinutes: 30, totalMinutes: 55, servings: 6,
+    description: ml('Tall flaky buttermilk biscuits split open beneath a peppery country gravy made from browned breakfast sausage, flour and milk.', '高聳酥鬆的酪乳比司吉剖開，淋上以早餐香腸、麵粉與牛奶煮成的胡椒鄉村白醬。', '層のあるバターミルクビスケットに、焼いたソーセージと牛乳で作る胡椒の効いたグレービーをかけます。', '결이 살아 있는 버터밀크 비스킷을 갈라 구운 브렉퍼스트 소시지와 우유로 만든 후추 그레이비를 얹습니다.', 'บิสกิตบัตเตอร์มิลค์เป็นชั้น ผ่าครึ่งแล้วราดเกรวีขาวพริกไทยจากไส้กรอก แป้ง และนม'),
+    ingredients: [
+      i('360 g', 'plain flour', '中筋麵粉', '薄力粉', '중력분', 'แป้งอเนกประสงค์'),
+      i('18 g', 'baking powder', '泡打粉', 'ベーキングパウダー', '베이킹파우더', 'ผงฟู'),
+      i('5 g', 'fine salt', '細鹽', '細塩', '고운 소금', 'เกลือละเอียด'),
+      i('115 g', 'cold unsalted butter, cubed', '冰冷無鹽奶油，切丁', '冷たい無塩バター、角切り', '차가운 무염 버터, 깍둑썰기', 'เนยจืดเย็น หั่นเต๋า'),
+      i('300 ml', 'cold buttermilk', '冰冷酪乳', '冷たいバターミルク', '차가운 버터밀크', 'บัตเตอร์มิลค์เย็น'),
+      i('450 g', 'American breakfast sausage', '美式早餐香腸肉', 'アメリカン・ブレックファストソーセージ', '미국식 브렉퍼스트 소시지', 'ไส้กรอกอาหารเช้าอเมริกัน'),
+      i('45 g', 'plain flour for gravy', '白醬用中筋麵粉', 'グレービー用薄力粉', '그레이비용 중력분', 'แป้งสำหรับเกรวี'),
+      i('850 ml', 'whole milk', '全脂牛奶', '全乳', '전지우유', 'นมสด'),
+      i('4 g', 'coarsely ground black pepper', '粗磨黑胡椒', '粗挽き黒こしょう', '굵은 후추', 'พริกไทยดำบดหยาบ')
+    ],
+    instructions: [
+      s(ml('Preheat and chill the biscuit tools', '預熱並保持工具冰冷', '予熱して道具を冷やす', '예열하고 도구 차갑게 하기', 'อุ่นเตาและทำอุปกรณ์ให้เย็น'), ml('Heat the oven to 220°C. Keep the butter and buttermilk refrigerated while you prepare a lined baking sheet.', '烤箱預熱至 220°C；準備烤紙烤盤期間，奶油與酪乳持續冷藏。', 'オーブンを220°Cに予熱し、天板を用意する間もバターとバターミルクを冷やしておく。', '오븐을 220°C로 예열하고 팬을 준비하는 동안 버터와 버터밀크는 차갑게 둡니다.', 'อุ่นเตา 220°C ระหว่างเตรียมถาดให้เก็บเนยและบัตเตอร์มิลค์ไว้เย็น'), 'Cold cubed butter and buttermilk beside a lined baking sheet and bowl of dry ingredients.'),
+      s(ml('Cut butter into the dry ingredients', '把奶油切拌入乾料', 'バターを粉に切り込む', '버터를 가루에 섞기', 'ตัดเนยลงแป้ง'), ml('Whisk the 360 g flour, baking powder and salt, then cut in the cold butter until most pieces are pea-size with a few larger flakes.', '混合 360 g 麵粉、泡打粉與鹽，再切拌冰奶油，直到大多數奶油約豌豆大並保留少數大片。', '粉360 g、ベーキングパウダー、塩を混ぜ、冷たいバターを豆粒大中心に切り込む。', '밀가루 360 g, 베이킹파우더, 소금을 섞고 차가운 버터를 완두콩 크기 위주로 잘라 섞습니다.', 'ผสมแป้ง 360 g ผงฟู เกลือ แล้วตัดเนยเย็นจนส่วนใหญ่ขนาดเมล็ดถั่วและมีแผ่นใหญ่บางส่วน'), 'Flour mixture with distinct pea-size cold butter pieces and a few larger flat flakes.'),
+      s(ml('Add buttermilk and fold the dough', '加入酪乳並摺疊麵團', 'バターミルクを加えて折る', '버터밀크 넣고 접기', 'เติมบัตเตอร์มิลค์และพับแป้ง'), ml('Pour in the buttermilk and mix only until shaggy. Turn out, pat into a rectangle and fold it in thirds 3 times, rotating between folds.', '倒入酪乳，只拌到粗鬆成團；倒出拍成長方形，三折 3 次，每次之間轉向。', 'バターミルクを加えて粗くまとめ、長方形にして三つ折りを3回行う。', '버터밀크를 넣어 거칠게 뭉친 뒤 직사각형으로 펴고 방향을 돌려가며 3번 삼단 접기 합니다.', 'เติมบัตเตอร์มิลค์พอเป็นก้อนหยาบ ตบเป็นสี่เหลี่ยมแล้วพับสามทบ 3 ครั้ง โดยหมุนแป้งแต่ละครั้ง'), 'Shaggy biscuit dough being folded into a layered rectangle with visible cold butter streaks.'),
+      s(ml('Cut and bake the biscuits', '切模並烘烤比司吉', '抜いて焼く', '잘라 굽기', 'ตัดและอบบิสกิต'), ml('Pat the dough 25 mm thick, cut 6 biscuits straight down and place them close together. Bake at 220°C for 14–17 minutes until tall and golden.', '麵團拍成 25 mm 厚，垂直切出 6 個比司吉並彼此靠近排放；以 220°C 烤 14–17 分鐘至高聳金黃。', '生地を25 mm厚にし、まっすぐ6個抜いて並べ、220°Cで14〜17分、膨らんで金色まで焼く。', '반죽을 25 mm 두께로 펴 6개를 수직으로 찍어 가까이 놓고 220°C에서 14–17분 높이 부풀고 금빛이 되게 굽습니다.', 'ตบแป้งหนา 25 mm ตัดลงตรง ๆ 6 ชิ้น วางชิดกัน อบ 220°C 14–17 นาทีจนสูงและสีทอง'), 'Six tall golden buttermilk biscuits with visible flaky side layers on a baking sheet.'),
+      s(ml('Brown the sausage', '煎香香腸肉', 'ソーセージを炒める', '소시지 볶기', 'ผัดไส้กรอก'), ml('While the biscuits bake, crumble the sausage into a wide skillet and cook over medium-high heat for 7–9 minutes until deeply browned.', '比司吉烘烤時，把香腸肉捏碎放寬鍋，中大火炒 7–9 分鐘至深度焦香。', 'ビスケットを焼く間、ソーセージを崩して中強火で7〜9分、しっかり色づける。', '비스킷을 굽는 동안 소시지를 부숴 중강불에서 7–9분 진하게 갈색 내어 볶습니다.', 'ระหว่างอบบิสกิต บี้ไส้กรอกลงกระทะกว้าง ผัดไฟกลางแรง 7–9 นาทีจนเกรียมเข้ม'), 'Crumbled breakfast sausage browned deeply in a skillet with rendered fat visible.'),
+      s(ml('Cook flour into the sausage fat', '把麵粉炒入香腸油脂', '粉を脂に炒める', '소시지 기름에 밀가루 볶기', 'ผัดแป้งกับไขมันไส้กรอก'), ml('Sprinkle the 45 g flour over the sausage and stir for 2 minutes so the flour absorbs the fat and loses its raw taste.', '把 45 g 麵粉撒在香腸上翻炒 2 分鐘，讓麵粉吸收油脂並去除生味。', 'ソーセージに粉45 gを振り、2分混ぜて脂を吸わせる。', '소시지에 밀가루 45 g을 뿌려 2분 볶아 지방을 흡수하고 날가루 맛을 없앱니다.', 'โรยแป้ง 45 g บนไส้กรอก คน 2 นาทีให้ดูดไขมันและกลิ่นแป้งดิบหาย'), 'Brown sausage crumbles evenly dusted and coated with flour in the skillet.'),
+      s(ml('Build the milk gravy', '煮成牛奶白醬', 'ミルクグレービーを作る', '우유 그레이비 만들기', 'ทำเกรวีนม'), ml('Gradually stir in the milk, scraping the skillet, then simmer for 6–8 minutes until thick enough to coat the sausage. Add black pepper.', '逐步拌入牛奶並刮起鍋底，接著小滾 6–8 分鐘至能包覆香腸的濃度，再加入黑胡椒。', '牛乳を少しずつ加えて鍋底をこそげ、6〜8分煮てとろみを付け、黒こしょうを加える。', '우유를 조금씩 넣어 팬 바닥을 긁고 6–8분 끓여 소시지를 감쌀 농도로 만든 뒤 후추를 넣습니다.', 'ค่อย ๆ เติมนม ขูดก้นกระทะ เคี่ยว 6–8 นาทีจนข้นเคลือบไส้กรอก แล้วใส่พริกไทยดำ'), 'Creamy pepper-flecked white gravy coating browned sausage crumbles in the skillet.'),
+      s(ml('Rest the biscuits briefly', '比司吉短暫放涼', 'ビスケットを少し休ませる', '비스킷 잠깐 식히기', 'พักบิสกิตสั้น ๆ'), ml('Move the baked biscuits to a rack for 5 minutes so the crumb sets while the gravy finishes.', '烤好的比司吉移到網架放 5 分鐘，讓內部組織定型，同時完成白醬。', '焼けたビスケットを網で5分休ませ、内側を落ち着かせる。', '구운 비스킷을 랙에서 5분 두어 속결이 안정되게 합니다.', 'ย้ายบิสกิตอบแล้วไปตะแกรงพัก 5 นาทีให้เนื้อในเซ็ตตัว'), 'Fresh golden biscuits resting on a wire rack, their flaky layers clearly defined.'),
+      s(ml('Split, ladle and serve', '剖開淋醬上桌', '割ってグレービーをかける', '갈라 그레이비 얹기', 'ผ่า ราด และเสิร์ฟ'), ml('Split each warm biscuit, place the halves cut-side up and ladle hot sausage gravy generously over them. Serve immediately.', '溫熱比司吉剖開，切面朝上擺盤，豪邁淋上熱香腸白醬後立刻上桌。', '温かいビスケットを割り、切り口を上にして熱いソーセージグレービーをたっぷりかける。', '따뜻한 비스킷을 갈라 단면을 위로 놓고 뜨거운 소시지 그레이비를 넉넉히 얹어 바로 냅니다.', 'ผ่าบิสกิตอุ่น วางด้านตัดขึ้น ราดเกรวีไส้กรอกร้อนให้ชุ่ม แล้วเสิร์ฟทันที'), 'Split flaky biscuits on a plate under generous creamy sausage gravy with black pepper.'),
+    ],
+    storage: cookedStorage,
+    cultureNote: ml('Biscuits with sausage gravy are a classic breakfast of the American South, pairing inexpensive staple ingredients with a rich pan gravy built from sausage drippings.', '比司吉配香腸白醬是美國南方經典早餐，以平實原料與香腸煎油煮成濃郁鍋汁。', 'ビスケットとソーセージグレービーはアメリカ南部の定番朝食で、身近な材料とソーセージの脂を生かします。', '비스킷과 소시지 그레이비는 미국 남부의 대표적인 아침 음식으로, 소시지에서 나온 지방으로 진한 팬 그레이비를 만듭니다.', 'บิสกิตกับเกรวีไส้กรอกเป็นอาหารเช้าคลาสสิกของภาคใต้สหรัฐ ใช้วัตถุดิบพื้นฐานและไขมันจากไส้กรอกทำซอสเข้มข้น'),
+    imageAlt: ml('Flaky buttermilk biscuits covered in creamy sausage gravy', '酥鬆酪乳比司吉淋香腸白醬', '層のあるビスケットにソーセージグレービー', '결이 살아 있는 비스킷과 소시지 그레이비', 'บิสกิตบัตเตอร์มิลค์เป็นชั้นราดเกรวีไส้กรอก'),
+    visualSpec: 'Two split tall flaky buttermilk biscuits on a breakfast plate, generously covered with creamy pepper-speckled sausage gravy with browned sausage pieces visible.'
+  }),
+
+  r({
+    id: 'meatloaf', profile: 'bake',
+    region: ml('United States home cooking', '美國家常料理', 'アメリカ家庭料理', '미국 가정식', 'อาหารบ้านอเมริกัน'),
+    name: ml('Classic Meatloaf', '經典美式肉餅', 'クラシック・ミートローフ', '클래식 미트로프', 'มีตโลฟคลาสสิก'),
+    prepMinutes: 25, cookMinutes: 70, totalMinutes: 95, servings: 8,
+    description: ml('A tender beef meatloaf held together with a milk-soaked breadcrumb panade, seasoned vegetables and egg, then lacquered with a tangy tomato glaze.', '牛肉以牛奶浸麵包屑、炒香蔬菜與雞蛋維持柔嫩，外層刷上酸甜番茄釉烘烤成經典美式肉餅。', '牛乳で湿らせたパン粉、炒めた野菜、卵で柔らかく仕上げ、甘酸っぱいトマトグレーズを塗って焼くミートローフです。', '우유에 적신 빵가루, 볶은 채소, 달걀로 부드럽게 만들고 새콤달콤한 토마토 글레이즈를 발라 굽는 미트로프입니다.', 'มีตโลฟเนื้อวัวนุ่มด้วยเกล็ดขนมปังแช่นม ผักผัด และไข่ เคลือบซอสมะเขือเทศเปรี้ยวหวาน'),
+    ingredients: [
+      i('1200 g', 'ground beef, about 15% fat', '牛絞肉，脂肪約 15%', '牛挽肉、脂肪約15%', '소고기 다짐육, 지방 약 15%', 'เนื้อวัวบด ไขมันประมาณ 15%'),
+      i('180 g', 'yellow onion, finely diced', '黃洋蔥，細丁', '黄玉ねぎ、みじん切り', '노란 양파, 잘게', 'หอมใหญ่ หั่นละเอียด'),
+      i('120 g', 'celery, finely diced', '西洋芹，細丁', 'セロリ、みじん切り', '셀러리, 잘게', 'ขึ้นฉ่าย หั่นละเอียด'),
+      i('20 g', 'unsalted butter', '無鹽奶油', '無塩バター', '무염 버터', 'เนยจืด'),
+      i('100 g', 'fine breadcrumbs', '細麵包屑', '細かいパン粉', '고운 빵가루', 'เกล็ดขนมปังละเอียด'),
+      i('180 ml', 'whole milk', '全脂牛奶', '全乳', '전지우유', 'นมสด'),
+      i('2', 'large eggs', '大型雞蛋', '大きい卵', '큰 달걀', 'ไข่ไก่ฟองใหญ่'),
+      i('20 ml', 'Worcestershire sauce', '伍斯特醬', 'ウスターソース', '우스터소스', 'ซอสวูสเตอร์'),
+      i('10 g', 'fine salt', '細鹽', '細塩', '고운 소금', 'เกลือละเอียด'),
+      i('3 g', 'black pepper', '黑胡椒', '黒こしょう', '후추', 'พริกไทยดำ'),
+      i('180 g', 'ketchup', '番茄醬', 'ケチャップ', '케첩', 'ซอสมะเขือเทศ'),
+      i('25 g', 'brown sugar', '紅糖', 'ブラウンシュガー', '황설탕', 'น้ำตาลทรายแดง'),
+      i('15 ml', 'apple-cider vinegar', '蘋果醋', 'りんご酢', '사과식초', 'น้ำส้มสายชูแอปเปิล')
+    ],
+    instructions: [
+      s(ml('Soften the vegetables', '炒軟蔬菜', '野菜を炒める', '채소 볶기', 'ผัดผักให้นุ่ม'), ml('Melt the butter over medium heat and cook onion and celery for 6–8 minutes until soft and translucent. Cool for 10 minutes.', '中火融化奶油，洋蔥與西洋芹炒 6–8 分鐘至柔軟透明，再放涼 10 分鐘。', 'バターで玉ねぎとセロリを6〜8分柔らかく炒め、10分冷ます。', '버터에 양파와 셀러리를 6–8분 부드럽게 볶고 10분 식힙니다.', 'ละลายเนยไฟกลาง ผัดหอมกับขึ้นฉ่าย 6–8 นาทีจนนุ่มใส แล้วพักเย็น 10 นาที'), 'Soft translucent onion and celery cooling in a shallow bowl after sautéing.'),
+      s(ml('Make the panade', '製作牛奶麵包糊', 'パナードを作る', '파나드 만들기', 'ทำพานาด'), ml('Mix the breadcrumbs and milk and let them stand for 5 minutes until the crumbs are evenly hydrated.', '麵包屑與牛奶拌勻後靜置 5 分鐘，讓麵包屑均勻吸水。', 'パン粉と牛乳を混ぜ、5分置いて均一に吸わせる。', '빵가루와 우유를 섞어 5분 두어 고르게 흡수시킵니다.', 'ผสมเกล็ดขนมปังกับนม พัก 5 นาทีให้ดูดนมทั่ว'), 'Moist milk-soaked breadcrumbs in a bowl, thick and evenly hydrated.'),
+      s(ml('Mix gently', '輕柔混合肉餡', 'やさしく混ぜる', '부드럽게 섞기', 'ผสมเบา ๆ'), ml('Combine beef, cooled vegetables, panade, eggs, Worcestershire, salt and pepper with your fingertips only until evenly mixed.', '牛肉、放涼蔬菜、麵包糊、雞蛋、伍斯特醬、鹽與胡椒以指尖輕拌，剛好均勻就停止。', '牛肉、野菜、パナード、卵、ウスター、塩、こしょうを練りすぎないよう均一に混ぜる。', '소고기, 식힌 채소, 파나드, 달걀, 우스터, 소금, 후추를 과하게 치대지 않고 고르게 섞습니다.', 'ผสมเนื้อ ผัก พานาด ไข่ วูสเตอร์ เกลือ พริกไทยด้วยปลายนิ้วพอทั่ว อย่านวดมาก'), 'Loosely mixed seasoned meatloaf mixture with visible fine vegetable pieces, not compressed.'),
+      s(ml('Shape the loaf', '塑形成肉餅', 'ローフ形にする', '로프 모양 만들기', 'ขึ้นรูปก้อน'), ml('Shape the mixture on a lined tray into one even free-form loaf about 8 cm high, smoothing cracks without packing it hard.', '肉餡在鋪紙烤盤上塑成約 8 cm 高的均勻長條，修平裂縫但不要用力壓緊。', '天板上で高さ約8 cmのローフ形にし、強く固めず割れ目を整える。', '팬 위에서 약 8 cm 높이의 고른 로프로 만들되 단단히 누르지 않습니다.', 'ขึ้นรูปบนถาดรองกระดาษเป็นก้อนยาวสูงราว 8 cm เกลี่ยรอยแตกแต่ไม่กดแน่น'), 'An even free-form raw meatloaf on a lined tray, smooth but visibly not densely packed.'),
+      s(ml('Mix and brush the glaze', '混合並刷上釉醬', 'グレーズを塗る', '글레이즈 바르기', 'ผสมและทาเคลือบ'), ml('Mix ketchup, brown sugar and vinegar. Brush half over the loaf in an even layer and reserve the rest.', '番茄醬、紅糖與醋拌勻，先均勻刷一半在肉餅表面，其餘保留。', 'ケチャップ、砂糖、酢を混ぜ、半量をローフへ均一に塗る。', '케첩, 황설탕, 식초를 섞어 절반을 고르게 바르고 나머지는 둡니다.', 'ผสมซอสมะเขือเทศ น้ำตาล และน้ำส้ม ทาครึ่งหนึ่งบนก้อนให้ทั่ว เก็บที่เหลือ'), 'Raw shaped meatloaf covered with a smooth glossy red tomato glaze.'),
+      s(ml('Bake and reglaze', '烘烤並再次刷醬', '焼いて再び塗る', '굽고 다시 바르기', 'อบและทาเคลือบอีกครั้ง'), ml('Bake at 175°C for 40 minutes, brush on the remaining glaze, then bake 15–20 minutes more until the centre reaches 71°C.', '以 175°C 烤 40 分鐘，刷上剩餘釉醬，再烤 15–20 分鐘，直到中心達 71°C。', '175°Cで40分焼き、残りのグレーズを塗ってさらに15〜20分、中心71°Cまで焼く。', '175°C에서 40분 굽고 남은 글레이즈를 바른 뒤 15–20분 더 구워 중심이 71°C에 도달하게 합니다.', 'อบที่ 175°C 40 นาที ทาเคลือบที่เหลือ แล้วอบต่อ 15–20 นาทีจนกลางถึง 71°C'), 'Baked meatloaf with a dark glossy red glaze and an instant-read thermometer in the centre.'),
+      s(ml('Rest before slicing', '切片前靜置', '切る前に休ませる', '자르기 전 휴지', 'พักก่อนหั่น'), ml('Rest the meatloaf uncovered for 15 minutes so the juices settle and slices hold together.', '肉餅不覆蓋靜置 15 分鐘，讓肉汁重新分布、切片時能保持完整。', '覆わず15分休ませ、肉汁を落ち着かせて切りやすくする。', '덮지 않고 15분 휴지해 육즙을 안정시키고 잘 잘리게 합니다.', 'พักมีตโลฟแบบไม่ปิด 15 นาทีให้น้ำเนื้อกระจายและหั่นเป็นชิ้นได้สวย'), 'Finished glazed meatloaf resting intact on a board before slicing.'),
+      s(ml('Slice and serve', '切片上桌', '切って供する', '썰어 내기', 'หั่นและเสิร์ฟ'), ml('Cut into thick slices with a sharp knife and serve while warm, spooning any tray juices around the slices.', '以利刀切成厚片，趁溫熱上桌，烤盤肉汁可舀在肉片周圍。', 'よく切れる包丁で厚切りにし、温かいうちに天板の肉汁も添える。', '날카로운 칼로 두껍게 썰어 따뜻할 때 팬의 육즙과 함께 냅니다.', 'ใช้มีดคมหั่นชิ้นหนา เสิร์ฟขณะอุ่นและราดน้ำเนื้อจากถาดรอบชิ้น'), 'Thick clean slices of tender meatloaf showing a moist fine crumb beneath the tomato glaze.'),
+    ],
+    storage: cookedStorage,
+    cultureNote: ml('Meatloaf became a durable American home-cooking staple because ground meat could be stretched with bread, milk and vegetables while still yielding neat family-size portions.', '肉餅成為美國家常經典，原因之一是絞肉可搭配麵包、牛奶與蔬菜增加份量，同時方便切成家庭餐桌的整齊份數。', 'ミートローフは挽肉にパン、牛乳、野菜を合わせて家族分を作りやすいことから、アメリカ家庭料理の定番になりました。', '미트로프는 다진 고기에 빵, 우유, 채소를 더해 가족이 먹을 양을 만들기 쉬워 미국 가정식의 대표 음식이 됐습니다.', 'มีตโลฟเป็นอาหารบ้านอเมริกันที่อยู่มายาวนาน เพราะเนื้อบดผสมขนมปัง นม และผักเพิ่มปริมาณและแบ่งเสิร์ฟครอบครัวได้ง่าย'),
+    imageAlt: ml('Classic glazed American meatloaf cut into thick slices', '切成厚片的經典番茄釉美式肉餅', 'トマトグレーズのクラシック・ミートローフ厚切り', '토마토 글레이즈 클래식 미트로프 두꺼운 조각', 'มีตโลฟอเมริกันเคลือบมะเขือเทศหั่นชิ้นหนา'),
+    visualSpec: 'A classic free-form American meatloaf with a glossy brick-red tomato glaze, partly sliced to show a moist tender beef crumb with fine vegetable flecks.'
+  }),
+
+  r({
+    id: 'skillet-cornbread', profile: 'bake',
+    region: ml('American South', '美國南方', 'アメリカ南部', '미국 남부', 'ภาคใต้ของสหรัฐอเมริกา'),
+    name: ml('Skillet Cornbread', '鑄鐵鍋玉米麵包', 'スキレット・コーンブレッド', '스킬렛 콘브레드', 'คอร์นเบรดกระทะเหล็ก'),
+    prepMinutes: 15, cookMinutes: 25, totalMinutes: 40, servings: 8,
+    description: ml('A savoury Southern-style cornbread baked in a preheated cast-iron skillet for a crisp dark-golden edge and tender corn-scented centre.', '南方風鹹味玉米麵包以預熱鑄鐵鍋烘烤，形成深金黃酥邊與柔嫩玉米香中心。', '予熱した鋳鉄スキレットで焼き、香ばしくカリッとした縁と柔らかな中心に仕上げる南部風コーンブレッドです。', '예열한 무쇠 팬에 구워 진한 금빛 바삭한 가장자리와 부드러운 옥수수 향 속을 만드는 남부식 콘브레드입니다.', 'คอร์นเบรดรสเค็มแบบใต้ อบในกระทะเหล็กร้อนให้ขอบกรอบสีทองเข้มและกลางนุ่มหอมข้าวโพด'),
+    ingredients: [
+      i('220 g', 'yellow cornmeal', '黃玉米粉', 'コーンミール', '노란 콘밀', 'คอร์นมีลสีเหลือง'),
+      i('120 g', 'plain flour', '中筋麵粉', '薄力粉', '중력분', 'แป้งอเนกประสงค์'),
+      i('12 g', 'baking powder', '泡打粉', 'ベーキングパウダー', '베이킹파우더', 'ผงฟู'),
+      i('4 g', 'baking soda', '小蘇打', '重曹', '베이킹소다', 'เบกกิ้งโซดา'),
+      i('6 g', 'fine salt', '細鹽', '細塩', '고운 소금', 'เกลือละเอียด'),
+      i('2', 'large eggs', '大型雞蛋', '大きい卵', '큰 달걀', 'ไข่ไก่ฟองใหญ่'),
+      i('420 ml', 'buttermilk', '酪乳', 'バターミルク', '버터밀크', 'บัตเตอร์มิลค์'),
+      i('55 g', 'unsalted butter, melted', '無鹽奶油，融化', '無塩バター、溶かす', '무염 버터, 녹인 것', 'เนยจืด ละลาย'),
+      i('30 ml', 'neutral oil for the skillet', '鑄鐵鍋用中性油', 'スキレット用中性油', '팬용 중성유', 'น้ำมันรสกลางสำหรับกระทะ')
+    ],
+    instructions: [
+      s(ml('Preheat the skillet', '預熱鑄鐵鍋', 'スキレットを予熱する', '무쇠 팬 예열하기', 'อุ่นกระทะเหล็ก'), ml('Put a 25 cm cast-iron skillet in the oven and heat to 220°C for at least 15 minutes.', '把 25 cm 鑄鐵鍋放入烤箱，以 220°C 至少預熱 15 分鐘。', '25 cmの鋳鉄スキレットをオーブンへ入れ、220°Cで15分以上予熱する。', '25 cm 무쇠 팬을 오븐에 넣고 220°C에서 최소 15분 예열합니다.', 'ใส่กระทะเหล็ก 25 cm ในเตา อุ่นที่ 220°C อย่างน้อย 15 นาที'), 'An empty 25 cm cast-iron skillet heating in a fully preheated oven.'),
+      s(ml('Mix the dry ingredients', '混合乾料', '粉類を混ぜる', '마른 재료 섞기', 'ผสมของแห้ง'), ml('Whisk cornmeal, flour, baking powder, baking soda and salt until evenly combined.', '玉米粉、麵粉、泡打粉、小蘇打與鹽打勻。', 'コーンミール、粉、ベーキングパウダー、重曹、塩を均一に混ぜる。', '콘밀, 밀가루, 베이킹파우더, 베이킹소다, 소금을 고르게 섞습니다.', 'ตีคอร์นมีล แป้ง ผงฟู เบกกิ้งโซดา และเกลือให้ทั่ว'), 'A bowl of evenly mixed pale-yellow cornmeal and flour dry ingredients.'),
+      s(ml('Mix the wet ingredients', '混合濕料', '液体材料を混ぜる', '젖은 재료 섞기', 'ผสมของเปียก'), ml('Whisk the eggs, buttermilk and melted butter together until smooth.', '雞蛋、酪乳與融化奶油打勻至滑順。', '卵、バターミルク、溶かしバターをなめらかに混ぜる。', '달걀, 버터밀크, 녹인 버터를 매끈하게 섞습니다.', 'ตีไข่ บัตเตอร์มิลค์ และเนยละลายให้เนียน'), 'A smooth pale buttermilk, egg and melted-butter mixture in a pouring jug.'),
+      s(ml('Oil the hot skillet', '熱鍋加油', '熱いスキレットに油を入れる', '뜨거운 팬에 기름 두르기', 'ใส่น้ำมันในกระทะร้อน'), ml('Carefully remove the hot skillet, add the oil and swirl to coat the bottom and lower sides; the oil should shimmer immediately.', '小心取出熱鑄鐵鍋，加入油並轉動覆蓋鍋底與下側壁；油應立刻出現光澤。', '熱いスキレットへ油を入れ、底と側面下部へ回し広げる。', '뜨거운 팬을 꺼내 기름을 붓고 바닥과 낮은 옆면에 돌려 코팅합니다.', 'ยกกระทะร้อนออกอย่างระวัง ใส่น้ำมันแล้วกลิ้งเคลือบก้นและขอบล่าง น้ำมันควรเป็นเงาทันที'), 'Hot cast-iron skillet with a thin shimmering film of oil coating the base.'),
+      s(ml('Combine and pour immediately', '混合後立刻入鍋', '合わせてすぐ流す', '섞어 바로 붓기', 'ผสมแล้วเททันที'), ml('Fold the wet mixture into the dry only until no dry pockets remain, then immediately pour the batter into the hot skillet; it should sizzle at the edge.', '濕料拌入乾料，只拌到沒有乾粉即可，立刻倒入熱鑄鐵鍋；邊緣應出現滋滋聲。', '液体を粉へ混ぜ、粉気が消えたらすぐ熱いスキレットへ流す。', '젖은 재료를 마른 재료에 가루가 안 보일 정도만 섞어 뜨거운 팬에 바로 붓습니다.', 'พับของเปียกกับของแห้งพอไม่เห็นแป้งแห้ง แล้วเทลงกระทะร้อนทันที ขอบควรมีเสียงฉ่า'), 'Cornbread batter spreading in the hot oiled skillet with a visibly sizzling edge.'),
+      s(ml('Bake, rest and cut', '烘烤靜置後切片', '焼いて休ませ切る', '굽고 쉬었다 자르기', 'อบ พัก และตัด'), ml('Bake at 220°C for 18–22 minutes until deep golden and a tester comes out clean. Rest in the skillet for 10 minutes before cutting into wedges.', '以 220°C 烤 18–22 分鐘至深金黃且竹籤乾淨；留在鍋中靜置 10 分鐘後切楔形。', '220°Cで18〜22分、濃い金色で竹串がきれいになるまで焼き、スキレットで10分休ませて切る。', '220°C에서 18–22분 진한 금빛이고 꼬치가 깨끗할 때까지 굽고 팬에서 10분 둔 뒤 웨지로 자릅니다.', 'อบ 220°C 18–22 นาทีจนทองเข้มและไม้ทดสอบสะอาด พักในกระทะ 10 นาทีแล้วตัดเป็นชิ้น'), 'Deep-golden skillet cornbread with crisp browned edges, resting before wedge slices are cut.'),
+    ],
+    storage: roomTempBakedStorage,
+    cultureNote: ml('Cornbread has deep roots in Indigenous corn cookery and became a major staple across the American South, where cast-iron skillet versions are prized for their crisp crust.', '玉米麵包可追溯到北美原住民的玉米飲食傳統，之後成為美國南方重要主食；鑄鐵鍋版本尤其重視酥脆外殼。', 'コーンブレッドは先住民のトウモロコシ料理に深い起源を持ち、アメリカ南部の主要な食べ物へ発展しました。', '콘브레드는 북미 원주민의 옥수수 음식 전통에 깊은 뿌리를 두며 미국 남부의 주요 음식이 됐고, 무쇠 팬 버전은 바삭한 껍질이 특징입니다.', 'คอร์นเบรดมีรากลึกจากอาหารข้าวโพดของชนพื้นเมือง และกลายเป็นอาหารหลักในภาคใต้สหรัฐ โดยแบบกระทะเหล็กเด่นที่เปลือกกรอบ'),
+    imageAlt: ml('Golden skillet cornbread with crisp browned edges', '深金黃酥邊的鑄鐵鍋玉米麵包', '香ばしい縁の黄金色スキレット・コーンブレッド', '바삭한 갈색 가장자리의 금빛 스킬렛 콘브레드', 'คอร์นเบรดกระทะเหล็กสีทองขอบกรอบ'),
+    visualSpec: 'A round Southern-style cornbread baked in a black cast-iron skillet, deep golden on top with dark crisp edges and one wedge cut to reveal a tender yellow crumb.'
+  })
+];

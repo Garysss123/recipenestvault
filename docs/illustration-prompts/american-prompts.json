@@ -1,0 +1,418 @@
+{
+  "generator": "OpenAI image_gen",
+  "mode": "built-in",
+  "generatedAt": "2026-09-14",
+  "styleReference": "assets/recipes/illustrations-generated/bibimbap/step-01.png",
+  "entries": [
+    {
+      "recipeId": "cheeseburger",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "sceneHash": "20052b030bb60548640aeb4cf670480e2ba6a932ffb1e73aa17b138fef7733d3",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Classic Cheeseburger.\nCell 1: Neatly arranged sliced tomato, paper-thin onion, pickle rounds and crisp lettuce on a chilled tray.\nCell 2: Four loose craggy portions of seasoned ground beef on a tray, visibly not compressed into dense patties.\nCell 3: Four split burger buns toasted cut-side down on a hot griddle, the cut surfaces evenly golden.\nCell 4: Four beef patties on a very hot flat griddle with deeply browned lacy crusts forming on the first side.\nCell 5: Four flipped beef patties with glossy melting cheese draped over their dark browned crusts.\nCell 6: Four toasted burger buns opened on a board with thin even layers of ketchup and yellow mustard.\nCell 7: A finished classic cheeseburger with a deeply browned beef patty, melted cheese, lettuce, tomato, pickles and thin onion in a soft toasted bun.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/american/cheeseburger.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call__1k8r_K05mE4ae9BW6aaF0wz43W9GoVu.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "buffalo-wings",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "sceneHash": "16b55d408b20575ef57b640a69ce25c2dedf9cc80b551b26a639c376ca1a207d",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 8 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Buffalo Wings.\nCell 1: Dry seasoned chicken wing flats and drumettes spread in one layer on a rack with matte, moisture-free skin.\nCell 2: A chilled bowl of thick off-white blue-cheese dip with visible small blue-veined cheese crumbles.\nCell 3: A small saucepan of smooth glossy orange-red Buffalo butter sauce, uniform with no separated fat.\nCell 4: A deep heavy pot of clear frying oil at cooking temperature beside an empty wire draining rack.\nCell 5: Crisp deep-golden chicken wings frying in hot oil with plenty of open space around each piece.\nCell 6: Deep-golden fried wings resting in a single layer on a wire rack, their blistered skin visibly crisp.\nCell 7: A large bowl of crisp fried wings freshly coated in a shiny orange-red Buffalo sauce.\nCell 8: A platter of glossy orange-red Buffalo wings with crisp celery sticks and a small bowl of chunky blue-cheese dip.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/american/buffalo-wings.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_k7feNAkoz7L8dIBQUYXSKfy9RHVQd5i5.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "southern-fried-chicken",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 10,
+      "reviewed": true,
+      "sceneHash": "26f2c9cd3451f6c901cb479c3032d0633676b7cff56379901277bfa63c242b36",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 10 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Southern Fried Chicken.\nCell 1: Raw bone-in chicken pieces arranged on a tray with a light even salt seasoning and dry surfaces.\nCell 2: Bone-in chicken pieces submerged in a pale buttermilk marinade in a covered nonreactive bowl.\nCell 3: A wide shallow tray of evenly blended pale seasoned flour with fine red and black spice speckles.\nCell 4: Buttermilk-marinated chicken draining on a rack, still lightly coated but with no heavy liquid dripping.\nCell 5: Bone-in chicken pieces heavily dredged in craggy seasoned flour with visible irregular flakes clinging to the surface.\nCell 6: Craggy flour-coated chicken resting on a wire rack, with dampened flour patches beginning to bind into flakes.\nCell 7: A large deep heavy pot of clear frying oil at temperature beside a clean wire draining rack.\nCell 8: Dark-meat chicken pieces frying in deep oil with a rough golden crust, spaced apart in a heavy pot.\nCell 9: Breast and wing pieces frying in clean hot oil, their craggy coating turning evenly deep golden.\nCell 10: A platter of deeply golden Southern fried chicken pieces with a rugged flaky crust, resting uncovered on a wire rack.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/american/southern-fried-chicken.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_6LII3F-f-LO8D9FRP03O4At4hzhO71D3.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "memphis-style-ribs",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 9,
+      "reviewed": true,
+      "sceneHash": "81c81bfa20f0c7eb409f104153a7016e7416a0feb06c4e0394b018708307fdd8",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 9 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Memphis-Style Dry-Rub Ribs.\nCell 1: Two trimmed pork rib racks bone-side up, one showing the membrane partly peeled away cleanly.\nCell 2: A small bowl of brick-red Memphis dry rub with fine even spice texture and no wet ingredients.\nCell 3: Two rib racks evenly coated in a dry reddish spice crust on a rack, resting uncovered before smoking.\nCell 4: A covered barbecue set for indirect low heat with glowing coals and smoking wood on one side and an empty drip pan on the cool side.\nCell 5: Two spice-coated rib racks smoking meat-side up over indirect heat, their surface beginning to darken and dry.\nCell 6: Darkening smoked ribs being lightly glazed with a thin clear vinegar mop, the spice crust still visible and dry-looking.\nCell 7: Fully smoked rib racks with a dark mahogany dry crust, exposed bone tips and a gentle bend without falling apart.\nCell 8: Hot smoked ribs on a board receiving a light final dusting of reddish dry rub over their dark bark.\nCell 9: Sliced Memphis-style ribs on a platter with dark smoky bark and a visible dry spice crust, no glossy sauce coating.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/american/memphis-style-ribs.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_UM-RDMGC26r12SHVF4qOps10NOu_qI5Q.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "baked-mac-and-cheese",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "sceneHash": "801f3b4b2bdbe47bdce33c6cfa696e0988b61c0aa24586273cd2954cee7c95bf",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 8 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Baked Mac and Cheese.\nCell 1: Drained elbow macaroni in a colander, cooked but still firm and separate.\nCell 2: A small bowl of panko evenly moistened with melted butter, loose rather than clumped.\nCell 3: Pale bubbling butter-and-flour roux in a saucepan, smooth and free of brown colour.\nCell 4: A glossy white sauce in a saucepan thick enough to leave a clean trail on a spoon.\nCell 5: Smooth glossy pale-orange cheese sauce with no unmelted shreds visible.\nCell 6: Macaroni evenly coated in creamy cheese sauce inside a buttered baking dish.\nCell 7: Baked macaroni and cheese bubbling around the edges beneath an evenly deep-golden crumb crust.\nCell 8: A serving spoon lifting creamy baked macaroni beneath a crisp browned crumb top.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/american/baked-mac-and-cheese.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_cA08YAr52LnTBjRifXUUTrPBzevD1Yl1.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "new-england-clam-chowder",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 9,
+      "reviewed": true,
+      "sceneHash": "1b1c935fb5d25616624a6287bd4d965a94497c8baab5b17f298bbccdaa74e256",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 9 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: New England Clam Chowder.\nCell 1: Opened steamed clams in shells beside a pot holding clear clam liquor.\nCell 2: A bowl of strained clam liquor and a separate bowl of shelled chopped clam meat.\nCell 3: Crisp browned bacon pieces on a plate with rendered bacon fat left in the pot.\nCell 4: Soft translucent diced onion and celery glistening in bacon fat without browning.\nCell 5: Diced vegetables lightly coated in a pale flour film inside the pot.\nCell 6: Potato cubes gently simmering in a pale clam broth with one bay leaf.\nCell 7: Creamy chowder base with potatoes at a very gentle simmer and no vigorous boiling.\nCell 8: Tender clam pieces and crisp bacon folded through the creamy potato chowder.\nCell 9: A bowl of creamy New England clam chowder with potato cubes, clams, bacon and parsley visible.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/american/new-england-clam-chowder.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_GU3nEmB7ZAoBjfJLITAxBTkO24mjkFVj.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "philly-cheesesteak",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "sceneHash": "e51fbdc5e686d14f7a7f76e210e3def5901de3318685ea67ee1b1045a85fa8a0",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Philly Cheesesteak.\nCell 1: Paper-thin ribbons of chilled rib-eye arranged loosely on a cold tray.\nCell 2: Soft browned onion slices gathered on the cooler edge of a hot griddle.\nCell 3: Four split hoagie rolls warming cut-side down on the griddle, still hinged.\nCell 4: Thin beef slices spread in a single layer on a very hot griddle with browned edges.\nCell 5: Chopped seared beef and browned onions mixed evenly in a loose mound on the griddle.\nCell 6: Four long portions of chopped beef and onion blanketed with fully softened provolone.\nCell 7: A finished Philly cheesesteak in a soft long roll, packed with chopped browned beef, onion and melted provolone.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/american/philly-cheesesteak.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_6Kr_Rqoi7Ld9dRDdh31QdeATyyxZP9Ee.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "chicken-and-sausage-gumbo",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 12,
+      "reviewed": true,
+      "sceneHash": "3b92df14d7cefc5f5c110244b66a51c9427028d3065150c3077f095de35e6366",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 12 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Chicken and Sausage Gumbo.\nCell 1: Bone-in chicken thighs with deeply browned skin in a heavy pot, not yet cooked through.\nCell 2: Sliced andouille sausage with browned cut faces and rendered fat in the pot.\nCell 3: A pale smooth oil-and-flour roux beginning to cook in the bottom of a heavy pot.\nCell 4: A deep chocolate-brown glossy roux in a heavy pot, smooth with no black burnt flecks.\nCell 5: Diced onion, green pepper and celery coated in the dark roux and beginning to soften.\nCell 6: Dark roux vegetables flecked evenly with garlic and red-brown spices.\nCell 7: Smooth mahogany gumbo base in the pot after the stock has been fully whisked into the roux.\nCell 8: Chicken thighs gently simmering in the dark gumbo base with the lid partly covering the pot.\nCell 9: Large moist shreds of cooked chicken beside the pot, with skin and bones removed.\nCell 10: Sliced sausage and okra rounds visible throughout the dark simmering gumbo.\nCell 11: Finished dark gumbo resting off the heat with a light sheen and visible chicken, sausage and okra.\nCell 12: A bowl of dark chicken-and-sausage gumbo surrounding a mound of white rice, finished with scallions and parsley.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/american/chicken-and-sausage-gumbo.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_R53qcbOT5Qk3Ub-Iy5aLZLY9Nbe8ISJL.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "jambalaya",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 10,
+      "reviewed": true,
+      "sceneHash": "d531d224c00ffea67337fa76ed40f9a1a89eb060438c8961386280aee832b874",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 10 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Jambalaya.\nCell 1: Browned andouille rounds with caramelized cut faces beside the seasoned pot.\nCell 2: Chicken thigh pieces with browned edges and still-moist centres, removed from the pot.\nCell 3: Soft diced onion, green pepper and celery mixed with browned fond in the pot.\nCell 4: Aromatic vegetables coated in red tomato and spices, beginning to darken in the pot.\nCell 5: Long-grain rice evenly coated in the red seasoned base before liquid is added.\nCell 6: Chicken and sausage distributed evenly through the broth with long-grain rice just beginning to simmer.\nCell 7: Covered pot of jambalaya with rice swollen and most cooking liquid absorbed.\nCell 8: Pink just-cooked shrimp arranged across the top of the finished rice.\nCell 9: Covered jambalaya pot resting off the heat before the final fluffing.\nCell 10: Finished jambalaya with separate seasoned rice grains, chicken, sausage and shrimp, topped with fresh herbs.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/american/jambalaya.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_W9Yt5T54-2EA0W2hZ5AsStz1bfZVCdLR.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "biscuits-and-gravy",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 9,
+      "reviewed": true,
+      "sceneHash": "8b0a0e0b95acb6ab7dc9dba5e497e45fca888714bf04010b32abf5f7cf968d14",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 9 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Biscuits and Sausage Gravy.\nCell 1: Cold cubed butter and buttermilk beside a lined baking sheet and bowl of dry ingredients.\nCell 2: Flour mixture with distinct pea-size cold butter pieces and a few larger flat flakes.\nCell 3: Shaggy biscuit dough being folded into a layered rectangle with visible cold butter streaks.\nCell 4: Six tall golden buttermilk biscuits with visible flaky side layers on a baking sheet.\nCell 5: Crumbled breakfast sausage browned deeply in a skillet with rendered fat visible.\nCell 6: Brown sausage crumbles evenly dusted and coated with flour in the skillet.\nCell 7: Creamy pepper-flecked white gravy coating browned sausage crumbles in the skillet.\nCell 8: Fresh golden biscuits resting on a wire rack, their flaky layers clearly defined.\nCell 9: Split flaky biscuits on a plate under generous creamy sausage gravy with black pepper.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/american/biscuits-and-gravy.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_UfQaLxX3ZcO6_Ps9yBiatiPz99_InGQp.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "meatloaf",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "reviewed": true,
+      "sceneHash": "2a1a58968a3b08c7e04321d6df109ab38c452a88684a81523d6a436db4c95808",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 8 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Classic Meatloaf.\nCell 1: Soft translucent onion and celery cooling in a shallow bowl after sautéing.\nCell 2: Moist milk-soaked breadcrumbs in a bowl, thick and evenly hydrated.\nCell 3: Loosely mixed seasoned meatloaf mixture with visible fine vegetable pieces, not compressed.\nCell 4: An even free-form raw meatloaf on a lined tray, smooth but visibly not densely packed.\nCell 5: Raw shaped meatloaf covered with a smooth glossy red tomato glaze.\nCell 6: Baked meatloaf with a dark glossy red glaze and an instant-read thermometer in the centre.\nCell 7: Finished glazed meatloaf resting intact on a board before slicing.\nCell 8: Thick clean slices of tender meatloaf showing a moist fine crumb beneath the tomato glaze.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/american/meatloaf.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_oXYkUnNJmtjs3wlA6OfrvQGocb2N35PS.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "skillet-cornbread",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "reviewed": true,
+      "sceneHash": "69749249b30fba84386a56a718e06954314548549fe3a174b18c8f3826d80123",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 2 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 6 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Skillet Cornbread.\nCell 1: An empty 25 cm cast-iron skillet heating in a fully preheated oven.\nCell 2: A bowl of evenly mixed pale-yellow cornmeal and flour dry ingredients.\nCell 3: A smooth pale buttermilk, egg and melted-butter mixture in a pouring jug.\nCell 4: Hot cast-iron skillet with a thin shimmering film of oil coating the base.\nCell 5: Cornbread batter spreading in the hot oiled skillet with a visibly sizzling edge.\nCell 6: Deep-golden skillet cornbread with crisp browned edges, resting before wedge slices are cut.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/american/skillet-cornbread.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_ysEkTfbimhfZDruhjUzUTzfwx-z6k41H.png",
+      "cropGrid": {
+        "width": 1672,
+        "height": 941,
+        "x": [
+          0,
+          557,
+          1115,
+          1672
+        ],
+        "y": [
+          0,
+          471,
+          941
+        ]
+      }
+    },
+    {
+      "recipeId": "new-york-cheesecake",
+      "columns": 3,
+      "rows": 4,
+      "usedPanels": 12,
+      "reviewed": true,
+      "sceneHash": "a3446d90d5e75e2ebfb6523f92ac2e45167b3821a1971daf9ceca60d58daf3dd",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 4 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 12 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: New York Cheesecake.\nCell 1: A 23 cm springform pan lined at the base and tightly wrapped outside in two layers of foil.\nCell 2: Evenly moistened graham crumbs with a damp-sand texture in a mixing bowl.\nCell 3: A lightly golden prebaked graham crust pressed evenly into the springform pan.\nCell 4: Smooth room-temperature cream cheese in a mixer bowl with no visible lumps.\nCell 5: Cream cheese mixture smooth and slightly glossy after sugar and flour are incorporated.\nCell 6: Pale creamy cheesecake batter flecked very finely with lemon zest.\nCell 7: Silky cheesecake batter after the eggs are incorporated, fluid but not foamy.\nCell 8: Filled springform pan with a level glossy cheesecake surface and no large visible bubbles.\nCell 9: Foil-wrapped cheesecake pan sitting in a roasting tray with a shallow hot-water bath.\nCell 10: Baked cheesecake in the water bath with firm pale edges and a gently trembling centre.\nCell 11: Cheesecake cooling in the switched-off oven with the door slightly propped open.\nCell 12: Fully chilled tall cheesecake unmoulded cleanly with a smooth pale top ready for slicing.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/american/new-york-cheesecake.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_2IA2sD7gU50qzLb8ZIJ7nk7Kpz3JIJT3.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "apple-pie",
+      "columns": 3,
+      "rows": 5,
+      "usedPanels": 14,
+      "reviewed": true,
+      "sceneHash": "9d11c1a54351bfd437e368bba3cc895471f2c2fc5bea4202640b09e893232eb9",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 5 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 14 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Apple Pie.\nCell 1: A wide bowl of flour and salt evenly mixed before the butter is added.\nCell 2: Flour with visible irregular cold-butter flakes ranging from pea-size to broad thin pieces.\nCell 3: Rough shaggy pie dough just holding together with visible butter streaks.\nCell 4: Two wrapped disks of pie dough, one slightly larger, resting cold before rolling.\nCell 5: Apple slices evenly coated in sugar, starch and warm brown spices with no dry pockets.\nCell 6: Seasoned apple slices resting in a bowl with a small pool of glossy spiced syrup.\nCell 7: A 23 cm pie plate neatly lined with rolled butter pastry and an even overhang.\nCell 8: A high compact mound of seasoned apples in the bottom crust, dotted with small butter pieces.\nCell 9: A round sheet of rolled pie pastry with several clean steam vents cut in the centre.\nCell 10: Fully assembled double-crust apple pie with an evenly crimped sealed edge and centred vents.\nCell 11: Cold assembled apple pie resting before baking, with firm crimped pastry edges.\nCell 12: Cold double-crust pie with a thin glossy egg wash evenly brushed across the pastry.\nCell 13: Deep-golden apple pie in the oven with thick glossy filling bubbling visibly through the steam vents.\nCell 14: Fully cooled apple pie on a wire rack with a firm golden crust ready to cut cleanly.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/american/apple-pie.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_snD5RDmUxdGh2JNlBT5YZhUuufB4TlYo.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          205,
+          410,
+          614,
+          819,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "chocolate-chip-cookies",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "reviewed": true,
+      "sceneHash": "528ed1bdd385190466aa18bacbb71ec00b1b3c8d4d845372990dd608d5d08edc",
+      "prompt": "Use case: illustration-story. Asset type: Recipe Nest Vault cooking-process source sheet. The attached image is a STYLE REFERENCE ONLY, not a subject reference. Match its warm ivory lightly textured paper, fine ink outlines, restrained gouache shading, natural food colours and overhead three-quarter view. Create a large landscape source sheet with exactly 3 equally sized columns and 3 equally sized rows. All subjects are centered with generous blank paper gutters and stay wholly within their cell. First 7 cells are filled in reading order, unused cells completely blank ivory. Each cell shows the described intermediate cooking state, not a finished meal until the final cell. Static objects at rest: no floating jugs or utensils, no pouring streams. No decorative frames or national motifs. No text, numbers, letters, logos or watermarks. Absolutely no people, faces, hands, fingers, arms, sleeves or body parts. Do not show readable thermometer scales or digits. This is original non-photorealistic recipe illustration. Dish: Chocolate Chip Cookies.\nCell 1: A bowl of evenly whisked cookie dry ingredients with no visible lumps.\nCell 2: Creamy pale-brown butter and sugar mixture with a smooth, softly aerated texture.\nCell 3: Glossy emulsified cookie mixture after the egg, yolk and vanilla are blended in.\nCell 4: Thick cookie dough with abundant dark chocolate pieces evenly distributed and no overmixed sheen.\nCell 5: Covered bowl of firm chilled chocolate-chip cookie dough ready to portion.\nCell 6: Fresh cookies on a baking tray with golden set edges and soft slightly puffed centres.\nCell 7: Golden chocolate chip cookies resting on a rack, with crisp edges and soft centres set enough to hold.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/american/chocolate-chip-cookies.png",
+      "sourceGeneratedPath": "C:/Users/abc12/.codex/generated_images/01a098a4-98fa-7451-82a0-7cf7dd2486de/call_vaBHYftK742jTT9sZhc1AmNIj4NL11Zu.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    }
+  ]
+}
