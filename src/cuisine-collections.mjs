@@ -540,4 +540,42 @@ const mexican = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german, greek, american, mexican };
+const brazilian = {
+  en: {
+    eyebrow: "Curated Brazilian cooking",
+    title: "Brazilian recipes from feijoada and Bahian seafood to churrasco, cassava classics and party sweets",
+    intro: "Cook feijoada, moqueca baiana, bobó de camarão, vatapá, acarajé and picanha churrasco, then move through pão de queijo, coxinha, escondidinho, arroz carreteiro and feijão tropeiro before finishing with brigadeiro and quindim. Each recipe keeps its natural cooking stages with precise quantities, heat, timing, texture and doneness cues.",
+    recipeEyebrow: "Brazilian recipe",
+    backToCollection: "Back to Brazilian recipes"
+  },
+  "zh-hant": {
+    eyebrow: "精選巴西料理",
+    title: "從 Feijoada、巴伊亞海鮮到 Churrasco、木薯經典與節慶甜點的巴西食譜",
+    intro: "從巴西黑豆燉肉 Feijoada、巴伊亞 Moqueca、木薯蝦燉鍋 Bobó de Camarão、Vatapá、Acarajé 與 Picanha 燒烤，到 Pão de Queijo、Coxinha、鹹牛肉木薯泥焗烤、Arroz Carreteiro 與 Feijão Tropeiro，最後以 Brigadeiro 和 Quindim 收尾。每道都依真正料理流程保留自然步驟，清楚標示份量、火力、時間、口感與熟度線索。",
+    recipeEyebrow: "巴西料理食譜",
+    backToCollection: "返回巴西料理食譜"
+  },
+  ja: {
+    eyebrow: "厳選したブラジル料理",
+    title: "フェイジョアーダ、バイーアの魚介、シュラスコ、キャッサバ料理と祝い菓子まで作るブラジル料理",
+    intro: "フェイジョアーダ、モケカ・バイアーナ、ボボ・デ・カマラォン、バタパ、アカラジェ、ピカーニャのシュラスコから、ポン・デ・ケイジョ、コシーニャ、エスコンディジーニョ、アホース・カヘテイロ、フェイジャォン・トロペイロ、ブリガデイロ、キンジンまで作ります。分量、火加減、時間、食感、火の通りを具体的に示し、料理ごとに自然な工程数を保ちます。",
+    recipeEyebrow: "ブラジル料理レシピ",
+    backToCollection: "ブラジル料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "엄선한 브라질 요리",
+    title: "페이조아다와 바이아 해산물부터 슈하스쿠, 카사바 요리와 파티 디저트까지 만드는 브라질 레시피",
+    intro: "페이조아다, 모케카 바이아나, 보보 지 카마랑, 바타파, 아카라제와 피카냐 슈하스쿠부터 팡 지 케이주, 코시냐, 에스콘지지뉴, 아호스 카헤테이루, 페이장 트로페이루, 브리가데이루와 킨딤까지 만듭니다. 정확한 분량, 불 세기, 시간, 식감과 익힘 기준을 제시하고 음식마다 필요한 자연스러운 조리 단계를 유지합니다.",
+    recipeEyebrow: "브라질 요리 레시피",
+    backToCollection: "브라질 요리 레시피로 돌아가기"
+  },
+  th: {
+    eyebrow: "อาหารบราซิลที่คัดสรร",
+    title: "สูตรอาหารบราซิลตั้งแต่เฟโจอาดา อาหารทะเลแบบบาเฮีย ชูฮัสโก มันสำปะหลัง และขนมงานฉลอง",
+    intro: "ทำตั้งแต่เฟโจอาดา โมเกกาแบบบาเฮีย โบโบเดกามาเรา วาตาปา อาคาราเฌ และชูฮัสโกพิกันญา ต่อด้วยปัง เดอ เคย์โจ โคชินญา เอสกงดิจินโญ อาฮอสคาเรเตโร และเฟเจาทรอเปโร แล้วปิดท้ายด้วยบริกาเดโรและคินดิม ทุกสูตรคงขั้นตอนตามธรรมชาติ พร้อมระบุปริมาณ ระดับไฟ เวลา เนื้อสัมผัส และจุดสุกอย่างชัดเจน",
+    recipeEyebrow: "สูตรอาหารบราซิล",
+    backToCollection: "กลับไปสูตรอาหารบราซิล"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german, greek, american, mexican, brazilian };

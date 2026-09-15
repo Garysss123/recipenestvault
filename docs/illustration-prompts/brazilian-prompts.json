@@ -1,0 +1,343 @@
+{
+  "promptSet": "brazilian-cooking-steps-v1",
+  "style": "Recipe Nest Vault established warm-ivory ink-and-gouache cooking illustration: flat hand-drawn 2D objects, fine charcoal contours, restrained translucent colour washes, subtle handmade paper texture, sparse background, no photorealism. No people, no hands, no text, no labels, no logos, no watermark. Produce one clean landscape contact sheet with the specified grid; every panel is a separate useful cooking stage with clear cookware and ingredient state.",
+  "entries": [
+    {
+      "recipeId": "feijoada",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "prompt": "Create a 3x3 landscape cooking-step sheet for feijoada. Panels in order: soaked black beans beside desalted carne seca; bacon, pork, beef and smoked sausage browning in a heavy pot; onion, garlic and bay leaves in rendered fat; beans and meats covered with water and orange wedges; gentle covered simmer with intact black beans; mashed beans stirred back to thicken the dark broth; bright sliced collard greens sautéing; complete plate with feijoada, white rice, collard greens, citrus and farofa. Leave the ninth panel empty as a quiet warm background tile. No text or people.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/brazilian/feijoada.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/brazilian/feijoada.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      },
+      "reviewed": true
+    },
+    {
+      "recipeId": "moqueca-baiana",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "prompt": "Create a 3x3 landscape cooking-step sheet for Bahian moqueca. Panels in order: firm white fish and raw shrimp seasoned with lime and garlic; sliced onion and red-green peppers softening in olive oil; chopped tomatoes becoming a chunky base with coconut milk and red palm oil; fish and shrimp layered with tomato slices and cilantro; covered orange seafood stew simmering without stirring; finished glossy coconut broth with intact fish and pink shrimp; moqueca served with white rice and lime. Leave the last two panels quiet and unoccupied. No text or people.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/brazilian/moqueca-baiana.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/brazilian/moqueca-baiana.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      },
+      "reviewed": true
+    },
+    {
+      "recipeId": "pao-de-queijo",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "prompt": "Create a 3x2 landscape cooking-step sheet for pão de queijo. Panels in order: milk, water, oil and salt at a full boil; hot liquid poured into tapioca starch; elastic cheese dough with eggs and grated aged cheese; smooth dough balls spaced on a tray; round buns puffing and browning with cheese freckles in the oven; warm golden cheese buns with one split to show an airy chewy tapioca centre. No text or people.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/brazilian/pao-de-queijo.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/brazilian/pao-de-queijo.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      },
+      "reviewed": true
+    },
+    {
+      "recipeId": "coxinha",
+      "columns": 4,
+      "rows": 3,
+      "usedPanels": 10,
+      "prompt": "Create a 3x4 landscape cooking-step sheet for Brazilian coxinha. Panels in order: chicken breast and quartered potatoes simmering in broth; shredded chicken, mashed potato and reserved broth; onion, garlic and parsley seasoning the chicken filling; butter, broth, potato and flour forming a hot dough; smooth dough cooling on a tray; dough portions wrapped around cold chicken filling; sealed pointed teardrop coxinhas; even breadcrumb coating; breaded coxinhas frying in clear hot oil; golden teardrop croquettes draining on a wire rack. No text or people or hands.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/brazilian/coxinha.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/brazilian/coxinha.png",
+      "cropGrid": {
+        "width": 1448,
+        "height": 1086,
+        "x": [
+          0,
+          362,
+          724,
+          1086,
+          1448
+        ],
+        "y": [
+          0,
+          362,
+          724,
+          1086
+        ]
+      },
+      "reviewed": true
+    },
+    {
+      "recipeId": "acaraje",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "prompt": "Create a 3x3 landscape cooking-step sheet for Bahian acarajé com camarão. Panels in order: black-eyed peas soaking; pale bean batter with skins removed and aerated; tomato, pepper and onion vinaigrette; smooth peanut-coconut vatapá in a small pot; garlic shrimp sautéing pink; red palm oil with golden fritters frying; drained golden fritters split at the side; open acarajé filled with vatapá, shrimp and bright vinaigrette. Leave the ninth panel quiet. No text or people or hands.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/brazilian/acaraje.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/brazilian/acaraje.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      },
+      "reviewed": true
+    },
+    {
+      "recipeId": "churrasco-picanha",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "prompt": "Create a 3x3 landscape cooking-step sheet for Brazilian picanha churrasco. Panels in order: fat-capped picanha scored and salted beside a hot grill; fat cap rendering over glowing grates; thick beef grilling with browned edges; rested beef under a loose foil tent; butter, onion, scrambled egg and cassava flour becoming farofa; fresh tomato and red onion relish; sliced picanha with the crisp fat edge, egg farofa, relish and white rice. Leave the last two panels quiet. No text or people.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/brazilian/churrasco-picanha.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/brazilian/churrasco-picanha.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      },
+      "reviewed": true
+    },
+    {
+      "recipeId": "bobo-de-camarao",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "prompt": "Create a 3x3 landscape cooking-step sheet for bobó de camarão. Panels in order: raw shrimp with lime; tender cassava chunks with woody fibres removed; onion, bell pepper, tomato and garlic sautéing in red palm oil; smooth cassava-coconut purée in a blender; glossy orange purée simmering; pink shrimp folded into the thick sauce; finished bobó served over white rice with cilantro. Leave the last two panels quiet. No text or people or hands.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/brazilian/bobo-de-camarao.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/brazilian/bobo-de-camarao.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      },
+      "reviewed": true
+    },
+    {
+      "recipeId": "vatapa",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "prompt": "Create a 3x3 landscape cooking-step sheet for Bahian vatapá. Panels in order: salt cod boiling for desalting; dried shrimp, peanuts, cashews, ginger and garlic becoming a coarse paste; white bread soaking in coconut milk; onion and tomato cooking in red palm oil with nut paste; bread paste, cod and stock simmering into a thick sauce; fresh shrimp cooking pink in the vatapá; finished golden vatapá spooned beside white rice. Leave the last two panels quiet. No text or people or hands.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/brazilian/vatapa.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/brazilian/vatapa.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      },
+      "reviewed": true
+    },
+    {
+      "recipeId": "escondidinho-de-carne-seca",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "prompt": "Create a 3x3 landscape cooking-step sheet for Brazilian escondidinho de carne seca. Panels in order: cassava chunks boiling; smooth cassava purée with milk, butter and cream cheese; dried beef shredded and seasoned with onion, pepper and tomato; moist beef filling with herbs; cassava purée and beef layered in a baking dish; cheese-topped casserole browning and bubbling; served portion revealing creamy cassava over savoury dried beef. Leave the last two panels quiet. No text or people or hands.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/brazilian/escondidinho-de-carne-seca.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/brazilian/escondidinho-de-carne-seca.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      },
+      "reviewed": true
+    },
+    {
+      "recipeId": "arroz-carreteiro",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "prompt": "Create a 3x3 landscape cooking-step sheet for gaucho arroz carreteiro. Panels in order: diced dried beef desalting in boiling water; bacon, smoked sausage and dried beef browning in a heavy pot; onion, carrot, garlic and tomato paste cooking; rinsed rice toasted through the meat and vegetables; stock and bay leaves around the rice at a gentle simmer; rested fluffy rice with distinct grains; rustic serving bowl of arroz carreteiro with parsley. Leave the last two panels quiet. No text or people or hands.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/brazilian/arroz-carreteiro.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/brazilian/arroz-carreteiro.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      },
+      "reviewed": true
+    },
+    {
+      "recipeId": "feijao-tropeiro",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "prompt": "Create a 3x3 landscape cooking-step sheet for Minas Gerais feijão tropeiro. Panels in order: bacon and smoked sausage browning; soft scrambled egg curds beside the meat; onion and garlic in the savoury skillet; whole pinto beans folded into the pan; toasted cassava flour coating the beans; sliced collard greens wilting bright green; finished feijão tropeiro in a shallow dish with beans, egg, sausage and greens. Leave the last two panels quiet. No text or people or hands.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/brazilian/feijao-tropeiro.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/brazilian/feijao-tropeiro.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      },
+      "reviewed": true
+    },
+    {
+      "recipeId": "brigadeiro",
+      "columns": 3,
+      "rows": 2,
+      "usedPanels": 6,
+      "prompt": "Create a 3x2 landscape cooking-step sheet for Brazilian brigadeiro. Panels in order: condensed milk, cocoa, butter and salt combined in a skillet; glossy fudge mass leaving a spatula track; firm chilled mixture under parchment; evenly portioned chocolate balls; balls rolled through chocolate sprinkles; finished brigadeiros in small paper cups with a dense fudgy centre. No text or people or hands.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/brazilian/brigadeiro.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/brazilian/brigadeiro.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          512,
+          1024
+        ]
+      },
+      "reviewed": true
+    },
+    {
+      "recipeId": "quindim",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "prompt": "Create a 3x3 landscape cooking-step sheet for Brazilian quindim. Panels in order: small moulds buttered and coated with sugar; coconut soaking in coconut milk; egg yolks and sugar mixed gently without foam; golden coconut custard batter resting; small moulds filled in a deep roasting tray; glossy quindim baking in a water bath; unmoulded golden quindim domes showing a tender coconut base. Leave the last two panels quiet. No text or people or hands.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/brazilian/quindim.png",
+      "sourceGeneratedPath": "D:/vscode/website/recipenestvault/assets/recipes/illustration-sheets-generated/brazilian/quindim.png",
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      },
+      "reviewed": true
+    }
+  ]
+}

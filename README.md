@@ -105,6 +105,14 @@ These are permanent release gates. Recipe count, publishing speed and visual com
 - The reproducible prompt record is `docs/illustration-prompts/vietnamese-cooking-steps-v1.md`. Every illustration set requires `noPeopleOrHands: true` and keeps the existing border-free warm-paper editorial style. Lotus green, soft lotus rose, and sandy rice-paper colours belong to the Vietnamese page UI.
 - The browser suite checks the 21-card collection, Vietnamese search labels, language-preserving navigation, direct-route refresh, representative five-language methods, desktop/mobile layouts and image disclosures. Run the suite locally and on production, and inspect the saved screenshots before handoff.
 
+### Brazilian collection release gate
+
+- The first Brazilian collection contains 13 complete recipes spanning feijoada, Bahian seafood, churrasco, cassava-based dishes, Minas Gerais classics, snacks and celebration sweets.
+- Source data is split across `src/brazilian-recipes-a.mjs` through `src/brazilian-recipes-d.mjs`; the finished-photo manifest is `src/brazilian-photos.mjs`, and step provenance is generated in `src/brazilian-illustration-sets.mjs`.
+- Every Brazilian draft must pass `npm run audit:brazilian-drafts`: five-language content with matching measurable facts, two direct HTTPS recipe sources, a visually reviewed commercial-use real photograph of at least 1200 × 800, attribution, approved illustration provenance and SHA-256 verification.
+- The collection contains 94 natural cooking steps, each with one separate reviewed non-photographic illustration. Methods range from 6 to 10 steps and keep the established warm-ivory ink-and-gouache style; generated illustrations are excluded from recipe structured-data photography.
+- The reproducible prompt record is `docs/illustration-prompts/brazilian-prompts.json`. The final browser gate remains the same local and production-domain desktop/mobile suite described above.
+
 ### Recipe eligibility
 
 - Every public recipe must have a real finished-dish photograph with verifiable permission for commercial use.
