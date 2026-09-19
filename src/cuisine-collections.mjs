@@ -692,4 +692,42 @@ const mediterranean = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german, greek, american, mexican, brazilian, canadian, 'middle-eastern': middleEastern, mediterranean };
+const african = {
+  en: {
+    eyebrow: "Cooking across the African continent",
+    title: "African recipes from West Africa to the Horn and the Cape",
+    intro: "Cook Nigerian jollof rice and egusi soup, Ghanaian kelewele, Senegalese ceebu jën and maafé, Ethiopian doro wat, shiro wat and fermented injera, Kenyan nyama choma, Tanzanian pilau, and South African bobotie, bunny chow and malva pudding. These are distinct regional foodways, not one single cuisine; each recipe names its place and gives measured ingredients, practical technique, substitutions and storage guidance.",
+    recipeEyebrow: "African recipe",
+    backToCollection: "Back to African recipes"
+  },
+  "zh-hant": {
+    eyebrow: "走進非洲各地餐桌",
+    title: "從西非、非洲之角到南端的料理食譜",
+    intro: "從奈及利亞 jollof rice 與 egusi soup、迦納 kelewele、塞內加爾 ceebu jën 與 mafé，到衣索比亞 doro wat、shiro wat 和發酵 injera、肯亞 nyama choma、坦尚尼亞 pilau，以及南非 bobotie、bunny chow 與 malva pudding。非洲料理由眾多不同地域傳統構成，並非單一菜系；每道都標出地區，提供精確份量、實作技巧、替代食材與保存方式。",
+    recipeEyebrow: "非洲料理食譜",
+    backToCollection: "返回非洲料理食譜"
+  },
+  ja: {
+    eyebrow: "アフリカ各地の食卓を巡る",
+    title: "西アフリカからアフリカの角、南端までの料理レシピ",
+    intro: "ナイジェリアのジョロフライスとエグシスープ、ガーナのケレウェレ、セネガルのチェブジェンとマフェ、エチオピアのドロワット、シロワット、発酵インジェラ、ケニアのニャマチョマ、タンザニアのピラウ、南アフリカのボボティ、バニーチャウ、マルバプディングを作ります。アフリカ料理は一つの料理ではなく、多様な地域の食文化です。各レシピで土地を示し、分量、技法、代替材料、保存方法を紹介します。",
+    recipeEyebrow: "アフリカ料理レシピ",
+    backToCollection: "アフリカ料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "아프리카 곳곳의 식탁을 만나다",
+    title: "서아프리카에서 아프리카의 뿔과 남단까지의 레시피",
+    intro: "나이지리아 졸로프 라이스와 에구시 수프, 가나 켈레웰레, 세네갈 체부젠과 마페, 에티오피아 도로 왓·시로 왓·발효 인제라, 케냐 냐마초마, 탄자니아 필라우, 남아프리카 보보티·버니 차우·말바 푸딩을 만들어 보세요. 아프리카 음식은 하나의 요리가 아니라 서로 다른 지역의 전통입니다. 각 레시피에 구체적인 지역, 정확한 분량, 조리법, 대체 재료와 보관법을 담았습니다.",
+    recipeEyebrow: "아프리카 요리 레시피",
+    backToCollection: "아프리카 요리 레시피로 돌아가기"
+  },
+  th: {
+    eyebrow: "สำรวจสำรับอาหารทั่วทวีปแอฟริกา",
+    title: "สูตรอาหารจากแอฟริกาตะวันตก ผ่านจะงอยแอฟริกา สู่ตอนใต้",
+    intro: "ทำข้าวโจลอฟและซุปเอกูซีไนจีเรีย เคเลเวเลกานา เซบูเจินกับมาเฟ่เซเนกัล โดโรวัต ชิโรวัตและอินเจราหมักเอธิโอเปีย เนียมาชอมาเคนยา พิลาวแทนซาเนีย และโบโบตี บันนีชอว์กับมาลวาพุดดิ้งแอฟริกาใต้ อาหารแอฟริกาประกอบด้วยประเพณีท้องถิ่นหลากหลาย ไม่ใช่ครัวเดียวแบบเหมารวม ทุกสูตรระบุพื้นที่ ปริมาณ วิธีปรุง วัตถุดิบทดแทนและการเก็บรักษาอย่างชัดเจน",
+    recipeEyebrow: "สูตรอาหารแอฟริกา",
+    backToCollection: "กลับไปสูตรอาหารแอฟริกา"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german, greek, american, mexican, brazilian, canadian, 'middle-eastern': middleEastern, mediterranean, african };

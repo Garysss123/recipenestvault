@@ -1499,6 +1499,98 @@ await inspect({
   }
 });
 
+const africanRecipeIds = [
+  "nigerian-jollof-rice", "thieboudienne", "nigerian-egusi-soup", "kelewele", "maafe",
+  "doro-wat", "shiro-wat", "injera", "nyama-choma", "tanzanian-pilau", "bobotie", "bunny-chow", "malva-pudding"
+];
+async function assertAfricanCollection(page, locale) {
+  const links = await page.locator(".collection-recipe-card > a").evaluateAll((items) => items.map((item) => item.getAttribute("href")).sort());
+  const expected = africanRecipeIds.map((id) => `/${locale}/recipes/${id}/`).sort();
+  if (JSON.stringify(links) !== JSON.stringify(expected)) throw new Error(`African ${locale} collection does not contain the expected 13 unique recipe routes`);
+  if (await page.locator(".collection-recipe-card").count() !== 13) throw new Error("African collection must show 13 cards");
+  const broken = await page.locator(".collection-recipe-card img").evaluateAll((images) => images.filter((image) => !image.complete || !image.naturalWidth).length);
+  if (broken) throw new Error(`${broken} African card photographs failed to load`);
+  if (!(await page.locator("body").evaluate((element) => element.classList.contains("cuisine-african")))) throw new Error("African collection is missing its cuisine theme class");
+}
+async function assertAfricanRecipe(page, expectedSteps, locale, id) {
+  await assertIllustratedRecipe(page, expectedSteps, { traditionalChinese: locale === "zh-hant" });
+  const steps = page.locator(".method-section ol > li");
+  if (await steps.count() !== expectedSteps) throw new Error(`African ${id} method count differs from its ${expectedSteps} illustrations`);
+  for (const entry of await steps.all()) if (await entry.locator(".recipe-step-illustration").count() !== 1) throw new Error(`African ${id} needs exactly one illustration in each step`);
+  const images = await page.locator(".recipe-step-illustration img").evaluateAll((entries) => entries.map((entry) => entry.getAttribute("src")));
+  if (new Set(images).size !== expectedSteps) throw new Error(`African ${id} reuses a step image`);
+  if (await page.locator(`.breadcrumbs a[href="/${locale}/cuisines/african/"]`).count() !== 1) throw new Error(`African ${id} breadcrumb does not return to its cuisine collection`);
+  const expectedRelatedTitle = ({
+    en: "More African recipes",
+    "zh-hant": "更多非洲料理",
+    ja: "ほかのアフリカ料理",
+    ko: "다른 아프리카 요리",
+    th: "สูตรอาหารแอฟริกาเพิ่มเติม"
+  })[locale];
+  if (await page.locator("#related-title").innerText() !== expectedRelatedTitle) throw new Error(`African ${id} related-recipes title is not cuisine-specific`);
+  const relatedLinks = await page.locator(".related-recipes .collection-recipe-card > a").evaluateAll((items) => items.map((item) => item.getAttribute("href")));
+  if (relatedLinks.length !== 3 || relatedLinks.some((href) => !href?.startsWith(`/${locale}/recipes/`))) throw new Error(`African ${id} related-recipes links are invalid`);
+  for (const target of ["en", "zh-hant", "ja", "ko", "th"]) {
+    if (await page.locator(`.language-popover a[href="/${target}/recipes/${id}/"]`).count() !== 1) throw new Error(`African ${id} is missing its ${target} language route`);
+  }
+}
+await inspect({
+  name: "en-search-african-desktop", path: "/en/search/?q=jollof", viewport: { width: 1280, height: 900 },
+  interact: async (page) => {
+    const result = page.locator('.result-card[href="/en/recipes/nigerian-jollof-rice/"]');
+    await result.waitFor({ state: "visible" });
+    if (!/African recipe/i.test(await result.innerText())) throw new Error("African search result lacks its cuisine label");
+  }
+});
+for (const [locale, label, viewport] of [
+  ["en", "desktop", { width: 1440, height: 1000 }],
+  ["zh-hant", "mobile", { width: 390, height: 844 }],
+  ["ja", "desktop", { width: 1366, height: 900 }],
+  ["ko", "mobile", { width: 390, height: 844 }],
+  ["th", "mobile", { width: 390, height: 844 }]
+]) {
+  await inspect({
+    name: `${locale}-african-collection-${label}`, path: `/${locale}/cuisines/african/`, viewport,
+    interact: async (page) => {
+      await assertAfricanCollection(page, locale);
+      const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+      if (response?.status() !== 200) throw new Error(`African ${locale} direct refresh failed`);
+    },
+    extraScreenshots: locale === "en" || locale === "zh-hant" ? [
+      { name: `${locale}-african-collection-hero-${label}`, selector: ".cuisine-hero" },
+      { name: `${locale}-african-first-card-${label}`, selector: ".collection-recipe-card:first-child" }
+    ] : []
+  });
+}
+for (const [locale, id, count, label] of [
+  ["zh-hant", "nigerian-jollof-rice", 6, "mobile"],
+  ["en", "bobotie", 6, "desktop"],
+  ["ja", "injera", 7, "desktop"],
+  ["ko", "kelewele", 5, "mobile"],
+  ["th", "bunny-chow", 6, "mobile"]
+]) {
+  await inspect({
+    name: `${locale}-african-${id}-${label}`, path: `/${locale}/recipes/${id}/`,
+    viewport: label === "mobile" ? { width: 390, height: 844 } : { width: 1366, height: 900 },
+    interact: async (page) => assertAfricanRecipe(page, count, locale, id),
+    extraScreenshots: [
+      { name: `${locale}-african-${id}-hero-${label}`, selector: ".recipe-detail-hero" },
+      { name: `${locale}-african-${id}-first-step-${label}`, selector: ".method-section li:first-child" }
+    ]
+  });
+}
+await inspect({
+  name: "african-language-choice-mobile", path: "/en/recipes/nigerian-jollof-rice/", viewport: { width: 390, height: 844 },
+  fullPage: false, suppressLanguagePrompt: false, loadLazyImages: false,
+  interact: async (page) => {
+    await page.locator('[data-language-choice="zh-hant"]').click();
+    await page.waitForLoadState("networkidle");
+    if (new URL(page.url()).pathname !== "/zh-hant/recipes/nigerian-jollof-rice/") throw new Error("African language selection lost the recipe route");
+    const response = await page.reload({ waitUntil: "networkidle" });
+    if (response?.status() !== 200 || await page.locator("[data-language-prompt]").isVisible()) throw new Error("African language preference or deep refresh failed");
+  }
+});
+
 await inspect({
   name: "zh-chinese-collection-mobile", path: "/zh-hant/cuisines/chinese/", viewport: { width: 390, height: 844 },
   interact: async (page) => {

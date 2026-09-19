@@ -230,7 +230,7 @@ function renderRecipe(slug, recipe) {
   const sourceRows = recipe.sources.map((source) => `<li><a href="${esc(source.url)}" rel="external">${esc(source.title)}<span aria-hidden="true">↗</span></a></li>`).join("");
   const related = recipes.filter((item) => item.cuisine === recipe.cuisine && item.id !== recipe.id).slice(0, 3).map((item) => recipeCard(item, slug)).join("");
   const relatedRecipesLabel = ({
-    en: `More ${cuisine.names.en.replace(/ cuisine$/i, "")} recipes`,
+    en: `More ${cuisine.names.en.replace(/ cuisines?$/i, "")} recipes`,
     "zh-hant": `更多${cuisine.names["zh-hant"]}`,
     ja: `ほかの${cuisine.names.ja}`,
     ko: `다른 ${cuisine.names.ko}`,
