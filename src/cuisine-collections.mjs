@@ -654,4 +654,42 @@ const middleEastern = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german, greek, american, mexican, brazilian, canadian, 'middle-eastern': middleEastern };
+const mediterranean = {
+  en: {
+    eyebrow: "Cooking around the Mediterranean",
+    title: "Mediterranean recipes from Provence to Malta and the Maghreb",
+    intro: "Travel the Mediterranean basin through Marseille bouillabaisse and Nice pissaladière, Sicilian caponata and sardine pasta, Tunisian brik and lablabi, Moroccan harira and zaalouk, Turkish gözleme and imam bayildi, Cypriot halloumi, Dalmatian black risotto, and Maltese rabbit stew. These distinct regional traditions share ingredients and coastlines, not one single cuisine; every recipe names its place and gives practical quantities, technique, substitutions, and storage.",
+    recipeEyebrow: "Mediterranean recipe",
+    backToCollection: "Back to Mediterranean recipes"
+  },
+  "zh-hant": {
+    eyebrow: "地中海沿岸風味",
+    title: "從普羅旺斯、北非到馬爾他的地中海料理",
+    intro: "沿地中海認識馬賽魚湯與尼斯洋蔥鯷魚塔、西西里 caponata 和沙丁魚義大利麵、突尼西亞 brik 與 lablabi、摩洛哥 harira 和 zaalouk、土耳其 gözleme 與 imam bayildi、賽普勒斯哈魯米、達爾馬提亞黑燉飯，以及馬爾他兔肉燉菜。這些地域傳統共享海岸與食材，卻不是同一種料理；每頁都標出具體地方，並提供用量、技巧、替代食材與保存方式。",
+    recipeEyebrow: "地中海料理食譜",
+    backToCollection: "返回地中海料理食譜"
+  },
+  ja: {
+    eyebrow: "地中海沿岸の味",
+    title: "プロヴァンスからマルタ、マグレブまでの地中海レシピ",
+    intro: "マルセイユのブイヤベースとニースのピサラディエール、シチリアのカポナータとサーディンパスタ、チュニジアのブリックとラブラビ、モロッコのハリラとザアルーク、トルコのギョズレメとイマム・バユルドゥ、キプロスのハルーミ、ダルマチアの黒いリゾット、マルタのウサギ煮込みを巡ります。地域ごとの伝統は海岸や食材を共有しても一つの料理ではありません。各レシピで土地を明示し、分量、技法、代替材料、保存方法を紹介します。",
+    recipeEyebrow: "地中海料理レシピ",
+    backToCollection: "地中海料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "지중해 연안의 맛",
+    title: "프로방스에서 몰타와 마그레브까지, 지중해 레시피",
+    intro: "마르세유 부야베스와 니스 피살라디에르, 시칠리아 카포나타와 정어리 파스타, 튀니지 브리크와 라블라비, 모로코 하리라와 잘루크, 튀르키예 괴즐레메와 이맘 바율드, 키프로스 할루미, 달마티아 블랙 리소토, 몰타 토끼 스튜를 만나 보세요. 각 지역의 전통은 해안과 재료를 공유하지만 하나의 동일한 요리는 아닙니다. 모든 레시피에 구체적인 지역, 분량, 조리법, 대체 재료와 보관법을 담았습니다.",
+    recipeEyebrow: "지중해 요리 레시피",
+    backToCollection: "지중해 요리 레시피로 돌아가기"
+  },
+  th: {
+    eyebrow: "รสชาติรอบชายฝั่งเมดิเตอร์เรเนียน",
+    title: "สูตรอาหารเมดิเตอร์เรเนียนตั้งแต่พรอวองซ์ถึงมอลตาและมาเกร็บ",
+    intro: "เดินทางผ่านบูยาเบสจากมาร์แซย์และพิซซาลาดิแยร์จากนีซ คาโปนาตากับพาสตาปลาซาร์ดีนจากซิซิลี บรีกและลาบลาบีจากตูนิเซีย ฮารีราและซาลูกจากโมร็อกโก เกิซเลเมกับอิมัมบายึลดึจากตุรกี ฮัลลูมีจากไซปรัส ริซอตโตดำดัลเมเชีย และสตูว์กระต่ายมอลตา ประเพณีเหล่านี้แบ่งปันชายฝั่งและวัตถุดิบ แต่ไม่ใช่อาหารแบบเดียวกัน ทุกสูตรระบุภูมิภาคพร้อมปริมาณ เทคนิค วัตถุดิบทดแทนและวิธีเก็บรักษาอย่างชัดเจน",
+    recipeEyebrow: "สูตรอาหารเมดิเตอร์เรเนียน",
+    backToCollection: "กลับไปสูตรอาหารเมดิเตอร์เรเนียน"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german, greek, american, mexican, brazilian, canadian, 'middle-eastern': middleEastern, mediterranean };
