@@ -578,4 +578,42 @@ const brazilian = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german, greek, american, mexican, brazilian };
+const canadian = {
+  en: {
+    eyebrow: "Curated Canadian cooking",
+    title: "Canadian recipes from poutine and Montréal favourites to prairie berries, Newfoundland comfort food and maple treats",
+    intro: "Make Québec poutine and tourtière, Montréal smoked meat and hand-rolled bagels, Toronto peameal bacon, Halifax donair, Newfoundland Jiggs dinner and toutons, prairie Saskatoon berry pie, Nanaimo bars, butter tarts, maple taffy and a documented Métis-style campfire bannock. Each recipe includes precise quantities, practical timing and culturally specific context.",
+    recipeEyebrow: "Canadian recipe",
+    backToCollection: "Back to Canadian recipes"
+  },
+  "zh-hant": {
+    eyebrow: "精選加拿大料理",
+    title: "從肉汁起司薯條、蒙特婁經典到草原莓果、紐芬蘭家常菜與楓糖點心",
+    intro: "在家做魁北克 Poutine 與 Tourtière、蒙特婁煙燻牛肉和手工貝果、多倫多豌豆裹火腿、哈利法克斯 Donair、紐芬蘭 Jiggs Dinner 與 Toutons、草原 Saskatoon 莓果派、納奈莫方塊、奶油塔、雪上楓糖太妃，以及一款有據可查的 Métis 風營火 Bannock。每道食譜都標示精確用量、實用時間與具體文化背景。",
+    recipeEyebrow: "加拿大料理食譜",
+    backToCollection: "返回加拿大料理食譜"
+  },
+  ja: {
+    eyebrow: "厳選したカナダ料理",
+    title: "プーティンやモントリオールの名物から、大平原のベリー、ニューファンドランドの家庭料理、メープル菓子まで",
+    intro: "ケベックのプーティンとトゥルティエール、モントリオールのスモークミートと手成形ベーグル、トロントのピーミールベーコン、ハリファックスのドネア、ニューファンドランドのジッグスディナーとトゥートン、大平原のサスカトゥーンベリーパイ、ナナイモバー、バタータルト、雪上メープルタフィー、記録に基づくメティス風焚き火バノックを作ります。分量、時間、地域文化を丁寧に記します。",
+    recipeEyebrow: "カナダ料理レシピ",
+    backToCollection: "カナダ料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "엄선한 캐나다 요리",
+    title: "푸틴과 몬트리올 명물부터 대평원 베리, 뉴펀들랜드 가정식과 메이플 간식까지",
+    intro: "퀘벡 푸틴과 투르티에르, 몬트리올 스모크 미트와 손으로 빚은 베이글, 토론토 피밀 베이컨, 핼리팩스 도네어, 뉴펀들랜드 지그스 디너와 투턴, 대평원 사스카툰 베리 파이, 너나이모 바, 버터 타르트, 눈 위 메이플 태피, 기록된 메티스식 캠프파이어 바녹을 만듭니다. 정확한 분량과 시간, 지역의 맥락을 담았습니다.",
+    recipeEyebrow: "캐나다 요리 레시피",
+    backToCollection: "캐나다 요리 레시피로 돌아가기"
+  },
+  th: {
+    eyebrow: "อาหารแคนาดาที่คัดสรร",
+    title: "สูตรแคนาดาตั้งแต่พูทีนและอาหารดังมอนทรีออล ไปจนถึงเบอร์รีแพรรี อาหารนิวฟันด์แลนด์ และเมเปิล",
+    intro: "ทำพูทีนและตูร์ตีแยร์จากควิเบก เนื้อรมควันและเบเกิลขึ้นรูปมือแบบมอนทรีออล เบคอนถั่วลันเตาโตรอนโต โดแนร์แฮลิแฟกซ์ จิกส์ดินเนอร์กับทูทันส์นิวฟันด์แลนด์ พายเบอร์รีซัสคาทูนจากแพรรี นานาอิโมบาร์ บัตเตอร์ทาร์ต ทอฟฟี่เมเปิลบนหิมะ และบันน็อกแคมป์ไฟแบบเมติสที่มีแหล่งบันทึก แต่ละสูตรระบุปริมาณ เวลา และบริบทท้องถิ่นอย่างชัดเจน",
+    recipeEyebrow: "สูตรอาหารแคนาดา",
+    backToCollection: "กลับไปสูตรอาหารแคนาดา"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german, greek, american, mexican, brazilian, canadian };

@@ -1,0 +1,345 @@
+{
+  "promptSet": "canadian-cooking-steps-v1",
+  "generatedAt": "2026-09-19",
+  "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+  "entries": [
+    {
+      "recipeId": "poutine",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Québec Poutine. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Pale potato batons soaking in a bowl of cold water, with a clean towel ready.\n2. Pale golden flour and butter roux whisked smooth in a saucepan.\n3. Smooth glossy brown gravy coating a wooden spoon in the saucepan.\n4. Pale blanched fries draining on a rack after the first fry.\n5. Deep golden crisp fries resting on a wire rack.\n6. Fresh white cheese curds in small distinct pieces in a bowl.\n7. Classic poutine with crisp fries, white cheese curds and brown gravy just beginning to soften the cheese.\nLeave the final 2 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/canadian/poutine.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "tourtiere",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Québec Tourtière. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Ground pork and beef simmering with onion and garlic in a shallow layer of stock.\n2. Small potato cubes tender in a thick spiced pork-and-beef filling.\n3. Cooled thick tourtiere filling with visible meat and potato pieces on a tray.\n4. Rolled pastry fitted into a deep pie dish with an even overhanging edge.\n5. Filled tourtiere with the top pastry sealed to the bottom crust.\n6. Golden egg-washed top crust with four small steam slits.\n7. Baked tourtiere with a browned pastry lid and gently bubbling filling.\n8. Tourtiere wedge showing spiced meat and potato filling within flaky pastry.\nLeave the final 1 unused panel completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/canadian/tourtiere.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "montreal-smoked-meat-sandwich",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 6,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Montréal Smoked Meat Sandwich. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. A saucepan with gently simmering water and a steamer insert above the surface.\n2. Tender sliced smoked brisket steaming above water, with peppered edges visible.\n3. Soft rye slices warming beside the steaming basket.\n4. Rye bread with an even thin yellow mustard layer.\n5. A generous high pile of peppered smoked brisket on mustard rye.\n6. Classic smoked meat sandwich cut diagonally with a thick stack of brisket and pickle alongside.\nLeave the final 3 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/canadian/montreal-smoked-meat-sandwich.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "montreal-style-bagels",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 9,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Montréal-Style Sesame Bagels. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Firm smooth bagel dough ball on a lightly floured counter.\n2. Puffy risen bagel dough in a covered bowl.\n3. Ten small thin bagel rings with broad centres resting on a tray.\n4. Rested shaped bagel rings ready for the honey-water bath.\n5. Wide saucepan of gently simmering honey water.\n6. Honey-bathed Montreal bagels lifting from the pot with a slotted spoon.\n7. Sesame-coated bagels arranged on parchment with a clear centre hole.\n8. Baked Montréal bagels with glossy golden sesame crust on a rack.\n9. One Montréal sesame bagel cut open to show a dense chewy crumb.\nUse all nine panels, one stage per panel. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/canadian/montreal-style-bagels.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "butter-tarts",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Ontario Butter Tarts. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Coarse pastry crumbs with visible small cold butter pieces.\n2. A rough pastry disc wrapped and ready to chill.\n3. Twelve pastry shells fitted into a buttered muffin tin with slightly raised rims.\n4. Glossy brown-sugar filling in a jug beside pastry shells dotted with currants.\n5. Tart shells filled two-thirds with amber filling and currants.\n6. Golden butter tarts with bubbling glossy centres just out of the oven.\n7. Individual butter tarts cooling on a wire rack with glossy set centres.\n8. A butter tart broken open to show a soft caramel-like brown-sugar centre and currants.\nLeave the final 1 unused panel completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/canadian/butter-tarts.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "nanaimo-bars",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Nanaimo Bars. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Square pan lined with parchment and a double-boiler setup ready.\n2. Thick glossy cocoa-egg mixture whisked over a gentle bain-marie.\n3. Compact dark graham-coconut base pressed evenly into a square pan.\n4. Pale vanilla custard buttercream whipped smooth in a mixing bowl.\n5. Even pale custard layer spread to the corners over a dark square base.\n6. A thin even bittersweet chocolate layer poured and spread over the custard layer.\n7. Neat layered Nanaimo bars with dark base, pale custard centre and thin chocolate cap.\nLeave the final 2 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/canadian/nanaimo-bars.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "peameal-bacon-sandwich",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 6,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Toronto Peameal Bacon Sandwich. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Split soft kaiser rolls warming cut-side down in a dry skillet.\n2. A thin sheen of oil coating a hot skillet.\n3. Golden cornmeal-crusted peameal bacon slices on a skillet.\n4. Juicy browned peameal slices resting on a warm plate.\n5. Kaiser roll halves with a thin mustard layer and a few tomato slices.\n6. A Toronto-style peameal bacon sandwich on a soft kaiser roll, sliced to show the stacked pork.\nLeave the final 3 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/canadian/peameal-bacon-sandwich.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "halifax-donair",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Halifax Donair. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Smooth white condensed-milk garlic sauce in a small bowl.\n2. Compact spiced ground beef pressed evenly into a small loaf pan.\n3. Baked donair beef loaf resting on a board before slicing.\n4. Thin browned donair beef strips with lightly crisp edges in a skillet.\n5. Warm pliable pita breads stacked under a clean towel.\n6. Pita pocket loaded with browned donair, diced tomato and onion.\n7. Halifax donair wrapped at the base in foil with sweet sauce, tomato and onion visible.\nLeave the final 2 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/canadian/halifax-donair.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "jiggs-dinner",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Newfoundland Jiggs Dinner. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Salt beef soaking in cold water in a covered bowl beside a small tasting piece.\n2. A muslin pudding bag tied loosely around rinsed yellow split peas.\n3. Salt beef and tied pea pudding bag simmering gently in a stockpot.\n4. Rutabaga and carrot chunks added to the simmering salt-beef pot.\n5. Potatoes cooking among carrots and rutabaga in the broth.\n6. Cabbage wedges tenderizing beside the finished root vegetables.\n7. A soft golden mound of pease pudding holding together on a serving plate.\n8. Newfoundland Jiggs dinner plate with salt beef, cabbage, rutabaga, carrots, potatoes and pease pudding.\nLeave the final 1 unused panel completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/canadian/jiggs-dinner.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "toutons",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Newfoundland Toutons. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. A small bowl of activated yeast foam beside flour and melted butter.\n2. Shaggy touton dough beginning to come together in a bowl.\n3. Risen bread dough with a smooth inflated surface in an oiled bowl.\n4. Eight small thick dough rounds resting on a floured board.\n5. A shallow layer of oil in a skillet with a small dough tester bubbling gently.\n6. Golden toutons shallow-frying in a skillet with small bubbles around the edges.\n7. Newfoundland toutons with melting butter and a dark molasses drizzle.\nLeave the final 2 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/canadian/toutons.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "saskatoon-berry-pie",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Saskatoon Berry Pie. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Cold pastry crumbs with small visible butter pieces before water is added.\n2. Two wrapped pastry discs chilling beside a pie plate.\n3. Deep purple Saskatoon berries lightly coated in sugar and cornstarch.\n4. Berry-filled bottom crust with small butter pieces dotted across the fruit.\n5. Vented top crust glazed with egg and coarse sugar, ready for the oven.\n6. Baked Saskatoon pie with a deep golden crust and purple berry juices bubbling at the vents.\n7. Saskatoon berry pie wedge showing a thick glossy purple filling in flaky crust.\nLeave the final 2 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/canadian/saskatoon-berry-pie.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "maple-taffy",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 5,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Maple Taffy on Snow. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Fresh clean snow packed in a shallow chilled metal tray.\n2. Amber maple syrup bubbling steadily in a tall saucepan with a candy thermometer.\n3. A candy thermometer reading 234°F beside glossy amber maple syrup.\n4. Thin glossy maple taffy ribbons resting on packed snow.\n5. A wooden stick rolling a glossy amber maple taffy ribbon on clean snow.\nLeave the final 4 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/canadian/maple-taffy.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "campfire-bannock",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 6,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Métis-Style Campfire Bannock. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. A level cast-iron skillet warming beside a safe bed of campfire embers.\n2. Flour, baking powder, sugar and salt whisked together in a camp bowl.\n3. A soft slightly tacky bannock dough gathered by hand in a bowl.\n4. Six thick rustic bannock rounds shaped by hand on a floured board.\n5. Golden bannock rounds cooking slowly in a lightly greased cast-iron skillet.\n6. A split bannock round with a tender open crumb beside butter and berry jam.\nLeave the final 3 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/canadian/campfire-bannock.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    }
+  ]
+}
