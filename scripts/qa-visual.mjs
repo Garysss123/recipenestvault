@@ -1591,6 +1591,102 @@ await inspect({
   }
 });
 
+const otherWorldRecipeIds = [
+  "filipino-chicken-adobo", "pancit-bihon", "indonesian-beef-rendang", "nasi-goreng", "nasi-lemak",
+  "singapore-chilli-crab", "cambodian-fish-amok", "lao-chicken-larb", "mohinga", "nepali-chicken-momo",
+  "sri-lankan-egg-hoppers", "uzbek-plov", "imeretian-khachapuri", "pierogi-ruskie", "ukrainian-borscht",
+  "jamaican-jerk-chicken", "cuban-ropa-vieja", "trinidad-doubles", "peruvian-ceviche", "lamingtons"
+];
+async function assertOtherWorldCollection(page, locale) {
+  const links = await page.locator(".collection-recipe-card > a").evaluateAll((items) => items.map((item) => item.getAttribute("href")).sort());
+  const expected = otherWorldRecipeIds.map((id) => `/${locale}/recipes/${id}/`).sort();
+  if (JSON.stringify(links) !== JSON.stringify(expected)) throw new Error(`Other-world ${locale} collection does not contain the expected 20 unique recipe routes`);
+  if (await page.locator(".collection-recipe-card").count() !== 20) throw new Error("Other-world collection must show 20 cards");
+  const broken = await page.locator(".collection-recipe-card img").evaluateAll((images) => images.filter((image) => !image.complete || !image.naturalWidth).length);
+  if (broken) throw new Error(`${broken} other-world card photographs failed to load`);
+  if (!(await page.locator("body").evaluate((element) => element.classList.contains("cuisine-other-world")))) throw new Error("Other-world collection is missing its cuisine theme class");
+}
+async function assertOtherWorldRecipe(page, expectedSteps, locale, id) {
+  await assertIllustratedRecipe(page, expectedSteps, { traditionalChinese: locale === "zh-hant" });
+  const photo = page.locator(".recipe-detail-photo img");
+  if (!(await photo.evaluate((image) => image.complete && image.naturalWidth > 0))) throw new Error(`Other-world ${id} finished-dish photograph failed to load`);
+  const steps = page.locator(".method-section ol > li");
+  if (await steps.count() !== expectedSteps) throw new Error(`Other-world ${id} method count differs from its ${expectedSteps} illustrations`);
+  for (const entry of await steps.all()) if (await entry.locator(".recipe-step-illustration").count() !== 1) throw new Error(`Other-world ${id} needs one illustration per method step`);
+  const images = await page.locator(".recipe-step-illustration img").evaluateAll((entries) => entries.map((entry) => entry.getAttribute("src")));
+  if (new Set(images).size !== expectedSteps) throw new Error(`Other-world ${id} reuses a step image`);
+  if (await page.locator(`.breadcrumbs a[href="/${locale}/cuisines/other-world/"]`).count() !== 1) throw new Error(`Other-world ${id} breadcrumb does not return to its collection`);
+  const expectedRelatedTitle = ({
+    en: "More world recipes",
+    "zh-hant": "更多世界料理",
+    ja: "ほかの世界各地の料理",
+    ko: "다른 세계 요리",
+    th: "สูตรอาหารโลกเพิ่มเติม"
+  })[locale];
+  if (await page.locator("#related-title").innerText() !== expectedRelatedTitle) throw new Error(`Other-world ${id} related-recipes title is not collection-specific`);
+  const relatedLinks = await page.locator(".related-recipes .collection-recipe-card > a").evaluateAll((items) => items.map((item) => item.getAttribute("href")));
+  if (relatedLinks.length !== 3 || relatedLinks.some((href) => !href?.startsWith(`/${locale}/recipes/`))) throw new Error(`Other-world ${id} related-recipes links are invalid`);
+  for (const target of ["en", "zh-hant", "ja", "ko", "th"]) {
+    if (await page.locator(`.language-popover a[href="/${target}/recipes/${id}/"]`).count() !== 1) throw new Error(`Other-world ${id} is missing its ${target} language route`);
+  }
+}
+await inspect({
+  name: "en-search-other-world-desktop", path: "/en/search/?q=momo", viewport: { width: 1280, height: 900 },
+  interact: async (page) => {
+    const result = page.locator('.result-card[href="/en/recipes/nepali-chicken-momo/"]');
+    await result.waitFor({ state: "visible" });
+    if (!/Other world recipe/i.test(await result.innerText())) throw new Error("Other-world search result lacks its cuisine label");
+  }
+});
+for (const [locale, label, viewport] of [
+  ["en", "desktop", { width: 1440, height: 1000 }],
+  ["zh-hant", "mobile", { width: 390, height: 844 }],
+  ["ja", "desktop", { width: 1366, height: 900 }],
+  ["ko", "mobile", { width: 390, height: 844 }],
+  ["th", "mobile", { width: 390, height: 844 }]
+]) {
+  await inspect({
+    name: `${locale}-other-world-collection-${label}`, path: `/${locale}/cuisines/other-world/`, viewport,
+    interact: async (page) => {
+      await assertOtherWorldCollection(page, locale);
+      const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+      if (response?.status() !== 200) throw new Error(`Other-world ${locale} direct refresh failed`);
+    },
+    extraScreenshots: locale === "en" || locale === "zh-hant" ? [
+      { name: `${locale}-other-world-collection-hero-${label}`, selector: ".cuisine-hero" },
+      { name: `${locale}-other-world-first-card-${label}`, selector: ".collection-recipe-card:first-child" }
+    ] : []
+  });
+}
+for (const [locale, id, count, label] of [
+  ["zh-hant", "filipino-chicken-adobo", 6, "mobile"],
+  ["en", "uzbek-plov", 7, "desktop"],
+  ["ja", "pierogi-ruskie", 7, "desktop"],
+  ["ko", "trinidad-doubles", 6, "mobile"],
+  ["th", "lamingtons", 7, "mobile"]
+]) {
+  await inspect({
+    name: `${locale}-other-world-${id}-${label}`, path: `/${locale}/recipes/${id}/`,
+    viewport: label === "mobile" ? { width: 390, height: 844 } : { width: 1366, height: 900 },
+    interact: async (page) => assertOtherWorldRecipe(page, count, locale, id),
+    extraScreenshots: [
+      { name: `${locale}-other-world-${id}-hero-${label}`, selector: ".recipe-detail-hero" },
+      { name: `${locale}-other-world-${id}-first-step-${label}`, selector: ".method-section li:first-child" }
+    ]
+  });
+}
+await inspect({
+  name: "other-world-language-choice-mobile", path: "/en/recipes/indonesian-beef-rendang/", viewport: { width: 390, height: 844 },
+  fullPage: false, suppressLanguagePrompt: false, loadLazyImages: false,
+  interact: async (page) => {
+    await page.locator('[data-language-choice="zh-hant"]').click();
+    await page.waitForLoadState("networkidle");
+    if (new URL(page.url()).pathname !== "/zh-hant/recipes/indonesian-beef-rendang/") throw new Error("Other-world language selection lost the recipe route");
+    const response = await page.reload({ waitUntil: "networkidle" });
+    if (response?.status() !== 200 || await page.locator("[data-language-prompt]").isVisible()) throw new Error("Other-world language preference or deep refresh failed");
+  }
+});
+
 await inspect({
   name: "zh-chinese-collection-mobile", path: "/zh-hant/cuisines/chinese/", viewport: { width: 390, height: 844 },
   interact: async (page) => {

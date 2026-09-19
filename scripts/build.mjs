@@ -229,7 +229,13 @@ function renderRecipe(slug, recipe) {
   ].map(([heading, items]) => `<section><h3>${esc(heading)}</h3><ul>${items.map((item) => `<li>${esc(localized(item, slug))}</li>`).join("")}</ul></section>`).join("");
   const sourceRows = recipe.sources.map((source) => `<li><a href="${esc(source.url)}" rel="external">${esc(source.title)}<span aria-hidden="true">↗</span></a></li>`).join("");
   const related = recipes.filter((item) => item.cuisine === recipe.cuisine && item.id !== recipe.id).slice(0, 3).map((item) => recipeCard(item, slug)).join("");
-  const relatedRecipesLabel = ({
+  const relatedRecipesLabel = recipe.cuisine === "other-world" ? ({
+    en: "More world recipes",
+    "zh-hant": "更多世界料理",
+    ja: "ほかの世界各地の料理",
+    ko: "다른 세계 요리",
+    th: "สูตรอาหารโลกเพิ่มเติม"
+  })[slug] ?? ui.relatedRecipes : ({
     en: `More ${cuisine.names.en.replace(/ cuisines?$/i, "")} recipes`,
     "zh-hant": `更多${cuisine.names["zh-hant"]}`,
     ja: `ほかの${cuisine.names.ja}`,

@@ -17,6 +17,7 @@ import { canadianPhotoCandidates } from "./canadian-photos.mjs";
 import { middleEasternPhotoCandidates } from "./middle-eastern-photos.mjs";
 import { mediterraneanPhotoCandidates } from "./mediterranean-photos.mjs";
 import { africanPhotoCandidates } from "./african-photos.mjs";
+import { otherWorldPhotoCandidates } from "./other-world-photos.mjs";
 
 // Candidate real-food photographs. Nothing in this file is published until
 // visualMatchApproved is set after a recipe-to-photo review.
@@ -143,5 +144,6 @@ export const recipePhotoCandidates = [
   ...canadianPhotoCandidates,
   ...middleEasternPhotoCandidates,
   ...mediterraneanPhotoCandidates,
-  ...africanPhotoCandidates
+  ...africanPhotoCandidates,
+  ...otherWorldPhotoCandidates
 ];

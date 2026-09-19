@@ -730,4 +730,42 @@ const african = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german, greek, american, mexican, brazilian, canadian, 'middle-eastern': middleEastern, mediterranean, african };
+const otherWorld = {
+  en: {
+    eyebrow: "Distinct kitchens across the wider world",
+    title: "Recipes from the Philippines to the Pacific and beyond",
+    intro: "Explore Filipino adobo and pancit, Indonesian rendang and nasi goreng, Malaysian nasi lemak, Cambodian fish amok, Lao larb, Myanmar mohinga, Nepali momo and Sri Lankan hoppers, alongside Uzbek plov, Georgian khachapuri, Polish pierogi, Ukrainian borshch, Caribbean favorites and Peruvian ceviche. These are separate local foodways, not one blended cuisine; every recipe names its place, explains practical technique and credits its sources.",
+    recipeEyebrow: "Other world recipe",
+    backToCollection: "Back to other world recipes"
+  },
+  "zh-hant": {
+    eyebrow: "探索世界各地不同餐桌",
+    title: "從菲律賓、加勒比海到太平洋的料理食譜",
+    intro: "收錄菲律賓 adobo 與 pancit、印尼 rendang 與 nasi goreng、馬來西亞椰漿飯、柬埔寨魚阿莫、寮國 larb、緬甸 mohinga、尼泊爾 momo、斯里蘭卡 hopper、烏茲別克抓飯、喬治亞起司餅、波蘭 pierogi、烏克蘭紅菜湯、加勒比料理與秘魯 ceviche。每道都來自不同地域傳統，不把它們混稱為單一菜系；食譜會標出地區、實用技法與資料來源。",
+    recipeEyebrow: "世界各地料理食譜",
+    backToCollection: "返回其他世界料理"
+  },
+  ja: {
+    eyebrow: "世界の多彩な食卓を巡る",
+    title: "フィリピンからカリブ海、太平洋へ広がるレシピ",
+    intro: "フィリピンのアドボとパンシット、インドネシアのルンダンとナシゴレン、マレーシアのナシレマ、カンボジアのフィッシュ・アモック、ラオスのラープ、ミャンマーのモヒンガー、ネパールのモモ、スリランカのホッパー、ウズベキスタンのプロフ、ジョージアのハチャプリ、ポーランドのピエロギ、ウクライナのボルシチ、カリブ海料理、ペルーのセビーチェを紹介します。各料理は異なる地域の食文化です。ひとつの混合料理として扱わず、場所、技法、出典を明記します。",
+    recipeEyebrow: "各地の料理レシピ",
+    backToCollection: "その他の世界料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "세계 곳곳의 서로 다른 식탁",
+    title: "필리핀에서 카리브해와 태평양까지의 레시피",
+    intro: "필리핀 아도보와 판싯, 인도네시아 렌당과 나시고렝, 말레이시아 나시 르막, 캄보디아 생선 아목, 라오스 랍, 미얀마 모힝가, 네팔 모모, 스리랑카 호퍼, 우즈베크 플로프, 조지아 하차푸리, 폴란드 피에로기, 우크라이나 보르시, 카리브해 요리와 페루 세비체를 만납니다. 서로 다른 지역의 음식 전통을 하나의 혼합 요리로 묶지 않고, 각 레시피에 지역과 조리법, 참고 출처를 명시합니다.",
+    recipeEyebrow: "지역 전통 요리 레시피",
+    backToCollection: "기타 세계 요리로 돌아가기"
+  },
+  th: {
+    eyebrow: "สำรวจสำรับอาหารหลากหลายทั่วโลก",
+    title: "สูตรอาหารจากฟิลิปปินส์ แคริบเบียน สู่แปซิฟิก",
+    intro: "พบอะโดโบและปันซิตจากฟิลิปปินส์ เรินดังและนาซีโกเร็งจากอินโดนีเซีย นาซีเลอมักมาเลเซีย อาม็อกปลากัมพูชา ลาบลาว โมฮิงกาเมียนมา โมโมเนปาล ฮอปเปอร์ศรีลังกา พลอฟอุซเบก คชาปูรีจอร์เจีย เปียโรกีโปแลนด์ บอร์ชต์ยูเครน อาหารแคริบเบียนและเซบิเชเปรู แต่ละเมนูมาจากประเพณีท้องถิ่นที่ต่างกัน ไม่เหมารวมเป็นครัวเดียว พร้อมระบุพื้นที่ เทคนิคและแหล่งอ้างอิงของทุกสูตร",
+    recipeEyebrow: "สูตรอาหารจากประเพณีท้องถิ่น",
+    backToCollection: "กลับไปอาหารโลกอื่น ๆ"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german, greek, american, mexican, brazilian, canadian, 'middle-eastern': middleEastern, mediterranean, african, 'other-world': otherWorld };
