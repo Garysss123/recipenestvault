@@ -1315,6 +1315,98 @@ await inspect({
   }
 });
 
+const middleEasternRecipeIds = [
+  "hummus", "falafel", "mujadara", "tabbouleh", "fattoush", "chicken-shawarma",
+  "iraqi-lamb-kofta", "zaatar-manakish", "shakshuka", "fesenjan", "mercimek-corbasi", "koshari", "baklava"
+];
+async function assertMiddleEasternCollection(page, locale) {
+  const links = await page.locator(".collection-recipe-card > a").evaluateAll((items) => items.map((item) => item.getAttribute("href")).sort());
+  const expected = middleEasternRecipeIds.map((id) => `/${locale}/recipes/${id}/`).sort();
+  if (JSON.stringify(links) !== JSON.stringify(expected)) throw new Error(`Middle Eastern ${locale} collection does not contain the expected 13 unique recipe routes`);
+  if (await page.locator(".collection-recipe-card").count() !== 13) throw new Error("Middle Eastern collection must show 13 cards");
+  const broken = await page.locator(".collection-recipe-card img").evaluateAll((images) => images.filter((image) => !image.complete || !image.naturalWidth).length);
+  if (broken) throw new Error(`${broken} Middle Eastern card photographs failed to load`);
+  if (!(await page.locator("body").evaluate((element) => element.classList.contains("cuisine-middle-eastern")))) throw new Error("Middle Eastern collection is missing its cuisine theme class");
+}
+async function assertMiddleEasternRecipe(page, expectedSteps, locale, id) {
+  await assertIllustratedRecipe(page, expectedSteps, { traditionalChinese: locale === "zh-hant" });
+  const steps = page.locator(".method-section ol > li");
+  if (await steps.count() !== expectedSteps) throw new Error(`Middle Eastern ${id} method count differs from its ${expectedSteps} illustrations`);
+  for (const entry of await steps.all()) if (await entry.locator(".recipe-step-illustration").count() !== 1) throw new Error(`Middle Eastern ${id} needs exactly one illustration in each step`);
+  const images = await page.locator(".recipe-step-illustration img").evaluateAll((entries) => entries.map((entry) => entry.getAttribute("src")));
+  if (new Set(images).size !== expectedSteps) throw new Error(`Middle Eastern ${id} reuses a step image`);
+  if (await page.locator(`.breadcrumbs a[href="/${locale}/cuisines/middle-eastern/"]`).count() !== 1) throw new Error(`Middle Eastern ${id} breadcrumb does not return to its cuisine collection`);
+  const expectedRelatedTitle = ({
+    en: "More Middle Eastern recipes",
+    "zh-hant": "更多中東料理",
+    ja: "ほかの中東料理",
+    ko: "다른 중동 요리",
+    th: "สูตรอาหารตะวันออกกลางเพิ่มเติม"
+  })[locale];
+  if (await page.locator("#related-title").innerText() !== expectedRelatedTitle) throw new Error(`Middle Eastern ${id} related-recipes title is not cuisine-specific`);
+  const relatedLinks = await page.locator(".related-recipes .collection-recipe-card > a").evaluateAll((items) => items.map((item) => item.getAttribute("href")));
+  if (relatedLinks.length !== 3 || relatedLinks.some((href) => !href?.startsWith(`/${locale}/recipes/`))) throw new Error(`Middle Eastern ${id} related-recipes links are invalid`);
+  for (const target of ["en", "zh-hant", "ja", "ko", "th"]) {
+    if (await page.locator(`.language-popover a[href="/${target}/recipes/${id}/"]`).count() !== 1) throw new Error(`Middle Eastern ${id} is missing its ${target} language route`);
+  }
+}
+await inspect({
+  name: "en-search-middle-eastern-desktop", path: "/en/search/?q=hummus", viewport: { width: 1280, height: 900 },
+  interact: async (page) => {
+    const result = page.locator('.result-card[href="/en/recipes/hummus/"]');
+    await result.waitFor({ state: "visible" });
+    if (!/Middle Eastern recipe/i.test(await result.innerText())) throw new Error("Middle Eastern search result lacks its cuisine label");
+  }
+});
+for (const [locale, label, viewport] of [
+  ["en", "desktop", { width: 1440, height: 1000 }],
+  ["zh-hant", "mobile", { width: 390, height: 844 }],
+  ["ja", "desktop", { width: 1366, height: 900 }],
+  ["ko", "mobile", { width: 390, height: 844 }],
+  ["th", "mobile", { width: 390, height: 844 }]
+]) {
+  await inspect({
+    name: `${locale}-middle-eastern-collection-${label}`, path: `/${locale}/cuisines/middle-eastern/`, viewport,
+    interact: async (page) => {
+      await assertMiddleEasternCollection(page, locale);
+      const response = await page.reload({ waitUntil: "networkidle", timeout: 30000 });
+      if (response?.status() !== 200) throw new Error(`Middle Eastern ${locale} direct refresh failed`);
+    },
+    extraScreenshots: locale === "en" || locale === "zh-hant" ? [
+      { name: `${locale}-middle-eastern-collection-hero-${label}`, selector: ".cuisine-hero" },
+      { name: `${locale}-middle-eastern-first-card-${label}`, selector: ".collection-recipe-card:first-child" }
+    ] : []
+  });
+}
+for (const [locale, id, count, label] of [
+  ["zh-hant", "hummus", 5, "mobile"],
+  ["en", "iraqi-lamb-kofta", 7, "desktop"],
+  ["ja", "zaatar-manakish", 8, "desktop"],
+  ["ko", "koshari", 8, "mobile"],
+  ["th", "baklava", 7, "mobile"]
+]) {
+  await inspect({
+    name: `${locale}-middle-eastern-${id}-${label}`, path: `/${locale}/recipes/${id}/`,
+    viewport: label === "mobile" ? { width: 390, height: 844 } : { width: 1366, height: 900 },
+    interact: async (page) => assertMiddleEasternRecipe(page, count, locale, id),
+    extraScreenshots: [
+      { name: `${locale}-middle-eastern-${id}-hero-${label}`, selector: ".recipe-detail-hero" },
+      { name: `${locale}-middle-eastern-${id}-first-step-${label}`, selector: ".method-section li:first-child" }
+    ]
+  });
+}
+await inspect({
+  name: "middle-eastern-language-choice-mobile", path: "/en/recipes/fesenjan/", viewport: { width: 390, height: 844 },
+  fullPage: false, suppressLanguagePrompt: false, loadLazyImages: false,
+  interact: async (page) => {
+    await page.locator('[data-language-choice="zh-hant"]').click();
+    await page.waitForLoadState("networkidle");
+    if (new URL(page.url()).pathname !== "/zh-hant/recipes/fesenjan/") throw new Error("Middle Eastern language selection lost the recipe route");
+    const response = await page.reload({ waitUntil: "networkidle" });
+    if (response?.status() !== 200 || await page.locator("[data-language-prompt]").isVisible()) throw new Error("Middle Eastern language preference or deep refresh failed");
+  }
+});
+
 await inspect({
   name: "zh-chinese-collection-mobile", path: "/zh-hant/cuisines/chinese/", viewport: { width: 390, height: 844 },
   interact: async (page) => {

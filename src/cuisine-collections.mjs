@@ -616,4 +616,42 @@ const canadian = {
   }
 };
 
-export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german, greek, american, mexican, brazilian, canadian };
+const middleEastern = {
+  en: {
+    eyebrow: "Curated Middle Eastern cooking",
+    title: "Middle Eastern recipes from Levantine mezze to Egyptian koshari, Persian stews and Turkish soup",
+    intro: "Make hummus, falafel, mujadara, parsley-forward tabbouleh and crispy-pita fattoush; bake za’atar manakish; prepare shawarma, Iraqi lamb kofta and North African shakshuka; then explore Persian fesenjan, Turkish red lentil soup, Egyptian koshari and pistachio baklava. Each recipe names its regional frame, gives precise quantities and keeps the cooking stages distinct.",
+    recipeEyebrow: "Middle Eastern recipe",
+    backToCollection: "Back to Middle Eastern recipes"
+  },
+  "zh-hant": {
+    eyebrow: "精選中東料理",
+    title: "從黎凡特 mezze、埃及 koshari 到波斯燉菜與土耳其湯品",
+    intro: "在家做鷹嘴豆泥、falafel、mujadara、巴西里比例較高的 tabbouleh 與酥皮塔 fattoush；烤 za’atar manakish；再準備 shawarma、伊拉克羊肉 kofta 與北非 shakshuka，最後探索波斯 fesenjan、土耳其紅扁豆湯、埃及 koshari 和開心果 baklava。每道都標明具體區域脈絡、精確用量與清楚步驟。",
+    recipeEyebrow: "中東料理食譜",
+    backToCollection: "返回中東料理食譜"
+  },
+  ja: {
+    eyebrow: "厳選した中東料理",
+    title: "レバントのメゼからエジプトのコシャリ、ペルシャの煮込み、トルコのスープまで",
+    intro: "フムス、ファラフェル、ムジャッダラ、パセリたっぷりのタブーリ、ピタを添えるファットゥーシュを作り、ザアタル・マナキッシュを焼きます。シャワルマ、イラク風ラム・コフタ、北アフリカ風シャクシュカに続き、ペルシャのフェセンジャン、トルコの赤レンズ豆スープ、エジプトのコシャリ、ピスタチオ・バクラヴァも紹介。地域の枠組み、分量、自然な工程を明確に示します。",
+    recipeEyebrow: "中東料理レシピ",
+    backToCollection: "中東料理レシピに戻る"
+  },
+  ko: {
+    eyebrow: "엄선한 중동 요리",
+    title: "레반트 메제부터 이집트 코샤리, 페르시아 스튜와 튀르키예 수프까지",
+    intro: "후무스, 팔라펠, 무자다라, 파슬리를 넉넉히 넣은 타불레와 바삭한 피타를 곁들인 팻투시를 만들고 자타르 마나키시를 굽습니다. 샤와르마, 이라크식 양고기 코프타, 북아프리카식 샥슈카를 거쳐 페르시아 페센잔, 튀르키예 붉은 렌틸 수프, 이집트 코샤리와 피스타치오 바클라바도 준비합니다. 각 요리의 지역적 맥락과 정확한 분량, 자연스러운 조리 단계를 담았습니다.",
+    recipeEyebrow: "중동 요리 레시피",
+    backToCollection: "중동 요리 레시피로 돌아가기"
+  },
+  th: {
+    eyebrow: "อาหารตะวันออกกลางที่คัดสรร",
+    title: "สูตรอาหารตั้งแต่เมเซเลวานต์ โคชารีอียิปต์ สตูเปอร์เซีย ไปจนถึงซุปตุรกี",
+    intro: "ทำฮัมมุส ฟาลาเฟล มูจาดารา ทาบูเลห์ที่เน้นพาร์สลีย์ และฟัตตูชกับพิต้ากรอบ อบมานาคีชซาอ์ตาร์ ทำชาวาร์มา เคบับโคฟตาแกะแบบอิรัก และชักชูกาแอฟริกาเหนือ ต่อด้วยเฟเซนจานเปอร์เซีย ซุปเลนทิลแดงตุรกี โคชารีอียิปต์ และบักลาวาพิสตาชิโอ แต่ละสูตรระบุบริบทของพื้นที่ ปริมาณชัดเจน และขั้นตอนตามลำดับที่ทำได้จริง",
+    recipeEyebrow: "สูตรอาหารตะวันออกกลาง",
+    backToCollection: "กลับไปสูตรอาหารตะวันออกกลาง"
+  }
+};
+
+export const cuisineCollections = { chinese, japanese, korean, thai, taiwanese, indian, vietnamese, french, italian, spanish, british, german, greek, american, mexican, brazilian, canadian, 'middle-eastern': middleEastern };

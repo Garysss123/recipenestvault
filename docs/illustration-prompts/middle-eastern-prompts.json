@@ -1,0 +1,345 @@
+{
+  "promptSet": "middle-eastern-cooking-steps-v1",
+  "generatedAt": "2026-09-19",
+  "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+  "entries": [
+    {
+      "recipeId": "hummus",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 5,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Creamy Hummus with Tahini. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Pale whipped tahini and lemon in a food processor bowl with garlic beside it.\n2. First portion of chickpeas breaking into the pale tahini mixture.\n3. Glossy hummus forming a soft ribbon as it folds in the processor.\n4. Small bowl of smooth hummus being tasted beside lemon and salt.\n5. Finished hummus in a shallow ceramic bowl with olive-oil swirl, sumac and parsley.\nLeave the final 4 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/middle-eastern/hummus.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "falafel",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 6,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Levantine Chickpea Falafel. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Dry soaked chickpeas spread on a towel beside a bowl of water.\n2. Finely chopped parsley, cilantro, onion and garlic in a processor bowl.\n3. Coarse green-speckled chickpea falafel mixture holding together in a bowl.\n4. Firm small green falafel balls arranged on a tray.\n5. Thermometer clipped to a pot of shimmering frying oil at 175 degrees Celsius.\n6. Deep-brown crisp falafel draining on a wire rack, one split to show green herbs.\nLeave the final 3 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/middle-eastern/falafel.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "mujadara",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 6,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Lebanese Mujadara with Crispy Onions. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Green lentils simmering in a pot, still holding their shape.\n2. Thin onion slices turning deeply golden and soft in a skillet.\n3. Rice grains glistening with cumin and cinnamon beside a plate of caramelized onions.\n4. Lentils and rice covered and gently steaming in a heavy pot.\n5. Fluffy rice and whole lentils folded with a portion of browned onions.\n6. A platter of mujadara crowned with crisp onions, parsley and cool yogurt.\nLeave the final 3 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/middle-eastern/mujadara.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "tabbouleh",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 5,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Lebanese Tabbouleh. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Fine bulgur just moistened with lemon juice in a small bowl.\n2. A mound of very finely hand-chopped parsley and mint on a board.\n3. Small, even tomato and cucumber dice beside finely sliced green onion.\n4. Parsley-heavy tabbouleh base with just a small amount of bulgur.\n5. Bright green parsley tabbouleh with tomato flecks and a sheen of lemon-olive oil.\nLeave the final 4 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/middle-eastern/tabbouleh.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "fattoush",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 5,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Lebanese Fattoush with Crispy Pita. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Golden pita shards crisping in a skillet beside a paper-lined plate.\n2. A board of chopped romaine, cucumber, tomato, radish, parsley and mint.\n3. Lemon-sumac dressing whisked smooth in a small bowl.\n4. Fresh chopped salad lightly coated in lemon-sumac dressing.\n5. Finished fattoush with crisp pita pieces scattered over the colorful vegetables.\nLeave the final 4 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/middle-eastern/fattoush.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "chicken-shawarma",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 6,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Chicken Shawarma Wraps. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Creamy red-brown shawarma marinade with yogurt and warm spices in a bowl.\n2. Chicken thighs coated in orange yogurt spice marinade in a covered dish.\n3. Oven preheated with a foil-lined tray and rack ready for marinated chicken.\n4. Roasted shawarma chicken with charred edges on a wire rack.\n5. Thin slices of browned shawarma chicken tossed in its roasting juices.\n6. Warm pita wrap filled with shawarma chicken, pickles and garlic sauce.\nLeave the final 3 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/middle-eastern/chicken-shawarma.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "iraqi-lamb-kofta",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Iraqi Lamb Kofta Kebabs. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Finely grated onion pulp squeezed dry in a clean cloth.\n2. Seasoned lamb mixture speckled with chopped parsley and ground spices.\n3. Chilled lamb mixture beside skewers soaking in water and a heated grill.\n4. Even ridged lamb kofta pressed firmly around flat metal skewers.\n5. Lamb kofta skewers browning and lightly charring over a grill.\n6. A thermometer checking the centre of a browned kofta beside grilled peppers.\n7. Iraqi lamb kofta skewers served with flatbread, grilled tomato and yogurt sauce.\nLeave the final 2 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/middle-eastern/iraqi-lamb-kofta.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "zaatar-manakish",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Lebanese Za’atar Manakish. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Foamy yeast mixture in a bowl beside flour and salt.\n2. Soft smooth dough being kneaded on a lightly floured board.\n3. Covered dough rising in a bowl with a soft domed surface.\n4. Za’atar and olive oil stirred into a dark green aromatic paste.\n5. Eight equal dough balls resting under a clean cloth.\n6. Small flat dough rounds with fingertip dimples and slightly raised rims.\n7. Zaatar manakish baking until the rim puffs and the herb topping glistens.\n8. Warm manakish served with tomato, cucumber, olives and labneh.\nLeave the final 1 unused panel completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/middle-eastern/zaatar-manakish.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "shakshuka",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 6,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for North African Shakshuka with Eggs. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Diced onion and red-green peppers softening in olive oil in a skillet.\n2. Garlic and warm spices stirred through the softened pepper and onion base.\n3. Thick red tomato-pepper sauce bubbling gently in a wide skillet.\n4. Four intact eggs nestled in shallow wells in thick tomato sauce.\n5. Shakshuka eggs gently poaching under a lid in the tomato sauce.\n6. Finished shakshuka with softly set eggs, parsley and crumbled feta.\nLeave the final 3 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/middle-eastern/shakshuka.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "fesenjan",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Persian Fesenjan with Chicken. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Toasted walnut pieces cooling beside a small bowl of finely ground walnuts.\n2. Chicken pieces browned on the outside in a heavy pot.\n3. Soft diced onion mixed with turmeric and cinnamon in the pot.\n4. Thick walnut-pomegranate sauce surrounding browned chicken pieces.\n5. Chicken braising in glossy dark walnut sauce in a covered pot.\n6. A spoon tasting the dark fesenjan sauce beside bloomed saffron water.\n7. Persian basmati rice topped with glossy fesenjan chicken and walnut-pomegranate sauce.\nLeave the final 2 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/middle-eastern/fesenjan.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "mercimek-corbasi",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 6,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Turkish Red Lentil Soup (Mercimek Çorbası). Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Rinsed red lentils draining in a fine sieve.\n2. Onion, carrot and potato softening in olive oil in a heavy soup pot.\n3. Tomato paste and spices coating the softened vegetables.\n4. Red lentils, carrots and potato simmering in orange broth.\n5. Velvety orange-red lentil soup being blended smooth in the pot.\n6. Turkish lentil soup topped with orange paprika butter and a lemon wedge.\nLeave the final 3 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/middle-eastern/mercimek-corbasi.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "koshari",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 8,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Egyptian Koshari. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Deep golden onion rings draining on a rack after frying.\n2. Thick spiced tomato sauce simmering with garlic and coriander.\n3. A small bowl of pale garlic-vinegar sauce.\n4. Brown lentils par-cooked but still intact in a saucepan.\n5. Rice and lentils steaming together in a covered pot.\n6. Small elbow pasta cooked al dente and drained.\n7. Whole chickpeas warming in a small saucepan.\n8. Layered koshari bowl with rice, lentils, macaroni, chickpeas, tomato sauce and crispy onions.\nLeave the final 1 unused panel completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/middle-eastern/koshari.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    },
+    {
+      "recipeId": "baklava",
+      "columns": 3,
+      "rows": 3,
+      "usedPanels": 7,
+      "style": "Recipe Nest Vault established warm-ivory fine-ink-and-gouache editorial cookbook illustration: clearly hand-drawn flat 2D food and cookware, delicate charcoal contour lines, restrained translucent muted colour washes, soft handmade paper grain, very sparse warm-ivory background. Absolutely not a photograph, 3D render, or photorealism. No people, no hands, no text, no numbers, no labels, no logos, no watermark.",
+      "prompt": "Create one landscape 3×3 contact sheet of nine equal cooking-step panels for Pistachio Baklava with Lemon-Rose Syrup. Keep the same warm-ivory paper, fine ink contours and restrained gouache illustration style in every panel. Each panel is a separate, legible close editorial drawing with comfortable margins; use the recipe-specific vessel, ingredient state and finished appearance described below. Read left-to-right, top-to-bottom. Draw exactly one panel for each ordered stage and do not invent duplicate steps.\n1. Clear sugar syrup with lemon and rosewater cooling in a small pan.\n2. Finely chopped pistachios with cinnamon and salt in a shallow bowl.\n3. Thin filo pastry sheets stacked in a buttered square baking pan.\n4. Even pistachio filling spread between buttery filo layers.\n5. Unbaked baklava cut into neat diamond shapes in its tray.\n6. Deep golden baklava pastry just out of the oven with crisp layered edges.\n7. Syrup soaking into hot diamond-cut baklava, finished with chopped pistachio.\nLeave the final 2 unused panels completely empty and warm ivory. No gutters wider than a fine ivory rule, no panel borders, no captions, and no text.",
+      "sourceSheet": "assets/recipes/illustration-sheets-generated/middle-eastern/baklava.png",
+      "reviewed": true,
+      "cropGrid": {
+        "width": 1536,
+        "height": 1024,
+        "x": [
+          0,
+          512,
+          1024,
+          1536
+        ],
+        "y": [
+          0,
+          341,
+          683,
+          1024
+        ]
+      }
+    }
+  ]
+}

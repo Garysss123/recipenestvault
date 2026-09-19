@@ -18,6 +18,7 @@ import { americanRecipeDrafts } from "./american-recipes.mjs";
 import { mexicanRecipeDrafts } from "./mexican-recipes.mjs";
 import { brazilianRecipeDrafts } from "./brazilian-recipes.mjs";
 import { canadianRecipeDrafts } from "./canadian-recipes.mjs";
+import { middleEasternRecipeDrafts } from "./middle-eastern-recipes.mjs";
 import { recipePhotoCandidates } from "./recipe-photos.mjs";
 
 const ml = (en, zhHant, ja, ko, th) => ({ en, "zh-hant": zhHant, ja, ko, th });
@@ -519,5 +520,9 @@ const publishedCanadianRecipes = canadianRecipeDrafts
   .filter((recipe) => approvedPhotos.has(recipe.id))
   .map((recipe) => ({ ...recipe, photo: approvedPhotos.get(recipe.id) }));
 
-export const recipes = [...publishedChineseRecipes, ...publishedJapaneseRecipes, ...publishedKoreanRecipes, ...publishedThaiRecipes, ...publishedTaiwaneseRecipes, ...publishedIndianRecipes, ...publishedVietnameseRecipes, ...publishedFrenchRecipes, ...publishedItalianRecipes, ...publishedSpanishRecipes, ...publishedBritishRecipes, ...publishedGermanRecipes, ...publishedGreekRecipes, ...publishedAmericanRecipes, ...publishedMexicanRecipes, ...publishedBrazilianRecipes, ...publishedCanadianRecipes];
-export const allRecipeDrafts = [...chineseRecipeDrafts, ...japaneseRecipeDrafts, ...koreanRecipeDrafts, ...thaiRecipeDrafts, ...taiwaneseRecipeDrafts, ...indianRecipeDrafts, ...vietnameseRecipeDrafts, ...frenchRecipeDrafts, ...italianRecipeDrafts, ...spanishRecipeDrafts, ...britishRecipeDrafts, ...germanRecipeDrafts, ...greekRecipeDrafts, ...americanRecipeDrafts, ...mexicanRecipeDrafts, ...brazilianRecipeDrafts, ...canadianRecipeDrafts];
+const publishedMiddleEasternRecipes = middleEasternRecipeDrafts
+  .filter((recipe) => approvedPhotos.has(recipe.id))
+  .map((recipe) => ({ ...recipe, photo: approvedPhotos.get(recipe.id) }));
+
+export const recipes = [...publishedChineseRecipes, ...publishedJapaneseRecipes, ...publishedKoreanRecipes, ...publishedThaiRecipes, ...publishedTaiwaneseRecipes, ...publishedIndianRecipes, ...publishedVietnameseRecipes, ...publishedFrenchRecipes, ...publishedItalianRecipes, ...publishedSpanishRecipes, ...publishedBritishRecipes, ...publishedGermanRecipes, ...publishedGreekRecipes, ...publishedAmericanRecipes, ...publishedMexicanRecipes, ...publishedBrazilianRecipes, ...publishedCanadianRecipes, ...publishedMiddleEasternRecipes];
+export const allRecipeDrafts = [...chineseRecipeDrafts, ...japaneseRecipeDrafts, ...koreanRecipeDrafts, ...thaiRecipeDrafts, ...taiwaneseRecipeDrafts, ...indianRecipeDrafts, ...vietnameseRecipeDrafts, ...frenchRecipeDrafts, ...italianRecipeDrafts, ...spanishRecipeDrafts, ...britishRecipeDrafts, ...germanRecipeDrafts, ...greekRecipeDrafts, ...americanRecipeDrafts, ...mexicanRecipeDrafts, ...brazilianRecipeDrafts, ...canadianRecipeDrafts, ...middleEasternRecipeDrafts];
