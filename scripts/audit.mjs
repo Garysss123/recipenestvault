@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { readdir, readFile, stat } from "node:fs/promises";
 import { dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
+import { findBrokenFragmentLinks } from "./fragment-links.mjs";
 import { cuisines, localeOrder, locales, origin } from "../src/data.mjs";
 import { cuisineCollections } from "../src/cuisine-collections.mjs";
 import { infoPages } from "../src/info-pages.mjs";
@@ -359,10 +360,17 @@ async function walk(dir) {
   return output;
 }
 const files = await walk(dist);
+const htmlPages = await Promise.all(files.filter((file) => /\.html?$/i.test(file)).map(async (file) => ({
+  path: `/${relative(dist, file).replace(/\\/g, "/")}`,
+  html: await readFile(file, "utf8")
+})));
+for (const issue of findBrokenFragmentLinks(htmlPages, origin)) {
+  failures.push(`${issue.sourcePath}: ${issue.reason} in ${issue.href} -> ${issue.targetPath}${issue.fragment ? `#${issue.fragment}` : ""}`);
+}
 const sizes = await Promise.all(files.map(async (file) => ({ file, size: (await stat(file)).size })));
 sizes.sort((a, b) => b.size - a.size);
 if (sizes[0].size > 25 * 1024 * 1024) failures.push(`largest output exceeds Pages limit: ${sizes[0].file}`);
 
 console.log(`Static audit: ${files.length} files, ${expectedUrlCount} indexable routes; largest ${sizes[0].size} bytes (${relative(root, sizes[0].file)}).`);
 if (failures.length) { console.error(`Audit failed (${failures.length}):\n- ${failures.slice(0, 60).join("\n- ")}`); process.exit(1); }
-console.log("Static audit passed: routes, links, responsive images, search, five-language recipe completeness, finished/process real-photo gates, labelled AI-illustration gates, provenance, sitemap, canonical, reciprocal hreflang, social metadata and JSON-LD are valid.");
+console.log("Static audit passed: routes, links and fragment targets, responsive images, search, five-language recipe completeness, finished/process real-photo gates, labelled AI-illustration gates, provenance, sitemap, canonical, reciprocal hreflang, social metadata and JSON-LD are valid.");
