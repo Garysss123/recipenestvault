@@ -9,6 +9,7 @@ import { recipeProcessPhotos } from "../src/recipe-process-photos.mjs";
 import { recipeStepIllustrations } from "../src/recipe-step-illustrations.mjs";
 import { recipeUi } from "../src/recipe-ui.mjs";
 import { recipes } from "../src/recipes.mjs";
+import { featuredCuisineHref, hasPublishedCuisineRecipes } from "../src/presentation.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const dist = join(root, "dist");
@@ -165,7 +166,11 @@ function cuisineCards(slug, region) {
 
 function renderHome(slug) {
   const locale = locales[slug];
-  const featuredCards = featured.map((item) => { const cuisine = cuisines.find((entry) => entry.id === item.cuisine); return `<article class="recipe-card" id="preview-${item.id}"><div class="recipe-image">${picture(item.image, locale.imageAlts[item.image])}<span>${esc(locale.ui.collectionPreview)}</span></div><div class="recipe-card-body"><p>${esc(cuisine.names[slug])}</p><h3>${esc(locale.featuredNames[item.id])}</h3></div></article>`; }).join("\n");
+  const featuredCards = featured.map((item) => {
+    const cuisine = cuisines.find((entry) => entry.id === item.cuisine);
+    const action = fill(locale.ui.viewCuisine, { cuisine: cuisine.names[slug] });
+    return `<article class="recipe-card" id="preview-${item.id}"><a class="recipe-card-link" href="${featuredCuisineHref(slug, item.cuisine)}" aria-label="${esc(action)}"><div class="recipe-image">${picture(item.image, locale.imageAlts[item.image])}<span>${esc(action)}<b aria-hidden="true">↗</b></span></div><div class="recipe-card-body"><p>${esc(cuisine.names[slug])}</p><h3>${esc(locale.featuredNames[item.id])}</h3></div></a></article>`;
+  }).join("\n");
   const creditRows = featured.map((item) => `<li><strong>${esc(locale.featuredNames[item.id])}</strong> — <cite>${esc(item.photo.title)}</cite>, ${esc(locale.ui.by)} ${esc(item.photo.author)} · <a href="${item.photo.sourcePage}">${esc(locale.ui.source)}</a> · <a href="${item.photo.originalFile}">${esc(locale.ui.originalFile)}</a> · <a href="${item.photo.licenseUrl}">${esc(item.photo.license)}</a> · ${esc(locale.ui.modified)}</li>`).join("\n");
   const content = `<section class="hero" aria-labelledby="hero-title"><div class="hero-copy"><p class="eyebrow">${esc(locale.ui.eyebrow)}</p><h1 id="hero-title">${esc(locale.ui.headline)}</h1><p class="hero-lede">${esc(locale.ui.subhead)}</p><form class="search-box" action="/${slug}/search/" method="get" role="search"><label class="sr-only" for="hero-search-${slug}">${esc(locale.ui.placeholder)}</label><span aria-hidden="true">⌕</span><input id="hero-search-${slug}" name="q" type="search" autocomplete="off" placeholder="${esc(locale.ui.placeholder)}"><button type="submit">${esc(locale.ui.searchButton)}</button></form><p class="search-hint">${esc(locale.ui.searchHint)}</p></div><div class="hero-media">${picture("sushi", locale.imageAlts.sushi, true)}<a href="#credits">${esc(locale.ui.creditsTitle)}</a></div></section>
   ${adSlot(slug, "home-leaderboard")}
@@ -191,16 +196,20 @@ function renderCuisine(slug, cuisine) {
   const suffix = `cuisines/${cuisine.id}/`;
   const collection = cuisineCollections[cuisine.id]?.[slug];
   const cuisineRecipes = recipes.filter((recipe) => recipe.cuisine === cuisine.id);
-  const hasRecipes = Boolean(collection && cuisineRecipes.length);
-  const title = hasRecipes ? `${collection.title} — Recipe Nest Vault` : `${name} — Recipe Nest Vault`;
-  const description = hasRecipes ? collection.intro : fill(locale.ui.cuisinePageBody, { cuisine: name });
+  const hasRecipes = hasPublishedCuisineRecipes(cuisineRecipes);
+  const collectionTitle = collection?.title ?? name;
+  const collectionEyebrow = collection?.eyebrow ?? locale.ui.cuisineLabel;
+  const title = hasRecipes ? `${collectionTitle} — Recipe Nest Vault` : `${name} — Recipe Nest Vault`;
+  const description = hasRecipes
+    ? collection?.intro ?? fill(locale.ui.publishedCuisineIntro, { cuisine: name })
+    : fill(locale.ui.cuisinePageBody, { cuisine: name });
   const siblings = cuisines.filter((item) => item.region === cuisine.region && item.id !== cuisine.id).slice(0, 4);
-  const hero = `<section class="page-hero cuisine-hero"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/${slug}/">${esc(locale.ui.home)}</a><span>/</span><a href="/${slug}/#cuisines">${esc(locale.ui.explore)}</a></nav><p class="eyebrow">${esc(hasRecipes ? collection.eyebrow : locale.ui.cuisineLabel)}</p><h1>${esc(hasRecipes ? collection.title : name)}</h1><p>${esc(description)}</p>${hasRecipes ? `<span class="collection-count">${esc(fill(ui.recipeCount, { count: cuisineRecipes.length }))}</span>` : ""}</section>`;
+  const hero = `<section class="page-hero cuisine-hero"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/${slug}/">${esc(locale.ui.home)}</a><span>/</span><a href="/${slug}/#cuisines">${esc(locale.ui.explore)}</a></nav><p class="eyebrow">${esc(hasRecipes ? collectionEyebrow : locale.ui.cuisineLabel)}</p><h1>${esc(hasRecipes ? collectionTitle : name)}</h1><p>${esc(description)}</p>${hasRecipes ? `<span class="collection-count">${esc(fill(ui.recipeCount, { count: cuisineRecipes.length }))}</span>` : ""}</section>`;
   const primary = hasRecipes
-    ? `<section class="recipe-collection" aria-label="${esc(collection.title)}"><div class="collection-grid">${cuisineRecipes.map((recipe) => recipeCard(recipe, slug)).join("\n")}</div></section>${adSlot(slug, "cuisine-content")}`
+    ? `<section class="recipe-collection" aria-label="${esc(collectionTitle)}"><div class="collection-grid">${cuisineRecipes.map((recipe) => recipeCard(recipe, slug)).join("\n")}</div></section>${adSlot(slug, "cuisine-content")}`
     : `<section class="coming-section"><div><p class="section-number">01</p><h2>${esc(locale.ui.comingTitle)}</h2><p>${esc(locale.ui.comingBody)}</p></div><div class="coming-visual" aria-hidden="true"><span></span><i></i><b></b></div></section>`;
   const more = `<section class="more-cuisines"><h2>${esc(locale.ui.exploreMore)}</h2><div class="cuisine-grid">${siblings.map((item, index) => `<a class="cuisine-card" href="/${slug}/cuisines/${item.id}/"><span class="cuisine-index">0${index + 1}</span><strong>${esc(item.names[slug])}</strong><span>${esc(fill(locale.ui.viewCuisine, { cuisine: item.names[slug] }))}<b aria-hidden="true">↗</b></span></a>`).join("")}</div></section>`;
-  const schema = { "@context": "https://schema.org", "@graph": [ { "@type": "CollectionPage", name: hasRecipes ? collection.title : name, description, url: `${origin}/${slug}/${suffix}`, inLanguage: locale.lang, isPartOf: { "@id": `${origin}/#website` }, ...(hasRecipes ? { mainEntity: { "@type": "ItemList", numberOfItems: cuisineRecipes.length, itemListElement: cuisineRecipes.map((recipe, index) => ({ "@type": "ListItem", position: index + 1, name: localized(recipe.name, slug), url: `${origin}/${slug}/recipes/${recipe.id}/` })) } } : {}) }, { "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: locale.ui.home, item: `${origin}/${slug}/` }, { "@type": "ListItem", position: 2, name } ] } ] };
+  const schema = { "@context": "https://schema.org", "@graph": [ { "@type": "CollectionPage", name: hasRecipes ? collectionTitle : name, description, url: `${origin}/${slug}/${suffix}`, inLanguage: locale.lang, isPartOf: { "@id": `${origin}/#website` }, ...(hasRecipes ? { mainEntity: { "@type": "ItemList", numberOfItems: cuisineRecipes.length, itemListElement: cuisineRecipes.map((recipe, index) => ({ "@type": "ListItem", position: index + 1, name: localized(recipe.name, slug), url: `${origin}/${slug}/recipes/${recipe.id}/` })) } } : {}) }, { "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: locale.ui.home, item: `${origin}/${slug}/` }, { "@type": "ListItem", position: 2, name } ] } ] };
   return page(slug, { title, description, schema, bodyClass: `cuisine-page cuisine-${cuisine.id}${hasRecipes ? " recipe-collection-page" : ""}` }, `${hero}${adSlot(slug, "cuisine-leaderboard")}${primary}${more}`, suffix);
 }
 
@@ -295,7 +304,7 @@ for (const slug of localeOrder) {
     const recipeDir = join(homeDir, "recipes", recipe.id); await mkdir(recipeDir, { recursive: true }); await writeFile(join(recipeDir, "index.html"), renderRecipe(slug, recipe), "utf8"); sitemapUrls.push(`${origin}/${slug}/recipes/${recipe.id}/`);
     searchIndex.push({ locale: slug, type: "recipe", label: cuisineCollections[recipe.cuisine]?.[slug]?.recipeEyebrow ?? recipeUi[slug].recipeEyebrow, title: localized(recipe.name, slug), subtitle: localized(recipe.region, slug), url: `/${slug}/recipes/${recipe.id}/`, text: [localized(recipe.name, slug), localized(recipe.description, slug), localized(recipe.region, slug), ...recipe.ingredients.map((row) => localized(row.item, slug))].join(" ") });
   }
-  for (const item of featured) { const cuisine = cuisines.find((entry) => entry.id === item.cuisine); searchIndex.push({ locale: slug, type: "preview", title: locales[slug].featuredNames[item.id], subtitle: cuisine.names[slug], url: `/${slug}/#preview-${item.id}`, text: `${locales[slug].featuredNames[item.id]} ${cuisine.names[slug]} ${cuisine.keywords.join(" ")}` }); }
+  for (const item of featured) { const cuisine = cuisines.find((entry) => entry.id === item.cuisine); searchIndex.push({ locale: slug, type: "preview", title: locales[slug].featuredNames[item.id], subtitle: cuisine.names[slug], url: featuredCuisineHref(slug, item.cuisine), text: `${locales[slug].featuredNames[item.id]} ${cuisine.names[slug]} ${cuisine.keywords.join(" ")}` }); }
 }
 await writeFile(join(dist, "search-index.json"), `${JSON.stringify(searchIndex)}\n`, "utf8"); await writeFile(join(dist, "404.html"), render404(), "utf8");
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.map((url) => `  <url><loc>${url}</loc><lastmod>${buildDate}</lastmod></url>`).join("\n")}\n</urlset>\n`;

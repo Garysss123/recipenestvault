@@ -2106,7 +2106,8 @@ export const recipeDraftB = recipeDraftBSource.map((recipe) => ({
   storage: ml(...locales.map((locale) => recipe.storage[locale])),
   cultureNote: ml(...locales.map((locale) => recipe.culturalNotes[locale])),
   sources: recipe.sources,
-  imageAlt: ml(...locales.map((locale) => recipe.visualSpec[locale])),
+  // visualSpec is internal art direction, not reader-facing alternative text.
+  imageAlt: ml(...locales.map((locale) => recipe.name[locale])),
   visualSpec: recipe.visualSpec.en
 }));
 
