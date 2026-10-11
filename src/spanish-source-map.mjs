@@ -4,12 +4,15 @@ const sources = (aTitle, aUrl, bTitle, bUrl) => [
 ];
 
 export const spanishRecipeSources = {
-  'paella-valenciana': sources(
-    'Spain.info — Paella',
-    'https://www.spain.info/en/recipe/paella/',
-    'Foods & Wines from Spain — International Paella Valenciana Competition recipe',
-    'https://www.foodswinesfromspain.com/en/food/news/2024/september/paella-contest-sueca-2024'
-  ),
+  'paella-valenciana': [
+    ...sources(
+      'Spain.info — Paella',
+      'https://www.spain.info/en/recipe/paella/',
+      'Foods & Wines from Spain — International Paella Valenciana Competition recipe',
+      'https://www.foodswinesfromspain.com/en/food/news/2024/september/paella-contest-sueca-2024'
+    ),
+    { title: 'FoodSafety.gov — Cook to a Safe Minimum Internal Temperature', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
+  ],
   'tortilla-espanola': sources(
     'Spain.info — Potato omelette',
     'https://www.spain.info/en/recipe/potato-omelette/',

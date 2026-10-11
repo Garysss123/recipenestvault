@@ -28,6 +28,10 @@ export const frenchRecipeSources = {
     {
       "title": "RecipeTin Eats - coq au vin",
       "url": "https://www.recipetineats.com/coq-au-vin/"
+    },
+    {
+      "title": "FoodSafety.gov — Cook to a Safe Minimum Internal Temperature",
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
     }
   ],
   "ratatouille": [

@@ -4,12 +4,15 @@ const sources = (aTitle, aUrl, bTitle, bUrl) => [
 ];
 
 export const greekRecipeSources = {
-  moussaka: sources(
-    'My Greek Dish — Traditional Moussaka',
-    'https://www.mygreekdish.com/recipe/mousakas/',
-    'Akis Petretzikis — Traditional Greek moussaka',
-    'https://akispetretzikis.com/en/recipe/8296/paradosiakos-mousakas'
-  ),
+  moussaka: [
+    ...sources(
+      'My Greek Dish — Traditional Moussaka',
+      'https://www.mygreekdish.com/recipe/mousakas/',
+      'Akis Petretzikis — Traditional Greek moussaka',
+      'https://akispetretzikis.com/en/recipe/8296/paradosiakos-mousakas'
+    ),
+    { title: 'FoodSafety.gov — Cook to a Safe Minimum Internal Temperature', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
+  ],
   pastitsio: sources(
     'My Greek Dish — Greek Pastitsio',
     'https://www.mygreekdish.com/recipe/pastitsio/',

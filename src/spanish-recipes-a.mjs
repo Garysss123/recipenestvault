@@ -5,7 +5,7 @@ export const spanishRecipesA = [
     id: 'paella-valenciana', profile: 'rice',
     region: ml('Valencia, Spain', '西班牙瓦倫西亞', 'スペイン・バレンシア', '스페인 발렌시아', 'บาเลนเซีย สเปน'),
     name: ml('Paella Valenciana', '瓦倫西亞海鮮飯原型燉飯', 'パエリア・バレンシアーナ', '파에야 발렌시아나', 'ปาเอยาบาเลนเซีย'),
-    prepMinutes: 30, cookMinutes: 65, totalMinutes: 95, servings: 4,
+    prepMinutes: 30, cookMinutes: 80, totalMinutes: 110, servings: 4,
     description: ml(
       'The Valencian original is a wide-pan rice dish built from well-browned chicken and rabbit, tomato, green beans, garrofó, saffron and paprika. The rice cooks uncovered in the seasoned broth and rests before serving so the grains stay distinct.',
       '瓦倫西亞原型 paella 以雞肉、兔肉充分煎上色，再加入番茄、四季豆、garrofó 白豆、番紅花與紅椒粉建立味道；米在調好味的湯汁中不加蓋煮熟，最後靜置，讓米粒保持分明。',
@@ -55,7 +55,7 @@ export const spanishRecipesA = [
       ),
       s(
         ml('Finish over lower heat', '降火煮熟並收乾', '火を弱めて炊き上げる', '불 낮춰 마무리 익히기', 'ลดไฟหุงจนเสร็จ'),
-        ml('Reduce to medium-low and cook another 10–12 minutes. Rotate the pan if your burner heats unevenly. The rice is ready when the surface is nearly dry, the grains are tender with a slight centre bite, and the chicken pieces reach at least 74°C at the thickest part.', '降至中小火再煮 10–12 分鐘；爐火不均時轉動鍋子。表面幾乎收乾、米粒熟透但中心仍略有咬感，且最厚雞肉中心至少達 74°C 時完成。', '中弱火にしてさらに10〜12分炊く。火当たりが均一でなければ鍋を回す。表面の水分がほぼなく、米は柔らかいが中心にわずかな歯ごたえがあり、鶏肉の最も厚い部分が74°C以上になればよい。', '중약불로 낮춰 10–12분 더 익히고 화력이 고르지 않으면 팬을 돌립니다. 표면 국물이 거의 없어지고 쌀알이 익으면서 중심에 약간의 씹힘이 남고, 가장 두꺼운 닭고기가 74°C 이상이면 됩니다.', 'ลดเป็นไฟกลางอ่อนอีก 10–12 นาที หมุนกระทะถ้าไฟไม่ทั่ว พร้อมเมื่อผิวเกือบแห้ง ข้าวนุ่มแต่แกนยังมีแรงกัดเล็กน้อย และไก่ส่วนหนาสุดอย่างน้อย 74°C'),
+        ml('Reduce to medium-low and cook another 10–12 minutes. Rotate the pan if your burner heats unevenly. Use a food thermometer, avoiding the bones, to confirm the thickest chicken piece reaches at least 74°C (165°F) and the thickest rabbit piece at least 71°C (160°F). The rice is ready when the surface is nearly dry and the grains are tender with a slight centre bite.', '降至中小火再煮 10–12 分鐘；爐火不均時轉動鍋子。用食物溫度計避開骨頭，確認最厚雞肉至少達 74°C（165°F）、最厚兔肉至少達 71°C（160°F）。表面幾乎收乾、米粒熟透但中心仍略有咬感時完成。', '中弱火にしてさらに10〜12分炊きます。火当たりが均一でなければ鍋を回します。骨に触れないよう食品用温度計を差し、最も厚い鶏肉が74°C（165°F）以上、最も厚いウサギ肉が71°C（160°F）以上か確認します。表面の水分がほぼなく、米は柔らかいが中心にわずかな歯ごたえがあれば完成です。', '중약불로 낮춰 10–12분 더 익히고 화력이 고르지 않으면 팬을 돌립니다. 뼈에 닿지 않도록 식품용 온도계를 꽂아 가장 두꺼운 닭고기가 74°C(165°F) 이상, 토끼고기가 71°C(160°F) 이상인지 확인합니다. 표면 국물이 거의 없어지고 쌀알이 익으면서 중심에 약간의 씹힘이 남으면 완성입니다.', 'ลดเป็นไฟกลางอ่อนอีก 10–12 นาที หมุนกระทะถ้าไฟไม่ทั่ว ใช้เทอร์โมมิเตอร์อาหารโดยไม่แตะกระดูก ตรวจชิ้นไก่ส่วนหนาสุดอย่างน้อย 74°C (165°F) และเนื้อกระต่ายส่วนหนาสุดอย่างน้อย 71°C (160°F) พร้อมเมื่อผิวเกือบแห้งและข้าวนุ่มแต่แกนยังมีแรงกัดเล็กน้อย'),
         'Nearly finished paella with swollen separate rice grains, very little visible broth, browned meats and beans distributed across the pan.'
       ),
       s(
