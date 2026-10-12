@@ -51,7 +51,8 @@ export const otherWorldRecipeSources = {
   ],
   'sri-lankan-egg-hoppers': [
     { title: 'Sri Lankan Egg Hoppers — Australian Eggs', url: 'https://www.australianeggs.org.au/recipes-and-cooking/egg-hoppers' },
-    { title: 'Egg Hoppers — CeylonCooking', url: 'https://ceyloncooking.com/recipes/egg-hoppers' }
+    { title: 'Sri Lankan Hoppers — Hungry Lankan', url: 'https://www.hungrylankan.com/recipes/sri-lankan-hoppers/' },
+    { title: 'FDA — What You Need to Know About Egg Safety', url: 'https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety' }
   ],
   'uzbek-plov': [
     { title: 'Traditional Uzbek Plov — Food Perestroika', url: 'https://foodperestroika.com/2013/10/18/traditional-uzbek-plov/' },

@@ -25,9 +25,9 @@ export const britishRecipeSources = {
   'shepherds-pie': sources(
     'Great British Chefs — Shepherd’s pie',
     'https://www.greatbritishchefs.com/recipes/shepherds-pie-recipe',
-    'Good Food — No-fuss shepherd’s pie',
-    'https://www.bbcgoodfood.com/recipes/no-fuss-shepherds-pie'
-  ),
+    'The Guardian — How to cook the perfect shepherd’s pie',
+    'https://www.theguardian.com/lifeandstyle/2018/apr/19/the-perfect-shepherds-pie-recipe-felicity-cloake'
+  ).concat({ title: 'FoodSafety.gov — Cook to a Safe Minimum Internal Temperature', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }),
   'toad-in-the-hole': sources(
     'Great British Chefs — Toad in the hole',
     'https://www.greatbritishchefs.com/recipes/toad-in-the-hole-recipe',
