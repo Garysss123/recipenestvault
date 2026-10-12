@@ -14,11 +14,11 @@ export const expandedInstructionsB = {
     {
       title: ml("Marinate the pork", "醃豬肉", "豚肉を下味付けする", "돼지고기 밑간하기", "หมักหมู"),
       body: ml(
-        "Cut 500 g pork into 2.5 cm cubes. Mix with 15 ml Shaoxing wine, 15 ml light soy sauce, 1 g white pepper, and 30 g egg white; massage until no liquid pools. Cover and refrigerate for 30 minutes, until the surface feels tacky.",
-        "將 500 公克豬肉切成 2.5 公分方塊，加入 15 毫升紹興酒、15 毫升淡醬油、1 公克白胡椒粉與 30 公克蛋白拌勻，按摩至沒有液體積在碗底。覆蓋冷藏 30 分鐘，表面應呈黏稠狀。",
-        "豚肉500gを2.5cm角に切り、紹興酒15ml、薄口しょうゆ15ml、白こしょう1g、卵白30gを加える。液体がたまらなくなるまで揉み、覆って30分冷蔵する。表面がねばればよい。",
-        "돼지고기 500g을 2.5cm 주사위로 썬다. 샤오싱주 15ml, 양조간장 15ml, 흰 후추 1g, 달걀흰자 30g을 넣고 바닥에 액체가 고이지 않을 때까지 주무른다. 덮어 30분 냉장하고 표면이 끈적해지면 된다.",
-        "หั่นหมู 500 กรัมเป็นเต๋า 2.5 ซม. คลุกเหล้าจีน 15 มล. ซีอิ๊วขาว 15 มล. พริกไทยขาว 1 กรัม และไข่ขาว 30 กรัม นวดจนไม่มีน้ำขัง ปิดฝาแช่เย็น 30 นาทีจนผิวเหนียวเล็กน้อย"
+        "Cut 500 g pork into 2.5 cm cubes. Mix with 15 ml Shaoxing wine, 15 ml light soy sauce, 1 g white pepper, and 30 g egg white; massage until no liquid pools. Cover and refrigerate for 30 minutes, until the surface feels tacky. The displayed 45-minute prep estimate includes this chill and about 15 minutes of active handling.",
+        "將 500 公克豬肉切成 2.5 公分方塊，加入 15 毫升紹興酒、15 毫升淡醬油、1 公克白胡椒粉與 30 公克蛋白拌勻，按摩至沒有液體積在碗底。覆蓋冷藏 30 分鐘，表面應呈黏稠狀。顯示的 45 分鐘備料時間包含這段冷藏醃漬與約 15 分鐘實際處理時間。",
+        "豚肉500gを2.5cm角に切り、紹興酒15ml、薄口しょうゆ15ml、白こしょう1g、卵白30gを加える。液体がたまらなくなるまで揉み、覆って30分冷蔵する。表面がねばればよい。表示される準備時間45分には、この冷蔵時間と約15分の作業時間が含まれます。",
+        "돼지고기 500g을 2.5cm 주사위로 썬다. 샤오싱주 15ml, 양조간장 15ml, 흰 후추 1g, 달걀흰자 30g을 넣고 바닥에 액체가 고이지 않을 때까지 주무른다. 덮어 30분 냉장하고 표면이 끈적해지면 된다. 표시된 준비 시간 45분에는 이 냉장 시간과 약 15분의 실제 손질 시간이 포함된다.",
+        "หั่นหมู 500 กรัมเป็นเต๋า 2.5 ซม. คลุกเหล้าจีน 15 มล. ซีอิ๊วขาว 15 มล. พริกไทยขาว 1 กรัม และไข่ขาว 30 กรัม นวดจนไม่มีน้ำขัง ปิดฝาแช่เย็น 30 นาทีจนผิวเหนียวเล็กน้อย เวลาเตรียมที่แสดง 45 นาทีรวมช่วงแช่นี้และเวลาลงมือประมาณ 15 นาที"
       )
     },
     {
@@ -44,21 +44,21 @@ export const expandedInstructionsB = {
     {
       title: ml("First fry in batches", "分批初炸", "分けて一度揚げる", "나누어 1차 튀기기", "ทอดครั้งแรกเป็นชุด"),
       body: ml(
-        "Fry the pork in 3–4 batches, one layer at a time, for 3–4 minutes per batch. Remove each batch when pale golden and cooked through, with the centre at 63°C, and drain on a rack.",
-        "豬肉分 3–4 批、每批單層下鍋，每批炸 3–4 分鐘。外表淡金色且中心達 63°C、完全熟透就撈出，放網架瀝油。",
-        "豚肉を3～4回に分け、一層ずつ各3～4分揚げる。薄いきつね色で中心が63℃になり火が通ったら取り出し、網で油を切る。",
-        "돼지고기를 3–4번으로 나누어 한 겹씩 튀긴다. 한 번에 3–4분, 연한 황금색이고 중심 63°C로 속까지 익으면 건져 망에서 기름을 뺀다.",
-        "ทอดหมูเป็น 3–4 ชุด ชุดละชั้นเดียว 3–4 นาที ตักแต่ละชุดเมื่อสีทองอ่อนและสุกทั่ว ใจกลางถึง 63°C แล้วพักบนตะแกรงให้สะเด็ดน้ำมัน"
+        "Fry the pork in 3–4 batches, one layer at a time, for 3–4 minutes per batch as a guide, until the coating is set and pale golden. Drain each batch on a rack while the oil returns to 175°C; use the final temperature check after refrying.",
+        "豬肉分 3–4 批、每批單層下鍋，每批約炸 3–4 分鐘至外衣定型、呈淡金色；時間僅供參考。每批放網架瀝油，等油溫回到 175°C 再炸下一批；復炸後再做最後熟度確認。",
+        "豚肉を3〜4回に分け、一層ずつ各3〜4分を目安に揚げ、衣が固まり薄いきつね色になったら網に上げる。油温が175°Cに戻ってから次を揚げ、最終的な温度確認は二度揚げ後に行います。",
+        "돼지고기를 3–4번으로 나누어 한 겹씩 한 번에 3–4분을 기준으로 튀겨 튀김옷이 잡히고 연한 황금색이 되면 건진다. 각 배치는 망에서 기름을 빼고 기름이 175°C로 돌아오면 다음 배치를 튀기며, 최종 온도 확인은 재튀김 뒤에 한다.",
+        "ทอดหมู 3–4 ชุด ชั้นเดียว ชุดละประมาณ 3–4 นาทีจนแป้งเซ็ตและเป็นสีทองอ่อน เวลานี้เป็นแนวทาง วางแต่ละชุดบนตะแกรงและรอให้น้ำมันกลับ 175°C ก่อนทอดชุดถัดไป ตรวจอุณหภูมิสุดท้ายหลังทอดซ้ำ"
       )
     },
     {
       title: ml("Refry for crispness", "復炸至酥脆", "二度揚げでカリッとさせる", "두 번 튀겨 바삭하게 하기", "ทอดซ้ำให้กรอบ"),
       body: ml(
-        "Raise the oil to 190°C over high heat. Refry each drained batch for 60–90 seconds until deep golden, audibly crisp, and at least 63°C at the thickest centre. Return it to the rack and rest it for at least 3 minutes while finishing the sauce.",
-        "轉大火將油溫升至 190°C。每批瀝乾的豬肉回鍋復炸 60–90 秒，至深金黃色、發出清脆聲且最厚處至少達 63°C。放回網架，在完成醬汁期間至少靜置 3 分鐘。",
-        "強火で油を190℃まで上げる。水気を切った豚肉を各回60～90秒二度揚げし、濃いきつね色でカリッとし、最も厚い部分が63℃以上になったら網に戻す。たれを仕上げる間に3分以上休ませる。",
-        "센 불로 기름을 190°C까지 올린다. 물을 뺀 각 배치를 60–90초 다시 튀겨 짙은 황금색으로 바삭해지고 가장 두꺼운 중심이 63°C 이상이면 망에 올린다. 소스를 마무리하는 동안 최소 3분 둔다.",
-        "เร่งไฟแรงให้น้ำมันถึง 190°C ทอดหมูแต่ละชุดซ้ำ 60–90 วินาทีจนสีทองเข้ม กรอบ และใจกลางส่วนหนาสุดอย่างน้อย 63°C แล้วพักบนตะแกรงอย่างน้อย 3 นาทีระหว่างทำซอส"
+        "Raise the oil to 190°C over high heat. Refry each drained batch for 60–90 seconds as a guide until deep golden and crisp. Check the centre of a large cube with a thin-probe thermometer; it must reach 63°C (145°F). If it is lower, fry in 30-second increments and recheck. Rest each batch on the rack for at least 3 minutes before tossing with the sauce.",
+        "轉大火將油溫升至 190°C。每批瀝乾的豬肉復炸 60–90 秒至深金黃酥脆，時間僅供參考。用細探針溫度計測量較大肉塊的中心，須達 63°C（145°F）；若未達，每次續炸 30 秒並重測。每批放回網架至少靜置 3 分鐘，再與醬汁拌合。",
+        "強火で油を190°Cまで上げます。水気を切った豚肉を各回60〜90秒を目安に二度揚げし、濃いきつね色でカリッとさせます。細いプローブ温度計で大きめの一片の中心を測り、63°C（145°F）に達していることを確認します。不足なら30秒ずつ追加して再確認し、たれと和える前に網の上で各回3分以上休ませます。",
+        "센 불로 기름을 190°C까지 올린다. 물기를 뺀 돼지고기를 한 번에 60–90초 기준으로 다시 튀겨 짙은 황금색으로 바삭하게 한다. 얇은 탐침 온도계로 큰 조각의 중심을 재어 63°C (145°F)에 도달했는지 확인한다. 낮으면 30초씩 더 튀기고 다시 잰다. 소스에 버무리기 전에 각 배치를 망에서 최소 3분 둔다.",
+        "เร่งไฟแรงให้น้ำมันถึง 190°C ทอดหมูแต่ละชุดซ้ำประมาณ 60–90 วินาทีจนทองเข้มและกรอบ ใช้เทอร์โมมิเตอร์ปลายเล็กวัดใจกลางชิ้นใหญ่ให้ถึง 63°C (145°F) หากต่ำกว่าให้ทอดต่อครั้งละ 30 วินาทีแล้วตรวจใหม่ พักแต่ละชุดบนตะแกรงอย่างน้อย 3 นาทีก่อนคลุกซอส"
       )
     },
     {
@@ -84,11 +84,11 @@ export const expandedInstructionsB = {
     {
       title: ml("Toss and serve immediately", "回鍋拌勻立即上桌", "和えてすぐ盛る", "버무려 즉시 내기", "คลุกแล้วเสิร์ฟทันที"),
       body: ml(
-        "Return the crisp pork to the wok and toss over high heat for 30 seconds, just until glossy. Scatter 10 g scallion and serve at once so the crust stays crisp.",
-        "酥脆豬肉回鍋，以大火拌 30 秒至均勻裹上亮醬即可。撒上 10 公克青蔥立即上桌，保持外殼酥脆。",
-        "カリッとした豚肉を戻し、強火で30秒、つやが出るまで和える。青ねぎ10gを散らし、衣がカリッとしているうちにすぐ盛る。",
-        "바삭한 돼지고기를 웍에 돌려 넣고 센 불에서 30초, 윤기만 입도록 버무린다. 대파 10g을 뿌려 튀김옷이 바삭할 때 바로 낸다.",
-        "ใส่หมูกรอบกลับกระทะ คลุกไฟแรง 30 วินาทีพอให้เงา โรยต้นหอม 10 กรัมแล้วเสิร์ฟทันทีเพื่อคงความกรอบ"
+        "Return the crisp pork to the wok and toss over high heat for 30 seconds, just until glossy. Divide the pork and vegetables evenly among four servings; 500 g raw tenderloin represents about 125 g per serving. Scatter the 10 g scallion evenly and serve at once so the crust stays crisp.",
+        "酥脆豬肉回鍋，以大火拌 30 秒至均勻裹上亮醬即可。豬肉與蔬菜平均分成四份；500 公克生里肌相當於每份約 125 公克。將 10 公克青蔥平均撒上，立即上桌以保持外殼酥脆。",
+        "カリッとした豚肉を戻し、強火で30秒、つやが出るまで和える。肉と野菜を4人分に均等に分けます。生の豚ヒレ肉500gは1人あたり約125g相当です。青ねぎ10gも均等に散らし、衣がカリッとしているうちにすぐ盛ります。",
+        "바삭한 돼지고기를 웍에 돌려 넣고 센 불에서 30초, 윤기만 입도록 버무린다. 고기와 채소를 네 몫으로 고르게 나눈다. 생 돼지 안심 500g은 1인분당 약 125g에 해당한다. 대파 10g도 고르게 뿌려 튀김옷이 바삭할 때 바로 낸다.",
+        "ใส่หมูกรอบกลับกระทะ คลุกไฟแรง 30 วินาทีพอให้เงา แบ่งหมูกับผักเท่า ๆ กัน 4 ที่ หมูสันในดิบ 500 กรัมคิดเป็นประมาณ 125 กรัมต่อที่ โรยต้นหอม 10 กรัมให้ทั่วและเสิร์ฟทันทีเพื่อคงความกรอบ"
       )
     }
   ],

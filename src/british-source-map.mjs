@@ -9,13 +9,13 @@ export const britishRecipeSources = {
     'https://www.greatbritishchefs.com/collections/fish-and-chips-recipes',
     'Good Food — Classic fish & chips',
     'https://www.bbcgoodfood.com/recipes/next-level-fish-chips'
-  ),
+  ).concat({ title: 'Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }),
   'beef-wellington': sources(
     'Gordon Ramsay — Beef Wellington',
     'https://www.gordonramsay.com/gr/recipes/beef-wellington',
     'Great British Chefs — Beef Wellington',
     'https://www.greatbritishchefs.com/recipes/beef-wellington-recipe'
-  ),
+  ).concat({ title: 'Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }),
   'roast-beef-yorkshire-pudding': sources(
     'Great British Chefs — Roast beef silverside',
     'https://www.greatbritishchefs.com/recipes/roast-beef-silverside-recipe',

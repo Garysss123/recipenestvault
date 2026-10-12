@@ -813,9 +813,9 @@ export const japaneseRecipesB = [
     id: "japanese-gyoza",
     cuisine: "japanese",
     region: ml("Japan", "日本", "日本", "일본", "ญี่ปุ่น"),
-    prepMinutes: 40,
-    cookMinutes: 20,
-    totalMinutes: 60,
+    prepMinutes: 50,
+    cookMinutes: 27,
+    totalMinutes: 77,
     servings: 4,
     name: ml("Japanese pork gyoza", "日式豬肉煎餃", "豚肉の焼き餃子", "일본식 돼지고기 교자", "เกี๊ยวซ่าหมูแบบญี่ปุ่น"),
     description: ml(
@@ -857,11 +857,11 @@ export const japaneseRecipesB = [
       {
         title: ml("Mix the pork filling", "拌豬肉餡", "豚肉あんを練る", "돼지고기 소 섞기", "ผสมไส้หมู"),
         body: ml(
-          "Combine 220 g ground pork, the drained cabbage, 30 g scallion, 6 g garlic, 6 g ginger, 20 ml soy sauce, 10 ml sake, 6 ml sesame oil, and 8 g potato starch. Mix in one direction for 3 minutes until sticky and cohesive, then chill 15 minutes; the mixture makes about 480 g, or 20 g for each of 24 wrappers.",
-          "將 220 公克豬絞肉、擠乾高麗菜、30 公克青蔥、6 公克蒜泥、6 公克薑泥、20 毫升醬油、10 毫升清酒、6 毫升芝麻油與 8 公克馬鈴薯澱粉朝同方向拌 3 分鐘至黏稠成團，再冷藏 15 分鐘；餡料約 480 公克，每張皮分 20 公克。",
-          "豚ひき肉220g、水を切ったキャベツ、ねぎ30g、にんにく6g、しょうが6g、しょうゆ20ml、酒10ml、ごま油6ml、片栗粉8gを同じ方向に3分練って粘りを出し、15分冷蔵します。全量約480g、皮1枚に20gずつです。",
-          "다진 돼지고기 220g, 물 뺀 양배추, 대파 30g, 마늘 6g, 생강 6g, 간장 20ml, 사케 10ml, 참기름 6ml, 감자전분 8g을 한 방향으로 3분 끈기 있게 섞고 15분 냉장한다. 총 약 480g으로 피마다 20g씩 쓴다.",
-          "ผสมหมูบด 220 กรัม กะหล่ำที่บีบน้ำ ต้นหอม 30 กรัม กระเทียม 6 กรัม ขิง 6 กรัม ซีอิ๊ว 20 มล. สาเก 10 มล. น้ำมันงา 6 มล. และแป้งมันฝรั่ง 8 กรัม คนทางเดียว 3 นาทีจนเหนียวจับตัว แช่เย็น 15 นาที ไส้รวมประมาณ 480 กรัม แบ่งแผ่นละ 20 กรัม"
+          "Combine 220 g ground pork, the drained cabbage, 30 g scallion, 6 g garlic, 6 g ginger, 20 ml soy sauce, 10 ml sake, 6 ml sesame oil, and 8 g potato starch. Mix in one direction for 3 minutes until sticky and cohesive, then chill 15 minutes; the mixture makes about 480 g, or 20 g for each of 24 wrappers. The displayed 50-minute prep estimate includes the 10-minute cabbage rest, the 15-minute filling chill, and about 25 minutes of active work.",
+          "將 220 公克豬絞肉、擠乾高麗菜、30 公克青蔥、6 公克蒜泥、6 公克薑泥、20 毫升醬油、10 毫升清酒、6 毫升芝麻油與 8 公克馬鈴薯澱粉朝同方向拌 3 分鐘至黏稠成團，再冷藏 15 分鐘；餡料約 480 公克，每張皮分 20 公克。顯示的 50 分鐘備料時間包含高麗菜靜置 10 分鐘、餡料冷藏 15 分鐘與約 25 分鐘實際操作。",
+          "豚ひき肉220g、水を切ったキャベツ、ねぎ30g、にんにく6g、しょうが6g、しょうゆ20ml、酒10ml、ごま油6ml、片栗粉8gを同じ方向に3分練って粘りを出し、15分冷蔵します。全量約480g、皮1枚に20gずつです。表示される準備時間50分には、キャベツの10分置き、あんの15分冷蔵、約25分の作業時間が含まれます。",
+          "다진 돼지고기 220g, 물 뺀 양배추, 대파 30g, 마늘 6g, 생강 6g, 간장 20ml, 사케 10ml, 참기름 6ml, 감자전분 8g을 한 방향으로 3분 끈기 있게 섞고 15분 냉장한다. 총 약 480g으로 피마다 20g씩 쓴다. 표시된 준비 시간 50분에는 양배추를 10분 두는 시간, 속을 15분 냉장하는 시간, 약 25분의 실제 작업 시간이 포함된다.",
+          "ผสมหมูบด 220 กรัม กะหล่ำที่บีบน้ำ ต้นหอม 30 กรัม กระเทียม 6 กรัม ขิง 6 กรัม ซีอิ๊ว 20 มล. สาเก 10 มล. น้ำมันงา 6 มล. และแป้งมันฝรั่ง 8 กรัม คนทางเดียว 3 นาทีจนเหนียวจับตัว แช่เย็น 15 นาที ไส้รวมประมาณ 480 กรัม แบ่งแผ่นละ 20 กรัม เวลาเตรียมที่แสดง 50 นาทีรวมช่วงพักกะหล่ำ 10 นาที ช่วงแช่ไส้ 15 นาที และเวลาลงมือประมาณ 25 นาที"
         )
       },
       {
@@ -895,33 +895,33 @@ export const japaneseRecipesB = [
         )
       },
       {
-        title: ml("Steam until the pork is 74°C", "加水蒸至豬肉 74°C", "水を加えて74℃まで蒸し焼き", "물을 넣고 돼지고기 74°C까지 찌기", "เติมน้ำอบจนหมูถึง 74°C"),
+        title: ml("Steam until the pork is 71°C", "加水蒸至豬肉 71°C", "水を加えて豚肉を71℃まで蒸し焼き", "물을 넣고 돼지고기 71°C까지 찌기", "เติมน้ำอบจนหมูถึง 71°C"),
         body: ml(
-          "Pour 70 ml water around the dumplings, cover immediately, and steam-fry for 4–5 minutes. The wrappers should be tender and the pork filling must reach at least 74°C in the centre; keep the lid on while the filling cooks.",
-          "沿鍋邊倒入 70 毫升水並立即加蓋，蒸煎 4–5 分鐘。餃子皮應柔軟，豬肉餡中心至少達 74°C；餡料加熱期間保持加蓋。",
-          "餃子の周りから水70mlを注ぎ、すぐふたをして4〜5分蒸し焼きにします。皮が柔らかくなり、豚あんの中心が74℃以上になるまでふたを保ちます。",
-          "교자 주위로 물 70ml를 붓고 즉시 덮어 4–5분 찌듯 굽는다. 피가 부드러워지고 돼지고기 소 중심이 최소 74°C가 될 때까지 뚜껑을 유지한다.",
-          "เทน้ำ 70 มล.รอบเกี๊ยวแล้วปิดฝาทันที อบไอน้ำ 4–5 นาที แผ่นควรนุ่มและใจกลางไส้หมูต้องถึงอย่างน้อย 74°C ปิดฝาระหว่างไส้สุก"
+          "Pour 70 ml water around the dumplings, cover immediately, and steam-fry for 4–5 minutes as a guide. Check the largest dumpling in this batch with a thin-probe thermometer inserted through its side into the filling centre, without touching the pan; ground pork must reach 71°C (160°F). If it is lower, keep covered and cook in 1-minute increments, then recheck.",
+          "沿鍋邊倒入 70 毫升水並立即加蓋，蒸煎約 4–5 分鐘，時間僅供參考。每批選最大顆，以細探針溫度計從側邊插入餡心測量，避免碰到鍋面；豬絞肉須達 71°C（160°F）。若未達，保持加蓋每次續煮 1 分鐘後重測。",
+          "餃子の周りから水70mlを注ぎ、すぐふたをして4〜5分を目安に蒸し焼きにします。各回で最も大きい餃子を選び、細いプローブ温度計を側面からあんの中心へ入れ、鍋に触れないよう測ります。豚ひき肉は71°C（160°F）に達する必要があります。不足ならふたをしたまま1分ずつ加熱して再確認します。",
+          "교자 주위로 물 70ml를 붓고 즉시 덮어 4–5분을 기준으로 찌듯 굽는다. 매 배치에서 가장 큰 교자를 골라 얇은 탐침 온도계를 옆면으로 넣어 속 중심을 재고 팬에 닿지 않게 한다. 다진 돼지고기는 71°C (160°F)에 도달해야 한다. 낮으면 덮은 채 1분씩 더 익히고 다시 잰다.",
+          "เทน้ำ 70 มล.รอบเกี๊ยวแล้วปิดฝา อบไอน้ำประมาณ 4–5 นาทีเป็นแนวทาง เลือกชิ้นใหญ่สุดของแต่ละชุด ใช้เทอร์โมมิเตอร์ปลายเล็กแทงจากด้านข้างถึงกลางไส้โดยไม่แตะกระทะ หมูบดต้องถึง 71°C (160°F) หากต่ำกว่าให้ปิดฝาปรุงต่อครั้งละ 1 นาทีแล้วตรวจใหม่"
         )
       },
       {
         title: ml("Dry and crisp the first batch", "收乾煎脆第一批", "水分を飛ばして焼き目を戻す", "첫 배치 수분 날려 바삭하게", "ไล่น้ำให้ชุดแรกกรอบ"),
         body: ml(
-          "Remove the lid and cook until all water evaporates. Add 5 ml sesame oil around the edges and fry uncovered for 1–2 minutes until the bottoms are crisp again. Transfer to a clean plate and repeat with the second 12 using the remaining 15 ml oil, 70 ml water, and 5 ml sesame oil.",
-          "開蓋煮至水分完全蒸發，沿邊加入 5 毫升芝麻油，不加蓋煎 1–2 分鐘讓底部重新酥脆。移到乾淨盤，再用剩下的 15 毫升油、70 毫升水與 5 毫升芝麻油完成第二批 12 顆。",
-          "ふたを外して水分を完全に飛ばします。縁からごま油5mlを回し、ふたなしで1〜2分焼いて底を再びカリッとさせます。清潔な皿に移し、残りの油15ml、水70ml、ごま油5mlで12個をもう一度焼きます。",
-          "뚜껑을 열고 물이 모두 증발할 때까지 익힌다. 가장자리에 참기름 5ml를 둘러 뚜껑 없이 1–2분 구워 바닥을 다시 바삭하게 한다. 깨끗한 접시에 옮기고 남은 기름 15ml, 물 70ml, 참기름 5ml로 두 번째 12개를 반복한다.",
-          "เปิดฝาไล่น้ำจนหมด เติมน้ำมันงา 5 มล.รอบขอบ ทอดเปิดฝาอีก 1–2 นาทีให้ก้นกลับมากรอบ ย้ายใส่จานสะอาด แล้วทำซ้ำอีก 12 ชิ้นด้วยน้ำมัน 15 มล. น้ำ 70 มล. และน้ำมันงา 5 มล.ที่เหลือ"
+          "Remove the lid and cook until all water evaporates. Add 5 ml sesame oil around the edges and fry uncovered for 1–2 minutes until the bottoms are crisp again. Transfer to a clean plate and repeat with the second 12 using the remaining 15 ml oil, 70 ml water, and 5 ml sesame oil. The 27-minute cook estimate allows both batches and time for the skillet to recover between them.",
+          "開蓋煮至水分完全蒸發，沿邊加入 5 毫升芝麻油，不加蓋煎 1–2 分鐘讓底部重新酥脆。移到乾淨盤，再用剩下的 15 毫升油、70 毫升水與 5 毫升芝麻油完成第二批 12 顆。顯示的 27 分鐘烹煮時間包含兩批操作與批次間讓鍋具回熱的時間。",
+          "ふたを外して水分を完全に飛ばします。縁からごま油5mlを回し、ふたなしで1〜2分焼いて底を再びカリッとさせます。清潔な皿に移し、残りの油15ml、水70ml、ごま油5mlで12個をもう一度焼きます。表示される加熱時間27分には、2回分の調理と間にフライパンを戻す時間が含まれます。",
+          "뚜껑을 열고 물이 모두 증발할 때까지 익힌다. 가장자리에 참기름 5ml를 둘러 뚜껑 없이 1–2분 구워 바닥을 다시 바삭하게 한다. 깨끗한 접시에 옮기고 남은 기름 15ml, 물 70ml, 참기름 5ml로 두 번째 12개를 반복한다. 표시된 조리 시간 27분에는 두 배치와 사이에 팬이 다시 달궈지는 시간이 포함된다.",
+          "เปิดฝาไล่น้ำจนหมด เติมน้ำมันงา 5 มล.รอบขอบ ทอดเปิดฝาอีก 1–2 นาทีให้ก้นกลับมากรอบ ย้ายใส่จานสะอาด แล้วทำซ้ำอีก 12 ชิ้นด้วยน้ำมัน 15 มล. น้ำ 70 มล. และน้ำมันงา 5 มล.ที่เหลือ เวลาให้ความร้อนที่แสดง 27 นาทีรวมสองชุดและเวลารอให้กระทะกลับมาร้อน"
         )
       },
       {
         title: ml("Serve six with soy-vinegar dip", "每份六顆搭配醬油醋", "6個ずつしょうゆ酢で供する", "여섯 개씩 간장 식초장과 내기", "เสิร์ฟหกชิ้นกับน้ำจิ้ม"),
         body: ml(
-          "Arrange six crisp-bottomed gyoza per serving on clean plates, for four servings total, with the soy-vinegar dip on the side. Keep the golden bottoms facing up and add no scallion, sesame, chili oil, or other garnish.",
-          "四份各將 6 顆焦脆底部朝上排在乾淨盤中，醬油醋沾醬另放；不加青蔥、芝麻、辣油或其他裝飾。",
-          "4人分として、底のカリッとした餃子を一人6個ずつ清潔な皿に並べ、しょうゆ酢だれを添えます。ねぎ、ごま、ラー油などの薬味は加えません。",
-          "네 접시에 바닥이 바삭한 교자를 6개씩 담아 총 네 인분으로 내고 간장 식초장을 곁들인다. 대파, 참깨, 고추기름 등 고명은 더하지 않는다.",
-          "จัดเกี๊ยวก้นกรอบจานละ 6 ชิ้นรวม 4 ที่บนจานสะอาด เสิร์ฟน้ำจิ้มซีอิ๊วน้ำส้มแยกด้านข้าง ไม่ใส่ต้นหอม งา น้ำมันพริก หรือเครื่องตกแต่งอื่น"
+          "Arrange six crisp-bottomed gyoza per serving on clean plates, for four servings total, with the soy-vinegar dip on the side. The 220 g raw pork represents about 55 g per serving. Keep the golden bottoms facing up and add no scallion, sesame, chili oil, or other garnish.",
+          "四份各將 6 顆焦脆底部朝上排在乾淨盤中，醬油醋沾醬另放；220 公克生豬絞肉相當於每份約 55 公克。不加青蔥、芝麻、辣油或其他裝飾。",
+          "4人分として、底のカリッとした餃子を一人6個ずつ清潔な皿に並べ、しょうゆ酢だれを添えます。生の豚ひき肉220gは1人あたり約55g相当です。ねぎ、ごま、ラー油などの薬味は加えません。",
+          "네 접시에 바닥이 바삭한 교자를 6개씩 담아 총 네 인분으로 내고 간장 식초장을 곁들인다. 생 돼지고기 220g은 1인분당 약 55g에 해당한다. 대파, 참깨, 고추기름 등 고명은 더하지 않는다.",
+          "จัดเกี๊ยวก้นกรอบจานละ 6 ชิ้นรวม 4 ที่บนจานสะอาด เสิร์ฟน้ำจิ้มซีอิ๊วน้ำส้มแยกด้านข้าง หมูบดดิบ 220 กรัมคิดเป็นประมาณ 55 กรัมต่อที่ ไม่ใส่ต้นหอม งา น้ำมันพริก หรือเครื่องตกแต่งอื่น"
         )
       }
     ],
@@ -941,7 +941,8 @@ export const japaneseRecipesB = [
     cultureNote: ml("Japanese yaki-gyoza are pan-fried dumplings adapted from Chinese jiaozi; the crisp browned base, brief steam, and soy-vinegar dip are part of the familiar style.", "日式煎餃源自對中國餃子的日本改良，焦脆底部、短時間蒸煎與醬油醋沾醬是熟悉特色。", "日本の焼き餃子は中国の餃子を日本で発展させたもので、香ばしい底、短い蒸し焼き、しょうゆ酢だれが定番です。", "일본식 야키교자는 중국 교자에서 발전한 만두로 바삭한 갈색 바닥, 짧은 찜, 간장 식초장이 익숙한 특징입니다.", "เกี๊ยวซ่าญี่ปุ่นเป็นเกี๊ยวกระทะที่พัฒนาจากเจี่ยวจื่อจีน จุดเด่นคือก้นสีน้ำตาลกรอบ การอบไอน้ำสั้น ๆ และน้ำจิ้มซีอิ๊วน้ำส้ม"),
     sources: [
       { title: "Just One Cookbook — Gyoza Recipe", url: "https://www.justonecookbook.com/gyoza/" },
-      { title: "Kikkoman — Pan-Fried Potstickers Recipe", url: "https://www.kikkoman.com/en/cookbook/recipe/00001031.html" }
+      { title: "Kikkoman — Pan-Fried Potstickers Recipe", url: "https://www.kikkoman.com/en/cookbook/recipe/00001031.html" },
+      { title: "Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures", url: "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures" }
     ],
     imageAlt: ml("Six pan-fried Japanese gyoza in a row with crisp browned bottoms and a dark soy-vinegar dip in a white rectangular plate", "白色長盤上一排六顆底部焦脆金褐的日式煎餃，左側附深色醬油醋沾醬", "白い長皿に焦げ目のある焼き餃子6個を一列に並べ、左側に濃いしょうゆ酢だれを添えたもの", "흰 긴 접시에 바닥이 갈색으로 바삭한 일본식 교자 6개를 한 줄로 놓고 왼쪽에 진한 간장 식초장을 곁들인 모습", "เกี๊ยวซ่าญี่ปุ่นหกชิ้นเรียงบนจานขาวยาว ก้นสีน้ำตาลกรอบ มีน้ำจิ้มซีอิ๊วน้ำส้มสีเข้มด้านซ้าย"),
     visualSpec: "Six pan-fried Japanese gyoza arranged in a row on a white rectangular plate, showing crisp browned bottoms with only a dark soy-vinegar dipping sauce in the side compartment; no scallion, sesame, chili oil, or cabbage garnish visible."

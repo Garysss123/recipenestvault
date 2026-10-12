@@ -237,7 +237,8 @@ const recipeDraftBSource = [
     },
     sources: [
       { title: "The Woks of Life — Sweet and Sour Pork: Restaurant Recipe", url: "https://thewoksoflife.com/sweet-and-sour-pork/" },
-      { title: "Serious Eats — Chinese Sweet and Sour Pork Recipe", url: "https://www.seriouseats.com/sweet-and-sour-pork-recipe" }
+      { title: "Serious Eats — Chinese Sweet and Sour Pork Recipe", url: "https://www.seriouseats.com/sweet-and-sour-pork-recipe" },
+      { title: "Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures", url: "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures" }
     ],
     visualSpec: {
       en: "Real finished-dish brief: a shallow white bowl of lacquered golden pork cubes with clearly visible red, yellow, and green bell-pepper squares, onion, ginger, and a few scallion slivers; the red sweet-and-sour sauce should glisten without hiding crisp edges.",
