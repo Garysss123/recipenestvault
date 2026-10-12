@@ -5,7 +5,8 @@ export const otherWorldRecipeSources = {
   ],
   'pancit-bihon': [
     { title: 'Pancit Bihon Guisado — Panlasang Pinoy', url: 'https://panlasangpinoy.com/pancit-guisado/' },
-    { title: 'Pancit Bihon — Food Network', url: 'https://www.foodnetwork.com/recipes/food-network-kitchen/pancit-bihon-19783953' }
+    { title: 'Pancit Bihon — Food Network', url: 'https://www.foodnetwork.com/recipes/food-network-kitchen/pancit-bihon-19783953' },
+    { title: 'FoodSafety.gov — Cook to a Safe Minimum Internal Temperature', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
   ],
   'indonesian-beef-rendang': [
     { title: 'Beef Rendang (Rendang Daging) — SBS Food', url: 'https://www.sbs.com.au/food/recipe/beef-rendang-rendang-daging/vr7bra193' },

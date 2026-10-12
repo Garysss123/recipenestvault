@@ -21,7 +21,8 @@ const auditedIds = [
   "mohinga", "nepali-chicken-momo", "trinidad-doubles", "nasi-lemak",
   "mole-poblano", "bunny-chow", "cuban-ropa-vieja", "maultaschen",
   "fesenjan", "ukrainian-borscht", "tanzanian-pilau", "spaghetti-carbonara",
-  "mercimek-corbasi", "pierogi-ruskie", "cambodian-fish-amok", "lao-chicken-larb"
+  "mercimek-corbasi", "pierogi-ruskie", "cambodian-fish-amok", "lao-chicken-larb",
+  "caponata", "baklava", "malva-pudding", "pancit-bihon"
 ];
 const auditedRecipes = new Map(auditedIds.map((id) => [id, recipes.find((recipe) => recipe.id === id)]));
 
@@ -1065,6 +1066,130 @@ test("Lao chicken larb times the rice and chicken, allocates its accompaniments,
     th: [/ข้าวเหนียวแห้งทั้งหมด 30 กรัม[\s\S]*10–15 นาที/, /น้ำมันรสกลางทั้งหมด 30 มล\.[\s\S]*ไก่บดทั้งหมด 600 กรัม[\s\S]*7–10 นาที[\s\S]*74°C/, /น้ำปลาทั้งหมด 45 มล\.[\s\S]*น้ำมะนาวทั้งหมด 60 มล\.[\s\S]*พริกป่นทั้งหมด 5 กรัม/, /หอมแดงใหญ่ทั้งหมด 120 กรัม[\s\S]*ต้นหอม 30 กรัม[\s\S]*สะระแหน่ 30 กรัม[\s\S]*ผักชี 25 กรัม/, /ใบผักกาดและแตงกวาทั้งหมด 150 กรัม[\s\S]*ข้าวเหนียวนึ่งสุกทั้งหมด 400 กรัม/]
   };
   for (const locale of localeOrder) [rice, chicken, season, herbs, serve].forEach((step, index) => assert.match(step.body[locale], patterns[locale][index], `${locale}: larb step ${index + 1}`));
+});
+
+test("caponata assigns salt, pepper, and both oils with practical stage times", () => {
+  const recipe = auditedRecipes.get("caponata");
+  assert.ok(recipe, "caponata slug exists");
+  assert.equal(recipe.prepMinutes, 55);
+  assert.equal(recipe.cookMinutes, 50);
+  assert.equal(recipe.totalMinutes, 105);
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "fine salt, divided")?.amount, "5 g");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "black pepper")?.amount, "1 g");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "olive oil for celery and onion")?.amount, "15 ml");
+  assert.ok(recipe.sources.some((source) => source.url === "https://www.visitsicily.info/en/ricetta/caponata/"));
+  assert.ok(recipe.sources.some((source) => source.url === "https://www.lacucinaitaliana.com/italian-food/italian-dishes/sicilian-caponata-recipe"));
+
+  const salt = recipeStep(recipe, "Salt and dry the eggplant");
+  const eggplant = recipeStep(recipe, "Brown the eggplant in batches");
+  const aromatics = recipeStep(recipe, "Cook celery and onion");
+  const sauce = recipeStep(recipe, "Build the tomato agrodolce");
+  const finish = recipeStep(recipe, "Combine olives, capers and eggplant");
+  const patterns = {
+    en: [/3 g fine salt[\s\S]*30–40 minutes/, /all 60 ml[\s\S]*2–3 uncrowded batches[\s\S]*5 minutes per batch/, /all 15 ml[\s\S]*5–7 minutes/, /10–12 minutes[\s\S]*up to the remaining 2 g salt/, /5–7 minutes/],
+    "zh-hant": [/3 公克[\s\S]*30–40 分鐘/, /煎茄子用的全部 60 毫升[\s\S]*2–3 批[\s\S]*各煎約 5 分鐘/, /全部 15 毫升[\s\S]*5–7 分鐘/, /10–12 分鐘[\s\S]*剩餘最多 2 公克細鹽/, /5–7 分鐘/],
+    ja: [/塩3g[\s\S]*30〜40分/, /なす用オリーブ油60mlをすべて[\s\S]*2〜3回[\s\S]*各回約5分/, /セロリと玉ねぎ用のオリーブ油15mlをすべて[\s\S]*5〜7分/, /10〜12分[\s\S]*残りの塩を最大2g/, /5〜7分/],
+    ko: [/소금 3g[\s\S]*30–40분/, /가지용 올리브오일 60ml 전량[\s\S]*2–3회[\s\S]*회당 약 5분/, /셀러리와 양파용 올리브오일 15ml 전량[\s\S]*5–7분/, /10–12분[\s\S]*남은 소금 최대 2g/, /5–7분/],
+    th: [/เกลือละเอียด 3 กรัม[\s\S]*30–40 นาที/, /น้ำมันมะกอกสำหรับมะเขือยาวทั้งหมด 60 มล\.[\s\S]*2–3 รอบ[\s\S]*รอบละประมาณ 5 นาที/, /น้ำมันมะกอกสำหรับเซเลอรีและหอมหัวใหญ่ทั้งหมด 15 มล\.[\s\S]*5–7 นาที/, /10–12 นาที[\s\S]*เกลือที่เหลือไม่เกิน 2 กรัม/, /5–7 นาที/]
+  };
+  for (const locale of localeOrder) {
+    [salt, eggplant, aromatics, sauce, finish].forEach((step, index) => assert.match(step.body[locale], patterns[locale][index], `${locale}: caponata step ${index + 1}`));
+    assert.doesNotMatch(recipe.instructions.map((step) => step.body[locale]).join(" "), /\d\s*°C/, `${locale}: no unnecessary temperature is added`);
+  }
+});
+
+test("baklava allocates all butter and gives syrup, bake, and soak guides in five locales", () => {
+  const recipe = auditedRecipes.get("baklava");
+  assert.ok(recipe, "baklava slug exists");
+  assert.equal(recipe.prepMinutes, 145);
+  assert.equal(recipe.cookMinutes, 65);
+  assert.equal(recipe.totalMinutes, 210);
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("unsalted butter"))?.amount, "350 g");
+  assert.ok(recipe.sources.some((source) => source.url === "https://www.bbcgoodfoodme.com/recipes/pistachio-almond-lemon-rose-baklava/"));
+  assert.ok(recipe.sources.some((source) => source.url === "https://www.foodnetwork.com/recipes/food-network-kitchen/pistachio-baklava-14024677"));
+
+  const syrup = recipeStep(recipe, "Make the lemon-rose syrup");
+  const layers = recipeStep(recipe, "Layer the filo");
+  const top = recipeStep(recipe, "Score the pastry");
+  const bake = recipeStep(recipe, "Bake until deeply golden");
+  const soak = recipeStep(recipe, "Soak and cool completely");
+  const patterns = {
+    en: [/8–10 minutes/, [/20 g[\s\S]*about 300 g butter/, /final 30 g/], /180°C[\s\S]*55–65 minutes/, /at least 90 minutes/],
+    "zh-hant": [/8–10 分鐘/, [/20 公克[\s\S]*約 300 公克/, /最後 30 公克/], /180°C[\s\S]*55–65 分鐘/, /至少 90 分鐘/],
+    ja: [/8〜10分/, [/バター20g[\s\S]*約300g/, /バター30g/], /180°C[\s\S]*55〜65分/, /少なくとも90分/],
+    ko: [/8–10분/, [/버터 20g[\s\S]*약 300g/, /버터 30g/], /180°C[\s\S]*55–65분/, /최소 90분/],
+    th: [/8–10 นาที/, [/เนยใส 20 กรัม[\s\S]*ประมาณ 300 กรัม/, /เนยใส 30 กรัม/], /180°C[\s\S]*55–65 นาที/, /อย่างน้อย 90 นาที/]
+  };
+  for (const locale of localeOrder) {
+    assert.match(syrup.body[locale], patterns[locale][0], `${locale}: syrup timing`);
+    assert.match(layers.body[locale], patterns[locale][1][0], `${locale}: pan and sheet butter allocation`);
+    assert.match(top.body[locale], patterns[locale][1][1], `${locale}: final butter allocation`);
+    assert.match(bake.body[locale], patterns[locale][2], `${locale}: oven timing and endpoint`);
+    assert.match(soak.body[locale], patterns[locale][3], `${locale}: cooling and absorption guide`);
+  }
+  assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes);
+});
+
+test("malva pudding allocates pan butter and gives a doneness-based bake guide", () => {
+  const recipe = auditedRecipes.get("malva-pudding");
+  assert.ok(recipe, "malva-pudding slug exists");
+  assert.equal(recipe.prepMinutes, 20);
+  assert.equal(recipe.cookMinutes, 40);
+  assert.equal(recipe.totalMinutes, 60);
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "unsalted butter, divided")?.amount, "60 g");
+  assert.ok(recipe.sources.some((source) => source.url === "https://www.penguinrandomhouse.co.za/warren-mendess-malva-pudding/"));
+  assert.ok(recipe.sources.some((source) => source.url === "https://winemag.co.za/food/recipe/malva-pudding/"));
+  const pan = recipeStep(recipe, "Prepare the pan and dry mix");
+  const batter = recipeStep(recipe, "Combine the batter");
+  const bake = recipeStep(recipe, "Bake the sponge and warm the sauce");
+  const patterns = {
+    en: [/5 g of the listed butter[\s\S]*remaining 55 g/, /melted 55 g butter/, /180°C[\s\S]*30–40 minutes[\s\S]*clean skewer/],
+    "zh-hant": [/奶油中的 5 公克[\s\S]*剩餘 55 公克/, /融化的 55 公克奶油/, /180°C[\s\S]*30–40 分鐘[\s\S]*竹籤插入乾淨/],
+    ja: [/バターから5g[\s\S]*残り55g/, /溶かしたバター55g/, /180°C[\s\S]*30〜40分[\s\S]*竹串がきれいに抜けたら/],
+    ko: [/버터 중 5g[\s\S]*남은 55g/, /녹인 버터 55g/, /180°C[\s\S]*30–40분[\s\S]*꼬치가 깨끗하게/],
+    th: [/เนยที่ระบุ 5 กรัม[\s\S]*เนยที่เหลือ 55 กรัม/, /เนยละลาย 55 กรัม/, /180°C[\s\S]*30–40 นาที[\s\S]*ไม้จิ้มออกมาสะอาด/]
+  };
+  for (const locale of localeOrder) {
+    assert.match(pan.body[locale], patterns[locale][0], `${locale}: pan butter allocation`);
+    assert.match(batter.body[locale], patterns[locale][1], `${locale}: batter butter allocation`);
+    assert.match(bake.body[locale], patterns[locale][2], `${locale}: baking guide`);
+  }
+  assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes);
+});
+
+test("pancit bihon checks chicken at the official endpoint and times each wok stage", () => {
+  const recipe = auditedRecipes.get("pancit-bihon");
+  assert.ok(recipe, "pancit-bihon slug exists");
+  assert.equal(recipe.prepMinutes, 25);
+  assert.equal(recipe.cookMinutes, 25);
+  assert.equal(recipe.totalMinutes, 50);
+  const noodleWater = recipe.ingredients.find((row) => row.item.en.startsWith("water for the noodles"));
+  assert.deepEqual(localeOrder.map((locale) => localized(noodleWater?.amount, locale)), [
+    "up to 60 ml", "最多 60 毫升", "最大60ml", "최대 60ml", "ไม่เกิน 60 มล."
+  ], "optional water amount is localized in all five languages");
+  assert.ok(recipe.sources.some((source) => source.url === foodSafetySource), "official poultry endpoint is credited");
+  assert.deepEqual(recipe.ingredients.map((row) => row.item.ko), [
+    "건조 비혼 쌀국수", "무염 닭육수", "뼈를 제거한 닭다리살, 얇게 썬 것", "껍질을 벗긴 새우",
+    "양배추, 곱게 채 썬 것", "당근, 채 썬 것", "중국식 소시지, 얇게 썬 것", "연간장",
+    "굴소스", "칼라만시즙 또는 레몬즙", "향이 강하지 않은 식용유", "다진 마늘",
+    "면이 부드러워지기 전에 웍이 마를 때만 넣는 물"
+  ], "Korean ingredient fields use Korean rather than copied Thai text");
+  const sausageChicken = recipeStep(recipe, "Brown the sausage and chicken");
+  const vegetablesShrimp = recipeStep(recipe, "Cook the vegetables and shrimp");
+  const noodles = recipeStep(recipe, "Absorb the broth");
+  const patterns = {
+    en: [/sausage for 4–5 minutes[\s\S]*chicken[\s\S]*3–5 minutes[\s\S]*74°C \(165°F\)/, /2–3 minutes[\s\S]*2–3 minutes/, /5–8 minutes[\s\S]*15 ml increments[\s\S]*60 ml/],
+    "zh-hant": [/臘腸炒 4–5 分鐘[\s\S]*雞肉[\s\S]*3–5 分鐘[\s\S]*74°C（165°F）/, /2–3 分鐘[\s\S]*2–3 分鐘/, /5–8 分鐘[\s\S]*每次補 15 毫升[\s\S]*60 毫升/],
+    ja: [/ソーセージを4〜5分[\s\S]*鶏肉[\s\S]*3〜5分[\s\S]*74°C（165°F）/, /2〜3分[\s\S]*2〜3分/, /5〜8分[\s\S]*15mlずつ[\s\S]*60ml/],
+    ko: [/소시지를 4–5분[\s\S]*닭고기[\s\S]*3–5분[\s\S]*74°C \(165°F\)/, /2–3분[\s\S]*2–3분/, /5–8분[\s\S]*15ml씩[\s\S]*60ml/],
+    th: [/กุนเชียง 4–5 นาที[\s\S]*ไก่[\s\S]*3–5 นาที[\s\S]*74°C \(165°F\)/, /2–3 นาที[\s\S]*2–3 นาที/, /5–8 นาที[\s\S]*ครั้งละ 15 มล\.[\s\S]*60 มล\./]
+  };
+  for (const locale of localeOrder) {
+    assert.match(sausageChicken.body[locale], patterns[locale][0], `${locale}: sausage, chicken time and poultry endpoint`);
+    assert.match(vegetablesShrimp.body[locale], patterns[locale][1], `${locale}: vegetable and shrimp guide`);
+    assert.match(noodles.body[locale], patterns[locale][2], `${locale}: noodle absorption and optional water`);
+  }
+  assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes);
 });
 
 test("audited recipe details, visible timing, ingredients, and Recipe JSON-LD agree in every locale", async () => {
