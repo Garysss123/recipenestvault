@@ -33,7 +33,7 @@ export const greekRecipeSources = {
     'https://www.mygreekdish.com/recipe/traditional-greek-spinach-pie-spanakopita-recipe-with-homemade-phyllo/',
     'Akis Petretzikis — Easy Greek spinach pie',
     'https://akispetretzikis.com/en/recipe/731/grhgorh-spanakopita'
-  ),
+  ).concat({ title: 'Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures (egg dishes)', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }),
   dolmades: sources(
     'My Greek Dish — Greek Dolmades',
     'https://www.mygreekdish.com/recipe/greek-dolmades-recipe-stuffed-vine-leaves/',

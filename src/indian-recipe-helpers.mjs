@@ -93,7 +93,7 @@ const sourceMap = {
   "goan-fish-curry": [["The Yummy Delights — Goan Fish Curry", "https://theyummydelights.com/goan-fish-curry/"], ["Pat-a-Cake — Authentic Goan Fish Curry", "https://veenapatwardhan.com/pat-a-cake/2023/02/03/authenticeasygoanfishcurryrecipe/"], ["FoodSafety.gov — Cook to a Safe Minimum Internal Temperature", "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"]],
   "butter-naan": [["Swasthi's Recipes — Butter Naan", "https://www.indianhealthyrecipes.com/naan/"], ["Dassana's Veg Recipes — Naan", "https://www.vegrecipesofindia.com/naan-recipe-without-yeast/"]],
   "gulab-jamun": [["Swasthi's Recipes — Gulab Jamun", "https://www.indianhealthyrecipes.com/gulab-jamun-recipe-using-milk-powder/"], ["Dassana's Veg Recipes — Gulab Jamun", "https://www.vegrecipesofindia.com/gulab-jamun-easy-gulab-jamun-recipe/"]],
-  "rice-kheer": [["Swasthi's Recipes — Rice Kheer", "https://www.indianhealthyrecipes.com/rice-kheer-recipe-chawal-ki-kheer/"], ["Dassana's Veg Recipes — Rice Kheer", "https://www.vegrecipesofindia.com/rice-kheer-recipe-chawal-ki-kheer/"]]
+  "rice-kheer": [["Swasthi's Recipes — Rice Kheer", "https://www.indianhealthyrecipes.com/rice-kheer-recipe-chawal-ki-kheer/"], ["Dassana's Veg Recipes — Rice Kheer", "https://www.vegrecipesofindia.com/rice-kheer-recipe-chawal-ki-kheer/"], ["Official food-safety guidance — UK Food Standards Agency: Home food fact checker (rice)", "https://www.gov.uk/government/publications/home-food-fact-checker/home-food-fact-checker"], ["Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures (leftovers)", "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"]]
 };
 
 export function makeIndianRecipe(recipe) {
