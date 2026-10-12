@@ -102,6 +102,14 @@ export const frenchRecipeSources = {
     {
       "title": "Meilleur du Chef - moules marinieres",
       "url": "https://www.meilleurduchef.com/fr/recette/moules-marinieres.html"
+    },
+    {
+      "title": "Official food-safety guidance — FDA: Selecting and Serving Fresh and Frozen Seafood Safely",
+      "url": "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely"
+    },
+    {
+      "title": "Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures",
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
     }
   ],
   "poulet-basquaise": [

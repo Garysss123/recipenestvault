@@ -250,11 +250,11 @@ export const expandedInstructionsB = {
     {
       title: ml("Rest and fold from the bottom", "靜置後由底部翻拌", "休ませて底から混ぜる", "뜸 들인 뒤 바닥부터 섞기", "พักแล้วคลุกจากก้นหม้อ"),
       body: ml(
-        "Turn off the heat, cover, and rest for 5 minutes. Fold gently from the bottom so the crisp rice remains in pieces; serve when the grains are separate and the crust is still audible.",
-        "關火加蓋靜置 5 分鐘。由鍋底輕輕翻拌，讓飯焦保留成片；米粒分明、飯焦仍有酥脆聲時上桌。",
-        "火を止めてふたをし、5分休ませる。底からそっと返しておこげを塊で残し、米がほぐれ、香ばしい音が残るうちに供する。",
-        "불을 끄고 덮어 5분 뜸 들인다. 바닥부터 살살 접어 누룽지를 조각으로 남긴다. 밥알이 흩어지고 누룽지가 바삭한 소리를 낼 때 낸다.",
-        "ปิดไฟ ปิดฝาพัก 5 นาที คลุกเบาๆ จากก้นหม้อให้ข้าวกรอบยังเป็นชิ้น เสิร์ฟเมื่อเมล็ดร่วนและข้าวกรอบยังมีเสียงกรอบ"
+        "Turn off the heat, cover, and rest for 5 minutes. Fold gently from the bottom so the crisp rice remains in pieces; divide evenly between two bowls, one per serving. If any remains, move the rice and meats to shallow containers and refrigerate within 1 hour at 4°C (40°F) or below. Use within 24 hours and reheat the rice only once until steaming hot throughout; briefly re-crisp the softened crust afterward.",
+        "關火加蓋靜置 5 分鐘。由鍋底輕輕翻拌，保留成片飯焦；平均分入兩碗，每份一碗。若有剩飯，將米飯與臘味分裝淺盒，於烹煮後 1 小時內冷藏並保持在 4°C（40°F）以下。24 小時內食用，米飯最多回熱一次，直至整體冒蒸氣；飯焦變軟後可最後短暫煎脆。",
+        "火を止めてふたをし、5分休ませます。底からそっと返しておこげを残し、均等に2つの器へ、一人1杯ずつ分けます。残った場合は、ご飯と肉を浅い容器に分け、調理後1時間以内に4°C以下で冷蔵します。24時間以内に使い、ご飯の再加熱は一度だけ、全体から湯気が出るまで行います。柔らかくなったおこげは最後に短く焼き直します。",
+        "불을 끄고 덮어 5분 뜸 들인다. 바닥부터 부드럽게 섞어 누룽지를 조각으로 남기고 두 그릇에 고르게 나누어 한 사람당 한 그릇씩 낸다. 남으면 밥과 고기를 얕은 용기에 나누어 조리 후 1시간 안에 4°C 이하로 냉장한다. 24시간 안에 먹고 밥은 전체에서 김이 날 때까지 한 번만 재가열한다. 부드러워진 누룽지는 마지막에 잠깐 다시 굽는다.",
+        "ปิดไฟ ปิดฝาพัก 5 นาที คลุกเบา ๆ จากก้นหม้อให้ข้าวกรอบยังเป็นชิ้น แบ่งใส่สองชามเท่า ๆ กัน ชามละหนึ่งที่ หากเหลือให้แบ่งข้าวและเนื้อใส่ภาชนะตื้น แช่เย็นภายใน 1 ชั่วโมงหลังปรุงที่ 4°C หรือต่ำกว่า กินภายใน 24 ชั่วโมงและอุ่นข้าวเพียงครั้งเดียวจนมีไอทั่วถึง แล้วจี่ข้าวกรอบที่นิ่มลงอีกสั้น ๆ"
       )
     }
   ],
@@ -263,31 +263,31 @@ export const expandedInstructionsB = {
     {
       title: ml("Velvet the beef", "醃拌牛肉", "牛肉を下味付けする", "소고기 밑간하기", "หมักเนื้อให้นุ่ม"),
       body: ml(
-        "Mix 280 g flank steak, sliced 3 mm across the grain, with 20 ml water, 1 g baking soda, 5 g cornstarch, 10 ml oyster sauce, 10 ml Shaoxing wine, and 5 ml light soy sauce. Massage for 2 minutes until tacky, cover, and marinate 30 minutes.",
-        "將 280 公克牛腹肉逆紋切成 3 毫米薄片，加入 20 毫升水、1 公克小蘇打、5 公克玉米粉、10 毫升蠔油、10 毫升紹興酒與 5 毫升淡醬油。按摩 2 分鐘至黏稠，覆蓋醃 30 分鐘。",
-        "牛フランク280gを繊維に逆らって3mmに切り、水20ml、重曹1g、コーンスターチ5g、オイスターソース10ml、紹興酒10ml、薄口しょうゆ5mlを混ぜる。2分揉んで粘りを出し、覆って30分漬ける。",
-        "플랭크 스테이크 280g을 결 반대로 3mm로 썬다. 물 20ml, 베이킹소다 1g, 옥수수전분 5g, 굴소스 10ml, 샤오싱주 10ml, 양조간장 5ml를 넣는다. 2분 주물러 끈기를 낸 뒤 덮어 30분 재운다.",
-        "หั่นเนื้อส่วนข้าง 280 กรัมขวางเส้นหนา 3 มม. คลุกน้ำ 20 มล. เบกกิ้งโซดา 1 กรัม แป้งข้าวโพด 5 กรัม ซอสหอยนางรม 10 มล. เหล้าจีน 10 มล. และซีอิ๊วขาว 5 มล. นวด 2 นาทีจนเหนียว ปิดฝาหมัก 30 นาที"
+        "Mix 280 g flank steak, sliced 6 mm across the grain, with 20 ml water, 1 g baking soda, 5 g cornstarch, 10 ml oyster sauce, 10 ml Shaoxing wine, and 5 ml light soy sauce. Massage for 2 minutes until tacky, cover, and marinate 30 minutes in the refrigerator. While it marinates, leave the sealed fresh noodles at room temperature for 20 minutes.",
+        "將 280 公克牛腹肉逆紋切成 6 毫米厚片，加入 20 毫升水、1 公克小蘇打、5 公克玉米粉、10 毫升蠔油、10 毫升紹興酒與 5 毫升淡醬油。按摩 2 分鐘至黏稠，覆蓋冷藏醃 30 分鐘；醃漬期間，同時將密封的新鮮河粉放室溫回溫 20 分鐘。",
+        "牛フランク280gを繊維に逆らって6mm厚に切り、水20ml、重曹1g、コーンスターチ5g、オイスターソース10ml、紹興酒10ml、薄口しょうゆ5mlを混ぜる。2分揉んで粘りを出し、覆って冷蔵庫で30分漬ける。その間、密封した生麺を室温に20分置く。",
+        "플랭크 스테이크 280g을 결 반대로 6mm 두께로 썬다. 물 20ml, 베이킹소다 1g, 옥수수전분 5g, 굴소스 10ml, 샤오싱주 10ml, 양조간장 5ml를 넣는다. 2분 주물러 끈기를 낸 뒤 덮어 냉장고에서 30분 재운다. 재우는 동안 밀봉한 생면을 실온에 20분 둔다.",
+        "หั่นเนื้อส่วนข้าง 280 กรัมขวางเส้นหนา 6 มม. คลุกน้ำ 20 มล. เบกกิ้งโซดา 1 กรัม แป้งข้าวโพด 5 กรัม ซอสหอยนางรม 10 มล. เหล้าจีน 10 มล. และซีอิ๊วขาว 5 มล. นวด 2 นาทีจนเหนียว ปิดฝาหมักในตู้เย็น 30 นาที ระหว่างหมักพักเส้นสดที่ปิดถุงไว้ที่อุณหภูมิห้อง 20 นาที"
       )
     },
     {
       title: ml("Loosen noodles and mix the sauce", "回溫河粉並拌醬", "麺を戻し、たれを混ぜる", "면을 풀고 소스 섞기", "คลายเส้นและผสมซอส"),
       body: ml(
-        "Let the sealed 340 g fresh wide rice noodles stand at room temperature for 20 minutes, then separate them gently by hand. Do not soak or rinse; discard pieces that remain hard or smell sour. Mix 30 ml Shaoxing wine, 30 ml light soy sauce, 10 ml dark soy sauce, 5 ml sesame oil, 2 g sugar, and 0.5 g white pepper.",
-        "將密封的 340 公克新鮮寬河粉在室溫放 20 分鐘，再用手輕輕分開。不要浸水或沖洗；仍硬結或帶酸味的部分丟棄。混合 30 毫升紹興酒、30 毫升淡醬油、10 毫升老抽、5 毫升芝麻油、2 公克砂糖與 0.5 公克白胡椒。",
-        "密封した生の幅広米麺340gを室温に20分置き、手でそっとほぐす。水に浸したり洗ったりせず、硬いまま、または酸っぱい匂いの部分は捨てる。紹興酒30ml、薄口しょうゆ30ml、濃口しょうゆ10ml、ごま油5ml、砂糖2g、白こしょう0.5gを混ぜる。",
-        "밀봉한 생 넓은 쌀국수 340g을 실온에 20분 둔 뒤 손으로 부드럽게 푼다. 물에 담그거나 헹구지 말고 계속 딱딱하거나 신 냄새가 나는 부분은 버린다. 샤오싱주 30ml, 양조간장 30ml, 진간장 10ml, 참기름 5ml, 설탕 2g, 흰 후추 0.5g을 섞는다.",
-        "พักเส้นใหญ่สด 340 กรัมที่ปิดถุงสนิทไว้ที่อุณหภูมิห้อง 20 นาที แล้วแยกเส้นด้วยมือเบาๆ ห้ามแช่หรือล้างน้ำ ทิ้งส่วนที่ยังแข็งหรือมีกลิ่นเปรี้ยว ผสมเหล้าจีน 30 มล. ซีอิ๊วขาว 30 มล. ซีอิ๊วดำ 10 มล. น้ำมันงา 5 มล. น้ำตาล 2 กรัม และพริกไทยขาว 0.5 กรัม"
+        "Gently separate the 340 g noodles that rested during the beef marinade by hand. Do not soak or rinse; discard pieces that remain hard or smell sour. Mix 30 ml Shaoxing wine, 30 ml light soy sauce, 10 ml dark soy sauce, 5 ml sesame oil, 2 g sugar, and 0.5 g white pepper.",
+        "將醃牛肉期間回溫的 340 公克新鮮寬河粉用手輕輕分開。不要浸水或沖洗；仍硬結或帶酸味的部分丟棄。混合 30 毫升紹興酒、30 毫升淡醬油、10 毫升老抽、5 毫升芝麻油、2 公克砂糖與 0.5 公克白胡椒。",
+        "牛肉の漬け込み中に室温へ戻した生の幅広米麺340gを、手でそっとほぐす。水に浸したり洗ったりせず、硬いまま、または酸っぱい匂いの部分は捨てる。紹興酒30ml、薄口しょうゆ30ml、濃口しょうゆ10ml、ごま油5ml、砂糖2g、白こしょう0.5gを混ぜる。",
+        "소고기를 재우는 동안 실온에 둔 생 넓은 쌀국수 340g을 손으로 부드럽게 푼다. 물에 담그거나 헹구지 말고 계속 딱딱하거나 신 냄새가 나는 부분은 버린다. 샤오싱주 30ml, 양조간장 30ml, 진간장 10ml, 참기름 5ml, 설탕 2g, 흰 후추 0.5g을 섞는다.",
+        "ระหว่างหมักเนื้อ พักเส้นใหญ่สด 340 กรัมที่ปิดถุงไว้ในอุณหภูมิห้อง 20 นาที แล้วแยกเส้นด้วยมือเบาๆ ห้ามแช่หรือล้างน้ำ ทิ้งส่วนที่ยังแข็งหรือมีกลิ่นเปรี้ยว ผสมเหล้าจีน 30 มล. ซีอิ๊วขาว 30 มล. ซีอิ๊วดำ 10 มล. น้ำมันงา 5 มล. น้ำตาล 2 กรัม และพริกไทยขาว 0.5 กรัม"
       )
     },
     {
-      title: ml("Sear the beef", "快炒牛肉", "牛肉を焼き付ける", "소고기 재빨리 굽기", "จี่เนื้อ"),
+      title: ml("Sear and rest the beef", "煎香並靜置牛肉", "牛肉を焼いて休ませる", "소고기 굽고 휴지하기", "จี่และพักเนื้อ"),
       body: ml(
-        "Heat a wok over high heat until a water drop evaporates instantly. Add 15 ml oil and sear the beef in a single layer for 60–90 seconds per side. Remove it when browned and about 80% cooked so it will finish later.",
-        "炒鍋大火加熱至滴水立即蒸發，加入 15 毫升油。牛肉單層下鍋，每面快炒 60–90 秒；表面上色、約 80% 熟就取出，稍後再完成加熱。",
-        "水滴がすぐ蒸発するまで中華鍋を強火で熱す。油15mlを加え、牛肉を一層にして片面60～90秒ずつ焼く。焼き色が付き約80%火が通ったら取り出し、後で仕上げる。",
-        "웍을 센 불로 달궈 물방울이 즉시 증발하게 한다. 기름 15ml를 넣고 소고기를 한 겹으로 60–90초씩 굽는다. 갈색이 나고 80% 익으면 빼서 나중에 마저 익힌다.",
-        "ตั้งกระทะไฟแรงจนหยดน้ำระเหยทันที ใส่น้ำมัน 15 มล. จี่เนื้อชั้นเดียวด้านละ 60–90 วินาที ตักออกเมื่อเป็นสีน้ำตาลและสุกประมาณ 80% เพื่อกลับมาให้สุกท้ายสุด"
+        "Heat a wok over high heat until a water drop evaporates instantly. Divide 15 ml oil between two uncrowded batches and sear the 6 mm beef in one layer for 60–90 seconds per side. Insert a thin-tip thermometer from the side into a thick strip in each batch; it must reach 63°C (145°F). Continue in 15-second bursts if needed. Transfer each batch to a clean plate and rest for at least 3 minutes before returning it; the noodle cooking steps provide this rest.",
+        "炒鍋大火加熱至滴水立即蒸發。將 15 毫升油分配給兩批不擁擠的牛肉，6 毫米牛肉單層下鍋，每面煎 60–90 秒。用細探針溫度計從側面插入每批較厚的肉片，須達 63°C（145°F）；不足時每次續煎 15 秒再測。各批移至乾淨盤子至少靜置 3 分鐘再回鍋；炒煮河粉的步驟可同時讓牛肉休息。",
+        "中華鍋を強火で熱し、水滴がすぐ蒸発する状態にします。油15mlを2回に分け、6mm厚の牛肉を詰め込まず一層にして片面60～90秒ずつ焼きます。細い先端の温度計を横から厚い肉片に差し、各回63°C（145°F）に達したことを確認します。不足なら15秒ずつ追加して測り直します。各回を清潔な皿に移して3分以上休ませてから戻します。麺を調理する工程がその休ませ時間になります。",
+        "웍을 센 불로 달궈 물방울이 즉시 증발하게 한다. 기름 15ml를 두 번의 여유 있는 배치에 나누고 6mm 두께의 소고기를 한 겹으로 놓아 한 면당 60–90초 굽는다. 가는 탐침 온도계를 옆으로 넣어 각 배치의 두꺼운 조각이 63°C (145°F)에 도달하는지 잰다. 부족하면 15초씩 더 굽고 다시 잰다. 각 배치는 깨끗한 접시에 옮겨 최소 3분 쉬게 한 뒤 다시 넣는다. 면을 볶는 동안 이 휴지 시간을 확보한다.",
+        "ตั้งกระทะไฟแรงจนหยดน้ำระเหยทันที แบ่งน้ำมัน 15 มล. สำหรับเนื้อสองชุดที่ไม่แน่น วางเนื้อหนา 6 มม. ชั้นเดียว จี่ด้านละ 60–90 วินาที ใช้เทอร์โมมิเตอร์ปลายเล็กสอดจากด้านข้างเข้าเนื้อชิ้นหนาในแต่ละชุด ต้องถึง 63°C (145°F) หากยังต่ำให้จี่เพิ่มครั้งละ 15 วินาทีแล้ววัดซ้ำ ย้ายแต่ละชุดใส่จานสะอาดพักอย่างน้อย 3 นาทีก่อนใส่กลับ ใช้ช่วงที่ผัดเส้นเป็นเวลาพักเนื้อ"
       )
     },
     {
@@ -323,21 +323,21 @@ export const expandedInstructionsB = {
     {
       title: ml("Return beef and sprouts", "回鍋牛肉與豆芽", "牛肉ともやしを戻す", "소고기와 숙주 돌려 넣기", "ใส่เนื้อและถั่วงอกกลับ"),
       body: ml(
-        "Return the seared beef and add 150 g bean sprouts. Toss for 45–60 seconds, stopping when the sprouts remain crisp and the beef reaches 71°C at the centre for immediate serving.",
-        "將煎過的牛肉回鍋，加入 150 公克豆芽。拌炒 45–60 秒，豆芽仍脆且牛肉中心達 71°C 時停火並立即上桌。",
-        "焼いた牛肉を戻し、もやし150gを加える。45～60秒和え、もやしの歯ごたえを残し、すぐ供する牛肉の中心が71℃になったら止める。",
-        "구운 소고기를 돌려 넣고 숙주 150g을 넣는다. 45–60초 버무려 숙주는 아삭하게 유지하고 즉시 낼 소고기 중심이 71°C가 되면 멈춘다.",
-        "ใส่เนื้อที่จี่ไว้กลับลงไปและเติมถั่วงอก 150 กรัม คลุก 45–60 วินาที หยุดเมื่อถั่วงอกยังกรอบและใจกลางเนื้อถึง 71°C สำหรับเสิร์ฟทันที"
+        "Return the rested beef and its juices with 150 g bean sprouts. Toss for 45–60 seconds, just until the sprouts are hot but still crisp. The steak has already reached 63°C and rested for 3 minutes, so do not keep cooking it to chase a colour cue. Divide evenly among four servings, about 70 g raw-beef equivalent per serving, and serve immediately.",
+        "將靜置過的牛肉與肉汁、150 公克豆芽一起回鍋，拌炒 45–60 秒，至豆芽熱透但仍脆。牛排已達 63°C 並靜置 3 分鐘，不要為了追求顏色而久炒。平均分成四份，每份約相當於 70 公克生牛肉，立即上桌。",
+        "休ませた牛肉と肉汁、もやし150gを戻し、45～60秒、もやしが熱くなり歯ごたえを保つまで炒めます。牛肉はすでに63°Cに達し3分休ませているため、色を目安に加熱し続けないでください。4人分に均等に分け、1人分は生牛肉約70g相当です。すぐに供します。",
+        "쉬게 둔 소고기와 육즙, 숙주 150g을 넣고 45–60초, 숙주가 뜨겁지만 아삭할 때까지만 볶는다. 소고기는 이미 63°C에 도달해 3분 쉬었으므로 색을 더 내려고 계속 익히지 않는다. 네 인분으로 고르게 나누면 한 인분은 생고기 약 70g 분량이며 즉시 낸다.",
+        "ใส่เนื้อที่พักแล้วพร้อมน้ำเนื้อและถั่วงอก 150 กรัม คลุก 45–60 วินาที แค่ให้ถั่วงอกร้อนแต่ยังกรอบ เนื้อผ่าน 63°C และพักครบ 3 นาทีแล้ว จึงไม่ควรผัดต่อเพื่อให้ได้สีตามที่เห็น แบ่งเท่า ๆ กันสี่ที่ เนื้อดิบเทียบเท่าประมาณ 70 กรัมต่อที่ แล้วเสิร์ฟทันที"
       )
     },
     {
       title: ml("Serve for wok hei", "趁鑊氣上桌", "鍋気があるうちに供する", "웍헤이가 있을 때 내기", "เสิร์ฟขณะมีกลิ่นกระทะ"),
       body: ml(
-        "Turn off the heat and transfer the dry-fried noodles immediately. Serve within a minute so the wide noodles retain their seared wok hei and the sprouts stay crisp.",
-        "關火後立即盛出乾炒牛河，1 分鐘內上桌，保留寬河粉的鑊氣與豆芽脆度。",
-        "火を止め、乾炒牛河をすぐ盛る。1分以内に供し、幅広麺の焼けた鍋気ともやしの歯ごたえを保つ。",
-        "불을 끄고 건식 볶음면을 즉시 담는다. 1분 안에 내야 넓은 면의 웍헤이와 숙주 아삭함이 남는다.",
-        "ปิดไฟแล้วตักเส้นผัดแห้งใส่จานทันที เสิร์ฟภายใน 1 นาทีเพื่อคงกลิ่นกระทะของเส้นใหญ่และความกรอบของถั่วงอก"
+        "Turn off the heat and transfer the dry-fried noodles immediately. Serve within a minute so the wide noodles retain their seared wok hei and the sprouts stay crisp. If any remain, move them to a shallow container and refrigerate within 2 hours at 4°C (40°F) or below; use within 2 days as this recipe’s conservative limit, then reheat only the portion being served to 74°C (165°F) throughout.",
+        "關火後立即盛出乾炒牛河，1 分鐘內上桌，保留寬河粉的鑊氣與豆芽脆度。若有剩菜，放入淺盒並於 2 小時內冷藏至 4°C（40°F）以下；2 天是本食譜採用的保守期限，只回熱當次食用份量至整體達 74°C（165°F）。",
+        "火を止め、乾炒牛河をすぐ盛ります。1分以内に供し、幅広麺の焼けた鍋気ともやしの歯ごたえを保ちます。残りは浅い容器に入れ、2時間以内に4°C以下で冷蔵します。2日以内はこのレシピの保守的な目安です。食べる分だけ全体が74°C（165°F）になるまで温めます。",
+        "불을 끄고 건식 볶음면을 즉시 담는다. 1분 안에 내야 넓은 면의 웍헤이와 숙주 아삭함이 남는다. 남으면 얕은 용기에 담아 2시간 안에 4°C 이하로 냉장한다. 2일은 이 레시피의 보수적 기준이며, 먹을 양만 전체가 74°C (165°F)가 될 때까지 데운다.",
+        "ปิดไฟแล้วตักเส้นผัดแห้งใส่จานทันที เสิร์ฟภายใน 1 นาทีเพื่อคงกลิ่นกระทะของเส้นใหญ่และความกรอบของถั่วงอก หากเหลือให้ใส่ภาชนะตื้น แช่เย็นภายใน 2 ชั่วโมงที่ 4°C หรือต่ำกว่า กินภายใน 2 วันซึ่งเป็นเกณฑ์เผื่อความปลอดภัยของสูตร และอุ่นเฉพาะส่วนที่จะกินให้ถึง 74°C (165°F) ทั่วถึง"
       )
     }
   ],

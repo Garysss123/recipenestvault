@@ -793,11 +793,11 @@ const recipeDraftBSource = [
       th: [{ from: "หมูสามชั้นหมักเกลือ (150 กรัม)", to: "หมูแดงจีนหั่นบาง (150 กรัม)", note: "ใส่ช่วงเคี่ยว 3 นาทีสุดท้ายเพื่อไม่ให้แห้ง" }, { from: "หม้อดิน", to: "หม้อก้นหนามีฝา", note: "ใช้อัตราน้ำเท่าเดิมแต่คอยดูข้าวกรอบใกล้ชิด" }]
     },
     storage: {
-      en: "Cool rice within 2 hours and refrigerate airtight for up to 3 days. Reheat covered with 15 ml water at medium-low heat until steaming hot; the crust will soften, so crisp it briefly in the pot afterward.",
-      "zh-hant": "米飯 2 小時內放涼並密封冷藏最多 3 天。加 15 毫升水後中小火加蓋回熱至冒蒸氣；飯焦會變軟，可再短暫加熱恢復口感。",
-      ja: "2時間以内に冷まして密閉冷蔵3日まで。水15mlを加え中弱火でふたをして蒸気が出るまで温める。おこげは柔らかくなるので最後に短く焼き直す。",
-      ko: "밥은 2시간 안에 식혀 밀폐 냉장 3일까지 보관한다. 물 15ml를 넣고 중약불에서 덮어 김이 날 때까지 데운다. 누룽지는 부드러워지므로 마지막에 잠깐 다시 굽는다.",
-      th: "ทำข้าวให้เย็นภายใน 2 ชั่วโมงและแช่เย็นภาชนะปิดสนิทไม่เกิน 3 วัน เติมน้ำ 15 มล. อุ่นไฟกลางอ่อนปิดฝาจนร้อนมีไอ ข้าวกรอบจะนิ่ม จึงเร่งไฟสั้นๆ ตอนท้ายได้"
+      en: "Divide leftover rice and meats into shallow containers and refrigerate within 1 hour of cooking. Keep at 4°C (40°F) or below and use within 24 hours. Reheat the rice only once until steaming hot throughout, adding 15 ml water in a covered pan; briefly re-crisp the softened crust afterward.",
+      "zh-hant": "剩下的米飯與臘味分裝淺盒，烹煮後 1 小時內冷藏，保持 4°C（40°F）以下並於 24 小時內食用。米飯最多回熱一次，加入 15 毫升水加蓋加熱至整體冒蒸氣；軟掉的飯焦可最後短暫煎脆。",
+      ja: "残ったご飯と肉は浅い容器に分け、調理後1時間以内に冷蔵します。4°C以下で保存し24時間以内に使います。ご飯の再加熱は一度だけとし、15mlの水を加えてふたをし、全体から湯気が出るまで温めます。柔らかくなったおこげは最後に短く焼き直します。",
+      ko: "남은 밥과 고기는 얕은 용기에 나누어 조리 후 1시간 안에 냉장한다. 4°C 이하로 보관하고 24시간 안에 먹는다. 밥은 15ml 물을 넣고 덮어 전체에서 김이 날 때까지 한 번만 재가열한다. 부드러워진 누룽지는 마지막에 잠깐 다시 굽는다.",
+      th: "แบ่งข้าวและเนื้อที่เหลือใส่ภาชนะตื้น แช่เย็นภายใน 1 ชั่วโมงหลังปรุง เก็บที่ 4°C หรือต่ำกว่าและกินภายใน 24 ชั่วโมง อุ่นข้าวเพียงครั้งเดียวโดยเติมน้ำ 15 มล. ปิดฝาจนมีไอทั่วถึง แล้วจี่ข้าวกรอบที่นิ่มลงอีกสั้น ๆ ตอนท้าย"
     },
     culturalNotes: {
       en: "Clay-pot rice (bo jai fan) is a Cantonese comfort food associated with Hong Kong street stalls and home kitchens; the prized scorched rice layer is called faan ziu and is scraped up to share.",
@@ -808,7 +808,9 @@ const recipeDraftBSource = [
     },
     sources: [
       { title: "The Woks of Life — Hong Kong Style Clay Pot Rice Bowl", url: "https://thewoksoflife.com/hong-kong-style-clay-pot-rice/" },
-      { title: "Omnivore's Cookbook — Claypot Rice (煲仔饭)", url: "https://omnivorescookbook.com/claypot-rice/" }
+      { title: "Omnivore's Cookbook — Claypot Rice (煲仔饭)", url: "https://omnivorescookbook.com/claypot-rice/" },
+      { title: "Official food-safety guidance — UK Food Standards Agency: Home food fact checker", url: "https://www.gov.uk/government/publications/home-food-fact-checker/home-food-fact-checker" },
+      { title: "Official food-safety guidance — FoodSafety.gov: 4 Steps to Food Safety", url: "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety" }
     ],
     visualSpec: {
       en: "Real finished-dish brief: the clay pot itself or a shallow bowl filled with separate glossy rice grains, sliced red-brown Chinese sausage, cured pork belly, ginger, and chopped scallion; show a distinct golden crisp-rice rim at the bottom edge.",
@@ -837,8 +839,8 @@ const recipeDraftBSource = [
       th: "เส้นใหญ่ผัดไฟแรงกับเนื้อหมักให้นุ่ม ถั่วงอก ขิง ต้นหอม และซีอิ๊วดำจนมีกลิ่นกระทะ"
     },
     prep: "PT40M",
-    cook: "PT10M",
-    total: "PT50M",
+    cook: "PT14M",
+    total: "PT54M",
     yield: {
       en: "4 servings",
       "zh-hant": "4 份",
@@ -849,7 +851,7 @@ const recipeDraftBSource = [
     servings: 4,
     ingredients: {
       en: [
-        { item: "flank steak, sliced across the grain 3 mm thick", amount: "280 g" },
+        { item: "flank steak, sliced across the grain 6 mm thick", amount: "280 g" },
         { item: "water for the beef marinade", amount: "20 ml" },
         { item: "baking soda", amount: "1 g" },
         { item: "cornstarch", amount: "5 g" },
@@ -869,7 +871,7 @@ const recipeDraftBSource = [
         { item: "white pepper", amount: "0.5 g" }
       ],
       "zh-hant": [
-        { item: "牛腹肉，逆紋切 3 毫米薄片", amount: "280 公克" },
+        { item: "牛腹肉，逆紋切 6 毫米厚片", amount: "280 公克" },
         { item: "牛肉醃料用水", amount: "20 毫升" },
         { item: "小蘇打", amount: "1 公克" },
         { item: "玉米粉", amount: "5 公克" },
@@ -889,7 +891,7 @@ const recipeDraftBSource = [
         { item: "白胡椒粉", amount: "0.5 公克" }
       ],
       ja: [
-        { item: "牛フランク（繊維を断つ3mm薄切り）", amount: "280g" },
+        { item: "牛フランク（繊維を断つ6mm厚さ）", amount: "280g" },
         { item: "牛肉下味用の水", amount: "20ml" },
         { item: "重曹", amount: "1g" },
         { item: "コーンスターチ", amount: "5g" },
@@ -909,7 +911,7 @@ const recipeDraftBSource = [
         { item: "白こしょう", amount: "0.5g" }
       ],
       ko: [
-        { item: "플랭크 스테이크, 결 반대로 3mm 썬 것", amount: "280g" },
+        { item: "플랭크 스테이크, 결 반대로 6mm 두께로 썬 것", amount: "280g" },
         { item: "소고기 밑간용 물", amount: "20ml" },
         { item: "베이킹소다", amount: "1g" },
         { item: "옥수수전분", amount: "5g" },
@@ -929,7 +931,7 @@ const recipeDraftBSource = [
         { item: "흰 후추", amount: "0.5g" }
       ],
       th: [
-        { item: "เนื้อสเต๊กส่วนข้างหั่นขวางเส้นหนา 3 มม.", amount: "280 กรัม" },
+        { item: "เนื้อสเต๊กส่วนข้างหั่นขวางเส้นหนา 6 มม.", amount: "280 กรัม" },
         { item: "น้ำสำหรับหมักเนื้อ", amount: "20 มล." },
         { item: "เบกกิ้งโซดา", amount: "1 กรัม" },
         { item: "แป้งข้าวโพด", amount: "5 กรัม" },
@@ -1013,11 +1015,11 @@ const recipeDraftBSource = [
       th: [{ from: "เส้นใหญ่สด (340 กรัม)", to: "เส้นข้าวกว้างแห้ง (225 กรัม)", note: "แช่ตามฉลากแล้วสะเด็ดให้แห้งมาก" }, { from: "ซอสหอยนางรม (10 มล.)", to: "ซอสผัดเห็ด (10 มล.)", note: "ใช้หมักเต้าหู้หรือเซตันสำหรับสูตรมังสวิรัติ" }]
     },
     storage: {
-      en: "Serve immediately. Refrigerate leftovers in a shallow airtight container for up to 2 days; reheat once in a hot oiled wok for 2–3 minutes, adding 5 ml water only if the noodles are dry.",
-      "zh-hant": "請立即食用。剩河粉放淺密封盒冷藏最多 2 天；以熱油鍋一次回炒 2–3 分鐘，只有太乾時才加 5 毫升水。",
-      ja: "出来たてを食べる。残りは浅い密閉容器で冷蔵2日まで。油を熱した鍋で2～3分一度だけ温め、乾いていれば水5mlを足す。",
-      ko: "완성 즉시 먹는다. 남은 면은 얕은 밀폐 용기에 담아 냉장 2일까지 보관하고 기름을 두른 뜨거운 웍에서 2–3분 한 번만 데운다. 너무 마르면 물 5ml를 넣는다.",
-      th: "เสิร์ฟทันที เก็บที่เหลือในกล่องตื้นปิดสนิทแช่เย็นได้ 2 วัน อุ่นครั้งเดียวในกระทะร้อนใส่น้ำมัน 2–3 นาที เติมน้ำ 5 มล. เฉพาะเมื่อเส้นแห้ง"
+      en: "Serve immediately. Refrigerate leftovers in a shallow container within 2 hours at 4°C (40°F) or below. Use within 2 days as this recipe’s conservative limit; reheat only the portion being served until it reaches 74°C (165°F) throughout, adding 5 ml water only if the noodles are dry.",
+      "zh-hant": "請立即食用。剩餘牛肉河粉放入淺盒，於 2 小時內冷藏並保持在 4°C（40°F）以下。2 天是本食譜採用的保守期限；只回熱當次要吃的份量，至整體達 74°C（165°F），太乾時才加 5 毫升水。",
+      ja: "出来たてを食べます。残りは浅い容器に入れ、2時間以内に4°C以下で冷蔵します。2日以内はこのレシピの保守的な目安です。食べる分だけ全体が74°C（165°F）になるまで温め、麺が乾いていれば水5mlを加えます。",
+      ko: "완성 즉시 먹는다. 남은 소고기 볶음면은 얕은 용기에 담아 2시간 안에 4°C 이하로 냉장한다. 2일은 이 레시피의 보수적 기준이다. 먹을 양만 전체가 74°C (165°F)가 될 때까지 데우고, 면이 마르면 물 5ml를 넣는다.",
+      th: "เสิร์ฟทันที แบ่งเนื้อและเส้นที่เหลือใส่ภาชนะตื้นแล้วแช่เย็นภายใน 2 ชั่วโมงที่ 4°C หรือต่ำกว่า กินภายใน 2 วันซึ่งเป็นเกณฑ์เผื่อความปลอดภัยของสูตร อุ่นเฉพาะส่วนที่จะกินให้ถึง 74°C (165°F) ทั่วถึง เติมน้ำ 5 มล. เฉพาะเมื่อเส้นแห้ง"
     },
     culturalNotes: {
       en: "Gān chǎo niú hé is a Cantonese classic whose defining quality is wok hei—fragrant seared flavor from a very hot wok and quick tossing. ‘Dry-fried’ means no gravy, not dry noodles.",
@@ -1028,7 +1030,9 @@ const recipeDraftBSource = [
     },
     sources: [
       { title: "The Woks of Life — Beef Chow Fun: The Traditional Cantonese Way", url: "https://thewoksoflife.com/beef-chow-fun-noodles/" },
-      { title: "Omnivore's Cookbook — Beef Chow Fun (干炒牛河)", url: "https://omnivorescookbook.com/beef-chow-fun/" }
+      { title: "Omnivore's Cookbook — Beef Chow Fun (干炒牛河)", url: "https://omnivorescookbook.com/beef-chow-fun/" },
+      { title: "Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures", url: "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures" },
+      { title: "Official food-safety guidance — FoodSafety.gov: 4 Steps to Food Safety", url: "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety" }
     ],
     visualSpec: {
       en: "Real finished-dish brief: a dark oval plate of glossy, intact wide noodles with browned beef ribbons, crisp pale bean sprouts, ginger slivers, and scallion sections visibly distributed; no gravy pooling underneath.",
