@@ -47,9 +47,9 @@ test("twenty-fourth method audit extends five-locale coverage while retaining th
   const list = regressionSource.match(/const auditedIds = \[([\s\S]*?)\n\];/)?.[1];
   assert.ok(list, "the shared all-locale detail-route list exists");
   const covered = [...list.matchAll(/"([a-z0-9-]+)"/g)].map((match) => match[1]);
-  assert.equal(covered.length, 132, "the shared detail-route regression covers 132 deep-reviewed recipes");
-  assert.equal(new Set(covered).size, 132, "all deep-reviewed IDs remain unique");
-  assert.equal(covered.filter((id) => !ids.includes(id)).length, 128, "the other 128 reviewed IDs remain present");
+  assert.equal(covered.length, 136, "the shared detail-route regression covers 136 deep-reviewed recipes");
+  assert.equal(new Set(covered).size, 136, "all deep-reviewed IDs remain unique");
+  assert.equal(covered.filter((id) => !ids.includes(id)).length, 132, "the other 132 reviewed IDs remain present");
   assert.ok(ids.every((id) => covered.includes(id)), "all four new recipes enter the shared route regression");
 
   for (const id of ids) {
