@@ -62,9 +62,9 @@ test("thirty-sixth batch adds four existing recipes to five-locale regression wi
   assert.equal(new Set(excludedIds).size, 18, "the exclusion list stays unique");
   assert.equal(ids.length, 4);
   assert.equal(new Set(ids).size, 4);
-  assert.equal(covered.length, 168, "shared regression covers 168 deep-reviewed recipes");
-  assert.equal(new Set(covered).size, 168, "shared route IDs stay unique");
-  assert.equal(covered.filter((id) => !ids.includes(id)).length, 164, "the previous 164 reviewed IDs remain");
+  assert.equal(covered.length, 172, "shared regression covers 172 deep-reviewed recipes");
+  assert.equal(new Set(covered).size, 172, "shared route IDs stay unique");
+  assert.equal(covered.filter((id) => !ids.includes(id)).length, 168, "the previous 168 reviewed IDs remain");
 
   for (const id of ids) {
     const recipe = get(id);

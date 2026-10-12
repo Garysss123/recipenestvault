@@ -33,6 +33,9 @@ export const brazilianRecipeSources = {
     'https://www.saveur.com/recipes/acaraje-brazilian-black-eyed-pea-fritters/',
     'Olivia\'s Cuisine — 30 Authentic Brazilian Recipes',
     'https://www.oliviascuisine.com/authentic-brazilian-recipes/'
+  ).concat(
+    { title: 'Official food-safety guidance — FDA: Selecting and Serving Fresh and Frozen Seafood Safely', url: 'https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely' },
+    { title: 'Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
   ),
   'churrasco-picanha': sources(
     'Brazilian Kitchen Abroad — Picanha Brazilian Coulotte Steaks',
@@ -67,6 +70,9 @@ export const brazilianRecipeSources = {
     'https://receitas.globo.com/tipos-de-prato/acompanhamentos/arroz-carreteiro-simples-4f898f516c721c38b00179f9.ghtml',
     'Brazilian Kitchen Abroad — Brazilian Rice',
     'https://braziliankitchenabroad.com/brazilian-rice/'
+  ).concat(
+    { title: 'Official food-safety guidance — UK Food Standards Agency: Home food fact checker', url: 'https://www.gov.uk/government/publications/home-food-fact-checker/home-food-fact-checker' },
+    { title: 'Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
   ),
   'feijao-tropeiro': sources(
     'Ana Maria Braga — Feijão-tropeiro simples',

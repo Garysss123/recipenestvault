@@ -45,7 +45,7 @@ export const spanishRecipeSources = {
     'https://www.foodswinesfromspain.com/en/fws-academy/recipes/2024/may/croquetas-de-jamon',
     'Spanish Sabores — Croquetas de Jamón Serrano',
     'https://spanishsabores.com/croquetas-de-jamon-serrano-recipe-ham-croquettes/comment-page-1/'
-  ),
+  ).concat({ title: 'Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }),
   'gambas-al-ajillo': sources(
     'Good Food — Gambas al ajillo',
     'https://www.bbcgoodfood.com/recipes/gambas-al-ajillo',

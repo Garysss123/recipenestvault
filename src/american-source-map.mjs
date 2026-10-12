@@ -39,7 +39,7 @@ export const americanRecipeSources = {
     'https://www.foodnetwork.com/recipes/food-network-kitchen/new-england-clam-chowder-recipe-2043587',
     'Sam LaGrassa — New England Clam Chowder',
     'https://www.foodnetwork.com/recipes/new-england-clam-chowder-recipe0-1958350'
-  ),
+  ).concat({ title: 'Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }),
   'philly-cheesesteak': sources(
     'Bobby Flay — Philly Cheese Steak',
     'https://www.foodnetwork.com/recipes/bobby-flay/philly-cheese-steak-recipe-2012068',
