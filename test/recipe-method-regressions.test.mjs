@@ -23,7 +23,8 @@ const auditedIds = [
   "fesenjan", "ukrainian-borscht", "tanzanian-pilau", "spaghetti-carbonara",
   "mercimek-corbasi", "pierogi-ruskie", "cambodian-fish-amok", "lao-chicken-larb",
   "caponata", "baklava", "malva-pudding", "pancit-bihon",
-  "feijoada", "imeretian-khachapuri", "tamales-de-pollo-en-salsa-verde", "huevos-rancheros"
+  "feijoada", "imeretian-khachapuri", "tamales-de-pollo-en-salsa-verde", "huevos-rancheros",
+  "harira", "mujadara", "maafe", "bobotie"
 ];
 const auditedRecipes = new Map(auditedIds.map((id) => [id, recipes.find((recipe) => recipe.id === id)]));
 
@@ -1338,4 +1339,135 @@ test("huevos rancheros direct soft-yolk servings to pasteurized eggs and credit 
     th: [/ไข่แดงนุ่ม[\s\S]*ไข่ทั้งเปลือกที่ผ่านการพาสเจอไรซ์[\s\S]*ทั้งไข่ขาวและไข่แดงแข็งตัว/]
   };
   for (const locale of localeOrder) assert.match(eggs.body[locale], patterns[locale][0], `${locale}: pasteurized or fully cooked egg path`);
+});
+
+test("harira allocates oil and salt, times the soup stages, and specifies wheat vermicelli in every locale", () => {
+  const recipe = auditedRecipes.get("harira");
+  assert.ok(recipe, "harira slug exists");
+  assert.equal(recipe.prepMinutes, 25);
+  assert.equal(recipe.cookMinutes, 95);
+  assert.equal(recipe.totalMinutes, 120);
+  const oil = recipe.ingredients.find((row) => row.item.en.startsWith("olive oil"));
+  assert.equal(oil?.amount, "30 ml");
+  const lamb = recipeStep(recipe, "Brown the lamb");
+  const aromatics = recipeStep(recipe, "Soften aromatics and bloom spices");
+  const simmer = recipeStep(recipe, "Simmer lamb and lentils");
+  const thicken = recipeStep(recipe, "Add chickpeas and thicken");
+  const noodles = recipeStep(recipe, "Finish with herbs and vermicelli");
+  assert.match(lamb.body.en, /20 ml olive oil[\s\S]*3–4 minutes per batch \(6–8 minutes total\)/);
+  const timedStages = [
+    lamb.body.en.replace("3–4 minutes per batch ", ""), aromatics.body.en, simmer.body.en, thicken.body.en, noodles.body.en
+  ];
+  const [cookLow, cookHigh] = summedExplicitMinutes(timedStages);
+  assert.ok(recipe.cookMinutes >= cookLow && recipe.cookMinutes <= cookHigh,
+    `cook time ${recipe.cookMinutes} covers timed stages (${cookLow}–${cookHigh} min)`);
+  const patterns = {
+    en: [/remaining 10 ml olive oil[\s\S]*5–6 minutes/, /all 5 g salt/, /thin wheat vermicelli[\s\S]*4–6 minutes/],
+    "zh-hant": [/剩餘 10 毫升橄欖油[\s\S]*5–6 分鐘/, /全部 5 公克鹽/, /小麥細麵[\s\S]*4–6 分鐘/],
+    ja: [/残りのオリーブ油10ml[\s\S]*5～6分/, /塩5gすべて/, /細い小麦バーミセリ[\s\S]*4～6分/],
+    ko: [/남은 올리브오일 10ml[\s\S]*5~6분/, /소금 5g을 모두/, /가는 밀국수 베르미첼리[\s\S]*4~6분/],
+    th: [/น้ำมันมะกอกที่เหลือ 10 มล\.[\s\S]*5–6 นาที/, /เกลือทั้งหมด 5 กรัม/, /เส้นหมี่ข้าวสาลีเส้นเล็ก[\s\S]*4–6 นาที/]
+  };
+  for (const locale of localeOrder) {
+    assert.match(aromatics.body[locale], patterns[locale][0], `${locale}: remaining oil and onion timing`);
+    assert.match(simmer.body[locale], patterns[locale][1], `${locale}: salt is fully allocated`);
+    assert.match(noodles.body[locale], patterns[locale][2], `${locale}: wheat noodle identity and timing`);
+  }
+  assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes);
+});
+
+test("mujadara quantities and covered rest match the rice-and-lentil method in every locale", () => {
+  const recipe = auditedRecipes.get("mujadara");
+  assert.ok(recipe, "mujadara slug exists");
+  assert.equal(recipe.prepMinutes, 20);
+  assert.equal(recipe.cookMinutes, 70);
+  assert.equal(recipe.totalMinutes, 90);
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("hot water"))?.amount, "500 ml");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("olive oil"))?.amount, "90 ml");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("fine salt"))?.amount, "8 g");
+  const lentils = recipeStep(recipe, "Start the lentils");
+  const onions = recipeStep(recipe, "Caramelize the onions slowly");
+  const rice = recipeStep(recipe, "Simmer rice and lentils together");
+  const rest = recipeStep(recipe, "Rest and fluff");
+  const [cookLow, cookHigh] = summedExplicitMinutes([lentils.body.en, onions.body.en, rice.body.en, rest.body.en]);
+  assert.ok(recipe.cookMinutes >= cookLow && recipe.cookMinutes <= cookHigh,
+    `cook time ${recipe.cookMinutes} covers timed stages (${cookLow}–${cookHigh} min)`);
+  const patterns = {
+    en: [/10–12 minutes/, /45 ml olive oil[\s\S]*2 g of the salt[\s\S]*25–30 minutes/, /exactly 500 ml hot water[\s\S]*remaining 6 g salt[\s\S]*18–20 minutes/, /covered for 10 minutes/],
+    "zh-hant": [/10–12 分鐘/, /45 毫升橄欖油[\s\S]*2 公克鹽[\s\S]*25–30 分鐘/, /500 毫升熱水[\s\S]*剩餘 6 公克鹽[\s\S]*18–20 分鐘/, /加蓋靜置 10 分鐘/],
+    ja: [/10～12分/, /オリーブ油45ml[\s\S]*塩2g[\s\S]*25～30分/, /熱湯500ml[\s\S]*残りの塩6g[\s\S]*18～20分/, /蓋をしたまま10分/],
+    ko: [/10~12분/, /올리브오일 45ml[\s\S]*소금 2g[\s\S]*25~30분/, /뜨거운 물 500ml[\s\S]*남은 소금 6g[\s\S]*18~20분/, /뚜껑을 덮어 10분/],
+    th: [/10–12 นาที/, /น้ำมันมะกอก 45 มล\.[\s\S]*เกลือ 2 กรัม[\s\S]*25–30 นาที/, /น้ำร้อน 500 มล\.[\s\S]*เกลือที่เหลือ 6 กรัม[\s\S]*18–20 นาที/, /ปิดฝา 10 นาที/]
+  };
+  for (const locale of localeOrder) {
+    assert.match(lentils.body[locale], patterns[locale][0], `${locale}: lentils are par-cooked first`);
+    assert.match(onions.body[locale], patterns[locale][1], `${locale}: onion oil/salt/time allocation`);
+    assert.match(rice.body[locale], patterns[locale][2], `${locale}: measured water, salt, and rice time`);
+    assert.match(rest.body[locale], patterns[locale][3], `${locale}: one covered rest is explicit`);
+  }
+  assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes);
+});
+
+test("mafe times chicken and peanut stew, cooks rice in parallel, and checks poultry at the official endpoint", () => {
+  const recipe = auditedRecipes.get("maafe");
+  assert.ok(recipe, "maafe slug exists");
+  assert.equal(recipe.prepMinutes, 25);
+  assert.equal(recipe.cookMinutes, 90);
+  assert.equal(recipe.totalMinutes, 115);
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("unsalted chicken stock"))?.amount, "1.2 L");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("long-grain rice"))?.amount, "400 g");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("water for cooking the rice"))?.amount, "600 ml");
+  assert.ok(recipe.sources.some((source) => source.url === foodSafetySource), "FoodSafety.gov is credited");
+  const chicken = recipeStep(recipe, "Brown and season the chicken");
+  const onions = recipeStep(recipe, "Soften onions and cook tomato");
+  const peanut = recipeStep(recipe, "Blend the peanut sauce");
+  const braise = recipeStep(recipe, "Simmer chicken in peanut broth");
+  const vegetables = recipeStep(recipe, "Add roots and cabbage");
+  const stewVegetableTiming = vegetables.body.en.split(" While the stew simmers")[0];
+  const [cookLow, cookHigh] = summedExplicitMinutes([chicken.body.en, onions.body.en, peanut.body.en, braise.body.en, stewVegetableTiming]);
+  assert.ok(recipe.cookMinutes >= cookLow && recipe.cookMinutes <= cookHigh,
+    `cook time ${recipe.cookMinutes} covers stew stages (${cookLow}–${cookHigh} min), with rice cooked in parallel`);
+  const patterns = {
+    en: [/2 g salt[\s\S]*three batches[\s\S]*3–4 minutes per batch \(9–12 minutes total\)/, /remaining 900 ml stock[\s\S]*5–7 minutes[\s\S]*20–25 minutes/, /74°C \(165°F\)[\s\S]*600 ml water[\s\S]*12–15 minutes[\s\S]*10 minutes/],
+    "zh-hant": [/2 公克鹽[\s\S]*三批[\s\S]*每批 3–4 分鐘（共 9–12 分鐘）/, /剩餘 900 毫升高湯[\s\S]*5–7 分鐘[\s\S]*20–25 分鐘/, /74°C[\s\S]*600 毫升水[\s\S]*12–15 分鐘[\s\S]*10 分鐘/],
+    ja: [/塩2g[\s\S]*3回に分け[\s\S]*各3～4分（計9～12分）/, /残りのだし900ml[\s\S]*5～7分[\s\S]*20～25分/, /74°C[\s\S]*水600ml[\s\S]*12～15分[\s\S]*10分/],
+    ko: [/소금 2g[\s\S]*세 번에 나눠[\s\S]*한 번에 3~4분씩\(총 9~12분\)/, /남은 육수 900ml[\s\S]*5~7분[\s\S]*20~25분/, /74°C[\s\S]*물 600ml[\s\S]*12~15분[\s\S]*10분/],
+    th: [/เกลือ 2 กรัม[\s\S]*สามรอบ[\s\S]*รอบละ 3–4 นาที \(รวม 9–12 นาที\)/, /สต็อกที่เหลือ 900 มล\.[\s\S]*5–7 นาที[\s\S]*20–25 นาที/, /74°C[\s\S]*น้ำ 600 มล\.[\s\S]*12–15 นาที[\s\S]*10 นาที/]
+  };
+  for (const locale of localeOrder) {
+    assert.match(chicken.body[locale], patterns[locale][0], `${locale}: chicken salt allocation and batch times`);
+    assert.match(braise.body[locale], patterns[locale][1], `${locale}: stock allocation and braise times`);
+    assert.match(vegetables.body[locale], patterns[locale][2], `${locale}: safe poultry temperature and parallel rice instructions`);
+  }
+});
+
+test("bobotie allocates bread, butter, seasoning, and sides and checks casserole temperature", () => {
+  const recipe = auditedRecipes.get("bobotie");
+  assert.ok(recipe, "bobotie slug exists");
+  assert.equal(recipe.prepMinutes, 25);
+  assert.equal(recipe.cookMinutes, 75);
+  assert.equal(recipe.totalMinutes, 100);
+  assert.ok(recipe.sources.some((source) => source.url === foodSafetySource), "FoodSafety.gov meat-casserole guidance is credited");
+  const soak = recipeStep(recipe, "Soak the bread");
+  const onions = recipeStep(recipe, "Soften the onions");
+  const mince = recipeStep(recipe, "Cook the curried mince");
+  const bake = recipeStep(recipe, "Add the egg custard and bake");
+  const serve = recipeStep(recipe, "Rest and serve with yellow rice");
+  const [cookLow, cookHigh] = summedExplicitMinutes([onions.body.en, mince.body.en, bake.body.en, serve.body.en]);
+  assert.ok(recipe.cookMinutes >= cookLow && recipe.cookMinutes <= cookHigh,
+    `cook time ${recipe.cookMinutes} covers timed stages (${cookLow}–${cookHigh} min)`);
+  const patterns = {
+    en: [/150 ml milk[\s\S]*10 minutes/, /25 g of the butter[\s\S]*8–10 minutes/, /2 g salt[\s\S]*all 2 g black pepper/, /180°C[\s\S]*35–45 minutes[\s\S]*74°C \(165°F\)[\s\S]*after 5 minutes/, /900 g cooked yellow rice \(150 g per person\)[\s\S]*180 g fruit chutney \(30 g per person\)/],
+    "zh-hant": [/150 毫升牛奶[\s\S]*10 分鐘/, /25 公克奶油[\s\S]*8–10 分鐘/, /2 公克鹽[\s\S]*全部 2 公克黑胡椒/, /180°C[\s\S]*35–45 分鐘[\s\S]*74°C（165°F）[\s\S]*5 分鐘後/, /熟黃薑飯 900 公克（每人 150 公克）[\s\S]*水果 chutney 180 公克（每人 30 公克）/],
+    ja: [/牛乳150ml[\s\S]*10分/, /バター25g[\s\S]*8～10分/, /塩2g[\s\S]*黒こしょう2gすべて/, /180°C[\s\S]*35～45分[\s\S]*74°C（165°F）[\s\S]*5分追加/, /調理済みのイエローライス900g（1人150g）[\s\S]*果物のチャツネ180g（1人30g）/],
+    ko: [/우유 150ml[\s\S]*10분/, /버터 25g[\s\S]*8~10분/, /소금 2g[\s\S]*후추 2g 전량/, /180°C[\s\S]*35~45분[\s\S]*74°C \(165°F\)[\s\S]*5분 더/, /조리된 옐로 라이스 900g \(1인분 150g\)[\s\S]*과일 처트니 180g \(1인분 30g\)/],
+    th: [/นม 150 มล\.[\s\S]*10 นาที/, /เนย 25 กรัม[\s\S]*8–10 นาที/, /เกลือ 2 กรัม[\s\S]*พริกไทยดำ 2 กรัมทั้งหมด/, /180°C[\s\S]*35–45 นาที[\s\S]*74°C \(165°F\)[\s\S]*อีก 5 นาที/, /ข้าวเหลืองปรุงสุก 900 กรัม \(คนละ 150 กรัม\)[\s\S]*ชัทนีย์ผลไม้ 180 กรัม \(คนละ 30 กรัม\)/]
+  };
+  for (const locale of localeOrder) {
+    assert.match(soak.body[locale], patterns[locale][0], `${locale}: bread soak uses the allocated milk`);
+    assert.match(onions.body[locale], patterns[locale][1], `${locale}: onion butter and time allocation`);
+    assert.match(mince.body[locale], patterns[locale][2], `${locale}: salt and pepper allocation`);
+    assert.match(bake.body[locale], patterns[locale][3], `${locale}: oven bake and safe casserole endpoint`);
+    assert.match(serve.body[locale], patterns[locale][4], `${locale}: exact sides and serving portions`);
+  }
 });

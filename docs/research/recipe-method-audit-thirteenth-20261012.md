@@ -1,0 +1,41 @@
+# Recipe method audit — thirteenth batch (2026-10-12)
+
+## Coverage
+
+Base: `8c95bd7eb64fa395a0a83649f7a5a5fe8695898b` on `codex/recipe-methods-twelfth-20261012`; recovery work is on `codex/recipe-methods-thirteenth-recovery-20261012`.
+
+The registry contains 353 recipes with 353 unique IDs. The first twelve batches deeply reviewed 48 distinct recipes. The same 18 user exclusions remain excluded: `mapo-tofu`, `koshari`, `cheeseburger`, `tacos-al-pastor`, `tiramisu`, `creme-brulee`, `new-york-cheesecake`, `chicken-teriyaki`, `pizza-margherita`, `pad-thai`, `butter-chicken`, `sauerbraten`, `panna-cotta`, `mango-sticky-rice`, `gulab-jamun`, `masala-dosa`, `coffin-bread`, and `nanaimo-bars`. Harira, Mujadara, Mafé, and Bobotie were present in the registry and did not overlap the earlier 48 or excluded recipes. This batch brings the cumulative deep review to 52 distinct IDs and leaves 283 eligible recipes. No `localdrafts` content was changed.
+
+## Findings and changes
+
+| Recipe | Finding | Change |
+| --- | --- | --- |
+| Harira | The formula lacked an olive-oil amount; browned lamb, aromatics, bringing the stock to a boil, thickening and noodles lacked useful stage times. Salt use and the wheat type of the vermicelli needed clarification across locales. | Add 30 ml olive oil, allocate 20 ml to browning lamb and 10 ml to vegetables, and explicitly use all 5 g salt with the stock. Time lamb browning at 3–4 minutes per batch in two batches, vegetables at 5–6 minutes, bringing the stock to a boil at about 8–10 minutes, the covered lamb-and-lentil simmer at about 60 minutes, flour simmer at 8 minutes, and thin wheat vermicelli at about 4–6 minutes. Correct Japanese, Korean and Thai noodle labels so they identify wheat noodles rather than glass noodles. Prep/cook/total are 25/95/120 minutes. These are guides for this site's formula; BBC Good Food's Harira recipe is a distinct version and does not establish these ingredient amounts or timing choices. |
+| Mujadara | The recipe did not specify cooking water, split the oil or salt, or time the par-cook, onion stage, rice stage and rest. Its serving method named an unlisted cucumber salad. | Add 500 ml hot water and allocate 90 ml olive oil as 45 ml for onions and 45 ml for rice. Split 8 g salt into 2 g for onions and 6 g for the rice and lentils. Par-cook lentils for 10–12 minutes; cook onions for 25–30 minutes; toast spices for 30 seconds and rice for 2 minutes; cook the combined rice and lentils with exactly 500 ml water for 18–20 minutes; rest covered for 10 minutes. Keep the listed 240 g yogurt optional and remove the unlisted cucumber salad. Prep/cook/total are 20/70/90 minutes. The Mediterranean Dish supports the par-cooked-lentil, onion, rice-and-lentil and covered-rest sequence; these quantities and timings are site selections for this formula. |
+| Mafé | The chicken and stew stages had no allocated salt or usable time ranges; the rice ingredient lacked cooking water and its parallel method. | Split 5 g salt into 2 g for chicken and 3 g for final seasoning. Brown 1.2 kg bone-in chicken in three 3–4-minute batches; time onions at 8–10 minutes, tomato paste at 1 minute, tomatoes at 8–10 minutes, peanut-butter slurry at 2–3 minutes, stock coming to a simmer at 5–7 minutes, chicken simmer at 20–25 minutes, and vegetables at 20–25 minutes. Split the 1.2 L stock as 300 ml for the peanut slurry and 900 ml for the stew. Add 600 ml rice water for the listed 400 g rice; cook and rest it while the stew simmers. Check the thickest chicken part at 74°C / 165°F. Prep/cook/total are 25/90/115 minutes. Food Network confirms white rice as a traditional accompaniment and describes a different lamb version; the chicken formula, amounts and timings here are site choices. Luna flagged an awkward Thai gloss translation; it was revised to describe the sauce as glossy. |
+| Bobotie | Bread-soaking milk and butter were not allocated; the mince lacked defined seasoning and stage times; oven-bake doneness had no measurable safe casserole endpoint; and the serving directions did not quantify yellow rice or chutney. | Allocate 150 ml of the 250 ml milk to soak bread for 10 minutes and the remaining 100 ml to the egg topping. Allocate 25 g of the 30 g butter to onions and 5 g to grease the stated 23 × 30 cm dish. Specify 5 g salt as 2 g for mince and 3 g for custard, plus all 2 g black pepper in the mince. Time onions at 8–10 minutes, garlic/curry at 1 minute, beef at 8–10 minutes and the moist mince at 2–3 minutes. Bake at 180°C for 35–45 minutes, then check the centre of the meat casserole with a clean food thermometer for 74°C / 165°F; continue and recheck after 5 minutes if needed. Rest 10 minutes. Specify 900 g cooked yellow rice and 180 g fruit chutney for six servings. Prep/cook/total are 25/75/100 minutes. BBC Good Food confirms the curried mince and golden egg topping structure and uses a different formula; its bake and side details were references, not the source of this site's amounts or safety standard. |
+
+All ingredient allocations and method changes were made in English, Traditional Chinese, Japanese, Korean and Thai. Exact amounts, stage durations, servings and time estimates are choices for these site formulas; the culinary references are not represented as the original source of those choices.
+
+## Source verification
+
+Official safety reference:
+
+- [FoodSafety.gov — Cook to a Safe Minimum Internal Temperature](https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures): 165°F / 74°C for all poultry and meat casseroles. Used for Mafé chicken and the Bobotie meat-casserole centre checks. The chart supports those endpoints, not the recipe-specific simmer or bake durations.
+
+Recipe references checked:
+
+- [Robert Carrier's Moroccan Harira — BBC Good Food](https://www.bbcgoodfood.com/recipes/1730/robert-carriers-moroccan-harira): checked for a recognized Harira ingredient family and cooking sequence; that recipe uses different amounts and a longer method.
+- [Mujadara — The Mediterranean Dish](https://www.themediterraneandish.com/mujadara-lentils-and-rice-with-crispy-onions/) and [Mujadara — The Kitchn](https://www.thekitchn.com/mujadara-recipe-23149573): checked for par-cooking lentils, combining rice and lentils, browning onions, and resting. Timing and ratios vary by recipe.
+- [Mafe (Peanut Butter Stew) — Food Network](https://www.foodnetwork.com/recipes/mafe-peanut-butter-stew-recipe-1970970): checked for the peanut stew structure, regional context, and white-rice accompaniment; its version uses lamb and different quantities.
+- [Bobotie — BBC Good Food](https://www.bbcgoodfood.com/recipes/bobotie) and [Cape Malay Bobotie — Wines of South Africa](https://www.wosa.co.za/Multimedia/Cape-Recipes/BOBOTIE/): checked for the curried mince, egg topping, and serving context. Their quantities and methods vary from this site's formula.
+
+## Luna review
+
+Luna independently reviewed all four recipes' five localized ingredient lists and methods, including quantities, order, time ranges, safety wording and source attribution. It found no material cooking-method or safety issue. It identified one concrete Thai-language issue in Mafé: a literal phrase for “glossy stew” read as “shadow stew.” The Thai description was revised to describe a savory-sweet stew with a glossy sauce. No other concrete language or consistency issue was reported.
+
+## Regression coverage and limits
+
+The audited ID list now contains 52 distinct recipes. New regressions check each recipe's servings and prep/cook/total time; key quantity allocations and timed stages; and, for Mafé and Bobotie, the 74°C / 165°F endpoint and FoodSafety.gov attribution in the localized methods. The existing rendered-page regression checks ingredient lists, displayed times and Recipe JSON-LD for all 52 IDs in all five locales.
+
+`npm test` passed all locale draft audits, built the site, passed the full static audit, and passed all 61 Node tests. The build emitted 1,885 indexable URLs. A separate `npm run build` also passed and emitted 1,885 indexable URLs; `git diff --check` passed. This is a source, translation, official-reference and automated regression review. It does not claim browser/UI validation or actual cooking.
