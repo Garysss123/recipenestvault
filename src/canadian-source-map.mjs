@@ -55,12 +55,15 @@ export const canadianRecipeSources = {
     'Just Plain Cooking — Authentic Halifax Donair',
     'https://justplaincooking.ca/recipe/halifax-donair/'
   ),
-  'jiggs-dinner': sources(
-    'Parks Canada — Jiggs Dinner, Ryan Premises National Historic Site',
-    'https://parks.canada.ca/culture/gourmand-gourmet/recette-recipe76',
-    "Bonita's Kitchen — Jiggs Dinner and Peas Pudding",
-    'https://www.bonitaskitchen.com/recipe/jiggs-dinner-and-peas-pudding-traditional-newfoundland/'
-  ),
+  'jiggs-dinner': [
+    ...sources(
+      'Parks Canada — Jiggs Dinner, Ryan Premises National Historic Site',
+      'https://parks.canada.ca/culture/gourmand-gourmet/recette-recipe76',
+      "Bonita's Kitchen — Jiggs Dinner and Peas Pudding",
+      'https://www.bonitaskitchen.com/recipe/jiggs-dinner-and-peas-pudding-traditional-newfoundland/'
+    ),
+    { title: 'FoodSafety.gov — Cold Food Storage Charts', url: 'https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts' }
+  ],
   toutons: sources(
     "Rock Recipes — Newfoundland Toutons",
     'https://www.rockrecipes.com/newfoundland-toutons/',

@@ -40,12 +40,16 @@ export const brazilianRecipeSources = {
     'Serious Eats — Brazilian Picanha Steak',
     'https://www.seriouseats.com/grilled-picanha-brazilian-style-steak-recipe'
   ),
-  'bobo-de-camarao': sources(
-    'Easy and Delish — Bobó de Camarão',
-    'https://www.easyanddelish.com/bobo-de-camarao/',
-    'TasteAtlas — Bobó de Camarão',
-    'https://www.tasteatlas.com/bobo-de-camarao/recipe'
-  ),
+  'bobo-de-camarao': [
+    ...sources(
+      'Easy and Delish — Bobó de Camarão',
+      'https://www.easyanddelish.com/bobo-de-camarao/',
+      'Brazilian Kitchen Abroad — Bobó de Camarão (Brazilian Shrimp Stew)',
+      'https://braziliankitchenabroad.com/bobo-de-camarao-brazilian-shrimp-stew/'
+    ),
+    { title: 'FoodSafety.gov — Cook to a Safe Minimum Internal Temperature', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' },
+    { title: 'FDA — Selecting and Serving Fresh and Frozen Seafood Safely', url: 'https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely' }
+  ],
   vatapa: sources(
     'Saveur — Brazilian Shrimp Stew (Vatapá)',
     'https://www.saveur.com/article/Recipes/Classic-Brazilian-Shrimp-Stew/',
