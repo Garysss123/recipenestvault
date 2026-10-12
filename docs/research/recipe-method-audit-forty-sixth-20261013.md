@@ -34,7 +34,7 @@ Official food-safety entries are separately labelled in each recipe's source dat
 - [FoodSafety.gov — Safe Minimum Internal Temperatures](https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures): ground meat/sausage 71°C / 160°F and leftovers 74°C / 165°F. The live-clam cooking cue is shell opening rather than a forced thermometer reading.
 - [FoodSafety.gov — 4 Steps to Food Safety](https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety): refrigerate perishable food within two hours, keep the refrigerator at or below 4°C / 40°F, use shallow containers to cool food, and hold hot food at or above 60°C / 140°F.
 - [UK Food Standards Agency — Home food fact checker](https://www.gov.uk/government/publications/home-food-fact-checker/home-food-fact-checker): cool cooked rice quickly, ideally within one hour; refrigerate and use within 24 hours; reheat once until steaming hot throughout.
-- [FDA — What You Need to Know About Egg Safety](https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-to-know-about-egg-safety): refrigerate eggs, cook ordinary eggs until whites and yolks are firm, and use pasteurized eggs for recipes served undercooked.
+- [FDA — What You Need to Know About Egg Safety](https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety): refrigerate eggs, cook ordinary eggs until whites and yolks are firm, and use pasteurized eggs for recipes served undercooked.
 - [FoodSafety.gov — Cold Food Storage Charts](https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts): general refrigerator-storage reference. The shorter three-day English-breakfast limit is marked as a conservative recipe choice.
 
 ## Translation and review

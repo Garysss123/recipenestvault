@@ -15,7 +15,7 @@ const src = {
   chill: "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety",
   temps: "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
   seafood: "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely",
-  eggs: "https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-to-know-about-egg-safety",
+  eggs: "https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety",
   cold: "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts"
 };
 const byId = new Map(recipes.map((recipe) => [recipe.id, recipe]));
