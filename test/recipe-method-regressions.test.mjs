@@ -18,7 +18,8 @@ const auditedIds = [
   "tonkatsu", "cornish-pasty", "carnitas", "indonesian-beef-rendang",
   "nigerian-jollof-rice", "tandoori-chicken", "marmitako", "banh-flan",
   "peruvian-ceviche", "nasi-goreng", "singapore-chilli-crab", "thieboudienne",
-  "mohinga", "nepali-chicken-momo", "trinidad-doubles", "nasi-lemak"
+  "mohinga", "nepali-chicken-momo", "trinidad-doubles", "nasi-lemak",
+  "mole-poblano", "bunny-chow", "cuban-ropa-vieja", "maultaschen"
 ];
 const auditedRecipes = new Map(auditedIds.map((id) => [id, recipes.find((recipe) => recipe.id === id)]));
 
@@ -723,6 +724,113 @@ test("nasi lemak egg endpoint follows FDA guidance in all locales", () => {
   for (const locale of localeOrder) assert.match(eggs.body[locale], firmPatterns[locale], `${locale}: egg endpoint is explicit`);
   assert.ok(eggs.body.en.includes("pasteurized eggs"), "undercooked preference directs to pasteurized eggs");
   assert.ok(recipe.sources.some((source) => source.url === eggSafetySource), "FDA egg safety guidance is credited");
+});
+
+test("mole poblano allocates its listed oil and sesame and checks poultry safety in all locales", () => {
+  const recipe = auditedRecipes.get("mole-poblano");
+  assert.ok(recipe, "mole-poblano slug exists");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "neutral oil or lard")?.amount, "80 ml");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "sesame seeds")?.amount, "80 g");
+  assert.match(recipeStep(recipe, "Brown the nuts and seeds").body.en, /20 ml of the listed oil/);
+  assert.match(recipeStep(recipe, "Toast the tortilla and bread").body.en, /20 ml of the listed oil/);
+  assert.match(recipeStep(recipe, "Fry the mole puree").body.en, /remaining 40 ml oil/);
+  assert.match(recipeStep(recipe, "Toast the sesame seeds").body.en, /Reserve 20 g.*remaining 60 g/);
+
+  const chicken = recipeStep(recipe, "Poach the chicken gently");
+  const brownNuts = recipeStep(recipe, "Brown the nuts and seeds");
+  const bread = recipeStep(recipe, "Toast the tortilla and bread");
+  const fryPuree = recipeStep(recipe, "Fry the mole puree");
+  const fatPatterns = {
+    en: [/20 ml of the listed oil or melted lard/, /20 ml of the listed oil or melted lard/, /remaining 40 ml oil or melted lard/],
+    "zh-hant": [/20 毫升油或融化豬油/, /20 毫升油或融化豬油/, /剩餘 40 毫升油或融化豬油/],
+    ja: [/油または溶かしたラード20ml/, /油または溶かしたラード20ml/, /残りの油または溶かしたラード40ml/],
+    ko: [/기름 또는 녹인 라드 20ml/, /기름 또는 녹인 라드 20ml/, /남은 기름 또는 녹인 라드 40ml/],
+    th: [/น้ำมันหรือน้ำมันหมูละลายตามรายการ 20 มล\./, /น้ำมันหรือน้ำมันหมูละลายตามรายการ 20 มล\./, /น้ำมันหรือน้ำมันหมูละลายที่เหลือ 40 มล\./]
+  };
+  const safetyPatterns = {
+    en: /74°C \(165°F\)/,
+    "zh-hant": /74°C（165°F）/,
+    ja: /74°C（165°F）/,
+    ko: /74°C\(165°F\)/,
+    th: /74°C \(165°F\)/
+  };
+  for (const locale of localeOrder) {
+    [brownNuts, bread, fryPuree].forEach((step, index) =>
+      assert.match(step.body[locale], fatPatterns[locale][index], `${locale}: existing 80 ml oil-or-lard amount is allocated`));
+    assert.match(chicken.body[locale], safetyPatterns[locale], `${locale}: chicken reaches official poultry endpoint`);
+  }
+  assert.ok(recipe.sources.some((source) => source.url === foodSafetySource), "FoodSafety.gov poultry guidance is credited");
+  assert.equal(recipe.cookMinutes, 115, "the site cook estimate reflects the timed method");
+});
+
+test("bunny chow explicitly assigns its oil and times the lamb curry", () => {
+  const recipe = auditedRecipes.get("bunny-chow");
+  assert.ok(recipe, "bunny-chow slug exists");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "neutral oil")?.amount, "60 ml");
+  assert.match(recipeStep(recipe, "Brown the mutton").body.en, /30 ml of the listed oil.*8–10 minutes/);
+  assert.match(recipeStep(recipe, "Fry the Durban masala").body.en, /remaining 30 ml oil.*8–10 minutes.*1 minute/);
+  assert.match(recipeStep(recipe, "Build the tomato curry").body.en, /5–8 minutes.*all 700 ml stock.*60–90 minutes/);
+  assert.match(recipeStep(recipe, "Add potatoes and finish the curry").body.en, /600 g potatoes.*15–20 minutes/);
+  const browned = recipeStep(recipe, "Brown the mutton");
+  const onions = recipeStep(recipe, "Fry the Durban masala");
+  const lambTimes = {
+    en: [/30 ml of the listed oil/, /8–10 minutes/],
+    "zh-hant": [/30 毫升油/, /8–10 分鐘/],
+    ja: [/油30ml/, /8〜10分/],
+    ko: [/기름 30ml/, /8–10분/],
+    th: [/น้ำมันตามรายการ 30 มล\./, /8–10 นาที/]
+  };
+  for (const locale of localeOrder) {
+    for (const pattern of lambTimes[locale]) assert.match(browned.body[locale], pattern, `${locale}: lamb browning amount and time`);
+    assert.match(onions.body[locale], locale === "ja" ? /残りの油30ml.*8〜10分/ : /30.*8.*10/,
+      `${locale}: remaining oil and onion timing are translated`);
+  }
+  assert.equal(recipe.cookMinutes, 120, "the site estimate sits within the chosen braise range");
+  assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes);
+});
+
+test("ropa vieja uses every listed ingredient and labels editorial seasoning amounts", () => {
+  const recipe = auditedRecipes.get("cuban-ropa-vieja");
+  assert.ok(recipe, "cuban-ropa-vieja slug exists");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("fine salt"))?.amount, "6 g");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "ground black pepper")?.amount, "1 g");
+  assert.match(recipe.ingredients.find((row) => row.item.en.startsWith("fine salt"))?.item.en ?? "", /divided 3 g for the beef and up to 3 g to finish/);
+  assert.match(recipeStep(recipe, "Braise the beef").body.en, /full 1\.5 L water or unsalted beef stock.*90–135 minutes/);
+  assert.match(recipeStep(recipe, "Cool and shred").body.en, /reserve all the broth.*reduce it by about half for 20–30 minutes/);
+  assert.match(recipeStep(recipe, "Soften the sofrito").body.en, /all 30 ml olive oil.*250 g onion and 300 g green pepper.*all 25 g garlic/);
+  assert.match(recipeStep(recipe, "Build the tomato sauce").body.en, /all 40 g tomato paste.*1 g black pepper.*all 400 g crushed tomatoes.*15 ml vinegar.*all the reduced broth/);
+  assert.match(recipeStep(recipe, "Fold in the beef").body.en, /all the shredded beef.*10 minutes/);
+  assert.match(recipeStep(recipe, "Adjust and serve").body.en, /up to the remaining 3 g salt.*all 600 g cooked rice and 400 g black beans among the six servings/);
+  const saltFinish = recipeStep(recipe, "Adjust and serve");
+  const finishPatterns = {
+    en: /up to the remaining 3 g salt.*six servings/,
+    "zh-hant": /最多剩餘 3 公克鹽.*分配到六份/,
+    ja: /残りの塩を最大3g.*6人分/,
+    ko: /남은 소금 최대 3g.*6인분/,
+    th: /เกลือที่เหลือไม่เกิน 3 กรัม.*6 ส่วน/
+  };
+  for (const locale of localeOrder) assert.match(saltFinish.body[locale], finishPatterns[locale], `${locale}: seasoning and servings`);
+  assert.equal(recipe.cookMinutes, 190, "the existing cook estimate remains within source-based method timing");
+});
+
+test("maultaschen portion count and ground-meat safety endpoint agree across locales", () => {
+  const recipe = auditedRecipes.get("maultaschen");
+  assert.ok(recipe, "maultaschen slug exists");
+  assert.equal(recipe.servings, 6);
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "beef mince")?.amount, "250 g");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "pork sausage meat or pork mince")?.amount, "250 g");
+  assert.match(recipeStep(recipe, "Fill in an even row").body.en, /18 equal portions \(3 per serving\)/);
+
+  const simmer = recipeStep(recipe, "Simmer in batches");
+  const safetyPatterns = {
+    en: /71°C \(160°F\)/,
+    "zh-hant": /71°C（160°F）/,
+    ja: /71°C（160°F）/,
+    ko: /71°C\(160°F\)/,
+    th: /71°C \(160°F\)/
+  };
+  for (const locale of localeOrder) assert.match(simmer.body[locale], safetyPatterns[locale], `${locale}: ground meat reaches 71°C / 160°F`);
+  assert.ok(recipe.sources.some((source) => source.url === foodSafetySource), "FoodSafety.gov ground-meat guidance is credited");
 });
 
 test("audited recipe details, visible timing, ingredients, and Recipe JSON-LD agree in every locale", async () => {

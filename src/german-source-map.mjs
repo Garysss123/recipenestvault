@@ -58,12 +58,11 @@ export const germanRecipeSources = {
     'REWE — Selbstgemachte Käsespätzle',
     'https://www.rewe.de/rezepte/selbstgemachte-kaesespaetzle/'
   ),
-  'maultaschen': sources(
-    'Kitchen Stories — Swabian maultaschen',
-    'https://www.kitchenstories.com/en/recipes/swabian-maultaschen',
-    'The Daring Gourmet — Authentic German Maultaschen',
-    'https://www.daringgourmet.com/maultaschen/'
-  ),
+  'maultaschen': [
+    { title: 'Kitchen Stories — Swabian maultaschen', url: 'https://www.kitchenstories.com/en/recipes/swabian-maultaschen' },
+    { title: 'The Daring Gourmet — Authentic German Maultaschen', url: 'https://www.daringgourmet.com/maultaschen/' },
+    { title: 'FoodSafety.gov — Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
+  ],
   'erbsensuppe': sources(
     'The Daring Gourmet — German Pea Soup with Egg Dumplings',
     'https://www.daringgourmet.com/german-pea-soup-egg-dumplings-erbsensuppe-mit-eierschwammchen/',
