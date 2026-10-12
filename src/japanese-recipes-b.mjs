@@ -415,8 +415,8 @@ export const japaneseRecipesB = [
     cuisine: "japanese",
     region: ml("Japan", "日本", "日本", "일본", "ญี่ปุ่น"),
     prepMinutes: 35,
-    cookMinutes: 15,
-    totalMinutes: 50,
+    cookMinutes: 20,
+    totalMinutes: 55,
     servings: 4,
     name: ml("Shio chicken yakitori", "鹽烤雞肉串", "鶏ももの塩焼き鳥", "소금구이 닭 야키토리", "ยากิโทริไก่ย่างเกลือ"),
     description: ml(
@@ -437,41 +437,41 @@ export const japaneseRecipesB = [
       {
         title: ml("Soak the bamboo skewers", "浸泡竹籤", "竹串を水で戻す", "대나무 꼬치 불리기", "แช่ไม้เสียบ"),
         body: ml(
-          "Soak eight 5-inch bamboo skewers in 500 ml cold water for 30 minutes. Drain them just before assembly; soaked wood is less likely to scorch under the broiler.",
-          "八支 5 英吋竹籤以 500 毫升冷水浸泡 30 分鐘，串肉前瀝乾；竹籤吸水後在烤箱上火下較不易焦黑。",
-          "5インチの竹串8本を冷水500mlに30分浸けます。串打ちの前に水を切り、含水させた竹は上火で焦げにくくします。",
-          "5인치 대나무 꼬치 8개를 찬물 500ml에 30분 불린다. 끼우기 직전 물기를 빼며 물을 머금은 나무는 브로일러에서 덜 탄다.",
-          "แช่ไม้เสียบไม้ไผ่ยาว 5 นิ้ว 8 ไม้ในน้ำเย็น 500 มล. 30 นาที สะเด็ดก่อนร้อย เนื้อไม้ที่ชุ่มน้ำจะไหม้ยากเมื่อย่างไฟบน"
+          "Start soaking eight 5-inch bamboo skewers in 500 ml cold water for 30 minutes. Prepare and salt the chicken during the soak, then drain the skewers just before threading; soaked wood is less likely to scorch under the broiler.",
+          "先將八支 5 英吋竹籤放入 500 毫升冷水浸泡 30 分鐘；趁浸泡時處理並調味雞肉，串肉前再瀝乾竹籤。吸水後的竹籤在烤箱上火下較不易焦黑。",
+          "5インチの竹串8本を冷水500mlに30分浸け始めます。その間に鶏肉を準備して塩をまぶし、串打ちの直前に水を切ります。含水した竹は上火で焦げにくくなります。",
+          "5인치 대나무 꼬치 8개를 찬물 500ml에 30분 불리기 시작합니다. 그동안 닭을 손질해 소금 간하고 끼우기 직전에 물기를 뺍니다. 물을 머금은 나무는 브로일러에서 덜 탑니다.",
+          "เริ่มแช่ไม้เสียบไม้ไผ่ยาว 5 นิ้ว 8 ไม้ในน้ำเย็น 500 มล. เป็นเวลา 30 นาที ระหว่างนั้นเตรียมไก่และคลุกเกลือ แล้วสะเด็ดไม้ก่อนร้อย ไม้ที่ชุ่มน้ำจะไหม้ยากเมื่อย่างไฟบน"
         )
       },
       {
         title: ml("Trim and cut chicken thigh", "修整切雞腿肉", "鶏もも肉を整えて切る", "닭다리살 손질해 썰기", "ตัดแต่งและหั่นน่องไก่"),
         body: ml(
-          "Trim only excess yellow fat from 600 g boneless, skin-on chicken thigh and cut it into even 3 cm pieces. Work on a dedicated raw-chicken board and sanitize the board and knife before handling the grill rack.",
-          "將 600 公克去骨帶皮雞腿肉只修去多餘黃脂肪，切成均勻 3 公分塊。使用生雞肉專用砧板，接觸烤架前清潔消毒砧板與刀具。",
-          "骨なし皮付き鶏もも肉600gは黄色い余分な脂だけ取り、3cm角にそろえます。生肉専用まな板で作業し、焼き網を扱う前にまな板と包丁を洗浄・消毒します。",
-          "뼈 없는 껍질 있는 닭다리살 600g에서 노란 여분 지방만 떼고 3cm 크기로 고르게 썬다. 생닭 전용 도마에서 작업하고 석쇠를 만지기 전에 도마와 칼을 세척·소독한다.",
-          "ตัดเฉพาะไขมันเหลืองส่วนเกินจากน่องไก่ติดหนังไร้กระดูก 600 กรัม แล้วหั่นชิ้น 3 ซม. เท่า ๆ กัน ใช้เขียงสำหรับไก่ดิบโดยเฉพาะ และล้างฆ่าเชื้อเขียงกับมีดก่อนจับตะแกรง"
+          "While the skewers soak, trim only excess yellow fat from 600 g boneless, skin-on chicken thigh and cut it into even 3 cm pieces. Work on a dedicated raw-chicken board; wash and sanitize the board and knife before handling the grill rack.",
+          "竹籤浸泡時，將 600 公克去骨帶皮雞腿肉只修去多餘黃脂肪，切成均勻 3 公分塊。使用生雞肉專用砧板；接觸烤架前清洗消毒砧板與刀具。",
+          "串を浸けている間に、骨なし皮付き鶏もも肉600gから黄色い余分な脂だけ取り、3cm角にそろえます。生肉専用まな板で作業し、焼き網を扱う前にまな板と包丁を洗浄・消毒します。",
+          "꼬치를 불리는 동안 뼈 없는 껍질 있는 닭다리살 600g에서 노란 여분 지방만 떼고 3cm 크기로 고르게 썹니다. 생닭 전용 도마에서 작업하고 석쇠를 만지기 전에 도마와 칼을 씻고 소독합니다.",
+          "ระหว่างแช่ไม้ ตัดเฉพาะไขมันเหลืองส่วนเกินจากน่องไก่ติดหนังไร้กระดูก 600 กรัม แล้วหั่นชิ้น 3 ซม. ให้เท่ากัน ใช้เขียงสำหรับไก่ดิบโดยเฉพาะ ล้างและฆ่าเชื้อเขียงกับมีดก่อนจับตะแกรง"
         )
       },
       {
         title: ml("Season with shio", "以鹽調味", "塩で下味を付ける", "소금으로 밑간하기", "ปรุงเกลือ"),
         body: ml(
-          "Toss the chicken with 6 g fine sea salt and rest it uncovered in the refrigerator at 4°C or colder for 10 minutes. Keep the seasoned raw chicken covered from other ready-to-eat foods.",
-          "雞肉拌入 6 公克細海鹽，在 4°C 以下冷藏不加蓋靜置 10 分鐘；調味生雞肉要與即食食物隔離。",
-          "鶏肉に細かい海塩6gをまぶし、4℃以下の冷蔵庫で覆わず10分置きます。味付けした生肉はそのまま食べる食品から隔離します。",
-          "닭고기에 고운 천일염 6g을 버무려 4°C 이하 냉장고에서 덮지 않고 10분 둔다. 양념한 생닭은 바로 먹는 음식과 분리한다.",
-          "คลุกไก่กับเกลือทะเลละเอียด 6 กรัม พักเปิดฝาในตู้เย็นที่ 4°C หรือต่ำกว่า 10 นาที แยกไก่ดิบที่ปรุงแล้วจากอาหารพร้อมกิน"
+          "Toss the chicken with 6 g fine sea salt and rest it in a covered tray in the refrigerator at 4°C or colder for 10 minutes, during the final part of the skewer soak. Keep raw chicken separate from ready-to-eat food.",
+          "雞肉拌入 6 公克細海鹽，放入有蓋托盤，在 4°C 以下冷藏靜置 10 分鐘，時間可與竹籤浸泡最後一段重疊。生雞肉須與即食食物分開。",
+          "鶏肉に細かい海塩6gをまぶしてふた付きのトレーに入れ、4℃以下で10分冷蔵します。串を浸ける最後の10分と重ねられます。生肉はそのまま食べる食品から離します。",
+          "닭고기에 고운 천일염 6g을 버무려 덮개 있는 트레이에 담고 4°C 이하에서 10분 냉장합니다. 꼬치 불리기의 마지막 10분과 겹쳐 진행할 수 있습니다. 생닭은 바로 먹는 음식과 분리합니다.",
+          "คลุกไก่กับเกลือทะเลละเอียด 6 กรัม ใส่ถาดมีฝาปิดและแช่ที่อุณหภูมิ 4°C หรือต่ำกว่า 10 นาที โดยทำซ้อนกับช่วง 10 นาทีสุดท้ายของการแช่ไม้ แยกไก่ดิบจากอาหารพร้อมกิน"
         )
       },
       {
         title: ml("Thread eight skewers", "串成八支", "8本に串打ちする", "여덟 꼬치에 끼우기", "ร้อยแปดไม้"),
         body: ml(
-          "Thread the 3 cm chicken pieces tightly onto the eight soaked skewers, leaving the handles clear and avoiding exposed sharp tips. Use a clean tray for the assembled raw skewers and discard any juices left on the raw tray.",
-          "將 3 公分雞塊緊密串在八支泡過水的竹籤上，握柄留空並避免尖端外露；串好的生肉放乾淨托盤，生肉托盤殘汁丟棄。",
-          "3cmの鶏肉を水で戻した8本の串に隙間なく刺し、持ち手を空けて尖った先を出さないようにします。組み立てた生串は清潔なトレーに置き、生肉トレーの汁は捨てます。",
-          "3cm 닭 조각을 불린 꼬치 8개에 빈틈없이 끼우되 손잡이는 남기고 뾰족한 끝이 드러나지 않게 한다. 조립한 생꼬치는 깨끗한 트레이에 두고 생고기 트레이의 즙은 버린다.",
-          "ร้อยไก่ชิ้น 3 ซม.แน่น ๆ บนไม้ที่แช่แล้ว 8 ไม้ เว้นด้ามจับและอย่าให้ปลายแหลมโผล่ วางไม้ดิบที่ประกอบแล้วบนถาดสะอาดและทิ้งน้ำจากถาดไก่ดิบ"
+          "Divide 600 g chicken into eight equal piles of about 75 g, then thread one pile onto each soaked skewer, leaving handles clear and avoiding exposed sharp tips. That is two skewers, or about 150 g raw chicken, per serving. Use a clean tray and discard raw-tray juices.",
+          "將 600 公克雞肉平均分成八份、每份約 75 公克，再各串上一支泡過水的竹籤，握柄留空並避免尖端外露。每人分兩支，約相當於 150 公克生雞肉。使用乾淨托盤，並丟棄生肉托盤殘汁。",
+          "鶏肉600gを約75gずつ8等分し、水で戻した串1本ずつに刺します。持ち手を空け、尖った先を出さないようにします。1人2本で、生の鶏肉約150g相当です。清潔なトレーを使い、生肉トレーの汁は捨てます。",
+          "닭고기 600g을 약 75g씩 여덟 몫으로 나누고, 불린 꼬치 하나에 한 몫씩 끼웁니다. 손잡이는 남기고 뾰족한 끝이 드러나지 않게 합니다. 한 사람당 두 꼬치로 생닭 약 150g에 해당합니다. 깨끗한 트레이를 쓰고 생고기 트레이의 즙은 버립니다.",
+          "แบ่งไก่ 600 กรัมเป็นแปดส่วนเท่า ๆ กัน ส่วนละประมาณ 75 กรัม แล้วร้อยหนึ่งส่วนต่อไม้ที่แช่แล้ว เว้นด้ามและอย่าให้ปลายแหลมโผล่ หนึ่งคนได้สองไม้ คิดเป็นไก่ดิบประมาณ 150 กรัม ใช้ถาดสะอาดและทิ้งน้ำจากถาดไก่ดิบ"
         )
       },
       {
@@ -497,21 +497,21 @@ export const japaneseRecipesB = [
       {
         title: ml("Finish to 74°C", "烤至 74°C", "74℃まで焼き上げる", "74°C까지 익히기", "ย่างจนถึง 74°C"),
         body: ml(
-          "Lower the heat slightly and continue grilling 3–4 minutes, turning once more if needed. Insert a clean thermometer into the thickest chicken piece without touching the skewer; every centre must reach at least 74°C.",
-          "略降火再烤 3–4 分鐘，必要時再翻一次。乾淨溫度計插入最厚雞塊中心且不要碰到竹籤；每支雞肉中心都須至少 74°C。",
-          "火を少し下げて3〜4分焼き、必要ならもう一度返します。清潔な温度計を串に触れないよう最も厚い肉の中心へ差し、全ての中心を74℃以上にします。",
-          "불을 조금 낮춰 3–4분 더 굽고 필요하면 한 번 더 뒤집는다. 깨끗한 온도계를 꼬치에 닿지 않게 가장 두꺼운 고기 중심에 꽂아 모든 중심이 최소 74°C인지 확인한다.",
-          "ลดไฟเล็กน้อยย่างต่อ 3–4 นาที กลับอีกครั้งหากจำเป็น สอดเทอร์โมมิเตอร์สะอาดเข้ากลางชิ้นหนาสุดโดยไม่แตะไม้เสียบ ตรวจให้ใจกลางทุกไม้ถึงอย่างน้อย 74°C"
+          "Lower the heat slightly and continue grilling 3–4 minutes, turning once more if needed. Insert a clean thermometer into the thickest chicken piece on each skewer without touching the wood; check every skewer reaches at least 74°C (165°F), continuing in 1-minute increments if needed.",
+          "略降火再烤 3–4 分鐘，必要時再翻一次。每支竹籤都用乾淨溫度計測最厚雞塊中心，避免碰到竹籤；全部須達至少 74°C（165°F），未達者每次續烤 1 分鐘。",
+          "火を少し下げて3〜4分焼き、必要ならもう一度返します。清潔な温度計を串に触れないよう各串の最も厚い肉の中心へ差し、全て74°C（165°F）以上か確認します。不足なら1分ずつ追加します。",
+          "불을 조금 낮춰 3–4분 더 굽고 필요하면 한 번 더 뒤집습니다. 깨끗한 온도계를 나무에 닿지 않게 각 꼬치의 가장 두꺼운 고기 중심에 꽂아 모두 74°C (165°F) 이상인지 확인하고, 부족하면 1분씩 더 굽습니다.",
+          "ลดไฟเล็กน้อยย่างต่อ 3–4 นาที กลับอีกครั้งหากจำเป็น สอดเทอร์โมมิเตอร์สะอาดเข้ากลางชิ้นหนาสุดของแต่ละไม้โดยไม่แตะไม้ ตรวจทุกไม้ให้ถึงอย่างน้อย 74°C (165°F) หากยังไม่ถึงให้ย่างเพิ่มครั้งละ 1 นาที"
         )
       },
       {
         title: ml("Rest and serve shio", "靜置鹽烤上桌", "休ませて塩焼きを出す", "쉬었다가 소금구이 내기", "พักแล้วเสิร์ฟแบบเกลือ"),
         body: ml(
-          "Rest the cooked skewers on a clean plate for 2 minutes, then serve immediately as shio yakitori. Use no tare, scallions, sesame, or other garnish so the finished appearance remains the lightly salted chicken skewers shown in the photograph.",
-          "熟雞肉串在乾淨盤中靜置 2 分鐘後立即以鹽烤雞肉串上桌。不使用醬汁、蔥段、芝麻或其他裝飾，保持照片中的淡色鹽烤雞串外觀。",
-          "焼き上がった串を清潔な皿で2分休ませ、塩焼き鳥としてすぐに供します。たれ、ねぎ、ゴマなどを添えず、写真の淡い塩焼きの見た目を保ちます。",
-          "익힌 꼬치를 깨끗한 접시에서 2분 쉬게 한 뒤 소금구이 야키토리로 즉시 낸다. 타레, 대파, 참깨나 다른 고명을 쓰지 않아 사진의 연한 소금구이 모습을 유지한다.",
-          "พักไก่ย่างบนจานสะอาด 2 นาทีแล้วเสิร์ฟเป็นยากิโทริเกลือทันที ไม่ใช้ซอสทา ต้นหอม งา หรือเครื่องตกแต่งอื่น เพื่อคงลักษณะไก่ย่างเกลือสีอ่อนตามภาพ"
+          "Rest the cooked skewers on a clean plate for 2 minutes, then serve two skewers per person as shio yakitori. The 6 g salt works out to 1.5 g per serving. Use no tare, scallions, sesame, or other garnish.",
+          "熟雞肉串在乾淨盤中靜置 2 分鐘，每人分兩支鹽烤雞肉串上桌。6 公克鹽平均為每份 1.5 公克。不使用醬汁、蔥段、芝麻或其他裝飾。",
+          "焼き上がった串を清潔な皿で2分休ませ、塩焼き鳥を1人2本ずつ出します。塩6gは1人分あたり1.5gです。たれ、ねぎ、ゴマなどの飾りは加えません。",
+          "익힌 꼬치를 깨끗한 접시에서 2분 쉬게 한 뒤 한 사람당 두 꼬치씩 소금구이 야키토리로 냅니다. 소금 6g은 한 몫당 1.5g입니다. 타레, 대파, 참깨나 다른 고명은 쓰지 않습니다.",
+          "พักไก่ย่างบนจานสะอาด 2 นาที แล้วเสิร์ฟยากิโทริเกลือคนละสองไม้ เกลือ 6 กรัมแบ่งเป็นส่วนละ 1.5 กรัม ไม่ใช้ซอสทา ต้นหอม งา หรือเครื่องตกแต่งอื่น"
         )
       }
     ],
@@ -531,7 +531,9 @@ export const japaneseRecipesB = [
     cultureNote: ml("Yakitori has many regional and ingredient styles; shio yakitori highlights the grill and chicken with a simple salt finish rather than a sweet tare.", "雞肉串有許多地域與部位變化；鹽烤雞肉串以簡單鹽味凸顯炭火與雞肉，不使用甜醬。", "焼き鳥には地域や部位による多様な形があり、塩焼きは甘いたれを使わず、焼きと鶏の味を塩で引き立てます。", "야키토리는 지역과 부위에 따라 다양하며 소금구이는 달콤한 타레 대신 소금으로 불향과 닭고기를 돋보이게 합니다.", "ยากิโทริมีหลายแบบตามภูมิภาคและส่วนไก่ แบบย่างเกลือเน้นกลิ่นย่างและรสไก่ด้วยเกลือแทนซอสหวาน"),
     sources: [
       { title: "Kikkoman — Yakitori", url: "https://www.kikkoman.com/en/cookbook/recipe/00001155.html" },
-      { title: "Just One Cookbook — Yakitori Recipe (Japanese Grilled Chicken Skewers)", url: "https://www.justonecookbook.com/yakitori/" }
+      { title: "Just One Cookbook — Yakitori Recipe (Japanese Grilled Chicken Skewers)", url: "https://www.justonecookbook.com/yakitori/" },
+      { title: "Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures", url: "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures" },
+      { title: "Official food-safety guidance — USDA FSIS: Correct Food Thermometer Placement", url: "https://www.fsis.usda.gov/news-events/news-press-releases/do-you-know-correct-place-insert-your-food-thermometer" }
     ],
     imageAlt: ml("Lightly salted grilled chicken yakitori skewers on a pale ceramic plate", "淺色陶盤上淡鹽烤雞肉串的日式雞肉串", "淡い塩味で焼いた鶏ももの焼き鳥を淡色の陶器皿に盛ったもの", "연한 소금으로 구운 닭 야키토리 꼬치를 밝은 도자기 접시에 담은 모습", "ยากิโทริไก่ย่างเกลือสีอ่อนบนจานเซรามิกสีอ่อน"),
     visualSpec: "Lightly salted, pale grilled chicken-thigh yakitori skewers on a plain ceramic plate; no scallion segments, tare, sesame, chili, or extra garnish visible."

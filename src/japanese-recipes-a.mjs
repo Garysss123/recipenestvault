@@ -173,15 +173,15 @@ export const japaneseRecipesA = [
     instructions: [
       step(
         ml("Keep the rice hot", "保持米飯溫熱", "ご飯を温かく保つ", "밥 따뜻하게 두기", "รักษาข้าวให้ร้อน"),
-        ml("Cook the short-grain rice before starting and keep 360 g covered and hot so the beef broth is absorbed immediately.", "先煮好短米，將 360 公克米飯加蓋保溫，讓牛肉湯汁能立即被吸收。", "短粒米を先に炊き、360gをふたをして温かく保ち、牛肉のつゆをすぐ吸わせます。", "단립쌀을 먼저 지어 360g을 덮어 따뜻하게 두어 소고기 국물이 바로 배게 합니다.", "หุงข้าวเมล็ดสั้นก่อน เก็บ 360 กรัมแบบปิดฝาให้ร้อนเพื่อดูดน้ำซอสทันที")
+        ml("Have 360 g cooked short-grain rice ready and keep it covered and hot. Divide it between two bowls at 180 g each; if starting with dry rice, cook it early and add the cooker time to the listed prep estimate.", "先備妥 360 公克熟短米並加蓋保溫，分成兩碗各 180 公克；若從生米開始煮，請提早啟動，並將飯鍋時間另加到備料估時。", "炊いた短粒米360gを用意してふたをし、温かく保ちます。2杯に180gずつ分けます。生米から炊く場合は先に始め、炊飯時間を表示の下準備時間に加えてください。", "지은 단립쌀 360g을 준비해 덮어 따뜻하게 둡니다. 두 그릇에 180g씩 나눕니다. 생쌀부터 짓는다면 미리 시작하고 밥솥 시간을 표시된 준비 시간에 더하세요.", "เตรียมข้าวเมล็ดสั้นหุงสุก 360 กรัม ปิดฝาเก็บให้ร้อน แบ่งสองชาม ชามละ 180 กรัม หากเริ่มจากข้าวสารให้เริ่มหุงล่วงหน้าและบวกเวลาหุงเข้ากับเวลาเตรียมที่ระบุ")
       ),
       step(
         ml("Prepare beef and onion", "處理牛肉與洋蔥", "牛肉と玉ねぎを切る", "소고기와 양파 준비", "เตรียมเนื้อและหอมใหญ่"),
-        ml("If needed, chill the beef in the freezer for 10 minutes, then cut it into 7–8 cm pieces; slice the onion thinly.", "若需要，牛肉先放冷凍庫 10 分鐘，再切成 7–8 公分片；洋蔥切薄片。", "必要なら牛肉を冷凍庫で10分冷やし、7～8cmに切ります。玉ねぎは薄切りにします。", "필요하면 소고기를 냉동실에 10분 두었다가 7–8cm로 자르고 양파는 얇게 썹니다.", "หากจำเป็น แช่เนื้อในช่องแข็ง 10 นาทีแล้วหั่นยาว 7–8 ซม. สไลซ์หอมใหญ่บาง ๆ")
+        ml("Divide 300 g beef and 200 g onion into two equal sets: each bowl represents 150 g raw beef and 100 g onion. If needed, chill the beef for 10 minutes to make it easier to cut into 7–8 cm pieces; keep both portions refrigerated until cooking.", "將 300 公克牛肉與 200 公克洋蔥分成兩份，每份各代表 150 公克生牛肉與 100 公克洋蔥。若需要，牛肉先冷凍 10 分鐘再切成 7–8 公分片；烹調前兩份都冷藏保存。", "牛肉300gと玉ねぎ200gを2等分し、1杯あたり生の牛肉150g、玉ねぎ100g分にします。切りやすくするには牛肉を冷凍庫で10分冷やし、7～8cmに切ります。調理までは両方を冷蔵します。", "소고기 300g과 양파 200g을 두 몫으로 나눠 한 그릇당 생소고기 150g, 양파 100g이 되게 합니다. 자르기 쉽게 필요하면 소고기를 냉동실에 10분 두고 7–8cm로 자릅니다. 조리 전까지 두 몫을 냉장합니다.", "แบ่งเนื้อ 300 กรัมและหอมใหญ่ 200 กรัมเป็นสองชุดเท่ากัน แต่ละชามคิดเป็นเนื้อดิบ 150 กรัมและหอมใหญ่ 100 กรัม หากต้องการให้หั่นง่าย แช่เนื้อในช่องแข็ง 10 นาทีแล้วหั่นยาว 7–8 ซม. เก็บทั้งสองส่วนในตู้เย็นจนกว่าจะปรุง")
       ),
       step(
         ml("Make the cold-pan broth", "冷鍋混合湯汁", "冷たい鍋でつゆを作る", "찬 팬에 국물 만들기", "ทำน้ำซอสในกระทะเย็น"),
-        ml("In a cold wide skillet, stir the dashi, sake, mirin, soy sauce, and sugar until evenly combined; do not heat yet.", "在冷的寬鍋中攪拌柴魚高湯、清酒、味醂、淡醬油與砂糖至均勻；先不要加熱。", "冷たい広いフライパンで、だし、酒、みりん、しょうゆ、砂糖を混ぜ、まだ火にかけません。", "차가운 넓은 팬에 다시, 사케, 미림, 간장, 설탕을 넣어 섞고 아직 불을 켜지 않습니다.", "ผสมน้ำดาชิ สาเก มิริน ซีอิ๊ว และน้ำตาลในกระทะเย็นให้เข้ากัน ยังไม่ต้องเปิดไฟ")
+        ml("In a cold wide skillet, combine all 240 ml dashi, 30 ml sake, 30 ml mirin, 45 ml soy sauce, and 18 g sugar for two bowls. That is a starting share of 120 ml dashi, 15 ml each sake and mirin, 22.5 ml soy sauce, and 9 g sugar per bowl; do not heat yet.", "在冷的寬鍋中混合兩碗份量的 240 毫升柴魚高湯、30 毫升清酒、30 毫升味醂、45 毫升淡醬油與 18 公克糖。每碗的起始分量相當於 120 毫升高湯、各 15 毫升清酒與味醂、22.5 毫升醬油及 9 公克糖；先不要加熱。", "冷たい広いフライパンに、2杯分のだし240ml、酒30ml、みりん30ml、しょうゆ45ml、砂糖18gを合わせます。各杯分は目安として、だし120ml、酒とみりん各15ml、しょうゆ22.5ml、砂糖9gです。まだ火にかけません。", "차가운 넓은 팬에 두 그릇 분량의 다시 240ml, 사케 30ml, 미림 30ml, 간장 45ml, 설탕 18g을 섞습니다. 그릇 하나당 처음 배분량은 다시 120ml, 사케와 미림 각각 15ml, 간장 22.5ml, 설탕 9g입니다. 아직 불을 켜지 않습니다.", "ผสมดาชิ 240 มล. สาเก 30 มล. มิริน 30 มล. ซีอิ๊ว 45 มล. และน้ำตาล 18 กรัมสำหรับสองชามในกระทะเย็น แต่ละชามมีส่วนตั้งต้นเทียบเท่าดาชิ 120 มล. สาเกและมิรินอย่างละ 15 มล. ซีอิ๊ว 22.5 มล. และน้ำตาล 9 กรัม ยังไม่เปิดไฟ")
       ),
       step(
         ml("Soften the onion", "煮軟洋蔥", "玉ねぎを煮る", "양파 익히기", "ต้มให้หอมนุ่ม"),
@@ -189,11 +189,11 @@ export const japaneseRecipesA = [
       ),
       step(
         ml("Simmer the beef", "燉煮牛肉", "牛肉を煮る", "소고기 끓이기", "เคี่ยวเนื้อวัว"),
-        ml("Separate the beef slices and add them in a single layer. Simmer 3–4 minutes, skimming foam, until no pink remains and the thickest piece reaches 71°C.", "將牛肉片分開平鋪加入，煮 3–4 分鐘並撇除浮沫，至不再粉紅且最厚處達 71°C。", "牛肉をほぐして一枚ずつ加え、3～4分煮ます。アクを取り、赤みがなく最も厚い部分が71℃になるまで加熱します。", "소고기 조각을 풀어 한 겹으로 넣고 3–4분 끓이며 거품을 걷습니다. 분홍색이 사라지고 가장 두꺼운 곳이 71°C가 되게 합니다.", "แยกชิ้นเนื้อใส่ให้เป็นชั้นเดียว เคี่ยว 3–4 นาที ช้อนฟองออกจนไม่มีสีชมพูและส่วนหนาสุดถึง 71°C")
+        ml("Separate the beef slices and add them in a single layer. Simmer for 3–4 minutes, skimming foam, then insert a clean thermometer from the side into the thickest slice. If it is below 63°C (145°F), continue in 1-minute increments until it reaches 63°C.", "將牛肉片分開平鋪加入，煮 3–4 分鐘並撇除浮沫，再從側面將乾淨溫度計插入最厚一片；若未達 63°C（145°F），每次續煮 1 分鐘直到達到 63°C。", "牛肉をほぐして一枚ずつ加え、3～4分煮てアクを取ります。清潔な温度計を横から最も厚い一枚に差し、63°C（145°F）未満なら1分ずつ追加し、63°Cに達するまで加熱します。", "소고기 조각을 풀어 한 겹으로 넣고 3–4분 끓이며 거품을 걷습니다. 깨끗한 온도계를 옆에서 가장 두꺼운 조각에 꽂아 확인하고, 63°C (145°F) 미만이면 63°C에 도달할 때까지 1분씩 더 끓입니다.", "แยกชิ้นเนื้อใส่เป็นชั้นเดียว เคี่ยว 3–4 นาทีพร้อมช้อนฟองออก จากนั้นสอดเทอร์โมมิเตอร์สะอาดจากด้านข้างเข้าชิ้นที่หนาที่สุด หากต่ำกว่า 63°C (145°F) ให้เคี่ยวต่อครั้งละ 1 นาทีจนถึง 63°C")
       ),
       step(
         ml("Settle the broth", "回穩湯汁", "つゆをなじませる", "국물 배게 하기", "พักให้น้ำซอสซึม"),
-        ml("Turn off the heat and leave the beef and onion in the broth, covered, for 2 minutes so the flavour settles without overcooking the beef.", "關火後加蓋，讓牛肉與洋蔥留在湯汁中 2 分鐘，使味道回穩且避免牛肉過熟。", "火を止め、ふたをして牛肉と玉ねぎをつゆに2分置き、味をなじませつつ煮すぎないようにします。", "불을 끄고 덮어 소고기와 양파를 국물에 2분 두어 맛을 안정시키되 너무 익히지 않습니다.", "ปิดไฟปิดฝาพักเนื้อกับหอมใหญ่ในน้ำซอส 2 นาทีให้รสเข้ากันโดยไม่ให้เนื้อสุกเกิน")
+        ml("Once the thickest slice reaches 63°C (145°F), turn off the heat and leave the beef and onion in the covered hot broth for a full 3-minute rest before serving.", "最厚一片達 63°C（145°F）後關火，加蓋讓牛肉與洋蔥留在熱湯汁中完整靜置 3 分鐘再上桌。", "最も厚い一枚が63°C（145°F）になったら火を止め、ふたをして牛肉と玉ねぎを熱いつゆに入れたまま3分間休ませてから供します。", "가장 두꺼운 조각이 63°C (145°F)에 도달하면 불을 끄고 덮어 뜨거운 국물에 소고기와 양파를 둔 채 3분간 온전히 쉬게 한 뒤 냅니다.", "เมื่อชิ้นที่หนาที่สุดถึง 63°C (145°F) ให้ปิดไฟ ปิดฝาพักเนื้อกับหอมใหญ่ในน้ำซอสร้อนให้ครบ 3 นาทีก่อนเสิร์ฟ")
       ),
       step(
         ml("Season the bowls", "盛碗淋汁", "丼に盛る", "그릇에 담기", "จัดลงชาม"),
@@ -201,11 +201,11 @@ export const japaneseRecipesA = [
       ),
       step(
         ml("Serve without garnish", "不加裝飾上桌", "薬味なしで盛る", "고명 없이 내기", "เสิร์ฟโดยไม่ใส่เครื่องตกแต่ง"),
-        ml("Top each bowl with the beef and tender onion, spoon over only enough hot broth to moisten the rice, and serve immediately without additional garnish.", "將牛肉與柔軟洋蔥放在每碗飯上，只淋足以潤濕米飯的熱湯汁，立即上桌，不加其他裝飾。", "牛肉と柔らかな玉ねぎを盛り、ご飯が湿る程度の熱いつゆだけをかけ、薬味を足さずにすぐ出します。", "각 그릇에 소고기와 부드러운 양파를 올리고 밥이 촉촉해질 만큼만 뜨거운 국물을 끼얹어 추가 고명 없이 바로 냅니다.", "วางเนื้อกับหอมใหญ่นุ่มบนข้าว ราดน้ำซอสร้อนแค่พอชุ่ม แล้วเสิร์ฟทันทีโดยไม่เติมเครื่องตกแต่ง")
+        ml("Divide the beef and onion evenly between the two 180 g rice bowls; each topping is about 150 g raw-beef and 100 g raw-onion equivalent. Spoon over only enough hot broth to moisten the rice and serve immediately without extra garnish.", "將牛肉與洋蔥平均分到兩碗各 180 公克的米飯上；每份配料約相當於 150 公克生牛肉與 100 公克生洋蔥。只淋足以潤濕米飯的熱湯汁，立即上桌，不加其他裝飾。", "牛肉と玉ねぎを180gのご飯2杯に均等に分けます。各杯の具は生の牛肉約150g、玉ねぎ100g相当です。ご飯が湿る程度の熱いつゆをかけ、薬味を加えずすぐに供します。", "소고기와 양파를 밥 180g씩 담은 두 그릇에 똑같이 나눕니다. 한 그릇의 토핑은 생소고기 약 150g과 양파 100g 상당입니다. 밥이 촉촉해질 만큼만 뜨거운 국물을 끼얹고 고명 없이 바로 냅니다.", "แบ่งเนื้อและหอมใหญ่เท่า ๆ กันบนข้าวสองชาม ชามละ 180 กรัม หน้าแต่ละชามเทียบเท่าเนื้อดิบประมาณ 150 กรัมและหอมใหญ่ดิบ 100 กรัม ราดน้ำซอสร้อนแค่พอชุ่มข้าวและเสิร์ฟทันทีโดยไม่ใส่เครื่องตกแต่งเพิ่ม")
       )
     ],
     tips: [
-      ml("Use well-marbled beef and stop as soon as it loses its pink colour; prolonged boiling makes thin slices tough.", "選用帶適量油花的牛肉，變色即停火；薄片久煮會變韌。", "脂のある牛肉を使い、色が変わったら加熱を止めます。薄切りは煮すぎると硬くなります。", "적당히 마블링 있는 고기를 쓰고 색이 바뀌면 멈추세요. 얇은 고기는 오래 끓이면 질겨집니다.", "ใช้เนื้อมีมันแทรกพอดีและหยุดเมื่อสีเปลี่ยน การต้มนานทำให้เนื้อบางเหนียว"),
+      ml("Use well-marbled beef and avoid simmering it longer than needed to reach the safe endpoint and complete the three-minute rest; thin slices toughen with prolonged cooking.", "選用帶適量油花的牛肉，達安全熟度並靜置滿三分鐘後即可；薄片久煮會變韌。", "脂のある牛肉を使い、安全な中心温度と3分の休ませを満たしたら煮続けません。薄切りは長く煮ると硬くなります。", "적당히 마블링 있는 소고기를 쓰고 안전한 중심 온도와 3분 휴지를 마치면 더 끓이지 않습니다. 얇은 고기는 오래 익히면 질겨집니다.", "ใช้เนื้อมีมันแทรกพอดี เมื่อถึงเกณฑ์ความปลอดภัยและพักครบ 3 นาทีแล้วไม่ควรเคี่ยวต่อ เนื้อบางจะเหนียวหากปรุงนาน"),
       ml("A wide skillet keeps the beef in a shallow layer, so the onion and sauce season it evenly.", "寬鍋能讓牛肉平鋪在淺層湯汁中，洋蔥與醬汁才會均勻入味。", "広いフライパンなら牛肉が浅く広がり、玉ねぎとつゆが均一になじみます。", "넓은 팬에 고기를 얕게 펼치면 양파와 소스가 고르게 배어듭니다.", "กระทะกว้างช่วยให้เนื้ออยู่ในชั้นซอสตื้น ๆ จึงเข้ารสกับหอมใหญ่สม่ำเสมอ")
     ],
     commonMistakes: [
@@ -214,13 +214,15 @@ export const japaneseRecipesA = [
     ],
     substitutions: [
       ml("Replace dashi with 240 ml unsalted vegetable stock for a fish-free version; keep the soy, mirin, and sugar amounts unchanged.", "無魚版本可用 240 毫升無鹽蔬菜高湯取代柴魚高湯，醬油、味醂與糖量不變。", "魚を使わない場合はだしを無塩の野菜だし240mlに替え、しょうゆ、みりん、砂糖は同量にします。", "생선 없이 만들려면 다시를 무염 채소 육수 240ml로 바꾸고 간장·미림·설탕 양은 그대로 둡니다.", "หากไม่ใช้ปลา เปลี่ยนน้ำดาชิเป็นน้ำสต๊อกผักไม่เค็ม 240 มล. ปริมาณซีอิ๊ว มิริน น้ำตาลเท่าเดิม"),
-      ml("Use thinly sliced pork shoulder instead of beef and cook until the thickest slice reaches 71°C.", "可用薄切豬肩肉取代牛肉，煮至最厚肉片達 71°C。", "牛肉の代わりに豚肩肉の薄切りを使い、最も厚い一枚が71℃になるまで煮ます。", "소고기 대신 얇게 썬 돼지 목살을 쓰고 가장 두꺼운 조각이 71°C가 될 때까지 익힙니다.", "ใช้หมูไหล่สไลซ์บางแทนเนื้อวัว เคี่ยวจนชิ้นหนาสุดถึง 71°C")
+      ml("Use thinly sliced pork shoulder instead of beef; check the thickest slice for 63°C (145°F) and give it a full 3-minute rest in the hot broth.", "可用薄切豬肩肉取代牛肉；最厚肉片達 63°C（145°F）後，在熱湯汁中完整靜置 3 分鐘。", "牛肉の代わりに薄切りの豚肩肉を使えます。最も厚い一枚を63°C（145°F）まで加熱し、熱いつゆの中で3分間休ませます。", "소고기 대신 얇게 썬 돼지 목살을 쓸 수 있습니다. 가장 두꺼운 조각을 63°C (145°F)까지 익히고 뜨거운 국물에서 3분간 온전히 쉽니다.", "ใช้หมูไหล่สไลซ์บางแทนเนื้อได้ ตรวจชิ้นหนาสุดให้ถึง 63°C (145°F) แล้วพักในน้ำซอสร้อนให้ครบ 3 นาที")
     ],
     storage: ml("Cool the beef mixture within 2 hours, refrigerate it airtight for up to 3 days, and store rice separately. Reheat the beef to steaming hot before serving.", "牛肉配料 2 小時內放涼，密封冷藏最多 3 天，米飯分開保存；上桌前將牛肉加熱至冒蒸氣。", "牛肉の具は2時間以内に冷まし、密閉して冷蔵3日まで。ご飯は別に保存し、食べる前に具を湯気が出るまで温めます。", "소고기 토핑은 2시간 안에 식혀 밀폐 냉장 3일까지, 밥은 따로 보관합니다. 먹기 전 토핑을 김이 날 때까지 데웁니다.", "ทำส่วนเนื้อให้เย็นภายใน 2 ชั่วโมง แช่เย็นปิดสนิทได้ 3 วัน เก็บข้าวแยก และอุ่นเนื้อจนร้อนมีไอก่อนเสิร์ฟ"),
     cultureNote: ml("Gyudon is a Japanese donburi format: simmered beef and onion are served over rice, with each home or shop adjusting the sweet-savoury broth.", "牛丼是日本丼物形式，將燉煮牛肉與洋蔥放在米飯上；各家會調整甘鹹湯汁比例。", "牛丼は牛肉と玉ねぎを煮てご飯にのせる日本の丼料理で、家庭や店ごとにつゆの甘辛さが異なります。", "규동은 익힌 소고기와 양파를 밥 위에 올리는 일본식 덮밥으로, 집과 가게마다 달고 짠 국물 비율이 다릅니다.", "กิวด้งเป็นด้งแบบญี่ปุ่นที่วางเนื้อและหอมใหญ่เคี่ยวบนข้าว แต่ละครัวหรือร้านปรับรสหวานเค็มต่างกัน"),
     sources: [
       { title: "Just One Cookbook — Gyudon", url: "https://www.justonecookbook.com/gyudon/" },
-      { title: "Kikkoman — Gyudon (Beef Bowl)", url: "https://www.kikkoman.com/en/culture/foodforum/recipe/traditional-26-2.html" }
+      { title: "Kikkoman — Gyudon (Beef Bowl)", url: "https://www.kikkoman.com/en/culture/foodforum/recipe/traditional-26-2.html" },
+      { title: "Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures", url: "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures" },
+      { title: "Official food-safety guidance — USDA FSIS: Correct Food Thermometer Placement", url: "https://www.fsis.usda.gov/news-events/news-press-releases/do-you-know-correct-place-insert-your-food-thermometer" }
     ],
     imageAlt: ml("Gyudon beef and tender onion simmered in sauce over white rice without garnish", "白飯上盛著醬汁燉牛肉與軟洋蔥、無裝飾的牛丼", "白いご飯に煮た牛肉と柔らかな玉ねぎをのせた薬味なしの牛丼", "고명 없이 흰 밥 위에 소스에 익힌 소고기와 부드러운 양파를 올린 규동", "กิวด้งราดเนื้อวัวและหอมใหญ่นุ่มในซอสบนข้าวขาวแบบไม่ตกแต่ง"),
     visualSpec: "Real finished-dish brief: one patterned donburi bowl of white short-grain rice covered with tender beef and onion in a light glossy broth, with no scallion, pickled ginger, or other garnish."

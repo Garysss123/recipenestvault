@@ -390,8 +390,8 @@ export const japaneseRecipesC = [
     cuisine: "japanese",
     region: ml("Japan", "日本", "日本", "일본", "ญี่ปุ่น"),
     prepMinutes: 10,
-    cookMinutes: 10,
-    totalMinutes: 20,
+    cookMinutes: 15,
+    totalMinutes: 25,
     servings: 4,
     name: ml(
       "Classic layered tamagoyaki",
@@ -419,11 +419,11 @@ export const japaneseRecipesC = [
       {
         title: ml("Mix the egg base", "調和蛋液", "卵液を作る", "달걀물 만들기", "ผสมไข่"),
         body: ml(
-          "Whisk the 300 g eggs gently with 30 ml dashi, 18 g sugar, 2 g salt and 10 ml light soy sauce. Use a zigzag motion so the eggs combine without incorporating foam.",
-          "將 300 公克蛋液與 30 毫升高湯、18 公克糖、2 公克鹽及 10 毫升淡醬油輕輕拌勻，以鋸齒狀攪拌避免打入泡沫。",
-          "卵300gにだし30ml、砂糖18g、塩2g、薄口しょうゆ10mlを加え、泡立てないようジグザグにやさしく混ぜる。",
-          "달걀 300g에 다시 30ml, 설탕 18g, 소금 2g, 연한 간장 10ml를 넣고 거품이 생기지 않게 지그재그로 부드럽게 섞는다.",
-          "คนไข่ 300 กรัมกับดาชิ 30 มล. น้ำตาล 18 กรัม เกลือ 2 กรัม และซีอิ๊วอ่อน 10 มล. เบา ๆ เป็นแนวซิกแซกไม่ให้เกิดฟอง"
+          "This four-serving batch represents 75 g egg, 7.5 ml dashi, 4.5 g sugar, 0.5 g salt, and 2.5 ml soy sauce per person. Whisk all 300 g eggs gently with the 30 ml dashi, 18 g sugar, 2 g salt, and 10 ml light soy sauce. Use a zigzag motion so the eggs combine without incorporating foam.",
+          "本食譜供 4 人食用，每份約相當於 75 公克蛋、7.5 毫升高湯、4.5 公克糖、0.5 公克鹽與 2.5 毫升醬油。將 300 公克蛋液、30 毫升高湯、18 公克糖、2 公克鹽及 10 毫升淡醬油輕輕拌勻，以鋸齒狀攪拌避免打入泡沫。",
+          "4人分の目安は、1人あたり卵75g、だし7.5ml、砂糖4.5g、塩0.5g、しょうゆ2.5mlです。卵300gにだし30ml、砂糖18g、塩2g、薄口しょうゆ10mlを加え、泡立てないようジグザグにやさしく混ぜます。",
+          "4인분으로 한 사람당 달걀 75g, 다시 7.5ml, 설탕 4.5g, 소금 0.5g, 간장 2.5ml에 해당합니다. 달걀 300g에 다시 30ml, 설탕 18g, 소금 2g, 연한 간장 10ml를 넣고 거품이 생기지 않게 지그재그로 부드럽게 섞습니다.",
+          "สูตรนี้สำหรับ 4 คน คิดเป็นไข่ 75 กรัม ดาชิ 7.5 มล. น้ำตาล 4.5 กรัม เกลือ 0.5 กรัม และซีอิ๊ว 2.5 มล. ต่อคน ตีไข่ 300 กรัมกับดาชิ 30 มล. น้ำตาล 18 กรัม เกลือ 2 กรัม และซีอิ๊วอ่อน 10 มล. เบา ๆ เป็นแนวซิกแซกไม่ให้เกิดฟอง"
         )
       },
       {
@@ -479,21 +479,21 @@ export const japaneseRecipesC = [
       {
         title: ml("Set the centre safely", "確認中心凝固", "中心まで固める", "속까지 굳히기", "ทำให้แกนกลางสุก"),
         body: ml(
-          "Turn the finished roll on all four sides over low heat until evenly golden. Check the thickest centre with a thermometer: it must reach 74°C with no liquid egg remaining.",
-          "以小火將完成蛋捲四面轉動煎至均勻金黃，用溫度計確認最厚中心達 74°C，且不可殘留流動蛋液。",
-          "完成した巻きを弱火で四面転がし、均一なきつね色にする。最も厚い中心が74℃に達し、液状の卵が残っていないことを温度計で確認する。",
-          "완성된 롤을 약불에서 네 면 모두 굴려 고르게 노릇하게 한다. 온도계로 가장 두꺼운 중심이 74°C이고 흐르는 달걀물이 남지 않았는지 확인한다.",
-          "กลิ้งม้วนที่เสร็จแล้วทั้งสี่ด้านด้วยไฟอ่อนจนสีทองสม่ำเสมอ ตรวจใจกลางส่วนหนาสุดด้วยเทอร์โมมิเตอร์ให้ถึง 74°C และไม่มีไข่เหลวเหลือ"
+          "Turn the finished roll on all four sides over low heat until evenly golden. Check the thickest centre with a clean thermometer: it must reach 71°C (160°F) with no liquid egg remaining.",
+          "以小火將完成蛋捲四面轉動煎至均勻金黃，用乾淨溫度計確認最厚中心達 71°C（160°F），且不可殘留流動蛋液。",
+          "完成した巻きを弱火で四面転がし、均一なきつね色にします。清潔な温度計で最も厚い中心が71°C（160°F）に達し、液状の卵が残っていないことを確認します。",
+          "완성된 롤을 약불에서 네 면 모두 굴려 고르게 노릇하게 합니다. 깨끗한 온도계로 가장 두꺼운 중심이 71°C (160°F)에 도달하고 흐르는 달걀물이 남지 않았는지 확인합니다.",
+          "กลิ้งม้วนที่เสร็จแล้วทั้งสี่ด้านด้วยไฟอ่อนจนสีทองสม่ำเสมอ ตรวจใจกลางส่วนหนาสุดด้วยเทอร์โมมิเตอร์สะอาดให้ถึง 71°C (160°F) และไม่มีไข่เหลวเหลือ"
         )
       },
       {
         title: ml("Rest and slice", "靜置切片", "休ませて切る", "쉬었다가 썰기", "พักแล้วหั่น"),
         body: ml(
-          "Rest the omelette on a board for 3 minutes, then slice it into thick pieces. Serve plain while warm, showing the clean, tender layers rather than adding a garnish.",
-          "將蛋捲放砧板靜置 3 分鐘後切成厚片，趁溫熱原味上桌，呈現整齊柔嫩的層次，不加裝飾。",
-          "卵焼きをまな板で3分休ませ、厚めに切る。具や飾りを加えず、整った柔らかな層を見せて温かいうちに供する。",
-          "달걀말이를 도마에서 3분 쉬게 한 뒤 두껍게 썬다. 고명 없이 정돈된 부드러운 층을 보이며 따뜻할 때 낸다.",
-          "พักไข่ม้วนบนเขียง 3 นาทีแล้วหั่นหนา เสิร์ฟแบบไม่แต่งหน้าเมื่อยังอุ่นเพื่อให้เห็นชั้นนุ่มเรียบ"
+          "Rest the omelette on a board for 3 minutes, slice it into eight thick pieces, and serve two pieces per person. Each of the four portions represents 75 g raw egg; serve plain while warm without garnish.",
+          "將蛋捲放砧板靜置 3 分鐘後切成 8 片厚片，每人分 2 片；四份各約相當於 75 公克生蛋。趁溫熱原味上桌，不加裝飾。",
+          "卵焼きをまな板で3分休ませて8切れに厚く切り、1人2切れずつ供します。4人分それぞれ卵75g相当です。具や飾りを加えず、温かいうちに出します。",
+          "달걀말이를 도마에서 3분 쉬게 한 뒤 두껍게 여덟 조각으로 썰어 한 사람당 두 조각씩 냅니다. 네 몫은 각각 생달걀 75g 상당입니다. 고명 없이 따뜻할 때 냅니다.",
+          "พักไข่ม้วนบนเขียง 3 นาที หั่นหนา 8 ชิ้น เสิร์ฟคนละ 2 ชิ้น ทั้งสี่ส่วนเทียบเท่าไข่ดิบส่วนละ 75 กรัม เสิร์ฟแบบไม่แต่งหน้าเมื่อยังอุ่น"
         )
       }
     ],
@@ -561,7 +561,9 @@ export const japaneseRecipesC = [
     ),
     sources: [
       { title: "Just One Cookbook — Classic Tamagoyaki", url: "https://www.justonecookbook.com/tamagoyaki/" },
-      { title: "Japanese Cooking 101 — Tamagoyaki Recipe", url: "https://www.japanesecooking101.com/tamagoyaki-recipe/" }
+      { title: "Japanese Cooking 101 — Tamagoyaki Recipe", url: "https://www.japanesecooking101.com/tamagoyaki-recipe/" },
+      { title: "Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures", url: "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures" },
+      { title: "Official food-safety guidance — FDA: What You Need to Know About Egg Safety", url: "https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety" }
     ],
     imageAlt: ml(
       "Real photograph of plain yellow tamagoyaki cut into thick layered pieces, with no visible garnish or filling.",

@@ -429,21 +429,21 @@ export const expandedInstructionsB = {
     {
       title: ml("Make and rest the dough", "製作並醒麵", "生地を作って休ませる", "반죽 만들고 휴지하기", "ทำและพักแป้ง"),
       body: ml(
-        "Mix 400 g all-purpose flour, 2 g dough salt, and 210 ml warm water into a shaggy dough. Knead for 8 minutes until smooth, cover, and rest at room temperature for 30 minutes.",
-        "將 400 公克中筋麵粉、2 公克麵糰用鹽與 210 毫升溫水拌成粗麵糰，揉 8 分鐘至光滑，覆蓋室溫醒 30 分鐘。",
-        "中力粉400g、皮用塩2g、ぬるま湯210mlを粗い生地にまとめる。8分こねてなめらかにし、覆って室温で30分休ませる。",
-        "중력분 400g, 반죽 소금 2g, 따뜻한 물 210ml를 거친 반죽으로 섞는다. 8분 치대 매끈하게 한 뒤 덮어 실온 30분 쉰다.",
-        "ผสมแป้งอเนกประสงค์ 400 กรัม เกลือสำหรับแป้ง 2 กรัม และน้ำอุ่น 210 มล. เป็นก้อนหยาบ นวด 8 นาทีจนเนียน ปิดพักอุณหภูมิห้อง 30 นาที"
+        "Mix 400 g all-purpose flour, 2 g dough salt, and 210 ml warm water into a shaggy dough. Knead for 8 minutes until smooth, cover, and rest at room temperature for 30 minutes; prepare the cabbage during this rest.",
+        "將 400 公克中筋麵粉、2 公克麵糰用鹽與 210 毫升溫水拌成粗麵糰，揉 8 分鐘至光滑，覆蓋室溫醒 30 分鐘；醒麵期間處理白菜。",
+        "中力粉400g、皮用塩2g、ぬるま湯210mlを粗い生地にまとめます。8分こねてなめらかにし、覆って室温で30分休ませ、その間に白菜を準備します。",
+        "중력분 400g, 반죽 소금 2g, 따뜻한 물 210ml를 거친 반죽으로 섞습니다. 8분 치대 매끈하게 한 뒤 덮어 실온에서 30분 쉬게 하고, 그동안 배추를 준비합니다.",
+        "ผสมแป้งอเนกประสงค์ 400 กรัม เกลือสำหรับแป้ง 2 กรัม และน้ำอุ่น 210 มล. เป็นก้อนหยาบ นวด 8 นาทีจนเนียน คลุมพักที่อุณหภูมิห้อง 30 นาที แล้วเตรียมกะหล่ำระหว่างพัก"
       )
     },
     {
       title: ml("Dry the cabbage and mix the filling", "擠乾白菜拌餡", "白菜の水分を絞ってあんを混ぜる", "배추 물 빼고 소 섞기", "บีบน้ำกะหล่ำแล้วผสมไส้"),
       body: ml(
-        "Salt 300 g finely chopped napa cabbage with the 5 g filling salt for 10 minutes, then squeeze out all visible water. Mix it with 400 g ground pork, 40 g scallion, 15 g ginger, 30 ml soy sauce, 15 ml Shaoxing wine, 10 ml sesame oil, and 1 g white pepper until sticky.",
-        "將 300 公克切細大白菜與 5 公克餡料用鹽拌勻，醃 10 分鐘後擠出所有可見水分。再與 400 公克豬絞肉、40 公克青蔥、15 公克薑、30 毫升淡醬油、15 毫升紹興酒、10 毫升芝麻油及 1 公克白胡椒拌至黏稠。",
-        "刻んだ白菜300gにあん用塩5gを混ぜて10分置き、見える水分を絞る。豚ひき肉400g、ねぎ40g、しょうが15g、薄口しょうゆ30ml、紹興酒15ml、ごま油10ml、白こしょう1gと粘りが出るまで混ぜる。",
-        "잘게 썬 배추 300g에 소용 소금 5g을 섞어 10분 둔 뒤 보이는 물을 모두 짠다. 다진 돼지고기 400g, 대파 40g, 생강 15g, 양조간장 30ml, 샤오싱주 15ml, 참기름 10ml, 흰 후추 1g과 끈기 있게 섞는다.",
-        "คลุกกะหล่ำปลีจีนสับ 300 กรัมกับเกลือไส้ 5 กรัม พัก 10 นาทีแล้วบีบน้ำออกให้หมด ผสมหมูบด 400 กรัม ต้นหอม 40 กรัม ขิง 15 กรัม ซีอิ๊วขาว 30 มล. เหล้าจีน 15 มล. น้ำมันงา 10 มล. และพริกไทยขาว 1 กรัมจนเหนียว"
+        "During the dough rest, salt 300 g finely chopped napa cabbage with the 5 g filling salt for 10 minutes, then squeeze out visible water. Mix it with 400 g ground pork, 40 g scallion, 15 g ginger, 30 ml soy sauce, 15 ml Shaoxing wine, 10 ml sesame oil, and 1 g white pepper until sticky. Refrigerate the filling if you are not shaping immediately.",
+        "趁麵糰醒置時，將 300 公克切細大白菜與 5 公克餡料用鹽拌勻 10 分鐘，再擠出可見水分。加入 400 公克豬絞肉、40 公克青蔥、15 公克薑、30 毫升淡醬油、15 毫升紹興酒、10 毫升芝麻油及 1 公克白胡椒，拌至黏稠；若不立即包餃子，將餡料冷藏。",
+        "生地を休ませている間に、刻んだ白菜300gにあん用塩5gを混ぜて10分置き、見える水分を絞ります。豚ひき肉400g、ねぎ40g、しょうが15g、薄口しょうゆ30ml、紹興酒15ml、ごま油10ml、白こしょう1gと粘りが出るまで混ぜます。すぐ包まない場合は冷蔵します。",
+        "반죽을 쉬게 하는 동안 잘게 썬 배추 300g에 소금 5g을 섞어 10분 두고 보이는 물을 짭니다. 다진 돼지고기 400g, 대파 40g, 생강 15g, 양조간장 30ml, 샤오싱주 15ml, 참기름 10ml, 흰 후추 1g을 넣고 끈기 있게 섞습니다. 바로 빚지 않으면 소를 냉장합니다.",
+        "ระหว่างพักแป้ง คลุกกะหล่ำปลีจีนสับ 300 กรัมกับเกลือไส้ 5 กรัม พัก 10 นาทีแล้วบีบน้ำที่เห็นออก ผสมหมูบด 400 กรัม ต้นหอม 40 กรัม ขิง 15 กรัม ซีอิ๊วขาว 30 มล. เหล้าจีน 15 มล. น้ำมันงา 10 มล. และพริกไทยขาว 1 กรัมจนเหนียว หากยังไม่ห่อทันทีให้แช่ไส้ในตู้เย็น"
       )
     },
     {
@@ -459,31 +459,31 @@ export const expandedInstructionsB = {
     {
       title: ml("Fill and seal", "包餡封口", "あんを包んで閉じる", "소 넣고 봉하기", "ใส่ไส้และปิด"),
       body: ml(
-        "Place exactly 15 g filling in each wrapper, pleat and seal firmly with no trapped air. Arrange all 48 dumplings on a lightly floured tray without touching.",
-        "每張餃皮放入精確 15 公克餡料，打褶並確實封口，不留空氣。48 顆餃子排在薄撒麵粉的托盤上，彼此不可碰觸。",
-        "皮1枚に正確に15gのあんを置き、空気を残さずひだを寄せて閉じる。48個を薄く打ち粉したトレーに触れないよう並べる。",
-        "피마다 소를 정확히 15g 넣고 공기가 갇히지 않게 주름을 잡아 봉한다. 48개를 밀가루를 살짝 뿌린 트레이에 서로 닿지 않게 놓는다.",
-        "ใส่ไส้ชั่งตรง 15 กรัมต่อแผ่น จับจีบปิดให้แน่นไม่มีอากาศ วางเกี๊ยวทั้ง 48 ชิ้นบนถาดโรยแป้งบางๆ ไม่ให้แตะกัน"
+        "Weigh the finished filling and divide it into 48 equal portions, about 16–17 g each depending on how much water the cabbage releases. Place one portion in each wrapper, pleat and seal firmly with no trapped air. Arrange all 48 dumplings on a lightly floured tray without touching.",
+        "將完成的餡料秤重後平均分成 48 份；依白菜擠出的水量不同，每份約 16–17 公克。每張餃皮放入一份，打褶並確實封口、不留空氣；48 顆餃子排在薄撒麵粉的托盤上，彼此不可碰觸。",
+        "できたあんを量り、48等分します。白菜から絞れた水分によりますが、1個あたり約16～17gが目安です。皮に1等分を置き、空気を残さずひだを寄せて閉じます。48個を薄く打ち粉したトレーに触れないよう並べます。",
+        "완성된 소의 무게를 재어 48등분합니다. 배추에서 짜낸 수분량에 따라 한 개당 약 16–17g이 기준입니다. 피마다 한 몫을 넣고 공기가 갇히지 않게 주름을 잡아 단단히 봉합니다. 만두 48개를 밀가루를 살짝 뿌린 트레이에 서로 닿지 않게 놓습니다.",
+        "ชั่งไส้ที่ผสมเสร็จแล้วแบ่งเท่ากัน 48 ส่วน ส่วนละประมาณ 16–17 กรัม ขึ้นกับปริมาณน้ำที่บีบออกจากกะหล่ำ ใส่หนึ่งส่วนต่อแผ่น จับจีบปิดให้แน่นไม่มีอากาศ วางเกี๊ยวทั้ง 48 ชิ้นบนถาดโรยแป้งบาง ๆ ไม่ให้แตะกัน"
       )
     },
     {
       title: ml("Boil in three 16-piece batches", "分三批、每批 16 顆水煮", "16個ずつ3回に分けてゆでる", "16개씩 세 번 삶기", "ต้มสามชุด ชุดละ 16 ชิ้น"),
       body: ml(
-        "For boiled jiaozi, bring 3 L water to a rolling boil over high heat. Cook all 48 in exactly three batches of 16 for 6–8 minutes each. They should float, the wrappers turn slightly translucent, and the centres reach 74°C.",
-        "水餃做法：以大火將 3 公升水煮至大滾，48 顆固定分三批、每批 16 顆，各煮 6–8 分鐘。餃子應浮起、皮略透明，餡心達 74°C。",
-        "水餃子は水3Lを強火で沸かす。48個を16個ずつ正確に3回に分け、各6～8分ゆでる。浮き、皮が少し透け、中心が74℃になることを確認する。",
-        "물만두는 물 3L를 센 불로 팔팔 끓인다. 48개를 정확히 16개씩 세 번 나누어 각 6–8분 삶는다. 떠오르고 피가 살짝 반투명하며 속 중심이 74°C여야 한다.",
-        "สำหรับแบบต้ม ต้มน้ำ 3 ลิตรให้เดือดพล่านด้วยไฟแรง แบ่ง 48 ชิ้นเป็นสามชุด ชุดละ 16 ชิ้นพอดี ต้มชุดละ 6–8 นาทีจนลอย แผ่นกึ่งใส และใจกลางถึง 74°C"
+        "For boiled jiaozi, bring 3 L water to a rolling boil over high heat. Cook 16 dumplings per batch for 6–8 minutes, then check the largest dumpling in every batch: it should float, the wrapper turn slightly translucent, and the ground-pork centre reach 71°C (160°F). Continue in 1-minute increments if needed; keep the water boiling between all three batches.",
+        "水餃做法：以大火將 3 公升水煮至大滾，每批煮 16 顆、6–8 分鐘；每批都檢查最大顆：應浮起、外皮略透明，豬絞肉餡心達 71°C（160°F）。若未達標，每次續煮 1 分鐘；三批之間讓水恢復沸騰。",
+        "水餃子は水3Lを強火で沸かし、1回16個ずつ6～8分ゆでます。各回で最も大きい餃子を確認し、浮き、皮が少し透け、豚ひき肉の中心が71°C（160°F）に達していることを確認します。不足なら1分ずつ追加し、3回の間も湯を沸騰状態に戻します。",
+        "물만두는 물 3L를 센 불로 팔팔 끓이고 한 번에 16개씩 6–8분 삶습니다. 매번 가장 큰 만두를 확인해 떠오르고 피가 살짝 투명하며 다진 돼지고기 중심이 71°C (160°F)에 도달했는지 확인합니다. 부족하면 1분씩 더 익히고 세 번의 배치 사이에도 물을 다시 끓입니다.",
+        "สำหรับเกี๊ยวต้ม ต้มน้ำ 3 ลิตรให้เดือดจัดด้วยไฟแรง ต้มครั้งละ 16 ชิ้นนาน 6–8 นาที แล้วตรวจชิ้นใหญ่สุดในทุกชุดให้ลอย แผ่นโปร่งแสงเล็กน้อย และใจกลางหมูบดถึง 71°C (160°F) หากยังไม่ถึงให้ต้มเพิ่มครั้งละ 1 นาที และต้มน้ำให้เดือดอีกครั้งระหว่างทั้งสามชุด"
       )
     },
     {
       title: ml("Lift and serve boiled jiaozi", "撈起水餃並上桌", "水餃をすくって供する", "물만두 건져 내기", "ตักเกี๊ยวต้มเสิร์ฟ"),
       body: ml(
-        "Lift the boiled jiaozi with a slotted spoon as soon as they meet the float, translucency, and 74°C checks. Serve with 45 ml black rice vinegar and 15 ml chili oil on the side.",
-        "水餃符合浮起、皮略透明及 74°C 三項判斷後，用漏勺立即撈起。以 45 毫升黑米醋與 15 毫升辣油另碟沾食。",
-        "浮き、皮の透け、中心74℃を確認した水餃子を穴あき杓子ですくう。黒米酢45mlとラー油15mlを添える。",
-        "떠오르고 피가 반투명하며 중심 74°C가 된 물만두를 구멍 국자로 즉시 건진다. 흑미식초 45ml와 고추기름 15ml를 곁들인다.",
-        "ตักเกี๊ยวต้มด้วยกระชอนทันทีเมื่อผ่านเกณฑ์ลอย แผ่นกึ่งใส และใจกลาง 74°C เสิร์ฟคู่กับน้ำส้มสายชูข้าวดำ 45 มล. และน้ำมันพริก 15 มล."
+        "Lift each batch with a slotted spoon after it meets the float, translucency, and 71°C checks. Divide 48 dumplings among four servings at 12 each; each serving represents about 100 g raw pork. Set out 11.25 ml black rice vinegar and 3.75 ml chili oil per person.",
+        "每批水餃符合浮起、皮略透明及 71°C 三項判斷後，用漏勺撈起。48 顆分成四份、每份 12 顆；每份餡料約相當於 100 公克生豬肉。每人另備 11.25 毫升黑米醋與 3.75 毫升辣油。",
+        "浮き、皮の透け、中心71°Cを確認した各回の餃子を穴あき杓子ですくいます。48個を4人分に12個ずつ分け、1人分の具は生の豚肉約100g相当です。黒米酢11.25mlとラー油3.75mlを1人分として添えます。",
+        "각 배치에서 떠오르고 피가 반투명하며 중심 71°C를 확인한 만두를 구멍 국자로 건집니다. 48개를 네 몫으로 나눠 한 사람당 12개씩 담습니다. 한 몫은 생돼지고기 약 100g 상당이며 흑미식초 11.25ml와 고추기름 3.75ml를 곁들입니다.",
+        "ตักแต่ละชุดด้วยกระชอนเมื่อผ่านเกณฑ์ลอย แผ่นกึ่งใส และใจกลาง 71°C แบ่งเกี๊ยว 48 ชิ้นเป็นสี่ส่วน ส่วนละ 12 ชิ้น ไส้ต่อส่วนเทียบเท่าหมูดิบประมาณ 100 กรัม เสิร์ฟน้ำส้มข้าวดำ 11.25 มล. และน้ำมันพริก 3.75 มล. ต่อคน"
       )
     },
     {
@@ -499,11 +499,11 @@ export const expandedInstructionsB = {
     {
       title: ml("Steam-fry and crisp", "加水燜煎至酥", "水を加えて蒸し焼きにする", "물을 넣어 찌고 바삭하게 하기", "เติมน้ำอบแล้วทำให้กรอบ"),
       body: ml(
-        "For each optional pan-fry batch, add its 60 ml water, cover for 5 minutes, then uncover for 1 minute. Stop only when the water has evaporated, the bottoms are crisp, and the pork filling reaches 74°C; the boiled method remains the default.",
-        "每批選用煎餃加入該批 60 毫升水，加蓋 5 分鐘，再開蓋煎 1 分鐘。必須等水分蒸乾、底部酥脆且豬肉餡心達 74°C 才可停火；預設作法仍是水煮。",
-        "焼き餃子は各回に水60mlを加え、ふたをして5分、ふたを外して1分焼く。水が蒸発し、底がカリッとして豚肉の中心が74℃になるまで加熱する。基本の方法は水餃子。",
-        "각 군만두 배치에 물 60ml를 넣고 덮어 5분 찐 뒤 뚜껑을 열고 1분 굽는다. 물이 증발하고 바닥이 바삭하며 돼지고기 소 중심이 74°C가 되어야 멈춘다. 기본은 물만두다.",
-        "สำหรับแต่ละชุดทอด เติมน้ำ 60 มล. ปิดฝา 5 นาที แล้วเปิดฝาทอดอีก 1 นาที หยุดเมื่อทั้งน้ำระเหย ก้นกรอบ และใจกลางไส้หมูถึง 74°C โดยวิธีหลักยังเป็นแบบต้ม"
+        "For each optional 12-dumpling pan-fry batch, add its 60 ml water, cover for 5 minutes, then uncover for 1 minute to crisp. Check the largest dumpling's ground-pork centre for 71°C (160°F); if needed, add 15 ml water, cover, and cook in 1-minute increments. The boiled method remains the default.",
+        "每批選用煎餃 12 顆加入 60 毫升水，加蓋 5 分鐘，再開蓋煎 1 分鐘至酥脆。檢查最大顆的豬絞肉餡心達 71°C（160°F）；若未達，加入 15 毫升水、加蓋並每次續煮 1 分鐘。預設作法仍是水煮。",
+        "焼き餃子は12個ずつ、水60mlを加えてふたをし5分、ふたを外して1分焼きカリッとさせます。最も大きい餃子の豚ひき肉の中心が71°C（160°F）か確認し、不足なら水15mlを足してふたをし、1分ずつ追加します。基本の方法は水餃子です。",
+        "군만두는 한 번에 12개씩 물 60ml를 넣고 덮어 5분 찐 뒤 뚜껑을 열어 1분 바삭하게 굽습니다. 가장 큰 만두의 다진 돼지고기 중심이 71°C (160°F)인지 확인하고 부족하면 물 15ml를 더해 덮고 1분씩 더 익힙니다. 기본 방법은 물만두입니다.",
+        "สำหรับเกี๊ยวทอดกระทะแต่ละชุด ชุดละ 12 ชิ้น เติมน้ำ 60 มล. ปิดฝา 5 นาที แล้วเปิดฝาทอดอีก 1 นาทีให้กรอบ ตรวจใจกลางหมูบดของชิ้นใหญ่สุดให้ถึง 71°C (160°F) หากยังไม่ถึงให้เติมน้ำ 15 มล. ปิดฝาและปรุงเพิ่มครั้งละ 1 นาที วิธีหลักยังเป็นแบบต้ม"
       )
     }
   ],

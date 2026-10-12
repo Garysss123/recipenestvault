@@ -272,8 +272,9 @@ function refineForPublication(source) {
 
   if (recipe.id === "jiaozi") {
     recipe.prepMinutes = 90;
-    recipe.cookMinutes = 30;
-    recipe.totalMinutes = 120;
+    recipe.cookMinutes = 40;
+    recipe.totalMinutes = 130;
+    recipe.yield = ml("48 dumplings (4 servings)", "48 顆（4 份）", "48個（4人分）", "48개(4인분)", "48 ชิ้น (4 ที่)");
     const panFryOil = recipe.ingredients.find((row) => row.item.en.startsWith("neutral oil for pan-fry"));
     if (panFryOil) {
       panFryOil.amount = ml("15 ml per 12", "每 12 顆 15 ml", "12個につき 15 ml", "12개당 15 ml", "15 ml ต่อ 12 ชิ้น");
@@ -303,25 +304,25 @@ function refineForPublication(source) {
       "คลึงแป้งเป็นแท่งเส้นผ่านศูนย์กลาง 3 ซม. ตัดเท่ากัน 48 ชิ้น แล้วรีดแต่ละชิ้นเป็นวงกลม 8 ซม. ให้ตรงกลางหนากว่าขอบเล็กน้อย คลุมไว้ตลอดไม่ให้แห้ง"
     );
     recipe.instructions[3] = ml(
-      "Place exactly 15 g filling in each wrapper, pleat and seal firmly with no trapped air. Arrange all 48 dumplings on a lightly floured tray without touching.",
-      "每張皮放入精確 15 公克餡料，打褶並確實封口，不留空氣；48 顆餃子排在薄撒麵粉的托盤上，彼此不可碰觸。",
-      "皮1枚に正確に15gのあんを置き、空気を残さずひだを寄せてしっかり閉じる。48個すべてを薄く打ち粉したトレーに、触れ合わないよう並べる。",
-      "피마다 소를 정확히 15g 넣고 공기가 갇히지 않게 주름을 잡아 단단히 봉한다. 48개를 가볍게 밀가루 뿌린 트레이에 서로 닿지 않게 놓는다.",
-      "ใส่ไส้ชั่งตรง 15 กรัมต่อแผ่น จับจีบและปิดให้แน่นโดยไม่มีอากาศค้าง วางเกี๊ยวทั้ง 48 ชิ้นบนถาดโรยแป้งบาง ๆ ไม่ให้แตะกัน"
+      "Weigh the finished filling and divide it into 48 equal portions, about 16–17 g each depending on how much water the cabbage releases. Place one portion in each wrapper, pleat and seal firmly with no trapped air.",
+      "將完成的餡料秤重後平均分成 48 份；依白菜擠出的水量不同，每份約 16–17 公克。每張皮放入一份，打褶並確實封口、不留空氣。",
+      "できたあんを量り、48等分します。白菜から絞れた水分によりますが、1個あたり約16～17gが目安です。皮に1等分を置き、空気を残さずひだを寄せて閉じます。",
+      "완성된 소의 무게를 재어 48등분합니다. 배추에서 짜낸 수분량에 따라 한 개당 약 16–17g이 기준입니다. 피마다 한 몫을 넣고 공기가 갇히지 않게 주름을 잡아 단단히 봉합니다.",
+      "ชั่งไส้ที่ผสมเสร็จแล้วแบ่งเท่ากัน 48 ส่วน ส่วนละประมาณ 16–17 กรัม ขึ้นกับปริมาณน้ำที่บีบออกจากกะหล่ำ ใส่หนึ่งส่วนต่อแผ่น จับจีบปิดให้แน่นไม่มีอากาศ"
     );
     recipe.instructions[4] = ml(
-      "For boiled jiaozi, bring 3 L water to a rolling boil over high heat. Cook 12–16 dumplings per batch for 6–8 minutes; they should float, the wrappers turn slightly translucent, and the centres reach 74°C.",
-      "製作水餃時，以大火將 3 公升水煮至大滾；每批煮 12–16 顆、6–8 分鐘，至餃子浮起、外皮略透明且餡心達 74°C。",
-      "水餃子は3Lの湯を強火で沸騰させ、1回12〜16個を6〜8分ゆでる。浮き上がり、皮が少し透け、中心が74°Cになることを確認する。",
-      "물만두는 물 3L를 센 불로 완전히 끓이고 한 번에 12–16개씩 6–8분 삶는다. 만두가 떠오르고 피가 살짝 투명해지며 속 중심이 74°C가 되어야 한다.",
-      "สำหรับเกี๊ยวต้ม ต้มน้ำ 3 ลิตรให้เดือดจัดด้วยไฟแรง ต้มครั้งละ 12–16 ชิ้นนาน 6–8 นาที จนลอย แผ่นแป้งโปร่งแสงเล็กน้อย และไส้ตรงกลางถึง 74°C"
+      "For boiled jiaozi, bring 3 L water to a rolling boil over high heat. Cook 16 dumplings per batch for 6–8 minutes, then check the largest in every batch: it should float, the wrapper turn slightly translucent, and the ground-pork centre reach 71°C (160°F). Continue in 1-minute increments if needed and return the water to a boil between batches.",
+      "水餃做法：以大火將 3 公升水煮至大滾，每批煮 16 顆、6–8 分鐘；每批都檢查最大顆：應浮起、外皮略透明，豬絞肉餡心達 71°C（160°F）。若未達標，每次續煮 1 分鐘，並在批次之間讓水恢復沸騰。",
+      "水餃子は水3Lを強火で沸かし、1回16個ずつ6～8分ゆでます。各回で最も大きい餃子を確認し、浮き、皮が少し透け、豚ひき肉の中心が71°C（160°F）に達していることを確認します。不足なら1分ずつ追加し、回ごとに湯を沸騰状態へ戻します。",
+      "물만두는 물 3L를 센 불로 팔팔 끓이고 한 번에 16개씩 6–8분 삶습니다. 매번 가장 큰 만두를 확인해 떠오르고 피가 살짝 투명하며 다진 돼지고기 중심이 71°C (160°F)에 도달했는지 확인합니다. 부족하면 1분씩 더 익히고 배치 사이에 물을 다시 끓입니다.",
+      "สำหรับเกี๊ยวต้ม ต้มน้ำ 3 ลิตรให้เดือดจัดด้วยไฟแรง ต้มครั้งละ 16 ชิ้นนาน 6–8 นาที แล้วตรวจชิ้นใหญ่สุดในทุกชุดให้ลอย แผ่นโปร่งแสงเล็กน้อย และใจกลางหมูบดถึง 71°C (160°F) หากยังไม่ถึงให้ต้มเพิ่มครั้งละ 1 นาที และต้มน้ำให้เดือดอีกครั้งระหว่างชุด"
     );
     recipe.instructions[5] = ml(
-      "Lift boiled jiaozi out with a slotted spoon and serve with black rice vinegar and chile oil on the side. For each optional 12-dumpling pan-fry batch, brown in 15 ml oil over medium-high heat for 2 minutes, add 60 ml water, cover 5 minutes, then uncover for 1 minute to crisp.",
-      "水餃以漏勺撈起，黑米醋與辣油另放供沾食。選用煎餃作法時，每批 12 顆以 15 毫升油中大火煎 2 分鐘，加入 60 毫升水、加蓋 5 分鐘，再開蓋煎 1 分鐘至酥脆。",
-      "水餃子は穴あきお玉ですくい、黒米酢とラー油を別添えにする。焼き餃子は12個につき油15mlで中強火2分焼き、水60mlを加えて5分ふたをし、ふたを外して1分焼いてカリッとさせる。",
-      "삶은 만두는 구멍 국자로 건져 흑미식초와 고추기름을 따로 곁들인다. 군만두는 12개당 기름 15ml로 중강불에 2분 굽고 물 60ml를 넣어 5분 덮은 뒤 뚜껑을 열어 1분 바삭하게 굽는다.",
-      "ตักเกี๊ยวต้มด้วยกระชอน เสิร์ฟน้ำส้มข้าวดำและน้ำมันพริกแยกด้านข้าง สำหรับการทอดกระทะครั้งละ 12 ชิ้น ใช้น้ำมัน 15 มล. ทอดไฟกลางค่อนแรง 2 นาที เติมน้ำ 60 มล. ปิดฝา 5 นาที แล้วเปิดฝาทอดอีก 1 นาทีให้กรอบ"
+      "Lift boiled jiaozi with a slotted spoon after the float, translucency, and 71°C checks. Serve 12 dumplings per person with 11.25 ml black rice vinegar and 3.75 ml chili oil. For each optional 12-dumpling pan-fry batch, brown in 15 ml oil for 2 minutes, add 60 ml water, cover 5 minutes, then uncover for 1 minute; check the largest dumpling's pork centre for 71°C, adding 15 ml water and cooking in 1-minute covered increments if needed.",
+      "水餃符合浮起、皮略透明及 71°C 三項判斷後，用漏勺撈起。每人分 12 顆，另備 11.25 毫升黑米醋與 3.75 毫升辣油。若選煎餃，每批 12 顆以 15 毫升油煎 2 分鐘，加入 60 毫升水並加蓋 5 分鐘，再開蓋煎 1 分鐘；檢查最大顆的豬肉中心達 71°C，未達時加 15 毫升水、加蓋每次續煎 1 分鐘。",
+      "浮き、皮の透け、中心71°Cを確認した水餃子を穴あきお玉ですくいます。1人12個に分け、黒米酢11.25mlとラー油3.75mlを添えます。焼き餃子は12個ずつ油15mlで2分焼き、水60mlを加えてふたをし5分、ふたを外して1分焼きます。最も大きい餃子の豚肉中心が71°Cか確認し、不足なら水15mlを足してふたをし、1分ずつ追加します。",
+      "떠오름, 반투명한 피, 중심 71°C를 확인한 물만두를 구멍 국자로 건집니다. 한 사람당 12개씩 담고 흑미식초 11.25ml와 고추기름 3.75ml를 곁들입니다. 군만두는 한 번에 12개씩 기름 15ml로 2분 굽고 물 60ml를 넣어 덮고 5분, 뚜껑을 열어 1분 굽습니다. 가장 큰 만두의 돼지고기 중심이 71°C인지 확인하고 부족하면 물 15ml를 더해 덮고 1분씩 익힙니다.",
+      "ตักเกี๊ยวต้มด้วยกระชอนเมื่อผ่านเกณฑ์ลอย แผ่นกึ่งใส และใจกลาง 71°C เสิร์ฟคนละ 12 ชิ้นกับน้ำส้มข้าวดำ 11.25 มล. และน้ำมันพริก 3.75 มล. สำหรับเกี๊ยวทอดกระทะแต่ละชุด ชุดละ 12 ชิ้น ใช้น้ำมัน 15 มล. จี่ 2 นาที เติมน้ำ 60 มล. ปิดฝา 5 นาที แล้วเปิดฝาอีก 1 นาที ตรวจใจกลางหมูของชิ้นใหญ่สุดให้ถึง 71°C หากยังไม่ถึงให้เติมน้ำ 15 มล. ปิดฝาและปรุงเพิ่มครั้งละ 1 นาที"
     );
     recipe.imageAlt = ml(
       "Plump boiled jiaozi with smooth, lightly translucent wrappers on a white plate",
@@ -331,6 +332,8 @@ function refineForPublication(source) {
       "เกี๊ยวต้มอวบวางบนจานขาว แผ่นแป้งเรียบและโปร่งแสงเล็กน้อย"
     );
     recipe.visualSpec = "Plump boiled jiaozi with smooth, lightly translucent wrappers on a plain white plate; no dip or unlisted garnish visible.";
+    addSource(recipe, "Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures", "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures");
+    addSource(recipe, "Official food-safety guidance — USDA FSIS: Correct Food Thermometer Placement", "https://www.fsis.usda.gov/news-events/news-press-releases/do-you-know-correct-place-insert-your-food-thermometer");
   }
 
   if (recipe.id === "scallion-pancakes") {
