@@ -13,12 +13,15 @@ export const spanishRecipeSources = {
     ),
     { title: 'FoodSafety.gov — Cook to a Safe Minimum Internal Temperature', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
   ],
-  'tortilla-espanola': sources(
-    'Spain.info — Potato omelette',
-    'https://www.spain.info/en/recipe/potato-omelette/',
-    'Foods & Wines from Spain — Spanish Potato Omelet',
-    'https://www.foodswinesfromspain.com/en/fws-academy/recipes/2017/october/video-recipe--spanish-potato-omelet'
-  ),
+  'tortilla-espanola': [
+    ...sources(
+      'Spain.info — Potato omelette',
+      'https://www.spain.info/en/recipe/potato-omelette/',
+      'Foods & Wines from Spain — Spanish Potato Omelet',
+      'https://www.foodswinesfromspain.com/en/fws-academy/recipes/2017/october/video-recipe--spanish-potato-omelet'
+    ),
+    { title: 'FDA — What You Need to Know About Egg Safety', url: 'https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety' }
+  ],
   'gazpacho-andaluz': sources(
     'Spain.info — Gazpacho',
     'https://www.spain.info/en/recipe/gazpacho/',

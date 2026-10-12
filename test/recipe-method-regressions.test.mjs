@@ -25,7 +25,8 @@ const auditedIds = [
   "caponata", "baklava", "malva-pudding", "pancit-bihon",
   "feijoada", "imeretian-khachapuri", "tamales-de-pollo-en-salsa-verde", "huevos-rancheros",
   "harira", "mujadara", "maafe", "bobotie",
-  "chicken-shawarma", "zaatar-manakish", "jambalaya", "thit-kho-trung"
+  "chicken-shawarma", "zaatar-manakish", "jambalaya", "thit-kho-trung",
+  "chicken-and-sausage-gumbo", "pozole-rojo", "tortilla-espanola", "nuernberger-rostbratwurst"
 ];
 const auditedRecipes = new Map(auditedIds.map((id) => [id, recipes.find((recipe) => recipe.id === id)]));
 
@@ -1475,8 +1476,8 @@ test("bobotie allocates bread, butter, seasoning, and sides and checks casserole
 
 
 test("fourteenth method audit checks four new IDs, all five locales, amounts, timing, and safety endpoints", () => {
-  assert.equal(auditedIds.length, 56, "deep-review coverage contains 56 distinct recipes");
-  assert.equal(new Set(auditedIds).size, 56, "coverage IDs are unique");
+  assert.equal(auditedIds.length, 60, "deep-review coverage contains 60 distinct recipes");
+  assert.equal(new Set(auditedIds).size, 60, "coverage IDs are unique");
   const chicken = auditedRecipes.get("chicken-shawarma");
   const bread = auditedRecipes.get("zaatar-manakish");
   const jambalaya = auditedRecipes.get("jambalaya");
@@ -1575,4 +1576,106 @@ test("fourteenth method audit checks four new IDs, all five locales, amounts, ti
     assert.match(porkDoneness.body[locale], porkPatterns[locale], `${locale}: pork temperature and rest endpoint`);
     assert.match(rest.body[locale], /5/, `${locale}: the final five-minute rest is stated`);
   }
+});
+
+test("fifteenth method audit checks four new recipes, five locales, portions, timing, and safe endpoints", () => {
+  const gumbo = auditedRecipes.get("chicken-and-sausage-gumbo");
+  const pozole = auditedRecipes.get("pozole-rojo");
+  const tortilla = auditedRecipes.get("tortilla-espanola");
+  const sausages = auditedRecipes.get("nuernberger-rostbratwurst");
+  const additions = [gumbo, pozole, tortilla, sausages];
+
+  assert.equal(auditedIds.length, 60);
+  assert.equal(new Set(auditedIds).size, 60);
+  for (const recipe of additions) {
+    assert.ok(recipe, "each fifteenth-batch slug exists");
+    for (const locale of localeOrder) {
+      assert.ok(recipe.ingredients.every((row) => row.amount && row.item[locale]), `${recipe.id}/${locale}: localized ingredients exist`);
+      assert.ok(recipe.instructions.every((step) => step.title[locale] && step.body[locale]), `${recipe.id}/${locale}: localized steps exist`);
+    }
+    assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes, `${recipe.id}: total time adds up`);
+  }
+
+  assert.equal(gumbo.servings, 8);
+  assert.deepEqual([gumbo.prepMinutes, gumbo.cookMinutes, gumbo.totalMinutes], [35, 145, 180]);
+  assert.equal(gumbo.ingredients.find((row) => row.item.en === "fine salt, divided")?.amount, "6 g");
+  assert.ok(gumbo.sources.some((source) => source.url === foodSafetySource));
+  const gumboChickenSalt = recipeStep(gumbo, "Brown the chicken");
+  const gumboStock = recipeStep(gumbo, "Whisk in the stock");
+  const gumboChicken = recipeStep(gumbo, "Simmer the chicken");
+  const gumboRice = recipeStep(gumbo, "Serve over rice");
+  const gumboPatterns = {
+    en: [/2 g of the salt/, /remaining 4 g salt/, /74°C \/ 165°F[\s\S]*3-minute intervals/, /800 g[\s\S]*8 bowls \(100 g each\)/],
+    "zh-hant": [/2 公克鹽/, /剩餘 4 公克鹽/, /74°C／165°F[\s\S]*3 分鐘/, /800 公克[\s\S]*8 碗（每碗 100 公克）/],
+    ja: [/塩2g/, /残りの塩4g/, /74°C \/ 165°F[\s\S]*3分/, /800g[\s\S]*8つの器に100gずつ/],
+    ko: [/소금 2g/, /남은 소금 4g/, /74°C \/ 165°F[\s\S]*3분/, /밥 800g[\s\S]*8개에 100g씩/],
+    th: [/เกลือ 2 กรัม/, /เกลือที่เหลือ 4 กรัม/, /74°C \/ 165°F[\s\S]*3 นาที/, /ข้าวสวยร้อน 800 กรัม[\s\S]*8 ชาม ชามละ 100 กรัม/]
+  };
+  for (const locale of localeOrder) {
+    assert.match(gumboChickenSalt.body[locale], gumboPatterns[locale][0], `${locale}: measured chicken salt`);
+    assert.match(gumboStock.body[locale], gumboPatterns[locale][1], `${locale}: remaining salt allocation`);
+    assert.match(gumboChicken.body[locale], gumboPatterns[locale][2], `${locale}: safe poultry endpoint`);
+    assert.match(gumboRice.body[locale], gumboPatterns[locale][3], `${locale}: rice portions`);
+  }
+  const gumboCookRange = summedExplicitMinutes(gumbo.instructions.map((step) => step.body.en));
+  assert.deepEqual(gumboCookRange, [110, 125]);
+  assert.ok(gumbo.cookMinutes >= gumboCookRange[1]);
+
+  assert.equal(pozole.servings, 8);
+  assert.deepEqual([pozole.prepMinutes, pozole.cookMinutes, pozole.totalMinutes], [45, 150, 195]);
+  assert.match(pozole.ingredients.find((row) => row.item.en.startsWith("pork shoulder"))?.item.en ?? "", /4 cm cubes/);
+  assert.ok(pozole.sources.some((source) => source.url === foodSafetySource));
+  const porkEndpoint = recipeStep(pozole, "Simmer until the broth melds");
+  const pozoleGarnish = recipeStep(pozole, "Prepare the fresh garnishes");
+  const pozoleServe = recipeStep(pozole, "Ladle and garnish at the table");
+  const pozolePatterns = {
+    en: [/63°C \/ 145°F[\s\S]*fork-tender[\s\S]*10-minute intervals[\s\S]*rest the pork in the broth for 3 minutes/, /38 g cabbage[\s\S]*22 g radish[\s\S]*15 g onion/, /evenly among 8 deep bowls/],
+    "zh-hant": [/63°C／145°F[\s\S]*叉子輕鬆撥開[\s\S]*再煮 10 分鐘[\s\S]*靜置 3 分鐘/, /38 公克高麗菜[\s\S]*22 公克蘿蔔[\s\S]*15 公克洋蔥/, /平均分入 8 個深碗/],
+    ja: [/63°C \/ 145°F[\s\S]*フォークでほぐれる[\s\S]*10分ずつ[\s\S]*3分休ませる/, /キャベツは1人約38g[\s\S]*ラディッシュ約22g[\s\S]*玉ねぎ約15g/, /8つの深い器に均等に分ける/],
+    ko: [/63°C \/ 145°F[\s\S]*포크로 쉽게 풀릴[\s\S]*10분씩[\s\S]*3분간 둡니다/, /양배추 약 38g[\s\S]*래디시 22g[\s\S]*양파 15g/, /깊은 그릇 8개에 고르게 나눕니다/],
+    th: [/63°C \/ 145°F[\s\S]*ส้อมแยกได้[\s\S]*10 นาที[\s\S]*พักหมูในน้ำซุป 3 นาที/, /กะหล่ำ 38 กรัม[\s\S]*หัวไชเท้า 22 กรัม[\s\S]*หอม 15 กรัม/, /ชามลึก 8 ใบ/]
+  };
+  for (const locale of localeOrder) {
+    assert.match(porkEndpoint.body[locale], pozolePatterns[locale][0], `${locale}: pork safety endpoint and tenderness`);
+    assert.match(pozoleGarnish.body[locale], pozolePatterns[locale][1], `${locale}: garnish portions`);
+    assert.match(pozoleServe.body[locale], pozolePatterns[locale][2], `${locale}: eight bowls`);
+  }
+
+  assert.equal(tortilla.servings, 4);
+  assert.deepEqual([tortilla.prepMinutes, tortilla.cookMinutes, tortilla.totalMinutes], [25, 40, 65]);
+  assert.ok(tortilla.ingredients.some((row) => row.item.en.startsWith("large eggs; use pasteurized eggs")));
+  assert.ok(tortilla.sources.some((source) => source.url === eggSafetySource));
+  const tortillaEggs = recipeStep(tortilla, "Flip, finish and rest");
+  const tortillaPatterns = {
+    en: /71°C \/ 160°F[\s\S]*1-minute intervals[\s\S]*pasteurized eggs[\s\S]*8 wedges[\s\S]*2 per person/,
+    "zh-hant": /71°C／160°F[\s\S]*每次再煎 1 分鐘[\s\S]*巴氏殺菌蛋[\s\S]*8 片[\s\S]*每人 2 片/,
+    ja: /71°C \/ 160°F[\s\S]*1分ずつ[\s\S]*殺菌済み卵[\s\S]*8等分[\s\S]*1人2切れ/,
+    ko: /71°C \/ 160°F[\s\S]*1분씩[\s\S]*살균란[\s\S]*8조각[\s\S]*1인당 2조각/,
+    th: /71°C \/ 160°F[\s\S]*ครั้งละ 1 นาที[\s\S]*ไข่พาสเจอไรซ์[\s\S]*8 ชิ้น[\s\S]*คนละ 2 ชิ้น/
+  };
+  for (const locale of localeOrder) assert.match(tortillaEggs.body[locale], tortillaPatterns[locale], `${locale}: egg-safety path and portions`);
+
+  assert.equal(sausages.servings, 4);
+  assert.deepEqual([sausages.prepMinutes, sausages.cookMinutes, sausages.totalMinutes], [15, 65, 80]);
+  assert.equal(sausages.ingredients.find((row) => row.item.en.startsWith("fine salt, divided"))?.amount, "3 g");
+  assert.ok(sausages.sources.some((source) => source.url === foodSafetySource));
+  const sausageSalt = recipeStep(sausages, "Soften the onion and apple");
+  const sausageSaltFinish = recipeStep(sausages, "Reduce the cabbage juices");
+  const sausageDoneness = recipeStep(sausages, "Brown the sausages");
+  const sausageServe = recipeStep(sausages, "Serve with mustard");
+  const sausagePatterns = {
+    en: [/2 g salt/, /remaining 1 g salt only if needed/, /71°C \/ 160°F[\s\S]*1-minute intervals[\s\S]*package reheating directions/, /700 g sauerkraut[\s\S]*175 g each[\s\S]*6 sausages[\s\S]*40 g German mustard[\s\S]*10 g per person/],
+    "zh-hant": [/2 公克鹽/, /剩餘 1 公克鹽/, /71°C／160°F[\s\S]*再煎 1 分鐘[\s\S]*依包裝指示回熱/, /700 公克酸菜[\s\S]*175 公克[\s\S]*6 根香腸[\s\S]*40 公克德式芥末[\s\S]*10 公克/],
+    ja: [/塩2g/, /残りの塩1g/, /71°C \/ 160°F[\s\S]*1分ずつ[\s\S]*包装の温め方/, /ザワークラウト700g[\s\S]*約175g[\s\S]*ソーセージ6本[\s\S]*マスタード40g[\s\S]*約10g/],
+    ko: [/소금 2g/, /남은 소금 1g/, /71°C \/ 160°F[\s\S]*1분씩[\s\S]*포장 지침/, /사우어크라우트 700g[\s\S]*약 175g[\s\S]*소시지 6개[\s\S]*머스터드 40g[\s\S]*10g/],
+    th: [/เกลือ 2 กรัม/, /เกลือ 1 กรัมที่เหลือ/, /71°C \/ 160°F[\s\S]*ครั้งละ 1 นาที[\s\S]*ตามคำแนะนำบนฉลาก/, /ซาวเคราต์ 700 กรัม[\s\S]*175 กรัม[\s\S]*ไส้กรอกจานละ 6 ชิ้น[\s\S]*มัสตาร์ดเยอรมัน 40 กรัม[\s\S]*10 กรัม/]
+  };
+  for (const locale of localeOrder) {
+    assert.match(sausageSalt.body[locale], sausagePatterns[locale][0], `${locale}: salt allocation`);
+    assert.match(sausageSaltFinish.body[locale], sausagePatterns[locale][1], `${locale}: optional final salt`);
+    assert.match(sausageDoneness.body[locale], sausagePatterns[locale][2], `${locale}: sausage endpoint`);
+    assert.match(sausageServe.body[locale], sausagePatterns[locale][3], `${locale}: per-person portions`);
+  }
+  assert.deepEqual([7 + 25 + 5 + (2 * 6) + 3, 7 + 25 + 8 + (2 * 8) + 3], [52, 59]);
+  assert.ok(sausages.cookMinutes >= 59, "cook time covers both sausage batches and the high end of timed stages");
 });

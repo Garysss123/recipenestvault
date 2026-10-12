@@ -46,12 +46,15 @@ export const americanRecipeSources = {
     'Food Network — Philly Cheesesteak',
     'https://www.foodnetwork.com/recipes/philly-cheesesteak-recipe-1948754'
   ),
-  'chicken-and-sausage-gumbo': sources(
-    'Food Network — Chicken and Sausage Gumbo',
-    'https://www.foodnetwork.com/recipes/chicken-and-sausage-gumbo-recipe-2043183',
-    'Emeril Lagasse — Chicken and Smoked Sausage Gumbo',
-    'https://www.emerils.com/127540/chicken-and-smoked-sausage-gumbo'
-  ),
+  'chicken-and-sausage-gumbo': [
+    ...sources(
+      'Food Network — Chicken and Sausage Gumbo',
+      'https://www.foodnetwork.com/recipes/chicken-and-sausage-gumbo-recipe-2043183',
+      'Emeril Lagasse — Chicken and Smoked Sausage Gumbo',
+      'https://www.emerils.com/127540/chicken-and-smoked-sausage-gumbo'
+    ),
+    { title: 'FoodSafety.gov — Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
+  ],
   jambalaya: [
     ...sources(
       'Food Network Kitchen — Chicken, Andouille and Shrimp Jambalaya',

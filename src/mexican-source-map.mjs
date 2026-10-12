@@ -21,12 +21,15 @@ export const mexicanRecipeSources = {
     { title: 'México in My Kitchen — How to Make Mole Poblano', url: 'https://www.mexicoinmykitchen.com/how-to-make-mole-poblano/' },
     { title: 'FoodSafety.gov — Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
   ],
-  'pozole-rojo': sources(
-    'México in My Kitchen — Red Pozole / Pozole Rojo',
-    'https://www.mexicoinmykitchen.com/red-pozole-rojo/',
-    'Pati Jinich — Pozole Rojo',
-    'https://patijinich.com/es/pozole-rojo/'
-  ),
+  'pozole-rojo': [
+    ...sources(
+      'México in My Kitchen — Red Pozole / Pozole Rojo',
+      'https://www.mexicoinmykitchen.com/red-pozole-rojo/',
+      'Pati Jinich — Pozole Rojo',
+      'https://patijinich.com/es/pozole-rojo/'
+    ),
+    { title: 'FoodSafety.gov — Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
+  ],
   'birria-de-res': sources(
     'México in My Kitchen — Beef Birria Recipe',
     'https://www.mexicoinmykitchen.com/beef-birria-recipe/',

@@ -28,12 +28,15 @@ export const germanRecipeSources = {
     'REWE — Currywurst',
     'https://www.rewe.de/rezepte/currywurst/'
   ),
-  'nuernberger-rostbratwurst': sources(
-    'Kitchen Stories — Nürnberger bratwursts with sauerkraut and mashed potatoes',
-    'https://www.kitchenstories.com/en/recipes/nurnberger-bratwursts-with-sauerkraut-and-mashed-potatoes',
-    'Schutzverband Nürnberger Bratwürste — Gegrillte Nürnberger Bratwürste mit fränkischem Sauerkraut',
-    'https://nuernberger-bratwuerste.de/de/erleben-geniessen/rezepte/gegrillte-nuernberger-bratwuerste-mit-fraenkischem-sauerkraut-und-holzofenbrot'
-  ),
+  'nuernberger-rostbratwurst': [
+    ...sources(
+      'J. Kenji López-Alt / Serious Eats — Grilled Bratwurst with Beer, Mustard, and Sauerkraut',
+      'https://www.seriouseats.com/grilled-bratwurst-with-beer-mustard-and-sauerkraut-recipe',
+      'Schutzverband Nürnberger Bratwürste — Gegrillte Nürnberger Bratwürste mit fränkischem Sauerkraut',
+      'https://nuernberger-bratwuerste.de/de/erleben-geniessen/rezepte/gegrillte-nuernberger-bratwuerste-mit-fraenkischem-sauerkraut-und-holzofenbrot'
+    ),
+    { title: 'FoodSafety.gov — Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
+  ],
   'frikadellen': sources(
     'The Daring Gourmet — Traditional Frikadellen',
     'https://www.daringgourmet.com/frikadeller-frikadellen/',
