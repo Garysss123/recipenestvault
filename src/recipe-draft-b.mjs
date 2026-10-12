@@ -1242,7 +1242,9 @@ const recipeDraftBSource = [
     },
     sources: [
       { title: "The Woks of Life — Simple Wonton Soup", url: "https://thewoksoflife.com/wonton-soup-recipe/" },
-      { title: "Omnivore's Cookbook — Wonton Soup", url: "https://omnivorescookbook.com/wonton-soup/" }
+      { title: "Omnivore's Cookbook — Wonton Soup", url: "https://omnivorescookbook.com/wonton-soup/" },
+      { title: "Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures", url: "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures" },
+      { title: "Official food-safety guidance — FDA: Selecting and Serving Fresh and Frozen Seafood Safely", url: "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely" }
     ],
     visualSpec: {
       en: "Real finished-dish brief: a deep white bowl with 8–10 plump, semi-translucent wontons in clear golden broth, a whole baby bok choy beside them, ginger threads, and fresh scallion rings floating visibly on top.",

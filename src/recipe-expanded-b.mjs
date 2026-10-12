@@ -356,11 +356,11 @@ export const expandedInstructionsB = {
     {
       title: ml("Fill and seal 48 wontons", "包成 48 顆餛飩", "ワンタンを48個包む", "완탕 48개 빚기", "ห่อเกี๊ยว 48 ชิ้น"),
       body: ml(
-        "Divide all filling into 48 equal portions, about 12 g each, and place one in every square wrapper. Moisten the edges with the listed 30 ml sealing water, fold into a triangle, press out all air, and bring the lower corners together. Keep finished wontons covered.",
-        "將全部餡料平均分成 48 份，每份約 12 公克，逐一放入方形餛飩皮。用列出的 30 毫升封口水沾濕邊緣，對折成三角形、擠出空氣，再黏合下方兩角；包好的餛飩全程覆蓋。",
-        "あんを全て48等分し、1個約12gを正方形の皮に置く。記載した皮を閉じる水30mlで縁を濡らし、三角に折って空気を抜き、下の角を合わせる。包んだワンタンは覆う。",
-        "소를 모두 48등분해 한 개당 약 12g씩 사각 완탕피에 넣는다. 목록의 봉합용 물 30ml로 가장자리를 적셔 삼각형으로 접고 공기를 뺀 뒤 아래 모서리를 붙인다. 빚은 완탕은 덮어 둔다.",
-        "แบ่งไส้ทั้งหมดเป็น 48 ส่วนเท่าๆ กัน ส่วนละประมาณ 12 กรัม ใส่หนึ่งส่วนต่อแผ่นสี่เหลี่ยม ใช้น้ำปิดขอบ 30 มล. แตะขอบ พับเป็นสามเหลี่ยม ไล่อากาศ แล้วประกบมุมล่าง คลุมเกี๊ยวที่ห่อแล้วไว้"
+        "The measured filling totals about 573 g; divide it among all 48 square wrappers at about 11.9 g each. Moisten the edges with the listed 30 ml sealing water, fold into a triangle, press out all air, and bring the lower corners together. Keep finished wontons covered.",
+        "餡料總重約 573 公克，平均分給 48 張方形餛飩皮，每張約 11.9 公克。用列出的 30 毫升封口水沾濕邊緣，對折成三角形、擠出空氣，再黏合下方兩角；包好的餛飩全程覆蓋。",
+        "具の合計は約573gです。正方形の皮48枚に約11.9gずつ分けます。記載した閉じ水30mlで縁を濡らし、三角に折って空気を抜き、下の角を合わせます。包んだワンタンは覆っておきます。",
+        "계량한 소는 총 약 573g입니다. 사각 완탕피 48장에 약 11.9g씩 나눠 담습니다. 목록의 봉합용 물 30ml로 가장자리를 적셔 삼각형으로 접고 공기를 뺀 뒤 아래 모서리를 붙입니다. 빚은 완탕은 덮어 둡니다.",
+        "ไส้ที่ตวงไว้รวมประมาณ 573 กรัม แบ่งใส่แผ่นเกี๊ยวสี่เหลี่ยม 48 แผ่น แผ่นละประมาณ 11.9 กรัม ใช้น้ำปิดขอบ 30 มล. แตะขอบ พับเป็นสามเหลี่ยม ไล่อากาศ แล้วประกบมุมล่าง คลุมเกี๊ยวที่ห่อแล้วไว้"
       )
     },
     {
@@ -396,21 +396,21 @@ export const expandedInstructionsB = {
     {
       title: ml("Check doneness and lift promptly", "確認熟度立即撈起", "火の通りを確認してすくう", "익음 확인하고 바로 건지기", "เช็กสุกแล้วตักทันที"),
       body: ml(
-        "Lift a batch as soon as the wontons float, the wrappers look semi-translucent, and the pork-and-shrimp centre reaches 74°C. Do not leave cooked wontons in the boiling water, or the skins become soft.",
-        "餛飩浮起、外皮呈半透明且豬蝦餡心達 74°C 後立即撈起。不要把熟餛飩留在熱水中，否則皮會變軟。",
-        "ワンタンが浮き、皮が半透明で、豚えびの中心が74℃になったらすぐすくう。ゆで上がりを湯に置くと皮が柔らかくなる。",
-        "완탕이 떠오르고 피가 반투명하며 돼지고기·새우 중심이 74°C가 되면 즉시 건진다. 익은 완탕을 물에 두면 피가 물러진다.",
-        "ตักแต่ละชุดทันทีเมื่อเกี๊ยวลอย แผ่นกึ่งโปร่งแสง และใจกลางไส้หมูกุ้งถึง 74°C อย่าทิ้งเกี๊ยวสุกไว้ในน้ำร้อนเพราะแผ่นจะนิ่ม"
+        "Check the thickest wonton in each batch: it should float, the wrapper should look semi-translucent, the pork centre must reach 71°C (160°F), and the shrimp should be firm and opaque. The ground-pork endpoint controls this mixed filling. If needed, continue at a gentle boil in 1-minute increments. Lift each batch promptly so the skins do not soften.",
+        "每批檢查最厚的餛飩：應浮起、外皮半透明、豬肉中心達 71°C（160°F），蝦肉則緊實不透明。混合餡料以豬絞肉的熟度為準；若未達，溫和沸煮後每次以 1 分鐘續煮。達標即撈起，避免外皮泡軟。",
+        "各回の最も大きいワンタンを確認します。浮き、皮が半透明で、豚肉の中心が71°C（160°F）に達し、えびが締まって不透明になっていること。混合あんは豚ひき肉の温度を基準にします。不足なら静かな沸騰で1分ずつ追加し、皮が柔らかくなる前にすくいます。",
+        "각 배치에서 가장 큰 완탕을 확인합니다. 떠오르고 피가 반투명하며 돼지고기 중심이 71°C (160°F)에 도달하고 새우는 단단하고 불투명해야 합니다. 혼합 소는 다진 돼지고기 기준 온도를 따릅니다. 부족하면 약하게 끓이며 1분씩 더 익히고 피가 물러지기 전에 건집니다.",
+        "ตรวจเกี๊ยวชิ้นใหญ่สุดในแต่ละชุด ควรลอย แผ่นกึ่งโปร่งแสง ใจกลางหมูถึง 71°C (160°F) และกุ้งแน่นทึบแสง ใช้เกณฑ์หมูบดกับไส้ผสมนี้ หากยังไม่ถึงให้ต้มอ่อนเพิ่มครั้งละ 1 นาที แล้วตักทันทีไม่ให้แผ่นนิ่ม"
       )
     },
     {
       title: ml("Divide the bowls", "分碗", "器に分ける", "그릇에 나누기", "แบ่งใส่ชาม"),
       body: ml(
-        "Place 12 wontons in each of four bowls. Pour the 85–90°C broth over them and scatter the listed 20 g scallion garnish evenly.",
-        "四個碗各放 12 顆餛飩，沖入 85–90°C 高湯，將列出的 20 公克青蔥均勻撒上。",
-        "4つの器にワンタンを12個ずつ入れる。85～90℃のだしを注ぎ、記載したねぎ20gを均等に散らす。",
-        "네 그릇에 완탕을 12개씩 담는다. 85–90°C 육수를 붓고 목록의 대파 고명 20g을 고르게 뿌린다.",
-        "ใส่เกี๊ยวชามละ 12 ชิ้นใน 4 ชาม ราดน้ำซุป 85–90°C และโรยต้นหอม 20 กรัมที่ระบุให้ทั่ว"
+        "Place 12 wontons in each of four bowls. Pour 375 ml broth into each bowl and divide the 20 g scallion garnish evenly, 5 g per bowl. Each serving represents about 56 g raw pork and 56 g raw shrimp in the filling. Serve the broth hot, without adding unlisted garnish.",
+        "四個碗各放 12 顆餛飩，每碗舀入 375 毫升高湯，20 公克青蔥平均分配、每碗 5 公克。每份餡料約相當於 56 公克生豬肉與 56 公克生蝦。趁熱上桌，不加未列出的配料。",
+        "4つの器にワンタンを12個ずつ入れ、だしを各375ml注ぎます。ねぎ20gは均等に分け、各器5gです。1人分の具は生の豚肉約56g、えび約56g相当です。記載のない具は加えず、熱いうちに供します。",
+        "네 그릇에 완탕을 12개씩 담고 육수를 그릇마다 375ml씩 붓습니다. 대파 고명 20g은 고르게 나눠 그릇마다 5g씩 올립니다. 한 그릇의 소는 생돼지고기 약 56g과 생새우 약 56g 상당입니다. 목록에 없는 고명은 더하지 말고 뜨거울 때 냅니다.",
+        "ใส่เกี๊ยวชามละ 12 ชิ้นใน 4 ชาม ราดน้ำซุปชามละ 375 มล. แบ่งต้นหอม 20 กรัมเท่า ๆ กัน ชามละ 5 กรัม ไส้ต่อที่เทียบเท่าหมูดิบประมาณ 56 กรัมและกุ้งดิบประมาณ 56 กรัม เสิร์ฟน้ำซุปร้อนโดยไม่เพิ่มเครื่องที่ไม่ได้ระบุ"
       )
     },
     {
