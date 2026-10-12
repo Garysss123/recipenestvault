@@ -52,9 +52,9 @@ export const canadianRecipeSources = {
   'halifax-donair': sources(
     'Jo Cooks — Halifax Donair',
     'https://www.jocooks.com/recipes/halifax-donair/',
-    'Just Plain Cooking — Authentic Halifax Donair',
-    'https://justplaincooking.ca/recipe/halifax-donair/'
-  ),
+    'Canadian Living Test Kitchen — East Coast Donair',
+    'https://www.canadianliving.com/food/lunch-and-dinner/recipe/east-coast-donair'
+  ).concat({ title: 'Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }),
   'jiggs-dinner': [
     ...sources(
       'Parks Canada — Jiggs Dinner, Ryan Premises National Historic Site',

@@ -15,7 +15,7 @@ export const mexicanRecipeSources = {
     'https://www.mexicoinmykitchen.com/cochinita-pibil-recipe/',
     'Food Network Kitchen — Cochinita Pibil',
     'https://www.foodnetwork.com/recipes/food-network-kitchen/cochinita-pibil-24282718'
-  ),
+  ).concat({ title: 'Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }),
   'mole-poblano': [
     { title: 'Pati Jinich — Mole Poblano: Yes You Can!', url: 'https://patijinich.com/mole_poblano_de_los_angeles/' },
     { title: 'México in My Kitchen — How to Make Mole Poblano', url: 'https://www.mexicoinmykitchen.com/how-to-make-mole-poblano/' },

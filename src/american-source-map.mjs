@@ -21,7 +21,7 @@ export const americanRecipeSources = {
     'https://www.foodnetwork.com/recipes/southern-fried-chicken-recipe0-1922088',
     'Food Network — Traditional Southern Fried Chicken',
     'https://www.foodnetwork.com/recipes/traditional-southern-fried-chicken-recipe-1938410'
-  ),
+  ).concat({ title: 'Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }),
   'memphis-style-ribs': sources(
     'Food Network — Memphis-Style Ribs',
     'https://www.foodnetwork.com/recipes/memphis-style-ribs-recipe-1953240',
