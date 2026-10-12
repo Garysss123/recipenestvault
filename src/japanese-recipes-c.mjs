@@ -1112,8 +1112,8 @@ export const japaneseRecipesC = [
     cuisine: "japanese",
     region: ml("Japan", "日本", "日本", "일본", "ญี่ปุ่น"),
     prepMinutes: 30,
-    cookMinutes: 75,
-    totalMinutes: 105,
+    cookMinutes: 85,
+    totalMinutes: 115,
     servings: 4,
     name: ml(
       "Home-style shoyu ramen with chashu",
@@ -1164,21 +1164,21 @@ export const japaneseRecipesC = [
       {
         title: ml("Sear the chashu", "煎上叉燒色", "チャーシューを焼く", "차슈 겉면 굽기", "จี่ชาชูให้เป็นสี"),
         body: ml(
-          "Heat the 15 ml neutral oil in a heavy pot over medium-high heat. Brown every side of the pork for 6–8 minutes, then remove it; searing builds colour without pretending to make a long-cooked tonkotsu broth.",
-          "厚底鍋以中大火加熱 15 毫升中性油，將豬肉每面煎 6–8 分鐘至上色後取出；這只建立表面色澤，不假裝熬製長時間豚骨湯。",
-          "厚手の鍋で油15mlを中強火に熱し、豚肉の全ての面を6〜8分焼いて色を付け、取り出す。長時間の豚骨だしを作る工程ではない。",
-          "두꺼운 냄비에 중강불로 중성유 15ml를 달군다. 돼지고기 모든 면을 6–8분 갈색으로 굽고 꺼낸다. 긴 돈코츠 육수를 만드는 과정은 아니다.",
-          "ตั้งหม้อก้นหนาไฟกลางค่อนแรง ใส่น้ำมัน 15 มล. จี่หมูทุกด้าน 6–8 นาทีจนมีสีแล้วตักออก ขั้นตอนนี้ไม่ใช่การทำน้ำซุปทงคตสึนาน ๆ"
+          "Heat the 15 ml neutral oil in a heavy pot over medium-high heat. Brown all sides of the pork for 6–8 minutes total, then remove it; this is a sear, not a long-cooked tonkotsu broth.",
+          "厚底鍋以中大火加熱 15 毫升中性油，將豬肉所有面合計煎 6–8 分鐘至上色後取出；這是煎香，不是長時間豚骨湯。",
+          "厚手の鍋で油15mlを中強火に熱し、豚肉の全ての面を合計6〜8分焼いて色を付け、取り出す。長時間の豚骨だしを作る工程ではない。",
+          "두꺼운 냄비에 중강불로 중성유 15ml를 달군다. 돼지고기 모든 면을 합계 6–8분 갈색으로 굽고 꺼낸다. 긴 돈코츠 육수를 만드는 과정은 아니다.",
+          "ตั้งหม้อก้นหนาไฟกลางค่อนแรง ใส่น้ำมัน 15 มล. จี่หมูทุกด้านรวม 6–8 นาทีจนมีสีแล้วตักออก ขั้นตอนนี้ไม่ใช่การทำน้ำซุปทงคตสึนาน ๆ"
         )
       },
       {
         title: ml("Braise until safe and tender", "燉煮至熟嫩", "安全な温度まで煮る", "안전하게 익혀 부드럽게 조리", "เคี่ยวจนสุกปลอดภัยและนุ่ม"),
         body: ml(
-          "Add 750 ml water, 120 ml chashu soy sauce, 60 ml sake, 60 ml mirin, 20 g sugar, ginger and braising scallions to the pot. Return the pork, cover and simmer gently for 45 minutes, turning twice, until tender and the centre reaches at least 71°C.",
-          "鍋中加入 750 毫升水、120 毫升叉燒醬油、60 毫升清酒、60 毫升味醂、20 公克糖、薑片與燉煮青蔥，放回豬肉加蓋小火燉 45 分鐘，中途翻面兩次，直到柔嫩且中心至少達 71°C。",
-          "鍋に水750ml、チャーシュー用しょうゆ120ml、酒60ml、みりん60ml、砂糖20g、しょうが、ねぎを入れる。肉を戻し、ふたをして弱く45分煮、途中2回返し、柔らかく中心71℃以上にする。",
-          "냄비에 물 750ml, 차슈 간장 120ml, 사케 60ml, 미림 60ml, 설탕 20g, 생강과 대파를 넣는다. 고기를 돌려 넣고 덮어 45분 약하게 끓이며 두 번 뒤집어 부드럽고 중심 71°C 이상이 되게 한다.",
-          "ใส่น้ำ 750 มล. ซีอิ๊วชาชู 120 มล. สาเก 60 มล. มิริน 60 มล. น้ำตาล 20 กรัม ขิง และต้นหอมลงหม้อ ใส่หมูกลับ ปิดฝาเคี่ยวเบา ๆ 45 นาที กลับสองครั้งจนหมูนุ่มและใจกลางอย่างน้อย 71°C"
+          "Add 750 ml water, 120 ml chashu soy sauce, 60 ml sake, 60 ml mirin, 20 g sugar, ginger and braising scallions. Return the pork, cover and simmer gently for about 45 minutes, turning twice; this is a recipe timing estimate, not a safety endpoint. Insert a clean thermometer sideways into the thickest centre, avoiding the pot. The official whole-cut pork minimum is 63°C (145°F) followed by a 3-minute rest. Turn off the heat and rest the pork covered in the hot braise for at least 3 minutes once it reaches that minimum. For a fork-tender braise, if it is still firm, simmer 10 minutes more at a time and recheck tenderness; the extra time is a texture estimate.",
+          "加入 750 毫升水、120 毫升叉燒醬油、60 毫升清酒、60 毫升味醂、20 公克糖、薑片與燉煮青蔥。放回豬肉，加蓋小火燉約 45 分鐘，中途翻面兩次；這是食譜時間估算，不是安全熟度標準。將乾淨探針從側面插入最厚處中心，勿碰鍋。官方整塊豬肉最低標準為 63°C（145°F），並靜置 3 分鐘。達標後熄火，讓豬肉留在熱燉汁中加蓋靜置至少 3 分鐘。若還不夠叉子可分的柔嫩度，每次再小火燉 10 分鐘並檢查；追加時間是口感估算。",
+          "水750ml、チャーシュー用しょうゆ120ml、酒60ml、みりん60ml、砂糖20g、しょうが、ねぎを加える。肉を戻し、ふたをして弱火で約45分煮、途中2回返す。この時間はレシピ上の目安で、安全温度の代わりではない。清潔な温度計を鍋に触れないよう最も厚い中心部へ横から差す。豚肉の塊の公式最低温度は63℃（145°F）で、その後3分休ませる。達したら火を止め、熱い煮汁の中でふたをして少なくとも3分休ませる。まだフォークでほぐれる柔らかさでなければ、柔らかさを確かめながら10分ずつ追加で弱火にかける。追加時間は食感の目安。",
+          "물 750ml, 차슈용 간장 120ml, 사케 60ml, 미림 60ml, 설탕 20g, 생강과 조림용 대파를 넣는다. 돼지고기를 다시 넣고 덮어 약 45분 약하게 끓이며 두 번 뒤집는다. 이 시간은 조리법상 예상치이며 안전 기준이 아니다. 깨끗한 온도계를 냄비에 닿지 않게 가장 두꺼운 중심부에 옆으로 찔러 넣는다. 통돼지고기의 공식 최소 기준은 63°C(145°F)이고 이후 3분간 휴지한다. 기준에 도달하면 불을 끄고 뜨거운 조림 국물에 덮어 최소 3분 둔다. 포크로 쉽게 풀릴 만큼 부드럽지 않으면 부드러움을 확인하며 한 번에 10분씩 더 약불로 끓인다. 추가 시간은 식감 예상치다.",
+          "ใส่น้ำ 750 มล. ซีอิ๊วชาชู 120 มล. สาเก 60 มล. มิริน 60 มล. น้ำตาล 20 กรัม ขิง และต้นหอมสำหรับเคี่ยว ใส่หมูกลับ ปิดฝาเคี่ยวเบา ๆ ประมาณ 45 นาที กลับสองครั้ง เวลานี้เป็นค่าประมาณของสูตร ไม่ใช่เกณฑ์ความปลอดภัย สอดเทอร์โมมิเตอร์สะอาดจากด้านข้างเข้าใจกลางส่วนที่หนาที่สุดโดยไม่แตะหม้อ เกณฑ์ขั้นต่ำอย่างเป็นทางการสำหรับหมูชิ้นเต็มคือ 63°C (145°F) แล้วพัก 3 นาที เมื่อถึงเกณฑ์ให้ปิดไฟและพักหมูปิดฝาในน้ำเคี่ยวร้อนอย่างน้อย 3 นาที หากยังไม่เปื่อยนุ่มจนใช้ส้อมแยกได้ ให้เคี่ยวไฟอ่อนเพิ่มครั้งละ 10 นาทีและตรวจความนุ่ม เวลาที่เพิ่มเป็นค่าประมาณด้านเนื้อสัมผัส"
         )
       },
       {
@@ -1224,11 +1224,11 @@ export const japaneseRecipesC = [
       {
         title: ml("Assemble and serve hot", "組碗熱上桌", "盛り付けて熱く供する", "담아 뜨겁게 내기", "ประกอบชามและเสิร์ฟร้อน"),
         body: ml(
-          "Divide the hot noodles among four warmed bowls and pour over the 80–85°C shoyu broth. Add two thick chashu slices, menma, narutomaki and sliced scallions to each bowl. Serve immediately; the pork is cooked by temperature, not by its pink colour, and this photographed version has no egg or nori.",
-          "將熱麵分入四個溫碗，沖入 80–85°C 醬油湯；每碗放兩片厚叉燒、筍乾、鳴門卷與青蔥片，立即上桌。豬肉以溫度判斷熟度，不以粉紅色判斷；本照片版本不含蛋或海苔。",
-          "熱い麺を温めた器4つに分け、80〜85℃のしょうゆスープを注ぐ。各器に厚いチャーシュー2枚、メンマ、なると、ねぎをのせてすぐ供する。肉の色ではなく温度で火通りを判断し、この写真の形には卵とのりを加えない。",
-          "뜨거운 면을 데운 그릇 네 개에 나누고 80–85°C 간장 국물을 붓는다. 그릇마다 두꺼운 차슈 두 장, 멘마, 나루토마키와 대파를 올려 즉시 낸다. 고기 익힘은 분홍색이 아닌 온도로 판단하며 이 사진 버전에는 달걀과 김이 없다.",
-          "แบ่งเส้นร้อนใส่ชามอุ่นสี่ใบ ราดน้ำซุปโชยุ 80–85°C ใส่ชาชูหนาชามละสองชิ้น เมนมะ นารุโตะม้วน และต้นหอมซอย เสิร์ฟทันที ตัดสินความสุกหมูจากอุณหภูมิไม่ใช่สีชมพู และสูตรตามภาพนี้ไม่มีไข่หรือโนริ"
+          "Divide 600 g cooked noodles among four warmed bowls (150 g each) and pour over the hot broth, about 300 ml stock plus 37.5 ml tare per bowl. Add two of the eight chashu slices (about 125 g raw-pork equivalent), 30 g menma, 20 g narutomaki and 15 g scallions per bowl. Serve immediately; check pork with a thermometer and rest, not by colour. This photographed version has no egg or nori.",
+          "將 600 公克煮熟拉麵分入四個溫碗（每碗 150 公克），每碗加入約 300 毫升高湯及 37.5 毫升 tare。每碗放八片叉燒中的兩片（約相當於 125 公克生豬肉）、30 公克筍乾、20 公克鳴門卷與 15 公克青蔥。立即上桌；以溫度計與靜置時間判斷豬肉熟度，不看顏色。本照片版本不含蛋或海苔。",
+          "ゆでた麺600gを温めた器4つに分け（各150g）、熱いスープを注ぐ。各器は鶏だし約300mlとたれ37.5ml。チャーシュー8枚のうち2枚（生肉換算約125g）、メンマ30g、なると20g、ねぎ15gをのせる。すぐ供する。豚肉の火通りは色ではなく温度計と休ませる時間で確認する。この写真の形には卵とのりを加えない。",
+          "삶은 면 600g을 데운 그릇 네 개에 나눈다(각 150g). 뜨거운 국물을 붓되 한 그릇당 육수 약 300ml와 타레 37.5ml를 쓴다. 차슈 여덟 조각 중 두 조각(생돼지고기 환산 약 125g), 멘마 30g, 나루토마키 20g, 대파 15g씩 올린다. 바로 낸다. 돼지고기 익힘은 색이 아니라 온도계와 휴지 시간으로 확인한다. 이 사진 버전에는 달걀과 김이 없다.",
+          "แบ่งเส้นสุก 600 กรัมใส่ชามอุ่นสี่ใบ (ชามละ 150 กรัม) แล้วราดน้ำซุปร้อน ชามละน้ำสต๊อกประมาณ 300 มล. กับทาเระ 37.5 มล. ใส่ชาชูสองชิ้นจากทั้งหมดแปดชิ้น (เทียบเท่าหมูดิบประมาณ 125 กรัม) เมนมะ 30 กรัม นารุโตะม้วน 20 กรัม และต้นหอม 15 กรัมต่อชาม เสิร์ฟทันที ตรวจความสุกหมูด้วยอุณหภูมิและเวลาพัก ไม่ใช่สี สูตรตามภาพนี้ไม่มีไข่หรือโนริ"
         )
       }
     ],
@@ -1238,18 +1238,20 @@ export const japaneseRecipesC = [
     ],
     commonMistakes: [
       ml("Using salted stock plus a full tare makes the bowl harsh; start with unsalted chicken stock and add tare gradually.", "有鹽高湯再加足量 tare 會過鹹；請從無鹽雞高湯開始，逐步加入 tare。", "塩入りのだしにたれを全量入れると塩辛い。無塩鶏だしから始め、たれを少しずつ加える。", "간이 된 육수에 타레를 전량 넣으면 짜다. 무염 닭 육수에서 시작해 타레를 조금씩 넣는다.", "ใช้น้ำสต๊อกเค็มพร้อมทาเระเต็มปริมาณจะเค็มจัด เริ่มจากสต๊อกไก่ไม่เค็มและเติมทาเระทีละน้อย"),
-      ml("A thick pork log can look pink even when safe; verify at least 71°C in the centre before slicing and serving.", "厚叉燒即使安全熟透中心仍可能粉紅；切片上桌前要確認中心至少 71°C。", "厚いチャーシューは安全でもピンクに見えることがある。切る前に中心71℃以上を確認する。", "두꺼운 차슈는 안전해도 분홍빛일 수 있다. 썰어 내기 전에 중심이 최소 71°C인지 확인한다.", "ชาชูหนาอาจยังชมพูแม้สุกปลอดภัย ตรวจใจกลางอย่างน้อย 71°C ก่อนหั่นและเสิร์ฟ" )
+      ml("Pork can remain pink after safe cooking, so colour is not a doneness test. Check the thickest centre for at least 63°C (145°F), then rest 3 minutes; simmer longer in 10-minute increments only if it still needs tenderness.", "豬肉安全熟透後仍可能呈粉紅色，因此不能以顏色判斷熟度。量最厚處中心至少 63°C（145°F）並靜置 3 分鐘；若還不夠柔嫩，再以 10 分鐘為單位燉煮。", "安全に加熱した豚肉もピンク色が残ることがあるため、色で判断しない。最も厚い中心が63℃（145°F）以上であることを確認し3分休ませる。柔らかさが足りない場合だけ10分ずつ追加で煮る。", "안전하게 익힌 돼지고기도 분홍빛이 남을 수 있어 색으로 익힘을 판단하지 않는다. 가장 두꺼운 중심이 63°C(145°F) 이상인지 확인하고 3분 휴지한다. 더 부드러워야 할 때만 10분씩 더 끓인다.", "หมูที่สุกปลอดภัยแล้วยังอาจชมพู จึงใช้สีตัดสินไม่ได้ ตรวจใจกลางส่วนหนาสุดอย่างน้อย 63°C (145°F) แล้วพัก 3 นาที หากต้องการให้นุ่มขึ้นจึงเคี่ยวต่อครั้งละ 10 นาที")
     ],
     substitutions: [
       ml("Use boneless chicken thigh at 500 g instead of pork, sear it, then simmer in the braising seasonings until its thickest part reaches 74°C.", "豬肉可改用 500 公克去骨雞腿肉，先煎上色，再以燉汁煮至最厚處 74°C。", "豚肉は鶏もも肉500gに替え、焼き付けてから煮汁で最厚部74℃まで煮る。", "돼지고기는 뼈 없는 닭다리살 500g으로 바꾸고 겉을 구운 뒤 조림 양념에서 가장 두꺼운 곳 74°C까지 익힌다.", "เปลี่ยนหมูเป็นเนื้อสะโพกไก่เลาะกระดูก 500 กรัม จี่ให้มีสีแล้วเคี่ยวจนส่วนหนาสุดถึง 74°C"),
       ml("For a gluten-free bowl, use certified gluten-free ramen noodles and tamari in both soy portions; keep the same temperatures and cooking checks.", "無麩質版使用認證無麩質拉麵與 tamari 取代兩處醬油，溫度與熟度判斷不變。", "グルテンフリーなら認証品の麺と、2種類のしょうゆをたまりに替える。温度と火通りの確認は同じ。", "글루텐 프리는 인증 라멘과 두 간장 분량을 타마리로 바꾸고 같은 온도와 익힘 검사를 지킨다.", "แบบไร้กลูเตนใช้เส้นที่รับรองและทามาริแทนซีอิ๊วทั้งสองส่วน รักษาอุณหภูมิและเกณฑ์สุกเดิม" )
     ],
-    storage: ml("Store chashu, broth, tare and noodles separately, covered and refrigerated for up to 2 days. Reheat broth until steaming, pork to 74°C, and boil fresh noodles for serving.", "叉燒、高湯、tare 與麵分開加蓋冷藏最多 2 天；高湯復熱至冒蒸氣，叉燒加熱至 74°C，食用時重新煮麵。", "チャーシュー、だし、たれ、麺を分けてふたをし、冷蔵2日以内に。だしは湯気が立つまで、肉は74℃まで温め、麺は食べる時にゆで直す。", "차슈·육수·타레·면을 따로 덮어 냉장하고 2일 안에 먹는다. 육수는 김이 날 때까지, 고기는 74°C까지 데우고 면은 먹을 때 새로 삶는다.", "เก็บชาชู น้ำซุป ทาเระ และเส้นแยกกันปิดฝาแช่เย็นไม่เกิน 2 วัน อุ่นซุปจนมีไอ อุ่นหมูถึง 74°C และต้มเส้นใหม่เมื่อเสิร์ฟ"),
+    storage: ml("Within 2 hours, divide chashu, broth and tare into separate shallow covered containers and refrigerate at 4°C (40°F) or below; the 2-day limit is a conservative recipe choice. Reheat leftover pork to 74°C (165°F) and broth until steaming hot. Keep fresh noodles according to their package and cook to order; do not store assembled bowls.", "2 小時內將叉燒、高湯、tare 分裝在不同淺容器並加蓋，以 4°C（40°F）以下冷藏；2 天期限是本食譜的保守設定。剩餘叉燒復熱至 74°C（165°F），高湯則加熱至冒蒸氣。新鮮麵依包裝保存並按份煮，不保存已組好的麵碗。", "2時間以内にチャーシュー、だし、たれを別々の浅い容器に分けてふたをし、4℃（40°F）以下で冷蔵する。2日以内はレシピ上の保守的な期限。残った肉は74℃（165°F）まで、だしは湯気が出るまで再加熱する。生麺は表示どおり保存して食べる分だけゆで、組み立てた器は保存しない。", "2시간 안에 차슈, 육수, 타레를 각각 얕은 용기에 나누어 덮고 4°C(40°F) 이하로 냉장한다. 2일 한도는 이 조리법의 보수적 선택이다. 남은 돼지고기는 74°C(165°F)까지, 육수는 김이 날 때까지 다시 데운다. 생면은 포장 지침대로 보관하고 먹을 만큼 삶으며 완성된 라멘 그릇은 보관하지 않는다.", "ภายใน 2 ชั่วโมง แบ่งชาชู น้ำซุป และทาเระใส่ภาชนะตื้นแยกกัน ปิดฝาและแช่เย็นที่ 4°C (40°F) หรือต่ำกว่า ขีดจำกัด 2 วันเป็นการกำหนดแบบเผื่อความปลอดภัยของสูตร อุ่นหมูที่เหลือถึง 74°C (165°F) และอุ่นน้ำซุปจนร้อนมีไอ เก็บเส้นสดตามฉลากและต้มตามส่วนที่จะกิน ไม่เก็บชามราเม็งที่ประกอบแล้ว"),
     cultureNote: ml("Shoyu ramen is a broad Japanese ramen family built around a soy-seasoned tare and a clear or lightly cloudy broth; home cooks can make a satisfying bowl without a marathon pork-bone stock.", "醬油拉麵是以醬油 tare 為核心、湯色清澈或微濁的日本拉麵大類；家庭不必熬製漫長豚骨湯也能完成一碗。", "醤油ラーメンはしょうゆだれを軸にした日本の幅広いラーメン系統です。家庭では長時間の豚骨だしなしでも満足できる一杯になります。", "쇼유 라멘은 간장 타레와 맑거나 살짝 탁한 육수를 중심으로 한 일본 라멘 계열이며 집에서는 긴 돼지뼈 육수 없이도 완성할 수 있다.", "ราเม็งโชยุเป็นตระกูลราเม็งญี่ปุ่นที่มีทาเระโชยุและน้ำซุปใสหรือขุ่นเล็กน้อย บ้านทำชามอร่อยได้โดยไม่ต้องต้มน้ำซุปกระดูกหมูนาน"),
     sources: [
       { title: "Just One Cookbook — Shoyu Ramen (Recipe from Bizentei, Tokyo)", url: "https://www.justonecookbook.com/shoyu-ramen/" },
       { title: "The Kitchn — Shoyu Ramen Recipe", url: "https://www.thekitchn.com/how-to-make-the-best-ramen-at-home-236345" },
-      { title: "Japanese Cookbook — Weeknight Shoyu Ramen", url: "https://japanesecookbook.com/recipes/shoyu-ramen/" }
+      { title: "Japanese Cookbook — Weeknight Shoyu Ramen", url: "https://japanesecookbook.com/recipes/shoyu-ramen/" },
+      { title: "Official food-safety guidance — FoodSafety.gov safe minimum internal temperatures", url: "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures" },
+      { title: "Official food-safety guidance — FoodSafety.gov 4 steps to food safety", url: "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety" }
     ],
     imageAlt: ml("Real photograph of shoyu ramen with clear dark soy broth, yellow wavy noodles, two thick chashu slices, menma, narutomaki and sliced scallions; no egg or nori.", "實拍醬油拉麵，深色清澈醬油湯中有黃色捲麵、兩片厚叉燒、筍乾、鳴門卷與切蔥，沒有蛋或海苔。", "澄んだ濃いしょうゆスープに黄色い縮れ麺、厚いチャーシュー2枚、メンマ、なると、刻みねぎが見える実写写真。卵とのりはない。", "맑고 진한 간장 국물에 노란 곱슬면, 두꺼운 차슈 두 장, 멘마, 나루토마키와 썬 대파가 보이며 달걀과 김은 없는 실사 사진.", "ภาพถ่ายจริงของราเม็งโชยุน้ำซุปโชยุใสสีเข้ม มีเส้นหยักสีเหลือง ชาชูหนาสองชิ้น เมนมะ นารุโตะม้วน และต้นหอมซอย ไม่มีไข่หรือโนริ"),
     visualSpec: "Real finished-dish photograph: clear dark shoyu broth with yellow wavy ramen noodles, two thick chashu slices, menma bamboo shoots, pink-white narutomaki and sliced scallions; no egg, nori, corn, sesame or other unlisted garnish."
