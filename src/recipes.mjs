@@ -507,8 +507,9 @@ function refineForPublication(source) {
         item: ml("hot water for the roasting tray", "烤盤用熱水", "天板に入れる湯", "오븐 팬에 넣을 뜨거운 물", "น้ำร้อนสำหรับถาดอบ")
       }
     );
-    recipe.cookMinutes = 100;
-    recipe.totalMinutes = 1540;
+    recipe.prepMinutes = 1600;
+    recipe.cookMinutes = 120;
+    recipe.totalMinutes = 1720;
     recipe.instructions[1] = ml(
       "Set the chilled duck on a rack in a clean sink and slowly ladle 3.8 L boiling water over every side to tighten the skin; drain well. Stir maltose into the measured 60 ml boiling water with soy sauce and white vinegar, then brush this glaze evenly over the duck.",
       "冷藏鴨放在乾淨水槽內的架上，將 3.8 公升沸水緩慢淋遍各面，使鴨皮收緊並充分瀝乾。麥芽糖以量好的 60 毫升沸水調開，加入醬油與白醋拌勻，再均勻刷遍鴨身。",
@@ -540,6 +541,9 @@ function refineForPublication(source) {
     if (!recipe.sources.some((source) => source.url === "https://www.bbcgoodfood.com/recipes/peking-duck")) {
       recipe.sources.push({ title: "Good Food — Peking duck by Ken Hom", url: "https://www.bbcgoodfood.com/recipes/peking-duck" });
     }
+    addSource(recipe, "Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures", "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures");
+    addSource(recipe, "Official food-safety guidance — FoodSafety.gov: 4 Steps to Food Safety", "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety");
+    addSource(recipe, "Official food-safety guidance — FoodSafety.gov: Cold Food Storage Charts", "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts");
   }
 
   return recipe;

@@ -595,21 +595,21 @@ export const expandedInstructionsB = {
     {
       title: ml("Dry and season the duck", "擦乾風乾並調味鴨皮", "鴨を乾かして下味を付ける", "오리 말리고 밑간하기", "ซับแห้งและปรุงเป็ด"),
       body: ml(
-        "Pat the 1.8 kg air-chilled Pekin duck dry. Separate the skin from the breast and thigh meat without tearing it. Rub 12 g salt and 8 g baking powder over the skin, set it on a rack, and refrigerate uncovered for 12–18 hours until dry and taut.",
-        "將 1.8 公斤氣冷北京鴨擦乾，小心在不撕破皮的前提下分離胸肉與腿肉的皮。將 12 公克細鹽與 8 公克泡打粉抹遍鴨皮，放網架裸露冷藏 12–18 小時，直到皮乾且繃緊。",
-        "エアチルドの北京ダック1.8kgを拭く。皮を破らず胸と腿の肉から離す。塩12gとベーキングパウダー8gを皮に塗り、網で覆わず12～18時間冷蔵し、乾いて張るまで置く。",
-        "공기 냉각 북경오리 1.8kg의 물기를 닦는다. 껍질을 찢지 않게 가슴과 다리 살에서 분리한다. 소금 12g과 베이킹파우더 8g을 껍질에 바르고 랙에서 덮지 않아 12–18시간 냉장해 마르고 팽팽하게 한다.",
-        "ซับเป็ดปักกิ่งแช่เย็นแบบลม 1.8 กก. ให้แห้ง แยกหนังจากอกและสะโพกโดยไม่ให้ขาด คลุกเกลือ 12 กรัมกับผงฟู 8 กรัมบนหนัง วางบนตะแกรงแช่เย็นเปิดฝา 12–18 ชั่วโมงจนหนังแห้งตึง"
+        "Pat the 1.8 kg air-chilled Pekin duck dry; do not rinse raw poultry. With clean hands, gently loosen the skin over the breast and thighs without tearing it. Rub 12 g salt and 8 g baking powder over the skin, set the duck on a rack over a rimmed tray, and refrigerate uncovered at 4°C or below for 12–18 hours until dry and taut. Wash your hands and clean and sanitize contacted surfaces before handling the ready-to-eat garnishes.",
+        "將 1.8 公斤氣冷北京鴨擦乾；不要沖洗生禽。用乾淨的手輕輕分離胸肉與腿肉上方的皮，避免撕破。將 12 公克細鹽與 8 公克泡打粉抹遍鴨皮，把鴨放在有邊盤上方的網架，於 4°C 以下裸露冷藏 12–18 小時，直到表皮乾燥繃緊。洗手並清潔消毒接觸過的表面後，再處理可直接食用的配料。",
+        "エアチルドの北京ダック1.8kgを拭き、生の鶏肉類は洗いません。清潔な手で皮を破らないよう胸とももの上の皮をそっとはがします。塩12gとベーキングパウダー8gを皮に塗り、縁のある受け皿に載せた網に置き、4°C以下の冷蔵庫で覆わず12～18時間、乾いて張るまで冷やします。手を洗い、触れた面を洗浄・消毒してから、そのまま食べる薬味を扱います。",
+        "공기 냉각 북경오리 1.8kg의 물기를 닦고 생 가금류를 헹구지 않는다. 깨끗한 손으로 껍질이 찢어지지 않게 가슴과 허벅지 살에서 살짝 분리한다. 소금 12g과 베이킹파우더 8g을 껍질에 바르고 테두리 있는 팬 위 랙에 올려 4°C 이하 냉장고에서 덮지 않고 12–18시간 말리고 팽팽하게 한다. 손을 씻고 닿은 표면을 세척·소독한 뒤 바로 먹을 고명을 다룬다.",
+        "ซับเป็ดปักกิ่งแช่เย็นแบบลม 1.8 กก. ให้แห้ง และอย่าล้างสัตว์ปีกดิบ ใช้มือสะอาดค่อย ๆ แยกหนังเหนืออกและสะโพกโดยไม่ให้ขาด คลุกเกลือ 12 กรัมกับผงฟู 8 กรัมบนหนัง วางเป็ดบนตะแกรงเหนือถาดมีขอบ แล้วแช่เย็นที่ 4°C หรือต่ำกว่าโดยไม่คลุม 12–18 ชั่วโมงจนหนังแห้งตึง ล้างมือและทำความสะอาดฆ่าเชื้อพื้นผิวที่สัมผัสก่อนจับเครื่องเคียงพร้อมกิน"
       )
     },
     {
       title: ml("Scald and glaze the skin", "燙皮並刷糖醬", "皮を湯で締めてたれを塗る", "껍질 데치고 글레이즈 바르기", "ลวกหนังและทาเคลือบ"),
       body: ml(
-        "Place the chilled duck on a rack in a clean sink and slowly ladle the listed 3.8 L boiling water over every side; drain well. Stir 45 g maltose into 60 ml boiling water with 15 ml light soy sauce and 30 ml white vinegar, then brush the glaze evenly over the duck.",
-        "將冷藏鴨放在乾淨水槽內的網架，緩慢把列出的 3.8 公升沸水淋遍各面，充分瀝乾。將 45 公克麥芽糖加入 60 毫升沸水，拌入 15 毫升淡醬油與 30 毫升白醋，再均勻刷遍鴨身。",
-        "冷えた鴨を清潔な流しの網に置き、記載した熱湯3.8Lを全体へゆっくりかけて水気を切る。麦芽糖45gを熱湯60mlで溶き、薄口しょうゆ15mlと白酢30mlを混ぜ、鴨全体に均一に塗る。",
-        "차가운 오리를 깨끗한 싱크대의 랙에 놓고 목록의 끓는 물 3.8L를 모든 면에 천천히 끼얹은 뒤 물기를 뺀다. 맥아당 45g을 끓는 물 60ml에 풀고 양조간장 15ml와 백식초 30ml를 섞어 오리 전체에 고르게 바른다.",
-        "วางเป็ดเย็นบนตะแกรงในอ่างล้างที่สะอาด ค่อยๆ ราดน้ำเดือด 3.8 ลิตรที่ระบุให้ทั่วทุกด้าน แล้วสะเด็ดน้ำ ละลายมอลโทส 45 กรัมในน้ำเดือด 60 มล. ผสมซีอิ๊วขาว 15 มล. และน้ำส้มสายชูขาว 30 มล. แล้วทาเคลือบทั่วเป็ด"
+        "For a controlled skin scald, set the chilled duck on a rack inside a deep, stable heatproof tray placed in a clean sink. Carefully pour the listed 3.8 L boiling water close to the skin so it drains into the tray without splashing beyond it. Drain well, then wash and sanitize the sink, tray, rack, and any splashed surfaces and wash your hands before touching ready-to-eat food. Stir 45 g maltose into 60 ml boiling water with 15 ml light soy sauce and 30 ml white vinegar, then brush the glaze evenly over the duck.",
+        "為了可控地燙緊鴨皮，將冷藏鴨放在深而穩固、耐熱的盤中網架，再把盤放入乾淨水槽。小心將列出的 3.8 公升沸水靠近鴨皮緩慢淋下，讓水流入盤內、不濺出盤外。瀝乾後，清洗並消毒水槽、盤、網架及任何濺到的表面，洗手後再接觸即食食物。將 45 公克麥芽糖加入 60 毫升沸水，拌入 15 毫升淡醬油與 30 毫升白醋，再均勻刷遍鴨身。",
+        "皮を安全に湯で締めるため、冷えた鴨を深く安定した耐熱トレー内の網に置き、そのトレーを清潔な流しに入れます。記載の熱湯3.8Lを皮の近くから注意してかけ、トレー内に流して外へ飛び散らせません。水を切ったら流し、トレー、網、飛び散った面を洗浄・消毒し、手を洗ってからそのまま食べる食品に触れます。麦芽糖45gを熱湯60mlで溶き、薄口しょうゆ15mlと白酢30mlを混ぜ、鴨全体に均一に塗ります。",
+        "껍질을 통제된 방식으로 데치기 위해 차가운 오리를 깊고 안정된 내열 트레이 안의 랙에 놓고 트레이를 깨끗한 싱크대에 둔다. 목록의 끓는 물 3.8L를 껍질 가까이에서 조심히 부어 트레이 안으로만 흐르고 밖으로 튀지 않게 한다. 물기를 뺀 뒤 싱크대, 트레이, 랙과 튄 표면을 세척·소독하고 바로 먹을 음식을 만지기 전에 손을 씻는다. 맥아당 45g을 끓는 물 60ml에 풀고 양조간장 15ml와 백식초 30ml를 섞어 오리 전체에 고르게 바른다.",
+        "เพื่อลวกหนังอย่างควบคุมได้ วางเป็ดเย็นบนตะแกรงในถาดทนร้อนที่ลึกและมั่นคง แล้ววางถาดในอ่างล้างที่สะอาด ค่อย ๆ ราดน้ำเดือด 3.8 ลิตรที่ระบุจากใกล้หนังให้น้ำไหลลงถาดโดยไม่กระเด็นออกนอกถาด สะเด็ดน้ำ แล้วล้างฆ่าเชื้ออ่าง ถาด ตะแกรง และพื้นผิวที่ถูกน้ำกระเด็น พร้อมล้างมือก่อนจับอาหารพร้อมกิน ละลายมอลโทส 45 กรัมในน้ำเดือด 60 มล. ผสมซีอิ๊วขาว 15 มล. และน้ำส้มสายชูขาว 30 มล. แล้วทาเคลือบทั่วเป็ด"
       )
     },
     {
@@ -655,21 +655,21 @@ export const expandedInstructionsB = {
     {
       title: ml("Finish the roast at 180°C", "180°C 完成烘烤", "180℃で焼き上げる", "180°C로 마저 굽기", "อบต่อที่ 180°C"),
       body: ml(
-        "Lower the oven to 180°C and roast for 65–70 minutes more. Stop when the skin is deep mahogany and crisp and the thickest thigh reaches 74°C; loosely tent only areas that darken too quickly.",
-        "烤箱降至 180°C，再烤 65–70 分鐘。鴨皮呈深棗紅且酥脆、鴨腿最厚處達 74°C 即可；只有上色過快的部位才鬆蓋鋁箔。",
-        "オーブンを180℃に下げ、さらに65～70分焼く。皮が濃い赤褐色でカリッとし、腿の最厚部が74℃になればよい。色が早く濃くなる所だけホイルをゆるくかぶせる。",
-        "오븐을 180°C로 낮추고 65–70분 더 굽는다. 껍질이 짙은 적갈색으로 바삭하고 허벅지 가장 두꺼운 곳이 74°C가 되면 멈춘다. 빨리 진해지는 부분만 호일을 느슨하게 덮는다.",
-        "ลดเตาอบเหลือ 180°C อบต่อ 65–70 นาทีจนหนังสีน้ำตาลแดงเข้มกรอบและส่วนหนาสุดของสะโพกถึง 74°C ใช้ฟอยล์คลุมหลวมๆ เฉพาะจุดที่เข้มเร็ว"
+        "The 65–70-minute roast at 180°C is a starting estimate for this 1.8 kg duck, not the safety check. Insert a clean thermometer from the side into the thickest breast and innermost thigh, avoiding bone; both must reach 74°C / 165°F. If either spot is lower, roast 5 minutes more and recheck. Crisp, mahogany skin is a quality cue only; loosely tent areas that darken too quickly.",
+        "180°C 再烤 65–70 分鐘是這隻 1.8 公斤鴨的起始估算，不是安全熟度判準。用乾淨溫度計從側面插入最厚胸肉及最內側腿肉，避開骨頭；兩處都必須達 74°C / 165°F。任一處未達，就續烤 5 分鐘再測。棗紅酥皮只是品質線索；僅將上色過快處鬆蓋鋁箔。",
+        "180℃での65～70分はこの1.8kgの鴨の焼き時間の目安で、安全確認そのものではありません。清潔な温度計を横から差し、骨を避けて胸の最厚部とももの内側の最厚部を測り、両方とも74°C / 165°Fにします。どちらか低ければ5分追加して再測定します。濃い焼き色とパリッとした皮は品質の目安にすぎません。色づきが早い部分だけホイルをゆるくかぶせます。",
+        "180°C에서 65–70분은 1.8kg 오리의 시작 조리 예상 시간이지 안전 확인 기준이 아니다. 깨끗한 온도계를 옆에서 넣어 뼈를 피하고 가장 두꺼운 가슴살과 허벅지 안쪽을 재며, 두 곳 모두 74°C / 165°F에 도달해야 한다. 한 곳이라도 낮으면 5분 더 굽고 다시 잰다. 짙은 갈색의 바삭한 껍질은 품질 신호일 뿐이다. 빨리 진해지는 부분만 호일로 느슨하게 덮는다.",
+        "การอบที่ 180°C นาน 65–70 นาทีเป็นเวลาเริ่มต้นโดยประมาณสำหรับเป็ด 1.8 กก. ไม่ใช่เกณฑ์ยืนยันความปลอดภัย ใช้เทอร์โมมิเตอร์สะอาดแทงจากด้านข้างเข้าไปยังส่วนอกที่หนาที่สุดและด้านในของสะโพก โดยไม่โดนกระดูก ทั้งสองจุดต้องถึง 74°C / 165°F หากจุดใดต่ำกว่าให้อบต่อ 5 นาทีแล้ววัดซ้ำ หนังสีน้ำตาลแดงกรอบเป็นเพียงสัญญาณด้านคุณภาพ คลุมฟอยล์หลวม ๆ เฉพาะจุดที่เข้มเร็ว"
       )
     },
     {
       title: ml("Rest, carve, and wrap", "靜置切片包餅", "休ませて切り、包む", "쉬고 썰어 싸기", "พัก แล่ และห่อ"),
       body: ml(
-        "Rest the duck upright for 15 minutes, then slice skin and meat thinly with a sharp knife. Spread 7.5 g sweet bean sauce on each warm pancake, add duck, one scallion baton, and one cucumber baton, fold, and serve immediately.",
-        "鴨子直立靜置 15 分鐘，用利刀將皮與肉切薄片。每張溫薄餅抹 7.5 公克甜麵醬，放鴨片、1 段青蔥與 1 段小黃瓜，折起立即上桌。",
-        "鴨を立てたまま15分休ませ、鋭い包丁で皮と肉を薄切りにする。温かいパンケーキ1枚に甜麺醤7.5g、鴨、ねぎ1本、きゅうり1本をのせて包み、すぐ供する。",
-        "오리를 세운 채 15분 쉬게 하고 날카로운 칼로 껍질과 살을 얇게 썬다. 따뜻한 전병마다 춘장 7.5g, 오리, 대파 한 조각, 오이 한 조각을 올려 접고 즉시 낸다.",
-        "พักเป็ดในท่าตั้ง 15 นาที ใช้มีดคมหั่นหนังและเนื้อบางๆ ทาซอสถั่วหวาน 7.5 กรัมบนแผ่นอุ่นแต่ละแผ่น ใส่เป็ด ต้นหอมหนึ่งแท่ง และแตงกวาหนึ่งแท่ง พับแล้วเสิร์ฟทันที"
+        "Rest the duck upright for 15 minutes, then slice skin and meat thinly with a clean sharp knife. Divide the duck and listed garnishes evenly among four servings: each diner gets four of the 16 pancakes, about 450 g raw whole-duck weight equivalent, 20 g scallions, 37.5 g cucumber, and 30 g sweet bean sauce. Spread 7.5 g sauce on each pancake, wrap, and serve immediately.",
+        "鴨子直立靜置 15 分鐘，再用乾淨利刀將皮與肉切薄片。將鴨肉及所列配料平均分成四份：每人吃 16 張薄餅中的 4 張，約相當於 450 公克整鴨生重，另分到 20 公克青蔥、37.5 公克小黃瓜及 30 公克甜麵醬。每張抹 7.5 公克醬，包起立即上桌。",
+        "鴨を立てたまま15分休ませ、清潔で鋭い包丁で皮と肉を薄切りにします。鴨と記載した薬味を4人分に均等に分けます。1人分は16枚のパンケーキのうち4枚、鴨の生重量換算約450g、ねぎ20g、きゅうり37.5g、甜麺醤30gです。各パンケーキにソース7.5gを塗って包み、すぐ供します。",
+        "오리를 세운 채 15분 쉬게 한 뒤 깨끗하고 날카로운 칼로 껍질과 살을 얇게 썬다. 오리와 준비한 고명을 네 사람 몫으로 고르게 나눈다. 한 사람당 전병 16장 중 4장, 오리 생중량 환산 약 450g, 대파 20g, 오이 37.5g, 춘장 30g이다. 전병마다 소스 7.5g을 바르고 싸서 바로 낸다.",
+        "พักเป็ดตั้ง 15 นาที แล้วใช้มีดคมสะอาดหั่นหนังและเนื้อบาง ๆ แบ่งเป็ดและเครื่องเคียงที่ระบุเท่า ๆ กันสำหรับ 4 ที่ แต่ละที่ได้แผ่นแป้ง 4 จาก 16 แผ่น เทียบเท่าน้ำหนักเป็ดดิบทั้งตัวประมาณ 450 กรัม ต้นหอม 20 กรัม แตงกวา 37.5 กรัม และซอสถั่วหวาน 30 กรัม ทาซอส 7.5 กรัมต่อแผ่น ห่อและเสิร์ฟทันที"
       )
     }
   ]

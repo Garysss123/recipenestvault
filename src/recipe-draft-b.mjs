@@ -1662,9 +1662,9 @@ const recipeDraftBSource = [
       ko: "오리 껍질을 공기 건조한 뒤 세워 구워 바삭하게 만들고 오이, 대파, 춘장과 얇은 전병에 싸 먹습니다.",
       th: "เป็ดผึ่งลมแล้วอบตั้งตรงให้หนังกรอบ หั่นเสิร์ฟกับแตงกวา ต้นหอม และซอสถั่วหวานในแผ่นแป้งแมนดารินบาง"
     },
-    prep: "PT24H",
-    cook: "PT1H15M",
-    total: "PT25H15M",
+    prep: "PT26H40M",
+    cook: "PT2H",
+    total: "PT28H40M",
     yield: {
       en: "4 servings (one 1.8 kg duck and 16 pancakes)",
       "zh-hant": "4 份（1.8 公斤鴨 1 隻、薄餅 16 張）",
@@ -1829,11 +1829,11 @@ const recipeDraftBSource = [
       th: [{ from: "มอลโทส (45 กรัม)", to: "น้ำผึ้ง (45 กรัม)", note: "ทาบางลงและดูช่วงอบ 220°C ใกล้ชิด" }, { from: "ซอสถั่วหวาน (120 กรัม)", to: "ซอสฮอยซิน (120 กรัม)", note: "ฮอยซินเค็มและข้นกว่า ให้ทาบาง" }]
     },
     storage: {
-      en: "Separate sliced duck, pancakes, and garnishes. Refrigerate duck airtight up to 2 days and pancakes up to 3 days; reheat duck on a 220°C rack for 5–8 minutes and steam pancakes for 2 minutes. Freeze cooked duck up to 1 month.",
-      "zh-hant": "鴨片、薄餅與配料分開保存。鴨片密封冷藏最多 2 天、薄餅 3 天；鴨片 220°C 網架回烤 5–8 分鐘，薄餅蒸 2 分鐘。熟鴨可冷凍最多 1 個月。",
-      ja: "鴨、パンケーキ、薬味を分ける。鴨は密閉冷蔵2日、パンケーキ3日まで。鴨は220℃の網で5～8分、パンケーキは2分蒸して温める。焼いた鴨は1か月冷凍可。",
-      ko: "오리, 전병, 곁들임을 따로 보관한다. 오리는 밀폐 냉장 2일, 전병 3일까지 두고 오리는 220°C 망에서 5–8분, 전병은 2분 찐다. 익힌 오리는 1개월 냉동할 수 있다.",
-      th: "เก็บเป็ดหั่น แผ่นแป้ง และเครื่องเคียงแยกกัน เป็ดแช่เย็นปิดสนิท 2 วัน แผ่นแป้ง 3 วัน อุ่นเป็ดบนตะแกรง 220°C 5–8 นาที และนึ่งแผ่นแป้ง 2 นาที เป็ดสุกแช่แข็งได้ 1 เดือน"
+      en: "Keep sliced duck, pancakes, and garnishes separate. Put duck in shallow covered containers and refrigerate within 2 hours (within 1 hour above 32°C) at 4°C or below; reheat only what you will eat to 74°C / 165°F. Use duck within 2 days for best quality, a conservative recipe choice rather than an official storage period; FoodSafety.gov lists cooked poultry for 3–4 days at 4°C or below. Refrigerate covered pancakes within 2 hours and use within 3 days; assemble wraps when serving.",
+      "zh-hant": "鴨片、薄餅與配料分開保存。鴨肉分裝淺而有蓋容器，2 小時內（環境高於 32°C 時 1 小時內）放入 4°C 以下冰箱；只取要吃的份量回熱至 74°C / 165°F。為維持品質，建議 2 天內吃完，這是保守的食譜選擇而非官方保存期限；FoodSafety.gov 的表列熟禽肉於 4°C 以下可保存 3–4 天。薄餅加蓋並於 2 小時內冷藏，3 天內使用；包餅現吃。",
+      ja: "鴨、パンケーキ、薬味は分けて保存します。鴨は浅く蓋のできる容器に入れ、2時間以内（周囲が32°Cを超える場合は1時間以内）に4°C以下で冷蔵します。食べる分だけ74°C / 165°Fまで再加熱します。品質のため2日以内を推奨しますが、これは保守的なレシピ上の選択で公式の保存期間ではありません。FoodSafety.govの表では調理済み家禽は4°C以下で3～4日です。パンケーキは覆って2時間以内に冷蔵し、3日以内に使い、包むのは食べる直前にします。",
+      ko: "오리, 전병, 고명을 따로 보관한다. 오리는 얕고 뚜껑 있는 용기에 담아 2시간 안에(주변 온도가 32°C를 넘으면 1시간 안에) 4°C 이하로 냉장한다. 먹을 만큼만 74°C / 165°F까지 다시 데운다. 품질을 위해 2일 안에 먹도록 권하지만 이는 보수적인 레시피 선택이지 공식 보관 기간이 아니다. FoodSafety.gov 표에는 조리한 가금류를 4°C 이하에서 3–4일 보관할 수 있다고 되어 있다. 전병은 덮어 2시간 안에 냉장하고 3일 안에 사용하며 먹을 때 싼다.",
+      th: "แยกเป็ดหั่น แผ่นแป้ง และเครื่องเคียง เก็บเป็ดในภาชนะตื้นมีฝาและแช่เย็นที่ 4°C หรือต่ำกว่าภายใน 2 ชั่วโมง (ภายใน 1 ชั่วโมงเมื่ออุณหภูมิแวดล้อมสูงกว่า 32°C) อุ่นเฉพาะส่วนที่จะกินให้ถึง 74°C / 165°F แนะนำให้กินเป็ดภายใน 2 วันเพื่อคุณภาพ ซึ่งเป็นข้อเลือกแบบอนุรักษ์นิยมของสูตร ไม่ใช่ระยะเก็บทางการ โดยตาราง FoodSafety.gov ระบุสัตว์ปีกสุก 3–4 วันที่ 4°C หรือต่ำกว่า ปิดฝาแผ่นแป้งและแช่เย็นภายใน 2 ชั่วโมง ใช้ภายใน 3 วัน แล้วค่อยห่อเมื่อเสิร์ฟ"
     },
     culturalNotes: {
       en: "Peking duck is a Beijing roast-duck tradition built around crisp skin, thin pancakes, scallion, cucumber, and a sweet sauce. Restaurant carving often separates skin and meat; this home method presents both together.",

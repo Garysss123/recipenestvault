@@ -51,7 +51,7 @@ function assertSourceSeparation(recipe, safetyUrls = []) {
     `${recipe.id} lists official safety guidance separately from dish references`);
 }
 
-test("twenty-seventh method audit keeps the registry, exclusions, and current 192-recipe shared route coverage", async () => {
+test("twenty-seventh method audit keeps the registry, exclusions, and current 196-recipe shared route coverage", async () => {
   assert.equal(recipes.length, 353, "the published registry remains at 353 existing recipes");
   assert.equal(ids.length, 4);
   assert.equal(new Set(ids).size, 4, "the four batch IDs are distinct");
@@ -63,9 +63,9 @@ test("twenty-seventh method audit keeps the registry, exclusions, and current 19
   const list = regressionSource.match(/const auditedIds = \[([\s\S]*?)\n\];/)?.[1];
   assert.ok(list, "the shared all-locale detail-route list exists");
   const covered = [...list.matchAll(/"([a-z0-9-]+)"/g)].map((match) => match[1]);
-  assert.equal(covered.length, 192, "shared detail-route regression covers 192 deep-reviewed recipes");
-  assert.equal(new Set(covered).size, 192, "all deep-reviewed IDs remain unique");
-  assert.equal(covered.filter((id) => !ids.includes(id)).length, 188, "the other 188 reviewed IDs remain present");
+  assert.equal(covered.length, 196, "shared detail-route regression covers 196 deep-reviewed recipes");
+  assert.equal(new Set(covered).size, 196, "all deep-reviewed IDs remain unique");
+  assert.equal(covered.filter((id) => !ids.includes(id)).length, 192, "the other 192 reviewed IDs remain present");
   assert.ok(ids.every((id) => covered.includes(id)), "all four batch recipes enter the shared route regression");
 
   for (const id of ids) {
