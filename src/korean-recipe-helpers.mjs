@@ -85,8 +85,8 @@ const profileNotes = {
 };
 
 const recipeSources = {
-  bibimbap: [["Maangchi — Bibimbap", "https://www.maangchi.com/recipe/bibimbap"], ["Korean Bapsang — Bibimbap", "https://www.koreanbapsang.com/bibimbap/"]],
-  bulgogi: [["Maangchi — Bulgogi", "https://www.maangchi.com/recipe/bulgogi"], ["Korean Bapsang — Bulgogi", "https://www.koreanbapsang.com/bulgogi-korean-bbq-beef/"]],
+  bibimbap: [["Maangchi — Bibimbap", "https://www.maangchi.com/recipe/bibimbap"], ["Korean Bapsang — Bibimbap", "https://www.koreanbapsang.com/bibimbap/"], ["FDA — What You Need to Know About Egg Safety", "https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety"], ["FoodSafety.gov — Cook to a Safe Minimum Internal Temperature", "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"]],
+  bulgogi: [["Maangchi — Bulgogi", "https://www.maangchi.com/recipe/bulgogi"], ["Korean Bapsang — Bulgogi", "https://www.koreanbapsang.com/bulgogi-korean-bbq-beef/"], ["FoodSafety.gov — Cook to a Safe Minimum Internal Temperature", "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"]],
   galbi: [["Maangchi — Galbi", "https://www.maangchi.com/recipe/galbi"], ["Korean Bapsang — Galbi", "https://www.koreanbapsang.com/galbikalbi-korean-bbq-short-ribs/"]],
   samgyeopsal: [["Maangchi — Samgyeopsal-gui", "https://www.maangchi.com/recipe/samgyeopsal-gui"], ["Korean Bapsang — Samgyupsal-gui", "https://www.koreanbapsang.com/samgyupsal-gui-grilled-pork-belly-and/"]],
   "kimchi-jjigae": [["Maangchi — Kimchi-jjigae", "https://www.maangchi.com/recipe/kimchi-jjigae"], ["Korean Bapsang — Kimchi jjigae", "https://www.koreanbapsang.com/kimchi-jjigae-kimchi-stew/"]],

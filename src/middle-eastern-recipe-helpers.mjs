@@ -22,7 +22,7 @@ const practical = {
   fry: {
     tips: [
       ml('Soak dried chickpeas until fully hydrated, then drain and dry them very well before grinding.', '乾鷹嘴豆須充分浸泡至飽水，磨碎前瀝乾並徹底擦乾。', '乾燥ひよこ豆は十分に戻し、挽く前にしっかり水気を切って乾かします。', '마른 병아리콩을 충분히 불린 뒤 갈기 전에 물기를 잘 빼고 말립니다.', 'แช่ถั่วลูกไก่แห้งให้ดูดน้ำเต็มที่ แล้วสะเด็ดและซับให้แห้งก่อนบด'),
-      ml('Fry one test ball first and adjust the mixture with a spoonful of flour only if it crumbles.', '先炸一顆測試；只有在散開時才加少量麵粉調整。', 'まず試しに一つ揚げ、崩れる場合に限って粉を少量加えます。', '먼저 한 개를 시험 튀김하고 부서질 때만 밀가루를 조금 넣어 조정합니다.', 'ทอดหนึ่งชิ้นทดสอบก่อน หากแตกค่อยเติมแป้งทีละน้อย')
+      ml('Fry one test ball first. If it crumbles, mix in up to 15 g all-purpose flour and test again.', '先炸一顆測試；若散開，拌入最多 15 公克中筋麵粉再試炸。', 'まず一つ試し揚げし、崩れる場合だけ小麦粉を最大15g混ぜて再度試します。', '먼저 한 개를 시험 튀기세요. 부서지면 중력분을 최대 15g 섞어 다시 시험합니다.', 'ทอดหนึ่งชิ้นทดสอบก่อน หากแตกให้คลุกแป้งอเนกประสงค์ไม่เกิน 15 กรัมแล้วทดสอบอีกครั้ง')
     ],
     commonMistakes: [
       ml('Canned or cooked chickpeas are too soft and wet for the classic raw falafel mixture and can make it fall apart.', '罐頭或熟鷹嘴豆對經典生豆泥而言太軟、含水太多，成品容易散開。', '缶詰や加熱済みの豆は伝統的な生地には柔らかく水分が多すぎ、崩れやすくなります。', '통조림이나 익힌 병아리콩은 전통 반죽에 너무 무르고 수분이 많아 쉽게 부서집니다.', 'ถั่วกระป๋องหรือถั่วสุกนิ่มและชื้นเกินไปสำหรับส่วนผสมฟาลาเฟลแบบดั้งเดิม ทำให้แตกง่าย'),

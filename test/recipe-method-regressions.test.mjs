@@ -10,7 +10,8 @@ const dist = fileURLToPath(new URL("../dist/", import.meta.url));
 const foodSafetySource = "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures";
 const auditedIds = [
   "moussaka", "paella-valenciana", "poutine", "coq-au-vin",
-  "bouillabaisse", "pissaladiere", "pasta-con-le-sarde", "stuffat-tal-fenek"
+  "bouillabaisse", "pissaladiere", "pasta-con-le-sarde", "stuffat-tal-fenek",
+  "bibimbap", "bulgogi", "falafel", "shakshuka"
 ];
 const auditedRecipes = new Map(auditedIds.map((id) => [id, recipes.find((recipe) => recipe.id === id)]));
 
@@ -206,6 +207,97 @@ test("stuffat tal-fenek prep includes the marinade and the braise reaches rabbit
   assert.equal(cookHigh, 126);
   assert.ok(recipe.cookMinutes >= cookHigh, `cook time ${recipe.cookMinutes} covers the timed method (${cookLow}–${cookHigh} min)`);
   assert.ok(recipe.sources.some((source) => source.url === foodSafetySource), "official rabbit temperature source is credited");
+});
+
+test("bibimbap ingredient amounts are fully allocated and its times cover soaking and cooking", () => {
+  const recipe = auditedRecipes.get("bibimbap");
+  assert.ok(recipe, "bibimbap slug exists");
+  const ingredient = (prefix) => recipe.ingredients.find((row) => row.item.en.startsWith(prefix));
+  const allocated = (pattern) => recipe.instructions.flatMap((step) => [...step.body.en.matchAll(pattern)])
+    .reduce((total, [, amount]) => total + Number(amount), 0);
+
+  assert.equal(ingredient("Korean soup soy sauce")?.amount, "20 ml");
+  assert.equal(allocated(/\b(\d+) ml (?:soup soy sauce)\b/g), 20);
+  assert.equal(ingredient("toasted sesame oil")?.amount, "20 ml");
+  assert.equal(allocated(/\b(\d+) ml sesame oil\b/g), 20);
+  assert.equal(ingredient("neutral cooking oil")?.amount, "20 ml");
+  assert.equal(allocated(/\b(\d+) ml (?:neutral oil|oil)\b/g), 20);
+  assert.equal(ingredient("garlic")?.amount, "6 g");
+  assert.equal(allocated(/\b(\d+) g garlic\b/g), 6);
+  assert.equal(ingredient("fine salt")?.amount, "4 g");
+  assert.equal(allocated(/\b(\d+) g salt\b/g), 4);
+  assert.ok(recipe.prepMinutes >= 20, "prep covers the rice soak");
+  const [cookLow, cookHigh] = summedExplicitMinutes(recipe.instructions.slice(1).map((step) => step.body.en));
+  assert.ok(recipe.cookMinutes >= cookHigh,
+    `cook time ${recipe.cookMinutes} covers the timed method (${cookLow}–${cookHigh} min)`);
+  assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes);
+
+  for (const locale of localeOrder) {
+    assert.match(recipeStep(recipe, "Fry the pasteurized eggs").body[locale], /71°C/,
+      `${locale}: unpasteurized-egg fallback fully sets eggs to the egg-dish endpoint`);
+  }
+  assert.ok(recipe.sources.some((source) => source.url === "https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety"));
+  assert.ok(recipe.sources.some((source) => source.url === foodSafetySource));
+});
+
+test("bulgogi accounts for its two waits and cooks steak to its endpoint with a rest", () => {
+  const recipe = auditedRecipes.get("bulgogi");
+  assert.ok(recipe, "bulgogi slug exists");
+  assert.equal(recipe.prepMinutes, 50, "prep covers the 20-minute freezer chill and 30-minute marinade");
+  assert.equal(recipe.cookMinutes, 20);
+  assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes);
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "toasted sesame seeds")?.amount, "8 g");
+  assert.match(recipeStep(recipe, "Build the pear marinade").body.en, /4 g sesame seeds/);
+  assert.match(recipeStep(recipe, "Glaze and serve").body.en, /remaining 4 g sesame seeds/);
+
+  for (const locale of localeOrder) {
+    assert.match(recipeStep(recipe, "Sear the first batch").body[locale], /63°C/);
+    assert.match(recipeStep(recipe, "Cook the second batch to doneness").body[locale], /63°C/);
+    assert.match(recipeStep(recipe, "Cook the second batch to doneness").body[locale], /3\s*(?:minutes|分|분|นาที)/);
+  }
+  assert.ok(recipe.sources.some((source) => source.url === foodSafetySource), "official steak endpoint and rest source is credited");
+});
+
+test("falafel refrigerates the soak and leftovers, lists its optional binder, and covers the long prep", () => {
+  const recipe = auditedRecipes.get("falafel");
+  assert.ok(recipe, "falafel slug exists");
+  assert.equal(recipe.prepMinutes, 760, "prep includes the 12-hour soak and 30-minute rest");
+  assert.equal(recipe.cookMinutes, 30);
+  assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes);
+  assert.ok(recipe.ingredients.some((row) => localized(row.amount, "en") === "up to 15 g" && row.item.en.startsWith("all-purpose flour")),
+    "the test-ball contingency is listed as an optional ingredient");
+  assert.match(recipeStep(recipe, "Fry and drain").body.en, /split it to check that the centre is hot and tender with no hard chickpea pieces/);
+
+  for (const locale of localeOrder) {
+    assert.match(recipeStep(recipe, "Soak the chickpeas").body[locale], /4°C/);
+    assert.match(recipe.storage[locale], /74°C/);
+  }
+  assert.ok(recipe.sources.some((source) => source.url === "https://food.unl.edu/article/how-cook-dry-beans-scratch/"));
+  assert.ok(recipe.sources.some((source) => source.url === "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts"));
+  assert.ok(recipe.sources.some((source) => source.url === foodSafetySource));
+});
+
+test("shakshuka allocates salt, oil, and garnish and gives safe egg and leftover endpoints", () => {
+  const recipe = auditedRecipes.get("shakshuka");
+  assert.ok(recipe, "shakshuka slug exists");
+  assert.equal(recipe.prepMinutes, 15);
+  assert.equal(recipe.cookMinutes, 35, "cook time covers the 25.5–30.5 minutes of timed cooking");
+  assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes);
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "fine salt, divided")?.amount, "3 g");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "olive oil")?.amount, "45 ml");
+  assert.match(recipeStep(recipe, "Soften the vegetables").body.en, /all 45 ml olive oil/);
+  assert.match(recipeStep(recipe, "Soften the vegetables").body.en, /1 g of the fine salt/);
+  assert.match(recipeStep(recipe, "Thicken the tomato sauce").body.en, /remaining 2 g fine salt/);
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "pasteurized large eggs")?.amount, "4");
+  assert.match(recipeStep(recipe, "Garnish and serve").body.en, /20 g chopped parsley or cilantro/);
+  assert.match(recipeStep(recipe, "Garnish and serve").body.en, /up to 120 g crumbled feta/);
+
+  for (const locale of localeOrder) {
+    assert.match(recipeStep(recipe, "Cover and gently poach").body[locale], /71°C/);
+    assert.match(recipe.storage[locale], /74°C/);
+  }
+  assert.ok(recipe.sources.some((source) => source.url === "https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety"));
+  assert.ok(recipe.sources.some((source) => source.url === foodSafetySource));
 });
 
 test("audited recipe details, visible timing, ingredients, and Recipe JSON-LD agree in every locale", async () => {
