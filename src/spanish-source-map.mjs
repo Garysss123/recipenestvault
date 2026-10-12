@@ -64,12 +64,15 @@ export const spanishRecipeSources = {
     'Saveur — Valencian Pasta (Fideuà)',
     'https://www.saveur.com/article/Recipes/Valencian-Pasta--/'
   ),
-  'cocido-madrileno': sources(
-    'Spain.info — Madrid Cocido',
-    'https://www.spain.info/en/recipe/cocido-madrileno/',
-    'Cocinatis — Cocido madrileño tradicional',
-    'https://www.cocinatis.com/receta/cocido-madrileno.html'
-  ),
+  'cocido-madrileno': [
+    ...sources(
+      'Spain.info — Madrid Cocido',
+      'https://www.spain.info/en/recipe/cocido-madrileno/',
+      'Cocinatis — Cocido madrileño tradicional',
+      'https://www.cocinatis.com/receta/cocido-madrileno.html'
+    ),
+    { title: 'FoodSafety.gov — Cook to a Safe Minimum Internal Temperature', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
+  ],
   'fabada-asturiana': sources(
     'Spain.info — Fabada',
     'https://www.spain.info/en/recipe/fabada/',

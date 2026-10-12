@@ -36,12 +36,15 @@ export const mexicanRecipeSources = {
     'Pati Jinich — Jalisco-Style Birria',
     'https://patijinich.com/jalisco-style-birria/'
   ),
-  'enchiladas-verdes': sources(
-    'Pati Jinich — Enchiladas Verdes',
-    'https://patijinich.com/es/enchiladas-verdes/',
-    'México in My Kitchen — Green Chicken Enchiladas',
-    'https://www.mexicoinmykitchen.com/swiss-green-enchiladas/'
-  ),
+  'enchiladas-verdes': [
+    ...sources(
+      'Pati Jinich — Enchiladas Verdes',
+      'https://patijinich.com/es/enchiladas-verdes/',
+      'México in My Kitchen — Green Chicken Enchiladas',
+      'https://www.mexicoinmykitchen.com/swiss-green-enchiladas/'
+    ),
+    { title: 'FoodSafety.gov — Cook to a Safe Minimum Internal Temperature', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
+  ],
   carnitas: sources(
     'México in My Kitchen — Pork Carnitas',
     'https://www.mexicoinmykitchen.com/pork-carnitas-mexican/',

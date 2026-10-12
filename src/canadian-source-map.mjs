@@ -10,12 +10,15 @@ export const canadianRecipeSources = {
     'Canadian Living Test Kitchen — The Ultimate Poutine',
     'https://www.canadianliving.com/food/lunch-and-dinner/recipe/the-ultimate-poutine'
   ),
-  tourtiere: sources(
-    'Parks Canada — Fort Langley Tourtière',
-    'https://parks.canada.ca/culture/gourmand-gourmet/recette-recipe08',
-    'Canadian Living Test Kitchen — Tourtiere recipe and instructions',
-    'https://www.canadianliving.com/food/food-tips/recipe/tourtiere-recipe-and-instructions'
-  ),
+  tourtiere: [
+    ...sources(
+      'Parks Canada — Fort Langley Tourtière',
+      'https://parks.canada.ca/culture/gourmand-gourmet/recette-recipe08',
+      'Canadian Living Test Kitchen — Tourtiere recipe and instructions',
+      'https://www.canadianliving.com/food/food-tips/recipe/tourtiere-recipe-and-instructions'
+    ),
+    { title: 'FoodSafety.gov — Cook to a Safe Minimum Internal Temperature', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
+  ],
   'montreal-smoked-meat-sandwich': sources(
     'Levitts — Classic Montreal-Style Smoked Meat Sandwich',
     'https://www.levitts.ca/en/recipe/classic-montreal-style-smoked-meat-sandwich',
