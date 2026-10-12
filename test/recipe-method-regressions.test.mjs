@@ -26,7 +26,8 @@ const auditedIds = [
   "feijoada", "imeretian-khachapuri", "tamales-de-pollo-en-salsa-verde", "huevos-rancheros",
   "harira", "mujadara", "maafe", "bobotie",
   "chicken-shawarma", "zaatar-manakish", "jambalaya", "thit-kho-trung",
-  "chicken-and-sausage-gumbo", "pozole-rojo", "tortilla-espanola", "nuernberger-rostbratwurst"
+  "chicken-and-sausage-gumbo", "pozole-rojo", "tortilla-espanola", "nuernberger-rostbratwurst",
+  "moqueca-baiana", "nigerian-egusi-soup", "lu-rou-fan", "bo-kho"
 ];
 const auditedRecipes = new Map(auditedIds.map((id) => [id, recipes.find((recipe) => recipe.id === id)]));
 
@@ -1476,8 +1477,8 @@ test("bobotie allocates bread, butter, seasoning, and sides and checks casserole
 
 
 test("fourteenth method audit checks four new IDs, all five locales, amounts, timing, and safety endpoints", () => {
-  assert.equal(auditedIds.length, 60, "deep-review coverage contains 60 distinct recipes");
-  assert.equal(new Set(auditedIds).size, 60, "coverage IDs are unique");
+  assert.equal(auditedIds.length, 64, "deep-review coverage contains 64 distinct recipes");
+  assert.equal(new Set(auditedIds).size, 64, "coverage IDs are unique");
   const chicken = auditedRecipes.get("chicken-shawarma");
   const bread = auditedRecipes.get("zaatar-manakish");
   const jambalaya = auditedRecipes.get("jambalaya");
@@ -1585,8 +1586,8 @@ test("fifteenth method audit checks four new recipes, five locales, portions, ti
   const sausages = auditedRecipes.get("nuernberger-rostbratwurst");
   const additions = [gumbo, pozole, tortilla, sausages];
 
-  assert.equal(auditedIds.length, 60);
-  assert.equal(new Set(auditedIds).size, 60);
+  assert.equal(auditedIds.length, 64);
+  assert.equal(new Set(auditedIds).size, 64);
   for (const recipe of additions) {
     assert.ok(recipe, "each fifteenth-batch slug exists");
     for (const locale of localeOrder) {
@@ -1678,4 +1679,172 @@ test("fifteenth method audit checks four new recipes, five locales, portions, ti
   }
   assert.deepEqual([7 + 25 + 5 + (2 * 6) + 3, 7 + 25 + 8 + (2 * 8) + 3], [52, 59]);
   assert.ok(sausages.cookMinutes >= 59, "cook time covers both sausage batches and the high end of timed stages");
+});
+
+test("sixteenth method audit checks four existing recipes, five locales, allocations, timing, portions, and doneness", () => {
+  assert.equal(auditedIds.length, 64, "deep-review coverage contains 64 distinct recipes");
+  assert.equal(new Set(auditedIds).size, 64, "coverage IDs are unique");
+  const moqueca = auditedRecipes.get("moqueca-baiana");
+  const egusi = auditedRecipes.get("nigerian-egusi-soup");
+  const luRouFan = auditedRecipes.get("lu-rou-fan");
+  const boKho = auditedRecipes.get("bo-kho");
+  const additions = [moqueca, egusi, luRouFan, boKho];
+  for (const recipe of additions) {
+    assert.ok(recipe, "each sixteenth-batch slug exists");
+    for (const locale of localeOrder) {
+      assert.ok(recipe.ingredients.every((row) => row.amount && row.item[locale]), `${recipe.id}/${locale}: localized ingredients exist`);
+      assert.ok(recipe.instructions.every((step) => step.title[locale] && step.body[locale]), `${recipe.id}/${locale}: localized steps exist`);
+    }
+    assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes, `${recipe.id}: total time adds up`);
+  }
+
+  assert.equal(moqueca.servings, 4);
+  assert.deepEqual([moqueca.prepMinutes, moqueca.cookMinutes, moqueca.totalMinutes], [25, 35, 60]);
+  assert.ok(moqueca.sources.some((source) => source.url === foodSafetySource));
+  const seafoodEndpoint = recipeStep(moqueca, "Simmer without stirring");
+  const moquecaServe = recipeStep(moqueca, "Serve with rice");
+  const moquecaEndpointPatterns = {
+    en: /63°C \(145°F\)[\s\S]*2-minute intervals[\s\S]*pink, pearly and opaque/,
+    "zh-hant": /63°C（145°F）[\s\S]*每次煮 2 分鐘[\s\S]*粉紅、珍珠白且不透明/,
+    ja: /63°C（145°F）[\s\S]*2分ずつ追加[\s\S]*不透明/,
+    ko: /63°C \(145°F\)[\s\S]*2분씩 더[\s\S]*불투명/,
+    th: /63°C \(145°F\)[\s\S]*ครั้งละ 2 นาที[\s\S]*ทึบแสง/
+  };
+  const moquecaPortionPatterns = {
+    en: /four warm bowls[\s\S]*200 g fish[\s\S]*75 g shrimp[\s\S]*150 g cooked rice/,
+    "zh-hant": /四個溫碗[\s\S]*200 g 魚[\s\S]*75 g 蝦[\s\S]*150 g 熟飯/,
+    ja: /4つの器[\s\S]*魚約200g[\s\S]*えび75g[\s\S]*ご飯150g/,
+    ko: /생선 약 200g[\s\S]*새우 75g[\s\S]*따뜻한 그릇 네 개[\s\S]*밥 150g/,
+    th: /ชามอุ่น 4 ใบ[\s\S]*ปลา[\s\S]*200 กรัม[\s\S]*กุ้ง 75 กรัม[\s\S]*150 กรัม/
+  };
+  for (const locale of localeOrder) {
+    assert.match(seafoodEndpoint.body[locale], moquecaEndpointPatterns[locale], `${locale}: fish temperature and shrimp doneness fallback`);
+    assert.match(moquecaServe.body[locale], moquecaPortionPatterns[locale], `${locale}: four seafood and rice portions`);
+  }
+  assert.ok(moqueca.cookMinutes >= 30, "35-minute cook estimate covers 5 + 5 + 15 + 5 timed stages plus a 5-minute startup allowance");
+
+  assert.equal(egusi.servings, 6);
+  assert.deepEqual([egusi.prepMinutes, egusi.cookMinutes, egusi.totalMinutes], [25, 90, 115]);
+  assert.ok(egusi.sources.some((source) => source.url === foodSafetySource));
+  const stock = egusi.ingredients.find((row) => row.item.en.startsWith("unsalted beef stock"));
+  const dividedSalt = egusi.ingredients.find((row) => row.item.en.startsWith("fine salt, divided"));
+  const egusiBeef = recipeStep(egusi, "Season and simmer the beef");
+  const egusiPaste = recipeStep(egusi, "Make the egusi paste");
+  const egusiBase = recipeStep(egusi, "Build the red palm-oil base");
+  const egusiBroth = recipeStep(egusi, "Whisk the egusi into the broth");
+  const egusiFinish = recipeStep(egusi, "Add meat, smoked fish and greens");
+  const egusiServe = recipeStep(egusi, "Serve with a swallow");
+  const egusiBeefPatterns = {
+    en: /45 minutes[\s\S]*63°C \(145°F\)[\s\S]*3 minutes/,
+    "zh-hant": /45 分鐘[\s\S]*63°C（145°F）[\s\S]*3 分鐘/,
+    ja: /45分[\s\S]*63°C（145°F）[\s\S]*3分/,
+    ko: /45분[\s\S]*63°C \(145°F\)[\s\S]*3분/,
+    th: /45 นาที[\s\S]*63°C \(145°F\)[\s\S]*3 นาที/
+  };
+  const egusiFinishPatterns = {
+    en: /up to the remaining 5 g salt[\s\S]*after tasting/,
+    "zh-hant": /先試味[\s\S]*最多 5 g/,
+    ja: /味見しながら残り最大5g/,
+    ko: /맛을 본 뒤[\s\S]*최대 5g/,
+    th: /ชิมก่อน[\s\S]*ไม่เกิน 5 กรัม/
+  };
+  const egusiSaltPatterns = {
+    en: /3 g[\s\S]*up to 5 g[\s\S]*tasting/,
+    "zh-hant": /3 g[\s\S]*最多加 5 g[\s\S]*先試味/,
+    ja: /3g[\s\S]*最大5g[\s\S]*味を見て/,
+    ko: /3g[\s\S]*최대 5g[\s\S]*맛을 본 뒤/,
+    th: /3 กรัม[\s\S]*ไม่เกิน 5 กรัม[\s\S]*ชิมก่อน/
+  };
+  const egusiServePatterns = {
+    en: /six warm bowls[\s\S]*six wedges/,
+    "zh-hant": /六個溫碗[\s\S]*切六角/,
+    ja: /6つの器[\s\S]*6切れ/,
+    ko: /그릇 여섯 개[\s\S]*여섯 조각/,
+    th: /6 ใบ[\s\S]*6 ซีก/
+  };
+  for (const locale of localeOrder) {
+    assert.match(stock.item[locale], /500[\s\S]*180[\s\S]*520/, `${locale}: stock is split across beef, paste, and soup`);
+    assert.match(dividedSalt.item[locale], egusiSaltPatterns[locale], `${locale}: salt is allocated and held back for tasting`);
+    assert.match(egusiBeef.body[locale], egusiBeefPatterns[locale], `${locale}: beef temperature and rest endpoint`);
+    assert.match(egusiPaste.body[locale], /180/, `${locale}: reserved liquid for the egusi paste`);
+    assert.match(egusiBase.body[locale], /90[\s\S]*20/, `${locale}: all palm oil and crayfish allocated`);
+    assert.match(egusiBroth.body[locale], /520/, `${locale}: soup stock allocation`);
+    assert.match(egusiFinish.body[locale], egusiFinishPatterns[locale], `${locale}: optional salt added only after tasting`);
+    assert.match(egusiServe.body[locale], egusiServePatterns[locale], `${locale}: servings and lime wedges`);
+  }
+  assert.ok(egusi.cookMinutes >= 85, "90-minute estimate covers 45-minute beef simmer, 3-minute rest, and up to 25 + 8 + 4 minutes for soup stages");
+
+  assert.equal(luRouFan.servings, 4);
+  assert.deepEqual([luRouFan.prepMinutes, luRouFan.cookMinutes, luRouFan.totalMinutes], [40, 115, 155]);
+  const luRouPrep = recipeStep(luRouFan, "Fry the shallots");
+  const luRouPork = recipeStep(luRouFan, "Render and brown pork");
+  const luRouBraise = recipeStep(luRouFan, "Braise with the eggs");
+  const luRouServe = recipeStep(luRouFan, "Serve over rice");
+  const luRouPrepPatterns = {
+    en: /650 ml[\s\S]*20 minutes[\s\S]*exactly 650 ml[\s\S]*all 20 ml oil/,
+    "zh-hant": /650 毫升[\s\S]*20 分鐘[\s\S]*總量 650 毫升[\s\S]*全部 20 毫升油/,
+    ja: /650ml[\s\S]*20分[\s\S]*全量を650ml[\s\S]*油20mlすべて/,
+    ko: /650ml[\s\S]*20분[\s\S]*총 650ml[\s\S]*기름 20ml 전부/,
+    th: /650 มล[\s\S]*20 นาที[\s\S]*ทั้งหมด 650 มล[\s\S]*น้ำมันทั้ง 20 มล/
+  };
+  const luRouPortionPatterns = {
+    en: /800 g[\s\S]*four bowls \(200 g each\)[\s\S]*one halved egg per person[\s\S]*all 250 g[\s\S]*62–63 g each/,
+    "zh-hant": /800 g[\s\S]*四碗（每碗 200 g）[\s\S]*各放一顆[\s\S]*全部 250 g[\s\S]*62–63 g/,
+    ja: /ご飯800g[\s\S]*4つの丼[\s\S]*卵1個[\s\S]*青菜250gすべて[\s\S]*62〜63g/,
+    ko: /밥 800g[\s\S]*네 그릇[\s\S]*달걀 1개[\s\S]*채소 250g 전부[\s\S]*62~63g/,
+    th: /ข้าวร้อน 800 กรัม[\s\S]*4 ชาม[\s\S]*1 ฟอง[\s\S]*ผักลวกทั้ง 250 กรัม[\s\S]*62–63 กรัม/
+  };
+  const luRouOilPatterns = {
+    en: /all the reserved shallot-frying oil/,
+    "zh-hant": /保留的炸紅蔥油全部/,
+    ja: /取っておいたエシャロット油をすべて/,
+    ko: /샬롯 기름을 전부/,
+    th: /น้ำมันที่ใช้เจียวหอมแดงซึ่งพักไว้ทั้งหมด/
+  };
+  for (const locale of localeOrder) {
+    assert.match(luRouPrep.body[locale], luRouPrepPatterns[locale], `${locale}: mushroom liquid and oil allocation`);
+    assert.match(luRouPork.body[locale], luRouOilPatterns[locale], `${locale}: all fried-shallot oil is reused in the pork braise`);
+    assert.match(luRouBraise.body[locale], /70/, `${locale}: low, long braise and spoon-tender endpoint`);
+    assert.match(luRouServe.body[locale], luRouPortionPatterns[locale], `${locale}: rice, egg, and all greens apportioned`);
+  }
+  const luRouTimedCook = [8 + 10 + 2 + 1 + 70 + 8, 10 + 12 + 3 + 1 + 70 + 12];
+  assert.deepEqual(luRouTimedCook, [99, 108], "mushroom soaking and periodic stirring are not added as extra cook stages");
+  assert.ok(luRouFan.cookMinutes >= luRouTimedCook[1], "115-minute cook estimate covers the high end of timed shallot, pork, caramel, braise, and sauce stages");
+
+  assert.equal(boKho.servings, 4);
+  assert.deepEqual([boKho.prepMinutes, boKho.cookMinutes, boKho.totalMinutes], [55, 200, 255]);
+  const boKhoMarinade = recipeStep(boKho, "Cut and marinate the beef");
+  const boKhoPrep = recipeStep(boKho, "Prepare the aromatics");
+  const boKhoBraise = recipeStep(boKho, "Simmer until nearly tender");
+  const boKhoCarrots = recipeStep(boKho, "Cook the carrots");
+  const boKhoServe = recipeStep(boKho, "Serve with fresh basil");
+  const boKhoPrepPatterns = {
+    en: /While the beef marinates in the refrigerator for 30 minutes/,
+    "zh-hant": /牛肉在冰箱醃漬 30 分鐘期間/,
+    ja: /牛肉を冷蔵庫で30分漬けている間に/,
+    ko: /소고기를 냉장고에서 30분 재우는 동안/,
+    th: /ระหว่างหมักเนื้อในตู้เย็น 30 นาที/
+  };
+  const boKhoPortionPatterns = {
+    en: /four bowls[\s\S]*20 g Thai basil[\s\S]*about 5 g[\s\S]*four wedges, one per bowl[\s\S]*one-quarter of the optional baguette/,
+    "zh-hant": /四碗[\s\S]*20 g 泰國羅勒[\s\S]*約 5 g[\s\S]*四角，每碗一角[\s\S]*可選的小法國麵包約四分之一條/,
+    ja: /4つの器[\s\S]*タイバジル20g[\s\S]*約5g[\s\S]*4切れ[\s\S]*バゲット約4分の1本/,
+    ko: /네 그릇[\s\S]*타이 바질 20g[\s\S]*약 5g[\s\S]*네 조각[\s\S]*바게트 약 4분의 1/,
+    th: /4 ชาม[\s\S]*โหระพาไทย 20 กรัม[\s\S]*ประมาณ 5 กรัม[\s\S]*4 ซีก[\s\S]*บาแก็ตประมาณหนึ่งในสี่/
+  };
+  const boKhoTendernessPatterns = {
+    en: /fork but still resist/,
+    "zh-hant": /叉子能插入/,
+    ja: /フォークが少し抵抗を残して入る/,
+    ko: /포크가 약간 저항하며 들어갈/,
+    th: /จิ้มส้อมเข้าได้แต่ยังต้านเล็กน้อย/
+  };
+  for (const locale of localeOrder) {
+    assert.match(boKhoPrep.body[locale], boKhoPrepPatterns[locale], `${locale}: aromatics are prepared during the marinade`);
+    assert.match(boKhoBraise.body[locale], boKhoTendernessPatterns[locale], `${locale}: long moist braise has a tenderness endpoint`);
+    assert.match(boKhoCarrots.body[locale], /10-minute intervals|每次延長 10 分鐘|10分ずつ|10분씩|ครั้งละ 10 นาที/, `${locale}: beef tenderness has a timed recheck path`);
+    assert.match(boKhoServe.body[locale], boKhoPortionPatterns[locale], `${locale}: basil, lime, and bread portions`);
+  }
+  assert.deepEqual([10 + 3 + 120 + 35 + 10 + 5 + 5], [188]);
+  assert.ok(boKho.cookMinutes >= 188, "200-minute estimate covers two beef batches, aromatics, the braise and carrots, one 10-minute tenderness recheck, finish/rest, and time to return the liquid to a simmer");
 });
