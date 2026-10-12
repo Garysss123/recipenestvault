@@ -8,12 +8,15 @@ import { recipes } from "../src/recipes.mjs";
 
 const dist = fileURLToPath(new URL("../dist/", import.meta.url));
 const foodSafetySource = "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures";
+const seafoodSafetySource = "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely";
+const cookedRiceSafetySource = "https://www.gov.uk/government/publications/home-food-fact-checker/home-food-fact-checker";
 const auditedIds = [
   "moussaka", "paella-valenciana", "poutine", "coq-au-vin",
   "bouillabaisse", "pissaladiere", "pasta-con-le-sarde", "stuffat-tal-fenek",
   "bibimbap", "bulgogi", "falafel", "shakshuka",
   "tonkatsu", "cornish-pasty", "carnitas", "indonesian-beef-rendang",
-  "nigerian-jollof-rice", "tandoori-chicken", "marmitako", "banh-flan"
+  "nigerian-jollof-rice", "tandoori-chicken", "marmitako", "banh-flan",
+  "peruvian-ceviche", "nasi-goreng", "singapore-chilli-crab", "thieboudienne"
 ];
 const auditedRecipes = new Map(auditedIds.map((id) => [id, recipes.find((recipe) => recipe.id === id)]));
 
@@ -511,6 +514,106 @@ test("Bánh flan allocates custard and serving ingredients, covers its waits and
   for (const url of [foodSafetySource, "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts"]) {
     assert.ok(recipe.sources.some((source) => source.url === url), `official egg/storage source is credited: ${url}`);
   }
+});
+
+test("Peruvian ceviche uses previously frozen fish and states the FDA raw-seafood risk", () => {
+  const recipe = auditedRecipes.get("peruvian-ceviche");
+  assert.ok(recipe, "peruvian-ceviche slug exists");
+  const fish = recipe.ingredients.find((row) => row.amount === "600 g");
+  assert.match(fish.item.en, /previously frozen/i);
+  assert.doesNotMatch(fish.item.en, /sashimi.grade/i, "the ingredient does not imply an unverified safety grade");
+
+  const handling = recipeStep(recipe, "Keep the fish chilled");
+  assert.match(handling.body.en, /previously frozen/i);
+  assert.match(handling.body.en, /4°C or colder/);
+  assert.match(handling.body.en, /freezing can kill parasites but does not kill all harmful germs/i);
+  assert.match(handling.body.en, /lime juice does not make unsafe fish safe/i);
+  const riskPatterns = {
+    en: /Pregnant people.*children.*older adults.*weakened immune systems.*avoid raw or undercooked seafood/i,
+    "zh-hant": /孕婦.*兒童.*長者.*免疫力低下者.*應避免生或未熟海鮮/,
+    ja: /妊娠中の人.*子ども.*高齢者.*免疫機能が低下.*魚介類を避け/,
+    ko: /임신부.*어린이.*고령자.*면역력이 약한 사람은.*해산물을 피/,
+    th: /ผู้ตั้งครรภ์.*เด็ก.*ผู้สูงอายุ.*ผู้มีภูมิคุ้มกันอ่อนแอ.*หลีกเลี่ยงอาหารทะเลดิบหรือปรุงไม่สุก/
+  };
+  for (const locale of localeOrder) assert.match(handling.body[locale], riskPatterns[locale], `${locale}: raw-seafood risk is explicit`);
+  assert.ok(recipe.sources.some((source) => source.url === seafoodSafetySource), "FDA raw-seafood guidance is credited");
+});
+
+test("nasi goreng follows the FSA cooling, 24-hour storage, and one-reheat rice guidance", () => {
+  const recipe = auditedRecipes.get("nasi-goreng");
+  assert.ok(recipe, "nasi-goreng slug exists");
+  assert.match(recipe.ingredients.find((row) => row.amount === "700 g").item.en, /cooled as quickly as possible, ideally within 1 hour, then refrigerated/i);
+  assert.match(recipe.instructions[0].body.en, /cooled as quickly as possible, ideally within 1 hour after cooking, and refrigerated/i);
+
+  const patterns = {
+    en: [/within 1 hour/i, /within 24 hours/i, /only once/i, /steaming hot all the way through/i],
+    "zh-hant": [/1 小時內/, /24 小時內/, /一次/, /冒熱氣/],
+    ja: [/1時間以内/, /24時間以内/, /一度だけ/, /湯気立つ/],
+    ko: [/1시간 안에/, /24시간 안에/, /한 번만/, /김이 날/],
+    th: [/1 ชั่วโมง/, /24 ชั่วโมง/, /ครั้งเดียว/, /มีไอทั่วถึง/]
+  };
+  const eggDoneness = {
+    en: /both the whites and yolks are firm/i,
+    "zh-hant": /蛋白與蛋黃都完全凝固/,
+    ja: /白身と黄身の両方がしっかり固まり/,
+    ko: /흰자와 노른자가 모두 단단히 익고/,
+    th: /ทั้งไข่ขาวและไข่แดงสุกแน่น/
+  };
+  for (const locale of localeOrder) {
+    for (const pattern of patterns[locale]) assert.match(recipe.storage[locale], pattern, `${locale}: rice storage guidance`);
+    assert.match(recipe.instructions[4].body[locale], eggDoneness[locale],
+      `${locale}: fried egg yolks and whites are fully firm`);
+  }
+  assert.ok(recipe.sources.some((source) => source.url === cookedRiceSafetySource), "Food Standards Agency rice guidance is credited");
+});
+
+test("Singapore chilli crab allocates its ingredients and checks crab and egg sauce doneness", () => {
+  const recipe = auditedRecipes.get("singapore-chilli-crab");
+  assert.ok(recipe, "singapore-chilli-crab slug exists");
+  const method = recipe.instructions.map((step) => step.body.en).join(" ");
+  for (const amount of [
+    /180 g onion/, /25 g garlic/, /35 g fresh red chillies/, /all 30 ml neutral oil/,
+    /400 g crushed tomatoes/, /250 ml fish stock or water/, /30 ml soy sauce/, /25 g palm sugar/,
+    /1\.2 kg crab pieces/, /10 g cornstarch/, /30 ml cold water/, /1 lightly beaten egg/,
+    /71°C \(160°F\)/, /3 thinly sliced green spring onions/, /all 4 warm mantou buns/
+  ]) assert.match(method, amount, `method allocates ${amount}`);
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("spring onions"))?.amount, "3");
+
+  const crab = recipe.instructions[3];
+  const crabPatterns = {
+    en: /firm, pearly white and opaque/,
+    "zh-hant": /結實、呈珍珠白且不透明/,
+    ja: /身が締まり、真珠のように白く不透明/,
+    ko: /단단하고 진주빛 흰색을 띠며 불투명/,
+    th: /แน่น ขาวมุกและทึบแสง/
+  };
+  for (const locale of localeOrder) {
+    assert.match(crab.body[locale], crabPatterns[locale], `${locale}: crab flesh reaches the official visual endpoint`);
+    assert.match(recipe.instructions[4].body[locale], /71°C/, `${locale}: egg sauce reaches the egg-dish endpoint`);
+  }
+  assert.ok(recipe.sources.some((source) => source.url === seafoodSafetySource), "FDA crab doneness guidance is credited");
+  assert.ok(recipe.sources.some((source) => source.url === foodSafetySource), "FoodSafety.gov egg temperature is credited");
+});
+
+test("thieboudienne verifies each fish steak at the official seafood temperature", () => {
+  const recipe = auditedRecipes.get("thieboudienne");
+  assert.ok(recipe, "thieboudienne slug exists");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "neutral oil")?.amount, "60 ml");
+  const oilAllocation = {
+    en: /all 60 ml neutral oil/i,
+    "zh-hant": /全部 60 毫升中性油/,
+    ja: /中性油60mlをすべて/,
+    ko: /중성 식용유 60ml를 모두/,
+    th: /น้ำมันรสกลางทั้งหมด 60 มล./
+  };
+  for (const locale of localeOrder) {
+    assert.match(recipe.instructions[2].body[locale], oilAllocation[locale],
+      `${locale}: the full 60 ml neutral oil is allocated to the tomato base`);
+    assert.match(recipe.instructions[4].body[locale], /63°C/, `${locale}: fish reaches 63°C (145°F)`);
+    assert.match(recipe.instructions[4].body[locale], /thermometer|溫度計|温度計|온도계|เทอร์โมมิเตอร์/i,
+      `${locale}: each steak is checked with a food thermometer`);
+  }
+  assert.ok(recipe.sources.some((source) => source.url === foodSafetySource), "official seafood temperature source is credited");
 });
 
 test("audited recipe details, visible timing, ingredients, and Recipe JSON-LD agree in every locale", async () => {

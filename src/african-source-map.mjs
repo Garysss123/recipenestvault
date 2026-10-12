@@ -5,7 +5,11 @@ const sources = (aTitle, aUrl, bTitle, bUrl) => [
 
 export const africanRecipeSources = {
   'nigerian-jollof-rice': sources('All Nigerian Recipes — Nigerian Jollof Rice', 'https://www.allnigerianrecipes.com/rice/nigerian-jollof-rice/', 'Demand Africa — African and Caribbean Recipes: Jollof Rice', 'https://demandafrica.com/wp-content/uploads/2017/06/25-African-and-Caribbean-Recipes.pdf'),
-  thieboudienne: sources('Saveur — Senegalese Fish and Rice (Thiéboudienne)', 'https://www.saveur.com/article/Recipes/Senegal-Fish-Rice/', 'UNESCO Intangible Cultural Heritage — Ceebu Jën, Culinary Art of Senegal', 'https://ich.unesco.org/en/RL/ceebu-jen-a-culinary-art-of-senegal-01748'),
+  thieboudienne: [
+    { title: 'Saveur — Senegalese Fish and Rice (Thiéboudienne)', url: 'https://www.saveur.com/article/Recipes/Senegal-Fish-Rice/' },
+    { title: 'UNESCO Intangible Cultural Heritage — Ceebu Jën, Culinary Art of Senegal', url: 'https://ich.unesco.org/en/RL/ceebu-jen-a-culinary-art-of-senegal-01748' },
+    { title: 'FoodSafety.gov — Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
+  ],
   'nigerian-egusi-soup': sources('All Nigerian Recipes — Nigerian Egusi Soup', 'https://www.allnigerianrecipes.com/soups/egusi-soup/', 'Nkechi Ajaeroh — Nigerian Egusi Soup', 'https://nkechiaeroh.com/recipes/nigerian-soup/nigerian-egusi-soup-recipe-african-soup/'),
   kelewele: sources('Demand Africa — Ghanaian Kelewele', 'https://demandafrica.com/food/recipes/kelewele-ghana-spicy-fried-plantains/', 'Ghana News Agency — Kelewele, Ghanaian Street Cuisine', 'https://gna.org.gh/2026/04/kelewele-a-spicy-heartbeat-ghanaian-street-cuisine-often-loyal-to-night-travelers-and-wanderers/'),
   maafe: sources('Food Network — Mafe (Peanut Butter Stew)', 'https://www.foodnetwork.com/recipes/mafe-peanut-butter-stew-recipe-1970970', 'Le Monde — Chicken Mafé and Senegalese Cuisine', 'https://www.lemonde.fr/en/lifestyle/article/2025/03/18/chicken-mafe-bissap-juice-and-keumeukh-fritters-sharing-senegal-s-cuisine_6739264_37.html'),

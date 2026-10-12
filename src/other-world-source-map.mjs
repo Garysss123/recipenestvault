@@ -13,7 +13,8 @@ export const otherWorldRecipeSources = {
   ],
   'nasi-goreng': [
     { title: 'Nasi Goreng (Indonesian Stir-fried Rice) — BBC Good Food', url: 'https://www.bbcgoodfood.com/recipes/nasi-goreng-indonesian-stir-fried-rice' },
-    { title: 'Spicy Chicken Nasi Goreng — BBC Good Food', url: 'https://www.bbcgoodfood.com/recipes/spicy-chicken-nasi-goreng' }
+    { title: 'Spicy Chicken Nasi Goreng — BBC Good Food', url: 'https://www.bbcgoodfood.com/recipes/spicy-chicken-nasi-goreng' },
+    { title: 'Food Standards Agency — Home Food Fact Checker: Rice', url: 'https://www.gov.uk/government/publications/home-food-fact-checker/home-food-fact-checker' }
   ],
   'nasi-lemak': [
     { title: 'Nasi Lemak (Coconut Rice) — SBS Food', url: 'https://www.sbs.com.au/food/recipe/nasi-lemak-coconut-rice/99axfm1xg' },
@@ -21,7 +22,9 @@ export const otherWorldRecipeSources = {
   ],
   'singapore-chilli-crab': [
     { title: 'Singapore Chilli Crab — SBS Food', url: 'https://www.sbs.com.au/food/recipe/singapore-chilli-crab/yr891ksxt' },
-    { title: 'Chilli Crab — National Heritage Board, Singapore', url: 'https://www.roots.gov.sg/ich-landing/ich/chilli-crab' }
+    { title: 'Chilli Crab — National Heritage Board, Singapore', url: 'https://www.roots.gov.sg/ich-landing/ich/chilli-crab' },
+    { title: 'FDA — Selecting and Serving Fresh and Frozen Seafood Safely', url: 'https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely' },
+    { title: 'FoodSafety.gov — Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
   ],
   'cambodian-fish-amok': [
     { title: 'Fish Amok Recipe — Royal Embassy of Cambodia in London', url: 'https://www.cambodiaembassyuk.org/fish-amok-recipe/' },
@@ -73,7 +76,8 @@ export const otherWorldRecipeSources = {
   ],
   'peruvian-ceviche': [
     { title: 'Peruvian Fish Ceviche — Peru Travel', url: 'https://www.peru.travel/gastronomy/en/recipes/entrees/peruvian-fish-ceviche.html' },
-    { title: 'Peruvian Ceviche — PBS Food', url: 'https://www.pbs.org/food/recipes/peruvian-ceviche' }
+    { title: 'Peruvian Ceviche — PBS Food', url: 'https://www.pbs.org/food/recipes/peruvian-ceviche' },
+    { title: 'FDA — Selecting and Serving Fresh and Frozen Seafood Safely', url: 'https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely' }
   ],
   lamingtons: [
     { title: 'Classic Lamington — SBS Food', url: 'https://www.sbs.com.au/food/recipe/classic-lamington/z49b7cotq' },
