@@ -214,7 +214,7 @@ export const japaneseRecipesB = [
           "Place the breaded chops on a clean rack and rest for 10 minutes so the panko adheres. Heat 1.5 L neutral oil in a deep pot to 170°C; keep raw pork tools separate from the clean frying rack and tongs.",
           "裹好的豬排放在乾淨網架靜置 10 分鐘，使麵包粉黏牢。深鍋將 1.5 公升中性油加熱至 170°C；生豬肉用具與乾淨炸物網架、夾子分開。",
           "衣を付けた豚肉を清潔な網で10分休ませ、パン粉を密着させます。深鍋の中性油1.5Lを170℃に熱し、生肉用の道具と清潔な揚げ網・トングを分けます。",
-          "빵가루를 입힌 등심을 깨끗한 철망에서 10분 쉬워 판코를 붙인다. 깊은 냄비의 중성유 1.5L를 170°C로 달구고 생돼지고기 도구와 깨끗한 튀김망·집게를 분리한다.",
+          "빵가루를 입힌 등심을 깨끗한 철망에 올려 10분 두어 판코를 붙인다. 깊은 냄비의 중성유 1.5L를 170°C로 달구고 생돼지고기 도구와 깨끗한 튀김망·집게를 분리한다.",
           "วางหมูชุบแป้งบนตะแกรงสะอาดพัก 10 นาทีให้เกล็ดติดแน่น ตั้งน้ำมันรสกลาง 1.5 ลิตรในหม้อลึกให้ถึง 170°C แยกอุปกรณ์หมูดิบจากตะแกรงและคีมสะอาดสำหรับของทอด"
         )
       },
@@ -229,13 +229,13 @@ export const japaneseRecipesB = [
         )
       },
       {
-        title: ml("Drain and verify 68°C", "瀝油並確認 68°C", "油を切って68℃を確認する", "기름 빼고 68°C 확인", "สะเด็ดและตรวจ 68°C"),
+        title: ml("Drain and verify 63°C / 145°F", "瀝油並確認 63°C／145°F", "油を切り63℃／145°Fを確認する", "기름을 빼고 63°C / 145°F 확인", "สะเด็ดน้ำมันและตรวจ 63°C / 145°F"),
         body: ml(
-          "Lift each cutlet to a clean wire rack and drain for 3 minutes without stacking. Check the thickest centre with a clean thermometer; continue cooking if it is below 68°C, then rest 3 minutes before slicing.",
-          "每片豬排撈到乾淨網架瀝油 3 分鐘，不要堆疊。用乾淨溫度計測最厚中心，低於 68°C 就繼續加熱；達標後再靜置 3 分鐘才切片。",
-          "各カツを清潔な網に上げ、重ねず3分油を切ります。清潔な温度計で最も厚い中心を測り、68℃未満なら加熱を続け、達したら3分休ませてから切ります。",
-          "돈카츠를 깨끗한 철망에 올려 겹치지 않게 3분 기름을 뺀다. 깨끗한 온도계로 가장 두꺼운 중심을 확인해 68°C 미만이면 더 익히고, 도달하면 3분 쉰 뒤 썬다.",
-          "ตักหมูทอดขึ้นตะแกรงสะอาดให้สะเด็ด 3 นาทีโดยไม่วางซ้อน ตรวจใจกลางส่วนหนาที่สุดด้วยเทอร์โมมิเตอร์สะอาด หากต่ำกว่า 68°C ให้ปรุงต่อ แล้วพัก 3 นาทีก่อนหั่น"
+          "Lift each cutlet to a clean wire rack and drain for 3 minutes without stacking. Check the thickest centre with a clean thermometer; continue cooking if it is below 63°C (145°F). Once it reaches 63°C, give it a full 3-minute rest before slicing.",
+          "每片豬排撈到乾淨網架瀝油 3 分鐘，不要堆疊。用乾淨溫度計測最厚中心，低於 63°C（145°F）就繼續加熱；達 63°C 後完整靜置 3 分鐘再切片。",
+          "各カツを清潔な網に上げ、重ねず3分油を切ります。清潔な温度計で最も厚い中心を測り、63℃（145°F）未満なら加熱を続けます。63℃に達したら3分間休ませてから切ります。",
+          "돈카츠를 깨끗한 철망에 올려 겹치지 않게 3분 기름을 뺍니다. 깨끗한 온도계로 가장 두꺼운 중심을 확인해 63°C (145°F) 미만이면 더 익힙니다. 63°C에 도달하면 3분간 충분히 쉰 뒤 썹니다.",
+          "วางหมูทอดบนตะแกรงสะอาดให้สะเด็ด 3 นาทีโดยไม่ซ้อน ตรวจใจกลางส่วนหนาที่สุดด้วยเทอร์โมมิเตอร์สะอาด หากต่ำกว่า 63°C (145°F) ให้ปรุงต่อ เมื่อถึง 63°C แล้วพักให้ครบ 3 นาทีก่อนหั่น"
         )
       },
       {
@@ -258,14 +258,17 @@ export const japaneseRecipesB = [
       ml("Never put cooked cutlets back on the raw-pork tray or use the raw-pork knife for slicing.", "熟豬排不可放回生肉托盤，切片也不可使用生肉刀具。", "揚げたカツを生肉のトレーに戻さず、切り分けに生肉用の包丁を使いません。", "익은 돈카츠를 생고기 트레이에 되돌리거나 생고기 칼로 썰지 않습니다.", "อย่าวางหมูสุกกลับถาดหมูดิบหรือใช้มีดหมูดิบหั่น")
     ],
     substitutions: [
-      ml("Use pork tenderloin cut to 2 cm thickness for a leaner tonkatsu; still verify 68°C at the centre.", "可用切成 2 公分厚的豬里肌菲力，口感較瘦；中心仍須確認 68°C。", "脂の少ない豚ヒレを2cm厚に切って使えますが、中心68℃を確認します。", "더 담백하게 하려면 돼지 안심을 2cm로 잘라 쓰되 중심 68°C를 확인합니다.", "ใช้สันในหมูหั่นหนา 2 ซม. เพื่อความมันน้อยลง แต่ยังต้องตรวจใจกลาง 68°C"),
+      ml("Use pork tenderloin cut to 2 cm thickness for a leaner tonkatsu; still verify 63°C (145°F) at the centre and rest it for 3 minutes.", "可用切成 2 公分厚的豬里肌菲力，口感較瘦；中心仍須達 63°C（145°F），並靜置 3 分鐘。", "脂の少ない豚ヒレを2cm厚に切って使えますが、中心63℃（145°F）を確認し、3分休ませます。", "더 담백하게 하려면 돼지 안심을 2cm로 잘라 쓰되 중심이 63°C (145°F)에 도달했는지 확인하고 3분간 쉽니다.", "ใช้สันในหมูหั่นหนา 2 ซม. เพื่อให้มันน้อยลง แต่ตรวจใจกลางให้ถึง 63°C (145°F) และพัก 3 นาที"),
       ml("Use a gluten-free flour and gluten-free panko if needed, checking labels for cross-contact.", "需要無麩質時可用無麩質麵粉與麵包粉，並確認標示避免交叉接觸。", "必要ならグルテンフリーの粉とパン粉を使い、表示で交差接触がないか確認します。", "필요하면 글루텐 프리 밀가루와 판코를 쓰고 교차 접촉 표시를 확인합니다.", "หากต้องการปลอดกลูเตน ใช้แป้งและเกล็ดขนมปังปลอดกลูเตน พร้อมตรวจฉลากการปนเปื้อนข้าม")
     ],
-    storage: ml("Cool cutlets within 2 hours, refrigerate airtight for up to 3 days, and reheat on a rack at 200°C until the centre reaches 68°C. Keep cabbage and sauce separate.", "炸豬排 2 小時內放涼，密封冷藏最多 3 天；放網架以 200°C 回熱至中心 68°C。高麗菜與醬汁分開保存。", "カツは2時間以内に冷まし、密閉冷蔵で3日以内に使います。網で200℃、中心68℃まで温め直し、キャベツとソースは分けて保存します。", "돈카츠를 2시간 안에 식혀 밀폐 냉장 3일 이내 사용한다. 철망에서 200°C로 중심 68°C까지 데우고 양배추와 소스는 따로 보관한다.", "ทำหมูทอดให้เย็นภายใน 2 ชั่วโมง แช่เย็นภาชนะปิดสนิทได้ 3 วัน อุ่นบนตะแกรงที่ 200°C จนใจกลางถึง 68°C และเก็บกะหล่ำกับซอสแยกกัน"),
+    storage: ml("Cool cutlets promptly and refrigerate within 2 hours at 4°C or below for up to 3 days. Reheat the centre to 74°C (165°F); keep cabbage and sauce separate.", "炸豬排儘快放涼，2 小時內放入 4°C 以下冰箱，最多保存 3 天。復熱至中心 74°C（165°F）；高麗菜與醬汁分開保存。", "カツは速やかに冷まし、2時間以内に4℃以下で冷蔵し、3日以内に食べます。中心が74℃（165°F）になるまで再加熱し、キャベツとソースは別々に保存します。", "돈카츠는 빠르게 식혀 2시간 안에 4°C 이하로 냉장하고 3일 이내 먹습니다. 중심이 74°C (165°F)가 될 때까지 재가열하고 양배추와 소스는 따로 보관합니다.", "ทำทงคัตสึให้เย็นโดยเร็วและแช่เย็นที่ 4°C หรือต่ำกว่าภายใน 2 ชั่วโมง เก็บไม่เกิน 3 วัน อุ่นใจกลางให้ถึง 74°C (165°F) และเก็บกะหล่ำกับซอสแยกกัน"),
     cultureNote: ml("Tonkatsu is a Japanese yōshoku comfort food: a panko-coated pork cutlet commonly served with finely shredded cabbage and a thick sweet-tangy sauce.", "炸豬排是日本洋食家常料理，以麵包粉裹豬排，常搭配細切高麗菜與濃稠酸甜醬。", "とんかつは日本の洋食系の家庭料理で、パン粉を付けた豚カツに細切りキャベツと甘酸っぱい濃いソースを添えるのが定番です。", "돈카츠는 일본식 양식 가정요리로, 판코를 입힌 돼지 커틀릿에 곱게 채 썬 양배추와 달콤새콤한 진한 소스를 곁들이는 것이 일반적입니다.", "ทงคัตสึเป็นอาหารโยโชกุแบบญี่ปุ่น หมูชุบปันโกะทอดเสิร์ฟคู่กะหล่ำปลีซอยละเอียดและซอสข้นรสหวานเปรี้ยว"),
     sources: [
       { title: "Kikkoman — Tonkatsu (Japanese Pork Cutlet)", url: "https://www.kikkoman.com/en/cookbook/washoku/tonkatsu.html" },
-      { title: "Just One Cookbook — Crispy Tonkatsu (Japanese Pork Cutlet)", url: "https://www.justonecookbook.com/tonkatsu/" }
+      { title: "Just One Cookbook — Crispy Tonkatsu (Japanese Pork Cutlet)", url: "https://www.justonecookbook.com/tonkatsu/" },
+      { title: "FoodSafety.gov — Safe Minimum Internal Temperatures", url: "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures" },
+      { title: "FoodSafety.gov — 4 Steps to Food Safety", url: "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety" },
+      { title: "FoodSafety.gov — Cold Food Storage Chart", url: "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts" }
     ],
     imageAlt: ml("Sliced golden tonkatsu with shredded cabbage and yellow mustard on a white plate", "白盤上切片金黃炸豬排搭配高麗菜絲與黃芥末", "白い皿に盛った、千切りキャベツとからし添えの黄金色のとんかつ", "흰 접시에 담긴 채 썬 양배추와 연겨자를 곁들인 황금빛 돈카츠", "ทงคัตสึสีทองหั่นชิ้นบนจานขาว เสิร์ฟกับกะหล่ำปลีซอยและมัสตาร์ดเหลือง"),
     visualSpec: "Sliced golden panko tonkatsu on a plain white plate with a mound of shredded cabbage and a small yellow mustard portion; no rice, soup, pickles, or extra garnish visible."

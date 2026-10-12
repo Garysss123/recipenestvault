@@ -11,7 +11,8 @@ const foodSafetySource = "https://www.foodsafety.gov/food-safety-charts/safe-min
 const auditedIds = [
   "moussaka", "paella-valenciana", "poutine", "coq-au-vin",
   "bouillabaisse", "pissaladiere", "pasta-con-le-sarde", "stuffat-tal-fenek",
-  "bibimbap", "bulgogi", "falafel", "shakshuka"
+  "bibimbap", "bulgogi", "falafel", "shakshuka",
+  "tonkatsu", "cornish-pasty", "carnitas", "indonesian-beef-rendang"
 ];
 const auditedRecipes = new Map(auditedIds.map((id) => [id, recipes.find((recipe) => recipe.id === id)]));
 
@@ -298,6 +299,118 @@ test("shakshuka allocates salt, oil, and garnish and gives safe egg and leftover
   }
   assert.ok(recipe.sources.some((source) => source.url === "https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety"));
   assert.ok(recipe.sources.some((source) => source.url === foodSafetySource));
+});
+
+test("tonkatsu allocates the sauce, verifies pork with its rest, and reheats leftovers safely", () => {
+  const recipe = auditedRecipes.get("tonkatsu");
+  assert.ok(recipe, "tonkatsu slug exists");
+  assert.equal(recipe.prepMinutes, 20);
+  assert.equal(recipe.cookMinutes, 25);
+  assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes);
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "fine salt")?.amount, "4 g");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("soy sauce"))?.amount, "15 ml");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("tomato ketchup"))?.amount, "60 g");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "Worcestershire-style sauce")?.amount, "40 ml");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("granulated sugar"))?.amount, "20 g");
+  assert.match(recipeStep(recipe, "Simmer the tonkatsu sauce").body.en, /15 ml soy sauce, 60 g ketchup, 40 ml Worcestershire-style sauce, and 20 g sugar/);
+  assert.match(recipeStep(recipe, "Prepare cabbage and pork").body.en, /5 minutes/);
+  assert.match(recipeStep(recipe, "Rest and heat the oil").body.en, /10 minutes/);
+
+  for (const locale of localeOrder) {
+    assert.match(recipeStep(recipe, "Drain and verify 63°C / 145°F").body[locale], /63(?:°C|℃)/,
+      `${locale}: pork reaches the official 63°C endpoint`);
+    assert.match(recipeStep(recipe, "Drain and verify 63°C / 145°F").body[locale], /3/,
+      `${locale}: pork rests after reaching the endpoint`);
+    assert.match(recipe.storage[locale], /74(?:°C|℃)/,
+      `${locale}: leftovers are reheated to the official 74°C endpoint`);
+  }
+  for (const url of [foodSafetySource, "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety", "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts"]) {
+    assert.ok(recipe.sources.some((source) => source.url === url), `official food-safety source is credited: ${url}`);
+  }
+});
+
+test("Cornish pasty allocates its divided ingredients and includes bake checks and resting time", () => {
+  const recipe = auditedRecipes.get("cornish-pasty");
+  assert.ok(recipe, "cornish-pasty slug exists");
+  assert.equal(recipe.prepMinutes, 70);
+  assert.equal(recipe.cookMinutes, 70, "cook time covers baking and the 15-minute rest");
+  assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes);
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "fine salt, divided")?.amount, "14 g");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "beaten egg for glazing")?.amount, "50 g");
+  assert.match(recipe.instructions[0].body.en, /500 g flour with 6 g salt/);
+  assert.match(recipe.instructions[2].body.en, /remaining 8 g salt/);
+  assert.match(recipe.instructions[4].body.en, /one sixth of the raw filling/);
+  assert.match(recipe.instructions[6].body.en, /50 g beaten egg/);
+  assert.deepEqual(summedExplicitMinutes([recipe.instructions.at(-1).body.en]), [65, 70]);
+
+  for (const locale of localeOrder) {
+    assert.match(recipe.instructions.at(-1).body[locale], /63(?:°C|℃)/,
+      `${locale}: beef reaches its official endpoint`);
+    assert.match(recipe.storage[locale], /74(?:°C|℃)/,
+      `${locale}: leftovers are reheated to the official endpoint`);
+  }
+  assert.ok(recipe.sources.some((source) => source.url === foodSafetySource), "official meat endpoint is credited");
+  assert.ok(recipe.sources.some((source) => source.url === "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety"));
+  assert.ok(recipe.sources.some((source) => source.url === "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts"));
+});
+
+test("carnitas allocates all salt and braising liquid, covers the long method, and verifies pork safety", () => {
+  const recipe = auditedRecipes.get("carnitas");
+  assert.ok(recipe, "carnitas slug exists");
+  assert.equal(recipe.prepMinutes, 25);
+  assert.equal(recipe.cookMinutes, 145);
+  assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes);
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "fine salt, divided")?.amount, "16 g");
+  assert.match(recipe.instructions[0].body.en, /8 g of the salt and 250 ml water/);
+  assert.match(recipe.instructions[2].body.en, /remaining 8 g salt/);
+  assert.match(recipe.instructions[3].body.en, /remaining 450 ml water/);
+  assert.match(recipe.instructions.at(-1).body.en, /18 tortillas.*6 batches of 3.*30 seconds per side/);
+  const [, cookHigh] = summedExplicitMinutes(recipe.instructions.slice(1).map((step) => step.body.en));
+  assert.ok(recipe.cookMinutes >= cookHigh + 6,
+    `cook time ${recipe.cookMinutes} includes the timed braise/reduction/rest (${cookHigh} min) and six tortilla batches (6 min)`);
+
+  for (const locale of localeOrder) {
+    assert.match(recipeStep(recipe, "Simmer slowly and check the pork").body[locale], /63(?:°C|℃)/,
+      `${locale}: pork reaches the official endpoint`);
+    assert.match(recipe.storage[locale], /74(?:°C|℃)/,
+      `${locale}: leftovers are reheated to the official endpoint`);
+  }
+  for (const url of [foodSafetySource, "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety", "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts"]) {
+    assert.ok(recipe.sources.some((source) => source.url === url), `official food-safety source is credited: ${url}`);
+  }
+});
+
+test("rendang allocates salt, paste water, braising liquid, rice, and its 3-hour simmer in five languages", () => {
+  const recipe = auditedRecipes.get("indonesian-beef-rendang");
+  assert.ok(recipe, "indonesian-beef-rendang slug exists");
+  assert.equal(recipe.prepMinutes, 35);
+  assert.equal(recipe.cookMinutes, 180);
+  assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes);
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "fine salt, divided")?.amount, "8 g");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "water for blending the paste, use only as needed")?.amount, "60 ml");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "water for the braise")?.amount, "250 ml");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("dry jasmine rice"))?.amount, "360 g");
+  assert.match(recipe.instructions[0].body.en, /4 g salt.*60 ml blending water.*10 minutes/);
+  assert.match(recipe.instructions[1].body.en, /all 15 ml oil.*10 minutes/);
+  assert.match(recipe.instructions[2].body.en, /1 kg beef.*400 ml coconut milk and 250 ml braising water/);
+  assert.match(recipe.instructions[3].body.en, /140 minutes.*63°C \(145°F\)/);
+  assert.match(recipe.instructions[4].body.en, /20 minutes.*remaining 4 g salt/);
+  assert.match(recipe.instructions[5].body.en, /5 minutes.*360 g batch of cooked jasmine rice/);
+  const timedCookStages = recipe.instructions.slice(1).map((step) => step.body.en.replaceAll(" every 10 minutes", " regularly"));
+  assert.deepEqual(summedExplicitMinutes(timedCookStages), [180, 180],
+    "10-minute paste toast, 5-minute beef coating, 140-minute simmer, 20-minute reduction, and 5-minute rest total 180 cook minutes");
+  assert.ok(recipe.prepMinutes >= summedExplicitMinutes([recipe.instructions[0].body.en])[1], "prep covers the 10-minute paste and rice start");
+
+  assert.ok(recipe.ingredients.every((row) => !/[\u0E00-\u0E7F]/u.test(row.item.ko)), "Korean ingredients contain no Thai-script copy-through");
+  for (const locale of localeOrder) {
+    assert.match(recipeStep(recipe, "Simmer until tender and verify temperature").body[locale], /63(?:°C|℃)/,
+      `${locale}: beef reaches the official endpoint`);
+    assert.match(recipe.storage[locale], /74(?:°C|℃)/,
+      `${locale}: leftovers are reheated to the official endpoint`);
+  }
+  for (const url of [foodSafetySource, "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety", "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts"]) {
+    assert.ok(recipe.sources.some((source) => source.url === url), `official food-safety source is credited: ${url}`);
+  }
 });
 
 test("audited recipe details, visible timing, ingredients, and Recipe JSON-LD agree in every locale", async () => {
