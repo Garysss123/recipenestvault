@@ -12,7 +12,8 @@ const auditedIds = [
   "moussaka", "paella-valenciana", "poutine", "coq-au-vin",
   "bouillabaisse", "pissaladiere", "pasta-con-le-sarde", "stuffat-tal-fenek",
   "bibimbap", "bulgogi", "falafel", "shakshuka",
-  "tonkatsu", "cornish-pasty", "carnitas", "indonesian-beef-rendang"
+  "tonkatsu", "cornish-pasty", "carnitas", "indonesian-beef-rendang",
+  "nigerian-jollof-rice", "tandoori-chicken", "marmitako", "banh-flan"
 ];
 const auditedRecipes = new Map(auditedIds.map((id) => [id, recipes.find((recipe) => recipe.id === id)]));
 
@@ -410,6 +411,105 @@ test("rendang allocates salt, paste water, braising liquid, rice, and its 3-hour
   }
   for (const url of [foodSafetySource, "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety", "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts"]) {
     assert.ok(recipe.sources.some((source) => source.url === url), `official food-safety source is credited: ${url}`);
+  }
+});
+
+test("Nigerian Jollof allocates oil and salt, covers cooking time, and follows cooked-rice safety", () => {
+  const recipe = auditedRecipes.get("nigerian-jollof-rice");
+  assert.ok(recipe, "Nigerian Jollof slug exists");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "neutral oil")?.amount, "60 ml");
+  assert.match(recipeStep(recipe, "Reduce the tomato sauce").body.en, /all 60 ml neutral oil/);
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "fine salt, divided")?.amount, "7 g");
+  assert.match(recipeStep(recipe, "Season the cooking liquid").body.en, /5 g salt/);
+  assert.match(recipeStep(recipe, "Rest and serve").body.en, /remaining 2 g salt/);
+
+  const [cookLow, cookHigh] = summedExplicitMinutes(recipe.instructions.slice(1).map((step) => step.body.en));
+  assert.deepEqual([cookLow, cookHigh], [48, 56]);
+  assert.ok(recipe.cookMinutes >= cookHigh, `cook time ${recipe.cookMinutes} covers the timed sauce, rice, and rest (${cookLow}–${cookHigh} min)`);
+  assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes);
+
+  const storagePatterns = {
+    en: [/within 1 hour/, /within 24 hours/, /only once/],
+    "zh-hant": [/1 小時內/, /24 小時內/, /一次/],
+    ja: [/1時間以内/, /24時間以内/, /一度だけ/],
+    ko: [/1시간 안에/, /24시간 안에/, /한 번만/],
+    th: [/ภายใน 1 ชั่วโมง/, /ภายใน 24 ชั่วโมง/, /ครั้งเดียว/]
+  };
+  for (const locale of localeOrder) {
+    for (const pattern of storagePatterns[locale]) assert.match(recipe.storage[locale], pattern, `${locale}: rice storage follows the FSA guidance`);
+  }
+  assert.ok(recipe.sources.some((source) => source.url === "https://www.gov.uk/government/publications/home-food-fact-checker/home-food-fact-checker"));
+});
+
+test("tandoori chicken allocates basting butter, counts the full oven method, and verifies every piece by thermometer", () => {
+  const recipe = auditedRecipes.get("tandoori-chicken");
+  assert.ok(recipe, "tandoori-chicken slug exists");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "melted butter or ghee for basting")?.amount, "30 g");
+  assert.match(recipe.instructions[4].body.en, /15 g of the melted butter or ghee/);
+  assert.match(recipe.instructions[5].body.en, /remaining 15 g butter or ghee/);
+  assert.doesNotMatch(recipe.instructions.map((step) => step.body.en).join(" "), /juices run clear/i);
+  assert.ok(recipe.prepMinutes >= 360, "prep covers the six-hour minimum marinade");
+  const [cookLow, cookHigh] = summedExplicitMinutes(recipe.instructions.slice(3).map((step) => step.body.en));
+  assert.deepEqual([cookLow, cookHigh], [52, 58], "cook time includes the 20-minute oven preheat, roast, broil, and rest");
+  assert.ok(recipe.cookMinutes >= cookHigh);
+  assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes);
+
+  for (const locale of localeOrder) {
+    assert.match(recipe.instructions[5].body[locale], /74°C/);
+    assert.match(recipe.instructions[6].body[locale], /74°C/);
+  }
+  for (const url of [foodSafetySource, "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts"]) {
+    assert.ok(recipe.sources.some((source) => source.url === url), `official poultry/storage source is credited: ${url}`);
+  }
+});
+
+test("marmitako allocates its broth and salt, covers the timed stew, and checks fish and leftovers safely", () => {
+  const recipe = auditedRecipes.get("marmitako");
+  assert.ok(recipe, "marmitako slug exists");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "extra-virgin olive oil")?.amount, "60 ml");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "fine salt, divided")?.amount, "8 g");
+  assert.match(recipe.instructions[0].body.en, /60 ml olive oil.*2 g salt/);
+  assert.match(recipe.instructions[2].body.en, /1 L.*reserving 200 ml.*3 g salt/);
+  assert.match(recipe.instructions[3].body.en, /100 ml.*final 100 ml stock.*remaining 3 g salt/);
+  const [cookLow, cookHigh] = summedExplicitMinutes(recipe.instructions.map((step) => step.body.en));
+  assert.deepEqual([cookLow, cookHigh], [55, 62]);
+  assert.ok(recipe.cookMinutes >= cookHigh, `cook time ${recipe.cookMinutes} covers the timed stew (${cookLow}–${cookHigh} min)`);
+  assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes);
+
+  for (const locale of localeOrder) {
+    assert.match(recipe.instructions[4].body[locale], /63°C/);
+    assert.match(recipe.storage[locale], /74°C/);
+  }
+  for (const url of [foodSafetySource, "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts"]) {
+    assert.ok(recipe.sources.some((source) => source.url === url), `official fish/storage source is credited: ${url}`);
+  }
+});
+
+test("Bánh flan allocates custard and serving ingredients, covers its waits and cooking range, and reaches a safe egg endpoint", () => {
+  const recipe = auditedRecipes.get("banh-flan");
+  assert.ok(recipe, "banh-flan slug exists");
+  assert.match(recipe.instructions[1].body.en, /all 100 g white sugar with 40 ml water/);
+  assert.match(recipe.instructions[2].body.en, /400 ml whole milk, 150 g sweetened condensed milk and 1 g salt/);
+  assert.match(recipe.instructions[2].body.en, /5 ml vanilla extract/);
+  assert.match(recipe.instructions[3].body.en, /3 large eggs and 2 egg yolks/);
+  assert.match(recipe.instructions[7].body.en, /15 ml cold black coffee and 50 g crushed ice per serving/);
+  assert.equal(15 * recipe.servings, 90, "optional coffee amount covers all six servings");
+  assert.equal(50 * recipe.servings, 300, "optional ice amount covers all six servings");
+
+  assert.ok(recipe.prepMinutes >= 30 + 240 + 10, "prep covers cooling the ramekins, caramel rest, and four-hour minimum chill");
+  const timedCookStages = [
+    recipe.instructions[1].body.en.replace("cool 10 minutes", ""),
+    recipe.instructions[2].body.en,
+    recipe.instructions[5].body.en
+  ];
+  const [cookLow, cookHigh] = summedExplicitMinutes(timedCookStages);
+  assert.deepEqual([cookLow, cookHigh], [44, 57]);
+  assert.ok(recipe.cookMinutes >= cookHigh);
+  assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes);
+
+  for (const locale of localeOrder) assert.match(recipe.instructions[5].body[locale], /80–82°C/);
+  for (const url of [foodSafetySource, "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts"]) {
+    assert.ok(recipe.sources.some((source) => source.url === url), `official egg/storage source is credited: ${url}`);
   }
 });
 

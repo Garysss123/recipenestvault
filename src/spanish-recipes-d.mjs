@@ -63,7 +63,7 @@ export const spanishRecipesD = [
     id: 'marmitako', profile: 'fishStew',
     region: ml('Basque Country, Spain', '西班牙巴斯克地區', 'スペイン・バスク地方', '스페인 바스크 지방', 'แคว้นบาสก์ สเปน'),
     name: ml('Marmitako', '巴斯克鮪魚馬鈴薯燉鍋', 'マルミタコ', '마르미타코', 'มาร์มิตาโก'),
-    prepMinutes: 25, cookMinutes: 45, totalMinutes: 70, servings: 4,
+    prepMinutes: 25, cookMinutes: 65, totalMinutes: 90, servings: 4,
     description: ml('A Basque fishermen’s stew of meaty bonito or tuna, potatoes, peppers and tomato. The vegetables and potatoes cook first in fish stock; tuna is added only for the final few minutes so it stays juicy while potato starch gives the broth body.', '巴斯克漁民燉鍋，以肉質厚實的 bonito 或鮪魚、馬鈴薯、甜椒與番茄為主。蔬菜與馬鈴薯先在魚高湯中煮熟，鮪魚最後幾分鐘才加入，保留多汁口感，同時由馬鈴薯澱粉自然增稠湯汁。', '肉厚のカツオまたはマグロ、じゃがいも、ピーマン、トマトを使うバスク漁師の煮込み。野菜とじゃがいもを魚だしで先に煮て、魚は最後の数分だけ加え、じゃがいものでんぷんで汁に自然なとろみを付けます。', '살이 두툼한 가다랑어나 참치, 감자, 피망, 토마토를 쓰는 바스크 어부 스튜입니다. 채소와 감자를 생선 육수에서 먼저 익히고 참치는 마지막 몇 분만 넣어 촉촉하게 유지하며 감자 전분이 국물에 농도를 줍니다.', 'สตูว์ชาวประมงบาสก์จากโบนิโตหรือทูน่าเนื้อแน่น มันฝรั่ง พริก และมะเขือเทศ ผักกับมันสุกในสต๊อกปลาก่อน ใส่ทูน่าเพียงไม่กี่นาทีท้ายให้ฉ่ำ และแป้งมันทำให้น้ำมีเนื้อ'),
     ingredients: [
       i('800 g', 'bonito del norte or fresh tuna loin, cut into 3 cm cubes', 'bonito del norte 或新鮮鮪魚柳，切 3 公分塊', 'ボニート・デル・ノルテまたは生マグロ、3cm角', '보니토 델 노르테 또는 생참치 등살, 3cm 크기', 'bonito del norte หรือเนื้อทูน่าสด หั่น 3 ซม.'),
@@ -91,6 +91,8 @@ export const spanishRecipesD = [
     storage: cookedStorage,
     cultureNote: ml('Marmitako takes its name from the marmita, the cooking pot used by Basque tuna fishermen. It is a practical shipboard stew: potatoes stretch a catch of bonito into a substantial one-pot meal without requiring the fish to cook for long.', 'Marmitako 名稱來自巴斯克鮪魚漁民使用的烹調鍋 marmita。它本來就是實用船上燉菜：以馬鈴薯把 bonito 漁獲延伸成飽足的一鍋料理，又不需要讓魚長時間烹煮。', 'マルミタコの名はバスクのカツオ漁師が使った鍋「マルミタ」に由来します。じゃがいもでボニートをボリュームのある一鍋料理にし、魚を長く煮る必要のない実用的な船上料理です。', '마르미타코라는 이름은 바스크 참치 어부들이 쓰던 냄비 마르미타에서 왔습니다. 감자로 보니토 어획을 든든한 한 냄비 식사로 늘리면서 생선을 오래 익힐 필요가 없는 실용적인 선상 음식입니다.', 'ชื่อมาร์มิตาโกมาจาก marmita หม้อที่ชาวประมงทูน่าบาสก์ใช้ เป็นสตูว์เรือที่ใช้มันฝรั่งช่วยขยายปลาโบนิโตให้เป็นอาหารหม้อเดียวอิ่มท้องโดยไม่ต้องต้มปลานาน'),
     imageAlt: ml('Basque tuna and potato marmitako in lightly thickened red-golden broth', '巴斯克鮪魚馬鈴薯 marmitako，搭配微濃紅金色湯汁', '軽くとろみのある赤金色の汁にマグロとじゃがいもが入ったバスクのマルミタコ', '살짝 걸쭉한 붉은 금빛 국물의 바스크 참치 감자 마르미타코', 'มาร์มิตาโกบาสก์ทูน่ากับมันฝรั่งในน้ำสีแดงทองข้นเล็กน้อย'),
+    additionalSources: [{ title: 'FoodSafety.gov — Cook to a Safe Minimum Internal Temperature', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }, { title: 'FoodSafety.gov — Cold Food Storage Chart', url: 'https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts' }],
+    storage: ml('Cool leftovers promptly and refrigerate within 2 hours at 0–4°C for up to 3 days. Reheat leftovers to 74°C throughout before serving.', '剩菜盡快放涼，2 小時內以 0–4°C 冷藏，最多保存 3 天。再食用前，將剩菜各處回熱至 74°C。', '残りは速やかに冷まし、2時間以内に0–4°Cで冷蔵して3日以内に食べます。再加熱する場合は、全体を74°Cまで温めます。', '남은 음식은 빠르게 식혀 2시간 안에 0–4°C로 냉장하고 3일 안에 먹습니다. 다시 먹을 때는 전체를 74°C까지 재가열합니다.', 'ทำให้ของเหลือเย็นเร็ว แช่ 0–4°C ภายใน 2 ชั่วโมง เก็บไม่เกิน 3 วัน ก่อนกินซ้ำให้อุ่นทั่วถึง 74°C'),
     visualSpec: 'A rustic bowl of Basque marmitako with large intact juicy tuna cubes and irregular tender potato chunks in a lightly thickened red-golden pepper-and-tomato fish broth, finished with a small amount of parsley; no cream or beans.'
   }),
 
