@@ -78,15 +78,16 @@ const sourceMap = {
 export function makeTaiwaneseRecipe(recipe) {
   const notes = profiles[recipe.profile];
   const sources = sourceMap[recipe.id];
+  const { additionalSources = [], ...recipeData } = recipe;
   if (!notes) throw new Error(`${recipe.id}: unknown Taiwanese profile ${recipe.profile}`);
   if (!sources) throw new Error(`${recipe.id}: missing Taiwanese sources`);
   return {
     cuisine: "taiwanese",
     region: taiwan,
-    ...recipe,
+    ...recipeData,
     tips: recipe.tips ?? notes.tips,
     commonMistakes: recipe.commonMistakes ?? notes.commonMistakes,
     storage: recipe.storage ?? notes.storage,
-    sources: sources.map(([title, url]) => ({ title, url }))
+    sources: [...sources.map(([title, url]) => ({ title, url })), ...additionalSources]
   };
 }
