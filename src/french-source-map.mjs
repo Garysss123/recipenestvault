@@ -92,7 +92,11 @@ export const frenchRecipeSources = {
     {
       "title": "Meilleur du Chef - sole meuniere",
       "url": "https://www.meilleurduchef.com/fr/recette/sole-meuniere.html"
-    }
+    },
+    { "title": "Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures (fish and leftovers)", "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures" },
+    { "title": "Official food-safety guidance — FDA: Selecting and Serving Fresh and Frozen Seafood Safely", "url": "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely" },
+    { "title": "Official food-safety guidance — FoodSafety.gov: 4 Steps to Food Safety", "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety" },
+    { "title": "Official food-safety guidance — FoodSafety.gov: Cold Food Storage Charts", "url": "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts" }
   ],
   "moules-marinieres": [
     {
