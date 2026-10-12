@@ -38,7 +38,7 @@ function sourceSeparation(recipe) {
   assert.equal(safetySources[0].url, foodSafety, `${recipe.id}: FoodSafety.gov is the safety source`);
 }
 
-test("thirtieth batch retains the 353-recipe registry and 18 exclusions, adding four existing recipes to the 144-ID current shared route coverage", async () => {
+test("thirtieth batch retains the 353-recipe registry and 18 exclusions, adding four existing recipes to the 148-ID current shared route coverage", async () => {
   assert.equal(recipes.length, 353);
   assert.equal(ids.length, 4);
   assert.equal(new Set(ids).size, 4);
@@ -50,9 +50,9 @@ test("thirtieth batch retains the 353-recipe registry and 18 exclusions, adding 
   const list = regression.match(/const auditedIds = \[([\s\S]*?)\n\];/)?.[1];
   assert.ok(list, "the shared detail-route regression list exists");
   const covered = [...list.matchAll(/"([a-z0-9-]+)"/g)].map((match) => match[1]);
-  assert.equal(covered.length, 144);
-  assert.equal(new Set(covered).size, 144);
-  assert.equal(covered.filter((id) => !ids.includes(id)).length, 140, "all other 140 reviewed IDs remain");
+  assert.equal(covered.length, 148);
+  assert.equal(new Set(covered).size, 148);
+  assert.equal(covered.filter((id) => !ids.includes(id)).length, 144, "all other 144 reviewed IDs remain");
   assert.ok(ids.every((id) => covered.includes(id)));
 
   for (const recipe of ids.map(get)) {
