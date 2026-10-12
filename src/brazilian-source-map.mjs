@@ -7,8 +7,8 @@ export const brazilianRecipeSources = {
   feijoada: sources(
     'Olivia\'s Cuisine — Feijoada (Brazilian Black Bean Stew)',
     'https://www.oliviascuisine.com/feijoada-recipe/',
-    'Serious Eats — Feijoada (Brazilian Black Bean Stew)',
-    'https://www.seriouseats.com/feijoada-brazilian-black-bean-stew-recipe'
+    'Camila Made — Feijoada: Brazilian Black Bean Stew',
+    'https://camilamade.com/homemade-feijoada/'
   ),
   'moqueca-baiana': sources(
     'Olivia\'s Cuisine — Moqueca Baiana (Brazilian Fish Stew)',

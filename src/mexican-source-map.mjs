@@ -63,18 +63,16 @@ export const mexicanRecipeSources = {
     'México in My Kitchen — Authentic Tortilla Soup',
     'https://www.mexicoinmykitchen.com/tortilla-soup-recipe/'
   ),
-  'tamales-de-pollo-en-salsa-verde': sources(
-    'Pati Jinich — Chicken in Green Salsa Tamales',
-    'https://patijinich.com/chicken-in-green-salsa-tamal/',
-    'México in My Kitchen — Chicken Tamales with Green Salsa',
-    'https://www.mexicoinmykitchen.com/tamales-chicken-in-green-salsa/'
-  ),
-  'huevos-rancheros': sources(
-    'Larousse Cocina — Huevos Rancheros',
-    'https://laroussecocina.mx/receta/huevos-rancheros-2/',
-    'Food Network Kitchen — Huevos Rancheros',
-    'https://www.foodnetwork.com/recipes/food-network-kitchen/huevos-rancheros-3631787'
-  ),
+  'tamales-de-pollo-en-salsa-verde': [
+    { title: 'Pati Jinich — Chicken in Green Salsa Tamales', url: 'https://patijinich.com/chicken-in-green-salsa-tamal/' },
+    { title: 'México in My Kitchen — Chicken Tamales with Green Salsa', url: 'https://www.mexicoinmykitchen.com/tamales-chicken-in-green-salsa/' },
+    { title: 'FoodSafety.gov — Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
+  ],
+  'huevos-rancheros': [
+    { title: 'Larousse Cocina — Huevos Rancheros', url: 'https://laroussecocina.mx/receta/huevos-rancheros-2/' },
+    { title: 'Food Network Kitchen — Huevos Rancheros', url: 'https://www.foodnetwork.com/recipes/food-network-kitchen/huevos-rancheros-3631787' },
+    { title: 'FDA — What You Need to Know About Egg Safety', url: 'https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety' }
+  ],
   'chilaquiles-verdes': sources(
     'Pati Jinich — Chilaquiles Verdes',
     'https://patijinich.com/es/chilaquiles-verdes/',

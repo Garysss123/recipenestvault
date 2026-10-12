@@ -22,7 +22,8 @@ const auditedIds = [
   "mole-poblano", "bunny-chow", "cuban-ropa-vieja", "maultaschen",
   "fesenjan", "ukrainian-borscht", "tanzanian-pilau", "spaghetti-carbonara",
   "mercimek-corbasi", "pierogi-ruskie", "cambodian-fish-amok", "lao-chicken-larb",
-  "caponata", "baklava", "malva-pudding", "pancit-bihon"
+  "caponata", "baklava", "malva-pudding", "pancit-bihon",
+  "feijoada", "imeretian-khachapuri", "tamales-de-pollo-en-salsa-verde", "huevos-rancheros"
 ];
 const auditedRecipes = new Map(auditedIds.map((id) => [id, recipes.find((recipe) => recipe.id === id)]));
 
@@ -1234,4 +1235,107 @@ test("audited recipe details, visible timing, ingredients, and Recipe JSON-LD ag
       }
     }
   }
+});
+
+test("feijoada allocates salt and optional farofa, with timed browning and aromatics in all locales", () => {
+  const recipe = auditedRecipes.get("feijoada");
+  assert.ok(recipe, "feijoada slug exists");
+  assert.equal(recipe.prepMinutes, 510);
+  assert.equal(recipe.cookMinutes, 180);
+  assert.equal(recipe.totalMinutes, 690);
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("fine salt"))?.amount, "14 g");
+  const farofa = recipe.ingredients.find((row) => row.item.en.startsWith("prepared farofa"));
+  assert.equal(farofa?.amount, "160 g");
+  assert.ok(recipe.sources.some((source) => source.url === "https://camilamade.com/homemade-feijoada/"));
+  assert.ok(recipe.sources.some((source) => source.url === "https://www.oliviascuisine.com/feijoada-recipe/"));
+  const browning = recipeStep(recipe, "Brown the meats");
+  const aromatics = recipeStep(recipe, "Build the aromatic base");
+  const add = recipeStep(recipe, "Add beans and liquid");
+  const finish = recipeStep(recipe, "Thicken and adjust");
+  const serve = recipeStep(recipe, "Serve the complete plate");
+  const descriptionPatterns = {
+    en: /optional farofa/, "zh-hant": /可選的木薯粉 farofa/, ja: /ファロファは好みで加えます/,
+    ko: /파로파는 선택으로 냅니다/, th: /ฟาโรฟาตามชอบ/
+  };
+  const boilPatterns = {
+    en: /bring just to a boil/, "zh-hant": /煮至剛沸/, ja: /沸騰するまで加熱します/,
+    ko: /막 끓기 시작하게/, th: /ต้มจนเดือดพอดี/
+  };
+  const patterns = {
+    en: [/4–5 minutes[\s\S]*8–10 minutes total[\s\S]*final 2 minutes/, /5–7 minutes[\s\S]*1 minute/, /hold the salt for the final taste/, /up to 14 g salt gradually/, /prepared farofa as an optional side/],
+    "zh-hant": [/4–5 分鐘[\s\S]*8–10 分鐘[\s\S]*最後 2 分鐘/, /5–7 分鐘[\s\S]*再炒 1 分鐘/, /鹽留到最後試味時再加/, /最多 14 公克鹽/, /farofa 可另作選配配菜/],
+    ja: [/4〜5分[\s\S]*8〜10分[\s\S]*最後の2分/, /5〜7分[\s\S]*1分炒め/, /塩は最後に味を見て加えます/, /塩を最大14gまで少しずつ/, /ファロファは好みで別に出します/],
+    ko: [/4–5분[\s\S]*8–10분[\s\S]*마지막 2분/, /5–7분[\s\S]*1분 볶으며/, /소금은 마지막에 맛을 보고 넣습니다/, /소금을 최대 14g까지 조금씩/, /파로파는 선택 곁들임으로 따로 냅니다/],
+    th: [/4–5 นาที[\s\S]*8–10 นาที[\s\S]*2 นาทีสุดท้าย/, /5–7 นาที[\s\S]*อีก 1 นาที/, /เก็บเกลือไว้ปรุงตอนชิมรสท้ายสุด/, /เกลือได้ไม่เกิน 14 กรัม/, /ฟาโรฟาที่เตรียมแล้วเป็นเครื่องเคียงตามชอบ/]
+  };
+  for (const locale of localeOrder) {
+    assert.match(browning.body[locale], patterns[locale][0], `${locale}: meat stage times`);
+    assert.match(aromatics.body[locale], patterns[locale][1], `${locale}: onion and garlic stage times`);
+    assert.match(recipe.description[locale], descriptionPatterns[locale], `${locale}: farofa is optional`);
+    assert.match(add.body[locale], patterns[locale][2], `${locale}: hold seasoning until after desalted meat simmers`);
+    assert.match(add.body[locale], boilPatterns[locale], `${locale}: add mixture to a boil`);
+    assert.match(finish.body[locale], patterns[locale][3], `${locale}: final salt allocation`);
+    assert.match(serve.body[locale], patterns[locale][4], `${locale}: optional prepared side`);
+    assert.ok(localized(farofa.item, locale).length > 0, `${locale}: farofa ingredient is translated`);
+  }
+});
+
+test("Imeretian khachapuri gives rise, baking alternatives and full butter allocation in five locales", () => {
+  const recipe = auditedRecipes.get("imeretian-khachapuri");
+  assert.ok(recipe, "imeretian-khachapuri slug exists");
+  assert.equal(recipe.prepMinutes, 90);
+  assert.equal(recipe.cookMinutes, 23);
+  assert.equal(recipe.totalMinutes, 113);
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "butter, for finishing")?.amount, "25 g");
+  assert.ok(recipe.sources.some((source) => source.url === "https://georgia.travel/imeretian-khachapuri"));
+  assert.ok(recipe.sources.some((source) => source.url === "https://www.theguardian.com/food/2026/mar/22/how-to-make-the-perfect-cheese-khachapuri-recipe-felicity-cloake"));
+  const knead = recipeStep(recipe, "Mix and knead the dough");
+  const rise = recipeStep(recipe, "Let the dough rise");
+  const bake = recipeStep(recipe, "Bake until blistered");
+  const finish = recipeStep(recipe, "Butter and rest briefly");
+  const patterns = {
+    en: [/8–10 minutes/, /45–60 minutes[\s\S]*longer in a cool room/, /220°C[\s\S]*15 minutes[\s\S]*12 minutes[\s\S]*18[\s\S]*5 minutes per side/, /all 25 g butter[\s\S]*5 minutes/],
+    "zh-hant": [/8–10 分鐘/, /45–60 分鐘[\s\S]*室溫較低時可能需要更久/, /220°C[\s\S]*15 分鐘[\s\S]*12 分鐘[\s\S]*18 分鐘[\s\S]*每面煎約 5 分鐘/, /全部 25 公克奶油[\s\S]*靜置 5 分鐘/],
+    ja: [/8〜10分/, /45〜60分[\s\S]*室温が低いとさらに時間がかかります/, /220°C[\s\S]*約15分[\s\S]*12分[\s\S]*最大18分[\s\S]*片面約5分ずつ/, /バター25gをすべて[\s\S]*5分休ませます/],
+    ko: [/8–10분/, /45–60분[\s\S]*서늘하면 더 걸릴 수 있습니다/, /220°C[\s\S]*약 15분[\s\S]*12분[\s\S]*최대 18분[\s\S]*한 면당 약 5분씩/, /버터 25g을 모두[\s\S]*5분 둡니다/],
+    th: [/8–10 นาที/, /45–60 นาที[\s\S]*ห้องเย็นอาจใช้เวลานานขึ้น/, /220°C[\s\S]*ประมาณ 15 นาที[\s\S]*12 นาที[\s\S]*18 นาที[\s\S]*ด้านละประมาณ 5 นาที/, /เนยทั้ง 25 กรัม[\s\S]*พัก 5 นาที/]
+  };
+  for (const locale of localeOrder) {
+    assert.match(knead.body[locale], patterns[locale][0], `${locale}: kneading guide`);
+    assert.match(rise.body[locale], patterns[locale][1], `${locale}: rise duration and room-temperature caveat`);
+    assert.match(bake.body[locale], patterns[locale][2], `${locale}: oven and skillet guides`);
+    assert.match(finish.body[locale], patterns[locale][3], `${locale}: all listed butter and rest time`);
+  }
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("low-moisture mozzarella"))?.item.ko, "저수분 모차렐라 치즈, 갈은 것");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("low-moisture mozzarella"))?.item.th, "มอสซาเรลลาชีสชนิดความชื้นต่ำ ขูด");
+});
+
+test("chicken tamales verify the poultry endpoint with an official safety source in five locales", () => {
+  const recipe = auditedRecipes.get("tamales-de-pollo-en-salsa-verde");
+  assert.ok(recipe, "tamales-de-pollo-en-salsa-verde slug exists");
+  assert.ok(recipe.sources.some((source) => source.url === foodSafetySource), "FoodSafety.gov poultry guidance is credited");
+  const chicken = recipeStep(recipe, "Cook the chicken");
+  const patterns = {
+    en: [/about 20 minutes[\s\S]*food thermometer[\s\S]*74°C \(165°F\)[\s\S]*every 2 minutes/],
+    "zh-hant": [/約 20 分鐘[\s\S]*食物溫度計[\s\S]*74°C（165°F）[\s\S]*每 2 分鐘再測一次/],
+    ja: [/約20分[\s\S]*食品用温度計[\s\S]*74°C（165°F）[\s\S]*2分ごとに測り直します/],
+    ko: [/약 20분[\s\S]*식품용 온도계[\s\S]*74°C \(165°F\)[\s\S]*2분마다 다시 확인/],
+    th: [/ประมาณ 20 นาที[\s\S]*เทอร์โมมิเตอร์อาหาร[\s\S]*74°C \(165°F\)[\s\S]*ทุก 2 นาที/]
+  };
+  for (const locale of localeOrder) assert.match(chicken.body[locale], patterns[locale][0], `${locale}: chicken temperature endpoint and recheck`);
+});
+
+test("huevos rancheros direct soft-yolk servings to pasteurized eggs and credit FDA guidance", () => {
+  const recipe = auditedRecipes.get("huevos-rancheros");
+  assert.ok(recipe, "huevos-rancheros slug exists");
+  assert.ok(recipe.sources.some((source) => source.url === eggSafetySource), "FDA egg guidance is credited");
+  const eggs = recipeStep(recipe, "Fry the eggs");
+  const patterns = {
+    en: [/soft yolks[\s\S]*pasteurized shell eggs[\s\S]*both whites and yolks are firm/],
+    "zh-hant": [/柔軟蛋黃[\s\S]*經巴氏殺菌的帶殼蛋[\s\S]*蛋白與蛋黃都煎至凝固/],
+    ja: [/柔らかい黄身[\s\S]*殺菌済み殻付き卵[\s\S]*白身と黄身の両方が固まる/],
+    ko: [/부드러운 노른자[\s\S]*살균 처리된 껍질 달걀[\s\S]*흰자와 노른자가 모두 단단해질/],
+    th: [/ไข่แดงนุ่ม[\s\S]*ไข่ทั้งเปลือกที่ผ่านการพาสเจอไรซ์[\s\S]*ทั้งไข่ขาวและไข่แดงแข็งตัว/]
+  };
+  for (const locale of localeOrder) assert.match(eggs.body[locale], patterns[locale][0], `${locale}: pasteurized or fully cooked egg path`);
 });

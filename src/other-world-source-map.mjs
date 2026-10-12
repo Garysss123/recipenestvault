@@ -59,7 +59,7 @@ export const otherWorldRecipeSources = {
   ],
   'imeretian-khachapuri': [
     { title: 'Imeretian Khachapuri — Georgia Travel', url: 'https://georgia.travel/imeretian-khachapuri' },
-    { title: 'Megrelian Khachapuri — Georgia Travel', url: 'https://georgia.travel/megrelian-khachapuri' }
+    { title: 'How to make the perfect khachapuri — Felicity Cloake, The Guardian', url: 'https://www.theguardian.com/food/2026/mar/22/how-to-make-the-perfect-cheese-khachapuri-recipe-felicity-cloake' }
   ],
   'pierogi-ruskie': [
     { title: 'Pierogi Ruskie — BBC Good Food', url: 'https://www.bbcgoodfood.com/recipes/pierogi-ruskie' },
