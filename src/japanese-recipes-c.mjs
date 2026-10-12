@@ -300,11 +300,11 @@ export const japaneseRecipesC = [
       {
         title: ml("Wrap with nori and serve", "包上海苔上桌", "海苔を巻いて供する", "김을 둘러 내기", "ห่อโนริแล้วเสิร์ฟ"),
         body: ml(
-          "Cut the two nori sheets into six pieces and wrap one piece around each onigiri just before serving. Keep the nori crisp and eat within two hours at room temperature.",
-          "將兩張海苔剪成六片，上桌前每顆包一片；保持海苔酥脆，室溫放置兩小時內食用。",
-          "焼きのり2枚を6片に切り、食べる直前に1片ずつおにぎりへ巻く。海苔をぱりっと保ち、室温では2時間以内に食べる。",
-          "구운 김 두 장을 여섯 조각으로 잘라 먹기 직전에 주먹밥마다 한 조각씩 두른다. 김을 바삭하게 유지하고 실온에서는 두 시간 안에 먹는다.",
-          "ตัดโนริสองแผ่นเป็นหกชิ้น ห่อก้อนละหนึ่งชิ้นก่อนเสิร์ฟเพื่อให้กรอบ และกินภายในสองชั่วโมงเมื่ออยู่ที่อุณหภูมิห้อง"
+          "Cut the two nori sheets into six pieces; this makes six onigiri, two per each of three servings. Wrap one piece around each just before serving. Serve promptly. If making ahead, cool the shaped rice quickly and refrigerate it ideally within 1 hour of cooking; use within 24 hours. Reheat rice only once until steaming hot throughout, then wrap with fresh nori.",
+          "將兩張海苔剪成六片；本食譜共做六顆飯糰，三人份每人兩顆。上桌前每顆包一片並盡快食用。若預先製作，飯糰成形後應快速降溫，最好在煮飯後 1 小時內冷藏，並於 24 小時內食用。米飯最多復熱一次，且須熱至整體冒蒸氣，再包上新海苔。",
+          "焼きのり2枚を6片に切ります。6個できるので、3人分として1人2個です。食べる直前に1片ずつ巻き、早めに供します。作り置きする場合は、握ったご飯を速やかに冷まし、炊飯後できれば1時間以内に冷蔵して24時間以内に食べます。再加熱は1回だけ、全体から湯気が立つまで熱し、新しい海苔を巻きます。",
+          "구운 김 두 장을 여섯 조각으로 자릅니다. 주먹밥 여섯 개를 만들어 세 사람이 두 개씩 먹습니다. 먹기 직전에 하나씩 두르고 바로 냅니다. 미리 만들 경우 빚은 밥을 빠르게 식혀 밥을 지은 뒤 가능하면 1시간 안에 냉장하고 24시간 안에 먹습니다. 밥은 한 번만 재가열해 전체에서 김이 날 때까지 데운 뒤 새 김을 두릅니다.",
+          "ตัดโนริสองแผ่นเป็นหกชิ้น สูตรนี้ได้โอนิกิริหกก้อน สำหรับสามคนคนละสองก้อน ห่อก่อนเสิร์ฟและกินโดยเร็ว หากทำเตรียมไว้ ให้คลายร้อนข้าวที่ปั้นแล้วอย่างรวดเร็วและแช่เย็นภายใน 1 ชั่วโมงหลังหุงถ้าเป็นไปได้ ใช้ภายใน 24 ชั่วโมง อุ่นข้าวซ้ำได้เพียงครั้งเดียวจนร้อนมีไอทั่วถึง แล้วห่อด้วยโนริใหม่"
         )
       }
     ],
@@ -357,11 +357,11 @@ export const japaneseRecipesC = [
       )
     ],
     storage: ml(
-      "For food safety, keep onigiri at room temperature for no more than two hours. If not eating within two hours, refrigerate airtight for up to 1 day; reheat until steaming hot and the centre reaches 74°C, cool to a warm shaping temperature, and wrap with fresh nori.",
-      "為了食品安全，飯糰室溫最多放 2 小時；若 2 小時內不吃，密封冷藏最多 1 天。食用前復熱至冒蒸氣且中心達 74°C，再降至溫熱可塑形的程度並包上新海苔。",
-      "安全のため、おにぎりは室温で2時間以内に食べる。2時間以内に食べない場合は密閉冷蔵で1日以内にし、食べる前に湯気が立ち中心74℃まで再加熱し、握れる温度まで冷まして新しい海苔を巻く。",
-      "식품 안전을 위해 주먹밥은 실온에서 두 시간 안에 먹는다. 두 시간 안에 먹지 않으면 밀폐 냉장해 하루 안에 먹고, 먹기 전 김이 날 때까지 중심 74°C로 재가열한 뒤 빚을 수 있는 따뜻한 온도로 식혀 새 김을 두른다.",
-      "เพื่อความปลอดภัย เก็บโอนิกิริที่อุณหภูมิห้องไม่เกินสองชั่วโมง หากไม่กินภายในสองชั่วโมงให้ปิดสนิทแช่เย็นไม่เกินหนึ่งวัน ก่อนกินอุ่นจนมีไอและใจกลางถึง 74°C แล้วคลายร้อนจนปั้นได้และห่อโนริใหม่"
+      "Eat freshly shaped onigiri promptly. If saving some, cool the rice quickly, ideally within 1 hour of cooking, refrigerate covered, and use within 24 hours. Reheat only once until steaming hot throughout; wrap with fresh nori just before serving.",
+      "飯糰成形後盡快食用。若需保存，米飯應快速降溫，最好在煮飯後 1 小時內冷藏並加蓋，24 小時內食用。最多復熱一次，且須熱至整體冒蒸氣；上桌前再包新海苔。",
+      "握りたてを早めに食べます。保存する場合は、ご飯を速やかに冷まし、できれば炊飯後1時間以内に覆って冷蔵し、24時間以内に食べます。再加熱は1回だけ、全体から湯気が立つまで熱し、食べる直前に新しい海苔を巻きます。",
+      "갓 빚은 주먹밥은 바로 먹습니다. 남길 경우 밥을 빠르게 식혀 가능하면 밥을 지은 뒤 1시간 안에 덮어 냉장하고 24시간 안에 먹습니다. 재가열은 한 번만 하며 전체에서 김이 날 때까지 데운 뒤 먹기 직전에 새 김을 두릅니다.",
+      "กินโอนิกิริหลังปั้นโดยเร็ว หากเก็บไว้ ให้คลายร้อนข้าวอย่างรวดเร็ว แช่เย็นแบบมีฝาปิดภายใน 1 ชั่วโมงหลังหุงถ้าเป็นไปได้ และใช้ภายใน 24 ชั่วโมง อุ่นซ้ำเพียงครั้งเดียวจนร้อนมีไอทั่วถึง แล้วห่อโนริใหม่ก่อนเสิร์ฟ"
     ),
     cultureNote: ml(
       "Onigiri are portable Japanese rice foods for journeys, school lunches and everyday meals; a little salt helps the rice taste lively and keeps the plain shape practical.",
@@ -373,7 +373,8 @@ export const japaneseRecipesC = [
     sources: [
       { title: "Just One Cookbook — Onigiri Recipe (4 Easy Fillings)", url: "https://www.justonecookbook.com/onigiri-rice-balls/" },
       { title: "Japanese Cooking 101 — Onigiri (Japanese Rice Balls)", url: "https://japanesecooking101.com/rice-ball-onigiri-recipe/" },
-      { title: "Kikkoman — Onigiri", url: "https://www.kikkoman.com/en/cookbook/washoku/onigiri.html" }
+      { title: "Kikkoman — Onigiri", url: "https://www.kikkoman.com/en/cookbook/washoku/onigiri.html" },
+      { title: "Official food-safety guidance — UK Food Standards Agency: Home food fact checker (rice)", url: "https://www.gov.uk/government/publications/home-food-fact-checker/home-food-fact-checker" }
     ],
     imageAlt: ml(
       "Real photograph of two plain triangular onigiri wrapped in broad sheets of black nori, with no visible filling or garnish.",

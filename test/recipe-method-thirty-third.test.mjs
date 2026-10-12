@@ -47,8 +47,8 @@ test("thirty-third audit adds four existing non-excluded recipes to the five-lan
   const audited = [...list.matchAll(/"([a-z0-9-]+)"/g)].map(([, id]) => id);
   assert.equal(recipes.length, 353, "recipe registry stays at 353");
   assert.equal(exclusions.length, 18, "the existing 18 exclusions remain explicit");
-  assert.equal(audited.length, 172, "shared detail-route regression covers 172 reviewed recipes");
-  assert.equal(new Set(audited).size, 172, "shared route IDs remain unique");
+  assert.equal(audited.length, 176, "shared detail-route regression covers 176 reviewed recipes");
+  assert.equal(new Set(audited).size, 176, "shared route IDs remain unique");
   for (const id of addedIds) {
     assert.ok(newRecipes.get(id), `${id}: existing recipe is present`);
     assert.ok(!exclusions.includes(id), `${id}: not on the exclusion list`);

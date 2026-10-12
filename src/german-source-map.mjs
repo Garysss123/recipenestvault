@@ -42,6 +42,10 @@ export const germanRecipeSources = {
     'https://www.daringgourmet.com/frikadeller-frikadellen/',
     'Food.com — Frikadellen (German Meat Patties)',
     'https://www.food.com/recipe/frikadellen-german-meat-patties-423250'
+  ).concat(
+    { title: 'Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' },
+    { title: 'Official food-safety guidance — FoodSafety.gov: 4 Steps to Food Safety (Chill)', url: 'https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety' },
+    { title: 'Official food-safety guidance — FoodSafety.gov: Cold Food Storage Chart', url: 'https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts' }
   ),
   'koenigsberger-klopse': sources(
     'Kitchen Stories — Königsberger Klopse',
