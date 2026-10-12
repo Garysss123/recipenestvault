@@ -39,6 +39,10 @@ function cloneRecipe(recipe) {
   };
 }
 
+function addSource(recipe, title, url) {
+  if (!recipe.sources.some((source) => source.url === url)) recipe.sources.push({ title, url });
+}
+
 function refineForPublication(source) {
   const recipe = cloneRecipe(source);
 
@@ -72,6 +76,7 @@ function refineForPublication(source) {
       "중약불로 낮추고 남은 기름, 말린 고추, 화자오를 넣어 타지 않게 20–30초 향을 낸다.",
       "ลดเป็นไฟกลางอ่อน ใส่น้ำมันที่เหลือ พริกแห้ง และพริกเสฉวน ผัด 20–30 วินาทีจนหอมโดยไม่ให้เครื่องเทศไหม้ดำ"
     );
+    addSource(recipe, "Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures", "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures");
   }
 
   if (recipe.id === "twice-cooked-pork") {
@@ -82,14 +87,14 @@ function refineForPublication(source) {
       amount: "60 g",
       item: ml("red bell pepper, 3 cm strips", "紅甜椒，切 3 公分條", "赤ピーマン（3cm幅）", "빨간 피망, 3cm 크기", "พริกหวานแดง หั่นชิ้น 3 ซม.")
     });
-    recipe.cookMinutes = 40;
-    recipe.totalMinutes = 60;
+    recipe.cookMinutes = 50;
+    recipe.totalMinutes = 70;
     recipe.instructions[0] = ml(
-      "Put the pork, ginger, simmering scallions, and water in a pot. Bring to a gentle simmer and cook for 30 minutes, until a chopstick enters the thickest part with little resistance and the centre reaches at least 71°C.",
-      "豬肉、薑片、汆煮用青蔥與水放入鍋中，煮至微滾後續煮 30 分鐘；筷子應能以少量阻力插入最厚處，中心溫度至少達 71°C。",
-      "豚肉、しょうが、下ゆで用のねぎ、水を鍋に入れ、静かな煮立ちにして30分ゆでる。最も厚い部分に箸がほぼ抵抗なく入り、中心が71°C以上になることを確認する。",
-      "냄비에 돼지고기, 생강, 데침용 대파, 물을 넣고 약하게 끓여 30분 익힌다. 가장 두꺼운 부분에 젓가락이 큰 저항 없이 들어가고 중심 온도가 최소 71°C인지 확인한다.",
-      "ใส่หมู ขิง ต้นหอมสำหรับต้ม และน้ำลงหม้อ ต้มเดือดอ่อน 30 นาที จนตะเกียบแทงส่วนหนาที่สุดได้โดยมีแรงต้านเพียงเล็กน้อยและอุณหภูมิใจกลางอย่างน้อย 71°C"
+      "Put the pork, ginger, simmering scallions, and water in a pot. Bring to a gentle simmer and cook for about 30 minutes. Prepare the vegetables in the next step while it simmers. At about 30 minutes, check the thickest centre with a thermometer; continue in 5-minute increments until it reaches 63°C (145°F) and a chopstick enters with little resistance. Rest off the heat for 10 minutes in the next step.",
+      "豬肉、薑片、汆煮用青蔥與水放入鍋中，煮至微滾後續煮約 30 分鐘，並在下一步趁空準備蔬菜。約 30 分鐘時用溫度計測量最厚處中心；每次再煮 5 分鐘，直到達 63°C（145°F）且筷子能以少量阻力插入。下一步將離火靜置 10 分鐘。",
+      "豚肉、しょうが、下ゆで用のねぎ、水を鍋に入れ、静かな煮立ちにして約30分ゆで、その間に次の手順で野菜を準備する。約30分後、最も厚い部分の中心を温度計で測る。63°C（145°F）に達し、箸がほぼ抵抗なく入るまで5分ずつ追加で煮る。次の手順で火から下ろして10分休ませる。",
+      "냄비에 돼지고기, 생강, 데침용 대파, 물을 넣고 약하게 끓여 약 30분 삶는다. 끓는 동안 다음 단계에서 채소를 손질한다. 약 30분 뒤 가장 두꺼운 중심을 온도계로 재고 63°C (145°F)에 도달하며 젓가락이 큰 저항 없이 들어갈 때까지 5분씩 더 끓인다. 다음 단계에서 불에서 내려 10분 둔다.",
+      "ใส่หมู ขิง ต้นหอมสำหรับต้ม และน้ำลงหม้อ ต้มเดือดอ่อนประมาณ 30 นาที ระหว่างนั้นเตรียมผักตามขั้นตอนถัดไป เมื่อครบประมาณ 30 นาที ใช้เทอร์โมมิเตอร์วัดตรงกลางส่วนที่หนาที่สุด เคี่ยวต่อครั้งละ 5 นาทีจนถึง 63°C (145°F) และตะเกียบแทงเข้าได้โดยมีแรงต้านน้อย จากนั้นพักนอกเตา 10 นาทีตามขั้นตอนถัดไป"
     );
     recipe.instructions[2] = ml(
       "Heat a wok over medium-high heat. Add the oil and pork slices; stir-fry for 2–3 minutes until some fat renders and the edges curl, without drying the meat.",
@@ -101,6 +106,7 @@ function refineForPublication(source) {
     recipe.sources = recipe.sources.map((source) => source.url === "https://www.chinasichuanfood.com/twice-cooked-pork/"
       ? { ...source, url: "https://www.chinasichuanfood.com/twice-cooked-pork-recipe/" }
       : source);
+    addSource(recipe, "Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures", "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures");
     recipe.visualSpec = "Curled pork-belly slices with red and green pepper, leek, fermented black beans, and red chile-bean sauce.";
   }
 
@@ -141,6 +147,7 @@ function refineForPublication(source) {
       "절임 채소, 사오싱주, 남은 설탕 2g을 넣고 고명에 수분이 없어지고 향이 날 때까지 1분 볶는다.",
       "ใส่ผักดอง เหล้าเส้าซิง และน้ำตาลที่เหลือ 2 กรัม ผัด 1 นาทีจนหน้าหมูแห้งและหอม"
     );
+    addSource(recipe, "Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures", "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures");
   }
 
   if (recipe.id === "tomato-egg-stir-fry") {
@@ -175,6 +182,8 @@ function refineForPublication(source) {
       "불을 끄고 달걀이 부드러울 때 바로 낸다.",
       "ปิดไฟและเสิร์ฟทันทีขณะที่ไข่ยังนุ่ม"
     );
+    addSource(recipe, "Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures", "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures");
+    addSource(recipe, "Official food-safety guidance — FDA: What You Need to Know About Egg Safety", "https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety");
     recipe.visualSpec = "Soft yellow egg curds and chopped ripe tomato with lightly syrupy juices; no garnish.";
   }
 

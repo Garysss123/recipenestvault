@@ -114,21 +114,21 @@ export const expandedInstructionsA = {
     {
       title: ml("Set up the two chicken batches", "將雞肉分成兩批", "鶏肉を2回分に分ける", "닭고기 두 배치 준비하기", "แบ่งไก่เตรียมไว้สองรอบ"),
       body: ml(
-        "Separate the marinated chicken into two equal batches. Cut the scallions into 3 cm pieces and keep the white and green portions apart so they can be added at different times.",
-        "將醃好的雞肉分成兩等份；青蔥切 3 公分段，蔥白與蔥綠分開，分時下鍋。",
-        "下味を付けた鶏肉を2等分する。ねぎを3cmに切り、白い部分と青い部分を分けておく。",
-        "밑간한 닭고기를 같은 양의 두 묶음으로 나눈다. 대파를 3cm로 썰고 흰 부분과 초록 부분을 따로 둔다.",
-        "แบ่งไก่หมักเป็นสองส่วนเท่ากัน หั่นต้นหอมเป็นท่อน 3 ซม. แยกโคนกับใบไว้เพื่อใส่คนละช่วง"
+        "Separate the marinated chicken into two equal batches of about 250 g raw chicken each. Cut the scallions into 3 cm pieces and keep the white and green portions apart so they can be added at different times.",
+        "將醃好的雞肉分成兩等份，每份約 250 公克生雞肉；青蔥切 3 公分段，蔥白與蔥綠分開，分時下鍋。",
+        "下味を付けた鶏肉を、生肉で約250gずつの2等分にする。ねぎを3cmに切り、白い部分と青い部分を分けて別々のタイミングで加える。",
+        "밑간한 닭고기를 생고기 기준 약 250g씩 두 묶음으로 나눈다. 대파는 3cm 길이로 썰고 흰 부분과 초록 부분을 나누어 다른 시점에 넣도록 둔다.",
+        "แบ่งไก่หมักเป็นสองชุดเท่า ๆ กัน ชุดละประมาณ 250 กรัมก่อนปรุง หั่นต้นหอมเป็นท่อน 3 ซม. แยกส่วนสีขาวกับสีเขียวไว้ใส่คนละช่วง"
       )
     },
     {
       title: ml("Sear in two batches", "分兩批炒雞", "2回に分けて鶏肉を炒める", "두 번 나누어 닭고기 볶기", "ผัดไก่สองรอบ"),
       body: ml(
-        "Heat a wok over medium-high heat. Add 6 ml oil and stir-fry the first chicken batch for 2–3 minutes; remove it when lightly browned and the thickest piece reaches 74°C. Repeat with another 6 ml oil and the second batch.",
-        "炒鍋以中大火燒熱，加入 6 毫升油，第一批雞肉炒 2–3 分鐘，至表面略上色且最厚處達 74°C 後盛出；再以 6 毫升油同樣炒熟第二批。",
-        "中華鍋を中強火で熱し、油6mlで最初の鶏肉を2〜3分炒める。薄く焼き色が付き最も厚い部分が74℃になったら取り出し、油6mlを追加して2回目も同様に炒める。",
-        "웍을 중강불로 달군 뒤 기름 6ml로 첫 번째 닭고기를 2–3분 볶는다. 겉이 살짝 갈색이 되고 가장 두꺼운 조각이 74°C에 도달하면 덜어내고, 기름 6ml를 더해 두 번째 배치도 같은 방식으로 익힌다.",
-        "ตั้งกระทะจีนด้วยไฟกลางค่อนแรง ใส่น้ำมัน 6 มล. ผัดไก่ชุดแรก 2–3 นาทีจนผิวเริ่มเป็นสีน้ำตาลและชิ้นหนาที่สุดถึง 74°C แล้วตักออก เติมน้ำมันอีก 6 มล. และผัดชุดที่สองแบบเดียวกัน"
+        "Heat a wok over medium-high heat. Add 6 ml oil and stir-fry the first 250 g batch for 2–3 minutes. Check the centre of the largest pieces with a food thermometer and remove the batch only when the chicken reaches 74°C (165°F). Repeat with another 6 ml oil and the second batch.",
+        "炒鍋以中大火燒熱，加入 6 毫升油，第一批約 250 公克雞肉炒 2–3 分鐘；用食物溫度計測量較大雞塊中心，雞肉達 74°C（165°F）才盛出。再加 6 毫升油炒第二批。",
+        "中華鍋を中強火で熱し、油6mlで最初の約250gを2〜3分炒める。食品用温度計で大きい鶏肉の中心を測り、74°C（165°F）に達してから取り出す。油6mlを追加して2回目も同様に炒める。",
+        "웍을 중강불로 달군다. 기름 6ml를 넣고 첫 번째 약 250g을 2–3분 볶는다. 식품용 온도계로 가장 큰 조각의 중심을 재어 74°C (165°F)에 도달한 뒤 덜어낸다. 기름 6ml를 더해 두 번째 배치도 같은 방식으로 익힌다.",
+        "ตั้งกระทะจีนด้วยไฟกลางค่อนแรง ใส่น้ำมัน 6 มล. ผัดไก่ชุดแรกประมาณ 250 กรัม 2–3 นาที ใช้เทอร์โมมิเตอร์วัดตรงกลางชิ้นที่ใหญ่ที่สุด และตักออกเมื่อไก่ถึง 74°C (165°F) เท่านั้น เติมน้ำมันอีก 6 มล. แล้วทำแบบเดียวกันกับชุดที่สอง"
       )
     },
     {
@@ -174,11 +174,11 @@ export const expandedInstructionsA = {
     {
       title: ml("Add the crisp finish", "加入蔥綠與花生", "ねぎとピーナッツを加える", "대파와 땅콩 넣기", "ใส่ต้นหอมและถั่ว"),
       body: ml(
-        "Turn off the heat and fold in the scallion greens and 50 g roasted peanuts. Serve immediately while the peanuts remain crisp.",
-        "關火，拌入蔥綠與 50 公克烘烤花生，趁花生仍酥脆立即上桌。",
-        "火を止め、ねぎの青い部分とローストピーナッツ50gを混ぜる。ピーナッツがカリッとしているうちにすぐ盛る。",
-        "불을 끄고 대파 초록 부분과 볶은 땅콩 50g을 섞는다. 땅콩이 바삭할 때 바로 낸다.",
-        "ปิดไฟ คลุกใบต้นหอมกับถั่วลิสงคั่ว 50 กรัม เสิร์ฟทันทีขณะที่ถั่วยังกรอบ"
+        "Turn off the heat and fold in the scallion greens and 50 g roasted peanuts. Divide evenly among three servings; each represents about 167 g raw chicken and gets about 13 g scallions and 17 g peanuts. Serve immediately while the peanuts remain crisp.",
+        "關火，拌入蔥綠與 50 公克烘烤花生，再平均分成三份；每份相當於烹煮前約 167 公克雞肉，並分到約 13 公克青蔥與 17 公克花生。趁花生仍酥脆立即上桌。",
+        "火を止め、ねぎの青い部分とローストピーナッツ50gを混ぜる。3人分に均等に分け、1人分は調理前の鶏肉約167g、ねぎ約13g、ピーナッツ約17gに相当する。ピーナッツがカリッとしているうちにすぐ盛る。",
+        "불을 끄고 대파 초록 부분과 볶은 땅콩 50g을 섞는다. 세 사람에게 똑같이 나누며, 1인분은 조리 전 닭고기 약 167g, 대파 약 13g, 땅콩 약 17g에 해당한다. 땅콩이 바삭할 때 바로 낸다.",
+        "ปิดไฟ คลุกใบต้นหอมกับถั่วลิสงคั่ว 50 กรัม แบ่งเท่า ๆ กัน 3 ที่ โดยแต่ละที่เทียบเท่าไก่ดิบประมาณ 167 กรัม ต้นหอมประมาณ 13 กรัม และถั่วลิสงประมาณ 17 กรัม เสิร์ฟทันทีขณะที่ถั่วยังกรอบ"
       )
     }
   ],
@@ -197,31 +197,31 @@ export const expandedInstructionsA = {
     {
       title: ml("Simmer until tender", "汆煮至軟嫩", "柔らかくなるまでゆでる", "부드럽게 삶기", "ต้มจนเปื่อยนุ่ม"),
       body: ml(
-        "Bring the pot to a gentle simmer and cook for 30 minutes. A chopstick should enter the thickest part with little resistance, and the centre must reach at least 71°C.",
-        "煮至微滾後續煮 30 分鐘；筷子應能以少量阻力插入最厚處，中心溫度至少達 71°C。",
-        "静かな煮立ちにして30分ゆでる。最も厚い部分に箸がほぼ抵抗なく入り、中心が71℃以上になることを確認する。",
-        "잔잔하게 끓여 30분 삶는다. 가장 두꺼운 부분에 젓가락이 큰 저항 없이 들어가고 중심 온도가 최소 71°C인지 확인한다.",
-        "ต้มจนเดือดอ่อนแล้วเคี่ยว 30 นาที ตะเกียบควรแทงส่วนหนาที่สุดได้โดยมีแรงต้านเพียงเล็กน้อย และแกนกลางต้องถึงอย่างน้อย 71°C"
+        "Bring the pot to a gentle simmer and cook for about 30 minutes while you prepare the vegetables in the next step. Check the centre of the thickest part with a food thermometer; continue simmering in 5-minute increments until it reaches 63°C (145°F) and a chopstick enters with little resistance. Remove the pot from the heat.",
+        "煮至微滾後續煮約 30 分鐘，期間按下一步準備蔬菜。用食物溫度計測量最厚處中心；若未達 63°C（145°F）或筷子仍難以插入，就每次再煮 5 分鐘，直到兩項條件都符合後離火。",
+        "静かな煮立ちにして約30分ゆで、その間に次の手順で野菜を準備する。食品用温度計で最も厚い部分の中心を測る。63°C（145°F）に達し、箸がほぼ抵抗なく入るまで、5分ずつ追加で煮る。両方を満たしたら火から下ろす。",
+        "약하게 끓여 약 30분 삶는 동안 다음 단계에서 채소를 손질한다. 식품용 온도계로 가장 두꺼운 부분의 중심을 잰다. 63°C (145°F)에 도달하고 젓가락이 큰 저항 없이 들어갈 때까지 5분씩 더 끓인다. 두 조건이 모두 맞으면 불에서 내린다.",
+        "ต้มเดือดอ่อนประมาณ 30 นาที ระหว่างนั้นเตรียมผักตามขั้นตอนถัดไป ใช้เทอร์โมมิเตอร์วัดตรงกลางส่วนที่หนาที่สุด ต้มต่อครั้งละ 5 นาทีจนถึง 63°C (145°F) และตะเกียบแทงเข้าได้โดยมีแรงต้านน้อย เมื่อได้ทั้งสองอย่างแล้วจึงยกลงจากเตา"
       )
     },
     {
       title: ml("Prepare the vegetables", "準備蔬菜", "野菜を切る", "채소 손질", "เตรียมผัก"),
       body: ml(
-        "While the pork simmers, cut the 60 g green bell pepper and 60 g red bell pepper into 3 cm strips. Cut the 80 g garlic chives or leek into 4 cm pieces.",
-        "豬肉汆煮時，將 60 公克青椒與 60 公克紅甜椒切成 3 公分條，80 公克蒜苗或韭蒜切成 4 公分段。",
-        "豚肉をゆでている間に、ピーマン60gと赤ピーマン60gを3cm幅に切る。にんにくの芽またはねぎ80gを4cmに切る。",
-        "돼지고기를 삶는 동안 풋고추 60g과 빨간 피망 60g을 3cm 길이로 썬다. 마늘종 또는 대파 80g은 4cm로 썬다.",
-        "ระหว่างต้มหมู หั่นพริกหวานเขียว 60 กรัมและแดง 60 กรัมเป็นเส้น 3 ซม. หั่นต้นกระเทียมหรือต้นหอม 80 กรัมเป็นท่อน 4 ซม."
+        "While the pork simmers, cut the 60 g green bell pepper and 60 g red bell pepper into 3 cm strips. Cut the 80 g garlic chives or leek into 4 cm pieces. Once the pork passes both checks in the previous step, leave it off the heat for 10 minutes before slicing; this exceeds the 3-minute rest for whole-cut pork.",
+        "豬肉汆煮時，將 60 公克青甜椒與 60 公克紅甜椒切成 3 公分條，80 公克韭菜或韭蔥切成 4 公分段。豬肉通過上一步的兩項檢查後，離火靜置 10 分鐘再切；這比整塊豬肉建議的 3 分鐘靜置時間更長。",
+        "豚肉をゆでている間に、ピーマン60gと赤ピーマン60gを3cm幅の細切りにし、ニラまたはリーキ80gを4cmの長さに切る。前の手順の2つの確認を満たしたら火から下ろし、切る前に10分休ませる。塊肉に必要な3分の休ませ時間を上回る長さである。",
+        "돼지고기를 삶는 동안 청피망 60g과 빨간 피망 60g을 3cm 길이로 썰고, 부추 또는 리크 80g은 4cm 길이로 썬다. 앞 단계의 두 가지 확인을 통과하면 불에서 내려 썰기 전에 10분간 둔다. 통돼지고기에 필요한 3분 휴지 시간보다 길다.",
+        "ระหว่างต้มหมู หั่นพริกหวานสีเขียว 60 กรัมและสีแดง 60 กรัมเป็นเส้นยาว 3 ซม. หั่นกุยช่ายหรือลีค 80 กรัมเป็นท่อนยาว 4 ซม. เมื่อหมูผ่านการตรวจทั้งสองข้อในขั้นก่อนแล้ว ให้ยกลงจากเตาและพัก 10 นาทีก่อนหั่น ซึ่งนานกว่าระยะพัก 3 นาทีที่แนะนำสำหรับหมูชิ้นใหญ่"
       )
     },
     {
       title: ml("Cool and slice the pork", "放涼切肉", "冷まして切る", "식혀 썰기", "พักและหั่นหมู"),
       body: ml(
-        "Transfer the pork to a plate and cool for 10 minutes. Pat it dry and slice across the grain into even 3 mm pieces.",
-        "豬肉盛出放涼 10 分鐘，擦乾後逆紋切成厚薄一致的 3 毫米薄片。",
-        "豚肉を皿に取り出して10分冷ます。水気を拭き、繊維を断つ方向に3mm厚さで均一に切る。",
-        "돼지고기를 접시에 옮겨 10분 식힌다. 물기를 닦고 결 반대 방향으로 3mm 두께가 되게 고르게 썬다.",
-        "ตักหมูใส่จานพักให้เย็น 10 นาที ซับให้แห้ง แล้วหั่นขวางเส้นใยเป็นชิ้นหนา 3 มม. เท่ากัน"
+        "Transfer the rested pork to a clean plate, pat it dry, and slice across the grain into even 3 mm pieces.",
+        "將靜置好的豬肉移到乾淨盤中，擦乾後逆紋切成厚薄一致的 3 毫米薄片。",
+        "休ませた豚肉を清潔な皿に移し、水気を拭いて繊維を断つ方向に3mm厚さで均一に切る。",
+        "휴지한 돼지고기를 깨끗한 접시에 옮겨 물기를 닦고 결 반대 방향으로 3mm 두께가 되게 고르게 썬다.",
+        "ย้ายหมูที่พักแล้วใส่จานสะอาด ซับให้แห้ง แล้วหั่นขวางเส้นใยเป็นชิ้นหนา 3 มม. เท่ากัน"
       )
     },
     {
@@ -258,20 +258,20 @@ export const expandedInstructionsA = {
       title: ml("Wilt the garlic chives", "炒軟蒜苗", "にんにくの芽をしんなりさせる", "마늘종 숨 죽이기", "ผัดต้นกระเทียมให้นิ่ม"),
       body: ml(
         "Add the garlic chives or leek and stir-fry for 1 minute, just until wilted. Do not keep cooking after the vegetables are tender.",
-        "加入蒜苗或韭蒜翻炒 1 分鐘，至剛軟化即可；蔬菜熟後不要繼續久炒。",
-        "にんにくの芽またはねぎを加え、しんなりするまで1分炒める。野菜が柔らかくなったら加熱を続けない。",
-        "마늘종 또는 대파를 넣고 숨이 죽을 때까지 1분 볶는다. 채소가 익으면 더 끓이지 않는다.",
-        "ใส่ต้นกระเทียมหรือต้นหอม ผัด 1 นาทีจนเริ่มนิ่ม แล้วหยุดความร้อนไม่ให้ผักสุกเกิน"
+        "加入韭菜或韭蔥翻炒 1 分鐘，剛好炒至萎軟即可。蔬菜變軟後不要再繼續烹煮。",
+        "ニラまたはリーキを加え、しんなりするまで1分炒める。野菜が柔らかくなったら、それ以上加熱しない。",
+        "부추 또는 리크를 넣고 숨이 죽을 때까지만 1분 볶는다. 채소가 부드러워진 뒤에는 더 익히지 않는다.",
+        "ใส่กุยช่ายหรือลีคแล้วผัด 1 นาที พอให้ผักสลดนิ่มเท่านั้น เมื่อผักนุ่มแล้วอย่าปรุงต่อ"
       )
     },
     {
       title: ml("Serve while the edges are curled", "趁肉片捲曲上桌", "肉の縁が反ったら盛る", "고기 가장자리가 말리면 내기", "เสิร์ฟเมื่อขอบหมูม้วน"),
       body: ml(
-        "Turn off the heat once the garlic chives or leek is wilted and the pork edges remain curled. Serve immediately while the peppers are still slightly crisp.",
-        "韭蒜軟化且豬肉邊緣保持捲曲時關火，趁甜椒仍略帶爽脆立即上桌。",
-        "ねぎがしんなりし、豚肉の縁が反ったら火を止める。ピーマンに少し歯ごたえが残るうちにすぐ盛る。",
-        "대파가 숨이 죽고 돼지고기 가장자리가 말린 상태에서 불을 끈다. 피망이 살짝 아삭할 때 바로 낸다.",
-        "ปิดไฟเมื่อผักเริ่มนิ่มและขอบหมูยังม้วน เสิร์ฟทันทีขณะที่พริกหวานยังกรอบเล็กน้อย"
+        "Turn off the heat once the garlic chives or leek is wilted and the pork edges remain curled. Divide into three equal portions, each representing about 167 g raw pork, 20 g of each pepper, and 27 g garlic chives or leek before cooking. Serve immediately while the peppers are still slightly crisp.",
+        "韭菜或韭蔥炒軟、且豬肉邊緣仍保持捲曲時關火。平均分成三份，每份相當於烹煮前約 167 公克生豬肉、青甜椒與紅甜椒各 20 公克，以及韭菜或韭蔥約 27 公克。趁甜椒仍略帶爽脆時立即上桌。",
+        "ニラまたはリーキがしんなりし、豚肉の縁が反った状態を保っていたら火を止める。3人分に均等に分ける。1人分は調理前の豚肉約167g、各色のピーマン20g、ニラまたはリーキ約27gに相当する。ピーマンに少し歯ごたえが残るうちにすぐ盛る。",
+        "부추 또는 리크가 숨이 죽고 돼지고기 가장자리가 계속 말려 있으면 불을 끈다. 세 사람에게 똑같이 나눈다. 1인분은 조리 전 돼지고기 약 167g, 청피망과 빨간 피망 각각 20g, 부추 또는 리크 약 27g에 해당한다. 피망이 살짝 아삭할 때 바로 낸다.",
+        "ปิดไฟเมื่อกุยช่ายหรือลีคนิ่มและขอบหมูยังคงม้วนอยู่ แบ่งเป็น 3 ส่วนเท่า ๆ กัน แต่ละที่เทียบเท่าหมูดิบประมาณ 167 กรัม พริกหวานสีเขียวและสีแดงอย่างละ 20 กรัม และกุยช่ายหรือลีคประมาณ 27 กรัมก่อนปรุง เสิร์ฟทันทีขณะที่พริกหวานยังกรอบเล็กน้อย"
       )
     }
   ],
@@ -280,11 +280,11 @@ export const expandedInstructionsA = {
     {
       title: ml("Measure the divided sugar", "分配砂糖", "砂糖を分ける", "설탕 나누기", "แบ่งน้ำตาล"),
       body: ml(
-        "Measure the 6 g sugar as 4 g for the sauce and 2 g for the pork topping. Keep the two portions in separate small dishes.",
-        "將 6 公克砂糖分成醬汁用 4 公克與豬肉餡用 2 公克，分別放在小碟中。",
-        "砂糖6gを、たれ用4gと肉そぼろ用2gに分け、それぞれ小皿に置く。",
-        "설탕 6g을 소스용 4g과 돼지고기 토핑용 2g으로 나누어 작은 그릇에 따로 둔다.",
-        "แบ่งน้ำตาล 6 กรัมเป็น 4 กรัมสำหรับซอสและ 2 กรัมสำหรับหน้าหมู ใส่ถ้วยเล็กแยกกัน"
+        "Measure the 6 g sugar as 4 g for the sauce and 2 g for the pork topping. Keep the two portions in separate small dishes, and set a large pot of water over high heat for the noodles.",
+        "將 6 公克砂糖分成醬汁用 4 公克與豬肉餡用 2 公克，分別放在小碟中；另用大鍋以大火燒水，準備煮麵。",
+        "砂糖6gを、たれ用4gと肉そぼろ用2gに分けて小皿に置く。麺用に大きな鍋へ湯を入れ、強火にかける。",
+        "설탕 6g을 소스용 4g과 돼지고기 토핑용 2g으로 나누어 작은 그릇에 따로 둔다. 면을 삶을 큰 냄비에 물을 넣고 센 불로 끓이기 시작한다.",
+        "แบ่งน้ำตาล 6 กรัมเป็น 4 กรัมสำหรับซอสและ 2 กรัมสำหรับหน้าหมู ใส่ถ้วยเล็กแยกกัน แล้วตั้งหม้อน้ำใบใหญ่ด้วยไฟแรงเพื่อเตรียมต้มเส้น"
       )
     },
     {
@@ -300,11 +300,11 @@ export const expandedInstructionsA = {
     {
       title: ml("Brown the pork", "炒香豬肉", "豚肉を炒める", "돼지고기 볶기", "ผัดหมู"),
       body: ml(
-        "Heat the 15 ml oil in a skillet over medium-high heat. Stir-fry the 150 g ground pork for 3–4 minutes, breaking it up, until browned and the centre reaches 71°C.",
-        "平底鍋以中大火加熱 15 毫升油，加入 150 公克豬絞肉炒散 3–4 分鐘，至上色且中心達 71°C。",
-        "フライパンを中強火で熱し、油15mlと豚ひき肉150gをほぐしながら3～4分炒め、焼き色を付けて中心を71℃にする。",
-        "팬을 중강불로 달구고 기름 15ml와 돼지고기 다짐육 150g을 풀어 가며 3~4분 볶아 갈색을 내고 중심 온도 71°C까지 익힌다.",
-        "ตั้งกระทะด้วยไฟกลางค่อนแรง ใส่น้ำมัน 15 มล. กับหมูบด 150 กรัม ผัดให้ร่วน 3–4 นาทีจนเป็นสีน้ำตาลและแกนกลางถึง 71°C"
+        "Heat the 15 ml oil in a skillet over medium-high heat. Stir-fry the 150 g ground pork for 3–4 minutes, breaking it up; check the centre of the largest clump with a food thermometer and cook to 71°C (160°F).",
+        "平底鍋以中大火加熱 15 毫升油，加入 150 公克豬絞肉炒散 3–4 分鐘；用食物溫度計測量最大肉塊中心，煮至 71°C（160°F）。",
+        "フライパンを中強火で熱し、油15mlと豚ひき肉150gをほぐしながら3〜4分炒める。食品用温度計で最も大きい塊の中心を測り、71°C（160°F）まで加熱する。",
+        "팬을 중강불로 달구고 기름 15ml와 돼지고기 다짐육 150g을 풀어 가며 3–4분 볶는다. 식품용 온도계로 가장 큰 덩어리의 중심을 재어 71°C (160°F)까지 익힌다.",
+        "ตั้งกระทะด้วยไฟกลางค่อนแรง ใส่น้ำมัน 15 มล. กับหมูบด 150 กรัม ผัดให้ร่วน 3–4 นาที ใช้เทอร์โมมิเตอร์วัดกลางก้อนที่ใหญ่ที่สุดและปรุงให้ถึง 71°C (160°F)"
       )
     },
     {
@@ -350,11 +350,11 @@ export const expandedInstructionsA = {
     {
       title: ml("Top and serve", "鋪上配料並上桌", "具材をのせて盛る", "토핑 올려 내기", "ใส่หน้าแล้วเสิร์ฟ"),
       body: ml(
-        "Top each bowl with half of the pork mixture, half of the 30 g scallions, and half of the 15 g crushed peanuts. Serve at once so the noodles and topping stay hot.",
-        "每碗鋪上一半豬肉餡、30 公克青蔥的一半與 15 公克碎花生的一半，立即上桌，讓麵條與配料保持熱度。",
-        "各器に豚肉の具を半量ずつ、ねぎ30gの半量、砕いたピーナッツ15gの半量をのせる。麺と具が熱いうちにすぐ出す。",
-        "각 그릇에 돼지고기 토핑 절반씩, 대파 30g의 절반, 부순 땅콩 15g의 절반을 올린다. 면과 토핑이 뜨거울 때 바로 낸다.",
-        "แบ่งหน้าหมูครึ่งหนึ่งต่อชาม ใส่ต้นหอมครึ่งหนึ่งของ 30 กรัมและถั่วลิสงบดครึ่งหนึ่งของ 15 กรัม เสิร์ฟทันทีเพื่อให้เส้นและหน้าอุ่นร้อน"
+        "Top each bowl with half of the pork mixture, half of the 30 g scallions, and half of the 15 g crushed peanuts. Each bowl gets 120 g fresh noodles, about 75 g raw-pork equivalent, 15 g scallions, and 7.5 g peanuts. Serve at once so the noodles and topping stay hot.",
+        "每碗鋪上一半豬肉餡、30 公克青蔥的一半與 15 公克碎花生的一半；每碗使用 120 公克新鮮麵條，並分到相當於約 75 公克生豬肉、15 公克青蔥與 7.5 公克花生的份量。立即上桌，讓麵條與配料保持熱度。",
+        "各器に豚肉の具を半量ずつ、ねぎ30gの半量、砕いたピーナッツ15gの半量をのせる。各器に生麺120g、調理前の豚ひき肉約75g分、ねぎ15g、ピーナッツ7.5gを盛る。麺と具が熱いうちにすぐ出す。",
+        "각 그릇에 돼지고기 토핑 절반씩, 대파 30g의 절반, 부순 땅콩 15g의 절반을 올린다. 한 그릇마다 생면 120g, 조리 전 다진 돼지고기 약 75g에 해당하는 양, 대파 15g, 땅콩 7.5g을 담는다. 면과 토핑이 뜨거울 때 바로 낸다.",
+        "แบ่งหน้าหมูครึ่งหนึ่งต่อชาม ใส่ต้นหอม 15 กรัมและถั่วลิสงบด 7.5 กรัมต่อชาม แต่ละชามได้เส้นสด 120 กรัม และหน้าหมูเทียบเท่าหมูบดดิบประมาณ 75 กรัม เสิร์ฟทันทีขณะที่เส้นและหน้ายังร้อน"
       )
     }
   ],
@@ -393,11 +393,11 @@ export const expandedInstructionsA = {
     {
       title: ml("Set the egg curds", "炒至蛋液剛凝固", "卵を半熟に固める", "달걀 부드럽게 익히기", "ทำไข่ให้เริ่มเซ็ต"),
       body: ml(
-        "Heat a wok over medium-high heat and add 15 ml oil. Pour in the eggs and stir slowly for 30–45 seconds until softly set but still glossy. Transfer them out immediately.",
-        "炒鍋以中大火燒熱，加入 15 毫升油，倒入蛋液慢慢推 30–45 秒至剛凝固且仍有光澤，立即盛出。",
-        "中華鍋を中強火で熱して油15mlを入れる。卵を流し、つやを残してふんわり固まるまで30～45秒ゆっくり混ぜ、すぐ取り出す。",
-        "웍을 중강불로 달구고 기름 15ml를 넣는다. 달걀을 부어 윤기가 남은 채 부드럽게 굳을 때까지 30~45초 천천히 저어 즉시 덜어 둔다.",
-        "ตั้งกระทะไฟกลางค่อนแรง ใส่น้ำมัน 15 มล. เทไข่ลงไปคนช้า ๆ 30–45 วินาทีจนเริ่มเซ็ตแต่ยังเงา แล้วตักออกทันที"
+        "Heat a wok over medium-high heat and add 15 ml oil. Pour in the eggs and stir slowly for 30–45 seconds until just softly set but still glossy; they are not finished cooking yet. Transfer them out promptly for the final cook.",
+        "炒鍋以中大火燒熱，加入 15 毫升油，倒入蛋液慢慢推 30–45 秒至剛凝固、表面仍有光澤；此時尚未完成加熱，請先盛出，最後還要回鍋煮熟。",
+        "中華鍋を中強火で熱して油15mlを入れる。卵を流し、30〜45秒ゆっくり混ぜて柔らかく固め、つやを残す。この時点では加熱が終わっていないため、最後に再加熱するまで取り出しておく。",
+        "웍을 중강불로 달구고 기름 15ml를 넣는다. 달걀을 부어 30–45초 천천히 저어 부드럽게 굳히되 윤기를 남긴다. 아직 조리가 끝난 것이 아니므로 마지막에 다시 익힐 때까지 덜어 둔다.",
+        "ตั้งกระทะไฟกลางค่อนแรง ใส่น้ำมัน 15 มล. เทไข่ลงไปคนช้า ๆ 30–45 วินาทีจนเริ่มเซ็ตนุ่มและยังเงา ขั้นนี้ยังไม่สุกพร้อมเสิร์ฟ ตักพักไว้เพื่อกลับมาให้ความร้อนจนสุกในขั้นสุดท้าย"
       )
     },
     {
@@ -433,21 +433,21 @@ export const expandedInstructionsA = {
     {
       title: ml("Warm the eggs through", "回鍋加熱蛋塊", "卵を戻して火を通す", "달걀 다시 익히기", "ใส่ไข่กลับให้อุ่น"),
       body: ml(
-        "Return the egg curds and fold gently for 1 minute until hot throughout and the thickest curd reaches 74°C.",
-        "放回蛋塊輕輕翻拌 1 分鐘，直到整體熱透且最厚的蛋塊達 74°C。",
-        "卵を戻し、全体が熱くなり最も厚い部分が74℃になるまで1分やさしく混ぜる。",
-        "달걀을 다시 넣고 1분 부드럽게 섞어 전체가 뜨겁고 가장 두꺼운 덩어리가 74°C가 되게 한다.",
-        "ใส่ไข่กลับลงไปคลุกเบา ๆ 1 นาทีจนร้อนทั่วและก้อนที่หนาที่สุดถึง 74°C"
+        "Return the egg curds and fold gently for about 1–2 minutes until no liquid egg remains and the centre of the thickest curd reaches 71°C (160°F).",
+        "放回蛋塊輕輕翻拌約 1–2 分鐘，直到不再有液態蛋，且最厚蛋塊中心達 71°C（160°F）。",
+        "卵を戻し、約1〜2分やさしく混ぜる。液状の卵がなくなり、最も厚い卵の中心が71°C（160°F）に達するまで加熱する。",
+        "달걀을 다시 넣고 약 1–2분 부드럽게 섞는다. 액체 달걀이 남지 않고 가장 두꺼운 달걀 조각의 중심이 71°C (160°F)에 도달할 때까지 익힌다.",
+        "ใส่ไข่กลับลงไปคลุกเบา ๆ ประมาณ 1–2 นาทีจนไม่เหลือไข่เหลวและตรงกลางของก้อนไข่ที่หนาที่สุดถึง 71°C (160°F)"
       )
     },
     {
       title: ml("Serve immediately", "立即上桌", "すぐに盛る", "바로 내기", "เสิร์ฟทันที"),
       body: ml(
-        "Turn off the heat and serve immediately while the eggs remain tender and the tomato juices are still glossy.",
-        "關火後立即上桌，讓蛋塊保持柔嫩、番茄汁維持光亮。",
-        "火を止め、卵が柔らかくトマトの汁につやがあるうちにすぐ盛る。",
-        "불을 끄고 달걀이 부드럽고 토마토 즙이 윤기 있을 때 바로 낸다.",
-        "ปิดไฟและเสิร์ฟทันทีขณะที่ไข่ยังนุ่มและน้ำมะเขือเทศยังเงา"
+        "Turn off the heat and divide evenly between two plates; each serving represents about 250 g raw tomatoes and two large eggs. Serve immediately while the eggs remain tender and the tomato juices are still glossy.",
+        "關火後平均分到兩盤；每份相當於烹煮前約 250 公克番茄與 2 顆大雞蛋。趁蛋塊仍柔嫩、番茄汁仍光亮時立即上桌。",
+        "火を止め、2皿に均等に分ける。1人分は調理前のトマト約250gと大きな卵2個に相当する。卵が柔らかくトマトの汁につやがあるうちにすぐ盛る。",
+        "불을 끄고 두 접시에 똑같이 나눈다. 1인분은 조리 전 토마토 약 250g과 큰 달걀 2개에 해당한다. 달걀이 부드럽고 토마토 즙이 윤기 있을 때 바로 낸다.",
+        "ปิดไฟแล้วแบ่งเท่ากันใส่สองจาน แต่ละที่เทียบเท่ามะเขือเทศดิบประมาณ 250 กรัมและไข่ฟองใหญ่ 2 ฟอง เสิร์ฟทันทีขณะที่ไข่ยังนุ่มและน้ำมะเขือเทศยังเงา"
       )
     }
   ]
