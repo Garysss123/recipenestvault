@@ -19,7 +19,8 @@ const auditedIds = [
   "nigerian-jollof-rice", "tandoori-chicken", "marmitako", "banh-flan",
   "peruvian-ceviche", "nasi-goreng", "singapore-chilli-crab", "thieboudienne",
   "mohinga", "nepali-chicken-momo", "trinidad-doubles", "nasi-lemak",
-  "mole-poblano", "bunny-chow", "cuban-ropa-vieja", "maultaschen"
+  "mole-poblano", "bunny-chow", "cuban-ropa-vieja", "maultaschen",
+  "fesenjan", "ukrainian-borscht", "tanzanian-pilau", "spaghetti-carbonara"
 ];
 const auditedRecipes = new Map(auditedIds.map((id) => [id, recipes.find((recipe) => recipe.id === id)]));
 
@@ -831,6 +832,142 @@ test("maultaschen portion count and ground-meat safety endpoint agree across loc
   };
   for (const locale of localeOrder) assert.match(simmer.body[locale], safetyPatterns[locale], `${locale}: ground meat reaches 71°C / 160°F`);
   assert.ok(recipe.sources.some((source) => source.url === foodSafetySource), "FoodSafety.gov ground-meat guidance is credited");
+});
+
+test("fesenjan assigns saffron to rice and follows official poultry guidance in all locales", () => {
+  const recipe = auditedRecipes.get("fesenjan");
+  assert.ok(recipe, "fesenjan slug exists");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("fine salt"))?.amount, "10 g");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("saffron threads"))?.amount, "0.2 g");
+  assert.equal(recipe.cookMinutes, 100);
+  assert.equal(recipe.totalMinutes, 125);
+
+  const braise = recipeStep(recipe, "Braise gently until tender");
+  const finish = recipeStep(recipe, "Balance the sweet-sour sauce");
+  const walnuts = recipeStep(recipe, "Toast and grind the walnuts");
+  const rice = recipeStep(recipe, "Serve with Persian rice");
+  const timePatterns = {
+    en: /45–75 minutes/,
+    "zh-hant": /45–75 分鐘/,
+    ja: /45〜75分/,
+    ko: /45–75분/,
+    th: /45–75 นาที/
+  };
+  const safetyPatterns = {
+    en: /74°C \(165°F\)/,
+    "zh-hant": /74°C（165°F）/,
+    ja: /74°C（165°F）/,
+    ko: /74°C\(165°F\)/,
+    th: /74°C \(165°F\)/
+  };
+  const saltPatterns = {
+    en: /remaining 4 g salt/,
+    "zh-hant": /剩餘 4 公克鹽/,
+    ja: /残りの塩4g/,
+    ko: /남은 소금 4g/,
+    th: /เกลือที่เหลือ 4 กรัม/
+  };
+  const ricePatterns = {
+    en: /30 ml blooming water through the 600 g cooked basmati rice/,
+    "zh-hant": /30 毫升水拌入 600 公克熟印度香米/,
+    ja: /戻し湯30mlを炊いたバスマティライス600gに混ぜ/,
+    ko: /우린 물 30ml를 지은 바스마티쌀 600g에 섞/,
+    th: /น้ำแช่ 30 มล\.กับข้าวบาสมาตีสุก 600 กรัม/
+  };
+  const bloomPatterns = {
+    en: /crumble the threads into the listed 30 ml warm water.*bloom/,
+    "zh-hant": /花絲揉碎.*30 毫升溫水.*泡開/,
+    ja: /糸を砕いて.*ぬるま湯30ml.*戻します/,
+    ko: /실을 부숴.*따뜻한 물 30ml.*우립니다/,
+    th: /ขยี้เส้น.*น้ำอุ่น 30 มล\..*พักให้สีออก/
+  };
+  for (const locale of localeOrder) {
+    assert.match(braise.body[locale], timePatterns[locale], `${locale}: braise time is translated`);
+    assert.match(braise.body[locale], safetyPatterns[locale], `${locale}: official chicken endpoint is translated`);
+    assert.match(walnuts.body[locale], bloomPatterns[locale], `${locale}: optional saffron bloom is actionable`);
+    assert.match(finish.body[locale], saltPatterns[locale], `${locale}: sauce salt allocation is explicit`);
+    assert.match(rice.body[locale], ricePatterns[locale], `${locale}: optional saffron is assigned to rice`);
+  }
+  assert.ok(recipe.sources.some((source) => source.url === foodSafetySource), "FoodSafety.gov poultry guidance is credited");
+});
+
+test("Ukrainian borshch has timed stages, assigned oil and salt, and correct dish references", () => {
+  const recipe = auditedRecipes.get("ukrainian-borscht");
+  assert.ok(recipe, "ukrainian-borscht slug exists");
+  assert.equal(recipe.cookMinutes, 100);
+  assert.equal(recipe.totalMinutes, 135);
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("neutral oil"))?.amount, "30 ml");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("fine salt"))?.amount, "6 g");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "ground black pepper")?.amount, "1 g");
+  assert.ok(recipe.sources.some((source) => source.url === "https://www.theguardian.com/food/2020/sep/28/papushkas-borscht-by-olia-hercules"),
+    "a direct borshch recipe reference replaces the unrelated soup link");
+
+  const broth = recipeStep(recipe, "Make the pork broth");
+  const beet = recipeStep(recipe, "Sauté the beet and carrot");
+  const onion = recipeStep(recipe, "Soften the onion");
+  const vegetables = recipeStep(recipe, "Cook the potatoes and cabbage");
+  const finish = recipeStep(recipe, "Combine and simmer");
+  const timingPatterns = {
+    en: [/45–60 minutes/, /8–10 minutes/, /5–7 minutes/, /8–10 minutes[\s\S]*8–10 minutes/, /5–8 minutes/],
+    "zh-hant": [/45–60 分鐘/, /8–10 分鐘/, /5–7 分鐘/, /8–10 分鐘[\s\S]*8–10 分鐘/, /5–8 分鐘/],
+    ja: [/45〜60分/, /8〜10分/, /5〜7分/, /8〜10分[\s\S]*8〜10分/, /5〜8分/],
+    ko: [/45–60분/, /8–10분/, /5–7분/, /8–10분[\s\S]*8–10분/, /5–8분/],
+    th: [/45–60 นาที/, /8–10 นาที/, /5–7 นาที/, /8–10 นาที[\s\S]*8–10 นาที/, /5–8 นาที/]
+  };
+  for (const locale of localeOrder) {
+    [broth, beet, onion, vegetables, finish].forEach((step, index) =>
+      assert.match(step.body[locale], timingPatterns[locale][index], `${locale}: borshch stage ${index + 1} has a localized time`));
+  }
+  const allocations = {
+    en: [/15 ml oil/, /remaining 15 ml oil/, /4 g salt/, /up to 2 g salt and the black pepper/],
+    "zh-hant": [/15 毫升油/, /剩餘 15 毫升油/, /4 公克鹽/, /最多 2 公克鹽和黑胡椒/],
+    ja: [/油15ml/, /残りの油15ml/, /塩4g/, /塩（最大2g）と黒こしょう/],
+    ko: [/기름 15ml/, /남은 기름 15ml/, /소금 4g/, /남은 소금 최대 2g과 후추/],
+    th: [/น้ำมัน 15 มล\./, /น้ำมันที่เหลือ 15 มล\./, /เกลือ 4 กรัม/, /เกลือที่เหลือไม่เกิน 2 กรัมและพริกไทย/]
+  };
+  for (const locale of localeOrder) {
+    [beet, onion, broth, finish].forEach((step, index) =>
+      assert.match(step.body[locale], allocations[locale][index], `${locale}: oil/salt allocation ${index + 1}`));
+  }
+});
+
+test("Tanzanian pilau times the beef and rice and bounds stock use in all locales", () => {
+  const recipe = auditedRecipes.get("tanzanian-pilau");
+  assert.ok(recipe, "tanzanian-pilau slug exists");
+  assert.equal(recipe.cookMinutes, 90);
+  assert.equal(recipe.totalMinutes, 115);
+  const beef = recipeStep(recipe, "Brown and tenderize the beef");
+  const onions = recipeStep(recipe, "Brown the onions deeply");
+  const broth = recipeStep(recipe, "Coat rice and add broth");
+  const rice = recipeStep(recipe, "Simmer covered until the rice is done");
+  const patterns = {
+    en: [/25–35 minutes/, /15–20 minutes/, /remaining 650 ml[\s\S]*950 ml stock in total/, /20–25 minutes/],
+    "zh-hant": [/25–35 分鐘/, /15–20 分鐘/, /剩餘 650 毫升[\s\S]*總高湯量不超過 950 毫升/, /20–25 分鐘/],
+    ja: [/25〜35分/, /15〜20分/, /残りの温かいだし650ml[\s\S]*950mlを超えません/, /20〜25分/],
+    ko: [/25–35분/, /15–20분/, /남은 따뜻한 육수 650ml[\s\S]*950ml를 넘기지 않습니다/, /20–25분/],
+    th: [/25–35 นาที/, /15–20 นาที/, /สต็อกร้อนที่เหลือ 650 มล\.[\s\S]*ไม่เกิน 950 มล\./, /20–25 นาที/]
+  };
+  for (const locale of localeOrder) {
+    [beef, onions, broth, rice].forEach((step, index) =>
+      assert.match(step.body[locale], patterns[locale][index], `${locale}: pilau stage ${index + 1} has clear timing/quantity`));
+  }
+});
+
+test("carbonara egg ingredients and method follow FDA pasteurized-egg guidance in all locales", () => {
+  const recipe = auditedRecipes.get("spaghetti-carbonara");
+  assert.ok(recipe, "spaghetti-carbonara slug exists");
+  assert.ok(recipe.ingredients.some((row) => row.item.en === "large pasteurized egg yolks"));
+  assert.ok(recipe.ingredients.some((row) => row.item.en === "large pasteurized whole egg"));
+  assert.ok(recipe.sources.some((source) => source.url === eggSafetySource), "FDA egg safety guidance is credited");
+  const eggBase = recipeStep(recipe, "Mix the egg base");
+  const pasteurizedPatterns = {
+    en: /shell eggs sold as pasteurized.*pasteurized egg products/,
+    "zh-hant": /巴氏殺菌的帶殼蛋或巴氏殺菌蛋品/,
+    ja: /殺菌済み表示の殻付き卵、または殺菌済み卵製品/,
+    ko: /살균 표시가 있는 껍데기 달걀이나 살균 달걀 제품/,
+    th: /ไข่เปลือกที่ระบุว่าพาสเจอไรซ์หรือผลิตภัณฑ์ไข่พาสเจอไรซ์/
+  };
+  for (const locale of localeOrder) assert.match(eggBase.body[locale], pasteurizedPatterns[locale], `${locale}: pasteurized eggs are specified`);
 });
 
 test("audited recipe details, visible timing, ingredients, and Recipe JSON-LD agree in every locale", async () => {

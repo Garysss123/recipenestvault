@@ -63,7 +63,7 @@ export const otherWorldRecipeSources = {
     { title: 'Pierogi Ruskie — Polish Ministry of Agriculture and Rural Development', url: 'https://www.gov.pl/web/rolnictwo/pierogi-ruskie-z-chrzastawy' }
   ],
   'ukrainian-borscht': [
-    { title: 'Ukrainian Borscht — Associated Press', url: 'https://apnews.com/article/2d2d6ba1504ecd91dc98b3ff79455d9f' },
+    { title: "Papushka's borscht by Olia Hercules — The Guardian", url: 'https://www.theguardian.com/food/2020/sep/28/papushkas-borscht-by-olia-hercules' },
     { title: "Babushka Lyusya's Ukrainian Winter Borscht — Country Life", url: 'https://www.countrylife.co.uk/food-drink/tom-parker-bowles-says-strap-in-its-borscht-season' }
   ],
   'jamaican-jerk-chicken': [
