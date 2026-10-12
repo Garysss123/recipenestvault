@@ -52,12 +52,15 @@ export const americanRecipeSources = {
     'Emeril Lagasse — Chicken and Smoked Sausage Gumbo',
     'https://www.emerils.com/127540/chicken-and-smoked-sausage-gumbo'
   ),
-  jambalaya: sources(
-    'Food Network Kitchen — Chicken, Andouille and Shrimp Jambalaya',
-    'https://www.foodnetwork.com/recipes/food-network-kitchen/chicken-andouille-and-shrimp-jambalaya-17939930',
-    'Food Network — Jambalaya',
-    'https://www.foodnetwork.com/recipes/jambalaya-recipe2-1924012'
-  ),
+  jambalaya: [
+    ...sources(
+      'Food Network Kitchen — Chicken, Andouille and Shrimp Jambalaya',
+      'https://www.foodnetwork.com/recipes/food-network-kitchen/chicken-andouille-and-shrimp-jambalaya-17939930',
+      'Food Network — Jambalaya',
+      'https://www.foodnetwork.com/recipes/jambalaya-recipe2-1924012'
+    ),
+    { title: 'FoodSafety.gov — Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
+  ],
   'biscuits-and-gravy': sources(
     'Food Network — Biscuits and Gravy',
     'https://www.foodnetwork.com/recipes/biscuits-and-gravy-7240319',

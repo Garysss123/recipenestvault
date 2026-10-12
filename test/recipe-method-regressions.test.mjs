@@ -24,7 +24,8 @@ const auditedIds = [
   "mercimek-corbasi", "pierogi-ruskie", "cambodian-fish-amok", "lao-chicken-larb",
   "caponata", "baklava", "malva-pudding", "pancit-bihon",
   "feijoada", "imeretian-khachapuri", "tamales-de-pollo-en-salsa-verde", "huevos-rancheros",
-  "harira", "mujadara", "maafe", "bobotie"
+  "harira", "mujadara", "maafe", "bobotie",
+  "chicken-shawarma", "zaatar-manakish", "jambalaya", "thit-kho-trung"
 ];
 const auditedRecipes = new Map(auditedIds.map((id) => [id, recipes.find((recipe) => recipe.id === id)]));
 
@@ -1469,5 +1470,109 @@ test("bobotie allocates bread, butter, seasoning, and sides and checks casserole
     assert.match(mince.body[locale], patterns[locale][2], `${locale}: salt and pepper allocation`);
     assert.match(bake.body[locale], patterns[locale][3], `${locale}: oven bake and safe casserole endpoint`);
     assert.match(serve.body[locale], patterns[locale][4], `${locale}: exact sides and serving portions`);
+  }
+});
+
+
+test("fourteenth method audit checks four new IDs, all five locales, amounts, timing, and safety endpoints", () => {
+  assert.equal(auditedIds.length, 56, "deep-review coverage contains 56 distinct recipes");
+  assert.equal(new Set(auditedIds).size, 56, "coverage IDs are unique");
+  const chicken = auditedRecipes.get("chicken-shawarma");
+  const bread = auditedRecipes.get("zaatar-manakish");
+  const jambalaya = auditedRecipes.get("jambalaya");
+  const pork = auditedRecipes.get("thit-kho-trung");
+  for (const recipe of [chicken, bread, jambalaya, pork]) {
+    assert.ok(recipe, "each fourteenth-batch slug exists");
+    for (const locale of localeOrder) {
+      assert.ok(recipe.ingredients.every((row) => row.amount && row.item[locale]), `${recipe.id}/${locale}: localized ingredients exist`);
+      assert.ok(recipe.instructions.every((step) => step.title[locale] && step.body[locale]), `${recipe.id}/${locale}: localized steps exist`);
+    }
+    assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes, `${recipe.id}: total time adds up`);
+  }
+
+  assert.equal(chicken.servings, 6);
+  assert.deepEqual([chicken.prepMinutes, chicken.cookMinutes, chicken.totalMinutes], [45, 30, 75]);
+  assert.equal(chicken.ingredients.find((row) => row.item.en === "fine salt")?.amount, "8 g");
+  assert.equal(chicken.ingredients.find((row) => row.item.en === "black pepper")?.amount, "2 g");
+  assert.equal(chicken.ingredients.find((row) => row.item.en.startsWith("garlic sauce"))?.amount, "120 g");
+  assert.ok(chicken.sources.some((source) => source.url === foodSafetySource), "FoodSafety.gov poultry endpoint is credited");
+  const roast = recipeStep(chicken, "Roast until browned and safe");
+  const wrap = recipeStep(chicken, "Fill and fold the pita");
+  const chickenRoastPatterns = {
+    en: /230°C[\s\S]*22–28 minutes[\s\S]*12 minutes[\s\S]*74°C[\s\S]*3-minute intervals/,
+    "zh-hant": /230°C[\s\S]*22–28 分鐘[\s\S]*12 分鐘[\s\S]*74°C[\s\S]*3 分鐘/,
+    ja: /230°C[\s\S]*22〜28分[\s\S]*12分[\s\S]*74°C[\s\S]*3分/,
+    ko: /230°C[\s\S]*22–28분[\s\S]*12분[\s\S]*74°C[\s\S]*3분/,
+    th: /230°C[\s\S]*22–28 นาที[\s\S]*12 นาที[\s\S]*74°C[\s\S]*3 นาที/
+  };
+  for (const locale of localeOrder) {
+    assert.match(roast.body[locale], chickenRoastPatterns[locale], `${locale}: roast timing and 74°C endpoint`);
+    assert.match(wrap.body[locale], /20/, `${locale}: optional sauce has a measured per-wrap amount`);
+  }
+
+  assert.equal(bread.servings, 8);
+  assert.deepEqual([bread.prepMinutes, bread.cookMinutes, bread.totalMinutes], [150, 22, 172]);
+  const doughOil = bread.ingredients.find((row) => row.item.en.startsWith("olive oil, divided"));
+  const toppingOil = bread.ingredients.find((row) => row.item.en.startsWith("olive oil for the topping"));
+  const trayOil = bread.ingredients.find((row) => row.item.en.startsWith("extra oil to brush"));
+  assert.deepEqual([doughOil?.amount, toppingOil?.amount, trayOil?.amount], ["45 ml", "100 ml", "15 ml"]);
+  assert.equal(35 + 10 + 100 + 15, 160, "all listed olive oil is allocated");
+  const proof = recipeStep(bread, "Let the dough rise");
+  const topping = recipeStep(bread, "Mix the za’atar topping");
+  const bake = recipeStep(bread, "Spread the za’atar and bake");
+  const breadPatterns = {
+    en: [/60–90 minutes/, /80 g[\s\S]*100 ml/, /8–10 minutes[\s\S]*20 minutes/],
+    "zh-hant": [/60–90 分鐘/, /80 公克[\s\S]*100 毫升/, /8–10 分鐘[\s\S]*20 分鐘/],
+    ja: [/60〜90分/, /80g[\s\S]*100ml/, /8〜10分[\s\S]*20分/],
+    ko: [/60–90분/, /80g[\s\S]*100ml/, /8–10분[\s\S]*20분/],
+    th: [/60–90 นาที/, /80 กรัม[\s\S]*100 มล\./, /8–10 นาที[\s\S]*20 นาที/]
+  };
+  for (const locale of localeOrder) {
+    assert.match(proof.body[locale], breadPatterns[locale][0], `${locale}: first proof has a time range`);
+    assert.match(topping.body[locale], breadPatterns[locale][1], `${locale}: topping oil is measured`);
+    assert.match(bake.body[locale], breadPatterns[locale][2], `${locale}: batch bake timing is explicit`);
+  }
+
+  assert.equal(jambalaya.servings, 8);
+  assert.deepEqual([jambalaya.prepMinutes, jambalaya.cookMinutes, jambalaya.totalMinutes], [30, 65, 95]);
+  assert.ok(jambalaya.sources.some((source) => source.url === foodSafetySource), "FoodSafety.gov poultry endpoint is credited");
+  const chickenRice = recipeStep(jambalaya, "Cook the rice covered");
+  const shrimp = recipeStep(jambalaya, "Steam the shrimp on top");
+  const chickenTempPatterns = {
+    en: /18–20 minutes[\s\S]*chicken piece[\s\S]*74°C[\s\S]*3 minutes/,
+    "zh-hant": /18–20 分鐘[\s\S]*雞肉[\s\S]*74°C[\s\S]*3 分鐘/,
+    ja: /18〜20分[\s\S]*鶏肉[\s\S]*74°C[\s\S]*3分/,
+    ko: /18–20분[\s\S]*닭고기[\s\S]*74°C[\s\S]*3분/,
+    th: /18–20 นาที[\s\S]*ไก่[\s\S]*74°C[\s\S]*3 นาที/
+  };
+  const shrimpPatterns = {
+    en: /5–6 minutes[\s\S]*pearly white and opaque/,
+    "zh-hant": /5–6 分鐘[\s\S]*珍珠白且不透明/,
+    ja: /5〜6分[\s\S]*真珠のような白色で不透明/,
+    ko: /5–6분[\s\S]*진주빛 흰색으로 불투명/,
+    th: /5–6 นาที[\s\S]*สีขาวมุกและทึบแสง/
+  };
+  for (const locale of localeOrder) {
+    assert.match(chickenRice.body[locale], chickenTempPatterns[locale], `${locale}: chicken reaches its official endpoint before shrimp is added`);
+    assert.match(shrimp.body[locale], shrimpPatterns[locale], `${locale}: shrimp endpoint follows the official visual cue`);
+  }
+
+  assert.equal(pork.servings, 6);
+  assert.deepEqual([pork.prepMinutes, pork.cookMinutes, pork.totalMinutes], [35, 110, 145]);
+  assert.equal(pork.ingredients.find((row) => row.item.en.startsWith("cooked rice"))?.amount, "900 g");
+  assert.equal(pork.ingredients.find((row) => row.item.en.startsWith("fish sauce"))?.amount, "50 ml");
+  assert.ok(pork.sources.some((source) => source.url === foodSafetySource), "FoodSafety.gov pork endpoint is credited");
+  const porkDoneness = recipeStep(pork, "Let the eggs absorb the broth");
+  const rest = recipeStep(pork, "Rest and serve");
+  const porkPatterns = {
+    en: /63°C \/ 145°F[\s\S]*10-minute intervals[\s\S]*3-minute rest/,
+    "zh-hant": /63°C／145°F[\s\S]*10 分鐘[\s\S]*3 分鐘靜置/,
+    ja: /63°C／145°F[\s\S]*10分[\s\S]*3分/,
+    ko: /63°C \/ 145°F[\s\S]*10분[\s\S]*3분/,
+    th: /63°C \/ 145°F[\s\S]*10 นาที[\s\S]*3 นาที/
+  };
+  for (const locale of localeOrder) {
+    assert.match(porkDoneness.body[locale], porkPatterns[locale], `${locale}: pork temperature and rest endpoint`);
+    assert.match(rest.body[locale], /5/, `${locale}: the final five-minute rest is stated`);
   }
 });
