@@ -47,8 +47,8 @@ test("thirty-first batch retains 353 recipes and exclusions and adds four new ID
   const list = source.match(/const auditedIds = \[([\s\S]*?)\n\];/)?.[1];
   assert.ok(list, "shared detail-route list exists");
   const covered = [...list.matchAll(/"([a-z0-9-]+)"/g)].map((match) => match[1]);
-  assert.equal(covered.length, 212);
-  assert.equal(new Set(covered).size, 212);
+  assert.equal(covered.length, 216);
+  assert.equal(new Set(covered).size, 216);
   assert.ok(ids.every((id) => covered.includes(id)));
   for (const id of ids) {
     const recipe = get(id);
