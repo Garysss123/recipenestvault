@@ -18,7 +18,8 @@ export const otherWorldRecipeSources = {
   ],
   'nasi-lemak': [
     { title: 'Nasi Lemak (Coconut Rice) — SBS Food', url: 'https://www.sbs.com.au/food/recipe/nasi-lemak-coconut-rice/99axfm1xg' },
-    { title: "Poh's Nasi Lemak — SBS Food", url: 'https://www.sbs.com.au/food/recipe/pohs-nasi-lemak/oqzmlv0wb' }
+    { title: "Poh's Nasi Lemak — SBS Food", url: 'https://www.sbs.com.au/food/recipe/pohs-nasi-lemak/oqzmlv0wb' },
+    { title: 'FDA — What You Need to Know About Egg Safety', url: 'https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety' }
   ],
   'singapore-chilli-crab': [
     { title: 'Singapore Chilli Crab — SBS Food', url: 'https://www.sbs.com.au/food/recipe/singapore-chilli-crab/yr891ksxt' },
@@ -36,11 +37,14 @@ export const otherWorldRecipeSources = {
   ],
   mohinga: [
     { title: 'Mohinga Recipe — SBS Food', url: 'https://www.sbs.com.au/food/recipe/mohinga/hbuscxazn' },
-    { title: 'Traditional Myanmar Cuisine: Mohinga — Myanmar Digital News', url: 'https://mdn.gov.mm/my/node/203371' }
+    { title: 'Traditional Myanmar Cuisine: Mohinga — Myanmar Digital News', url: 'https://mdn.gov.mm/my/node/203371' },
+    { title: 'FoodSafety.gov — Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
   ],
   'nepali-chicken-momo': [
     { title: 'Nepali Momo — Food Network', url: 'https://www.foodnetwork.com/recipes/nepali-momo-4635126' },
-    { title: 'Traditional & Contemporary Nepali Home-Cooking — Foods of Nepal', url: 'https://foodsofnepal.com/wp-content/uploads/2022/12/Home-cookery-Foods-of-Nepal-e-book.pdf' }
+    { title: 'Traditional & Contemporary Nepali Home-Cooking — Foods of Nepal', url: 'https://foodsofnepal.com/wp-content/uploads/2022/12/Home-cookery-Foods-of-Nepal-e-book.pdf' },
+    { title: 'Momo Achar (Tomato Sesame Chutney for Momos) — Nepalese Taste', url: 'https://nepalesetaste.com/recipes/momo-achar/' },
+    { title: 'FoodSafety.gov — Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
   ],
   'sri-lankan-egg-hoppers': [
     { title: 'Sri Lankan Egg Hoppers — Australian Eggs', url: 'https://www.australianeggs.org.au/recipes-and-cooking/egg-hoppers' },

@@ -9,6 +9,7 @@ import { recipes } from "../src/recipes.mjs";
 const dist = fileURLToPath(new URL("../dist/", import.meta.url));
 const foodSafetySource = "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures";
 const seafoodSafetySource = "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely";
+const eggSafetySource = "https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety";
 const cookedRiceSafetySource = "https://www.gov.uk/government/publications/home-food-fact-checker/home-food-fact-checker";
 const auditedIds = [
   "moussaka", "paella-valenciana", "poutine", "coq-au-vin",
@@ -16,7 +17,8 @@ const auditedIds = [
   "bibimbap", "bulgogi", "falafel", "shakshuka",
   "tonkatsu", "cornish-pasty", "carnitas", "indonesian-beef-rendang",
   "nigerian-jollof-rice", "tandoori-chicken", "marmitako", "banh-flan",
-  "peruvian-ceviche", "nasi-goreng", "singapore-chilli-crab", "thieboudienne"
+  "peruvian-ceviche", "nasi-goreng", "singapore-chilli-crab", "thieboudienne",
+  "mohinga", "nepali-chicken-momo", "trinidad-doubles", "nasi-lemak"
 ];
 const auditedRecipes = new Map(auditedIds.map((id) => [id, recipes.find((recipe) => recipe.id === id)]));
 
@@ -614,6 +616,113 @@ test("thieboudienne verifies each fish steak at the official seafood temperature
       `${locale}: each steak is checked with a food thermometer`);
   }
   assert.ok(recipe.sources.some((source) => source.url === foodSafetySource), "official seafood temperature source is credited");
+});
+
+test("mohinga allocates its aromatic-base oil amount in all five locales", () => {
+  const recipe = auditedRecipes.get("mohinga");
+  assert.ok(recipe, "mohinga slug exists");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "neutral oil")?.amount, "15 ml");
+
+  const allocations = {
+    en: /all 15 ml neutral oil/i,
+    "zh-hant": /全部 15 毫升中性油/,
+    ja: /中性油15mlをすべて/,
+    ko: /중성 식용유 15ml를 모두/,
+    th: /น้ำมันรสกลางทั้งหมด 15 มล./
+  };
+  for (const locale of localeOrder) {
+    assert.match(recipe.instructions[2].body[locale], allocations[locale], `${locale}: all listed oil is allocated`);
+  }
+  assert.ok(recipe.sources.some((source) => source.url === foodSafetySource),
+    "official fish doneness guidance supports the existing flaking endpoint");
+});
+
+test("momo filling and achar allocate every garlic, sesame, chili, and salt amount", () => {
+  const recipe = auditedRecipes.get("nepali-chicken-momo");
+  assert.ok(recipe, "nepali-chicken-momo slug exists");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("garlic, minced"))?.amount, "20 g");
+  assert.ok(recipe.ingredients.some((row) => row.item.en === "fresh red chili, minced for achar"));
+  assert.ok(recipe.ingredients.some((row) => row.item.en === "fine salt for achar"));
+  const filling = recipeStep(recipe, "Season the filling");
+  const achar = recipeStep(recipe, "Make the tomato achar");
+  const fillingPatterns = {
+    en: /15 g of the garlic[\s\S]*5 g salt/,
+    "zh-hant": /15 公克蒜末[\s\S]*5 公克鹽/,
+    ja: /にんにく15g[\s\S]*塩5g/,
+    ko: /마늘 15g[\s\S]*소금 5g/,
+    th: /กระเทียม 15 กรัม[\s\S]*เกลือ 5 กรัม/
+  };
+  const acharPatterns = {
+    en: /all 15 g toasted sesame[\s\S]*reserved 5 g garlic[\s\S]*all 3 g fresh red chili[\s\S]*3 g fine salt/,
+    "zh-hant": /全部 15 公克烘香芝麻[\s\S]*保留的 5 公克大蒜[\s\S]*全部 3 公克新鮮紅辣椒[\s\S]*3 公克細鹽/,
+    ja: /炒りごま15gすべて[\s\S]*にんにく5g[\s\S]*赤唐辛子3gすべて[\s\S]*細塩3g/,
+    ko: /참깨 15g 전량[\s\S]*마늘 5g[\s\S]*홍고추 3g 전량[\s\S]*소금 3g/,
+    th: /งาคั่วทั้งหมด 15 กรัม[\s\S]*กระเทียมที่แบ่งไว้ 5 กรัม[\s\S]*พริกแดงสดทั้งหมด 3 กรัม[\s\S]*เกลือละเอียด 3 กรัม/
+  };
+  for (const locale of localeOrder) {
+    assert.match(filling.body[locale], fillingPatterns[locale], `${locale}: filling amounts are explicit`);
+    assert.match(achar.body[locale], acharPatterns[locale], `${locale}: achar amounts are explicit`);
+  }
+  assert.ok(recipe.sources.some((source) => source.url === "https://nepalesetaste.com/recipes/momo-achar/"),
+    "achar ingredient reference is credited");
+  assert.ok(recipe.sources.some((source) => source.url === foodSafetySource),
+    "official poultry endpoint is credited");
+});
+
+test("Trinidad doubles separates dough and curry seasoning from the frying oil in all locales", () => {
+  const recipe = auditedRecipes.get("trinidad-doubles");
+  assert.ok(recipe, "trinidad-doubles slug exists");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("fine salt, divided"))?.amount, "6 g");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "neutral oil for channa")?.amount, "15 ml");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "neutral oil for shallow frying")?.amount, "450 ml");
+
+  const dough = recipeStep(recipe, "Mix and rest the bara dough");
+  const channa = recipeStep(recipe, "Season the channa");
+  const seasoning = recipeStep(recipe, "Finish the chickpea curry");
+  const doughPatterns = {
+    en: /3 g fine salt/,
+    "zh-hant": /3 公克細鹽/,
+    ja: /細塩3g/,
+    ko: /고운 소금 3g/,
+    th: /เกลือละเอียด 3 กรัม/
+  };
+  const oilPatterns = {
+    en: /all 15 ml neutral oil/,
+    "zh-hant": /全部 15 毫升中性油/,
+    ja: /中性油15mlをすべて/,
+    ko: /중성 식용유 15ml를 모두/,
+    th: /น้ำมันรสกลางทั้งหมด 15 มล./
+  };
+  const saltPatterns = {
+    en: /up to the remaining 3 g fine salt/,
+    "zh-hant": /最多剩餘 3 公克細鹽/,
+    ja: /残りの細塩を最大3g/,
+    ko: /남은 고운 소금을 최대 3g/,
+    th: /เกลือละเอียดส่วนที่เหลือไม่เกิน 3 กรัม/
+  };
+  for (const locale of localeOrder) {
+    assert.match(dough.body[locale], doughPatterns[locale], `${locale}: dough salt is measured`);
+    assert.match(channa.body[locale], oilPatterns[locale], `${locale}: channa oil is measured`);
+    assert.match(seasoning.body[locale], saltPatterns[locale], `${locale}: remaining salt is allocated`);
+  }
+  for (const locale of localeOrder) assert.match(recipeStep(recipe, "Fry the bara").body[locale], /450/,
+    `${locale}: listed frying oil is allocated in the frying method`);
+});
+
+test("nasi lemak egg endpoint follows FDA guidance in all locales", () => {
+  const recipe = auditedRecipes.get("nasi-lemak");
+  assert.ok(recipe, "nasi-lemak slug exists");
+  const eggs = recipeStep(recipe, "Cook the eggs and cucumber");
+  const firmPatterns = {
+    en: /both the whites and yolks are firm/,
+    "zh-hant": /蛋白與蛋黃都凝固/,
+    ja: /白身と黄身の両方が固まる/,
+    ko: /흰자와 노른자가 모두 단단해질/,
+    th: /ทั้งไข่ขาวและไข่แดงแข็งตัว/
+  };
+  for (const locale of localeOrder) assert.match(eggs.body[locale], firmPatterns[locale], `${locale}: egg endpoint is explicit`);
+  assert.ok(eggs.body.en.includes("pasteurized eggs"), "undercooked preference directs to pasteurized eggs");
+  assert.ok(recipe.sources.some((source) => source.url === eggSafetySource), "FDA egg safety guidance is credited");
 });
 
 test("audited recipe details, visible timing, ingredients, and Recipe JSON-LD agree in every locale", async () => {
