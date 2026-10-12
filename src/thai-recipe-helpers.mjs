@@ -96,7 +96,7 @@ const recipeSources = {
   "gai-yang": [["Hot Thai Kitchen — Thai BBQ Chicken", "https://hot-thai-kitchen.com/ultimate-bbq-chicken/"], ["Thailand Foundation — Thai New Year Feast", "https://thailandfoundation.or.th/thai-recipes-for-your-new-year-feast/"], ["Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures", "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"]],
   "tod-mun-pla": [["Hot Thai Kitchen — Thai Fish Cakes", "https://hot-thai-kitchen.com/fish-cakes/"], ["ThaiTable — Tod Mun", "https://www.thaitable.com/recipes/tod-mun"]],
   "boat-noodles": [["Hot Thai Kitchen — Boat Noodles", "https://hot-thai-kitchen.com/boat-noodles/"], thaiTable],
-  "pineapple-fried-rice": [["Hot Thai Kitchen — Pineapple Fried Rice", "https://hot-thai-kitchen.com/pineapple-fried-rice/"], thaiTable]
+  "pineapple-fried-rice": [["Hot Thai Kitchen — Pineapple Fried Rice", "https://hot-thai-kitchen.com/pineapple-fried-rice/"], thaiTable, ["Official food-safety guidance — UK Food Standards Agency: Home food fact checker", "https://www.gov.uk/government/publications/home-food-fact-checker/home-food-fact-checker"], ["Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures", "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"]]
 };
 
 export function makeThaiRecipe(recipe) {
