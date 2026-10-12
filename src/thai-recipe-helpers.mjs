@@ -77,7 +77,7 @@ const foundation = ["Thailand Foundation — Secrets to Thai Cooking", "https://
 const thaiTable = ["ThaiTable — Authentic Thai recipes", "https://www.thaitable.com/recipes"];
 const recipeSources = {
   "pad-thai": [["Hot Thai Kitchen — Pad Thai", "https://hot-thai-kitchen.com/best-pad-thai/"], ["Thailand Foundation — Pad Thai", "https://thailandfoundation.or.th/th/853/"]],
-  "tom-yum-goong": [["Hot Thai Kitchen — Tom Yum Goong", "https://hot-thai-kitchen.com/tom-yum-goong/"], ["Thailand Foundation — Tom Yum Kung", "https://thailandfoundation.or.th/tom-yum-kung-the-symbol-of-thai-culinary-spirit/"]],
+  "tom-yum-goong": [["Hot Thai Kitchen — Tom Yum Goong", "https://hot-thai-kitchen.com/tom-yum-goong/"], ["Thailand Foundation — Tom Yum Kung", "https://thailandfoundation.or.th/tom-yum-kung-the-symbol-of-thai-culinary-spirit/"], ["Official food-safety guidance — FDA: Selecting and Serving Fresh and Frozen Seafood Safely", "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely"], ["Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures", "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"]],
   "green-curry-chicken": [["Hot Thai Kitchen — Green Curry", "https://hot-thai-kitchen.com/green-curry-new-2/"], foundation],
   "massaman-curry": [["Hot Thai Kitchen — Beef Massaman Curry", "https://hot-thai-kitchen.com/beef-massaman-curry/"], foundation],
   "pad-kra-pao": [["Hot Thai Kitchen — Pad Kra Pao", "https://hot-thai-kitchen.com/pad-kra-pao-anything/"], ["Eating Thai Food — Pad Kra Pao", "https://www.eatingthaifood.com/thai-basil-chicken-recipe-pad-kra-pao-gai/"]],
