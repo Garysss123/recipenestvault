@@ -15,7 +15,7 @@ export const americanRecipeSources = {
     'https://www.foodnetwork.com/recipes/buffalo-chicken-wings-recipe2-1927053',
     'Food Network Kitchen — How to Make Buffalo-Style Chicken Wings',
     'https://www.foodnetwork.com/recipes/food-network-kitchen/buffalo-style-chicken-wings-recipe/how-to-make-buffalo-style-chicken-wings'
-  ),
+  ).concat({ title: 'Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }),
   'southern-fried-chicken': sources(
     'Food Network — Southern Fried Chicken',
     'https://www.foodnetwork.com/recipes/southern-fried-chicken-recipe0-1922088',
@@ -75,7 +75,7 @@ export const americanRecipeSources = {
     'https://www.foodnetwork.com/recipes/food-network-kitchen/classic-meatloaf-5484735',
     'Food Network — Classic Meatloaf',
     'https://www.foodnetwork.com/recipes/classic-meatloaf-1926128'
-  ),
+  ).concat({ title: 'Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }),
   'skillet-cornbread': sources(
     'King Arthur Baking — Skillet Cornbread',
     'https://www.kingarthurbaking.com/recipes/skillet-cornbread-recipe',

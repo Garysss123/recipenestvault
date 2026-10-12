@@ -21,7 +21,7 @@ export const britishRecipeSources = {
     'https://www.greatbritishchefs.com/recipes/roast-beef-silverside-recipe',
     'Great British Chefs — Yorkshire pudding',
     'https://www.greatbritishchefs.com/recipes/yorkshire-pudding-recipe'
-  ),
+  ).concat({ title: 'Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }),
   'shepherds-pie': sources(
     'Great British Chefs — Shepherd’s pie',
     'https://www.greatbritishchefs.com/recipes/shepherds-pie-recipe',

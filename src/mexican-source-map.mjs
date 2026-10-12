@@ -62,7 +62,7 @@ export const mexicanRecipeSources = {
     'https://www.foodnetwork.com/recipes/marcela-valladolid/veracruz-style-tilapia-pescado-a-la-veracruzana-recipe-1921676',
     'Directo al Paladar México — Pescado a la Veracruzana',
     'https://www.directoalpaladar.com.mx/recetas/pescado-a-la-veracruzana-receta'
-  ),
+  ).concat({ title: 'Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }),
   'sopa-de-tortilla': sources(
     'Pati Jinich — Tortilla Soup',
     'https://patijinich.com/tortilla-soup/',
