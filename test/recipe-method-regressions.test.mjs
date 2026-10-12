@@ -20,7 +20,8 @@ const auditedIds = [
   "peruvian-ceviche", "nasi-goreng", "singapore-chilli-crab", "thieboudienne",
   "mohinga", "nepali-chicken-momo", "trinidad-doubles", "nasi-lemak",
   "mole-poblano", "bunny-chow", "cuban-ropa-vieja", "maultaschen",
-  "fesenjan", "ukrainian-borscht", "tanzanian-pilau", "spaghetti-carbonara"
+  "fesenjan", "ukrainian-borscht", "tanzanian-pilau", "spaghetti-carbonara",
+  "mercimek-corbasi", "pierogi-ruskie", "cambodian-fish-amok", "lao-chicken-larb"
 ];
 const auditedRecipes = new Map(auditedIds.map((id) => [id, recipes.find((recipe) => recipe.id === id)]));
 
@@ -968,6 +969,102 @@ test("carbonara egg ingredients and method follow FDA pasteurized-egg guidance i
     th: /ไข่เปลือกที่ระบุว่าพาสเจอไรซ์หรือผลิตภัณฑ์ไข่พาสเจอไรซ์/
   };
   for (const locale of localeOrder) assert.match(eggBase.body[locale], pasteurizedPatterns[locale], `${locale}: pasteurized eggs are specified`);
+});
+
+test("Turkish lentil soup assigns its oil and seasonings and gives useful stage times", () => {
+  const recipe = auditedRecipes.get("mercimek-corbasi");
+  assert.ok(recipe, "mercimek-corbasi slug exists");
+  assert.equal(recipe.cookMinutes, 35);
+  assert.equal(recipe.totalMinutes, 50);
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("olive oil"))?.amount, "45 ml");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("fine salt"))?.amount, "8 g");
+  assert.equal(recipe.ingredients.find((row) => row.item.en === "ground black pepper")?.amount, "1 g");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("ground Aleppo pepper"))?.amount, "2 g");
+
+  const oil = recipeStep(recipe, "Soften the aromatics");
+  const paste = recipeStep(recipe, "Toast tomato paste and spices");
+  const simmer = recipeStep(recipe, "Simmer the lentils and broth");
+  const finish = recipeStep(recipe, "Make paprika butter and serve");
+  const patterns = {
+    en: [/all 45 ml olive oil/, /1 minute/, /4–5 minutes[\s\S]*15–20 minutes/, /all 40 g butter[\s\S]*2 g Aleppo pepper[\s\S]*30–45 seconds[\s\S]*remaining 2 g salt[\s\S]*1 g black pepper/],
+    "zh-hant": [/全部 45 毫升橄欖油/, /1 分鐘/, /4–5 分鐘[\s\S]*15–20 分鐘/, /全部 40 公克奶油[\s\S]*2 公克 Aleppo 辣椒粉[\s\S]*30–45 秒[\s\S]*2 公克鹽[\s\S]*1 公克黑胡椒/],
+    ja: [/オリーブ油45ml全量/, /1分/, /4〜5分[\s\S]*15〜20分/, /バター40g全量[\s\S]*アレッポペッパー2g[\s\S]*30〜45秒[\s\S]*塩を最大2g[\s\S]*黒こしょう1g/],
+    ko: [/올리브오일 45ml 전량/, /1분/, /4–5분[\s\S]*15–20분/, /버터 40g 전량[\s\S]*알레포 고추 2g[\s\S]*30–45초[\s\S]*최대 2g[\s\S]*1g 전량/],
+    th: [/น้ำมันมะกอกทั้งหมด 45 มล\./, /1 นาที/, /4–5 นาที[\s\S]*15–20 นาที/, /เนยทั้งหมด 40 กรัม[\s\S]*พริกอเลปโป 2 กรัม[\s\S]*30–45 วินาที[\s\S]*ไม่เกิน 2 กรัม[\s\S]*1 กรัม/]
+  };
+  for (const locale of localeOrder) {
+    [oil, paste, simmer, finish].forEach((step, index) => assert.match(step.body[locale], patterns[locale][index], `${locale}: lentil soup stage ${index + 1}`));
+    assert.doesNotMatch(recipe.instructions.map((step) => step.body[locale]).join(" "), /\d+\s*°\s*[CF]/, `${locale}: no unnecessary temperature was added`);
+  }
+});
+
+test("pierogi method allocates ingredients, gives a six-serving count, and times the work", () => {
+  const recipe = auditedRecipes.get("pierogi-ruskie");
+  assert.ok(recipe, "pierogi-ruskie slug exists");
+  assert.equal(recipe.prepMinutes, 70);
+  assert.equal(recipe.cookMinutes, 45);
+  assert.equal(recipe.totalMinutes, 115);
+  assert.equal(recipe.servings, 6);
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("salt, divided"))?.amount, "8 g");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("sour cream"))?.amount, "120 g");
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("water for boiling"))?.amount, "3 L");
+  assert.ok(recipe.sources.some((source) => source.url === "https://www.bbcgoodfood.com/recipes/pierogi-ruskie"));
+  assert.ok(recipe.sources.some((source) => source.url === "https://www.gov.pl/web/rolnictwo/pierogi-ruskie-z-chrzastawy"));
+
+  const potatoes = recipeStep(recipe, "Cook the potatoes");
+  const onion = recipeStep(recipe, "Brown the onion");
+  const dough = recipeStep(recipe, "Make the filling and dough");
+  const shape = recipeStep(recipe, "Roll and cut the wrappers");
+  const fill = recipeStep(recipe, "Fill and seal");
+  const boil = recipeStep(recipe, "Boil gently until they float");
+  const timing = {
+    en: [/15–20 minutes/, /8–10 minutes/, /5–6 minutes[\s\S]*20–30 minutes/, /48 rounds/, /22 g[\s\S]*48 pierogi[\s\S]*8 per serving/, /12 pierogi per batch[\s\S]*4–6 minutes/],
+    "zh-hant": [/15–20 分鐘/, /8–10 分鐘/, /5–6 分鐘[\s\S]*20–30 分鐘/, /48 片/, /22 公克[\s\S]*48 個 pierogi[\s\S]*每份 8 個/, /每批煮 12 個 pierogi 共 4–6 分鐘/],
+    ja: [/15〜20分/, /8〜10分/, /5〜6分[\s\S]*20〜30分/, /48枚/, /約22g[\s\S]*48個[\s\S]*1人8個/, /12個ずつ、4〜6分/],
+    ko: [/15–20분/, /8–10분/, /5–6분[\s\S]*20–30분/, /48장/, /약 22g[\s\S]*총 48개[\s\S]*1인당 8개/, /12개씩 4–6분/],
+    th: [/15–20 นาที/, /8–10 นาที/, /5–6 นาที[\s\S]*20–30 นาที/, /48 แผ่น/, /ประมาณ 22 กรัม[\s\S]*48 ชิ้น[\s\S]*8 ชิ้น/, /ครั้งละ 12 ชิ้นนาน 4–6 นาที/]
+  };
+  for (const locale of localeOrder) {
+    [potatoes, onion, dough, shape, fill, boil].forEach((step, index) => assert.match(step.body[locale], timing[locale][index], `${locale}: pierogi step ${index + 1}`));
+    assert.doesNotMatch(recipe.instructions.map((step) => step.body[locale]).join(" "), /\d+\s*°\s*[CF]/, `${locale}: no unnecessary temperature was added`);
+  }
+});
+
+test("fish amok gives a cup-size timing guide and credits the official fish endpoint", () => {
+  const recipe = auditedRecipes.get("cambodian-fish-amok");
+  assert.ok(recipe, "cambodian-fish-amok slug exists");
+  assert.ok(recipe.sources.some((source) => source.url === foodSafetySource), "FoodSafety.gov fish guidance is credited");
+  const steam = recipeStep(recipe, "Steam until set");
+  const timingAndSafety = {
+    en: /15–18 minutes[\s\S]*egg custard must reach 71°C[\s\S]*fish piece must reach at least 63°C/,
+    "zh-hant": /15–18 分鐘[\s\S]*蛋奶液中心必須達 71°C[\s\S]*最厚魚塊至少達 63°C/,
+    ja: /15〜18分[\s\S]*卵液の中心が71°C[\s\S]*最も厚い魚が少なくとも63°C/,
+    ko: /15–18분[\s\S]*달걀 커스터드 중심이 71°C[\s\S]*가장 두꺼운 생선이 최소 63°C/,
+    th: /15–18 นาที[\s\S]*ใจกลางคัสตาร์ดไข่ต้องถึง 71°C[\s\S]*ชิ้นปลาที่หนาที่สุดต้องถึงอย่างน้อย 63°C/
+  };
+  for (const locale of localeOrder) assert.match(steam.body[locale], timingAndSafety[locale], `${locale}: fish amok timing and existing safe endpoint`);
+});
+
+test("Lao chicken larb times the rice and chicken, allocates its accompaniments, and credits poultry safety", () => {
+  const recipe = auditedRecipes.get("lao-chicken-larb");
+  assert.ok(recipe, "lao-chicken-larb slug exists");
+  assert.equal(recipe.cookMinutes, 25);
+  assert.equal(recipe.totalMinutes, 45);
+  assert.equal(recipe.ingredients.find((row) => row.item.en.startsWith("cooked sticky rice"))?.amount, "400 g");
+  assert.ok(recipe.sources.some((source) => source.url === foodSafetySource), "FoodSafety.gov poultry guidance is credited");
+  const rice = recipeStep(recipe, "Toast the rice");
+  const chicken = recipeStep(recipe, "Cook the chicken");
+  const season = recipeStep(recipe, "Season while warm");
+  const herbs = recipeStep(recipe, "Fold in the herbs");
+  const serve = recipeStep(recipe, "Balance and plate");
+  const patterns = {
+    en: [/all 30 g glutinous rice[\s\S]*10–15 minutes/, /all 30 ml neutral oil[\s\S]*all 600 g ground chicken[\s\S]*7–10 minutes[\s\S]*74°C/, /all 45 ml fish sauce[\s\S]*60 ml lime juice[\s\S]*5 g chilli flakes/, /all 120 g red onion[\s\S]*30 g spring onion[\s\S]*30 g mint[\s\S]*25 g cilantro/, /all 150 g lettuce leaves and cucumber[\s\S]*all 400 g cooked sticky rice/],
+    "zh-hant": [/全部 30 公克糯米 10–15 分鐘/, /全部 30 毫升中性油[\s\S]*全部 600 公克雞絞肉[\s\S]*7–10 分鐘[\s\S]*74°C/, /全部 45 毫升魚露[\s\S]*60 毫升萊姆汁[\s\S]*5 公克辣椒片/, /全部 120 公克紅洋蔥[\s\S]*30 公克青蔥[\s\S]*30 公克薄荷[\s\S]*25 公克香菜/, /全部 150 公克生菜葉與小黃瓜[\s\S]*400 公克糯米/],
+    ja: [/もち米30g全量[\s\S]*10〜15分/, /中性油30ml全量[\s\S]*鶏ひき肉600g全量[\s\S]*7〜10分[\s\S]*74°C/, /ナンプラー45ml全量[\s\S]*ライム汁60ml全量[\s\S]*5g全量/, /赤玉ねぎ120g全量[\s\S]*青ねぎ30g全量[\s\S]*ミント30g全量[\s\S]*パクチー25g全量/, /レタスときゅうり150g全量[\s\S]*もち米400g全量/],
+    ko: [/찹쌀 30g 전량[\s\S]*10–15분/, /중성유 30ml 전량[\s\S]*다진 닭고기 600g 전량[\s\S]*7–10분[\s\S]*74°C/, /피시소스 45ml 전량[\s\S]*라임즙 60ml 전량[\s\S]*고춧가루 5g 전량/, /적양파 120g[\s\S]*대파 30g[\s\S]*민트 30g[\s\S]*고수 25g/, /상추와 오이 150g 전량[\s\S]*찹쌀밥 400g 전량/],
+    th: [/ข้าวเหนียวแห้งทั้งหมด 30 กรัม[\s\S]*10–15 นาที/, /น้ำมันรสกลางทั้งหมด 30 มล\.[\s\S]*ไก่บดทั้งหมด 600 กรัม[\s\S]*7–10 นาที[\s\S]*74°C/, /น้ำปลาทั้งหมด 45 มล\.[\s\S]*น้ำมะนาวทั้งหมด 60 มล\.[\s\S]*พริกป่นทั้งหมด 5 กรัม/, /หอมแดงใหญ่ทั้งหมด 120 กรัม[\s\S]*ต้นหอม 30 กรัม[\s\S]*สะระแหน่ 30 กรัม[\s\S]*ผักชี 25 กรัม/, /ใบผักกาดและแตงกวาทั้งหมด 150 กรัม[\s\S]*ข้าวเหนียวนึ่งสุกทั้งหมด 400 กรัม/]
+  };
+  for (const locale of localeOrder) [rice, chicken, season, herbs, serve].forEach((step, index) => assert.match(step.body[locale], patterns[locale][index], `${locale}: larb step ${index + 1}`));
 });
 
 test("audited recipe details, visible timing, ingredients, and Recipe JSON-LD agree in every locale", async () => {

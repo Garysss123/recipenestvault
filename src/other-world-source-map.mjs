@@ -29,11 +29,13 @@ export const otherWorldRecipeSources = {
   ],
   'cambodian-fish-amok': [
     { title: 'Fish Amok Recipe — Royal Embassy of Cambodia in London', url: 'https://www.cambodiaembassyuk.org/fish-amok-recipe/' },
-    { title: 'Cambodian Fish Amok — Chef Nak', url: 'https://www.chefnak.com/cambodian-fish-amok' }
+    { title: 'Cambodian Fish Amok — Chef Nak', url: 'https://www.chefnak.com/cambodian-fish-amok' },
+    { title: 'FoodSafety.gov — Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
   ],
   'lao-chicken-larb': [
     { title: 'Lao Chicken Larb — SBS Food', url: 'https://www.sbs.com.au/food/the-cook-up-with-adam-liaw/recipe/lao-chicken-larb/ph9p4bqen' },
-    { title: 'Lao Chicken Larb — Australian Centre for International Agricultural Research', url: 'https://www.aciar.gov.au/sites/default/files/legacy/part_1701_p24-25_lao_chicken_larb.pdf' }
+    { title: 'Lao Chicken Larb — Australian Centre for International Agricultural Research', url: 'https://www.aciar.gov.au/sites/default/files/legacy/part_1701_p24-25_lao_chicken_larb.pdf' },
+    { title: 'FoodSafety.gov — Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
   ],
   mohinga: [
     { title: 'Mohinga Recipe — SBS Food', url: 'https://www.sbs.com.au/food/recipe/mohinga/hbuscxazn' },
