@@ -23,6 +23,7 @@ import { mediterraneanRecipeDrafts } from "./mediterranean-recipes.mjs";
 import { africanRecipeDrafts } from "./african-recipes.mjs";
 import { otherWorldRecipeDrafts } from "./other-world-recipes.mjs";
 import { recipePhotoCandidates } from "./recipe-photos.mjs";
+import { refineFiftyFirstMethods } from "./recipe-method-audit-fifty-first.mjs";
 
 const ml = (en, zhHant, ja, ko, th) => ({ en, "zh-hant": zhHant, ja, ko, th });
 const approvedPhotos = new Map(recipePhotoCandidates
@@ -651,4 +652,5 @@ const publishedOtherWorldRecipes = otherWorldRecipeDrafts
   });
 
 export const recipes = [...publishedChineseRecipes, ...publishedJapaneseRecipes, ...publishedKoreanRecipes, ...publishedThaiRecipes, ...publishedTaiwaneseRecipes, ...publishedIndianRecipes, ...publishedVietnameseRecipes, ...publishedFrenchRecipes, ...publishedItalianRecipes, ...publishedSpanishRecipes, ...publishedBritishRecipes, ...publishedGermanRecipes, ...publishedGreekRecipes, ...publishedAmericanRecipes, ...publishedMexicanRecipes, ...publishedBrazilianRecipes, ...publishedCanadianRecipes, ...publishedMiddleEasternRecipes, ...publishedMediterraneanRecipes, ...publishedAfricanRecipes, ...publishedOtherWorldRecipes];
+refineFiftyFirstMethods(recipes);
 export const allRecipeDrafts = [...chineseRecipeDrafts, ...japaneseRecipeDrafts, ...koreanRecipeDrafts, ...thaiRecipeDrafts, ...taiwaneseRecipeDrafts, ...indianRecipeDrafts, ...vietnameseRecipeDrafts, ...frenchRecipeDrafts, ...italianRecipeDrafts, ...spanishRecipeDrafts, ...britishRecipeDrafts, ...germanRecipeDrafts, ...greekRecipeDrafts, ...americanRecipeDrafts, ...mexicanRecipeDrafts, ...brazilianRecipeDrafts, ...canadianRecipeDrafts, ...middleEasternRecipeDrafts, ...mediterraneanRecipeDrafts, ...africanRecipeDrafts, ...otherWorldRecipeDrafts];
