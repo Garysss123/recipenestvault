@@ -45,7 +45,12 @@ export const britishRecipeSources = {
     'https://englishbreakfastsociety.com/standards/baseline-standard-full-english-breakfast',
     'BBC Food — Stress-free full English breakfast',
     'https://www.bbc.co.uk/food/recipes/stressfreefullenglis_67721'
-  ),
+  ).concat([
+    { title: 'Official food-safety guidance — FoodSafety.gov: Safe Minimum Internal Temperatures', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' },
+    { title: 'Official food-safety guidance — FoodSafety.gov: 4 Steps to Food Safety', url: 'https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety' },
+    { title: 'Official food-safety guidance — FoodSafety.gov: Cold Food Storage Charts', url: 'https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts' },
+    { title: 'Official food-safety guidance — FDA: What You Need to Know About Egg Safety', url: 'https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-to-know-about-egg-safety' }
+  ]),
   'chicken-tikka-masala': sources(
     'Great British Chefs — Chicken Tikka Masala',
     'https://www.greatbritishchefs.com/recipes/chicken-tikka-masala-recipe',

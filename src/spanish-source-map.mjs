@@ -132,7 +132,10 @@ export const spanishRecipeSources = {
     'https://www.spain.info/es/receta/arroz-con-leche/',
     'Saveur — Asturian Arroz Con Leche',
     'https://www.saveur.com/recipes/arroz-con-leche-rice-pudding/'
-  )
+  ).concat([
+    { title: 'Official food-safety guidance — UK Food Standards Agency: Home food fact checker (cooked rice)', url: 'https://www.gov.uk/government/publications/home-food-fact-checker/home-food-fact-checker' },
+    { title: 'Official food-safety guidance — FoodSafety.gov: 4 Steps to Food Safety', url: 'https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety' }
+  ])
 };
 
 export default spanishRecipeSources;
