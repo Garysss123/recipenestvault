@@ -60,9 +60,9 @@ test("thirty-fifth batch adds four existing eligible recipes and preserves curre
   assert.equal(excludedIds.length, 18, "all standing exclusions remain explicit");
   assert.equal(ids.length, 4);
   assert.equal(new Set(ids).size, 4);
-  assert.equal(covered.length, 140, "shared five-locale route coverage includes this batch");
-  assert.equal(new Set(covered).size, 140, "shared route IDs stay unique");
-  assert.equal(covered.filter((id) => !ids.includes(id)).length, 136, "the previous 136 reviewed IDs remain");
+  assert.equal(covered.length, 144, "shared five-locale route coverage includes this batch");
+  assert.equal(new Set(covered).size, 144, "shared route IDs stay unique");
+  assert.equal(covered.filter((id) => !ids.includes(id)).length, 140, "the previous 140 reviewed IDs remain");
   for (const id of ids) {
     const recipe = get(id);
     assert.ok(!excludedIds.includes(id), `${id}: not on the standing exclusion list`);
