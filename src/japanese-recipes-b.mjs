@@ -7,8 +7,8 @@ export const japaneseRecipesB = [
     cuisine: "japanese",
     region: ml("Japan", "日本", "日本", "일본", "ญี่ปุ่น"),
     prepMinutes: 40,
-    cookMinutes: 15,
-    totalMinutes: 55,
+    cookMinutes: 25,
+    totalMinutes: 65,
     servings: 4,
     name: ml("Chicken karaage", "日式炸雞", "鶏の唐揚げ", "일본식 가라아게", "ไก่คาราอาเกะ"),
     description: ml(
@@ -36,31 +36,31 @@ export const japaneseRecipesB = [
       {
         title: ml("Cut and portion the chicken", "切雞肉並分份", "鶏肉を切り分ける", "닭고기 자르고 나누기", "หั่นและแบ่งไก่"),
         body: ml(
-          "Trim only excess fat from 600 g boneless, skin-on chicken thighs and cut them into even 4 cm pieces. Use a dedicated raw-chicken board and knife; wash hands and clean and sanitize the tools before touching other foods.",
-          "將 600 公克去骨帶皮雞腿肉只修去多餘脂肪，切成均勻 4 公分塊。生雞肉使用專用砧板與刀具；接觸其他食物前洗手並清潔消毒工具。",
-          "骨付きでない皮付き鶏もも肉600gは余分な脂だけ取り、4cm角にそろえて切ります。生肉専用のまな板と包丁を使い、他の食材に触れる前に手と道具を洗浄・消毒します。",
-          "뼈 없는 껍질 있는 닭다리살 600g에서 여분의 지방만 떼고 4cm 크기로 고르게 썬다. 생닭 전용 도마와 칼을 쓰며 다른 식재료를 만지기 전에 손과 도구를 세척·소독한다.",
-          "ตัดไขมันส่วนเกินออกจากน่องไก่ติดหนังไร้กระดูก 600 กรัมเท่านั้น แล้วหั่นเป็นชิ้น 4 ซม. เท่า ๆ กัน ใช้เขียงและมีดสำหรับไก่ดิบโดยเฉพาะ ล้างมือและทำความสะอาดฆ่าเชื้ออุปกรณ์ก่อนจับอาหารอื่น"
+          "Trim only excess fat from 600 g boneless, skin-on chicken thighs and cut them into even 4 cm pieces. Use a dedicated raw-chicken board and knife; wash hands and clean and sanitize the tools before touching other foods. After cutting, divide the chicken into four equal piles, about 150 g raw chicken per serving.",
+          "將 600 公克去骨帶皮雞腿肉只修去多餘脂肪，切成均勻 4 公分塊。生雞肉使用專用砧板與刀具；接觸其他食物前洗手並清潔消毒工具。切好後分成四等份，每份約代表 150 公克生雞肉。",
+          "骨付きでない皮付き鶏もも肉600gは余分な脂だけ取り、4cm角にそろえて切ります。生肉専用のまな板と包丁を使い、他の食材に触れる前に手と道具を洗浄・消毒します。切ったら4等分し、1人分を生肉約150g相当とします。",
+          "뼈 없는 껍질 있는 닭다리살 600g에서 여분의 지방만 떼고 4cm 크기로 고르게 썬다. 생닭 전용 도마와 칼을 쓰며 다른 식재료를 만지기 전에 손과 도구를 세척·소독한다. 다 썬 뒤 네 등분해 1인분당 생닭 약 150g으로 나눈다.",
+          "ตัดไขมันส่วนเกินออกจากน่องไก่ติดหนังไร้กระดูก 600 กรัมเท่านั้น แล้วหั่นเป็นชิ้น 4 ซม. เท่า ๆ กัน ใช้เขียงและมีดสำหรับไก่ดิบโดยเฉพาะ ล้างมือและทำความสะอาดฆ่าเชื้ออุปกรณ์ก่อนจับอาหารอื่น จากนั้นแบ่งไก่เป็นสี่กองเท่า ๆ กัน กองละประมาณ 150 กรัมก่อนปรุงต่อหนึ่งที่"
         )
       },
       {
         title: ml("Marinate for 30 minutes", "醃漬 30 分鐘", "30分漬け込む", "30분 재우기", "หมัก 30 นาที"),
         body: ml(
-          "Add 30 ml soy sauce, 15 ml sake, 5 g grated ginger, 5 g grated garlic, 5 ml sesame oil, 4 g salt, and 1 g pepper. Massage until absorbed, cover, and refrigerate at 4°C or colder for 30 minutes. Discard all marinade that touched raw chicken.",
-          "加入 30 毫升醬油、15 毫升清酒、5 公克薑泥、5 公克蒜泥、5 毫升芝麻油、4 公克鹽與 1 公克胡椒，按摩至吸收，加蓋在 4°C 以下冷藏 30 分鐘。接觸過生雞肉的醃汁全部丟棄。",
-          "しょうゆ30ml、酒15ml、すりおろししょうが5g、にんにく5g、ごま油5ml、塩4g、こしょう1gを加え、吸収されるまで揉みます。覆って4℃以下で30分冷蔵し、生肉に触れた漬け汁は全て捨てます。",
-          "간장 30ml, 사케 15ml, 간 생강 5g, 간 마늘 5g, 참기름 5ml, 소금 4g, 후추 1g을 넣고 흡수될 때까지 주무른다. 덮어 4°C 이하에서 30분 냉장하고 생닭에 닿은 양념은 모두 버린다.",
-          "ใส่ซีอิ๊ว 30 มล. สาเก 15 มล. ขิงขูด 5 กรัม กระเทียมขูด 5 กรัม น้ำมันงา 5 มล. เกลือ 4 กรัม และพริกไทย 1 กรัม นวดจนซึม ปิดฝาแช่ที่ 4°C หรือต่ำกว่า 30 นาที ทิ้งน้ำหมักที่สัมผัสไก่ดิบทั้งหมด"
+          "Add 30 ml soy sauce, 15 ml sake, 5 g grated ginger, 5 g grated garlic, 5 ml sesame oil, 4 g salt, and 1 g pepper. Massage until absorbed, cover, and refrigerate at 4°C or colder for 30 minutes. While it chills, set 40 g flour and 80 g potato starch in separate shallow dishes and line a clean tray. Discard all marinade that touched raw chicken.",
+          "加入 30 毫升醬油、15 毫升清酒、5 公克薑泥、5 公克蒜泥、5 毫升芝麻油、4 公克鹽與 1 公克胡椒，按摩至吸收，加蓋在 4°C 以下冷藏 30 分鐘。冷藏期間，把 40 公克麵粉與 80 公克馬鈴薯澱粉分放淺盤，並準備乾淨托盤。接觸過生雞肉的醃汁全部丟棄。",
+          "しょうゆ30ml、酒15ml、すりおろししょうが5g、にんにく5g、ごま油5ml、塩4g、こしょう1gを加え、吸収されるまで揉み、覆って4℃以下で30分冷蔵します。その間に薄力粉40gと片栗粉80gを別々の浅い皿に用意し、清潔なトレーを準備します。生肉に触れた漬け汁は全て捨てます。",
+          "간장 30ml, 사케 15ml, 간 생강 5g, 간 마늘 5g, 참기름 5ml, 소금 4g, 후추 1g을 넣고 흡수될 때까지 주무른다. 덮어 4°C 이하에서 30분 냉장하는 동안 중력분 40g과 감자전분 80g을 각각 얕은 접시에 담고 깨끗한 트레이를 준비한다. 생닭에 닿은 양념은 모두 버린다.",
+          "ใส่ซีอิ๊ว 30 มล. สาเก 15 มล. ขิงขูด 5 กรัม กระเทียมขูด 5 กรัม น้ำมันงา 5 มล. เกลือ 4 กรัม และพริกไทย 1 กรัม นวดจนซึม ปิดฝาแช่ที่ 4°C หรือต่ำกว่า 30 นาที ระหว่างแช่ให้ใส่แป้ง 40 กรัมและแป้งมันฝรั่ง 80 กรัมในจานตื้นแยกกันและเตรียมถาดสะอาด ทิ้งน้ำหมักที่สัมผัสไก่ดิบทั้งหมด"
         )
       },
       {
-        title: ml("Build the coating station", "準備裹粉台", "衣の準備をする", "튀김옷 준비하기", "เตรียมแป้งเคลือบ"),
+        title: ml("Coat the chicken after marinating", "醃好後裹雞肉", "漬け込み後に鶏肉をまぶす", "재운 뒤 닭에 튀김옷 입히기", "หมักเสร็จแล้วเคลือบไก่"),
         body: ml(
-          "Put 40 g flour and 80 g potato starch in separate shallow dishes. Drain each marinated chicken piece, coat lightly in flour, then coat in potato starch and shake off loose powder. Keep the coated pieces on a clean tray away from the raw-chicken tray.",
-          "將 40 公克麵粉與 80 公克馬鈴薯澱粉分放兩個淺盤。每塊雞肉瀝去多餘醃汁，先薄裹麵粉，再裹馬鈴薯澱粉並抖掉鬆粉；裹好的雞肉放在遠離生肉盤的乾淨托盤。",
-          "薄力粉40gと片栗粉80gを別々の浅い皿に入れます。鶏肉の漬け汁を切り、薄力粉を薄くまぶしてから片栗粉をまぶし、余分な粉を落とします。衣を付けた肉は生肉用の皿とは別の清潔なトレーに置きます。",
-          "중력분 40g과 감자전분 80g을 각각 얕은 접시에 담는다. 양념한 닭의 양념을 털고 밀가루를 얇게 묻힌 다음 감자전분을 묻혀 남은 가루를 턴다. 튀김옷을 입힌 닭은 생닭 접시와 떨어진 깨끗한 트레이에 둔다.",
-          "ใส่แป้ง 40 กรัมและแป้งมันฝรั่ง 80 กรัมในจานตื้นแยกกัน สะเด็ดน้ำหมักจากไก่แต่ละชิ้น คลุกแป้งบาง ๆ แล้วคลุกแป้งมันฝรั่ง สะบัดผงส่วนเกิน วางไก่ที่เคลือบแล้วบนถาดสะอาดแยกจากถาดไก่ดิบ"
+          "After the 30-minute chill, drain each chicken piece, coat it lightly in flour and then potato starch, and shake off loose powder. Keep each coated piece on the clean tray away from the raw-chicken tray.",
+          "冷藏醃滿 30 分鐘後，逐塊瀝去多餘醃汁，先薄裹麵粉再裹馬鈴薯澱粉，並抖掉鬆粉；裹好的雞肉放在乾淨托盤，遠離生雞肉盤。",
+          "30分冷蔵した後、鶏肉の漬け汁を切り、薄力粉を薄くまぶしてから片栗粉をまぶし、余分な粉を落とします。衣を付けた肉は生肉用の皿とは別の清潔なトレーに置きます。",
+          "30분 냉장한 뒤 닭의 양념을 털고 밀가루를 얇게 묻힌 다음 감자전분을 묻혀 남은 가루를 턴다. 튀김옷을 입힌 닭은 생닭 접시와 떨어진 깨끗한 트레이에 둔다.",
+          "ครบ 30 นาทีแล้วสะเด็ดน้ำหมักจากไก่แต่ละชิ้น คลุกแป้งบาง ๆ แล้วคลุกแป้งมันฝรั่ง สะบัดผงส่วนเกิน วางไก่ที่เคลือบแล้วบนถาดสะอาดแยกจากถาดไก่ดิบ"
         )
       },
       {
@@ -86,31 +86,31 @@ export const japaneseRecipesB = [
       {
         title: ml("Second fry to 74°C", "復炸至 74°C", "74℃まで二度揚げする", "74°C까지 다시 튀기기", "ทอดครั้งที่สองให้ถึง 74°C"),
         body: ml(
-          "Raise the oil to 180°C and fry the same batches again for 60–90 seconds until deeply golden and crisp. Check the thickest piece with a clean thermometer; the centre must reach at least 74°C. Keep the batches small so the oil stays hot.",
-          "將油溫升至 180°C，同樣分批復炸 60–90 秒，至深金黃酥脆。用乾淨溫度計測量最厚一塊，中心至少達 74°C；維持小批量以免油溫下降。",
-          "油を180℃に上げ、同じ分量を60〜90秒二度揚げして濃いきつね色でカリッとさせます。清潔な温度計で最も厚い一個を測り、中心を74℃以上にします。油温を保つため少量ずつ揚げます。",
-          "기름을 180°C로 올리고 같은 배치들을 60–90초 다시 튀겨 짙은 황금색으로 바삭하게 만든다. 깨끗한 온도계로 가장 두꺼운 조각을 재어 중심이 최소 74°C인지 확인한다. 기름 온도를 유지하도록 소량씩 튀긴다.",
-          "เร่งน้ำมันให้ถึง 180°C แล้วทอดชุดเดิมซ้ำ 60–90 วินาทีจนสีทองเข้มกรอบ ใช้เทอร์โมมิเตอร์สะอาดวัดชิ้นที่หนาที่สุด ใจกลางต้องถึงอย่างน้อย 74°C ทอดทีละน้อยเพื่อรักษาความร้อน"
+          "Raise the oil to 180°C and fry the same small batches again for 60–90 seconds until deeply golden and crisp. For every batch, use a clean thermometer to check its thickest piece; each centre must reach at least 74°C. Keep the batches small so the oil stays hot.",
+          "將油溫升至 180°C，同樣以小批量復炸 60–90 秒，至深金黃酥脆。每一批都用乾淨溫度計測量最厚一塊，中心至少達 74°C；維持小批量以免油溫下降。",
+          "油を180℃に上げ、同じ小分けを60〜90秒二度揚げして濃いきつね色でカリッとさせます。毎回、清潔な温度計で最も厚い一個を測り、中心を74℃以上にします。油温を保つため少量ずつ揚げます。",
+          "기름을 180°C로 올리고 같은 소량 배치들을 60–90초 다시 튀겨 짙은 황금색으로 바삭하게 만든다. 매 배치마다 깨끗한 온도계로 가장 두꺼운 조각을 재어 중심이 최소 74°C인지 확인한다. 기름 온도를 유지하도록 소량씩 튀긴다.",
+          "เร่งน้ำมันให้ถึง 180°C แล้วทอดชุดเล็กเดิมซ้ำ 60–90 วินาทีจนสีทองเข้มกรอบ ทุกชุดให้ใช้เทอร์โมมิเตอร์สะอาดวัดชิ้นที่หนาที่สุด ใจกลางต้องถึงอย่างน้อย 74°C ทอดทีละน้อยเพื่อรักษาความร้อน"
         )
       },
       {
         title: ml("Drain without softening", "瀝油保持酥脆", "衣を柔らかくせず油を切る", "눅눅해지지 않게 기름 빼기", "สะเด็ดโดยไม่ให้แฉะ"),
         body: ml(
-          "Transfer the second-fried chicken to a clean wire rack for 2 minutes. Do not stack or seal it while steaming; verify another thick piece is at least 74°C and use clean tongs for the cooked food.",
-          "復炸雞肉移到乾淨網架瀝油 2 分鐘。冒蒸氣時不要堆疊或密封；再確認一塊厚肉至少 74°C，熟食使用乾淨夾子。",
-          "二度揚げした鶏肉を清潔な網に移し2分油を切ります。湯気があるうちに重ねたり密閉したりせず、別の厚い一個も74℃以上か確認し、加熱後は清潔なトングを使います。",
-          "두 번 튀긴 닭을 깨끗한 철망에 옮겨 2분 기름을 뺀다. 김이 나는 동안 쌓거나 밀봉하지 말고 다른 두꺼운 조각도 74°C 이상인지 확인하며 익은 음식에는 깨끗한 집게를 쓴다.",
-          "ย้ายไก่ทอดครั้งที่สองลงตะแกรงสะอาดให้สะเด็ด 2 นาที อย่าวางซ้อนหรือปิดภาชนะขณะยังมีไอ ตรวจชิ้นหนาอีกชิ้นให้ถึง 74°C และใช้คีมสะอาดกับอาหารสุก"
+          "Transfer each second-fried batch to a clean wire rack for 2 minutes. Keep the batches separate and do not stack or seal them while steaming, so the crust stays crisp; use clean tongs for the cooked food.",
+          "每批復炸雞肉都移到乾淨網架瀝油 2 分鐘，分開放置並趁冒蒸氣時不要堆疊或密封，讓外皮保持酥脆；熟食使用乾淨夾子。",
+          "二度揚げした各回を清潔な網に移し2分油を切ります。衣を保つため、湯気があるうちも別々に置き、重ねたり密閉したりせず、清潔なトングを使います。",
+          "두 번 튀긴 각 배치를 깨끗한 철망에 옮겨 2분 기름을 뺀다. 바삭함을 위해 배치끼리 따로 두고 김이 나는 동안 쌓거나 밀봉하지 않으며, 익은 음식에는 깨끗한 집게를 쓴다.",
+          "ย้ายไก่ทอดครั้งที่สองแต่ละชุดลงตะแกรงสะอาดให้สะเด็ด 2 นาที แยกชุดและอย่าวางซ้อนหรือปิดภาชนะขณะยังมีไอเพื่อคงความกรอบ ใช้คีมสะอาดกับอาหารสุก"
         )
       },
       {
         title: ml("Serve on cabbage", "鋪高麗菜葉上桌", "キャベツに盛る", "양배추에 담아 내기", "จัดเสิร์ฟบนกะหล่ำปลี"),
         body: ml(
-          "Tear 60 g clean green cabbage leaves into large pieces, arrange the hot crisp karaage on them, and serve immediately. Keep the plate limited to fried chicken and cabbage leaves so the finished appearance matches the documented dish.",
-          "將 60 公克乾淨綠高麗菜葉撕成大片，鋪上熱騰酥脆的炸雞立即上桌。盤中只放炸雞與高麗菜葉，保持成品外觀與照片一致。",
-          "清潔な青キャベツの葉60gを大きくちぎり、熱くカリッとした唐揚げをのせてすぐに出します。皿には唐揚げとキャベツの葉だけを盛り、記録した料理の見た目に合わせます。",
-          "깨끗한 초록 양배추 잎 60g을 크게 찢어 뜨겁고 바삭한 가라아게를 올려 즉시 낸다. 접시에는 튀긴 닭과 양배추 잎만 담아 사진의 완성 모습과 맞춘다.",
-          "ฉีกใบกะหล่ำปลีเขียวสะอาด 60 กรัมเป็นชิ้นใหญ่ วางคาราอาเกะร้อนกรอบแล้วเสิร์ฟทันที จำกัดจานให้มีเฉพาะไก่ทอดกับใบกะหล่ำเพื่อให้ตรงกับภาพที่บันทึก"
+          "Tear 60 g clean green cabbage leaves into large pieces. Divide the karaage among four plates, about one-quarter of the chicken or 150 g raw-chicken equivalent plus 15 g cabbage per person, and serve immediately. Keep each plate limited to fried chicken and cabbage leaves so the finished appearance matches the documented dish.",
+          "將 60 公克乾淨綠高麗菜葉撕成大片，炸雞平均分裝四盤，每人約一份四分之一雞肉（相當於 150 公克生雞肉）與 15 公克高麗菜，立即上桌。盤中只放炸雞與高麗菜葉，保持成品外觀與照片一致。",
+          "青キャベツの葉60gを大きくちぎります。唐揚げを4皿に均等に分け、1人分は鶏肉全体の約4分の1（生肉約150g相当）とキャベツ15gです。皿には唐揚げとキャベツだけを盛り、すぐに出します。",
+          "깨끗한 초록 양배추 잎 60g을 크게 찢는다. 가라아게를 네 접시에 고르게 나누어 1인분마다 닭고기 4분의 1(생닭 약 150g 상당)과 양배추 15g을 담아 즉시 낸다. 접시에는 튀긴 닭과 양배추 잎만 담아 사진의 완성 모습과 맞춘다.",
+          "ฉีกใบกะหล่ำปลีเขียวสะอาด 60 กรัมเป็นชิ้นใหญ่ แบ่งคาราอาเกะใส่สี่จานเท่า ๆ กัน แต่ละที่ได้ไก่ประมาณหนึ่งในสี่หรือเทียบเท่าไก่ดิบ 150 กรัม พร้อมกะหล่ำปลี 15 กรัม เสิร์ฟทันทีและคงจานไว้เฉพาะไก่ทอดกับใบกะหล่ำให้ตรงภาพ"
         )
       }
     ],
@@ -130,7 +130,8 @@ export const japaneseRecipesB = [
     cultureNote: ml("Karaage is a Japanese frying style in which seasoned meat is lightly coated and deep-fried; chicken became its most familiar home and izakaya form.", "唐揚是日本將調味肉類薄裹粉後油炸的技法，雞肉版本最常見於家庭與居酒屋。", "唐揚げは下味を付けた肉に薄く衣を付けて揚げる日本の調理法で、鶏肉の形が家庭や居酒屋で最も親しまれています。", "가라아게는 밑간한 고기에 얇게 옷을 입혀 튀기는 일본식 조리법이며 닭고기 형태가 가정과 이자카야에서 가장 익숙합니다.", "คาราอาเกะเป็นวิธีทอดแบบญี่ปุ่นที่คลุกเนื้อปรุงรสบาง ๆ แล้วทอด โดยแบบไก่เป็นรูปแบบที่คุ้นเคยในบ้านและอิซากายะ"),
     sources: [
       { title: "Kikkoman — Crispy Karaage Recipe (Japanese Fried Chicken)", url: "https://www.kikkoman.com/en/cookbook/washoku/karaage.html" },
-      { title: "Just One Cookbook — Karaage (Japanese Fried Chicken)", url: "https://www.justonecookbook.com/karaage/" }
+      { title: "Just One Cookbook — Karaage (Japanese Fried Chicken)", url: "https://www.justonecookbook.com/karaage/" },
+      { title: "FoodSafety.gov — Cook to a Safe Minimum Internal Temperature", url: "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures" }
     ],
     imageAlt: ml("Crisp golden chicken karaage piled on a white plate with raw green cabbage leaves", "白盤上堆著金黃酥脆炸雞與生綠高麗菜葉的日式炸雞", "白い皿に盛ったカリッと黄金色の鶏の唐揚げと生の青キャベツの葉", "흰 접시에 담긴 바삭한 황금빛 가라아게와 생 양배추 잎", "ไก่คาราอาเกะสีทองกรอบกองบนจานขาวกับใบกะหล่ำปลีเขียวดิบ"),
     visualSpec: "Crisp golden boneless chicken karaage piled on a plain white plate with clean raw green cabbage leaves, torn into large pieces; no lemon, sauce, mayonnaise, sesame, or extra garnish visible."

@@ -19,12 +19,15 @@ export const greekRecipeSources = {
     'Akis Petretzikis — Classic Greek pasta bake - Pastitsio',
     'https://akispetretzikis.com/en/recipe/6866/paradosiako-pastitsio'
   ),
-  'pork-souvlaki': sources(
-    'My Greek Dish — Pork Souvlaki with Tzatziki',
-    'https://www.mygreekdish.com/recipe/pork-souvlaki-skewers-with-tzatziki/',
-    'Akis Petretzikis — Double pork souvlaki pita wraps',
-    'https://akispetretzikis.com/en/recipe/8092/dikano-tylichto'
-  ),
+  'pork-souvlaki': [
+    ...sources(
+      'My Greek Dish — Pork Souvlaki with Tzatziki',
+      'https://www.mygreekdish.com/recipe/pork-souvlaki-skewers-with-tzatziki/',
+      'The Guardian — How to cook the perfect souvlaki',
+      'https://www.theguardian.com/food/2019/sep/04/how-to-cook-the-perfect-souvlaki-greek-kebab'
+    ),
+    { title: 'FoodSafety.gov — Cook to a Safe Minimum Internal Temperature', url: 'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures' }
+  ],
   spanakopita: sources(
     'My Greek Dish — Traditional Greek Spanakopita',
     'https://www.mygreekdish.com/recipe/traditional-greek-spinach-pie-spanakopita-recipe-with-homemade-phyllo/',

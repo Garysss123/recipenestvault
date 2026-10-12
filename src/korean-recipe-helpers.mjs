@@ -94,7 +94,7 @@ const recipeSources = {
   "sundubu-jjigae": [["Maangchi — Sundubu-jjigae", "https://www.maangchi.com/recipe/sundubu-jjigae"], ["Korean Bapsang — Kimchi soondubu jjigae", "https://www.koreanbapsang.com/kimchi-soondubu-jjigae-soft-tofu-stew-kimchi/"]],
   tteokbokki: [["Maangchi — Tteokbokki", "https://www.maangchi.com/recipe/tteokbokki"], ["Korean Bapsang — Tteokbokki", "https://www.koreanbapsang.com/tteokbokki-spicy-stir-fried-rice-cakes/"]],
   japchae: [["Maangchi — Japchae", "https://www.maangchi.com/recipe/japchae"], ["Korean Bapsang — Japchae", "https://www.koreanbapsang.com/japchae-korean-stir-fried-starch/"]],
-  "kimchi-fried-rice": [["Maangchi — Kimchi-bokkeumbap", "https://www.maangchi.com/recipe/kimchi-bokkeumbap"], ["Korean Bapsang — Kimchi fried rice", "https://www.koreanbapsang.com/kimchi-fried-rice-kimchi-bokkeum-bap/"]],
+  "kimchi-fried-rice": [["Maangchi — Kimchi-bokkeumbap", "https://www.maangchi.com/recipe/kimchi-bokkeumbap"], ["Korean Bapsang — Kimchi fried rice", "https://www.koreanbapsang.com/kimchi-fried-rice-kimchi-bokkeum-bap/"], ["UK Food Standards Agency — Home food fact checker: rice", "https://www.gov.uk/government/publications/home-food-fact-checker/home-food-fact-checker"]],
   "haemul-pajeon": [["Maangchi — Haemul-pajeon", "https://www.maangchi.com/recipe/haemul-pajeon"], ["Korean Bapsang — Haemul pajeon", "https://www.koreanbapsang.com/haemul-pajeon/"]],
   "kimchi-jeon": [["Maangchi — Kimchijeon", "https://www.maangchi.com/recipe/kimchijeon"], ["My Korean Kitchen — Kimchi pancakes", "https://mykoreankitchen.com/kimchi-pancakes-kimchi-buchimgae/"]],
   mandu: [["Maangchi — Mandu", "https://www.maangchi.com/recipe/mandu"], ["Korean Bapsang — Mandu", "https://www.koreanbapsang.com/mandu-korean-dumplings_20/"]],

@@ -609,11 +609,11 @@ export const japaneseRecipesC = [
       {
         title: ml("Cool the dashi", "放涼高湯", "だしを冷ます", "다시 식히기", "ทำดาชิให้เย็น"),
         body: ml(
-          "Prepare 450 ml unsalted dashi and cool it to about 45°C before it meets the eggs. Warm dashi can cook streaks into the custard, while hot dashi can scramble it.",
-          "準備 450 毫升無鹽高湯並降至約 45°C 再與蛋液混合；高溫高湯會使蛋液結絲甚至炒熟。",
-          "無塩だし450mlを用意し、卵に合わせる前に約45℃まで冷ます。熱いだしは卵を部分的に固めます。",
-          "무염 다시 450ml를 준비해 달걀과 섞기 전 약 45°C로 식힌다. 뜨거운 다시는 달걀을 부분적으로 익힌다.",
-          "เตรียมดาชิไม่เค็ม 450 มล. และทำให้เย็นราว 45°C ก่อนผสมไข่ ดาชิร้อนจะทำให้ไข่เป็นเส้นหรือสุกทันที"
+          "For the 15-minute prep estimate, have 450 ml unsalted dashi ready and cool it to about 45°C before it meets the eggs; allow extra cooling time if making dashi now. Warm dashi can cook streaks into the custard, while hot dashi can scramble it.",
+          "備妥 450 毫升無鹽高湯並降至約 45°C 再與蛋液混合；本食譜 15 分鐘備料時間以高湯已放涼為前提，若現做高湯請另留冷卻時間。高溫高湯會使蛋液結絲甚至炒熟。",
+          "無塩だし450mlを用意して約45℃まで冷ましておきます。記載の下準備15分は、だしが冷めている前提です。今作る場合は冷ます時間を追加してください。熱いだしは卵を部分的に固めます。",
+          "무염 다시 450ml를 준비해 달걀과 섞기 전에 약 45°C로 식혀 둔다. 표시된 준비 시간 15분은 다시가 식어 있는 상태를 기준으로 하며, 지금 만든다면 식히는 시간을 더한다. 뜨거운 다시는 달걀을 부분적으로 익힌다.",
+          "เตรียมดาชิไม่เค็ม 450 มล. ให้เย็นราว 45°C ก่อนผสมไข่ เวลาเตรียม 15 นาทีที่ระบุสมมติว่าดาชิเย็นพร้อมแล้ว หากทำดาชิตอนนี้ให้เผื่อเวลาทำให้เย็นเพิ่ม ดาชิร้อนจะทำให้ไข่เป็นเส้นหรือสุกทันที"
         )
       },
       {
@@ -649,11 +649,11 @@ export const japaneseRecipesC = [
       {
         title: ml("Fill the steaming cups", "分杯放入菇與三葉芹", "器に具を入れる", "컵에 재료 담기", "แบ่งใส่ถ้วยนึ่ง"),
         body: ml(
-          "Divide the shiitake and enoki among four heatproof cups, reserving a little mitsuba for the top. Pour the strained egg mixture over the mushrooms and add the remaining mitsuba.",
-          "將香菇與金針菇分入四個耐熱杯，保留少量三葉芹放表面；倒入過濾蛋液，再放上剩餘三葉芹。",
-          "しいたけとえのきを耐熱の器4つに分け、三つ葉を少し飾り用に残す。こした卵液を注ぎ、残りの三つ葉をのせる。",
-          "표고와 팽이를 내열 컵 네 개에 나누고 미쓰바 조금은 위에 남긴다. 거른 달걀물을 붓고 남은 미쓰바를 올린다.",
-          "แบ่งเห็ดหอมและเห็ดเข็มทองใส่ถ้วยทนร้อนสี่ใบ เหลือมิตสึบะเล็กน้อยไว้ด้านบน เทไข่ที่กรองแล้วและวางมิตสึบะที่เหลือ"
+          "Divide the 40 g shiitake and 40 g enoki evenly among four heatproof cups (10 g of each mushroom per cup), reserving a little mitsuba for the top. Pour one quarter of the strained mixture into each cup, about 37.5 g raw egg and 112.5 ml dashi per cup, then add the remaining mitsuba.",
+          "將 40 公克香菇與 40 公克金針菇平均分入四個耐熱杯（每杯各 10 公克），保留少量三葉芹放表面。每杯倒入四分之一蛋液，約含 37.5 公克生蛋與 112.5 毫升高湯，再放上剩餘三葉芹。",
+          "しいたけ40gとえのき40gを耐熱の器4つに均等に分け、各器にそれぞれ10gずつ入れます。三つ葉を少し飾り用に残し、こした卵液を4等分して注ぎます。1器あたり生卵約37.5g、だし約112.5mlです。残りの三つ葉をのせます。",
+          "표고 40g과 팽이 40g을 내열 컵 네 개에 고르게 나누어 각 버섯 10g씩 담고, 미쓰바 조금은 위에 남긴다. 거른 달걀물도 네 등분해 컵마다 붓는다. 한 컵에 생달걀 약 37.5g과 다시 약 112.5ml가 들어간다. 남은 미쓰바를 올린다.",
+          "แบ่งเห็ดหอม 40 กรัมและเห็ดเข็มทอง 40 กรัมลงถ้วยทนร้อนสี่ใบเท่า ๆ กัน (เห็ดแต่ละชนิดถ้วยละ 10 กรัม) เหลือมิตสึบะเล็กน้อยไว้ด้านบน แบ่งไข่ที่กรองแล้วเป็นสี่ส่วน เทถ้วยละหนึ่งส่วน ซึ่งมีไข่ดิบประมาณ 37.5 กรัมและดาชิ 112.5 มล. แล้ววางมิตสึบะที่เหลือ"
         )
       },
       {
@@ -669,11 +669,11 @@ export const japaneseRecipesC = [
       {
         title: ml("Check the egg safety", "確認蛋液安全凝固", "卵の安全な固まりを確認", "달걀 안전 응고 확인", "ตรวจการเซ็ตของไข่ให้ปลอดภัย"),
         body: ml(
-          "Check the centre of the thickest cup with a clean thermometer. It must reach 74°C with no liquid egg; if needed, steam in one-minute increments while keeping the chamber below a hard boil.",
-          "用乾淨溫度計探測最厚杯的中心，必須達 74°C 且沒有流動蛋液；必要時以每次 1 分鐘增量續蒸，蒸氣不可猛烈沸騰。",
-          "最も厚い器の中心を清潔な温度計で確認する。液状の卵を残さず74℃にし、必要なら1分ずつ追加して強い沸騰を避ける。",
-          "깨끗한 온도계로 가장 두꺼운 컵의 중심을 확인한다. 흐르는 달걀물이 없이 74°C가 되어야 하며 필요하면 1분씩 더 찌되 세게 끓이지 않는다.",
-          "ตรวจใจกลางถ้วยที่หนาที่สุดด้วยเทอร์โมมิเตอร์สะอาด ต้องถึง 74°C และไม่มีไข่เหลว หากจำเป็นนึ่งเพิ่มครั้งละหนึ่งนาทีโดยไม่ให้ไอน้ำเดือดแรง"
+          "Check the centre of the thickest cup with a clean thermometer. It must reach 71°C (160°F) and contain no liquid egg; if needed, steam in one-minute increments while keeping the chamber below a hard boil.",
+          "用乾淨溫度計探測最厚杯的中心，必須達 71°C（160°F）且沒有流動蛋液；必要時每次續蒸 1 分鐘，維持蒸氣溫和、不猛烈沸騰。",
+          "最も厚い器の中心を清潔な温度計で確認し、71℃（160°F）に達して液状の卵が残らないようにします。必要なら1分ずつ追加し、強い沸騰を避けます。",
+          "깨끗한 온도계로 가장 두꺼운 컵의 중심을 확인한다. 71°C (160°F)에 도달하고 액체 달걀이 남지 않아야 한다. 필요하면 1분씩 더 찌되 세게 끓이지 않는다.",
+          "ตรวจใจกลางถ้วยที่หนาที่สุดด้วยเทอร์โมมิเตอร์สะอาด ต้องถึง 71°C (160°F) และไม่มีไข่เหลว หากจำเป็นนึ่งเพิ่มครั้งละหนึ่งนาทีโดยไม่ให้ไอน้ำเดือดแรง"
         )
       },
       {
@@ -712,20 +712,20 @@ export const japaneseRecipesC = [
         "ไอน้ำเดือดแรงทำให้คัสตาร์ดพรุนและมีน้ำ รักษา 85–90°C และอย่าให้น้ำกระแทกถ้วย"
       ),
       ml(
-        "Stopping before the thickest centre reaches 74°C leaves unsafe liquid egg; check the centre, not just the surface.",
-        "最厚中心未達 74°C 就停火會留下不安全的流動蛋液；要測中心，不只看表面。",
-        "最も厚い中心が74℃になる前に止めると液状卵が残る。表面だけでなく中心を測る。",
-        "가장 두꺼운 중심이 74°C가 되기 전에 멈추면 안전하지 않은 액체 달걀이 남는다. 표면만 보지 말고 중심을 확인한다.",
-        "หยุดก่อนใจกลางส่วนหนาสุดถึง 74°C จะมีไข่เหลวไม่ปลอดภัย ตรวจใจกลางไม่ใช่ดูแค่ผิว"
+        "Stopping before the thickest centre reaches 71°C leaves unsafe liquid egg; check the centre, not just the surface.",
+        "最厚中心未達 71°C 就停火會留下未充分加熱的蛋液；要測中心，不只看表面。",
+        "最も厚い中心が71℃になる前に止めると液状卵が残る。表面だけでなく中心を測る。",
+        "가장 두꺼운 중심이 71°C가 되기 전에 멈추면 충분히 익지 않은 달걀이 남는다. 표면만 보지 말고 중심을 확인한다.",
+        "หยุดก่อนใจกลางส่วนหนาสุดถึง 71°C จะมีไข่ที่ยังสุกไม่ทั่วถึง ตรวจใจกลางไม่ใช่ดูแค่ผิว"
       )
     ],
     substitutions: [
       ml(
-        "Use 450 ml kombu-shiitake dashi instead of bonito dashi for a vegetarian version; keep the same 85–90°C steaming and 74°C centre check.",
-        "素食版可用 450 毫升昆布香菇高湯取代柴魚高湯；蒸溫 85–90°C 與中心 74°C 判斷不變。",
-        "植物性なら、かつおだしを昆布しいたけだし450mlに替える。蒸し温度85〜90℃と中心74℃は同じです。",
-        "채식 버전은 가쓰오 다시 대신 다시마·표고 다시 450ml를 쓴다. 찜 온도 85–90°C와 중심 74°C 확인은 같다.",
-        "แบบมังสวิรัติใช้ดาชิคอมบุเห็ดหอม 450 มล. แทนดาชิคัตสึโอะ รักษาอุณหภูมินึ่ง 85–90°C และใจกลาง 74°C เท่าเดิม"
+        "Use 450 ml kombu-shiitake dashi instead of bonito dashi for a vegetarian version; keep the same 85–90°C steaming and 71°C centre check.",
+        "素食版可用 450 毫升昆布香菇高湯取代柴魚高湯；蒸溫 85–90°C 與中心 71°C 熟度判斷不變。",
+        "植物性なら、かつおだしを昆布しいたけだし450mlに替えます。蒸し温度85〜90℃と中心71℃の確認は同じです。",
+        "채식 버전은 가쓰오 다시 대신 다시마·표고 다시 450ml를 쓴다. 찜 온도 85–90°C와 중심 71°C 확인은 같다.",
+        "แบบมังสวิรัติใช้ดาชิคอมบุเห็ดหอม 450 มล. แทนดาชิคัตสึโอะ รักษาอุณหภูมินึ่ง 85–90°C และตรวจใจกลาง 71°C เช่นเดิม"
       ),
       ml(
         "If mitsuba is unavailable, omit it rather than adding an unlisted herb; keep the shiitake and enoki as the visible mushroom topping.",
@@ -751,7 +751,9 @@ export const japaneseRecipesC = [
     ),
     sources: [
       { title: "Just One Cookbook — Chawanmushi (Japanese Savory Egg Custard)", url: "https://www.justonecookbook.com/chawanmushi-savory-steamed-egg-custard/" },
-      { title: "Japanese Cooking 101 — Chawanmushi (Savory Egg Custard)", url: "https://www.japanesecooking101.com/chawanmushi/" }
+      { title: "Japanese Cooking 101 — Chawanmushi (Savory Egg Custard)", url: "https://www.japanesecooking101.com/chawanmushi/" },
+      { title: "FoodSafety.gov — Cook to a Safe Minimum Internal Temperature", url: "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures" },
+      { title: "FDA — What You Need to Know About Egg Safety", url: "https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety" }
     ],
     imageAlt: ml(
       "Real photograph of a lidded chawanmushi cup with smooth pale custard, fine white enoki, brown mushroom slices and green mitsuba beside a wooden spoon.",
