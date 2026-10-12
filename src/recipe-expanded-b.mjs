@@ -107,11 +107,11 @@ export const expandedInstructionsB = {
     {
       title: ml("Marinate and discard the used sauce", "醃肉並丟棄接觸生肉的醬", "漬け込み、触れたたれを廃棄する", "재우고 생고기에 닿은 양념 버리기", "หมักและทิ้งซอสที่โดนหมูดิบ"),
       body: ml(
-        "Coat 900 g pork shoulder strips in the remaining marinade, cover, and refrigerate for 8–24 hours; turn once halfway. The displayed prep time uses the 8-hour minimum. Discard every drop of marinade that touched the raw pork, retaining only the clean 30 ml reserved for basting.",
-        "將 900 公克豬肩肉條裹上其餘醃料，加蓋冷藏 8–24 小時，中途翻面一次；頁面備料時間以最低 8 小時計。所有接觸過生豬肉的醃料都要丟棄，只保留預留刷醬用的乾淨 30 毫升。",
-        "豚肩肉900gを残りのたれで覆い、ふたをして8～24時間冷蔵する。途中で一度返す。表示の下ごしらえ時間は最短の8時間で計算している。生肉に触れたたれは全て捨て、塗り用に取り分けた清潔な30mlだけを残す。",
-        "돼지 목살 900g에 남은 양념을 바르고 덮어 8–24시간 냉장하며 중간에 한 번 뒤집는다. 표시된 준비 시간은 최소 8시간 기준이다. 생고기에 닿은 양념은 전부 버리고 바르기용으로 덜어 둔 깨끗한 30ml만 남긴다.",
-        "คลุกหมูไหล่ 900 กรัมกับซอสที่เหลือ ปิดฝาแช่เย็น 8–24 ชั่วโมง และกลับด้านครึ่งเวลา เวลาเตรียมที่แสดงใช้ขั้นต่ำ 8 ชั่วโมง ทิ้งซอสทุกหยดที่สัมผัสหมูดิบ เหลือเฉพาะซอสสะอาด 30 มล. จากขั้นแรก"
+        "Coat 900 g pork shoulder strips in the remaining marinade, cover, and refrigerate for 8–24 hours; turn once halfway. The displayed 490-minute prep estimate includes the 8-hour minimum marinade and about 10 minutes for mixing and handling. Discard every drop of marinade that touched the raw pork, retaining only the clean 30 ml reserved for basting.",
+        "將 900 公克豬肩肉條裹上其餘醃料，加蓋冷藏 8–24 小時，中途翻面一次；顯示的 490 分鐘備料時間包含最低 8 小時醃漬與約 10 分鐘拌料、處理時間。所有接觸過生豬肉的醃料都要丟棄，只保留預留刷醬用的乾淨 30 毫升。",
+        "豚肩肉900gを残りのたれで覆い、ふたをして8〜24時間冷蔵し、途中で一度返します。表示される準備時間490分には、最低8時間の漬け込みと、混ぜて肉を扱う約10分が含まれます。生肉に触れたたれはすべて捨て、塗り用に取り分けた清潔な30mlだけを残します。",
+        "돼지 목살 900g에 남은 양념을 바르고 덮어 8–24시간 냉장하며 중간에 한 번 뒤집는다. 표시된 준비 시간 490분에는 최소 8시간 재우는 시간과 양념을 섞고 고기를 다루는 약 10분이 포함된다. 생고기에 닿은 양념은 모두 버리고 바르기용으로 덜어 둔 깨끗한 30ml만 남긴다.",
+        "คลุกหมูไหล่ 900 กรัมกับซอสที่เหลือ ปิดฝาแช่เย็น 8–24 ชั่วโมงและกลับด้านหนึ่งครั้ง เวลาเตรียมที่แสดง 490 นาทีรวมเวลาหมักขั้นต่ำ 8 ชั่วโมงและเวลาผสมกับจัดการประมาณ 10 นาที ทิ้งซอสทุกหยดที่สัมผัสหมูดิบ เหลือเฉพาะซอสสะอาด 30 มล. ที่แยกไว้"
       )
     },
     {
@@ -147,31 +147,31 @@ export const expandedInstructionsB = {
     {
       title: ml("Lacquer with honey", "刷蜂蜜上色", "はちみつで照りを出す", "꿀로 윤기 내기", "ทาน้ำผึ้งให้เงา"),
       body: ml(
-        "Brush the separate 15 g final honey over the pork. Raise the oven to 220°C and roast for 5–8 minutes, turning once, until the surface is mahogany and bubbling; the thickest centre must reach at least 63°C, or 68°C for a firmer slice.",
-        "將另放的 15 公克最後刷用蜂蜜塗在豬肉上。烤箱升至 220°C 烤 5–8 分鐘，中途翻面一次，直到表面棗紅並冒泡；最厚處須至少達 63°C，想要較紮實的切片則達 68°C。",
-        "別にした仕上げ用はちみつ15gを豚肉に塗る。オーブンを220℃に上げ、途中で一度返しながら5～8分焼く。表面が赤褐色で泡立ち、最厚部が63℃以上（しっかりした食感なら68℃）になればよい。",
-        "따로 둔 마무리용 꿀 15g을 고기에 바른다. 오븐을 220°C로 올려 5–8분 굽고 중간에 한 번 뒤집는다. 표면이 적갈색으로 보글거리고 가장 두꺼운 중심이 63°C 이상(단단한 식감은 68°C)이면 된다.",
-        "ทาน้ำผึ้ง 15 กรัมที่แยกไว้บนหมู เร่งเตาเป็น 220°C อบ 5–8 นาที กลับหนึ่งครั้งจนผิวสีน้ำตาลแดงเข้มมีฟอง ใจกลางส่วนหนาสุดต้องอย่างน้อย 63°C หรือ 68°C หากชอบเนื้อแน่น"
+        "Brush on the separate 15 g honey, raise the oven to 220°C, and roast for 5–8 minutes as a guide, turning once. Check the thickest centre of the largest strip with a thermometer; remove it only at 63°C (145°F) or above. If it is lower, roast in 2-minute increments and recheck, watching closely so the sweet glaze does not burn. Rest for 10 minutes in the next step before slicing; this exceeds the official 3-minute rest.",
+        "刷上另備的 15 公克蜂蜜，烤箱升至 220°C，翻面烤約 5–8 分鐘作為參考。用溫度計測量最大肉條最厚處中心；達 63°C（145°F）以上才取出。若未達標，每次再烤 2 分鐘並重測，同時留意甜醬不要烤焦。下一步靜置 10 分鐘再切，已超過官方建議的 3 分鐘靜置。",
+        "別にしたはちみつ15gを塗り、オーブンを220°Cに上げて、目安として5〜8分焼き、途中で一度返す。最も大きい肉の最も厚い中心を温度計で測り、63°C（145°F）以上になってから取り出す。低ければ2分ずつ追加して再測定し、甘いタレが焦げないよう注意する。次の手順で切る前に10分休ませる。公式の最低休ませ時間3分を満たす。",
+        "따로 둔 꿀 15g을 바르고 오븐을 220°C로 올려 기준 시간인 5–8분 굽되 중간에 한 번 뒤집는다. 가장 큰 고기의 가장 두꺼운 중심을 온도계로 재고 63°C (145°F) 이상일 때만 꺼낸다. 낮으면 2분씩 더 굽고 다시 확인하며 단 양념이 타지 않는지 살핀다. 다음 단계에서 썰기 전 10분간 두어 공식 최소 휴지 시간 3분을 넘긴다.",
+        "ทาน้ำผึ้ง 15 กรัมที่แยกไว้ ปรับเตาเป็น 220°C แล้วอบประมาณ 5–8 นาทีเป็นแนวทาง โดยกลับด้านหนึ่งครั้ง ใช้เทอร์โมมิเตอร์วัดตรงกลางส่วนที่หนาที่สุดของชิ้นใหญ่สุด นำออกเมื่อถึงอย่างน้อย 63°C (145°F) เท่านั้น หากยังต่ำให้อบเพิ่มครั้งละ 2 นาทีแล้ววัดซ้ำ ระวังซอสหวานไหม้ พัก 10 นาทีในขั้นถัดไปก่อนหั่น ซึ่งนานกว่าระยะพักขั้นต่ำ 3 นาทีตามคำแนะนำทางการ"
       )
     },
     {
       title: ml("Rest and slice", "靜置切片", "休ませて切る", "쉬었다가 썰기", "พักแล้วหั่น"),
       body: ml(
-        "Rest the pork on the rack for 10 minutes so the juices settle. Slice across the grain into 5 mm pieces and brush lightly with the tray juices; do not slice while piping hot.",
-        "豬肉留在烤架靜置 10 分鐘使肉汁穩定。逆紋切成 5 毫米片，薄刷烤盤肉汁；不要剛出爐就切。",
-        "肉汁を落ち着かせるため、網の上で10分休ませる。繊維を断つ向きに5mm厚に切り、天板の肉汁を薄く塗る。熱々で切らない。",
-        "고기를 랙에서 10분 쉬어 육즙을 안정시킨다. 결 반대로 5mm 두께로 썰고 팬의 육즙을 얇게 바른다. 뜨거울 때 바로 썰지 않는다.",
-        "พักหมูบนตะแกรง 10 นาทีให้น้ำในเนื้อกระจาย หั่นขวางเส้นใยหนา 5 มม. ทาน้ำจากถาดบางๆ อย่าหั่นตอนร้อนจัด"
+        "Rest the pork on the rack for 10 minutes so the juices settle and the official minimum 3-minute rest is met. Slice across the grain into 5 mm pieces and brush lightly with the tray juices.",
+        "豬肉留在烤架靜置 10 分鐘使肉汁穩定，並滿足官方至少 3 分鐘的靜置建議。逆紋切成 5 公釐片，薄刷烤盤肉汁。",
+        "網の上で10分休ませて肉汁を落ち着かせ、公式の最低休ませ時間3分を満たします。繊維を断つ向きに5mm厚に切り、天板の肉汁を薄く塗ります。",
+        "랙에서 10분간 두어 육즙을 안정시키고 공식 최소 휴지 시간 3분을 충족한다. 결 반대로 5mm 두께로 썰고 팬의 육즙을 얇게 바른다.",
+        "พักหมูบนตะแกรง 10 นาทีให้เนื้อเก็บน้ำและครบระยะพักขั้นต่ำ 3 นาทีตามคำแนะนำทางการ หั่นขวางเส้นใยหนา 5 มม. แล้วทาน้ำจากถาดบาง ๆ"
       )
     },
     {
       title: ml("Serve with the listed parsley", "以巴西里上桌", "パセリを添えて供する", "파슬리와 내기", "เสิร์ฟกับพาร์สลีย์"),
       body: ml(
-        "Arrange the slices on a plate and place the one small curly-parsley sprig at the side. The sprig is the only listed serving garnish; serve while the glaze is glossy.",
-        "將叉燒片排盤，盤側放 1 小枝捲葉巴西里。這枝巴西里是唯一列出的擺盤配料，趁醬面明亮時上桌。",
-        "叉焼を盛り、皿の端にカーリーパセリ1小枝だけを置く。記載された盛り付け用飾りはこれだけ。たれがつややかなうちに供する。",
-        "차슈를 접시에 담고 옆에 컬리 파슬리 작은 가지 1개만 둔다. 목록에 있는 유일한 고명이며 소스가 윤기 있을 때 낸다.",
-        "จัดหมูหั่นใส่จาน วางพาร์สลีย์ใบหยิกกิ่งเล็ก 1 กิ่งไว้ข้างจานเท่านั้น เป็นเครื่องตกแต่งเดียวที่ระบุไว้ และเสิร์ฟขณะซอสยังเงา"
+        "Divide the slices and listed parsley among six servings; the 900 g raw pork equals about 150 g raw-meat equivalent per serving. Serve while the glaze is glossy.",
+        "將肉片與列出的巴西里分成六份；900 公克生豬肉相當於每份約 150 公克生肉份量。趁醬汁油亮時上桌。",
+        "肉を6人分に分け、記載したパセリを添えます。生の豚肉900gは1人分あたり約150g相当です。たれに艶があるうちに出します。",
+        "고기와 적힌 파슬리를 6인분으로 나눈다. 생돼지고기 900g은 1인분당 생고기 기준 약 150g이다. 윤기 나는 양념이 남아 있을 때 낸다.",
+        "แบ่งเนื้อและพาร์สลีย์ที่ระบุเป็น 6 ที่ หมูดิบ 900 กรัมเท่ากับเนื้อดิบประมาณ 150 กรัมต่อที่ เสิร์ฟขณะที่ซอสยังมันวาว"
       )
     }
   ],
