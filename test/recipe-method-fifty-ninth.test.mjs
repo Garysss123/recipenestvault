@@ -54,14 +54,14 @@ test("fifty-ninth batch adds four unchecked eligible slugs and preserves each il
 
   assert.equal(recipes.length, 353);
   assert.equal(new Set(recipes.map((recipe) => recipe.id)).size, 353);
-  assert.equal(covered.length, 328);
-  assert.equal(new Set(covered).size, 328);
+  assert.equal(covered.length, 332);
+  assert.equal(new Set(covered).size, 332);
   assert.equal(excluded.length, 18);
   assert.equal(new Set(excluded).size, 18);
-  assert.deepEqual(covered.slice(-96, -92), ids);
+  assert.deepEqual(covered.slice(-100, -96), ids);
   assert.ok(ids.every((id) => !excluded.includes(id)), "selected recipes are not in the old-patch exclusion set");
-  assert.equal(recipes.length - excluded.length - covered.length, 7);
-  const previous = new Set(covered.slice(0, -96));
+  assert.equal(recipes.length - excluded.length - covered.length, 3);
+  const previous = new Set(covered.slice(0, -100));
   assert.ok(ids.every((id) => !previous.has(id)), "selected slugs were not in the prior 232-ID ledger");
 
   for (const id of ids) {
