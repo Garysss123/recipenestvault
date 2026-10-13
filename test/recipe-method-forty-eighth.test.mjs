@@ -40,11 +40,11 @@ test("forty-eighth batch adds four eligible slugs to shared five-locale coverage
   assert.equal(new Set(recipes.map((recipe) => recipe.id)).size, 353);
   assert.equal(excludedIds.length, 18);
   assert.equal(new Set(excludedIds).size, 18);
-  assert.equal(covered.length, 260);
-  assert.equal(new Set(covered).size, 260);
-  assert.deepEqual(covered.slice(-72, -68), ids);
+  assert.equal(covered.length, 264);
+  assert.equal(new Set(covered).size, 264);
+  assert.deepEqual(covered.slice(-76, -72), ids);
   assert.ok(ids.every((id) => !excludedIds.includes(id)));
-  assert.equal(recipes.length - excludedIds.length - covered.length, 75);
+  assert.equal(recipes.length - excludedIds.length - covered.length, 71);
   for (const id of ids) {
     const recipe = get(id);
     assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes, `${id}: time fields add up`);

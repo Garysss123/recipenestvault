@@ -53,14 +53,14 @@ test("forty-fifth batch adds four eligible methods and preserves the shared cove
   assert.equal(new Set(recipes.map((recipe) => recipe.id)).size, 353, "all recipe IDs remain unique");
   assert.equal(excludedIds.length, 18);
   assert.equal(new Set(excludedIds).size, 18);
-  assert.equal(covered.length, 260, "shared detail routes cover 260 deep-reviewed recipes");
-  assert.equal(new Set(covered).size, 260, "all reviewed IDs remain unique");
-  assert.equal(covered.slice(0, -84).length, 176, "the 176 IDs that preceded this batch remain");
-  assert.deepEqual(covered.slice(-84, -80), ids, "the four verified slugs remain in shared coverage");
+  assert.equal(covered.length, 264, "shared detail routes cover 264 deep-reviewed recipes");
+  assert.equal(new Set(covered).size, 264, "all reviewed IDs remain unique");
+  assert.equal(covered.slice(0, -88).length, 176, "the 176 IDs that preceded this batch remain");
+  assert.deepEqual(covered.slice(-88, -84), ids, "the four verified slugs remain in shared coverage");
   assert.equal(ids.length, 4);
   assert.equal(new Set(ids).size, 4);
   assert.ok(ids.every((id) => !excludedIds.includes(id)), "none of the new IDs is excluded");
-  assert.equal(recipes.length - excludedIds.length - covered.length, 75, "75 eligible existing recipes remain");
+  assert.equal(recipes.length - excludedIds.length - covered.length, 71, "71 eligible existing recipes remain");
 
   for (const id of ids) {
     const recipe = get(id);
