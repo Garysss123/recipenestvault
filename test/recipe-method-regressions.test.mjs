@@ -93,7 +93,8 @@ const auditedIds = [
   "cantucci", "fattoush", "french-crepes", "ribollita",
   "cacio-e-pepe", "bucatini-amatriciana", "pasta-alla-norma", "trofie-al-pesto",
   "jiufen-taro-balls", "maple-taffy", "injera", "hummus",
-  "tabbouleh", "vegetable-pakora", "gratin-dauphinois", "kelewele"
+  "tabbouleh", "vegetable-pakora", "gratin-dauphinois", "kelewele",
+  "baingan-bharta", "butter-naan", "melanzane-parmigiana", "patatas-bravas"
 ];
 const auditedRecipes = new Map(auditedIds.map((id) => [id, recipes.find((recipe) => recipe.id === id)]));
 
@@ -1543,8 +1544,8 @@ test("bobotie allocates bread, butter, seasoning, and sides and checks casserole
 
 
 test("fourteenth method audit checks four new IDs, all five locales, amounts, timing, and safety endpoints", () => {
-  assert.equal(auditedIds.length, 324, "deep-review coverage contains 324 distinct recipes");
-  assert.equal(new Set(auditedIds).size, 324, "coverage IDs are unique");
+  assert.equal(auditedIds.length, 328, "deep-review coverage contains 328 distinct recipes");
+  assert.equal(new Set(auditedIds).size, 328, "coverage IDs are unique");
   const chicken = auditedRecipes.get("chicken-shawarma");
   const bread = auditedRecipes.get("zaatar-manakish");
   const jambalaya = auditedRecipes.get("jambalaya");
@@ -1652,8 +1653,8 @@ test("fifteenth method audit checks four new recipes, five locales, portions, ti
   const sausages = auditedRecipes.get("nuernberger-rostbratwurst");
   const additions = [gumbo, pozole, tortilla, sausages];
 
-  assert.equal(auditedIds.length, 324);
-  assert.equal(new Set(auditedIds).size, 324);
+  assert.equal(auditedIds.length, 328);
+  assert.equal(new Set(auditedIds).size, 328);
   for (const recipe of additions) {
     assert.ok(recipe, "each fifteenth-batch slug exists");
     for (const locale of localeOrder) {
@@ -1748,8 +1749,8 @@ test("fifteenth method audit checks four new recipes, five locales, portions, ti
 });
 
 test("sixteenth method audit checks four existing recipes, five locales, allocations, timing, portions, and doneness", () => {
-  assert.equal(auditedIds.length, 324, "deep-review coverage contains 324 distinct recipes");
-  assert.equal(new Set(auditedIds).size, 324, "coverage IDs are unique");
+  assert.equal(auditedIds.length, 328, "deep-review coverage contains 328 distinct recipes");
+  assert.equal(new Set(auditedIds).size, 328, "coverage IDs are unique");
   const moqueca = auditedRecipes.get("moqueca-baiana");
   const egusi = auditedRecipes.get("nigerian-egusi-soup");
   const luRouFan = auditedRecipes.get("lu-rou-fan");

@@ -47,15 +47,15 @@ test("sixty-third batch adds four unchecked, non-excluded slugs to the shared fi
 
   assert.equal(recipes.length, 353);
   assert.equal(new Set(recipes.map((entry) => entry.id)).size, 353);
-  assert.equal(covered.length, 324);
-  assert.equal(new Set(covered).size, 324);
-  assert.deepEqual(covered.slice(-76, -72), ids);
-  assert.equal(covered.slice(0, -76).length, 248);
+  assert.equal(covered.length, 328);
+  assert.equal(new Set(covered).size, 328);
+  assert.deepEqual(covered.slice(-80, -76), ids);
+  assert.equal(covered.slice(0, -80).length, 248);
   assert.equal(excluded.length, 18);
   assert.equal(new Set(excluded).size, 18);
-  assert.ok(ids.every((id) => !covered.slice(0, -76).includes(id)), "all four were unchecked at the exact starting baseline");
+  assert.ok(ids.every((id) => !covered.slice(0, -80).includes(id)), "all four were unchecked at the exact starting baseline");
   assert.ok(ids.every((id) => !excluded.includes(id)), "none is among the 18 standing exclusions");
-  assert.equal(recipes.length - excluded.length - covered.length, 11);
+  assert.equal(recipes.length - excluded.length - covered.length, 7);
 
   for (const id of ids) {
     const published = recipe(id);

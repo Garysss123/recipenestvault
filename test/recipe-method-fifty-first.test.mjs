@@ -48,11 +48,11 @@ test("fifty-first batch adds four eligible recipes to the exact shared five-loca
   assert.equal(new Set(recipes.map((recipe) => recipe.id)).size, 353);
   assert.equal(excludedIds.length, 18);
   assert.equal(new Set(excludedIds).size, 18);
-  assert.equal(covered.length, 324);
-  assert.equal(new Set(covered).size, 324);
-  assert.deepEqual(covered.slice(-124, -120), ids);
+  assert.equal(covered.length, 328);
+  assert.equal(new Set(covered).size, 328);
+  assert.deepEqual(covered.slice(-128, -124), ids);
   assert.ok(ids.every((id) => !excludedIds.includes(id)));
-  assert.equal(recipes.length - excludedIds.length - covered.length, 11);
+  assert.equal(recipes.length - excludedIds.length - covered.length, 7);
 
   for (const id of ids) {
     const recipe = get(id);
