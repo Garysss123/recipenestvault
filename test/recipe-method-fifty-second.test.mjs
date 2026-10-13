@@ -48,12 +48,12 @@ test("fifty-second batch appends four eligible IDs to the shared five-locale led
   assert.equal(new Set(recipes.map((recipe) => recipe.id)).size, 353);
   assert.equal(excludedIds.length, 18);
   assert.equal(new Set(excludedIds).size, 18);
-  assert.equal(covered.length, 308);
-  assert.equal(new Set(covered).size, 308);
-  assert.deepEqual(covered.slice(-104, -100), ids);
+  assert.equal(covered.length, 312);
+  assert.equal(new Set(covered).size, 312);
+  assert.deepEqual(covered.slice(-108, -104), ids);
   assert.ok(ids.every((id) => !excludedIds.includes(id)));
-  assert.ok(ids.every((id) => !covered.slice(0, -104).includes(id)));
-  assert.equal(recipes.length - excludedIds.length - covered.length, 27);
+  assert.ok(ids.every((id) => !covered.slice(0, -108).includes(id)));
+  assert.equal(recipes.length - excludedIds.length - covered.length, 23);
 
   for (const id of ids) {
     const recipe = get(id);

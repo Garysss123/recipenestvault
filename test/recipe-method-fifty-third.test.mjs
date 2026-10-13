@@ -52,12 +52,12 @@ test("fifty-third batch adds four unreviewed, non-excluded IDs to the shared fiv
   assert.equal(new Set(recipes.map((recipe) => recipe.id)).size, 353);
   assert.equal(excludedIds.length, 18);
   assert.equal(new Set(excludedIds).size, 18);
-  assert.equal(covered.length, 308);
-  assert.equal(new Set(covered).size, 308);
-  assert.deepEqual(covered.slice(-100, -96), ids);
+  assert.equal(covered.length, 312);
+  assert.equal(new Set(covered).size, 312);
+  assert.deepEqual(covered.slice(-104, -100), ids);
   assert.ok(ids.every((id) => !excludedIds.includes(id)));
-  assert.ok(ids.every((id) => !covered.slice(0, -100).includes(id)));
-  assert.equal(recipes.length - excludedIds.length - covered.length, 27);
+  assert.ok(ids.every((id) => !covered.slice(0, -104).includes(id)));
+  assert.equal(recipes.length - excludedIds.length - covered.length, 23);
 
   for (const id of ids) {
     const recipe = get(id);

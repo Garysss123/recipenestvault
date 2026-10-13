@@ -63,9 +63,9 @@ test("twenty-seventh method audit keeps the registry, exclusions, and current 30
   const list = regressionSource.match(/const auditedIds = \[([\s\S]*?)\n\];/)?.[1];
   assert.ok(list, "the shared all-locale detail-route list exists");
   const covered = [...list.matchAll(/"([a-z0-9-]+)"/g)].map((match) => match[1]);
-  assert.equal(covered.length, 308, "shared detail-route regression covers 308 deep-reviewed recipes");
-  assert.equal(new Set(covered).size, 308, "all deep-reviewed IDs remain unique");
-  assert.equal(covered.filter((id) => !ids.includes(id)).length, 304, "the other 304 reviewed IDs remain present");
+  assert.equal(covered.length, 312, "shared detail-route regression covers 312 deep-reviewed recipes");
+  assert.equal(new Set(covered).size, 312, "all deep-reviewed IDs remain unique");
+  assert.equal(covered.filter((id) => !ids.includes(id)).length, 308, "the other 308 reviewed IDs remain present");
   assert.ok(ids.every((id) => covered.includes(id)), "all four batch recipes enter the shared route regression");
 
   for (const id of ids) {
