@@ -56,13 +56,13 @@ test("sixtieth recovery selects four unchecked eligible slugs and keeps the 353-
 
   assert.equal(recipes.length, 353);
   assert.equal(new Set(recipes.map((recipe) => recipe.id)).size, 353);
-  assert.equal(covered.length, 304);
-  assert.equal(new Set(covered).size, 304);
-  assert.deepEqual(covered.slice(-68, -64), ids);
+  assert.equal(covered.length, 308);
+  assert.equal(new Set(covered).size, 308);
+  assert.deepEqual(covered.slice(-72, -68), ids);
   assert.equal(excluded.length, 18);
   assert.equal(new Set(excluded).size, 18);
   assert.ok(ids.every((id) => !excluded.includes(id)), "selected slugs are not in the standing exclusions");
-  assert.equal(recipes.length - excluded.length - covered.length, 31);
+  assert.equal(recipes.length - excluded.length - covered.length, 27);
 
   for (const id of ids) {
     const recipe = get(id);

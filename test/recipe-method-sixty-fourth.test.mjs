@@ -45,16 +45,16 @@ test("sixty-fourth batch extends the exact ledger by four unchecked, non-exclude
 
   assert.equal(recipes.length, 353);
   assert.equal(new Set(recipes.map((entry) => entry.id)).size, 353);
-  assert.equal(covered.length, 304);
-  assert.equal(new Set(covered).size, 304);
-  assert.deepEqual(covered.slice(-52, -48), ids);
-  assert.equal(covered.slice(0, -52).length, 252);
+  assert.equal(covered.length, 308);
+  assert.equal(new Set(covered).size, 308);
+  assert.deepEqual(covered.slice(-56, -52), ids);
+  assert.equal(covered.slice(0, -56).length, 252);
   assert.equal(excluded.length, 18);
   assert.equal(new Set(excluded).size, 18);
-  assert.equal(recipes.length - excluded.length - covered.slice(0, -48).length, 79);
-  assert.equal(recipes.length - excluded.length - covered.slice(0, -44).length, 75);
-  assert.equal(recipes.length - excluded.length - covered.length, 31);
-  assert.ok(ids.every((id) => !covered.slice(0, -52).includes(id)), "the selected slugs were absent from the exact starting ledger");
+  assert.equal(recipes.length - excluded.length - covered.slice(0, -52).length, 79);
+  assert.equal(recipes.length - excluded.length - covered.slice(0, -48).length, 75);
+  assert.equal(recipes.length - excluded.length - covered.length, 27);
+  assert.ok(ids.every((id) => !covered.slice(0, -56).includes(id)), "the selected slugs were absent from the exact starting ledger");
   assert.ok(ids.every((id) => !excluded.includes(id)), "no selected slug is on the standing exclusion list");
 });
 
