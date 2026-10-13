@@ -40,10 +40,10 @@ test("forty-seventh batch appends four eligible recipes to shared five-locale co
   assert.equal(new Set(recipes.map((recipe) => recipe.id)).size, 353);
   assert.equal(excludedIds.length, 18);
   assert.equal(new Set(excludedIds).size, 18);
-  assert.equal(covered.length, 232);
-  assert.equal(new Set(covered).size, 232);
-  assert.deepEqual(covered.slice(-48, -44), ids);
-  assert.equal(recipes.length - excludedIds.length - covered.length, 103);
+  assert.equal(covered.length, 236);
+  assert.equal(new Set(covered).size, 236);
+  assert.deepEqual(covered.slice(-52, -48), ids);
+  assert.equal(recipes.length - excludedIds.length - covered.length, 99);
   assert.ok(ids.every((id) => !excludedIds.includes(id)));
   for (const id of ids) {
     const recipe = get(id);
