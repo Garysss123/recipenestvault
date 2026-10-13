@@ -32,7 +32,8 @@ test("eighty-third batch adds four unreviewed eligible slugs and keeps full cove
   const ledgerBody = ledgerSource.match(/const auditedIds = \[([\s\S]*?)\n\];/)?.[1];
   assert.ok(ledgerBody, "shared exact-slug five-locale ledger exists");
   const covered = [...ledgerBody.matchAll(/"([a-z0-9-]+)"/g)].map(([, id]) => id);
-  const beforeThisBatch = covered.slice(0, -4);
+  const beforeThisBatch = covered.slice(0, -7);
+  const throughThisBatch = covered.slice(0, -3);
 
   const exclusionsSource = await readFile(new URL("./recipe-method-fiftieth.test.mjs", import.meta.url), "utf8");
   const exclusionsBody = exclusionsSource.match(/const excludedIds = \[([\s\S]*?)\n\];/)?.[1];
@@ -43,16 +44,19 @@ test("eighty-third batch adds four unreviewed eligible slugs and keeps full cove
   assert.equal(new Set(recipes.map((entry) => entry.id)).size, 353);
   assert.equal(beforeThisBatch.length, 328);
   assert.equal(new Set(beforeThisBatch).size, 328);
-  assert.equal(covered.length, 332);
-  assert.equal(new Set(covered).size, 332);
-  assert.deepEqual(covered.slice(-4), ids);
+  assert.equal(throughThisBatch.length, 332);
+  assert.equal(new Set(throughThisBatch).size, 332);
+  assert.deepEqual(throughThisBatch.slice(-4), ids);
+  assert.equal(covered.length, 335);
+  assert.equal(new Set(covered).size, 335);
+  assert.deepEqual(covered.slice(-3), remainingEligible);
   assert.equal(excluded.length, 18);
   assert.equal(new Set(excluded).size, 18);
   assert.ok(ids.every((id) => !beforeThisBatch.includes(id) && !excluded.includes(id)),
     "all four selected slugs were uncovered and eligible");
-  assert.ok(remainingEligible.every((id) => !covered.includes(id) && !excluded.includes(id)),
-    "the three remaining eligible slugs stay deferred");
-  assert.equal(recipes.length - excluded.length - covered.length, 3);
+  assert.ok(remainingEligible.every((id) => throughThisBatch.includes(id) === false && !excluded.includes(id)),
+    "the three slugs left after this historical batch are covered only by the following batch");
+  assert.equal(recipes.length - excluded.length - throughThisBatch.length, 3);
 
   for (const id of ids) {
     const dish = recipe(id);
