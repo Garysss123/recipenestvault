@@ -48,9 +48,9 @@ test("twenty-fifth method audit retains the registry, exclusions, and shared fiv
   const list = regressionSource.match(/const auditedIds = \[([\s\S]*?)\n\];/)?.[1];
   assert.ok(list, "the shared all-locale detail-route list exists");
   const covered = [...list.matchAll(/"([a-z0-9-]+)"/g)].map((match) => match[1]);
-  assert.equal(covered.length, 216, "the shared detail-route regression covers 216 deep-reviewed recipes");
-  assert.equal(new Set(covered).size, 216, "all deep-reviewed IDs remain unique");
-  assert.equal(covered.filter((id) => !ids.includes(id)).length, 212, "the other 212 reviewed IDs remain present");
+  assert.equal(covered.length, 220, "the shared detail-route regression covers 220 deep-reviewed recipes");
+  assert.equal(new Set(covered).size, 220, "all deep-reviewed IDs remain unique");
+  assert.equal(covered.filter((id) => !ids.includes(id)).length, 216, "the other 216 reviewed IDs remain present");
   assert.ok(ids.every((id) => covered.includes(id)), "all four new recipes enter the shared route regression");
 
   for (const id of ids) {
