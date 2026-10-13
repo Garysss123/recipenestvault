@@ -28,6 +28,13 @@ The shared ledger now contains 264 unique IDs, leaving 71 eligible recipes. The 
 
 Every changed method, serving allocation, estimate, safety temperature, storage note, and source credit is synchronized in English, Traditional Chinese, Japanese, Korean, and Thai. Each recipe retains at least two culinary sources. Official guidance is credited separately: [FoodSafety.gov safe minimum temperatures](https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures), [4 Steps to Food Safety](https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety), and [Cold Food Storage Charts](https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts). The selected recipes contain no raw ground meat or poultry; those category endpoints were not applied to the intact pork/beef, cooked casserole, or meatless soup.
 
+The retained culinary cross-check links are:
+
+- **Jjajangmyeon:** [Maangchi](https://www.maangchi.com/recipe/jjajangmyeon); [Korean Bapsang](https://www.koreanbapsang.com/jajangmyeon-noodles-in-black-bean-sauce/).
+- **Bún bò Nam Bộ:** [Delightful Plate](https://delightfulplate.com/vietnamese-beef-noodle-salad-bun-bo-xao/); [Helen’s Recipes](https://helenrecipes.com/recipe-37-bun-bo-xao-vietnamese-noodle-salad/).
+- **Escondidinho de carne seca:** [Receitas Globo](https://receitas.globo.com/ana-maria-braga/salgados/escondidinho-de-carne-seca-da-ana-maria.ghtml); [UOL Nossa Cozinha](https://www.uol.com.br/nossa/cozinha/receitas/2023/02/03/escondidinho-de-carne-seca.htm).
+- **French onion soup:** [Pardon Your French](https://www.pardonyourfrench.com/classic-french-onion-soup/); [Meilleur du Chef](https://www.meilleurduchef.com/fr/recette/soupe-oignon.html).
+
 ## Verification
 
 - `npm ci --cache /tmp/recipenestvault-npm-cache` — installed 51 lockfile packages; package manifests and lockfile were unchanged.
