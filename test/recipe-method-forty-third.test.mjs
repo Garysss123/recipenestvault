@@ -53,12 +53,12 @@ test("forty-third batch adds four eligible methods and preserves registry, exclu
   assert.equal(new Set(excludedIds).size, 18);
   assert.equal(ids.length, 4);
   assert.equal(new Set(ids).size, 4);
-  assert.equal(covered.length, 300, "shared detail routes cover 300 deep-reviewed recipes");
-  assert.equal(new Set(covered).size, 300, "all reviewed IDs remain unique");
-  assert.equal(covered.filter((id) => !ids.includes(id)).length, 296, "all 296 other reviewed IDs remain");
+  assert.equal(covered.length, 304, "shared detail routes cover 304 deep-reviewed recipes");
+  assert.equal(new Set(covered).size, 304, "all reviewed IDs remain unique");
+  assert.equal(covered.filter((id) => !ids.includes(id)).length, 300, "all 300 other reviewed IDs remain");
   assert.ok(ids.every((id) => covered.includes(id)), "all four new IDs enter shared coverage");
   assert.ok(ids.every((id) => !excludedIds.includes(id)), "none of the new IDs is excluded");
-  assert.equal(recipes.length - excludedIds.length - covered.length, 35, "35 eligible existing recipes remain after this batch");
+  assert.equal(recipes.length - excludedIds.length - covered.length, 31, "31 eligible existing recipes remain after this batch");
 
   for (const id of ids) {
     const recipe = get(id);
