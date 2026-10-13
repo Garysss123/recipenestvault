@@ -44,8 +44,8 @@ test("thirty-second batch retains the registry and exclusions and adds four exis
   const list = source.match(/const auditedIds = \[([\s\S]*?)\n\];/)?.[1];
   assert.ok(list, "shared detail-route list exists");
   const covered = [...list.matchAll(/"([a-z0-9-]+)"/g)].map((match) => match[1]);
-  assert.equal(covered.length, 248);
-  assert.equal(new Set(covered).size, 248);
+  assert.equal(covered.length, 252);
+  assert.equal(new Set(covered).size, 252);
   assert.ok(ids.every((id) => covered.includes(id)));
   for (const id of ids) {
     const recipe = get(id);
