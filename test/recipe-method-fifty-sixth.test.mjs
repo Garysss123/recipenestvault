@@ -51,15 +51,15 @@ test("fifty-sixth batch adds four eligible IDs to the shared five-locale ledger 
 
   assert.equal(recipes.length, 353);
   assert.equal(new Set(recipes.map((recipe) => recipe.id)).size, 353);
-  assert.equal(covered.length, 312);
-  assert.equal(new Set(covered).size, 312);
+  assert.equal(covered.length, 316);
+  assert.equal(new Set(covered).size, 316);
   assert.equal(excludedIds.length, 18);
   assert.equal(new Set(excludedIds).size, 18);
-  assert.equal(covered.slice(0, -92).length, 220);
-  assert.deepEqual(covered.slice(-92, -88), ids);
+  assert.equal(covered.slice(0, -96).length, 220);
+  assert.deepEqual(covered.slice(-96, -92), ids);
   assert.ok(ids.every((id) => !excludedIds.includes(id)));
-  assert.ok(ids.every((id) => !covered.slice(0, -92).includes(id)));
-  assert.equal(recipes.length - excludedIds.length - covered.length, 23);
+  assert.ok(ids.every((id) => !covered.slice(0, -96).includes(id)));
+  assert.equal(recipes.length - excludedIds.length - covered.length, 19);
 
   for (const id of ids) {
     const recipe = get(id);

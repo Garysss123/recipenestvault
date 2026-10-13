@@ -48,14 +48,14 @@ test("sixty-first batch appends four previously unchecked, non-excluded slugs", 
 
   assert.equal(recipes.length, 353);
   assert.equal(new Set(recipes.map((recipe) => recipe.id)).size, 353);
-  assert.equal(covered.length, 312);
-  assert.equal(new Set(covered).size, 312);
-  assert.deepEqual(covered.slice(-72, -68), ids);
-  assert.equal(covered.slice(0, -72).length, 240);
+  assert.equal(covered.length, 316);
+  assert.equal(new Set(covered).size, 316);
+  assert.deepEqual(covered.slice(-76, -72), ids);
+  assert.equal(covered.slice(0, -76).length, 240);
   assert.equal(new Set(excluded).size, 18);
-  assert.ok(ids.every((id) => !covered.slice(0, -72).includes(id)), "each selection was absent from the 240-ID starting ledger");
+  assert.ok(ids.every((id) => !covered.slice(0, -76).includes(id)), "each selection was absent from the 240-ID starting ledger");
   assert.ok(ids.every((id) => !excluded.includes(id)), "no selection is in the standing exclusions");
-  assert.equal(recipes.length - excluded.length - covered.length, 23);
+  assert.equal(recipes.length - excluded.length - covered.length, 19);
 
   for (const id of ids) {
     const recipe = get(id);
