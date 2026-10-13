@@ -50,9 +50,9 @@ test("thirtieth batch retains the 353-recipe registry and 18 exclusions, adding 
   const list = regression.match(/const auditedIds = \[([\s\S]*?)\n\];/)?.[1];
   assert.ok(list, "the shared detail-route regression list exists");
   const covered = [...list.matchAll(/"([a-z0-9-]+)"/g)].map((match) => match[1]);
-  assert.equal(covered.length, 280);
-  assert.equal(new Set(covered).size, 280);
-  assert.equal(covered.filter((id) => !ids.includes(id)).length, 276, "all other 276 reviewed IDs remain");
+  assert.equal(covered.length, 284);
+  assert.equal(new Set(covered).size, 284);
+  assert.equal(covered.filter((id) => !ids.includes(id)).length, 280, "all other 280 reviewed IDs remain");
   assert.ok(ids.every((id) => covered.includes(id)));
 
   for (const recipe of ids.map(get)) {

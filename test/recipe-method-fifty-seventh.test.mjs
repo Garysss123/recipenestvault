@@ -50,15 +50,15 @@ test("fifty-seventh batch adds exactly four eligible IDs and preserves the previ
 
   assert.equal(recipes.length, 353);
   assert.equal(new Set(recipes.map((recipe) => recipe.id)).size, 353);
-  assert.equal(covered.length, 280);
-  assert.equal(new Set(covered).size, 280);
+  assert.equal(covered.length, 284);
+  assert.equal(new Set(covered).size, 284);
   assert.equal(excludedIds.length, 18);
   assert.equal(new Set(excludedIds).size, 18);
-  assert.equal(covered.slice(0, -56).length, 224);
-  assert.deepEqual(covered.slice(-56, -52), ids);
+  assert.equal(covered.slice(0, -60).length, 224);
+  assert.deepEqual(covered.slice(-60, -56), ids);
   assert.ok(ids.every((id) => !excludedIds.includes(id)));
-  assert.ok(ids.every((id) => !covered.slice(0, -56).includes(id)));
-  assert.equal(recipes.length - excludedIds.length - covered.length, 55);
+  assert.ok(ids.every((id) => !covered.slice(0, -60).includes(id)));
+  assert.equal(recipes.length - excludedIds.length - covered.length, 51);
 
   for (const id of ids) {
     const recipe = get(id);
