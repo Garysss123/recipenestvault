@@ -49,12 +49,12 @@ test("fortieth batch adds four existing eligible recipes without changing the re
   assert.equal(new Set(excludedIds).size, 18, "the standing exclusions remain unique");
   assert.equal(ids.length, 4);
   assert.equal(new Set(ids).size, 4);
-  assert.equal(covered.length, 320, "shared detail routes cover 320 deep-reviewed recipes");
-  assert.equal(new Set(covered).size, 320, "the reviewed IDs remain unique");
-  assert.equal(covered.filter((id) => !ids.includes(id)).length, 316, "the 316 other reviewed IDs remain");
+  assert.equal(covered.length, 324, "shared detail routes cover 324 deep-reviewed recipes");
+  assert.equal(new Set(covered).size, 324, "the reviewed IDs remain unique");
+  assert.equal(covered.filter((id) => !ids.includes(id)).length, 320, "the 320 other reviewed IDs remain");
   assert.ok(ids.every((id) => covered.includes(id)), "all four additions enter shared route coverage");
   assert.ok(ids.every((id) => !excludedIds.includes(id)), "none of the additions is excluded");
-  assert.equal(recipes.length - excludedIds.length - covered.length, 15, "15 eligible existing recipes remain");
+  assert.equal(recipes.length - excludedIds.length - covered.length, 11, "11 eligible existing recipes remain");
 
   for (const id of ids) {
     const recipe = get(id);
