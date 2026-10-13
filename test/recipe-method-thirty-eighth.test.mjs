@@ -52,9 +52,9 @@ test("thirty-eighth batch adds four eligible existing recipes to five-locale cov
   assert.equal(new Set(excludedIds).size, 18);
   assert.equal(ids.length, 4);
   assert.equal(new Set(ids).size, 4);
-  assert.equal(covered.length, 272);
-  assert.equal(new Set(covered).size, 272);
-  assert.equal(covered.filter((id) => !ids.includes(id)).length, 268, "the 268 other reviewed IDs remain");
+  assert.equal(covered.length, 276);
+  assert.equal(new Set(covered).size, 276);
+  assert.equal(covered.filter((id) => !ids.includes(id)).length, 272, "the 272 other reviewed IDs remain");
 
   for (const id of ids) {
     const recipe = get(id);
