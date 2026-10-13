@@ -45,13 +45,13 @@ test("fiftieth batch adds four distinct, eligible IDs to the shared five-locale 
   assert.equal(new Set(recipes.map((recipe) => recipe.id)).size, 353);
   assert.equal(excludedIds.length, 18);
   assert.equal(new Set(excludedIds).size, 18);
-  assert.equal(covered.length, 240);
-  assert.equal(new Set(covered).size, 240);
-  assert.deepEqual(covered.slice(-44, -40), ids);
-  assert.equal(covered.filter((id) => !ids.includes(id)).length, 236,
-    "the other 236 reviewed IDs remain covered");
+  assert.equal(covered.length, 244);
+  assert.equal(new Set(covered).size, 244);
+  assert.deepEqual(covered.slice(-48, -44), ids);
+  assert.equal(covered.filter((id) => !ids.includes(id)).length, 240,
+    "the other 240 reviewed IDs remain covered");
   assert.ok(ids.every((id) => !excludedIds.includes(id)));
-  assert.equal(recipes.length - excludedIds.length - covered.length, 95);
+  assert.equal(recipes.length - excludedIds.length - covered.length, 91);
   for (const id of ids) {
     const recipe = get(id);
     assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes, `${id}: time fields add up`);

@@ -33,6 +33,7 @@ import { refineFiftySeventhMethods } from "./recipe-method-audit-fifty-seventh.m
 import { refineFiftyEighthMethods } from "./recipe-method-audit-fifty-eighth.mjs";
 import { refineFiftyNinthMethods } from "./recipe-method-audit-fifty-ninth.mjs";
 import { refineSixtiethMethods } from "./recipe-method-audit-sixtieth.mjs";
+import { refineSixtyFirstMethods } from "./recipe-method-audit-sixty-first.mjs";
 
 const ml = (en, zhHant, ja, ko, th) => ({ en, "zh-hant": zhHant, ja, ko, th });
 const approvedPhotos = new Map(recipePhotoCandidates
@@ -671,4 +672,5 @@ refineFiftySeventhMethods(recipes);
 refineFiftyEighthMethods(recipes);
 refineFiftyNinthMethods(recipes);
 refineSixtiethMethods(recipes);
+refineSixtyFirstMethods(recipes);
 export const allRecipeDrafts = [...chineseRecipeDrafts, ...japaneseRecipeDrafts, ...koreanRecipeDrafts, ...thaiRecipeDrafts, ...taiwaneseRecipeDrafts, ...indianRecipeDrafts, ...vietnameseRecipeDrafts, ...frenchRecipeDrafts, ...italianRecipeDrafts, ...spanishRecipeDrafts, ...britishRecipeDrafts, ...germanRecipeDrafts, ...greekRecipeDrafts, ...americanRecipeDrafts, ...mexicanRecipeDrafts, ...brazilianRecipeDrafts, ...canadianRecipeDrafts, ...middleEasternRecipeDrafts, ...mediterraneanRecipeDrafts, ...africanRecipeDrafts, ...otherWorldRecipeDrafts];

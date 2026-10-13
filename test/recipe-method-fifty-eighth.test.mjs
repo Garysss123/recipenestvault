@@ -45,15 +45,15 @@ test("fifty-eighth batch adds four unchecked eligible slugs, preserves drafts, a
 
   assert.equal(recipes.length, 353);
   assert.equal(new Set(recipes.map((recipe) => recipe.id)).size, 353);
-  assert.equal(covered.length, 240);
-  assert.equal(new Set(covered).size, 240);
+  assert.equal(covered.length, 244);
+  assert.equal(new Set(covered).size, 244);
   assert.equal(excluded.length, 18);
   assert.equal(new Set(excluded).size, 18);
-  assert.deepEqual(covered.slice(-12, -8), ids);
+  assert.deepEqual(covered.slice(-16, -12), ids);
   assert.ok(ids.every((id) => !excluded.includes(id)), "no selected recipe is excluded");
-  assert.equal(recipes.length - excluded.length - covered.length, 95);
+  assert.equal(recipes.length - excluded.length - covered.length, 91);
 
-  const previous = new Set(covered.slice(0, -12));
+  const previous = new Set(covered.slice(0, -16));
   assert.ok(ids.every((id) => !previous.has(id)), "all selected recipes were absent from the prior 232-ID ledger");
   for (const id of ids) {
     const recipe = get(id);
