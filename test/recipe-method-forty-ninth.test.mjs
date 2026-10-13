@@ -45,11 +45,11 @@ test("forty-ninth batch appends four unexcluded recipes to the shared five-local
   assert.equal(new Set(recipes.map((recipe) => recipe.id)).size, 353);
   assert.equal(excludedIds.length, 18);
   assert.equal(new Set(excludedIds).size, 18);
-  assert.equal(covered.length, 316);
-  assert.equal(new Set(covered).size, 316);
-  assert.deepEqual(covered.slice(-124, -120), ids);
+  assert.equal(covered.length, 320);
+  assert.equal(new Set(covered).size, 320);
+  assert.deepEqual(covered.slice(-128, -124), ids);
   assert.ok(ids.every((id) => !excludedIds.includes(id)));
-  assert.equal(recipes.length - excludedIds.length - covered.length, 19);
+  assert.equal(recipes.length - excludedIds.length - covered.length, 15);
   for (const id of ids) {
     const recipe = get(id);
     assert.equal(recipe.totalMinutes, recipe.prepMinutes + recipe.cookMinutes, `${id}: time fields add up`);

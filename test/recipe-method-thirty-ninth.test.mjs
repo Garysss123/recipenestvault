@@ -52,12 +52,12 @@ test("thirty-ninth batch retains 353 recipes and 18 exclusions while extending f
   assert.equal(new Set(excludedIds).size, 18);
   assert.equal(ids.length, 4);
   assert.equal(new Set(ids).size, 4);
-  assert.equal(covered.length, 316);
-  assert.equal(new Set(covered).size, 316);
-  assert.equal(covered.filter((id) => !ids.includes(id)).length, 312, "the 312 other reviewed recipes remain");
+  assert.equal(covered.length, 320);
+  assert.equal(new Set(covered).size, 320);
+  assert.equal(covered.filter((id) => !ids.includes(id)).length, 316, "the 316 other reviewed recipes remain");
   assert.ok(ids.every((id) => !excludedIds.includes(id)), "none of the four recipes is excluded");
   assert.ok(ids.every((id) => covered.includes(id)), "all four recipes enter shared route coverage");
-  assert.equal(recipes.length - excludedIds.length - covered.length, 19, "19 eligible recipes remain for later review");
+  assert.equal(recipes.length - excludedIds.length - covered.length, 15, "15 eligible recipes remain for later review");
 
   for (const id of ids) {
     const recipe = get(id);
