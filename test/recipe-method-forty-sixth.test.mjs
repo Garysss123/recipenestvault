@@ -33,11 +33,11 @@ test("forty-sixth batch appends four eligible recipes to shared localized covera
   assert.equal(new Set(recipes.map((r) => r.id)).size, 353);
   assert.equal(excludedIds.length, 18);
   assert.equal(new Set(excludedIds).size, 18);
-  assert.equal(covered.length, 236);
-  assert.equal(new Set(covered).size, 236);
+  assert.equal(covered.length, 240);
+  assert.equal(new Set(covered).size, 240);
   assert.equal(covered.slice(0, 180).length, 180);
   assert.deepEqual(covered.slice(180, 184), ids);
-  assert.equal(recipes.length - excludedIds.length - covered.length, 99);
+  assert.equal(recipes.length - excludedIds.length - covered.length, 95);
   assert.ok(ids.every((id) => !excludedIds.includes(id)));
   for (const id of ids) {
     const r = get(id);
