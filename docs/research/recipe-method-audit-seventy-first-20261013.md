@@ -37,7 +37,7 @@ The shared ledger covers 284 unique exact slugs; 51 eligible unchecked recipes r
 
 ## Validation results and review limits
 
-- `npm test` — passed. All 21 locale draft audits passed; build generated 1,885 indexable routes; static audit passed across 10,816 files; Node test suite passed 342/342.
+- `npm test` — passed all 20 `audit:*drafts` commands wired in `package.json`; `src/recipes.mjs` separately assembles 21 recipe source groups. The command count and source-group count describe different things. Build generated 1,885 indexable routes; static audit passed across 10,816 files; Node test suite passed 342/342.
 - Independent `npm run build` — passed, generating 1,885 indexable URLs across five locales.
 - Independent `npm run audit` — passed: 10,816 files and 1,885 indexable routes; links, fragments, recipe completeness, provenance, metadata, and structured data passed.
 - Focused regression `node --test test/recipe-method-regressions.test.mjs test/recipe-method-seventieth.test.mjs test/recipe-method-seventy-first.test.mjs` — passed 67/67.

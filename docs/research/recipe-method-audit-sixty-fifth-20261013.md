@@ -47,7 +47,7 @@ Shorter recipe-specific texture or flavor preferences are labeled separately fro
 
 - Runtime: Node.js `v24.19.0`, npm `11.9.0`; the selected model/runtime variant is not exposed.
 - `npm ci --cache /tmp/recipenestvault-npm-cache` — installed 51 lockfile packages; package manifests and lockfile remained unchanged.
-- `npm test` — passed: all 21 draft audits, integrated build, static audit, and 306 Node tests (306 passed, 0 failed).
+- `npm test` — passed all 20 `audit:*drafts` commands wired in `package.json`; `src/recipes.mjs` separately assembles 21 recipe source groups. The command count and source-group count describe different things. The integrated build and static audit passed, along with 306/306 Node tests.
 - Independent `npm run build` — passed; generated 1,885 indexable URLs across five locales.
 - Focused shared ledger, sixty-fourth, and sixty-fifth regressions — 67 tests passed, 0 failed. They verify the 353-recipe registry, exact slug coverage, source drafts, five-locale methods, and preserved illustration mappings.
 - Static audit passed for routes, local links and fragments, responsive images, provenance, five-language recipe completeness, sitemap, canonical URLs, reciprocal hreflang, metadata, and JSON-LD.

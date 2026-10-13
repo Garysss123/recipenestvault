@@ -43,7 +43,7 @@ test("seventy-second batch adds four unchecked, non-excluded recipes to five-loc
   const ledgerBody = ledgerSource.match(/const auditedIds = \[([\s\S]*?)\n\];/)?.[1];
   assert.ok(ledgerBody, "shared exact-slug ledger exists");
   const covered = [...ledgerBody.matchAll(/"([a-z0-9-]+)"/g)].map(([, id]) => id);
-  const beforeThisBatch = covered.slice(0, -8);
+  const beforeThisBatch = covered.slice(0, -12);
 
   const exclusionSource = await readFile(new URL("./recipe-method-fiftieth.test.mjs", import.meta.url), "utf8");
   const exclusionBody = exclusionSource.match(/const excludedIds = \[([\s\S]*?)\n\];/)?.[1];
@@ -54,13 +54,13 @@ test("seventy-second batch adds four unchecked, non-excluded recipes to five-loc
   assert.equal(new Set(recipes.map((entry) => entry.id)).size, 353);
   assert.equal(beforeThisBatch.length, 284);
   assert.equal(new Set(beforeThisBatch).size, 284);
-  assert.equal(covered.length, 292);
-  assert.equal(new Set(covered).size, 292);
-  assert.deepEqual(covered.slice(-8, -4), ids);
+  assert.equal(covered.length, 296);
+  assert.equal(new Set(covered).size, 296);
+  assert.deepEqual(covered.slice(-12, -8), ids);
   assert.equal(excluded.length, 18);
   assert.equal(new Set(excluded).size, 18);
   assert.equal(recipes.length - excluded.length - beforeThisBatch.length, 51);
-  assert.equal(recipes.length - excluded.length - covered.length, 43);
+  assert.equal(recipes.length - excluded.length - covered.length, 39);
   assert.ok(ids.every((id) => !beforeThisBatch.includes(id)), "all four were absent from the 284-ID starting ledger");
   assert.ok(ids.every((id) => !excluded.includes(id)), "none overlaps the standing exclusions");
 });

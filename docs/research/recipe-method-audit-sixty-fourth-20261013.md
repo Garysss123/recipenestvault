@@ -46,7 +46,7 @@ Three-day or two-day recommendations in the recipes are explicitly labeled as te
 ## Verification
 
 - `npm ci --cache /tmp/recipenestvault-npm-cache` restored 51 lockfile packages; package manifests and lockfile were unchanged.
-- `npm test` — passed: all 21 draft audits, integrated build, static site audit, and 300 Node tests (300 passed, 0 failed).
+- `npm test` — passed all 20 `audit:*drafts` commands wired in `package.json`; `src/recipes.mjs` separately assembles 21 recipe source groups. The command count and source-group count describe different things. The integrated build and static site audit passed, along with 300/300 Node tests.
 - Independent `npm run build` — passed; generated 1,885 indexable URLs across five locales.
 - Targeted shared ledger plus batches 63 and 64 — 66 tests passed, 0 failed.
 - The new batch regressions verify 353 unique published recipes, 18 exclusions, the exact 252-to-256 ledger transition, the 83-to-79 remaining-candidate count, five-locale coverage, official sources, unchanged source drafts, and preserved illustration mappings.

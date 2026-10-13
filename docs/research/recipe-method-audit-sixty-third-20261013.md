@@ -43,7 +43,7 @@ The 80–82°C blanquette liaison target is an explicitly labeled sauce-method/t
 
 ## Verification
 
-- `npm test` — passed. This ran all 21 locale draft-audit scripts, the integrated build, static site audit, and 294 Node tests (294 passed, 0 failed).
+- `npm test` — passed all 20 `audit:*drafts` commands wired in `package.json`; `src/recipes.mjs` separately assembles 21 recipe source groups. The command count and source-group count describe different things. The integrated build and static site audit passed, along with 294/294 Node tests.
 - Independent `npm run build` — passed; generated 1,885 indexable URLs across five locales.
 - Targeted shared regression plus batches 62 and 63 — 65 tests passed, 0 failed.
 - Static audit verified routes, links/fragments, five-locale recipe completeness, image gates, provenance, sitemap/canonical/hreflang, metadata, and JSON-LD.

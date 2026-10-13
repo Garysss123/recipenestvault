@@ -36,7 +36,7 @@ The sources were checked against the relevant ingredient and food state: chilled
 ## Regression and validation
 
 - `npm ci --cache /tmp/recipenestvault-npm-cache` — installed the locked dependencies; `package.json` and `package-lock.json` were not changed.
-- `npm test` — passed all 21 locale/draft audits, built 1,885 indexable URLs, passed the 10,816-file static audit, and passed 348/348 Node tests.
+- `npm test` — passed all 20 `audit:*drafts` commands wired in `package.json`; `src/recipes.mjs` separately assembles 21 recipe source groups. The command count and source-group count describe different things. It built 1,885 indexable URLs, passed the 10,816-file static audit, and passed 348/348 Node tests.
 - Independent `npm run build` — passed; generated 1,885 indexable URLs across five locales.
 - Independent `npm run audit` — passed; 10,816 files and 1,885 routes, including links/fragments, recipe completeness, photo/illustration gates, provenance, metadata, sitemap, hreflang, and structured data.
 - Focused regression `node --test test/recipe-method-regressions.test.mjs test/recipe-method-seventieth.test.mjs test/recipe-method-seventy-first.test.mjs test/recipe-method-seventy-second.test.mjs` — passed 73/73 tests.
@@ -44,3 +44,5 @@ The sources were checked against the relevant ingredient and food state: chilled
 - `git diff --check` — recorded after final diff review.
 
 This is source and automated regression review. No recipe was cooked; no human tasting or independent human translation review occurred. Browser/UI and accessibility review, production-domain checks, deployment, and production verification were not performed. No headless browser, CDP, HTTP crawling, credential/security changes, or deployment commands were used.
+
+Read-only comparison of the batch base (`7e06d52`) and result (`8e6990a`) found zero deleted files, including recipe drafts and tests.

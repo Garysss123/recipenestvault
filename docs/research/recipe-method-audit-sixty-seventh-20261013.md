@@ -40,7 +40,7 @@ Retained culinary source links:
 ## Verification
 
 - `npm ci --cache /tmp/recipenestvault-npm-cache` — installed 51 lockfile packages; package manifests and lockfile were unchanged.
-- `npm test` — passed all 21 regional draft audits, integrated build (1,885 indexable URLs), static audit, and 318 Node tests (318 passed, 0 failed).
+- `npm test` — passed all 20 `audit:*drafts` commands wired in `package.json`; `src/recipes.mjs` separately assembles 21 recipe source groups. The command count and source-group count describe different things. The integrated build (1,885 indexable URLs) and static audit passed, along with 318/318 Node tests.
 - Independent `npm run build` — passed; generated 1,885 indexable URLs across five locales.
 - `node --test test/recipe-method-regressions.test.mjs test/recipe-method-sixty-seventh.test.mjs` — 61 tests passed, 0 failed. This covers the shared five-locale/detail-route regression and the batch's ledger, exclusion, draft, step-count, illustration-map, allocation, timing, safety and storage assertions.
 - `git diff --check` — passed.
