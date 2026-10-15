@@ -5,6 +5,7 @@ import { allRecipeDrafts, recipes } from "../src/recipes.mjs";
 import { localeOrder } from "../src/data.mjs";
 
 const ids = ["butter-chicken", "cheeseburger", "chicken-teriyaki", "coffin-bread"];
+const nextBatchIds = ["creme-brulee", "gulab-jamun", "koshari", "mango-sticky-rice"];
 const handling = "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety";
 const temperatures = "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures";
 const published = new Map(recipes.map((dish) => [dish.id, dish]));
@@ -38,8 +39,9 @@ test("eighty-fifth batch reimplements four excluded methods and preserves recipe
   const historicExcluded = parseIds(exclusionSource, /const excludedIds = \[([\s\S]*?)\n\];/);
   const historicSnapshot = JSON.parse(await readFile(new URL("../docs/research/recipe-method-coverage-20261013.json", import.meta.url), "utf8"));
   const snapshot = JSON.parse(await readFile(new URL("../docs/research/recipe-method-coverage-20261014.json", import.meta.url), "utf8"));
-  const newReviewed = [...historicReviewed, ...ids];
-  const newExcluded = historicExcluded.filter((id) => !ids.includes(id));
+  const cumulativeIds = [...ids, ...nextBatchIds];
+  const newReviewed = [...historicReviewed, ...cumulativeIds];
+  const newExcluded = historicExcluded.filter((id) => !cumulativeIds.includes(id));
 
   assert.equal(historicReviewed.length, 335);
   assert.equal(new Set(historicReviewed).size, 335);
@@ -50,15 +52,15 @@ test("eighty-fifth batch reimplements four excluded methods and preserves recipe
   assert.ok(ids.every((id) => historicExcluded.includes(id)), "the four recipes started in the excluded set");
   assert.equal(recipes.length, 353);
   assert.equal(new Set(recipes.map((entry) => entry.id)).size, 353);
-  assert.equal(newReviewed.length, 339);
-  assert.equal(new Set(newReviewed).size, 339);
-  assert.equal(newExcluded.length, 14);
-  assert.equal(new Set(newExcluded).size, 14);
+  assert.equal(newReviewed.length, 343);
+  assert.equal(new Set(newReviewed).size, 343);
+  assert.equal(newExcluded.length, 10);
+  assert.equal(new Set(newExcluded).size, 10);
   assert.equal(new Set([...newReviewed, ...newExcluded]).size, 353);
   assert.deepEqual([...newReviewed].sort(), snapshot.reviewedIds);
   assert.deepEqual([...newExcluded].sort(), snapshot.excludedIds);
-  assert.deepEqual([...ids].sort(), snapshot.reimplementedIds);
-  assert.deepEqual(snapshot.counts, { registry: 353, reviewed: 339, reimplemented: 4, excluded: 14, unclassified: 0 });
+  assert.deepEqual([...cumulativeIds].sort(), snapshot.reimplementedIds);
+  assert.deepEqual(snapshot.counts, { registry: 353, reviewed: 343, reimplemented: 8, excluded: 10, unclassified: 0 });
   assert.ok(ids.every((id) => !historicReviewed.includes(id)));
 
   for (const id of ids) {

@@ -2,14 +2,14 @@
   "date": "2026-10-14",
   "counts": {
     "registry": 353,
-    "reviewed": 339,
-    "reimplemented": 4,
-    "excluded": 14,
+    "reviewed": 343,
+    "reimplemented": 8,
+    "excluded": 10,
     "unclassified": 0
   },
   "draftAuditCommandCount": 20,
   "recipeSourceGroupCount": 21,
-  "reviewNote": "Four previously excluded methods were newly authored as a separate reimplementation batch; this record does not claim recovery of the unavailable handoff patches.",
+  "reviewNote": "Eight previously excluded methods were newly authored in two batches; this record does not claim recovery of the unavailable handoff patches.",
   "reviewedIds": [
     "acaraje",
     "aloo-gobi",
@@ -97,6 +97,7 @@
     "cornish-pasty",
     "coxinha",
     "crema-catalana",
+    "creme-brulee",
     "crni-rizot",
     "croque-monsieur",
     "croquetas-de-jamon",
@@ -145,6 +146,7 @@
     "gratin-dauphinois",
     "green-curry-chicken",
     "gua-bao",
+    "gulab-jamun",
     "gyeran-jjim",
     "gyudon",
     "haemul-pajeon",
@@ -184,6 +186,7 @@
     "kimchi-jjigae",
     "kitsune-udon",
     "koenigsberger-klopse",
+    "koshari",
     "kung-pao-chicken",
     "lablabi",
     "lamingtons",
@@ -195,6 +198,7 @@
     "madeleines",
     "malva-pudding",
     "mandu",
+    "mango-sticky-rice",
     "maple-taffy",
     "marmitako",
     "massaman-curry",
@@ -355,13 +359,13 @@
     "butter-chicken",
     "cheeseburger",
     "chicken-teriyaki",
-    "coffin-bread"
-  ],
-  "excludedIds": [
+    "coffin-bread",
     "creme-brulee",
     "gulab-jamun",
     "koshari",
-    "mango-sticky-rice",
+    "mango-sticky-rice"
+  ],
+  "excludedIds": [
     "mapo-tofu",
     "masala-dosa",
     "nanaimo-bars",
