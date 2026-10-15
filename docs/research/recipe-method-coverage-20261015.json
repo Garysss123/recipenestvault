@@ -2,14 +2,14 @@
   "date": "2026-10-15",
   "counts": {
     "registry": 353,
-    "reviewed": 351,
-    "reimplemented": 16,
-    "excluded": 2,
+    "reviewed": 353,
+    "reimplemented": 18,
+    "excluded": 0,
     "unclassified": 0
   },
   "draftAuditCommandCount": 20,
   "recipeSourceGroupCount": 21,
-  "reviewNote": "Sixteen previously excluded methods were newly authored in four batches; this record does not claim recovery of the unavailable handoff patches.",
+  "reviewNote": "Eighteen previously excluded methods were newly authored in five batches; this record does not claim recovery of the unavailable handoff patches.",
   "reviewedIds": [
     "acaraje",
     "aloo-gobi",
@@ -320,6 +320,7 @@
     "sundubu-jjigae",
     "sweet-sour-pork",
     "tabbouleh",
+    "tacos-al-pastor",
     "tagliatelle-ragu-bolognese",
     "taiwanese-beef-noodle-soup",
     "taiwanese-oil-rice",
@@ -337,6 +338,7 @@
     "thieboudienne",
     "thit-kho-trung",
     "three-cup-chicken",
+    "tiramisu",
     "toad-in-the-hole",
     "tod-mun-pla",
     "tom-kha-gai",
@@ -379,10 +381,9 @@
     "pad-thai",
     "panna-cotta",
     "pizza-margherita",
-    "sauerbraten"
-  ],
-  "excludedIds": [
+    "sauerbraten",
     "tacos-al-pastor",
     "tiramisu"
-  ]
+  ],
+  "excludedIds": []
 }

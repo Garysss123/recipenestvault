@@ -6,13 +6,14 @@ import { localeOrder } from "../src/data.mjs";
 
 const ids = ["pad-thai", "panna-cotta", "pizza-margherita", "sauerbraten"];
 const previousBatch = ["mapo-tofu", "masala-dosa", "nanaimo-bars", "new-york-cheesecake"];
+const finalBatch = ["tacos-al-pastor", "tiramisu"];
 const temperatureChart = "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures";
 const handlingGuide = "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety";
 const coldStorageChart = "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts";
 const seafoodGuide = "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely";
 const published = new Map(recipes.map((recipe) => [recipe.id, recipe]));
 const drafts = new Map(allRecipeDrafts.map((recipe) => [recipe.id, recipe]));
-const expectedCounts = { registry: 353, reviewed: 351, reimplemented: 16, excluded: 2, unclassified: 0 };
+const expectedCounts = { registry: 353, reviewed: 353, reimplemented: 18, excluded: 0, unclassified: 0 };
 const expectedSteps = { "pad-thai": 9, "panna-cotta": 5, "pizza-margherita": 5, sauerbraten: 9 };
 const expectedTimes = {
   "pad-thai": [45, 15, 60],
@@ -46,16 +47,16 @@ test("eighty-eighth batch adds four new methods while preserving the prior snaps
 
   assert.deepEqual(historical.counts, { registry: 353, reviewed: 343, reimplemented: 8, excluded: 10, unclassified: 0 });
   assert.deepEqual(current.counts, expectedCounts);
-  const newIds = [...previousBatch, ...ids];
+  const newIds = [...previousBatch, ...ids, ...finalBatch];
   assert.ok(newIds.every((id) => historical.excludedIds.includes(id) && !historical.reviewedIds.includes(id)),
-    "all eight rewritten slugs were excluded in the immutable 2026-10-14 snapshot");
+    "all ten rewritten slugs were excluded in the immutable 2026-10-14 snapshot");
   assert.deepEqual(current.reviewedIds, [...historical.reviewedIds, ...newIds].sort());
   assert.deepEqual(current.reimplementedIds, [...historical.reimplementedIds, ...newIds].sort());
   assert.deepEqual(current.excludedIds, historical.excludedIds.filter((id) => !newIds.includes(id)));
-  assert.equal(new Set(current.reviewedIds).size, 351);
-  assert.equal(new Set(current.reimplementedIds).size, 16);
-  assert.equal(new Set(current.excludedIds).size, 2);
-  assert.deepEqual(current.excludedIds, ["tacos-al-pastor", "tiramisu"]);
+  assert.equal(new Set(current.reviewedIds).size, 353);
+  assert.equal(new Set(current.reimplementedIds).size, 18);
+  assert.equal(new Set(current.excludedIds).size, 0);
+  assert.deepEqual(current.excludedIds, []);
   assert.equal(new Set([...current.reviewedIds, ...current.excludedIds]).size, 353);
   assert.equal(recipes.length, 353);
   assert.equal(new Set(recipes.map((entry) => entry.id)).size, 353);
