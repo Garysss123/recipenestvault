@@ -2,14 +2,14 @@
   "date": "2026-10-15",
   "counts": {
     "registry": 353,
-    "reviewed": 347,
-    "reimplemented": 12,
-    "excluded": 6,
+    "reviewed": 351,
+    "reimplemented": 16,
+    "excluded": 2,
     "unclassified": 0
   },
   "draftAuditCommandCount": 20,
   "recipeSourceGroupCount": 21,
-  "reviewNote": "Twelve previously excluded methods were newly authored in three batches; this record does not claim recovery of the unavailable handoff patches.",
+  "reviewNote": "Sixteen previously excluded methods were newly authored in four batches; this record does not claim recovery of the unavailable handoff patches.",
   "reviewedIds": [
     "acaraje",
     "aloo-gobi",
@@ -243,12 +243,14 @@
     "oyster-omelette",
     "pad-kra-pao",
     "pad-see-ew",
+    "pad-thai",
     "paella-valenciana",
     "palak-paneer",
     "pan-con-tomate",
     "panang-curry",
     "pancit-bihon",
     "pani-puri",
+    "panna-cotta",
     "pao-de-queijo",
     "pasta-alla-norma",
     "pasta-con-le-sarde",
@@ -268,6 +270,7 @@
     "pineapple-fried-rice",
     "pissaladiere",
     "pisto-manchego",
+    "pizza-margherita",
     "pollo-alla-cacciatora",
     "pork-ball-rice-vermicelli-soup",
     "pork-souvlaki",
@@ -293,6 +296,7 @@
     "samgyeopsal",
     "samosa",
     "saskatoon-berry-pie",
+    "sauerbraten",
     "scallion-pancakes",
     "sesame-oil-chicken",
     "shakshuka",
@@ -371,13 +375,13 @@
     "mapo-tofu",
     "masala-dosa",
     "nanaimo-bars",
-    "new-york-cheesecake"
-  ],
-  "excludedIds": [
+    "new-york-cheesecake",
     "pad-thai",
     "panna-cotta",
     "pizza-margherita",
-    "sauerbraten",
+    "sauerbraten"
+  ],
+  "excludedIds": [
     "tacos-al-pastor",
     "tiramisu"
   ]

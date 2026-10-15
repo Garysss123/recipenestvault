@@ -6,6 +6,7 @@ import { allRecipeDrafts, recipes } from "../src/recipes.mjs";
 import { localeOrder } from "../src/data.mjs";
 
 const ids = ["mapo-tofu", "masala-dosa", "nanaimo-bars", "new-york-cheesecake"];
+const nextBatchIds = ["pad-thai", "panna-cotta", "pizza-margherita", "sauerbraten"];
 const tempSource = "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures";
 const handlingSource = "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety";
 const eggSource = "https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety";
@@ -42,15 +43,16 @@ test("eighty-seventh batch reimplements four excluded recipes and preserves sour
 
   assert.deepEqual(previous.counts, { registry: 353, reviewed: 343, reimplemented: 8, excluded: 10, unclassified: 0 },
     "the 2026-10-14 coverage snapshot stays unchanged");
-  assert.deepEqual(current.counts, { registry: 353, reviewed: 347, reimplemented: 12, excluded: 6, unclassified: 0 });
+  assert.deepEqual(current.counts, { registry: 353, reviewed: 351, reimplemented: 16, excluded: 2, unclassified: 0 });
   assert.ok(ids.every((id) => previous.excludedIds.includes(id) && !previous.reviewedIds.includes(id)),
     "all four slugs began in the prior exclusion set");
-  assert.deepEqual(current.reviewedIds, [...previous.reviewedIds, ...ids].sort());
-  assert.deepEqual(current.reimplementedIds, [...previous.reimplementedIds, ...ids].sort());
-  assert.deepEqual(current.excludedIds, previous.excludedIds.filter((id) => !ids.includes(id)));
-  assert.equal(new Set(current.reviewedIds).size, 347);
-  assert.equal(new Set(current.reimplementedIds).size, 12);
-  assert.equal(new Set(current.excludedIds).size, 6);
+  const additionsSinceSnapshot = [...ids, ...nextBatchIds];
+  assert.deepEqual(current.reviewedIds, [...previous.reviewedIds, ...additionsSinceSnapshot].sort());
+  assert.deepEqual(current.reimplementedIds, [...previous.reimplementedIds, ...additionsSinceSnapshot].sort());
+  assert.deepEqual(current.excludedIds, previous.excludedIds.filter((id) => !additionsSinceSnapshot.includes(id)));
+  assert.equal(new Set(current.reviewedIds).size, 351);
+  assert.equal(new Set(current.reimplementedIds).size, 16);
+  assert.equal(new Set(current.excludedIds).size, 2);
   assert.equal(new Set([...current.reviewedIds, ...current.excludedIds]).size, 353);
   assert.equal(recipes.length, 353);
   assert.equal(new Set(recipes.map((recipe) => recipe.id)).size, 353);
