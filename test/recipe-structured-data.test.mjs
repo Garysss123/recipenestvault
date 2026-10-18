@@ -130,3 +130,40 @@ test("all 353 recipes have valid, source-backed JSON-LD matching each of five vi
   }
   assert.equal(pagesChecked, 1765, "every recipe page in all five locales is checked");
 });
+
+test("representative rendered recipe pages match independently reviewed category and keyword expectations", async () => {
+  const expectations = [
+    {
+      recipe: "bun-cha",
+      locale: "th",
+      category: undefined,
+      keywords: "หมูสับไขมันประมาณ 20%, น้ำปลา, น้ำมันหอย"
+    },
+    {
+      recipe: "black-forest-cake",
+      locale: "en",
+      category: "Dessert",
+      keywords: "large eggs, cornstarch, unsweetened cocoa powder"
+    },
+    {
+      recipe: "kung-pao-chicken",
+      locale: "zh-hant",
+      category: undefined,
+      keywords: "去骨去皮雞腿肉, 生抽, 紹興酒"
+    }
+  ];
+
+  for (const expected of expectations) {
+    const html = await readFile(new URL(`${expected.locale}/recipes/${expected.recipe}/index.html`, dist), "utf8");
+    const jsonLd = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1] ?? "null");
+    const recipe = jsonLd?.["@graph"]?.find((entry) => entry["@type"] === "Recipe");
+    assert.ok(recipe, `${expected.locale}/${expected.recipe}: rendered Recipe entity exists`);
+    assert.equal(recipe.recipeCategory, expected.category, `${expected.locale}/${expected.recipe}: hard-coded page category expectation`);
+    assert.equal(recipe.keywords, expected.keywords, `${expected.locale}/${expected.recipe}: hard-coded page keyword expectation`);
+    assert.ok(recipe.keywords.split(", ").length <= 3, `${expected.locale}/${expected.recipe}: no more than three page keywords`);
+  }
+
+  const bunChaThaiKeywords = expectations[0].keywords.split(", ");
+  assert.ok(bunChaThaiKeywords.includes("น้ำปลา"), "Thai fish sauce remains a distinctive keyword instead of being removed as water");
+  assert.ok(bunChaThaiKeywords.includes("น้ำมันหอย"), "Thai oyster sauce remains a distinctive keyword instead of being removed as oil");
+});

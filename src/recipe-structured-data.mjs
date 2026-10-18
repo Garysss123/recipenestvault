@@ -34,13 +34,23 @@ const recipesByCourse = {
 
 const courseByRecipeId = new Map(Object.entries(recipesByCourse).flatMap(([course, ids]) => ids.map((id) => [id, course])));
 
-const pantryTerms = {
-  en: /\b(water|salt|sugar|neutral cooking oil|cooking oil|vegetable oil|olive oil|black pepper|white pepper|ground pepper|plain flour|all-purpose flour)\b/i,
-  "zh-hant": /水|鹽|鹽巴|砂糖|白糖|食用油|中性食用油|黑胡椒|白胡椒|麵粉|中筋麵粉/,
-  ja: /水|塩|食塩|砂糖|油|サラダ油|こしょう|胡椒|小麦粉/,
-  ko: /물|소금|설탕|식용유|기름|후추|밀가루/,
-  th: /น้ำ|เกลือ|น้ำตาล|น้ำมัน|พริกไทย|แป้งสาลี/
+const pantryItems = {
+  en: ["water", "salt", "sugar", "caster sugar", "neutral cooking oil", "cooking oil", "vegetable oil", "olive oil", "black pepper", "white pepper", "ground pepper", "plain flour", "all-purpose flour"],
+  "zh-hant": ["水", "鹽", "鹽巴", "糖", "砂糖", "白糖", "食用油", "中性食用油", "中性油", "黑胡椒", "白胡椒", "麵粉", "中筋麵粉"],
+  ja: ["水", "塩", "食塩", "砂糖", "油", "サラダ油", "こしょう", "胡椒", "小麦粉"],
+  ko: ["물", "소금", "설탕", "식용유", "기름", "후추", "밀가루"],
+  th: ["น้ำ", "เกลือ", "น้ำตาล", "น้ำตาลทราย", "น้ำมัน", "พริกไทย", "แป้งสาลี"]
 };
+
+function normalizeKeyword(value) {
+  return String(value ?? "").normalize("NFKC").toLocaleLowerCase("en")
+    .replace(/[^\p{L}\p{N}]/gu, "");
+}
+
+const pantryKeys = Object.fromEntries(Object.entries(pantryItems).map(([locale, items]) => [
+  locale,
+  new Set(items.map(normalizeKeyword))
+]));
 
 function keywordPhrase(value, locale) {
   let phrase = String(value ?? "").trim();
@@ -57,7 +67,8 @@ function keywordPhrase(value, locale) {
   } else if (locale === "th") {
     phrase = phrase.replace(/\s*สำหรับ(?:หมักไก่|หมัก|ปรุง|ผัด|ทอด).+$/u, "")
       .replace(/หั่น(?:ขวางเส้นใย)?(?:หนา|บาง)?\s*\d+(?:\.\d+)?\s*(?:มม\.|ซม\.).*$/u, "")
-      .replace(/\s*(?:อุณหภูมิห้อง|สับละเอียด|หั่นเสี้ยว|หั่นเต๋า|หั่นแว่น)$/u, "").trim();
+      .replace(/\s*สำหรับ.+$/u, "")
+      .replace(/\s*(?:อุณหภูมิห้อง|สับละเอียด|หั่นเสี้ยว|หั่นเต๋า|หั่นแว่น|แบ่งใช้|แยกใช้|ใส่หรือไม่ก็ได้|ตามชอบ)$/u, "").trim();
   }
   return phrase;
 }
@@ -71,6 +82,6 @@ export function recipeKeywords(recipe, locale) {
   const phrases = recipe.ingredients
     .map((row) => keywordPhrase(row.item?.[locale] ?? row.item?.en ?? row.item, locale))
     .filter(Boolean);
-  const distinctive = phrases.filter((phrase) => !pantryTerms[locale]?.test(phrase));
+  const distinctive = phrases.filter((phrase) => !pantryKeys[locale]?.has(normalizeKeyword(phrase)));
   return [...new Set((distinctive.length ? distinctive : phrases).slice(0, 3))].join(", ");
 }
