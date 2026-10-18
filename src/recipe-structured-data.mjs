@@ -42,8 +42,24 @@ const pantryTerms = {
   th: /น้ำ|เกลือ|น้ำตาล|น้ำมัน|พริกไทย|แป้งสาลี/
 };
 
-function keywordPhrase(value) {
-  return String(value ?? "").split(/[,，;；、（(]/u, 1)[0].trim();
+function keywordPhrase(value, locale) {
+  let phrase = String(value ?? "").trim();
+  if (locale === "en") {
+    phrase = phrase.replace(/^(?:boneless|skinless),\s*/i, "").replace(/^(?:boneless|skinless)\s+/i, "");
+    phrase = phrase.split(/[,;；（(]/u, 1)[0].replace(/\s+for (?:the )?(?:chicken|pork|beef|fish|sauce|topping).*$/i, "").trim();
+  } else if (locale === "zh-hant") {
+    phrase = phrase.split(/[,，;；、（(]/u, 1)[0].replace(/^(?:醃(?:製)?雞肉用|醃肉用|雞肉用)/u, "").trim();
+  } else if (locale === "ja") {
+    phrase = phrase.split(/[,，;；、（(]/u, 1)[0].replace(/^(?:鶏肉用の|下味用の|ソース用の|仕上げ用の)/u, "").trim();
+  } else if (locale === "ko") {
+    phrase = phrase.split(/[,，;；、（(]/u, 1)[0]
+      .replace(/^(?:뼈와 껍질을 제거한\s*|닭고기 밑간용\s*|닭고기용\s*|소스용\s*|볶음용\s*|튀김용\s*)/u, "").trim();
+  } else if (locale === "th") {
+    phrase = phrase.replace(/\s*สำหรับ(?:หมักไก่|หมัก|ปรุง|ผัด|ทอด).+$/u, "")
+      .replace(/หั่น(?:ขวางเส้นใย)?(?:หนา|บาง)?\s*\d+(?:\.\d+)?\s*(?:มม\.|ซม\.).*$/u, "")
+      .replace(/\s*(?:อุณหภูมิห้อง|สับละเอียด|หั่นเสี้ยว|หั่นเต๋า|หั่นแว่น)$/u, "").trim();
+  }
+  return phrase;
 }
 
 export function recipeCategory(recipe, locale) {
@@ -53,7 +69,7 @@ export function recipeCategory(recipe, locale) {
 
 export function recipeKeywords(recipe, locale) {
   const phrases = recipe.ingredients
-    .map((row) => keywordPhrase(row.item?.[locale] ?? row.item?.en ?? row.item))
+    .map((row) => keywordPhrase(row.item?.[locale] ?? row.item?.en ?? row.item, locale))
     .filter(Boolean);
   const distinctive = phrases.filter((phrase) => !pantryTerms[locale]?.test(phrase));
   return [...new Set((distinctive.length ? distinctive : phrases).slice(0, 3))].join(", ");
