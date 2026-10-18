@@ -91,7 +91,10 @@ test("all 353 recipes have valid, source-backed JSON-LD matching each of five vi
       assert.ok(!schema.keywords.includes(cuisines.find((cuisine) => cuisine.id === recipe.cuisine).names[locale]), `${locale}/${recipe.id}: cuisine is not stuffed into keywords`);
 
       const category = recipeCategory(recipe, locale);
-      if (category) assert.equal(schema.recipeCategory, category, `${locale}/${recipe.id}: category matches visible label`);
+      if (category) {
+        assert.equal(schema.recipeCategory, category, `${locale}/${recipe.id}: category matches visible label`);
+        assert.ok(!schema.keywords.split(", ").includes(category), `${locale}/${recipe.id}: category is not duplicated in keywords`);
+      }
       else assert.equal(Object.hasOwn(schema, "recipeCategory"), false, `${locale}/${recipe.id}: unsupported category is omitted`);
       const eyebrow = html.match(/<p class="eyebrow">(.*?)<\/p>/)?.[1] ?? "";
       if (category) assert.ok(decodeHtml(eyebrow).includes(category), `${locale}/${recipe.id}: category appears in visible eyebrow`);
