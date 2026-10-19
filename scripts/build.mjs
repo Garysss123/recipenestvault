@@ -314,7 +314,7 @@ for (const slug of localeOrder) {
   }
   for (const recipe of recipes) {
     const recipeDir = join(homeDir, "recipes", recipe.id); await mkdir(recipeDir, { recursive: true }); await writeFile(join(recipeDir, "index.html"), renderRecipe(slug, recipe), "utf8"); sitemapUrls.push(`${origin}/${slug}/recipes/${recipe.id}/`);
-    searchIndex.push({ locale: slug, type: "recipe", label: cuisineCollections[recipe.cuisine]?.[slug]?.recipeEyebrow ?? recipeUi[slug].recipeEyebrow, title: localized(recipe.name, slug), subtitle: localized(recipe.region, slug), url: `/${slug}/recipes/${recipe.id}/`, text: [localized(recipe.name, slug), localized(recipe.description, slug), localized(recipe.region, slug), ...recipe.ingredients.map((row) => localized(row.item, slug))].join(" ") });
+    searchIndex.push({ locale: slug, type: "recipe", label: cuisineCollections[recipe.cuisine]?.[slug]?.recipeEyebrow ?? recipeUi[slug].recipeEyebrow, title: localized(recipe.name, slug), subtitle: localized(recipe.region, slug), url: `/${slug}/recipes/${recipe.id}/`, text: [localized(recipe.name, slug), localized(recipe.description, slug), localized(recipe.region, slug), ...(recipe.searchAliases?.[slug] ?? []), ...recipe.ingredients.map((row) => localized(row.item, slug))].join(" ") });
   }
   for (const item of featured) { const cuisine = cuisines.find((entry) => entry.id === item.cuisine); searchIndex.push({ locale: slug, type: "preview", title: locales[slug].featuredNames[item.id], subtitle: cuisine.names[slug], url: featuredCuisineHref(slug, item.cuisine), text: `${locales[slug].featuredNames[item.id]} ${cuisine.names[slug]} ${cuisine.keywords.join(" ")}` }); }
 }

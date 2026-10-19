@@ -49,6 +49,7 @@ export const germanRecipesD = [
     id: 'black-forest-cake', profile: 'cake',
     region: ml('Black Forest / Baden-Württemberg', '黑森林／巴登-符騰堡', '黒い森／バーデン＝ヴュルテンベルク', '슈바르츠발트 / 바덴뷔르템베르크', 'ป่าดำ / บาเดิน-เวือร์ทเทิมแบร์ค'),
     name: ml('Schwarzwälder Kirschtorte', '黑森林蛋糕', 'シュヴァルツヴェルダー・キルシュトルテ', '슈바르츠발트 키르슈토르테', 'ชวาร์ซวัลเดอร์ เคียร์ชทอร์เทอ'),
+    searchAliases: { en: ['Black Forest cake'] },
     prepMinutes: 110, cookMinutes: 45, totalMinutes: 155, servings: 12,
     description: ml('The classic Black Forest layer cake: light cocoa sponge, sour cherries, Kirsch and barely sweetened whipped cream finished with dark chocolate curls. The cake works because each component stays distinct—springy sponge, tart fruit, clean cream and a restrained cherry-brandy aroma.', '經典黑森林分層蛋糕：輕盈可可海綿、酸櫻桃、Kirsch 櫻桃白蘭地與微甜鮮奶油，最後以黑巧克力屑完成。成功關鍵是各元素清楚分明：彈性蛋糕、酸香果實、乾淨奶香與克制酒香。',
       '軽いココアスポンジ、酸味のあるさくらんぼ、キルシュ、甘さ控えめのホイップクリームを重ね、ダークチョコレートで仕上げる黒い森の定番ケーキです。各要素の食感と香りを明確に保ちます。',
